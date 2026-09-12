@@ -1,0 +1,20 @@
+{
+  "id": "a54bde42-a1f4-417a-ab6c-e865cb81146c",
+  "kind": "problem",
+  "theorem_name": "TaoFivePrimes.theorem51_typeII_bound",
+  "theorem_title": "Unit-numerator centered Type II estimate for Tao Theorem 5.1",
+  "formal_statement": "theorem TaoFivePrimes.theorem51_typeII_bound\n    (x alpha beta U V : ℝ) (a : ℤ) (q : ℕ)\n    (hq : 4 ≤ q) (haq : Nat.Coprime a.natAbs q) (haunit : a.natAbs = 1)\n    (halpha : 4 * alpha = (a : ℝ) / q + beta)\n    (hbeta : |beta| ≤ 1 / (q : ℝ) ^ 2)\n    (hU40 : 40 ≤ U) (hV40 : 40 ≤ V) (hUx : U < x) (hVx : V < x)\n    (hUV : U * V ≤ x / 4) (hUV2 : x ≤ U * V ^ 2)\n    (hUVq : U * V < (q : ℝ) - 1) :\n    TaoFivePrimes.theorem51TypeII x alpha U V ≤\n      (0.1 * (x / Real.sqrt q) + 0.39 * (x / Real.sqrt (x / q))) *\n        Real.log (x / (U * V)) * Real.log (V * x / U) +\n      (0.55 * (x / Real.sqrt U) + 0.78 * (x / Real.sqrt V)) *\n        Real.log (x / U) := by sorry",
+  "natural_language_statement": "Assume q≥4, (a,q)=1, |a|=1, 4α=a/q+β, |β|≤q⁻², U,V≥40, U,V<x, UV≤x/4, x≤UV² and UV<q−1. The centered Type II sum obeys\n\n$$T_{II}\\le\\left(0.1\\frac{x}{\\sqrt q}+0.39\\frac{x}{\\sqrt{x/q}}\\right)\\log\\frac{x}{UV}\\log\\frac{Vx}{U}+\\left(0.55\\frac{x}{\\sqrt U}+0.78\\frac{x}{\\sqrt V}\\right)\\log\\frac{x}{U}.$$\n\nThis is the remaining bilinear analytic estimate. The centered coefficient and the literal odd sums are defined in the imported interface; no bilinear estimate is assumed in that definition.",
+  "definitions": "import Definitions.Def_TaoFivePrimes_Theorem51Sums\nimport Mathlib.Analysis.SpecialFunctions.Pow.Real",
+  "source": "Tao, arXiv:1201.6656v4, Section 5.3, Type II estimate contributing equations (5.5) and (5.6), specialized to the unit-numerator hypotheses. https://arxiv.org/html/1201.6656v4#S5.SS3",
+  "tags": [
+    "five-primes",
+    "exponential-sums"
+  ],
+  "visibility": "public",
+  "status": "PUBLISHED",
+  "error_message": "",
+  "theorem_id": "605a083b-e6e1-4471-b532-c6f34ea1a76a",
+  "created_at": "2026-09-13T01:04:56.132519+08:00",
+  "updated_at": "2026-09-13T01:07:53.981339+08:00"
+}

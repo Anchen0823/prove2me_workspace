@@ -1,0 +1,20 @@
+{
+  "id": "5d7becae-92f2-442a-88b4-7d733d62b251",
+  "kind": "definition",
+  "theorem_name": "TaoFivePrimes_Theorem51Scale",
+  "theorem_title": "Odd rectangular scale sum for Tao Theorem 5.1",
+  "formal_statement": "",
+  "natural_language_statement": "For real endpoints A,B, define the finite odd interval through half-indices n with A <= 2n+1 <= B. The scale sum uses odd d in [x/(2W),x/W] and odd w in [W/2,W], with d>U and w>V, Mobius coefficient mu(d), the public centered coefficient g_V(w), and phase e(alpha*d*w). Its norm is the quantity F(W) in Section 5.3. These definitions contain no analytic estimates.",
+  "definitions": "import Definitions.Def_TaoFivePrimes_Theorem51Sums\nimport Mathlib\n\nnamespace TaoFivePrimes\nopen Finset\n\nnoncomputable def oddHalfInterval (A B : ℝ) : Finset ℤ :=\n  Icc ⌈(A - 1) / 2⌉ ⌊(B - 1) / 2⌋\n\nnoncomputable def oddRealInterval (A B : ℝ) : Finset ℤ :=\n  (oddHalfInterval A B).image (fun n => 2 * n + 1)\n\nnoncomputable def scaleRowCoefficient (V : ℝ) (w : ℤ) : ℂ :=\n  if V < (w : ℝ) then (theorem51Centered V w.toNat : ℂ) else 0\n\nnoncomputable def scaleColumnCoefficient (U : ℝ) (n : ℤ) : ℂ :=\n  if U < ((2 * n + 1 : ℤ) : ℝ) then\n    (ArithmeticFunction.moebius (2 * n + 1).toNat : ℂ) else 0\n\nnoncomputable def theorem51ScaleSum (x alpha U V W : ℝ) : ℂ :=\n  ∑ w ∈ oddRealInterval (W / 2) W, scaleRowCoefficient V w *\n    (∑ n ∈ oddHalfInterval (x / (2 * W)) (x / W),\n      expCircle (alpha * ((2 * n + 1 : ℤ) : ℝ) * w) * scaleColumnCoefficient U n)\n\nend TaoFivePrimes\n\r\n",
+  "source": "Terence Tao, Every odd number greater than 1 is the sum of at most five primes, arXiv:1201.6656v4, Section 5.3, equations (5.19)-(5.22) and the pointwise display immediately following (5.22). https://arxiv.org/html/1201.6656v4#S5.SS3",
+  "tags": [
+    "number-theory",
+    "exponential-sums"
+  ],
+  "visibility": "public",
+  "status": "PUBLISHED",
+  "error_message": "",
+  "theorem_id": "7b97188e-8d91-404d-9639-ba742bc9e86b",
+  "created_at": "2026-09-13T02:17:01.669574+08:00",
+  "updated_at": "2026-09-13T02:18:29.769023+08:00"
+}

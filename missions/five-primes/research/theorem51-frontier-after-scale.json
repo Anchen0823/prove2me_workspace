@@ -1,0 +1,18 @@
+{
+  "root_id": "e1794571-24bf-41f1-8f08-9296fbea9a90",
+  "open_leaves": [
+    {
+      "theorem_id": "197dea21-9471-497e-ba7a-3372b3e6eab7",
+      "theorem_name": "TaoFivePrimes.theorem51_vaughan_split",
+      "status": "Open",
+      "closability": 0
+    },
+    {
+      "theorem_id": "b46d7b94-7c1d-4d9d-980f-18230c005f4c",
+      "theorem_name": "TaoFivePrimes.theorem51_typeII_of_scale_bound",
+      "status": "Open",
+      "closability": 0
+    }
+  ],
+  "total": 2
+}

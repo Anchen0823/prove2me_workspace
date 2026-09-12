@@ -1,0 +1,29 @@
+{
+  "decompositions": [
+    {
+      "submission_id": null,
+      "created_by": null,
+      "created_at": null,
+      "deprecated_at": null,
+      "deprecated_by": null,
+      "children": [
+        {
+          "definition_id": "30efbeb8-fb86-4988-ac69-9da4bbe78e85",
+          "definition_name": "TaoFivePrimes_SmoothedExpSum",
+          "theorem_title": "Tao's smoothed exponential sum $S_{\\eta,q_0}(x,\\alpha)$",
+          "ordinal": 0,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        },
+        {
+          "definition_id": "48e5337b-62c2-4e24-8c38-b047da4fe522",
+          "definition_name": "TaoFivePrimes_RepresentationCount",
+          "theorem_title": "Tao's weighted three-prime representation count (K = 1000)",
+          "ordinal": 1,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        }
+      ]
+    }
+  ]
+}

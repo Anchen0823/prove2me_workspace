@@ -1,0 +1,48 @@
+{
+  "decompositions": [
+    {
+      "submission_id": null,
+      "created_by": null,
+      "created_at": null,
+      "deprecated_at": null,
+      "deprecated_by": null,
+      "children": [
+        {
+          "definition_id": "0638cceb-6d09-4432-b62a-48c625773961",
+          "definition_name": "TaoFivePrimes_Theorem51Sums",
+          "theorem_title": "Concrete Type I and Type II sums for Tao Theorem 5.1",
+          "ordinal": 0,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        }
+      ]
+    },
+    {
+      "submission_id": "13a21c90-5dd8-416e-82bb-7dc312825516",
+      "created_by": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "created_at": "2026-09-13T02:22:29.115889+08:00",
+      "deprecated_at": null,
+      "deprecated_by": null,
+      "children": [
+        {
+          "theorem_id": "b111b484-f725-4569-8504-3d222a36c577",
+          "theorem_name": "TaoFivePrimes.theorem51_scale_bound_signed",
+          "theorem_title": "Signed unit-numerator bound for the actual odd scale sum",
+          "status": "Proved",
+          "ordinal": 0,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        },
+        {
+          "theorem_id": "b46d7b94-7c1d-4d9d-980f-18230c005f4c",
+          "theorem_name": "TaoFivePrimes.theorem51_typeII_of_scale_bound",
+          "theorem_title": "Scale integration reduction for the centered Type II bound",
+          "status": "Proved",
+          "ordinal": 1,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        }
+      ]
+    }
+  ]
+}

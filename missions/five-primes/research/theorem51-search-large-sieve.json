@@ -1,0 +1,54 @@
+{
+  "theorems": [
+    {
+      "theorem_id": "6ccd648e-aa71-43c2-afe5-acf024c4b9c8",
+      "theorem_name": "TaoFivePrimes.minor_arc_L2",
+      "theorem_title": "Proposition 8.4: the $L^2$ estimate off the strongly major arc",
+      "status": "Open",
+      "formal_statement": "namespace TaoFivePrimes\n\ntheorem minor_arc_L2 (x : ℕ) (h1 : 87 * 10 ^ 35 ≤ x) (h2 : (x : ℝ) ≤ Real.exp 3100) :\n    (∫ α in (majorArc x)ᶜ, ‖S1 x α‖ ^ 2 * ‖DK (4 * 10 ^ 14) α‖ ^ 2 ∂AddCircle.haarAddCircle)\n      ≤ 7.09 * ((4 * 10 ^ 14 / 3 : ℕ) : ℝ) ^ 2 * x := by sorry\n\nend TaoFivePrimes",
+      "natural_language_statement": "**$L^2$ estimate (Proposition 8.4).** Let $8.7\\times10^{36}\\le x\\le e^{3100}$ be an integer and $N_0=4\\times10^{14}$, $T_0=3.29\\times10^9$. Then\n$$\\int_{\\|\\alpha\\|_{\\mathbb R/\\mathbb Z}>\\frac{T_0}{3.6\\pi x}} |S_{\\eta_1,\\sqrt x\\sharp}(x,\\alpha)|^2\\,|D_{N_0/3}(\\alpha)|^2\\,d\\alpha\\;\\le\\;7.09\\,\\Big(\\frac{N_0}{3}\\Big)^2 x .$$\n(The paper states the bound for $\\|\\alpha\\|\\ge T_0/(3.6\\pi x)$; the boundary has measure zero, and the version over the open complement of `majorArc x` is what the assembly consumes.)\n\nIn the paper this follows from Proposition 4.10 — the large sieve with Siebert's explicit bound on prime pairs, which gives $\\int_{\\mathbb R/\\mathbb Z}|S_{\\eta_1,\\sqrt x\\sharp}|^2|D_{N_0/3}|^2\\le 8H^2x\\big(1+\\frac{0.13\\log x}{H}+\\frac{(e^\\gamma\\log\\log(2H)+\\frac{2.507}{\\log\\log(2H)})\\log(9H)}{2H}\\big)$ with $H=\\lfloor N_0/3\\rfloor$, hence $\\le 8.001\\,(N_0/3)^2x$ using $\\log x\\le3100$ — and a lower bound $\\ge0.919\\,(N_0/3)^2x$ for the strongly major arc contribution from Corollary 4.8 (with $c=0.1$ and the norms (8.3), (8.7), (8.9)) and (8.13). Subtracting gives $7.09$. The point of using the large sieve rather than Plancherel is that it loses only a constant factor ($8$), not a factor of $\\log x$.\n\n**Retired.** The constant 7.09 rests on the major-arc lower bound 0.92x on p. 41, which appears to be an error (Corollary 4.9 is normalised to ‖η‖₂ = 1 while ‖η₁‖₂² = 2/3; the correct lower bound is ≈ 0.627x, so the difference is ≈ 7.37). Replaced by `TaoFivePrimes.minor_arc_L2_corrected` (constant 7.4). The final argument is unaffected because the companion L^∞ bound holds with 0.05 (see `minor_arc_Linfty_corrected`).",
+      "created_at": "2026-09-08T10:23:19.831799+08:00",
+      "vote_count": 0,
+      "preamble": "import Definitions.Def_TaoFivePrimes_ArcSplit\nopen MeasureTheory",
+      "source": "T. Tao, Every odd number greater than 1 is the sum of at most five primes, Math. Comp. 83 (2014), 997-1038, https://arxiv.org/abs/1201.6656, Section 8, Proposition 8.4, p. 41; Proposition 4.10 and Corollary 4.8",
+      "tags": [
+        "additive-number-theory",
+        "circle-method",
+        "five-primes",
+        "goldbach",
+        "number-theory"
+      ],
+      "created_by": "3027dcae-7aa5-4c26-8bae-885182dbc806",
+      "created_by_username": "tabbott",
+      "deprecated_at": "2026-09-08T12:15:57.589+08:00",
+      "visibility": "public",
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)"
+    },
+    {
+      "theorem_id": "a8637025-647f-407b-8300-ecdf0ae67955",
+      "theorem_name": "Vaughan.sum_mul_e_eq_bilin",
+      "theorem_title": "Exponential sum of a Dirichlet convolution is a bilinear sum",
+      "status": "Proved",
+      "formal_statement": "namespace Vaughan\n\ntheorem sum_mul_e_eq_bilin (f g : ArithmeticFunction ℝ) (α : ℝ) (N : ℕ) :\n    ∑ n ∈ range N, (((f * g) n : ℝ) : ℂ) * CircleMethod.e (α * (n : ℝ)) = bilin f g α N := by sorry\n\nend Vaughan",
+      "natural_language_statement": "Reindexing lemma.  For arithmetic functions $f,g$,\n\n$$\\sum_{n<N}(f*g)(n)\\,e(\\alpha n)\\;=\\;\\sum_{mk<N}f(m)g(k)\\,e(\\alpha mk).$$\n\nSumming over $n<N$ and expanding $(f*g)(n)=\\sum_{mk=n}f(m)g(k)$ turns a one-dimensional sum with\nmultiplicative coefficients into a two-dimensional sum over the hyperbolic region $mk<N$.  This is\nthe step that converts each term of Vaughan's identity into a bilinear form, where Cauchy--Schwarz\nand the large sieve become available.",
+      "created_at": "2026-09-03T12:01:54.38185+08:00",
+      "vote_count": 0,
+      "preamble": "import Definitions.Def_Vino_vaughan\nimport Mathlib.NumberTheory.ArithmeticFunction.VonMangoldt\nimport Mathlib.NumberTheory.ArithmeticFunction.Moebius\nimport Mathlib.Analysis.SpecialFunctions.Log.Basic\nimport Mathlib.Analysis.SpecialFunctions.Pow.Real\nimport Mathlib.NumberTheory.ArithmeticFunction.Misc\nimport Mathlib.Algebra.BigOperators.Module\nimport Mathlib.Algebra.Order.Interval.Finset.SuccPred\nimport Mathlib.Algebra.Order.BigOperators.Ring.Finset\nimport Mathlib.Algebra.BigOperators.Field\nimport Mathlib.NumberTheory.Harmonic.Bounds\nimport Theorems.Thm_CircleMethod_e_neg\nimport Theorems.Thm_Vino_psi_le\nimport Theorems.Thm_CircleMethod_aux_sum_min_le\nimport Theorems.Thm_CircleMethod_nrm_le\nimport Theorems.Thm_CircleMethod_nrm_triangle\nimport Theorems.Thm_CircleMethod_nrm_neg\nimport Theorems.Thm_CircleMethod_nrm_nonneg\nimport Theorems.Thm_CircleMethod_nrm_eq_zero_iff\nimport Theorems.Thm_CircleMethod_nrm_pos_of_not_int\nimport Theorems.Thm_CircleMethod_norm_sum_e_le_inv_nrm\nimport Theorems.Thm_CircleMethod_norm_sum_e_le\nimport Theorems.Thm_CircleMethod_e_add\nimport Theorems.Thm_CircleMethod_norm_e\n\nopen Finset ArithmeticFunction\n\nopen CircleMethod",
+      "source": "H. Davenport, Multiplicative Number Theory, 3rd ed., GTM 74, Springer, 2000, Chapter 24 (Vaughan's identity)",
+      "tags": [
+        "circle-method",
+        "exponential-sums",
+        "number-theory",
+        "vinogradov"
+      ],
+      "created_by": "3027dcae-7aa5-4c26-8bae-885182dbc806",
+      "created_by_username": "tabbott",
+      "deprecated_at": null,
+      "visibility": "public",
+      "mathlib_rev": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+      "env_display_name": "Mathlib c5ea003 (Lean v4.30.0)"
+    }
+  ],
+  "total": 2
+}

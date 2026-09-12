@@ -1,0 +1,27 @@
+{
+  "theorems": [
+    {
+      "theorem_id": "d652addf-fa9e-471b-84d5-b04b97c8941b",
+      "theorem_name": "AnalyticNT_Vaughan",
+      "theorem_title": "Vaughan truncations and weighted arithmetic sums",
+      "status": "Definition",
+      "formal_statement": "",
+      "natural_language_statement": "The four pieces of Vaughan’s identity, complementary Möbius and von Mangoldt truncations, additive characters, and finite weighted sums. The identity and any numerical bounds are separate theorems.",
+      "created_at": "2026-09-07T11:55:54.668668+08:00",
+      "vote_count": 0,
+      "definition": "/-\nCopyright (c) 2026 Gershon Bialer. All rights reserved.\nReleased under Apache 2.0 license; source and modifications are documented in\nthird_party/ternary_goldbach/NOTICE and vaughan_provenance.json in the contribution repository.\n-/\nimport Mathlib.NumberTheory.ArithmeticFunction.Defs\nimport Mathlib.NumberTheory.ArithmeticFunction.Misc\nimport Mathlib.NumberTheory.ArithmeticFunction.Moebius\nimport Mathlib.NumberTheory.ArithmeticFunction.VonMangoldt\nimport Mathlib.NumberTheory.ArithmeticFunction.Zeta\nimport Mathlib.Analysis.SpecialFunctions.Complex.Log\n\nnamespace AnalyticNT.Vaughan\nopen scoped ArithmeticFunction\n\nnoncomputable def vaughanLow (V : ℕ) : ArithmeticFunction ℝ :=\n  ⟨fun n => if n ≤ V then ArithmeticFunction.vonMangoldt n else 0, by simp⟩\n\nnoncomputable def muTruncated (U : ℕ) : ArithmeticFunction ℝ :=\n  ⟨fun n => if n ≤ U then (ArithmeticFunction.moebius n : ℝ) else 0, by simp⟩\n\nnoncomputable def muHigh (U : ℕ) : ArithmeticFunction ℝ :=\n  ⟨fun n => if U < n then (ArithmeticFunction.moebius n : ℝ) else 0, by simp⟩\n\nnoncomputable def lambdaHigh (V : ℕ) : ArithmeticFunction ℝ :=\n  ⟨fun n => if V < n then ArithmeticFunction.vonMangoldt n else 0, by simp⟩\n\nnoncomputable def vaughanS1 (U : ℕ) : ArithmeticFunction ℝ :=\n  muTruncated U * ArithmeticFunction.log\n\nnoncomputable def vaughanS2 (U V : ℕ) : ArithmeticFunction ℝ :=\n  muTruncated U *\n    ((ArithmeticFunction.zeta : ArithmeticFunction ℝ) *\n      ((ArithmeticFunction.vonMangoldt : ArithmeticFunction ℝ) - lambdaHigh V))\n\nnoncomputable def vaughanS3 (U V : ℕ) : ArithmeticFunction ℝ :=\n  lambdaHigh V *\n    (muHigh U * (ArithmeticFunction.zeta : ArithmeticFunction ℝ))\n\nnoncomputable def addChar (α : ℝ) (n : ℕ) : ℂ :=\n  Complex.exp (2 * Real.pi * Complex.I * α * n)\n\nnoncomputable def expSum (F : ArithmeticFunction ℝ) (N : ℕ) (α : ℝ) : ℂ :=\n  ∑ n ∈ Finset.range (N + 1), (F n : ℂ) * addChar α n\n\nnoncomputable def weightedSum (F : ArithmeticFunction ℝ) (s : Finset ℕ) (w : ℕ → ℂ) : ℂ :=\n  ∑ n ∈ s, (F n : ℂ) * w n\n\nend AnalyticNT.Vaughan\n",
+      "source": "Vaughan, An elementary method in prime number theory (1980); adapted from Gershon Bialer, https://github.com/gersh/ternary-goldbach-lean/blob/27df23af6a712895f22204d0d81102baa74f0ebe/ext/analytic_nt/AnalyticNT/Vaughan/Identity.lean, with arbitrary-weight extension.",
+      "tags": [
+        "exponential-sums",
+        "number-theory"
+      ],
+      "created_by": "17f933ae-8394-408f-914b-efee8b07292c",
+      "created_by_username": "Patrick",
+      "deprecated_at": null,
+      "visibility": "public",
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)"
+    }
+  ],
+  "total": 1
+}

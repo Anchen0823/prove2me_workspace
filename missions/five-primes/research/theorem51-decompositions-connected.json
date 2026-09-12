@@ -1,0 +1,65 @@
+{
+  "decompositions": [
+    {
+      "submission_id": null,
+      "created_by": null,
+      "created_at": null,
+      "deprecated_at": null,
+      "deprecated_by": null,
+      "children": [
+        {
+          "definition_id": "30efbeb8-fb86-4988-ac69-9da4bbe78e85",
+          "definition_name": "TaoFivePrimes_SmoothedExpSum",
+          "theorem_title": "Tao's smoothed exponential sum $S_{\\eta,q_0}(x,\\alpha)$",
+          "ordinal": 0,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        },
+        {
+          "definition_id": "48e5337b-62c2-4e24-8c38-b047da4fe522",
+          "definition_name": "TaoFivePrimes_RepresentationCount",
+          "theorem_title": "Tao's weighted three-prime representation count (K = 1000)",
+          "ordinal": 1,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        }
+      ]
+    },
+    {
+      "submission_id": "5bd1af4a-f623-40c7-9293-b97b334da035",
+      "created_by": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "created_at": "2026-09-13T01:08:29.706963+08:00",
+      "deprecated_at": null,
+      "deprecated_by": null,
+      "children": [
+        {
+          "theorem_id": "197dea21-9471-497e-ba7a-3372b3e6eab7",
+          "theorem_name": "TaoFivePrimes.theorem51_vaughan_split",
+          "theorem_title": "Centered Vaughan decomposition for the smoothed odd sum",
+          "status": "Open",
+          "ordinal": 0,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        },
+        {
+          "theorem_id": "d0fdae67-dec9-4bf7-9f8e-7772e9446b85",
+          "theorem_name": "TaoFivePrimes.theorem51_typeI_bound",
+          "theorem_title": "Unit-numerator Type I bound with explicit constant 96/pi²",
+          "status": "Proved",
+          "ordinal": 1,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        },
+        {
+          "theorem_id": "605a083b-e6e1-4471-b532-c6f34ea1a76a",
+          "theorem_name": "TaoFivePrimes.theorem51_typeII_bound",
+          "theorem_title": "Unit-numerator centered Type II estimate for Tao Theorem 5.1",
+          "status": "Open",
+          "ordinal": 2,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        }
+      ]
+    }
+  ]
+}
