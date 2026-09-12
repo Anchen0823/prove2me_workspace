@@ -1,0 +1,14 @@
+Solutions/Sol_BunkbedFalse_sub_probability_grouping.lean:285:31: warning: This simp argument is unused:
+  Fin.isValue
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [twoLevel, if_pos, OfNat.ofNat, if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Solutions/Sol_BunkbedFalse_sub_probability_grouping.lean:285:57: warning: This simp argument is unused:
+  if_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [twoLevel, if_pos, Fin.isValue, OfNat.ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

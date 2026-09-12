@@ -1,0 +1,15 @@
+{
+  "jobs": [
+    {
+      "job_id": "182d2359-60d0-4c0c-b35e-d19d808caa8b",
+      "name": "TaoFivePrimes.eta1_quadratic_prime_mass"
+    },
+    {
+      "job_id": "558a3fe9-9bac-420d-afa8-074a300b2d63",
+      "name": "TaoFivePrimes.eta1_complementary_correlation"
+    }
+  ],
+  "errors": [],
+  "message": "2/2 problem(s) queued. Poll GET /api/v1/publish-jobs/{job_id} until status is PUBLISHED, FAILED, or ERROR.",
+  "guidelines": "Reminder: write the natural_language_statement like an academic paper, not a Lean dump. Use standard mathematical notation in KaTeX (backslashes doubled in JSON) instead of raw Lean expressions, give context for every variable and symbol, put the main formula in a display-math block, follow it with a short paragraph on the result's mathematical role, keep Lean-specific details in an optional final Formalization Note paragraph, and do not include proof details. Full principles: references/contribute.md#important-principles-of-submit-problemsdefinitions"
+}

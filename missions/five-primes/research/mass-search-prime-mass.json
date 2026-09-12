@@ -1,0 +1,78 @@
+{
+  "theorems": [
+    {
+      "theorem_id": "f4cd87ed-a92c-4886-b0b7-e81a95dd0134",
+      "theorem_name": "TaoFivePrimes.eta1_quadratic_prime_mass",
+      "theorem_title": "Quadratic sifted prime mass for the Section 8 trapezoid",
+      "status": "Open",
+      "formal_statement": "theorem TaoFivePrimes.eta1_quadratic_prime_mass (x : ℕ)\n    (hc8 : (10 ^ 8 : ℝ) ≤ (1 / 10 : ℝ) * x)\n    (hneat : (10 ^ 4 : ℝ) * (3 / 2 : ℝ) ≤ x)\n    (halamo : 5 * (3 / 2 : ℝ) ≤ Real.log ((1 / 10 : ℝ) * x))\n    (h10q : (10 ^ 8 : ℝ) * (9 / 4 : ℝ) ≤ x) :\n    ∃ ε : ℝ, |ε| ≤ 0.02 ∧\n      (∑ n ∈ Finset.range (x + 1), siftedVonMangoldt x n * eta1 ((n : ℝ) / x) ^ 2) =\n        (2 / 3 : ℝ) * (1 + ε) * x := by sorry",
+      "natural_language_statement": "Let x be a positive integer and let eta1 be the trapezoidal cutoff from\nSection 8 of Tao's five-primes paper. Set\n\n$$M_x=\\sum_{n=0}^{x}\\Lambda(n)\\mathbf1_{(n,\\sqrt{x}\\#)=1}\\eta_1(n/x)^2.$$\n\nHere the square-root primorial includes primes at most the integer square\nroot of x, exactly as in the platform definition. Assume\n\n$$10^8\\le x/10,\\qquad 10^4(3/2)\\le x,\\qquad\n5(3/2)\\le\\log(x/10),\\qquad 10^8(9/4)\\le x.$$\n\nThen there is a real epsilon such that\n\n$$|\\varepsilon|\\le0.02,\\qquad M_x=\\frac23(1+\\varepsilon)x.$$\n\nThis is the quadratic prime-mass input (4.13) of Corollary 4.9 specialized\nto the Section 8 cutoff. The factor 2/3 is its squared L2 norm; it must not\nbe replaced by 1. The explicit prime estimate, removal of prime powers,\nand passage from the smooth statement to the literal piecewise-linear\ncutoff remain part of this theorem's proof obligation. This statement\ndoes not assert a major-arc energy lower bound.\n",
+      "created_at": "2026-09-12T18:37:09.158824+08:00",
+      "vote_count": 0,
+      "preamble": "import Definitions.Def_TaoFivePrimes_ArcSplit\nopen scoped BigOperators\nopen TaoFivePrimes",
+      "source": "Terence Tao, Every odd number greater than 1 is the sum of at most five primes, https://arxiv.org/abs/1201.6656v4. Corollary 4.9, equation (4.13), printed p. 20, specialized to the Section 8 cutoff and its squared norm 2/3; includes the nonsmooth-cutoff justification.",
+      "tags": [
+        "circle-method",
+        "fourier-analysis",
+        "number-theory"
+      ],
+      "created_by": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "created_by_username": "Yuxuan Xu",
+      "deprecated_at": null,
+      "visibility": "public",
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)"
+    },
+    {
+      "theorem_id": "cf6be7a8-2493-479a-9d57-6ee8535546d1",
+      "theorem_name": "TaoFivePrimes.rosser_schoenfeld_psi_bound",
+      "theorem_title": "Rosser–Schoenfeld: $\\psi(x) \\lt 1.03883\\,x$",
+      "status": "Open",
+      "formal_statement": "namespace TaoFivePrimes\n\ntheorem rosser_schoenfeld_psi_bound :\n    ∀ x : ℕ, 0 < x →\n      (∑ n ∈ Finset.range (x + 1), (Λ n : ℝ)) <\n        1.03883 * (x : ℝ) := by\n  sorry\n\nend TaoFivePrimes",
+      "natural_language_statement": "For every positive integer $x$, the second Chebyshev function satisfies\n\n$$\\psi(x) \\;=\\; \\sum_{n \\le x} \\Lambda(n) \\;\\lt\\; 1.03883\\,x .$$\n\nThis is the explicit prime-mass estimate of Rosser and Schoenfeld, and the constant is sharp in the sense that it cannot be replaced by anything much smaller: the ratio $\\psi(x)/x$ comes within a fraction of a percent of $1.03883$ near $x = 113$, so the bound must be verified against the small-$x$ regime and not only asymptotically. That is what distinguishes it from softer Chebyshev bounds such as $\\psi(x) \\le x\\log 4$, which are far weaker.\n\nIt enters Tao's argument as the crude upper bound on total prime mass used to control error terms.\n\n**Provenance note.** This statement was previously bundled, in a single platform node, with an unrelated Montgomery large-sieve estimate. The two come from different papers and neither depends on the other, so they are separated here.\n\n**Formalization note.** The sum is written over `Finset.range (x + 1)`, i.e. over $n \\le x$, and $\\Lambda$ is Mathlib's `ArithmeticFunction.vonMangoldt`. Note that the mission also carries the weaker `psi_le_112_large`, with constant $1.12$ and only for large $x$; that result does not imply this one.",
+      "created_at": "2026-09-10T17:59:33.40691+08:00",
+      "vote_count": 0,
+      "preamble": "import Definitions.Def_TaoFivePrimes_ArcSplit\nimport Mathlib.MeasureTheory.Integral.Bochner.Set\n\nopen scoped BigOperators ArithmeticFunction.vonMangoldt\nopen MeasureTheory",
+      "source": "J. Barkley Rosser and Lowell Schoenfeld, Approximate formulas for some functions of prime numbers, Illinois J. Math. 6 (1962), 64-94, Theorem 12 (psi(x) < 1.03883 x). Used in Terence Tao, arXiv:1201.6656v4, Section 4.",
+      "tags": [
+        "analytic-number-theory",
+        "chebyshev",
+        "explicit-bounds",
+        "number-theory",
+        "tao-five-primes"
+      ],
+      "created_by": "da7ddf19-79a3-4afa-a245-03d734265eb8",
+      "created_by_username": "shivm",
+      "deprecated_at": null,
+      "visibility": "public",
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)"
+    },
+    {
+      "theorem_id": "753f5c48-d6dc-4534-bd08-faccf7af7bdc",
+      "theorem_name": "TaoFivePrimes.montgomery_corollary47_and_prime_mass_source",
+      "theorem_title": "Montgomery local concentration and explicit prime mass",
+      "status": "Open",
+      "formal_statement": "namespace TaoFivePrimes\n\ntheorem montgomery_corollary47_and_prime_mass_source :\n    (∀ (x : ℕ) (w : ℕ → ℝ) (R : ℝ),\n      1 < x →\n      1 < R →\n      primorial ⌊R⌋₊ ∣\n        primorial (Nat.sqrt x) →\n      (∫ α in Metric.closedBall (0 : AddCircle (1 : ℝ))\n            (1 / (2 * R ^ 2)),\n          ‖TaoFourierIdentity.fourierPolynomial (Finset.range (x + 1))\n              (fun n ↦\n                ((siftedVonMangoldt x n * w n : ℝ) : ℂ))\n              (fun n ↦ (n : ℤ)) α‖ ^ 2\n            ∂AddCircle.haarAddCircle) ≤\n        (Real.log (x : ℝ) / Real.log R) *\n          (∑ n ∈ Finset.range (x + 1),\n            siftedVonMangoldt x n * (w n) ^ 2)) ∧\n    (∀ x : ℕ, 0 < x →\n      (∑ n ∈ Finset.range (x + 1), (Λ n : ℝ)) <\n        1.03883 * (x : ℝ)) := by\n  sorry\n\nend TaoFivePrimes",
+      "natural_language_statement": "This source theorem combines two uniform analytic estimates. First, for every $x>1$, $R>1$, and real weight sequence $w$, provided $\\lfloor R\\rfloor\\#\\mid\\lfloor\\sqrt{x}\\rfloor\\#$, the sifted Fourier polynomial obeys the local concentration bound $$\\int_{\\|\\alpha\\|\\le 1/(2R^2)}|S_w(x,\\alpha)|^2d\\alpha\\le \\frac{\\log x}{\\log R}\\sum_{n\\le x}\\Lambda_{\\sqrt{x}\\#}(n)w(n)^2.$$ Second, for every positive integer $x$, $$\\sum_{n\\le x}\\Lambda(n)<1.03883x.$$ These are respectively the $Q=1$ case of the Montgomery estimate used in Corollary 4.7 and the explicit Rosser--Schoenfeld prime-mass estimate.",
+      "created_at": "2026-09-09T22:18:14.890423+08:00",
+      "vote_count": 0,
+      "preamble": "import Definitions.Def_TaoFivePrimes_ArcSplit\nimport Mathlib.MeasureTheory.Integral.Bochner.Set\n\nopen scoped BigOperators ArithmeticFunction.vonMangoldt\nopen MeasureTheory",
+      "source": "Terence Tao, Every odd number greater than 1 is the sum of at most five primes, arXiv:1201.6656v4, Lemma 4.6 and Corollary 4.7; J. Barkley Rosser and Lowell Schoenfeld, Approximate formulas for some functions of prime numbers, Theorem 12, https://arxiv.org/abs/1201.6656",
+      "tags": [
+        "analytic-number-theory",
+        "fourier-analysis",
+        "goldbach",
+        "number-theory",
+        "sieve-theory"
+      ],
+      "created_by": "1218a2a5-fec3-4902-88f2-735b90eee971",
+      "created_by_username": "marwahaha",
+      "deprecated_at": null,
+      "visibility": "public",
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)"
+    }
+  ],
+  "total": 3
+}

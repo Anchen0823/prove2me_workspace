@@ -1,0 +1,16 @@
+{
+  "checked_at": "2026-09-12T18:57:42.3740349+08:00",
+  "files": [
+    {
+      "path": "examples/five-primes/CutoffDifferences.lean",
+      "sha256": "579B374A6381892785386797A10DB5BEB29D6B34CCFE10AC2219EDDFFDF8D42B",
+      "exit_code": 0
+    },
+    {
+      "path": "examples/five-primes/CutoffFourierDecay.lean",
+      "sha256": "8A348D997AE62C090832FF9DBA7F9E13200144308D5CEDD5B6BE683F7BFA35B3",
+      "exit_code": 0
+    }
+  ],
+  "scope": "Total second-difference mass <=40/x; exact finite-support Fourier bridge; weighted pointwise Fourier decay. Circle integration and prime-mass control remain."
+}

@@ -1,0 +1,32 @@
+{
+  "checked_at": "2026-09-12T18:28:17.2943208+08:00",
+  "toolchain": "leanprover/lean4:v4.33.1",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "options": [
+    "-DautoImplicit=false"
+  ],
+  "files": [
+    {
+      "path": "examples/five-primes/FourierMoments.lean",
+      "sha256": "35C0766070407ACD22D48FA137DC5C750D9A36D78D53EC2FA4D19A1F36E9023D",
+      "exit_code": 0
+    },
+    {
+      "path": "examples/five-primes/LocalL2.lean",
+      "sha256": "3277E1553AFC10F074C571E2154533D78421FB0B07244E7F13A5841EB881BE29",
+      "exit_code": 0
+    },
+    {
+      "path": "examples/five-primes/CutoffEnergy.lean",
+      "sha256": "2063B64C51D6E7ABCBDC6F7416ADB978D4760D625BE352822AE5890F447B7A5A",
+      "exit_code": 0
+    },
+    {
+      "path": "examples/five-primes/MajorArcReduction.lean",
+      "sha256": "606227A1E45EACD34C6B0D5FCB5873BA15857FD0ECBD41D3ACDF7999BF0F742D",
+      "exit_code": 0,
+      "warnings": "Two unnecessarySeqFocus style warnings; no proof errors."
+    }
+  ],
+  "scope": "Local helper proofs and conditional reduction verified. Quadratic prime mass and complementary Fourier correlation are explicit unproved hypotheses of the reduction; no platform submission yet."
+}

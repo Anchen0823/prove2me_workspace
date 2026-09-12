@@ -1,0 +1,45 @@
+Solutions/Sol_TaoFivePrimes_eta1_complementary_correlation.lean:484:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Solutions/Sol_TaoFivePrimes_eta1_complementary_correlation.lean:643:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Solutions/Sol_TaoFivePrimes_eta1_complementary_correlation.lean:858:4: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+Solutions/Sol_TaoFivePrimes_eta1_complementary_correlation.lean:988:5: warning: Variable name `hr_lower` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hr_lower
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Solutions/Sol_TaoFivePrimes_eta1_complementary_correlation.lean:991:5: warning: Variable name `hneat` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hneat
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Solutions/Sol_TaoFivePrimes_eta1_complementary_correlation.lean:992:5: warning: Variable name `halamo` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _halamo
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Solutions/Sol_TaoFivePrimes_eta1_complementary_correlation.lean:993:5: warning: Variable name `h10q` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h10q
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Solutions/Sol_TaoFivePrimes_eta1_complementary_correlation.lean:994:5: warning: Variable name `hr0b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hr0b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Solutions/Sol_TaoFivePrimes_eta1_complementary_correlation.lean:996:5: warning: Variable name `hmass` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hmass
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`

@@ -1,0 +1,7 @@
+{
+  "exit_code": 0,
+  "elapsed_seconds": 213.8030886,
+  "sha256": "A82CC9DC48816B885D7F367BFA10D03494D250402B9E659FAACE0574ADCEDF6A",
+  "checked_at": "2026-09-12T20:34:34.5747715+08:00",
+  "scope": "Full 1..1000 prefix using incremental LCM certificates"
+}

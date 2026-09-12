@@ -1,0 +1,263 @@
+{
+  "FormalLeanFiles": [
+    {
+      "Path": "Definitions/Def_BunkbedHypergraph.lean",
+      "SHA256": "4BEBA8A15BFC935E5D17F6ABD9C9E08D10B6AB7AA878294BCF49CC633E9B4BD9"
+    },
+    {
+      "Path": "Definitions/Def_BunkbedPercolation.lean",
+      "SHA256": "93EB7FF14B8096C2EE74CC4FA6B2376608E217576C73529BFD84A0944DD30FF9"
+    },
+    {
+      "Path": "Definitions/Def_BunkbedSubstituted.lean",
+      "SHA256": "89204AEC21B76587CF5DAD13A6ED9DBFB40EBC6C9AD89E4305D9F453ECBAEECD"
+    },
+    {
+      "Path": "Definitions/Def_BunkbedWZRefined.lean",
+      "SHA256": "C948C647F7F5AB437E07131B82A61AE3EAC4DD145F05E5EF9E601660F630E993"
+    },
+    {
+      "Path": "Definitions/Def_BunkbedWZSurgery.lean",
+      "SHA256": "92EE9A279CC5BA8CFC1AA759C0933714B32000FE9FC4BB4275BA36499823720E"
+    },
+    {
+      "Path": "Theorems/Thm_BunkbedAux_bbProb_biUnion_disjoint.lean",
+      "SHA256": "48FA1C7DD738740716E1F2D654FFD35AD029AF854A9512E7AAC2FBB8F6AAA575"
+    },
+    {
+      "Path": "Theorems/Thm_BunkbedAux_gadgetE_card.lean",
+      "SHA256": "253B9B44F97D5D2423884EF10BCC27AC69599C4F15CC99F527C341E713C5F3AB"
+    },
+    {
+      "Path": "Theorems/Thm_BunkbedAux_partition_sum_eq_total.lean",
+      "SHA256": "DBBF94185D04D2682AB56519B5EA5EC81CD14671984B03BA350D38D1C6DF4F38"
+    },
+    {
+      "Path": "Theorems/Thm_BunkbedAux_probOf_image_map.lean",
+      "SHA256": "0945445A33703DFDC9A7E6A224AA50A53404388260871BCC8FCD490609C9E9F2"
+    },
+    {
+      "Path": "Theorems/Thm_BunkbedAux_probOf_mem_unitInterval.lean",
+      "SHA256": "7DE8EFDFA70FB00F38114E82771FF7536AA9D39B3660C03BD8553503FCA83B8C"
+    },
+    {
+      "Path": "Theorems/Thm_BunkbedAux_reach_image_map.lean",
+      "SHA256": "83F39A691F998E10185CC87DD84DEFEE405637454518D7C702D43D6A73A6707D"
+    },
+    {
+      "Path": "Theorems/Thm_BunkbedAux_sum_weight_eq_one.lean",
+      "SHA256": "6E0C2181F10C5CAA22A01CC07EE56FEAF949F9C016C20453F82DF413B7379449"
+    },
+    {
+      "Path": "Theorems/Thm_BunkbedFalse_bb_boundary_reduce.lean",
+      "SHA256": "289114E338A2DF33642B397BF7A83208E922D060EC86576FD6361BD4552D9723"
+    },
+    {
+      "Path": "Theorems/Thm_BunkbedFalse_gadget_eq1_at_half.lean",
+      "SHA256": "DB95BD6B4C7EED99434BF60485E0FB353478334AD98A336C6A7CFF150FB86847"
+    },
+    {
+      "Path": "Theorems/Thm_BunkbedFalse_hyperedge_simulation.lean",
+      "SHA256": "C08FFBF58C71AC0683E2AEB176E165199BED825F5F4B59A6578CCF3999B3EDFA"
+    },
+    {
+      "Path": "Theorems/Thm_BunkbedFalse_robust_hyperedge.lean",
+      "SHA256": "CED1BB1859576C77B8A761F874EDF4CD4698282A1B7AE715C8346E86208D3CE1"
+    },
+    {
+      "Path": "Theorems/Thm_BunkbedFalse_sub_gadget_copies_disjoint.lean",
+      "SHA256": "BFB596F83C1478D1B478FCEC2E88CF8B79876391BA3F952A805005A60CF58472"
+    },
+    {
+      "Path": "Theorems/Thm_BunkbedFalse_sub_invariants.lean",
+      "SHA256": "578B4D2875F396199E7901809466AED525152B5228514ECAA32B1752A6578428"
+    },
+    {
+      "Path": "Theorems/Thm_BunkbedFalse_sub_probability_grouping.lean",
+      "SHA256": "D131C70B7FE28B2A96BAA8E806E7AD1EDE631A467575E59290FFF2C458267969"
+    },
+    {
+      "Path": "Theorems/Thm_BunkbedFalse_sub_probability_transfer.lean",
+      "SHA256": "2EA1F9338B0CDD1AB98F20D9DA63084E8B6087C0292264C74B561FA95D51A9F7"
+    },
+    {
+      "Path": "Solutions/SmokeTest.lean",
+      "SHA256": "9C226E3DFC15EB2095677D1E3B20DACCD9EA5CCD46BB403FEF6339E2E9CFFAD9"
+    },
+    {
+      "Path": "Solutions/Sol_BunkbedFalse_explicit_counterexample.lean",
+      "SHA256": "D7E5EC30660D6342A5FC453CA38BDE5ACEC34623B6B57E496EFB9001DE09BD6E"
+    },
+    {
+      "Path": "Solutions/Sol_BunkbedFalse_sub_gadget_copies_disjoint.lean",
+      "SHA256": "FD8177F9FA056443ADBB06E20544BF03C887E53C5C81138DEBB45BFB5EB020D6"
+    },
+    {
+      "Path": "Solutions/Sol_BunkbedFalse_sub_probability_grouping.lean",
+      "SHA256": "17A3390AED50533FDC16DFC2031791205C5AD553386F1E1F7DAA7C4D94E3F1D3"
+    },
+    {
+      "Path": "Solutions/Sol_BunkbedFalse_sub_probability_transfer.lean",
+      "SHA256": "CD54CF484B840D5DA456B66F45EF670049FA8D19519BA02050CF943326BD6F23"
+    }
+  ],
+  "Moves": [
+    {
+      "OriginalPath": "examples/bbfactor.lean",
+      "ArchivedPath": "examples/bunkbed/bbfactor.lean",
+      "SHA256BeforeMove": "675691EAD987CA1E0FE1701FC5CA0532CB54A141F9758EA0E2022A628962E5B9"
+    },
+    {
+      "OriginalPath": "examples/GroupingAlgebra.lean",
+      "ArchivedPath": "examples/bunkbed/GroupingAlgebra.lean",
+      "SHA256BeforeMove": "2BBF8A2E5DA879F1A80B4E3EBE587F306B31FEC5C94D6357E4D7D576DAA32803"
+    },
+    {
+      "OriginalPath": "examples/GroupingCore.lean",
+      "ArchivedPath": "examples/bunkbed/GroupingCore.lean",
+      "SHA256BeforeMove": "B690046A4A1BDF4BF9E8FFB496C5C8E1674ADFEF1F983A30936D504BA8F4533E"
+    },
+    {
+      "OriginalPath": "examples/GroupingDirect.lean",
+      "ArchivedPath": "examples/bunkbed/GroupingDirect.lean",
+      "SHA256BeforeMove": "FA7825234EC9F8FF2860C4842A6FE1DA3F93931C8FB2DDB3C65CF29B11A9BF37"
+    },
+    {
+      "OriginalPath": "examples/GroupingFinal.lean",
+      "ArchivedPath": "examples/bunkbed/GroupingFinal.lean",
+      "SHA256BeforeMove": "8227A04CC74FD2CB9620ABA694FA0953C0B882ABDE6E7F85CCF3923F40EAD672"
+    },
+    {
+      "OriginalPath": "examples/GroupingFinish.lean",
+      "ArchivedPath": "examples/bunkbed/GroupingFinish.lean",
+      "SHA256BeforeMove": "1D0AFC2E4872AD78E9779043FF2DE6D33D27A3EF8285EF7F258BEB3C71AD748D"
+    },
+    {
+      "OriginalPath": "examples/GroupingFinishExplicit.lean",
+      "ArchivedPath": "examples/bunkbed/GroupingFinishExplicit.lean",
+      "SHA256BeforeMove": "CF826976E4A622F64F14022504B72BFE749B0C08777F7C5EBFD99FC89D731D3F"
+    },
+    {
+      "OriginalPath": "examples/GroupingTypecheck.lean",
+      "ArchivedPath": "examples/bunkbed/GroupingTypecheck.lean",
+      "SHA256BeforeMove": "FA50436DE5DC3608C8DD01D2E12937C7591D29B3ED2B0742C3C6D9ACC12E1F87"
+    },
+    {
+      "OriginalPath": "examples/image.lean",
+      "ArchivedPath": "examples/bunkbed/image.lean",
+      "SHA256BeforeMove": "92C3F1D59BC7ED5A7115F53ADF8E468AC38F7D953E17C00BD490F4304B4EB741"
+    },
+    {
+      "OriginalPath": "examples/partition.lean",
+      "ArchivedPath": "examples/bunkbed/partition.lean",
+      "SHA256BeforeMove": "4C002DAA3BF0B4C6062C61F0313B73465ADFAA31FEA0595C99DDC06BD4A6AAA1"
+    },
+    {
+      "OriginalPath": "examples/Push.lean",
+      "ArchivedPath": "examples/bunkbed/Push.lean",
+      "SHA256BeforeMove": "5672FE6F6ACD85F2233135B1DBF0055B9C0AE48CC118F2AF39D5FC47DF92E995"
+    },
+    {
+      "OriginalPath": "examples/GroupingAlgebra.log",
+      "ArchivedPath": "missions/bunkbed/verification/GroupingAlgebra.log",
+      "SHA256BeforeMove": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "OriginalPath": "examples/GroupingCore.log",
+      "ArchivedPath": "missions/bunkbed/verification/GroupingCore.log",
+      "SHA256BeforeMove": "4B92675CBEEB83DBB593C72016F0297A0213E1C196062B9C1E87FB7EC00FA302"
+    },
+    {
+      "OriginalPath": "examples/GroupingFinal.log",
+      "ArchivedPath": "missions/bunkbed/verification/GroupingFinal.log",
+      "SHA256BeforeMove": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "OriginalPath": "examples/GroupingFinalOpaque.log",
+      "ArchivedPath": "missions/bunkbed/verification/GroupingFinalOpaque.log",
+      "SHA256BeforeMove": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "OriginalPath": "examples/GroupingFinish.log",
+      "ArchivedPath": "missions/bunkbed/verification/GroupingFinish.log",
+      "SHA256BeforeMove": "E5F50C5305E7513983B0F38B8E13442EAACFEDD42E4EC21BDADAAF361C2C7A64"
+    },
+    {
+      "OriginalPath": "examples/GroupingFinishExplicit.log",
+      "ArchivedPath": "missions/bunkbed/verification/GroupingFinishExplicit.log",
+      "SHA256BeforeMove": "365DFB7924D0EF65F6C86D8E41D506E8CEAA2368C153C9C58ED0D47B5FFF9A18"
+    },
+    {
+      "OriginalPath": "examples/GroupingResolvedChain.json",
+      "ArchivedPath": "missions/bunkbed/verification/GroupingResolvedChain.json",
+      "SHA256BeforeMove": "DAE185A42ED272DEBF7E6E63E3C191582E0D87C3FDAED491BF3647C8A0811FE7"
+    },
+    {
+      "OriginalPath": "examples/GroupingRootFrontier.json",
+      "ArchivedPath": "missions/bunkbed/verification/GroupingRootFrontier.json",
+      "SHA256BeforeMove": "27058E0CAB7C269A601E72E48F510BAE02CEE3159E57D95CB6994AAF499813CD"
+    },
+    {
+      "OriginalPath": "examples/GroupingSubmission.log",
+      "ArchivedPath": "missions/bunkbed/verification/GroupingSubmission.log",
+      "SHA256BeforeMove": "28A6B0E54E1AE2C643C1A3A7433950BECFB2DB5E439723DFDE5F52EA8B1F463C"
+    },
+    {
+      "OriginalPath": "examples/GroupingSubmissionResponse.json",
+      "ArchivedPath": "missions/bunkbed/verification/GroupingSubmissionResponse.json",
+      "SHA256BeforeMove": "B4157AA507DB0CB4E326C9B036340DE09F19E5920D4A284172FD1BE8FC245A05"
+    },
+    {
+      "OriginalPath": "examples/GroupingTypecheck.log",
+      "ArchivedPath": "missions/bunkbed/verification/GroupingTypecheck.log",
+      "SHA256BeforeMove": "CA9C406BC4BEA0D706B52A90DF0AF75FE328F277AE90C8F58A4F0318F29022B4"
+    },
+    {
+      "OriginalPath": "examples/GroupingVerdict.json",
+      "ArchivedPath": "missions/bunkbed/verification/GroupingVerdict.json",
+      "SHA256BeforeMove": "3B415CDEEE232878B732E377CA69C7B6C094FC1F7A9097E6730013C5AFE5123F"
+    },
+    {
+      "OriginalPath": "status.md",
+      "ArchivedPath": "missions/bunkbed/handoff-history.md",
+      "SHA256BeforeMove": "271E5DA94BA0E377A95A47924BBC74A01837B309F2BCD09A6C4A944C935D2152"
+    },
+    {
+      "OriginalPath": "Solutions/SubProbabilityGrouping.md",
+      "ArchivedPath": "missions/bunkbed/explanation.md",
+      "SHA256BeforeMove": "799A5D2E01D1A3F333A80A550E675273E4E045E65E30040892CC6DBDC67A5C70"
+    },
+    {
+      "OriginalPath": "examples/GroupingCore.olean",
+      "ArchivedPath": ".lake/bunkbed-archive/GroupingCore.olean",
+      "SHA256BeforeMove": "D379C29EB73887E52C22A8C48CD33B0D5708D832DD03229F3141038C56B8A1EC"
+    }
+  ],
+  "ArchivedAt": "2026-09-12",
+  "PostMoveImportEdits": [
+    {
+      "Path": "examples/bunkbed/GroupingAlgebra.lean",
+      "Before": "import examples.GroupingCore",
+      "After": "import examples.bunkbed.GroupingCore",
+      "SHA256AfterEdit": "13007BD72681618F8917D6E5DDBD918A5E4624B959E7C76EF07916FB0A6D2E58"
+    },
+    {
+      "Path": "examples/bunkbed/GroupingFinal.lean",
+      "Before": "import examples.GroupingAlgebra",
+      "After": "import examples.bunkbed.GroupingAlgebra",
+      "SHA256AfterEdit": "A498F485F96E7F58055B427764F0B6E753E62CFA8907AF99D8A5198EE35C2D1C"
+    },
+    {
+      "Path": "examples/bunkbed/GroupingFinish.lean",
+      "Before": "import examples.GroupingCore",
+      "After": "import examples.bunkbed.GroupingCore",
+      "SHA256AfterEdit": "6F790E3821D230E4FB97DF8042F4298D4E6815DE66C03FE0BA6F06E6CCD96F99"
+    },
+    {
+      "Path": "examples/bunkbed/GroupingFinishExplicit.lean",
+      "Before": "import examples.GroupingCore",
+      "After": "import examples.bunkbed.GroupingCore",
+      "SHA256AfterEdit": "F15BFDBC205634F1AB1B0B0E92F1783887656E408EF9AD39071E2618528EA409"
+    }
+  ]
+}

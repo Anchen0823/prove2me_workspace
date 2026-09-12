@@ -1,0 +1,13 @@
+{
+  "checked_at": "2026-09-12T18:33:43.1408184+08:00",
+  "file": "Solutions/Sol_TaoFivePrimes_S1_major_arc_L2_mass_corollary49_raw.lean",
+  "sha256": "4C5D3286DFF3715F4A499D7958F2B2C122988D1CF820F8C9EA509EA5402ADB26",
+  "exit_code": 0,
+  "warnings": "Two unnecessarySeqFocus style warnings",
+  "target": "3c39e958-7602-4e59-bf6a-4ac45f8fb0a2",
+  "open_dependencies": [
+    "TaoFivePrimes.eta1_quadratic_prime_mass",
+    "TaoFivePrimes.eta1_complementary_correlation"
+  ],
+  "scope": "Exact target statement, compiled reduction only. Open children are assumptions, not proved results."
+}

@@ -1,0 +1,7 @@
+{
+  "exit_code": 0,
+  "elapsed_seconds": 227.3274341,
+  "sha256": "847740F82FB0EA462352818B32A83F98B7073A1CDBF2D7CA0CF9C1F321167D4D",
+  "checked_at": "2026-09-12T20:44:30.4475771+08:00",
+  "scope": "Exact-target Rosser sketch; middle finite range and explicit Chebyshev source are open imported inputs"
+}

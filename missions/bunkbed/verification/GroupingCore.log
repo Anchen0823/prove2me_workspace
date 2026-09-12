@@ -1,0 +1,2118 @@
+[Elab.async] [0.187648] ✅️ Lean.Elab.Command.runLintersAsync
+  [Elab.lint] [0.187420] ✅️ running linters
+    [Elab.lint] [0.027781] ✅️ running linter: Batteries.Linter.UnreachableTactic.unreachableTacticLinter
+    [Elab.lint] [0.010455] ✅️ running linter: Batteries.Linter.UnnecessarySeqFocus.unnecessarySeqFocusLinter
+    [Elab.lint] [0.018413] ✅️ running linter: Mathlib.Linter.UnusedTactic.unusedTacticLinter✝
+    [Elab.lint] [0.039353] ✅️ running linter: Mathlib.TacticAnalysis.tacticAnalysis
+    [Elab.lint] [0.010624] ✅️ running linter: Mathlib.Linter.DupNamespaceLinter.dupNamespace✝
+[Elab.async] [0.185907] ✅️ Lean.Elab.Command.runLintersAsync
+  [Elab.lint] [0.185898] ✅️ running linters
+    [Elab.lint] [0.027800] ✅️ running linter: Batteries.Linter.UnreachableTactic.unreachableTacticLinter
+    [Elab.lint] [0.018630] ✅️ running linter: Mathlib.Linter.UnusedTactic.unusedTacticLinter✝
+    [Elab.lint] [0.041811] ✅️ running linter: Mathlib.TacticAnalysis.tacticAnalysis
+[Elab.async] [0.185736] ✅️ Lean.Elab.Command.runLintersAsync
+  [Elab.lint] [0.185728] ✅️ running linters
+    [Elab.lint] [0.027515] ✅️ running linter: Batteries.Linter.UnreachableTactic.unreachableTacticLinter
+    [Elab.lint] [0.018432] ✅️ running linter: Mathlib.Linter.UnusedTactic.unusedTacticLinter✝
+    [Elab.lint] [0.041156] ✅️ running linter: Mathlib.TacticAnalysis.tacticAnalysis
+[Elab.async] [0.184610] ✅️ Lean.Elab.Command.runLintersAsync
+  [Elab.lint] [0.184594] ✅️ running linters
+    [Elab.lint] [0.027485] ✅️ running linter: Batteries.Linter.UnreachableTactic.unreachableTacticLinter
+    [Elab.lint] [0.017644] ✅️ running linter: Mathlib.Linter.UnusedTactic.unusedTacticLinter✝
+    [Elab.lint] [0.039363] ✅️ running linter: Mathlib.TacticAnalysis.tacticAnalysis
+    [Elab.lint] [0.010948] ✅️ running linter: Mathlib.Linter.DupNamespaceLinter.dupNamespace✝
+[Elab.command] [0.072251] ✅️ def stateOf {V : Type*} [Fintype V] [DecidableEq V] (S : Finset (Sym2 V)) (a b c : V) :
+        WZ :=
+      if (ofEdges S).Reachable a b then (if (ofEdges S).Reachable b c then WZ.abc else WZ.ab_c)
+      else if (ofEdges S).Reachable b c then WZ.a_bc else if (ofEdges S).Reachable a c then WZ.ac_b else WZ.a_b_c
+  [Elab.definition.header] [0.033942] ✅️ Grouping.stateOf
+    [Elab.step] [0.014090] ✅️ expected type: Sort ?u.1, term
+        Type*
+  [Elab.definition.value] [0.019521] ✅️ Grouping.stateOf
+    [Elab.step] [0.018625] ✅️ expected type: WZ, term
+        if (ofEdges S).Reachable a b then (if (ofEdges S).Reachable b c then WZ.abc else WZ.ab_c)
+        else if (ofEdges S).Reachable b c then WZ.a_bc else if (ofEdges S).Reachable a c then WZ.ac_b else WZ.a_b_c
+      [Elab.step] [0.017620] ✅️ expected type: WZ, term
+          let_mvar% ?m✝ := (ofEdges S).Reachable a b;
+            wait_if_type_mvar% ?m✝;
+              ite✝ ?m✝ (if (ofEdges S).Reachable b c then WZ.abc else WZ.ab_c)
+                (if (ofEdges S).Reachable b c then WZ.a_bc else if (ofEdges S).Reachable a c then WZ.ac_b else WZ.a_b_c)
+        [Elab.step] [0.012285] ✅️ expected type: WZ, term
+            wait_if_type_mvar% ?m✝;
+              ite✝ ?m✝ (if (ofEdges S).Reachable b c then WZ.abc else WZ.ab_c)
+                (if (ofEdges S).Reachable b c then WZ.a_bc else if (ofEdges S).Reachable a c then WZ.ac_b else WZ.a_b_c)
+          [Elab.step] [0.012253] ✅️ expected type: WZ, term
+              ite✝ ?m✝ (if (ofEdges S).Reachable b c then WZ.abc else WZ.ab_c)
+                (if (ofEdges S).Reachable b c then WZ.a_bc else if (ofEdges S).Reachable a c then WZ.ac_b else WZ.a_b_c)
+            [Elab.app.args] [0.012185] ✅️ elabAppArgs (3 args) `@ite`
+[Elab.async] [0.033787] ✅️ Lean.compileDecls
+  [Compiler] [0.032628] ✅️ compiling: [Grouping.stateOf]
+[Elab.async] [0.096978] ✅️ Lean.Elab.Command.runLintersAsync
+  [Elab.lint] [0.096966] ✅️ running linters
+    [Elab.lint] [0.077992] ✅️ running linter: Mathlib.Linter.OverlappingInstances.overlappingInstances✝
+      [overlappingInstances] [0.048546] ✅️ linting `stateOf`
+[Elab.async] [0.064861] ✅️ elaborating proof of Grouping.state_boundary
+  [Elab.definition.value] [0.063537] ✅️ Grouping.state_boundary
+    [Elab.step] [0.060569] ✅️ 
+          by_cases hab : (ofEdges S).Reachable a b
+          · by_cases hbc : (ofEdges S).Reachable b c
+            · have hac : (ofEdges S).Reachable a c := hab.trans hbc
+              simp [stateOf, hab, hbc, hac]
+            · have hac : ¬(ofEdges S).Reachable a c := fun h => hbc (hab.symm.trans h)
+              simp [stateOf, hab, hbc, hac]
+          · by_cases hbc : (ofEdges S).Reachable b c
+            · have hac : ¬(ofEdges S).Reachable a c := fun h => hab (h.trans hbc.symm)
+              simp [stateOf, hab, hbc, hac]
+            · by_cases hac : (ofEdges S).Reachable a c
+              · simp [stateOf, hab, hbc, hac]
+              · simp [stateOf, hab, hbc, hac]
+      [Elab.step] [0.060199] ✅️ 
+            by_cases hab : (ofEdges S).Reachable a b
+            · by_cases hbc : (ofEdges S).Reachable b c
+              · have hac : (ofEdges S).Reachable a c := hab.trans hbc
+                simp [stateOf, hab, hbc, hac]
+              · have hac : ¬(ofEdges S).Reachable a c := fun h => hbc (hab.symm.trans h)
+                simp [stateOf, hab, hbc, hac]
+            · by_cases hbc : (ofEdges S).Reachable b c
+              · have hac : ¬(ofEdges S).Reachable a c := fun h => hab (h.trans hbc.symm)
+                simp [stateOf, hab, hbc, hac]
+              · by_cases hac : (ofEdges S).Reachable a c
+                · simp [stateOf, hab, hbc, hac]
+                · simp [stateOf, hab, hbc, hac]
+        [Elab.step] [0.040447] ✅️ ·
+              by_cases hbc : (ofEdges S).Reachable b c
+              · have hac : (ofEdges S).Reachable a c := hab.trans hbc
+                simp [stateOf, hab, hbc, hac]
+              · have hac : ¬(ofEdges S).Reachable a c := fun h => hbc (hab.symm.trans h)
+                simp [stateOf, hab, hbc, hac]
+          [Elab.step] [0.040288] ✅️ 
+                by_cases hbc : (ofEdges S).Reachable b c
+                · have hac : (ofEdges S).Reachable a c := hab.trans hbc
+                  simp [stateOf, hab, hbc, hac]
+                · have hac : ¬(ofEdges S).Reachable a c := fun h => hbc (hab.symm.trans h)
+                  simp [stateOf, hab, hbc, hac]
+            [Elab.step] [0.040275] ✅️ 
+                  by_cases hbc : (ofEdges S).Reachable b c
+                  · have hac : (ofEdges S).Reachable a c := hab.trans hbc
+                    simp [stateOf, hab, hbc, hac]
+                  · have hac : ¬(ofEdges S).Reachable a c := fun h => hbc (hab.symm.trans h)
+                    simp [stateOf, hab, hbc, hac]
+              [Elab.step] [0.034349] ✅️ ·
+                    have hac : (ofEdges S).Reachable a c := hab.trans hbc
+                    simp [stateOf, hab, hbc, hac]
+                [Elab.step] [0.034333] ✅️ 
+                      have hac : (ofEdges S).Reachable a c := hab.trans hbc
+                      simp [stateOf, hab, hbc, hac]
+                  [Elab.step] [0.034327] ✅️ 
+                        have hac : (ofEdges S).Reachable a c := hab.trans hbc
+                        simp [stateOf, hab, hbc, hac]
+                    [Elab.step] [0.032312] ✅️ simp [stateOf, hab, hbc, hac]
+        [Elab.step] [0.014867] ✅️ ·
+              by_cases hbc : (ofEdges S).Reachable b c
+              · have hac : ¬(ofEdges S).Reachable a c := fun h => hab (h.trans hbc.symm)
+                simp [stateOf, hab, hbc, hac]
+              · by_cases hac : (ofEdges S).Reachable a c
+                · simp [stateOf, hab, hbc, hac]
+                · simp [stateOf, hab, hbc, hac]
+          [Elab.step] [0.014847] ✅️ 
+                by_cases hbc : (ofEdges S).Reachable b c
+                · have hac : ¬(ofEdges S).Reachable a c := fun h => hab (h.trans hbc.symm)
+                  simp [stateOf, hab, hbc, hac]
+                · by_cases hac : (ofEdges S).Reachable a c
+                  · simp [stateOf, hab, hbc, hac]
+                  · simp [stateOf, hab, hbc, hac]
+            [Elab.step] [0.014836] ✅️ 
+                  by_cases hbc : (ofEdges S).Reachable b c
+                  · have hac : ¬(ofEdges S).Reachable a c := fun h => hab (h.trans hbc.symm)
+                    simp [stateOf, hab, hbc, hac]
+                  · by_cases hac : (ofEdges S).Reachable a c
+                    · simp [stateOf, hab, hbc, hac]
+                    · simp [stateOf, hab, hbc, hac]
+[Elab.async] [0.074165] ✅️ Lean.Elab.Command.runLintersAsync
+  [Elab.lint] [0.074153] ✅️ running linters
+    [Elab.lint] [0.032576] ✅️ running linter: Batteries.Linter.UnreachableTactic.unreachableTacticLinter
+    [Elab.lint] [0.014099] ✅️ running linter: Mathlib.TacticAnalysis.tacticAnalysis
+[Elab.command] [0.036088] ✅️ theorem state_event {V : Type*} [Fintype V] [DecidableEq V] (S : Finset (Sym2 V))
+        (a b c : V) (s : WZ) :
+        stateOf S a b c = s ↔
+          match s with
+          | .abc => (ofEdges S).Reachable a b ∧ (ofEdges S).Reachable b c
+          | .ab_c => (ofEdges S).Reachable a b ∧ ¬(ofEdges S).Reachable a c
+          | .ac_b => (ofEdges S).Reachable a c ∧ ¬(ofEdges S).Reachable a b
+          | .a_bc => (ofEdges S).Reachable b c ∧ ¬(ofEdges S).Reachable a b
+          | .a_b_c => ¬(ofEdges S).Reachable a b ∧ ¬(ofEdges S).Reachable b c ∧ ¬(ofEdges S).Reachable a c :=
+      by
+      by_cases hab : (ofEdges S).Reachable a b
+      · by_cases hbc : (ofEdges S).Reachable b c
+        · have hac : (ofEdges S).Reachable a c := hab.trans hbc
+          cases s <;> simp [stateOf, hab, hbc, hac]
+        · have hac : ¬(ofEdges S).Reachable a c := fun h => hbc (hab.symm.trans h)
+          cases s <;> simp [stateOf, hab, hbc, hac]
+      · by_cases hbc : (ofEdges S).Reachable b c
+        · have hac : ¬(ofEdges S).Reachable a c := fun h => hab (h.trans hbc.symm)
+          cases s <;> simp [stateOf, hab, hbc, hac]
+        · by_cases hac : (ofEdges S).Reachable a c
+          · cases s <;> simp [stateOf, hab, hbc, hac]
+          · cases s <;> simp [stateOf, hab, hbc, hac]
+  [Elab.definition.header] [0.035828] ✅️ Grouping.state_event
+    [Elab.step] [0.033254] ✅️ expected type: Prop, term
+        stateOf S a b c = s ↔
+          match s with
+          | .abc => (ofEdges S).Reachable a b ∧ (ofEdges S).Reachable b c
+          | .ab_c => (ofEdges S).Reachable a b ∧ ¬(ofEdges S).Reachable a c
+          | .ac_b => (ofEdges S).Reachable a c ∧ ¬(ofEdges S).Reachable a b
+          | .a_bc => (ofEdges S).Reachable b c ∧ ¬(ofEdges S).Reachable a b
+          | .a_b_c => ¬(ofEdges S).Reachable a b ∧ ¬(ofEdges S).Reachable b c ∧ ¬(ofEdges S).Reachable a c
+      [Elab.step] [0.033232] ✅️ expected type: Prop, term
+          Iff✝ (stateOf S a b c = s)
+            (match s with
+            | .abc => (ofEdges S).Reachable a b ∧ (ofEdges S).Reachable b c
+            | .ab_c => (ofEdges S).Reachable a b ∧ ¬(ofEdges S).Reachable a c
+            | .ac_b => (ofEdges S).Reachable a c ∧ ¬(ofEdges S).Reachable a b
+            | .a_bc => (ofEdges S).Reachable b c ∧ ¬(ofEdges S).Reachable a b
+            | .a_b_c => ¬(ofEdges S).Reachable a b ∧ ¬(ofEdges S).Reachable b c ∧ ¬(ofEdges S).Reachable a c)
+        [Elab.app.args] [0.033174] ✅️ elabAppArgs (2 args) `Iff`
+          [Elab.step] [0.032494] ✅️ expected type: Prop, term
+              match s with
+              | .abc => (ofEdges S).Reachable a b ∧ (ofEdges S).Reachable b c
+              | .ab_c => (ofEdges S).Reachable a b ∧ ¬(ofEdges S).Reachable a c
+              | .ac_b => (ofEdges S).Reachable a c ∧ ¬(ofEdges S).Reachable a b
+              | .a_bc => (ofEdges S).Reachable b c ∧ ¬(ofEdges S).Reachable a b
+              | .a_b_c => ¬(ofEdges S).Reachable a b ∧ ¬(ofEdges S).Reachable b c ∧ ¬(ofEdges S).Reachable a c
+[Elab.async] [0.086063] ✅️ elaborating proof of Grouping.state_event
+  [Elab.definition.value] [0.082715] ✅️ Grouping.state_event
+    [Elab.step] [0.080901] ✅️ 
+          by_cases hab : (ofEdges S).Reachable a b
+          · by_cases hbc : (ofEdges S).Reachable b c
+            · have hac : (ofEdges S).Reachable a c := hab.trans hbc
+              cases s <;> simp [stateOf, hab, hbc, hac]
+            · have hac : ¬(ofEdges S).Reachable a c := fun h => hbc (hab.symm.trans h)
+              cases s <;> simp [stateOf, hab, hbc, hac]
+          · by_cases hbc : (ofEdges S).Reachable b c
+            · have hac : ¬(ofEdges S).Reachable a c := fun h => hab (h.trans hbc.symm)
+              cases s <;> simp [stateOf, hab, hbc, hac]
+            · by_cases hac : (ofEdges S).Reachable a c
+              · cases s <;> simp [stateOf, hab, hbc, hac]
+              · cases s <;> simp [stateOf, hab, hbc, hac]
+      [Elab.step] [0.080883] ✅️ 
+            by_cases hab : (ofEdges S).Reachable a b
+            · by_cases hbc : (ofEdges S).Reachable b c
+              · have hac : (ofEdges S).Reachable a c := hab.trans hbc
+                cases s <;> simp [stateOf, hab, hbc, hac]
+              · have hac : ¬(ofEdges S).Reachable a c := fun h => hbc (hab.symm.trans h)
+                cases s <;> simp [stateOf, hab, hbc, hac]
+            · by_cases hbc : (ofEdges S).Reachable b c
+              · have hac : ¬(ofEdges S).Reachable a c := fun h => hab (h.trans hbc.symm)
+                cases s <;> simp [stateOf, hab, hbc, hac]
+              · by_cases hac : (ofEdges S).Reachable a c
+                · cases s <;> simp [stateOf, hab, hbc, hac]
+                · cases s <;> simp [stateOf, hab, hbc, hac]
+        [Elab.step] [0.038382] ✅️ ·
+              by_cases hbc : (ofEdges S).Reachable b c
+              · have hac : (ofEdges S).Reachable a c := hab.trans hbc
+                cases s <;> simp [stateOf, hab, hbc, hac]
+              · have hac : ¬(ofEdges S).Reachable a c := fun h => hbc (hab.symm.trans h)
+                cases s <;> simp [stateOf, hab, hbc, hac]
+          [Elab.step] [0.038331] ✅️ 
+                by_cases hbc : (ofEdges S).Reachable b c
+                · have hac : (ofEdges S).Reachable a c := hab.trans hbc
+                  cases s <;> simp [stateOf, hab, hbc, hac]
+                · have hac : ¬(ofEdges S).Reachable a c := fun h => hbc (hab.symm.trans h)
+                  cases s <;> simp [stateOf, hab, hbc, hac]
+            [Elab.step] [0.038304] ✅️ 
+                  by_cases hbc : (ofEdges S).Reachable b c
+                  · have hac : (ofEdges S).Reachable a c := hab.trans hbc
+                    cases s <;> simp [stateOf, hab, hbc, hac]
+                  · have hac : ¬(ofEdges S).Reachable a c := fun h => hbc (hab.symm.trans h)
+                    cases s <;> simp [stateOf, hab, hbc, hac]
+              [Elab.step] [0.021071] ✅️ ·
+                    have hac : (ofEdges S).Reachable a c := hab.trans hbc
+                    cases s <;> simp [stateOf, hab, hbc, hac]
+                [Elab.step] [0.021053] ✅️ 
+                      have hac : (ofEdges S).Reachable a c := hab.trans hbc
+                      cases s <;> simp [stateOf, hab, hbc, hac]
+                  [Elab.step] [0.021044] ✅️ 
+                        have hac : (ofEdges S).Reachable a c := hab.trans hbc
+                        cases s <;> simp [stateOf, hab, hbc, hac]
+                    [Elab.step] [0.019385] ✅️ (cases s) <;> simp [stateOf, hab, hbc, hac]
+                      [Elab.step] [0.019367] ✅️ focus
+                            cases s
+                            with_annotate_state"<;>" skip
+                            all_goals simp [stateOf, hab, hbc, hac]
+                        [Elab.step] [0.019357] ✅️ 
+                              cases s
+                              with_annotate_state"<;>" skip
+                              all_goals simp [stateOf, hab, hbc, hac]
+                          [Elab.step] [0.019350] ✅️ 
+                                cases s
+                                with_annotate_state"<;>" skip
+                                all_goals simp [stateOf, hab, hbc, hac]
+                            [Elab.step] [0.014328] ✅️ all_goals simp [stateOf, hab, hbc, hac]
+              [Elab.step] [0.014918] ✅️ ·
+                    have hac : ¬(ofEdges S).Reachable a c := fun h => hbc (hab.symm.trans h)
+                    cases s <;> simp [stateOf, hab, hbc, hac]
+                [Elab.step] [0.014874] ✅️ 
+                      have hac : ¬(ofEdges S).Reachable a c := fun h => hbc (hab.symm.trans h)
+                      cases s <;> simp [stateOf, hab, hbc, hac]
+                  [Elab.step] [0.014865] ✅️ 
+                        have hac : ¬(ofEdges S).Reachable a c := fun h => hbc (hab.symm.trans h)
+                        cases s <;> simp [stateOf, hab, hbc, hac]
+                    [Elab.step] [0.012801] ✅️ (cases s) <;> simp [stateOf, hab, hbc, hac]
+                      [Elab.step] [0.012783] ✅️ focus
+                            cases s
+                            with_annotate_state"<;>" skip
+                            all_goals simp [stateOf, hab, hbc, hac]
+                        [Elab.step] [0.012772] ✅️ 
+                              cases s
+                              with_annotate_state"<;>" skip
+                              all_goals simp [stateOf, hab, hbc, hac]
+                          [Elab.step] [0.012764] ✅️ 
+                                cases s
+                                with_annotate_state"<;>" skip
+                                all_goals simp [stateOf, hab, hbc, hac]
+                            [Elab.step] [0.011612] ✅️ all_goals simp [stateOf, hab, hbc, hac]
+        [Elab.step] [0.040091] ✅️ ·
+              by_cases hbc : (ofEdges S).Reachable b c
+              · have hac : ¬(ofEdges S).Reachable a c := fun h => hab (h.trans hbc.symm)
+                cases s <;> simp [stateOf, hab, hbc, hac]
+              · by_cases hac : (ofEdges S).Reachable a c
+                · cases s <;> simp [stateOf, hab, hbc, hac]
+                · cases s <;> simp [stateOf, hab, hbc, hac]
+          [Elab.step] [0.040072] ✅️ 
+                by_cases hbc : (ofEdges S).Reachable b c
+                · have hac : ¬(ofEdges S).Reachable a c := fun h => hab (h.trans hbc.symm)
+                  cases s <;> simp [stateOf, hab, hbc, hac]
+                · by_cases hac : (ofEdges S).Reachable a c
+                  · cases s <;> simp [stateOf, hab, hbc, hac]
+                  · cases s <;> simp [stateOf, hab, hbc, hac]
+            [Elab.step] [0.040065] ✅️ 
+                  by_cases hbc : (ofEdges S).Reachable b c
+                  · have hac : ¬(ofEdges S).Reachable a c := fun h => hab (h.trans hbc.symm)
+                    cases s <;> simp [stateOf, hab, hbc, hac]
+                  · by_cases hac : (ofEdges S).Reachable a c
+                    · cases s <;> simp [stateOf, hab, hbc, hac]
+                    · cases s <;> simp [stateOf, hab, hbc, hac]
+              [Elab.step] [0.012352] ✅️ ·
+                    have hac : ¬(ofEdges S).Reachable a c := fun h => hab (h.trans hbc.symm)
+                    cases s <;> simp [stateOf, hab, hbc, hac]
+                [Elab.step] [0.012335] ✅️ 
+                      have hac : ¬(ofEdges S).Reachable a c := fun h => hab (h.trans hbc.symm)
+                      cases s <;> simp [stateOf, hab, hbc, hac]
+                  [Elab.step] [0.012330] ✅️ 
+                        have hac : ¬(ofEdges S).Reachable a c := fun h => hab (h.trans hbc.symm)
+                        cases s <;> simp [stateOf, hab, hbc, hac]
+                    [Elab.step] [0.010267] ✅️ (cases s) <;> simp [stateOf, hab, hbc, hac]
+                      [Elab.step] [0.010251] ✅️ focus
+                            cases s
+                            with_annotate_state"<;>" skip
+                            all_goals simp [stateOf, hab, hbc, hac]
+                        [Elab.step] [0.010243] ✅️ 
+                              cases s
+                              with_annotate_state"<;>" skip
+                              all_goals simp [stateOf, hab, hbc, hac]
+                          [Elab.step] [0.010235] ✅️ 
+                                cases s
+                                with_annotate_state"<;>" skip
+                                all_goals simp [stateOf, hab, hbc, hac]
+              [Elab.step] [0.023532] ✅️ ·
+                    by_cases hac : (ofEdges S).Reachable a c
+                    · cases s <;> simp [stateOf, hab, hbc, hac]
+                    · cases s <;> simp [stateOf, hab, hbc, hac]
+                [Elab.step] [0.023469] ✅️ 
+                      by_cases hac : (ofEdges S).Reachable a c
+                      · cases s <;> simp [stateOf, hab, hbc, hac]
+                      · cases s <;> simp [stateOf, hab, hbc, hac]
+                  [Elab.step] [0.023460] ✅️ 
+                        by_cases hac : (ofEdges S).Reachable a c
+                        · cases s <;> simp [stateOf, hab, hbc, hac]
+                        · cases s <;> simp [stateOf, hab, hbc, hac]
+                    [Elab.step] [0.011527] ✅️ · cases s <;> simp [stateOf, hab, hbc, hac]
+                      [Elab.step] [0.011513] ✅️ cases s <;> simp [stateOf, hab, hbc, hac]
+                        [Elab.step] [0.011508] ✅️ cases s <;> simp [stateOf, hab, hbc, hac]
+                          [Elab.step] [0.011500] ✅️ (cases s) <;> simp [stateOf, hab, hbc, hac]
+                            [Elab.step] [0.011490] ✅️ focus
+                                  cases s
+                                  with_annotate_state"<;>" skip
+                                  all_goals simp [stateOf, hab, hbc, hac]
+                              [Elab.step] [0.011483] ✅️ 
+                                    cases s
+                                    with_annotate_state"<;>" skip
+                                    all_goals simp [stateOf, hab, hbc, hac]
+                                [Elab.step] [0.011473] ✅️ 
+                                      cases s
+                                      with_annotate_state"<;>" skip
+                                      all_goals simp [stateOf, hab, hbc, hac]
+                                  [Elab.step] [0.010817] ✅️ all_goals simp [stateOf, hab, hbc, hac]
+[Elab.async] [0.095265] ✅️ Lean.Elab.Command.runLintersAsync
+  [Elab.lint] [0.095256] ✅️ running linters
+    [Elab.lint] [0.021814] ✅️ running linter: Mathlib.Linter.UnusedTactic.unusedTacticLinter✝
+    [Elab.lint] [0.031093] ✅️ running linter: Mathlib.TacticAnalysis.tacticAnalysis
+[Elab.command] [0.069159] ✅️ def partMass {V : Type*} [Fintype V] [DecidableEq V] (E : Finset (Sym2 V)) (w : Sym2 V → ℚ)
+        (a b c : V) : WZ → ℚ
+      | .abc => Pabc E w a b c
+      | .ab_c => Pab_c E w a b c
+      | .ac_b => Pac_b E w a b c
+      | .a_bc => Pa_bc E w a b c
+      | .a_b_c => Pa_b_c E w a b c
+  [Elab.definition.header] [0.031589] ✅️ Grouping.partMass
+    [Elab.step] [0.011492] ✅️ expected type: Sort ?u.1, term
+        Type*
+    [Elab.step] [0.010233] ✅️ expected type: Sort ?u.16, term
+        WZ → ℚ
+      [Elab.step] [0.010163] ✅️ expected type: Type, term
+          ℚ
+  [Elab.definition.value] [0.037057] ✅️ Grouping.partMass
+    [Elab.step] [0.036888] ✅️ expected type: WZ → ℚ, term
+        @fun x✝ =>
+          match @x✝ with
+          | .abc =>
+            clear% x✝;
+            Pabc E w a b c
+          | .ab_c =>
+            clear% x✝;
+            Pab_c E w a b c
+          | .ac_b =>
+            clear% x✝;
+            Pac_b E w a b c
+          | .a_bc =>
+            clear% x✝;
+            Pa_bc E w a b c
+          | .a_b_c =>
+            clear% x✝;
+            Pa_b_c E w a b c
+      [Elab.step] [0.036868] ✅️ expected type: WZ → ℚ, term
+          fun x✝ =>
+            match @x✝ with
+            | .abc =>
+              clear% x✝;
+              Pabc E w a b c
+            | .ab_c =>
+              clear% x✝;
+              Pab_c E w a b c
+            | .ac_b =>
+              clear% x✝;
+              Pac_b E w a b c
+            | .a_bc =>
+              clear% x✝;
+              Pa_bc E w a b c
+            | .a_b_c =>
+              clear% x✝;
+              Pa_b_c E w a b c
+        [Elab.step] [0.036797] ✅️ expected type: ℚ, term
+            match @x✝ with
+            | .abc =>
+              clear% x✝;
+              Pabc E w a b c
+            | .ab_c =>
+              clear% x✝;
+              Pab_c E w a b c
+            | .ac_b =>
+              clear% x✝;
+              Pac_b E w a b c
+            | .a_bc =>
+              clear% x✝;
+              Pa_bc E w a b c
+            | .a_b_c =>
+              clear% x✝;
+              Pa_b_c E w a b c
+          [Elab.step] [0.010428] ✅️ expected type: ℚ, term
+              clear% x✝;
+              Pabc E w a b c
+            [Elab.step] [0.010133] ✅️ expected type: ℚ, term
+                Pabc E w a b c
+              [Elab.app.args] [0.010046] ✅️ elabAppArgs (5 args) `@Pabc`
+[Elab.async] [0.017610] ✅️ Lean.Elab.Command.runLintersAsync
+  [Elab.lint] [0.017603] ✅️ running linters
+[Elab.async] [0.069816] ✅️ elaborating proof of Grouping.prob_state_eq
+  [Elab.definition.value] [0.066384] ✅️ Grouping.prob_state_eq
+    [Elab.step] [0.064594] ✅️ 
+          unfold probOf
+          cases s <;> unfold partMass Pabc Pab_c Pac_b Pa_bc Pa_b_c probOf <;> apply Finset.sum_congr rfl <;>
+              intro S hS <;>
+            exact if_congr (state_event S a b c _) rfl rfl
+      [Elab.step] [0.064581] ✅️ 
+            unfold probOf
+            cases s <;> unfold partMass Pabc Pab_c Pac_b Pa_bc Pa_b_c probOf <;> apply Finset.sum_congr rfl <;>
+                intro S hS <;>
+              exact if_congr (state_event S a b c _) rfl rfl
+        [Elab.step] [0.063007] ✅️ (cases s) <;> unfold partMass Pabc Pab_c Pac_b Pa_bc Pa_b_c probOf <;>
+                  apply Finset.sum_congr rfl <;>
+                intro S hS <;>
+              exact if_congr (state_event S a b c _) rfl rfl
+          [Elab.step] [0.062991] ✅️ focus
+                cases s <;> unfold partMass Pabc Pab_c Pac_b Pa_bc Pa_b_c probOf <;> apply Finset.sum_congr rfl <;>
+                  intro S hS
+                with_annotate_state"<;>" skip
+                all_goals exact if_congr (state_event S a b c _) rfl rfl
+            [Elab.step] [0.062979] ✅️ 
+                  cases s <;> unfold partMass Pabc Pab_c Pac_b Pa_bc Pa_b_c probOf <;> apply Finset.sum_congr rfl <;>
+                    intro S hS
+                  with_annotate_state"<;>" skip
+                  all_goals exact if_congr (state_event S a b c _) rfl rfl
+              [Elab.step] [0.062965] ✅️ 
+                    cases s <;> unfold partMass Pabc Pab_c Pac_b Pa_bc Pa_b_c probOf <;> apply Finset.sum_congr rfl <;>
+                      intro S hS
+                    with_annotate_state"<;>" skip
+                    all_goals exact if_congr (state_event S a b c _) rfl rfl
+                [Elab.step] [0.025239] ✅️ (cases s) <;> unfold partMass Pabc Pab_c Pac_b Pa_bc Pa_b_c probOf <;>
+                        apply Finset.sum_congr rfl <;>
+                      intro S hS
+                  [Elab.step] [0.025230] ✅️ focus
+                        cases s <;> unfold partMass Pabc Pab_c Pac_b Pa_bc Pa_b_c probOf <;> apply Finset.sum_congr rfl
+                        with_annotate_state"<;>" skip
+                        all_goals intro S hS
+                    [Elab.step] [0.025219] ✅️ 
+                          cases s <;> unfold partMass Pabc Pab_c Pac_b Pa_bc Pa_b_c probOf <;>
+                            apply Finset.sum_congr rfl
+                          with_annotate_state"<;>" skip
+                          all_goals intro S hS
+                      [Elab.step] [0.025210] ✅️ 
+                            cases s <;> unfold partMass Pabc Pab_c Pac_b Pa_bc Pa_b_c probOf <;>
+                              apply Finset.sum_congr rfl
+                            with_annotate_state"<;>" skip
+                            all_goals intro S hS
+                        [Elab.step] [0.024312] ✅️ (cases s) <;> unfold partMass Pabc Pab_c Pac_b Pa_bc Pa_b_c probOf <;>
+                              apply Finset.sum_congr rfl
+                          [Elab.step] [0.024297] ✅️ focus
+                                cases s <;> unfold partMass Pabc Pab_c Pac_b Pa_bc Pa_b_c probOf
+                                with_annotate_state"<;>" skip
+                                all_goals apply Finset.sum_congr rfl
+                            [Elab.step] [0.024278] ✅️ 
+                                  cases s <;> unfold partMass Pabc Pab_c Pac_b Pa_bc Pa_b_c probOf
+                                  with_annotate_state"<;>" skip
+                                  all_goals apply Finset.sum_congr rfl
+                              [Elab.step] [0.024263] ✅️ 
+                                    cases s <;> unfold partMass Pabc Pab_c Pac_b Pa_bc Pa_b_c probOf
+                                    with_annotate_state"<;>" skip
+                                    all_goals apply Finset.sum_congr rfl
+                                [Elab.step] [0.019400] ✅️ all_goals apply Finset.sum_congr rfl
+                                  [Elab.step] [0.014333] ✅️ apply Finset.sum_congr rfl
+                                    [Elab.step] [0.014323] ✅️ apply Finset.sum_congr rfl
+                                      [Elab.step] [0.014309] ✅️ apply Finset.sum_congr rfl
+                                        [Elab.step] [0.012726] ✅️ expected type: <not-available>, term
+                                            Finset.sum_congr rfl
+                                          [Elab.app.args] [0.011850] ✅️ elabAppArgs (1 args) `@sum_congr`
+                                            [Elab.app.finalize] [0.011472] ✅️ sum_congr
+                                                  rfl : (∀ x ∈ ?m.113, ?m.110 x = ?m.111 x) →
+                                                  Finset.sum ?m.113 ?m.110 = Finset.sum ?m.113 ?m.111
+                                              [Meta.synthInstance] [0.011456] 💥️ AddCommMonoid ?m.106
+                                                [Meta.synthInstance] [0.010256] ✅️ new goal AddCommMonoid ?m.106
+                [Elab.step] [0.037689] ✅️ all_goals exact if_congr (state_event S a b c _) rfl rfl
+[Elab.async] [0.070033] ✅️ Lean.Elab.Command.runLintersAsync
+  [Elab.lint] [0.070024] ✅️ running linters
+    [Elab.lint] [0.021591] ✅️ running linter: Batteries.Linter.UnreachableTactic.unreachableTacticLinter
+    [Elab.lint] [0.032008] ✅️ running linter: Mathlib.TacticAnalysis.tacticAnalysis
+[Elab.async] [0.012803] ✅️ elaborating proof of Grouping.state_image
+  [Elab.definition.value] [0.011897] ✅️ Grouping.state_image
+    [Elab.step] [0.011597] ✅️ 
+          unfold stateOf
+          simp only [BunkbedAux.reach_image_map f hf]
+      [Elab.step] [0.011581] ✅️ 
+            unfold stateOf
+            simp only [BunkbedAux.reach_image_map f hf]
+        [Elab.step] [0.011351] ✅️ simp only [BunkbedAux.reach_image_map f hf]
+[Elab.async] [0.033311] ✅️ Lean.Elab.Command.runLintersAsync
+  [Elab.lint] [0.033303] ✅️ running linters
+    [Elab.lint] [0.012479] ✅️ running linter: Lean.Linter.UnusedVariables.unusedVariables
+    [Elab.lint] [0.011322] ✅️ running linter: Batteries.Linter.UnreachableTactic.unreachableTacticLinter
+[Elab.async] [0.022024] ✅️ elaborating proof of Grouping.prob_state_image
+  [Elab.definition.value] [0.021465] ✅️ Grouping.prob_state_image
+    [Elab.step] [0.021117] ✅️ 
+          rw [← prob_state_eq E (fun _ => c) a b d s]
+          exact (BunkbedAux.probOf_image_map f hf E c _ _ (fun S _ => by rw [state_image f hf S a b d])).symm
+      [Elab.step] [0.021103] ✅️ 
+            rw [← prob_state_eq E (fun _ => c) a b d s]
+            exact (BunkbedAux.probOf_image_map f hf E c _ _ (fun S _ => by rw [state_image f hf S a b d])).symm
+        [Elab.step] [0.015207] ✅️ exact
+              (BunkbedAux.probOf_image_map f hf E c _ _ (fun S _ => by rw [state_image f hf S a b d])).symm
+          [Elab.step] [0.011583] ✅️ expected type: (probOf (image (Sym2.map f) E) (fun x => c) fun S =>
+                  stateOf S (f a) (f b) (f d) = s) =
+                probOf E (fun x => c) fun S => stateOf S a b d = s, term
+              (BunkbedAux.probOf_image_map f hf E c _ _ (fun S _ => by rw [state_image f hf S a b d])).symm
+            [Elab.step] [0.011043] ✅️ expected type: <not-available>, term
+                (BunkbedAux.probOf_image_map f hf E c _ _ (fun S _ => by rw [state_image f hf S a b d]))
+              [Elab.step] [0.011027] ✅️ expected type: <not-available>, term
+                  BunkbedAux.probOf_image_map f hf E c _ _ (fun S _ => by rw [state_image f hf S a b d])
+                [Elab.app.args] [0.010943] ✅️ elabAppArgs (7 args) `@BunkbedAux.probOf_image_map`
+                  [Elab.app.finalize] [0.010406] ✅️ BunkbedAux.probOf_image_map f hf E c ?m.34 ?m.36 fun S x =>
+                        ?m.40 : probOf E (fun x => c) ?m.34 = probOf (image (Sym2.map f) E) (fun x => c) ?m.36
+[Elab.async] [0.034953] ✅️ Lean.Elab.Command.runLintersAsync
+  [Elab.lint] [0.034945] ✅️ running linters
+    [Elab.lint] [0.010899] ✅️ running linter: Lean.Linter.UnusedVariables.unusedVariables
+    [Elab.lint] [0.013307] ✅️ running linter: Batteries.Linter.UnreachableTactic.unreachableTacticLinter
+[Elab.command] [0.015753] ✅️ lemma gadgetW_half (n : ℕ) : gadgetW n (1 / 2 : ℚ) = fun _ => (1 / 2 : ℚ) :=
+      by
+      funext e
+      unfold gadgetW
+      split_ifs <;> norm_num
+[Elab.async] [0.250811] ✅️ elaborating proof of Grouping.gadgetW_half
+  [Elab.definition.value] [0.250155] ✅️ Grouping.gadgetW_half
+    [Elab.step] [0.249863] ✅️ 
+          funext e
+          unfold gadgetW
+          split_ifs <;> norm_num
+      [Elab.step] [0.249847] ✅️ 
+            funext e
+            unfold gadgetW
+            split_ifs <;> norm_num
+        [Elab.step] [0.249100] ✅️ split_ifs <;> norm_num
+          [Elab.step] [0.249082] ✅️ focus
+                split_ifs
+                with_annotate_state"<;>" skip
+                all_goals norm_num
+            [Elab.step] [0.249072] ✅️ 
+                  split_ifs
+                  with_annotate_state"<;>" skip
+                  all_goals norm_num
+              [Elab.step] [0.249066] ✅️ 
+                    split_ifs
+                    with_annotate_state"<;>" skip
+                    all_goals norm_num
+                [Elab.step] [0.066486] ✅️ split_ifs
+                [Elab.step] [0.182525] ✅️ all_goals norm_num
+                  [Elab.step] [0.172398] ✅️ norm_num
+                    [Elab.step] [0.172387] ✅️ norm_num
+                      [Elab.step] [0.172363] ✅️ norm_num
+                  [Elab.step] [0.010105] ✅️ norm_num
+                    [Elab.step] [0.010089] ✅️ norm_num
+                      [Elab.step] [0.010070] ✅️ norm_num
+[Elab.async] [0.013203] ✅️ Lean.Elab.Command.runLintersAsync
+  [Elab.lint] [0.013189] ✅️ running linters
+[Elab.async] [0.041777] ✅️ Lean.Elab.Command.runLintersAsync
+  [Elab.lint] [0.041770] ✅️ running linters
+    [Elab.lint] [0.014516] ✅️ running linter: Mathlib.TacticAnalysis.tacticAnalysis
+[Elab.command] [0.022554] ✅️ theorem tri_val (i : Fin 6) :
+        (i.val = 0 ∧ (hollomTr i).val = 1 ∧ (hollomPath i.castSucc).val = 0 ∧ (hollomPath i.succ).val = 2) ∨
+          (i.val = 1 ∧ (hollomTr i).val = 8 ∧ (hollomPath i.castSucc).val = 2 ∧ (hollomPath i.succ).val = 5) ∨
+            (i.val = 2 ∧ (hollomTr i).val = 6 ∧ (hollomPath i.castSucc).val = 5 ∧ (hollomPath i.succ).val = 4) ∨
+              (i.val = 3 ∧ (hollomTr i).val = 1 ∧ (hollomPath i.castSucc).val = 4 ∧ (hollomPath i.succ).val = 3) ∨
+                (i.val = 4 ∧ (hollomTr i).val = 6 ∧ (hollomPath i.castSucc).val = 3 ∧ (hollomPath i.succ).val = 7) ∨
+                  (i.val = 5 ∧ (hollomTr i).val = 8 ∧ (hollomPath i.castSucc).val = 7 ∧ (hollomPath i.succ).val = 9) :=
+      by fin_cases i <;> simp [hollomTr, hollomPath]
+  [Elab.definition.header] [0.021993] ✅️ Grouping.tri_val
+    [Elab.step] [0.021359] ✅️ expected type: Prop, term
+        (i.val = 0 ∧ (hollomTr i).val = 1 ∧ (hollomPath i.castSucc).val = 0 ∧ (hollomPath i.succ).val = 2) ∨
+          (i.val = 1 ∧ (hollomTr i).val = 8 ∧ (hollomPath i.castSucc).val = 2 ∧ (hollomPath i.succ).val = 5) ∨
+            (i.val = 2 ∧ (hollomTr i).val = 6 ∧ (hollomPath i.castSucc).val = 5 ∧ (hollomPath i.succ).val = 4) ∨
+              (i.val = 3 ∧ (hollomTr i).val = 1 ∧ (hollomPath i.castSucc).val = 4 ∧ (hollomPath i.succ).val = 3) ∨
+                (i.val = 4 ∧ (hollomTr i).val = 6 ∧ (hollomPath i.castSucc).val = 3 ∧ (hollomPath i.succ).val = 7) ∨
+                  (i.val = 5 ∧ (hollomTr i).val = 8 ∧ (hollomPath i.castSucc).val = 7 ∧ (hollomPath i.succ).val = 9)
+      [Elab.step] [0.021318] ✅️ expected type: Prop, term
+          Or✝ (i.val = 0 ∧ (hollomTr i).val = 1 ∧ (hollomPath i.castSucc).val = 0 ∧ (hollomPath i.succ).val = 2)
+            ((i.val = 1 ∧ (hollomTr i).val = 8 ∧ (hollomPath i.castSucc).val = 2 ∧ (hollomPath i.succ).val = 5) ∨
+              (i.val = 2 ∧ (hollomTr i).val = 6 ∧ (hollomPath i.castSucc).val = 5 ∧ (hollomPath i.succ).val = 4) ∨
+                (i.val = 3 ∧ (hollomTr i).val = 1 ∧ (hollomPath i.castSucc).val = 4 ∧ (hollomPath i.succ).val = 3) ∨
+                  (i.val = 4 ∧ (hollomTr i).val = 6 ∧ (hollomPath i.castSucc).val = 3 ∧ (hollomPath i.succ).val = 7) ∨
+                    (i.val = 5 ∧ (hollomTr i).val = 8 ∧ (hollomPath i.castSucc).val = 7 ∧ (hollomPath i.succ).val = 9))
+        [Elab.app.args] [0.021226] ✅️ elabAppArgs (2 args) `Or`
+          [Elab.step] [0.017630] ✅️ expected type: Prop, term
+              (i.val = 1 ∧ (hollomTr i).val = 8 ∧ (hollomPath i.castSucc).val = 2 ∧ (hollomPath i.succ).val = 5) ∨
+                (i.val = 2 ∧ (hollomTr i).val = 6 ∧ (hollomPath i.castSucc).val = 5 ∧ (hollomPath i.succ).val = 4) ∨
+                  (i.val = 3 ∧ (hollomTr i).val = 1 ∧ (hollomPath i.castSucc).val = 4 ∧ (hollomPath i.succ).val = 3) ∨
+                    (i.val = 4 ∧ (hollomTr i).val = 6 ∧ (hollomPath i.castSucc).val = 3 ∧ (hollomPath i.succ).val = 7) ∨
+                      (i.val = 5 ∧ (hollomTr i).val = 8 ∧ (hollomPath i.castSucc).val = 7 ∧ (hollomPath i.succ).val = 9)
+            [Elab.step] [0.017589] ✅️ expected type: Prop, term
+                Or✝ (i.val = 1 ∧ (hollomTr i).val = 8 ∧ (hollomPath i.castSucc).val = 2 ∧ (hollomPath i.succ).val = 5)
+                  ((i.val = 2 ∧ (hollomTr i).val = 6 ∧ (hollomPath i.castSucc).val = 5 ∧ (hollomPath i.succ).val = 4) ∨
+                    (i.val = 3 ∧ (hollomTr i).val = 1 ∧ (hollomPath i.castSucc).val = 4 ∧ (hollomPath i.succ).val = 3) ∨
+                      (i.val = 4 ∧
+                          (hollomTr i).val = 6 ∧ (hollomPath i.castSucc).val = 3 ∧ (hollomPath i.succ).val = 7) ∨
+                        (i.val = 5 ∧
+                          (hollomTr i).val = 8 ∧ (hollomPath i.castSucc).val = 7 ∧ (hollomPath i.succ).val = 9))
+              [Elab.app.args] [0.017495] ✅️ elabAppArgs (2 args) `Or`
+                [Elab.step] [0.013979] ✅️ expected type: Prop, term
+                    (i.val = 2 ∧ (hollomTr i).val = 6 ∧ (hollomPath i.castSucc).val = 5 ∧ (hollomPath i.succ).val = 4) ∨
+                      (i.val = 3 ∧
+                          (hollomTr i).val = 1 ∧ (hollomPath i.castSucc).val = 4 ∧ (hollomPath i.succ).val = 3) ∨
+                        (i.val = 4 ∧
+                            (hollomTr i).val = 6 ∧ (hollomPath i.castSucc).val = 3 ∧ (hollomPath i.succ).val = 7) ∨
+                          (i.val = 5 ∧
+                            (hollomTr i).val = 8 ∧ (hollomPath i.castSucc).val = 7 ∧ (hollomPath i.succ).val = 9)
+                  [Elab.step] [0.013879] ✅️ expected type: Prop, term
+                      Or✝
+                        (i.val = 2 ∧
+                          (hollomTr i).val = 6 ∧ (hollomPath i.castSucc).val = 5 ∧ (hollomPath i.succ).val = 4)
+                        ((i.val = 3 ∧
+                            (hollomTr i).val = 1 ∧ (hollomPath i.castSucc).val = 4 ∧ (hollomPath i.succ).val = 3) ∨
+                          (i.val = 4 ∧
+                              (hollomTr i).val = 6 ∧ (hollomPath i.castSucc).val = 3 ∧ (hollomPath i.succ).val = 7) ∨
+                            (i.val = 5 ∧
+                              (hollomTr i).val = 8 ∧ (hollomPath i.castSucc).val = 7 ∧ (hollomPath i.succ).val = 9))
+                    [Elab.app.args] [0.013779] ✅️ elabAppArgs (2 args) `Or`
+                      [Elab.step] [0.010944] ✅️ expected type: Prop, term
+                          (i.val = 3 ∧
+                              (hollomTr i).val = 1 ∧ (hollomPath i.castSucc).val = 4 ∧ (hollomPath i.succ).val = 3) ∨
+                            (i.val = 4 ∧
+                                (hollomTr i).val = 6 ∧ (hollomPath i.castSucc).val = 3 ∧ (hollomPath i.succ).val = 7) ∨
+                              (i.val = 5 ∧
+                                (hollomTr i).val = 8 ∧ (hollomPath i.castSucc).val = 7 ∧ (hollomPath i.succ).val = 9)
+                        [Elab.step] [0.010913] ✅️ expected type: Prop, term
+                            Or✝
+                              (i.val = 3 ∧
+                                (hollomTr i).val = 1 ∧ (hollomPath i.castSucc).val = 4 ∧ (hollomPath i.succ).val = 3)
+                              ((i.val = 4 ∧
+                                  (hollomTr i).val = 6 ∧
+                                    (hollomPath i.castSucc).val = 3 ∧ (hollomPath i.succ).val = 7) ∨
+                                (i.val = 5 ∧
+                                  (hollomTr i).val = 8 ∧ (hollomPath i.castSucc).val = 7 ∧ (hollomPath i.succ).val = 9))
+                          [Elab.app.args] [0.010834] ✅️ elabAppArgs (2 args) `Or`
+[Elab.command] [0.023069] ✅️ lemma tri_val (i : Fin 6) :
+        (i.val = 0 ∧ (hollomTr i).val = 1 ∧ (hollomPath i.castSucc).val = 0 ∧ (hollomPath i.succ).val = 2) ∨
+          (i.val = 1 ∧ (hollomTr i).val = 8 ∧ (hollomPath i.castSucc).val = 2 ∧ (hollomPath i.succ).val = 5) ∨
+            (i.val = 2 ∧ (hollomTr i).val = 6 ∧ (hollomPath i.castSucc).val = 5 ∧ (hollomPath i.succ).val = 4) ∨
+              (i.val = 3 ∧ (hollomTr i).val = 1 ∧ (hollomPath i.castSucc).val = 4 ∧ (hollomPath i.succ).val = 3) ∨
+                (i.val = 4 ∧ (hollomTr i).val = 6 ∧ (hollomPath i.castSucc).val = 3 ∧ (hollomPath i.succ).val = 7) ∨
+                  (i.val = 5 ∧ (hollomTr i).val = 8 ∧ (hollomPath i.castSucc).val = 7 ∧ (hollomPath i.succ).val = 9) :=
+      by fin_cases i <;> simp [hollomTr, hollomPath]
+[Elab.async] [0.367271] ✅️ elaborating proof of Grouping.tri_val
+  [Elab.definition.value] [0.359570] ✅️ Grouping.tri_val
+    [Elab.step] [0.356425] ✅️ fin_cases i <;> simp [hollomTr, hollomPath]
+      [Elab.step] [0.356403] ✅️ fin_cases i <;> simp [hollomTr, hollomPath]
+        [Elab.step] [0.356378] ✅️ (fin_cases i) <;> simp [hollomTr, hollomPath]
+          [Elab.step] [0.356356] ✅️ focus
+                fin_cases i
+                with_annotate_state"<;>" skip
+                all_goals simp [hollomTr, hollomPath]
+            [Elab.step] [0.356332] ✅️ 
+                  fin_cases i
+                  with_annotate_state"<;>" skip
+                  all_goals simp [hollomTr, hollomPath]
+              [Elab.step] [0.356317] ✅️ 
+                    fin_cases i
+                    with_annotate_state"<;>" skip
+                    all_goals simp [hollomTr, hollomPath]
+                [Elab.step] [0.067643] ✅️ fin_cases i
+                [Elab.step] [0.288596] ✅️ all_goals simp [hollomTr, hollomPath]
+                  [Elab.step] [0.071895] ✅️ simp [hollomTr, hollomPath]
+                    [Elab.step] [0.071887] ✅️ simp [hollomTr, hollomPath]
+                      [Elab.step] [0.071870] ✅️ simp [hollomTr, hollomPath]
+                  [Elab.step] [0.044183] ✅️ simp [hollomTr, hollomPath]
+                    [Elab.step] [0.044169] ✅️ simp [hollomTr, hollomPath]
+                      [Elab.step] [0.044147] ✅️ simp [hollomTr, hollomPath]
+                  [Elab.step] [0.056561] ✅️ simp [hollomTr, hollomPath]
+                    [Elab.step] [0.056539] ✅️ simp [hollomTr, hollomPath]
+                      [Elab.step] [0.056516] ✅️ simp [hollomTr, hollomPath]
+                  [Elab.step] [0.045267] ✅️ simp [hollomTr, hollomPath]
+                    [Elab.step] [0.045251] ✅️ simp [hollomTr, hollomPath]
+                      [Elab.step] [0.045232] ✅️ simp [hollomTr, hollomPath]
+                  [Elab.step] [0.042314] ✅️ simp [hollomTr, hollomPath]
+                    [Elab.step] [0.042303] ✅️ simp [hollomTr, hollomPath]
+                      [Elab.step] [0.042290] ✅️ simp [hollomTr, hollomPath]
+                  [Elab.step] [0.028023] ✅️ simp [hollomTr, hollomPath]
+                    [Elab.step] [0.028010] ✅️ simp [hollomTr, hollomPath]
+                      [Elab.step] [0.027993] ✅️ simp [hollomTr, hollomPath]
+[Elab.async] [0.015496] ✅️ _private.Lean.AddDecl.0.Lean.addDeclCore
+  [Kernel] [0.015149] ✅️ typechecking declarations [Grouping.tri_val]
+[Elab.async] [0.014335] ✅️ Lean.Elab.Command.runLintersAsync
+  [Elab.lint] [0.014315] ✅️ running linters
+[Elab.async] [0.046596] ✅️ elaborating proof of Grouping.trv
+  [Elab.definition.value] [0.044823] ✅️ Grouping.trv
+    [Elab.step] [0.043904] ✅️ rcases tri_val i with ⟨-, h, -⟩ | ⟨-, h, -⟩ | ⟨-, h, -⟩ | ⟨-, h, -⟩ | ⟨-, h, -⟩ |
+              ⟨-, h, -⟩ <;>
+            omega
+      [Elab.step] [0.043889] ✅️ rcases tri_val i with ⟨-, h, -⟩ | ⟨-, h, -⟩ | ⟨-, h, -⟩ | ⟨-, h, -⟩ | ⟨-, h, -⟩ |
+                ⟨-, h, -⟩ <;>
+              omega
+        [Elab.step] [0.043872] ✅️ rcases tri_val i with ⟨-, h, -⟩ | ⟨-, h, -⟩ | ⟨-, h, -⟩ | ⟨-, h, -⟩ | ⟨-, h, -⟩ |
+                ⟨-, h, -⟩ <;>
+              omega
+          [Elab.step] [0.043856] ✅️ focus
+                rcases tri_val i with ⟨-, h, -⟩ | ⟨-, h, -⟩ | ⟨-, h, -⟩ | ⟨-, h, -⟩ | ⟨-, h, -⟩ | ⟨-, h, -⟩
+                with_annotate_state"<;>" skip
+                all_goals omega
+            [Elab.step] [0.043841] ✅️ 
+                  rcases tri_val i with ⟨-, h, -⟩ | ⟨-, h, -⟩ | ⟨-, h, -⟩ | ⟨-, h, -⟩ | ⟨-, h, -⟩ | ⟨-, h, -⟩
+                  with_annotate_state"<;>" skip
+                  all_goals omega
+              [Elab.step] [0.043831] ✅️ 
+                    rcases tri_val i with ⟨-, h, -⟩ | ⟨-, h, -⟩ | ⟨-, h, -⟩ | ⟨-, h, -⟩ | ⟨-, h, -⟩ | ⟨-, h, -⟩
+                    with_annotate_state"<;>" skip
+                    all_goals omega
+                [Elab.step] [0.011565] ✅️ rcases tri_val i with ⟨-, h, -⟩ | ⟨-, h, -⟩ | ⟨-, h, -⟩ | ⟨-, h, -⟩ |
+                      ⟨-, h, -⟩ | ⟨-, h, -⟩
+                [Elab.step] [0.032200] ✅️ all_goals omega
+                  [Elab.step] [0.011547] ✅️ omega
+                    [Elab.step] [0.011537] ✅️ omega
+                      [Elab.step] [0.011516] ✅️ omega
+[Elab.command] [0.010885] ✅️ lemma pathv (j : Fin 7) :
+        (hollomPath j).val = 0 ∨
+          (hollomPath j).val = 2 ∨
+            (hollomPath j).val = 5 ∨
+              (hollomPath j).val = 4 ∨ (hollomPath j).val = 3 ∨ (hollomPath j).val = 7 ∨ (hollomPath j).val = 9 :=
+      by fin_cases j <;> simp [hollomPath]
+[Elab.async] [0.229384] ✅️ elaborating proof of Grouping.pathv
+  [Elab.definition.value] [0.224489] ✅️ Grouping.pathv
+    [Elab.step] [0.222039] ✅️ fin_cases j <;> simp [hollomPath]
+      [Elab.step] [0.222017] ✅️ fin_cases j <;> simp [hollomPath]
+        [Elab.step] [0.221995] ✅️ (fin_cases j) <;> simp [hollomPath]
+          [Elab.step] [0.221975] ✅️ focus
+                fin_cases j
+                with_annotate_state"<;>" skip
+                all_goals simp [hollomPath]
+            [Elab.step] [0.221957] ✅️ 
+                  fin_cases j
+                  with_annotate_state"<;>" skip
+                  all_goals simp [hollomPath]
+              [Elab.step] [0.221945] ✅️ 
+                    fin_cases j
+                    with_annotate_state"<;>" skip
+                    all_goals simp [hollomPath]
+                [Elab.step] [0.052525] ✅️ fin_cases j
+                [Elab.step] [0.169336] ✅️ all_goals simp [hollomPath]
+                  [Elab.step] [0.033463] ✅️ simp [hollomPath]
+                    [Elab.step] [0.033451] ✅️ simp [hollomPath]
+                      [Elab.step] [0.033430] ✅️ simp [hollomPath]
+                  [Elab.step] [0.016941] ✅️ simp [hollomPath]
+                    [Elab.step] [0.016925] ✅️ simp [hollomPath]
+                      [Elab.step] [0.016903] ✅️ simp [hollomPath]
+                  [Elab.step] [0.040788] ✅️ simp [hollomPath]
+                    [Elab.step] [0.040771] ✅️ simp [hollomPath]
+                      [Elab.step] [0.040755] ✅️ simp [hollomPath]
+                  [Elab.step] [0.013310] ✅️ simp [hollomPath]
+                    [Elab.step] [0.013297] ✅️ simp [hollomPath]
+                      [Elab.step] [0.013278] ✅️ simp [hollomPath]
+                  [Elab.step] [0.026422] ✅️ simp [hollomPath]
+                    [Elab.step] [0.026400] ✅️ simp [hollomPath]
+                      [Elab.step] [0.026371] ✅️ simp [hollomPath]
+                  [Elab.step] [0.019821] ✅️ simp [hollomPath]
+                    [Elab.step] [0.019802] ✅️ simp [hollomPath]
+                      [Elab.step] [0.019780] ✅️ simp [hollomPath]
+                  [Elab.step] [0.017922] ✅️ simp [hollomPath]
+                    [Elab.step] [0.017904] ✅️ simp [hollomPath]
+                      [Elab.step] [0.017880] ✅️ simp [hollomPath]
+[Elab.async] [0.028434] ✅️ elaborating proof of Grouping.tr_ne_path
+  [Elab.definition.value] [0.027674] ✅️ Grouping.tr_ne_path
+    [Elab.step] [0.027431] ✅️ 
+          intro i j h
+          have hv : (hollomTr i).val = (hollomPath j).val := by rw [h]
+          have h1 := trv i
+          have h2 := pathv j
+          omega
+      [Elab.step] [0.027407] ✅️ 
+            intro i j h
+            have hv : (hollomTr i).val = (hollomPath j).val := by rw [h]
+            have h1 := trv i
+            have h2 := pathv j
+            omega
+        [Elab.step] [0.024432] ✅️ omega
+          [omega] [0.016493] ✅️ Assuming fact:
+                ↑(hollomPath j) = 2 ∨
+                  ↑(hollomPath j) = 5 ∨
+                    ↑(hollomPath j) = 4 ∨ ↑(hollomPath j) = 3 ∨ ↑(hollomPath j) = 7 ∨ ↑(hollomPath j) = 9
+            [omega] [0.013815] ✅️ Assuming fact:
+                  ↑(hollomPath j) = 5 ∨
+                    ↑(hollomPath j) = 4 ∨ ↑(hollomPath j) = 3 ∨ ↑(hollomPath j) = 7 ∨ ↑(hollomPath j) = 9
+              [omega] [0.010785] ✅️ Assuming fact:
+                    ↑(hollomPath j) = 4 ∨ ↑(hollomPath j) = 3 ∨ ↑(hollomPath j) = 7 ∨ ↑(hollomPath j) = 9
+[Elab.async] [0.020399] ✅️ _private.Lean.AddDecl.0.Lean.addDeclCore
+  [Kernel] [0.020314] ✅️ typechecking declarations [Grouping.tr_ne_path._proof_1_1]
+[Elab.async] [0.023933] ✅️ elaborating proof of Grouping.cs_ne_succ
+  [Elab.definition.value] [0.022328] ✅️ Grouping.cs_ne_succ
+    [Elab.step] [0.021524] ✅️ 
+          intro i h
+          have hv : (hollomPath i.castSucc).val = (hollomPath i.succ).val := by rw [h]
+          rcases tri_val i with ⟨-, -, h1, h2⟩ | ⟨-, -, h1, h2⟩ | ⟨-, -, h1, h2⟩ | ⟨-, -, h1, h2⟩ | ⟨-, -, h1, h2⟩ |
+              ⟨-, -, h1, h2⟩ <;>
+            omega
+      [Elab.step] [0.021505] ✅️ 
+            intro i h
+            have hv : (hollomPath i.castSucc).val = (hollomPath i.succ).val := by rw [h]
+            rcases tri_val i with ⟨-, -, h1, h2⟩ | ⟨-, -, h1, h2⟩ | ⟨-, -, h1, h2⟩ | ⟨-, -, h1, h2⟩ | ⟨-, -, h1, h2⟩ |
+                ⟨-, -, h1, h2⟩ <;>
+              omega
+        [Elab.step] [0.018798] ✅️ rcases tri_val i with ⟨-, -, h1, h2⟩ | ⟨-, -, h1, h2⟩ | ⟨-, -, h1, h2⟩ |
+                ⟨-, -, h1, h2⟩ | ⟨-, -, h1, h2⟩ | ⟨-, -, h1, h2⟩ <;>
+              omega
+          [Elab.step] [0.018783] ✅️ focus
+                rcases tri_val i with ⟨-, -, h1, h2⟩ | ⟨-, -, h1, h2⟩ | ⟨-, -, h1, h2⟩ | ⟨-, -, h1, h2⟩ |
+                  ⟨-, -, h1, h2⟩ | ⟨-, -, h1, h2⟩
+                with_annotate_state"<;>" skip
+                all_goals omega
+            [Elab.step] [0.018775] ✅️ 
+                  rcases tri_val i with ⟨-, -, h1, h2⟩ | ⟨-, -, h1, h2⟩ | ⟨-, -, h1, h2⟩ | ⟨-, -, h1, h2⟩ |
+                    ⟨-, -, h1, h2⟩ | ⟨-, -, h1, h2⟩
+                  with_annotate_state"<;>" skip
+                  all_goals omega
+              [Elab.step] [0.018766] ✅️ 
+                    rcases tri_val i with ⟨-, -, h1, h2⟩ | ⟨-, -, h1, h2⟩ | ⟨-, -, h1, h2⟩ | ⟨-, -, h1, h2⟩ |
+                      ⟨-, -, h1, h2⟩ | ⟨-, -, h1, h2⟩
+                    with_annotate_state"<;>" skip
+                    all_goals omega
+[Elab.async] [0.013507] ✅️ elaborating proof of Grouping.embN_one
+  [Elab.definition.value] [0.013225] ✅️ Grouping.embN_one
+    [Elab.step] [0.013075] ✅️ simp [embN]
+      [Elab.step] [0.013061] ✅️ simp [embN]
+        [Elab.step] [0.013042] ✅️ simp [embN]
+[Elab.async] [0.125555] ✅️ elaborating proof of Grouping.embN_interior
+  [Elab.definition.value] [0.124578] ✅️ Grouping.embN_interior
+    [Elab.step] [0.124051] ✅️ unfold embN; split_ifs <;> omega
+      [Elab.step] [0.124033] ✅️ unfold embN; split_ifs <;> omega
+        [Elab.step] [0.123768] ✅️ split_ifs <;> omega
+          [Elab.step] [0.123746] ✅️ focus
+                split_ifs
+                with_annotate_state"<;>" skip
+                all_goals omega
+            [Elab.step] [0.123731] ✅️ 
+                  split_ifs
+                  with_annotate_state"<;>" skip
+                  all_goals omega
+              [Elab.step] [0.123721] ✅️ 
+                    split_ifs
+                    with_annotate_state"<;>" skip
+                    all_goals omega
+                [Elab.step] [0.100756] ✅️ split_ifs
+                [Elab.step] [0.022899] ✅️ all_goals omega
+                  [Elab.step] [0.014907] ✅️ omega
+                    [Elab.step] [0.014891] ✅️ omega
+                      [Elab.step] [0.014868] ✅️ omega
+                        [omega] [0.010477] ✅️ Assuming fact:
+                              10 + 1202 * ↑i + (k - 2) < 10 + 1202 * ↑i + (k - 2)
+[Elab.command] [0.017168] ✅️ theorem embN_bdry (i : Fin 6) (k : ℕ) (h : k = 0 ∨ k = 1 ∨ k = 1204) : embN i k < 10 :=
+      by
+      have h3 : (hollomTr i).val < 10 := (hollomTr i).isLt
+      have h4 : (hollomPath i.castSucc).val < 10 := (hollomPath i.castSucc).isLt
+      have h5 : (hollomPath i.succ).val < 10 := (hollomPath i.succ).isLt
+      rcases h with rfl | rfl | rfl <;> (unfold embN; split_ifs <;> omega)
+  [Elab.definition.header] [0.016906] ✅️ Grouping.embN_bdry
+    [Elab.step] [0.012894] ✅️ expected type: Type, term
+        ℕ
+[Elab.command] [0.017308] ✅️ lemma embN_bdry (i : Fin 6) (k : ℕ) (h : k = 0 ∨ k = 1 ∨ k = 1204) : embN i k < 10 :=
+      by
+      have h3 : (hollomTr i).val < 10 := (hollomTr i).isLt
+      have h4 : (hollomPath i.castSucc).val < 10 := (hollomPath i.castSucc).isLt
+      have h5 : (hollomPath i.succ).val < 10 := (hollomPath i.succ).isLt
+      rcases h with rfl | rfl | rfl <;> (unfold embN; split_ifs <;> omega)
+[Elab.async] [0.446466] ✅️ elaborating proof of Grouping.embN_bdry
+  [Elab.definition.value] [0.444052] ✅️ Grouping.embN_bdry
+    [Elab.step] [0.442751] ✅️ 
+          have h3 : (hollomTr i).val < 10 := (hollomTr i).isLt
+          have h4 : (hollomPath i.castSucc).val < 10 := (hollomPath i.castSucc).isLt
+          have h5 : (hollomPath i.succ).val < 10 := (hollomPath i.succ).isLt
+          rcases h with rfl | rfl | rfl <;> (unfold embN; split_ifs <;> omega)
+      [Elab.step] [0.442718] ✅️ 
+            have h3 : (hollomTr i).val < 10 := (hollomTr i).isLt
+            have h4 : (hollomPath i.castSucc).val < 10 := (hollomPath i.castSucc).isLt
+            have h5 : (hollomPath i.succ).val < 10 := (hollomPath i.succ).isLt
+            rcases h with rfl | rfl | rfl <;> (unfold embN; split_ifs <;> omega)
+        [Elab.step] [0.433718] ✅️ rcases h with rfl | rfl | rfl <;> (unfold embN; split_ifs <;> omega)
+          [Elab.step] [0.433680] ✅️ focus
+                rcases h with rfl | rfl | rfl
+                with_annotate_state"<;>" skip
+                all_goals (unfold embN; split_ifs <;> omega)
+            [Elab.step] [0.433661] ✅️ 
+                  rcases h with rfl | rfl | rfl
+                  with_annotate_state"<;>" skip
+                  all_goals (unfold embN; split_ifs <;> omega)
+              [Elab.step] [0.433647] ✅️ 
+                    rcases h with rfl | rfl | rfl
+                    with_annotate_state"<;>" skip
+                    all_goals (unfold embN; split_ifs <;> omega)
+                [Elab.step] [0.430979] ✅️ all_goals (unfold embN; split_ifs <;> omega)
+                  [Elab.step] [0.030974] ✅️ (unfold embN; split_ifs <;> omega)
+                    [Elab.step] [0.030964] ✅️ (unfold embN; split_ifs <;> omega)
+                      [Elab.step] [0.030946] ✅️ (unfold embN; split_ifs <;> omega)
+                        [Elab.step] [0.030934] ✅️ unfold embN; split_ifs <;> omega
+                          [Elab.step] [0.030924] ✅️ unfold embN; split_ifs <;> omega
+                            [Elab.step] [0.030470] ✅️ split_ifs <;> omega
+                              [Elab.step] [0.030447] ✅️ focus
+                                    split_ifs
+                                    with_annotate_state"<;>" skip
+                                    all_goals omega
+                                [Elab.step] [0.030420] ✅️ 
+                                      split_ifs
+                                      with_annotate_state"<;>" skip
+                                      all_goals omega
+                                  [Elab.step] [0.030407] ✅️ 
+                                        split_ifs
+                                        with_annotate_state"<;>" skip
+                                        all_goals omega
+                                    [Elab.step] [0.025637] ✅️ split_ifs
+                  [Elab.step] [0.246484] ✅️ (unfold embN; split_ifs <;> omega)
+                    [Elab.step] [0.246473] ✅️ (unfold embN; split_ifs <;> omega)
+                      [Elab.step] [0.246450] ✅️ (unfold embN; split_ifs <;> omega)
+                        [Elab.step] [0.246442] ✅️ unfold embN; split_ifs <;> omega
+                          [Elab.step] [0.246434] ✅️ unfold embN; split_ifs <;> omega
+                            [Elab.step] [0.246251] ✅️ split_ifs <;> omega
+                              [Elab.step] [0.246235] ✅️ focus
+                                    split_ifs
+                                    with_annotate_state"<;>" skip
+                                    all_goals omega
+                                [Elab.step] [0.246223] ✅️ 
+                                      split_ifs
+                                      with_annotate_state"<;>" skip
+                                      all_goals omega
+                                  [Elab.step] [0.246214] ✅️ 
+                                        split_ifs
+                                        with_annotate_state"<;>" skip
+                                        all_goals omega
+                                    [Elab.step] [0.230408] ✅️ split_ifs
+                                    [Elab.step] [0.015741] ✅️ all_goals omega
+                  [Elab.step] [0.153469] ✅️ (unfold embN; split_ifs <;> omega)
+                    [Elab.step] [0.153453] ✅️ (unfold embN; split_ifs <;> omega)
+                      [Elab.step] [0.153440] ✅️ (unfold embN; split_ifs <;> omega)
+                        [Elab.step] [0.153430] ✅️ unfold embN; split_ifs <;> omega
+                          [Elab.step] [0.153420] ✅️ unfold embN; split_ifs <;> omega
+                            [Elab.step] [0.153167] ✅️ split_ifs <;> omega
+                              [Elab.step] [0.153148] ✅️ focus
+                                    split_ifs
+                                    with_annotate_state"<;>" skip
+                                    all_goals omega
+                                [Elab.step] [0.153131] ✅️ 
+                                      split_ifs
+                                      with_annotate_state"<;>" skip
+                                      all_goals omega
+                                  [Elab.step] [0.153120] ✅️ 
+                                        split_ifs
+                                        with_annotate_state"<;>" skip
+                                        all_goals omega
+                                    [Elab.step] [0.140905] ✅️ split_ifs
+                                    [Elab.step] [0.012138] ✅️ all_goals omega
+[Elab.async] [0.016095] ✅️ Lean.Elab.Command.runLintersAsync
+  [Elab.lint] [0.016083] ✅️ running linters
+[Elab.async] [0.078414] ✅️ elaborating proof of Grouping.embN_bdry_inj
+  [Elab.definition.value] [0.077075] ✅️ Grouping.embN_bdry_inj
+    [Elab.step] [0.076259] ✅️ 
+          have n1 : (hollomTr i).val ≠ (hollomPath i.castSucc).val := fun hh => tr_ne_path i i.castSucc (Fin.ext hh)
+          have n2 : (hollomTr i).val ≠ (hollomPath i.succ).val := fun hh => tr_ne_path i i.succ (Fin.ext hh)
+          have n3 : (hollomPath i.castSucc).val ≠ (hollomPath i.succ).val := fun hh => cs_ne_succ i (Fin.ext hh)
+          rcases hk with rfl | rfl | rfl <;> rcases hq with rfl | rfl | rfl <;>
+              simp only [embN_zero, embN_one, embN_last] at h <;>
+            omega
+      [Elab.step] [0.076237] ✅️ 
+            have n1 : (hollomTr i).val ≠ (hollomPath i.castSucc).val := fun hh => tr_ne_path i i.castSucc (Fin.ext hh)
+            have n2 : (hollomTr i).val ≠ (hollomPath i.succ).val := fun hh => tr_ne_path i i.succ (Fin.ext hh)
+            have n3 : (hollomPath i.castSucc).val ≠ (hollomPath i.succ).val := fun hh => cs_ne_succ i (Fin.ext hh)
+            rcases hk with rfl | rfl | rfl <;> rcases hq with rfl | rfl | rfl <;>
+                simp only [embN_zero, embN_one, embN_last] at h <;>
+              omega
+        [Elab.step] [0.066038] ✅️ rcases hk with rfl | rfl | rfl <;> rcases hq with rfl | rfl | rfl <;>
+                simp only [embN_zero, embN_one, embN_last] at h <;>
+              omega
+          [Elab.step] [0.066016] ✅️ focus
+                rcases hk with rfl | rfl | rfl <;> rcases hq with rfl | rfl | rfl <;>
+                  simp only [embN_zero, embN_one, embN_last] at h
+                with_annotate_state"<;>" skip
+                all_goals omega
+            [Elab.step] [0.066004] ✅️ 
+                  rcases hk with rfl | rfl | rfl <;> rcases hq with rfl | rfl | rfl <;>
+                    simp only [embN_zero, embN_one, embN_last] at h
+                  with_annotate_state"<;>" skip
+                  all_goals omega
+              [Elab.step] [0.065994] ✅️ 
+                    rcases hk with rfl | rfl | rfl <;> rcases hq with rfl | rfl | rfl <;>
+                      simp only [embN_zero, embN_one, embN_last] at h
+                    with_annotate_state"<;>" skip
+                    all_goals omega
+                [Elab.step] [0.017409] ✅️ rcases hk with rfl | rfl | rfl <;> rcases hq with rfl | rfl | rfl <;>
+                      simp only [embN_zero, embN_one, embN_last] at h
+                  [Elab.step] [0.017397] ✅️ focus
+                        rcases hk with rfl | rfl | rfl <;> rcases hq with rfl | rfl | rfl
+                        with_annotate_state"<;>" skip
+                        all_goals simp only [embN_zero, embN_one, embN_last] at h
+                    [Elab.step] [0.017384] ✅️ 
+                          rcases hk with rfl | rfl | rfl <;> rcases hq with rfl | rfl | rfl
+                          with_annotate_state"<;>" skip
+                          all_goals simp only [embN_zero, embN_one, embN_last] at h
+                      [Elab.step] [0.017369] ✅️ 
+                            rcases hk with rfl | rfl | rfl <;> rcases hq with rfl | rfl | rfl
+                            with_annotate_state"<;>" skip
+                            all_goals simp only [embN_zero, embN_one, embN_last] at h
+                        [Elab.step] [0.012350] ✅️ all_goals simp only [embN_zero, embN_one, embN_last] at h
+                [Elab.step] [0.048526] ✅️ all_goals omega
+                  [Elab.step] [0.011577] ✅️ omega
+                    [Elab.step] [0.011562] ✅️ omega
+                      [Elab.step] [0.011541] ✅️ omega
+[Elab.async] [0.012037] ✅️ _private.Lean.AddDecl.0.Lean.addDeclCore
+  [Kernel] [0.012006] ✅️ typechecking declarations [Grouping.embN_bdry_inj._proof_1_2]
+[Elab.async] [0.011154] ✅️ Lean.Elab.Command.runLintersAsync
+  [Elab.lint] [0.011137] ✅️ running linters
+[Elab.async] [0.019342] ✅️ elaborating proof of Grouping.idx_cases
+  [Elab.definition.value] [0.018892] ✅️ Grouping.idx_cases
+    [Elab.step] [0.018594] ✅️ have := k.isLt; omega
+      [Elab.step] [0.018580] ✅️ have := k.isLt; omega
+        [Elab.step] [0.017875] ✅️ omega
+          [omega] [0.011527] ✅️ Assuming fact:
+                ¬2 ≤ ↑k
+[Elab.async] [0.010738] ✅️ _private.Lean.AddDecl.0.Lean.addDeclCore
+  [Kernel] [0.010700] ✅️ typechecking declarations [Grouping.idx_cases._proof_1_1]
+[Elab.async] [0.010075] ✅️ Lean.Elab.Command.runLintersAsync
+  [Elab.lint] [0.010065] ✅️ running linters
+[Elab.async] [0.093992] ✅️ elaborating proof of Grouping.emb_inj
+  [Elab.definition.value] [0.092640] ✅️ Grouping.emb_inj
+    [Elab.step] [0.092150] ✅️ 
+          intro k q h
+          have hv : embN i k.val = embN i q.val := congrArg Fin.val h
+          rcases idx_cases k with hk | hk <;> rcases idx_cases q with hq | hq
+          · exact Fin.ext (embN_bdry_inj i k.val q.val hk hq hv)
+          · have h1 := embN_bdry i k.val hk
+            have h2 := embN_interior i q.val hq.1 hq.2
+            omega
+          · have h1 := embN_bdry i q.val hq
+            have h2 := embN_interior i k.val hk.1 hk.2
+            omega
+          · have h1 := embN_interior i k.val hk.1 hk.2
+            have h2 := embN_interior i q.val hq.1 hq.2
+            exact Fin.ext (by omega)
+      [Elab.step] [0.092132] ✅️ 
+            intro k q h
+            have hv : embN i k.val = embN i q.val := congrArg Fin.val h
+            rcases idx_cases k with hk | hk <;> rcases idx_cases q with hq | hq
+            · exact Fin.ext (embN_bdry_inj i k.val q.val hk hq hv)
+            · have h1 := embN_bdry i k.val hk
+              have h2 := embN_interior i q.val hq.1 hq.2
+              omega
+            · have h1 := embN_bdry i q.val hq
+              have h2 := embN_interior i k.val hk.1 hk.2
+              omega
+            · have h1 := embN_interior i k.val hk.1 hk.2
+              have h2 := embN_interior i q.val hq.1 hq.2
+              exact Fin.ext (by omega)
+        [Elab.step] [0.023932] ✅️ ·
+              have h1 := embN_bdry i k.val hk
+              have h2 := embN_interior i q.val hq.1 hq.2
+              omega
+          [Elab.step] [0.023874] ✅️ 
+                have h1 := embN_bdry i k.val hk
+                have h2 := embN_interior i q.val hq.1 hq.2
+                omega
+            [Elab.step] [0.023863] ✅️ 
+                  have h1 := embN_bdry i k.val hk
+                  have h2 := embN_interior i q.val hq.1 hq.2
+                  omega
+              [Elab.step] [0.022001] ✅️ omega
+                [Meta.appBuilder] [0.014509] ✅️ f: Decidable.decide, xs: [Lean.Omega.Coeffs.isZero [] ∨
+                       Lean.Omega.Coeffs.isZero [0, 0, 0, 0, 0, 1],
+                     <not-available>]
+                  [Meta.synthInstance] [0.014472] ✅️ Decidable
+                        (Lean.Omega.Coeffs.isZero [] ∨ Lean.Omega.Coeffs.isZero [0, 0, 0, 0, 0, 1])
+        [Elab.step] [0.022091] ✅️ ·
+              have h1 := embN_bdry i q.val hq
+              have h2 := embN_interior i k.val hk.1 hk.2
+              omega
+          [Elab.step] [0.022064] ✅️ 
+                have h1 := embN_bdry i q.val hq
+                have h2 := embN_interior i k.val hk.1 hk.2
+                omega
+            [Elab.step] [0.022053] ✅️ 
+                  have h1 := embN_bdry i q.val hq
+                  have h2 := embN_interior i k.val hk.1 hk.2
+                  omega
+              [Elab.step] [0.019977] ✅️ omega
+                [Meta.appBuilder] [0.012710] ✅️ f: Decidable.decide, xs: [Lean.Omega.Coeffs.isZero [] ∨
+                       Lean.Omega.Coeffs.isZero [0, 0, 0, 0, 0, 1],
+                     <not-available>]
+                  [Meta.synthInstance] [0.012675] ✅️ Decidable
+                        (Lean.Omega.Coeffs.isZero [] ∨ Lean.Omega.Coeffs.isZero [0, 0, 0, 0, 0, 1])
+        [Elab.step] [0.035445] ✅️ ·
+              have h1 := embN_interior i k.val hk.1 hk.2
+              have h2 := embN_interior i q.val hq.1 hq.2
+              exact Fin.ext (by omega)
+          [Elab.step] [0.035418] ✅️ 
+                have h1 := embN_interior i k.val hk.1 hk.2
+                have h2 := embN_interior i q.val hq.1 hq.2
+                exact Fin.ext (by omega)
+            [Elab.step] [0.035405] ✅️ 
+                  have h1 := embN_interior i k.val hk.1 hk.2
+                  have h2 := embN_interior i q.val hq.1 hq.2
+                  exact Fin.ext (by omega)
+              [Elab.step] [0.032682] ✅️ exact Fin.ext (by omega)
+                [Elab.step] [0.032039] ✅️ omega
+                  [Elab.step] [0.032021] ✅️ omega
+                    [Elab.step] [0.031996] ✅️ omega
+                      [omega] [0.020007] ✅️ Assuming fact:
+                            ↑k < ↑q
+                        [omega] [0.017832] ✅️ Assuming fact:
+                              2 ≤ ↑q ∧ ↑(↑q - 2) = ↑↑q - ↑2
+                          [omega] [0.015641] ✅️ Assuming fact:
+                                2 ≤ ↑k ∧ ↑(↑k - 2) = ↑↑k - ↑2
+                            [Meta.appBuilder] [0.011371] ✅️ f: Decidable.decide, xs: [Lean.Omega.Coeffs.isZero [] ∨
+                                   Lean.Omega.Coeffs.isZero [0, 0, 0, 0, 0, 0, 1],
+                                 <not-available>]
+                              [Meta.synthInstance] [0.011337] ✅️ Decidable
+                                    (Lean.Omega.Coeffs.isZero [] ∨ Lean.Omega.Coeffs.isZero [0, 0, 0, 0, 0, 0, 1])
+[Elab.async] [0.021073] ✅️ _private.Lean.AddDecl.0.Lean.addDeclCore
+  [Kernel] [0.021042] ✅️ typechecking declarations [Grouping.emb_inj._proof_1_1]
+[Elab.async] [0.023040] ✅️ _private.Lean.AddDecl.0.Lean.addDeclCore
+  [Kernel] [0.022971] ✅️ typechecking declarations [Grouping.emb_inj._proof_1_2]
+[Elab.async] [0.023270] ✅️ _private.Lean.AddDecl.0.Lean.addDeclCore
+  [Kernel] [0.023219] ✅️ typechecking declarations [Grouping.emb_inj._proof_1_3]
+[Elab.command] [0.037212] ✅️ theorem copy_state_mass (P : WZ → ℚ)
+        (habc : P .abc = Pabc (gadgetE 1204) (gadgetW 1204 (1 / 2)) 0 1 (Fin.last 1204))
+        (hab : P .ab_c = Pab_c (gadgetE 1204) (gadgetW 1204 (1 / 2)) 0 1 (Fin.last 1204))
+        (hac : P .ac_b = Pac_b (gadgetE 1204) (gadgetW 1204 (1 / 2)) 0 1 (Fin.last 1204))
+        (hbc : P .a_bc = Pa_bc (gadgetE 1204) (gadgetW 1204 (1 / 2)) 0 1 (Fin.last 1204))
+        (hsep : P .a_b_c = Pa_b_c (gadgetE 1204) (gadgetW 1204 (1 / 2)) 0 1 (Fin.last 1204)) (i : Fin 6) (s : WZ) :
+        probOf ((gadgetE 1204).image (Sym2.map (emb i))) (fun _ => (1 / 2 : ℚ))
+            (fun S => stateOf S (emb i 0) (emb i 1) (emb i 1204) = s) =
+          P s :=
+      by
+      change
+        probOf ((gadgetE 1204).image (Sym2.map (emb i))) (fun _ => (1 / 2 : ℚ))
+            (fun S => stateOf S (emb i 0) (emb i 1) (emb i (Fin.last 1204)) = s) =
+          P s
+      rw [prob_state_image (emb i) (emb_inj i) (gadgetE 1204) (1 / 2) 0 1 (Fin.last 1204) s]
+      rw [← gadgetW_half 1204]
+      cases s <;> simp only [partMass] <;> symm <;> assumption
+  [Elab.definition.header] [0.036342] ✅️ Grouping.copy_state_mass
+    [Elab.step] [0.013278] ✅️ expected type: Sort ?u.82, term
+        probOf ((gadgetE 1204).image (Sym2.map (emb i))) (fun _ => (1 / 2 : ℚ))
+            (fun S => stateOf S (emb i 0) (emb i 1) (emb i 1204) = s) =
+          P s
+      [Elab.step] [0.013242] ✅️ expected type: Sort ?u.82, term
+          binrel% Eq✝
+            (probOf ((gadgetE 1204).image (Sym2.map (emb i))) (fun _ => (1 / 2 : ℚ))
+              (fun S => stateOf S (emb i 0) (emb i 1) (emb i 1204) = s))
+            (P s)
+        [Elab.step] [0.012736] ✅️ expected type: <not-available>, term
+            probOf ((gadgetE 1204).image (Sym2.map (emb i))) (fun _ => (1 / 2 : ℚ))
+              (fun S => stateOf S (emb i 0) (emb i 1) (emb i 1204) = s)
+          [Elab.app.args] [0.012648] ✅️ elabAppArgs (3 args) `@probOf`
+[Elab.async] [0.076304] ✅️ elaborating proof of Grouping.copy_state_mass
+  [Elab.definition.value] [0.074682] ✅️ Grouping.copy_state_mass
+    [Elab.step] [0.073716] ✅️ 
+          change
+            probOf ((gadgetE 1204).image (Sym2.map (emb i))) (fun _ => (1 / 2 : ℚ))
+                (fun S => stateOf S (emb i 0) (emb i 1) (emb i (Fin.last 1204)) = s) =
+              P s
+          rw [prob_state_image (emb i) (emb_inj i) (gadgetE 1204) (1 / 2) 0 1 (Fin.last 1204) s]
+          rw [← gadgetW_half 1204]
+          cases s <;> simp only [partMass] <;> symm <;> assumption
+      [Elab.step] [0.073694] ✅️ 
+            change
+              probOf ((gadgetE 1204).image (Sym2.map (emb i))) (fun _ => (1 / 2 : ℚ))
+                  (fun S => stateOf S (emb i 0) (emb i 1) (emb i (Fin.last 1204)) = s) =
+                P s
+            rw [prob_state_image (emb i) (emb_inj i) (gadgetE 1204) (1 / 2) 0 1 (Fin.last 1204) s]
+            rw [← gadgetW_half 1204]
+            cases s <;> simp only [partMass] <;> symm <;> assumption
+        [Elab.step] [0.019688] ✅️ change
+              probOf ((gadgetE 1204).image (Sym2.map (emb i))) (fun _ => (1 / 2 : ℚ))
+                  (fun S => stateOf S (emb i 0) (emb i 1) (emb i (Fin.last 1204)) = s) =
+                P s
+          [Elab.step] [0.018384] ✅️ expected type: Prop, term
+              probOf ((gadgetE 1204).image (Sym2.map (emb i))) (fun _ => (1 / 2 : ℚ))
+                  (fun S => stateOf S (emb i 0) (emb i 1) (emb i (Fin.last 1204)) = s) =
+                P s
+            [Elab.step] [0.018344] ✅️ expected type: Prop, term
+                binrel% Eq✝
+                  (probOf ((gadgetE 1204).image (Sym2.map (emb i))) (fun _ => (1 / 2 : ℚ))
+                    (fun S => stateOf S (emb i 0) (emb i 1) (emb i (Fin.last 1204)) = s))
+                  (P s)
+              [Elab.step] [0.017794] ✅️ expected type: <not-available>, term
+                  probOf ((gadgetE 1204).image (Sym2.map (emb i))) (fun _ => (1 / 2 : ℚ))
+                    (fun S => stateOf S (emb i 0) (emb i 1) (emb i (Fin.last 1204)) = s)
+                [Elab.app.args] [0.017625] ✅️ elabAppArgs (3 args) `@probOf`
+                  [Elab.step] [0.010787] ✅️ expected type: Sym2 (Fin 7222) → ℚ, term
+                      (fun _ => (1 / 2 : ℚ))
+                    [Elab.step] [0.010768] ✅️ expected type: Sym2 (Fin 7222) → ℚ, term
+                        fun _ => (1 / 2 : ℚ)
+                      [Elab.step] [0.010651] ✅️ expected type: ℚ, term
+                          (1 / 2 : ℚ)
+        [Elab.step] [0.047189] ✅️ (cases s) <;> simp only [partMass] <;> symm <;> assumption
+          [Elab.step] [0.047018] ✅️ focus
+                cases s <;> simp only [partMass] <;> symm
+                with_annotate_state"<;>" skip
+                all_goals assumption
+            [Elab.step] [0.047003] ✅️ 
+                  cases s <;> simp only [partMass] <;> symm
+                  with_annotate_state"<;>" skip
+                  all_goals assumption
+              [Elab.step] [0.046992] ✅️ 
+                    cases s <;> simp only [partMass] <;> symm
+                    with_annotate_state"<;>" skip
+                    all_goals assumption
+                [Elab.step] [0.044472] ✅️ (cases s) <;> simp only [partMass] <;> symm
+                  [Elab.step] [0.044460] ✅️ focus
+                        cases s <;> simp only [partMass]
+                        with_annotate_state"<;>" skip
+                        all_goals symm
+                    [Elab.step] [0.044442] ✅️ 
+                          cases s <;> simp only [partMass]
+                          with_annotate_state"<;>" skip
+                          all_goals symm
+                      [Elab.step] [0.044430] ✅️ 
+                            cases s <;> simp only [partMass]
+                            with_annotate_state"<;>" skip
+                            all_goals symm
+                        [Elab.step] [0.042800] ✅️ (cases s) <;> simp only [partMass]
+                          [Elab.step] [0.042792] ✅️ focus
+                                cases s
+                                with_annotate_state"<;>" skip
+                                all_goals simp only [partMass]
+                            [Elab.step] [0.042782] ✅️ 
+                                  cases s
+                                  with_annotate_state"<;>" skip
+                                  all_goals simp only [partMass]
+                              [Elab.step] [0.042774] ✅️ 
+                                    cases s
+                                    with_annotate_state"<;>" skip
+                                    all_goals simp only [partMass]
+                                [Elab.step] [0.041814] ✅️ all_goals simp only [partMass]
+                                  [Elab.step] [0.026090] ✅️ simp only [partMass]
+                                    [Elab.step] [0.026080] ✅️ simp only [partMass]
+                                      [Elab.step] [0.026062] ✅️ simp only [partMass]
+[Elab.async] [0.014652] ✅️ Lean.Elab.Command.runLintersAsync
+  [Elab.lint] [0.014634] ✅️ running linters
+[Elab.command] [0.094043] ✅️ theorem pi_pushforward_sum {I B : Type*} [Fintype I] [DecidableEq I] [Fintype B]
+        [DecidableEq B] {A : I → Type*} (D : ∀ i, Finset (A i)) (st : ∀ i, A i → B) (mu : ∀ i, A i → ℚ) (P : I → B → ℚ)
+        (hmass : ∀ i b, ∑ a ∈ D i with st i a = b, mu i a = P i b) (F : (I → B) → ℚ) :
+        (∑ a ∈ Fintype.piFinset D, F (fun i => st i (a i)) * ∏ i, mu i (a i)) = ∑ b : I → B, F b * ∏ i, P i (b i) := by
+      classical
+      let q : (∀ i, A i) → (I → B) := fun a i => st i (a i)
+      calc
+        _ = ∑ b : I → B, ∑ a ∈ Fintype.piFinset D with q a = b, F (q a) * ∏ i, mu i (a i) := by
+          rw [Finset.sum_fiberwise (Fintype.piFinset D) q (fun a => F (q a) * ∏ i, mu i (a i))]
+        _ = ∑ b : I → B, F b * ∏ i, P i (b i) := by
+          apply Finset.sum_congr rfl
+          intro b _
+          have hpi :
+            (Fintype.piFinset (fun i => (D i).filter (fun a => st i a = b i))) =
+              (Fintype.piFinset D).filter (fun a => q a = b) :=
+            by
+            ext a
+            simp only [Fintype.mem_piFinset, mem_filter, q]
+            constructor
+            · intro h
+              exact ⟨fun i => (h i).1, funext fun i => (h i).2⟩
+            · rintro ⟨hD, hq⟩ i
+              exact ⟨hD i, congrFun hq i⟩
+          rw [← hpi]
+          have hF : ∀ a ∈ Fintype.piFinset (fun i => (D i).filter (fun x => st i x = b i)), F (q a) = F b :=
+            by
+            intro a ha
+            congr 1
+            funext i
+            exact (Finset.mem_filter.mp (Fintype.mem_piFinset.mp ha i)).2
+          rw [Finset.sum_congr rfl (fun a ha => by rw [hF a ha]), ← Finset.mul_sum]
+          rw [← Finset.prod_univ_sum]
+          simp_rw [hmass]
+  [Elab.definition.header] [0.093302] ✅️ Grouping.pi_pushforward_sum
+    [Elab.step] [0.044441] ✅️ expected type: Sort ?u.33, term
+        ∀ i b, ∑ a ∈ D i with st i a = b, mu i a = P i b
+      [Elab.step] [0.044385] ✅️ expected type: Sort ?u.36, term
+          ∑ a ∈ D i with st i a = b, mu i a = P i b
+        [Elab.step] [0.044364] ✅️ expected type: Sort ?u.36, term
+            binrel% Eq✝ (∑ a ∈ D i with st i a = b, mu i a) (P i b)
+          [Elab.step] [0.012379] ✅️ expected type: <not-available>, term
+              Finset.sum✝ (Finset.filter✝ (fun a ↦ st i a = b) (finset% D i)) (fun a ↦ mu i a)
+            [Elab.app.args] [0.012223] ✅️ elabAppArgs (2 args) `@Finset.sum`
+              [Elab.step] [0.011939] ✅️ expected type: Finset (A i), term
+                  (Finset.filter✝ (fun a ↦ st i a = b) (finset% D i))
+                [Elab.step] [0.011923] ✅️ expected type: Finset (A i), term
+                    Finset.filter✝ (fun a ↦ st i a = b) (finset% D i)
+                  [Elab.app.args] [0.011830] ✅️ elabAppArgs (2 args) `@filter`
+                    [Elab.step] [0.011101] ✅️ expected type: Finset (A i), term
+                        finset% D i
+    [Elab.step] [0.026541] ✅️ expected type: Sort ?u.50, term
+        (∑ a ∈ Fintype.piFinset D, F (fun i => st i (a i)) * ∏ i, mu i (a i)) = ∑ b : I → B, F b * ∏ i, P i (b i)
+      [Elab.step] [0.026500] ✅️ expected type: Sort ?u.50, term
+          binrel% Eq✝ (∑ a ∈ Fintype.piFinset D, F (fun i => st i (a i)) * ∏ i, mu i (a i))
+            (∑ b : I → B, F b * ∏ i, P i (b i))
+        [Elab.step] [0.015529] ✅️ expected type: <not-available>, term
+            Finset.sum✝ (finset% Fintype.piFinset D) (fun a ↦ F (fun i => st i (a i)) * ∏ i, mu i (a i))
+          [Elab.app.args] [0.015361] ✅️ elabAppArgs (2 args) `@Finset.sum`
+[Elab.async] [0.150672] ✅️ elaborating proof of Grouping.pi_pushforward_sum
+  [Elab.definition.value] [0.148023] ✅️ Grouping.pi_pushforward_sum
+    [Elab.step] [0.147119] ✅️ classical
+          let q : (∀ i, A i) → (I → B) := fun a i => st i (a i)
+          calc
+            _ = ∑ b : I → B, ∑ a ∈ Fintype.piFinset D with q a = b, F (q a) * ∏ i, mu i (a i) := by
+              rw [Finset.sum_fiberwise (Fintype.piFinset D) q (fun a => F (q a) * ∏ i, mu i (a i))]
+            _ = ∑ b : I → B, F b * ∏ i, P i (b i) :=
+              by
+              apply Finset.sum_congr rfl
+              intro b _
+              have hpi :
+                (Fintype.piFinset (fun i => (D i).filter (fun a => st i a = b i))) =
+                  (Fintype.piFinset D).filter (fun a => q a = b) :=
+                by
+                ext a
+                simp only [Fintype.mem_piFinset, mem_filter, q]
+                constructor
+                · intro h
+                  exact ⟨fun i => (h i).1, funext fun i => (h i).2⟩
+                · rintro ⟨hD, hq⟩ i
+                  exact ⟨hD i, congrFun hq i⟩
+              rw [← hpi]
+              have hF : ∀ a ∈ Fintype.piFinset (fun i => (D i).filter (fun x => st i x = b i)), F (q a) = F b :=
+                by
+                intro a ha
+                congr 1
+                funext i
+                exact (Finset.mem_filter.mp (Fintype.mem_piFinset.mp ha i)).2
+              rw [Finset.sum_congr rfl (fun a ha => by rw [hF a ha]), ← Finset.mul_sum]
+              rw [← Finset.prod_univ_sum]
+              simp_rw [hmass]
+      [Elab.step] [0.147101] ✅️ classical
+            let q : (∀ i, A i) → (I → B) := fun a i => st i (a i)
+            calc
+              _ = ∑ b : I → B, ∑ a ∈ Fintype.piFinset D with q a = b, F (q a) * ∏ i, mu i (a i) := by
+                rw [Finset.sum_fiberwise (Fintype.piFinset D) q (fun a => F (q a) * ∏ i, mu i (a i))]
+              _ = ∑ b : I → B, F b * ∏ i, P i (b i) :=
+                by
+                apply Finset.sum_congr rfl
+                intro b _
+                have hpi :
+                  (Fintype.piFinset (fun i => (D i).filter (fun a => st i a = b i))) =
+                    (Fintype.piFinset D).filter (fun a => q a = b) :=
+                  by
+                  ext a
+                  simp only [Fintype.mem_piFinset, mem_filter, q]
+                  constructor
+                  · intro h
+                    exact ⟨fun i => (h i).1, funext fun i => (h i).2⟩
+                  · rintro ⟨hD, hq⟩ i
+                    exact ⟨hD i, congrFun hq i⟩
+                rw [← hpi]
+                have hF : ∀ a ∈ Fintype.piFinset (fun i => (D i).filter (fun x => st i x = b i)), F (q a) = F b :=
+                  by
+                  intro a ha
+                  congr 1
+                  funext i
+                  exact (Finset.mem_filter.mp (Fintype.mem_piFinset.mp ha i)).2
+                rw [Finset.sum_congr rfl (fun a ha => by rw [hF a ha]), ← Finset.mul_sum]
+                rw [← Finset.prod_univ_sum]
+                simp_rw [hmass]
+        [Elab.step] [0.147082] ✅️ classical
+            let q : (∀ i, A i) → (I → B) := fun a i => st i (a i)
+            calc
+              _ = ∑ b : I → B, ∑ a ∈ Fintype.piFinset D with q a = b, F (q a) * ∏ i, mu i (a i) := by
+                rw [Finset.sum_fiberwise (Fintype.piFinset D) q (fun a => F (q a) * ∏ i, mu i (a i))]
+              _ = ∑ b : I → B, F b * ∏ i, P i (b i) :=
+                by
+                apply Finset.sum_congr rfl
+                intro b _
+                have hpi :
+                  (Fintype.piFinset (fun i => (D i).filter (fun a => st i a = b i))) =
+                    (Fintype.piFinset D).filter (fun a => q a = b) :=
+                  by
+                  ext a
+                  simp only [Fintype.mem_piFinset, mem_filter, q]
+                  constructor
+                  · intro h
+                    exact ⟨fun i => (h i).1, funext fun i => (h i).2⟩
+                  · rintro ⟨hD, hq⟩ i
+                    exact ⟨hD i, congrFun hq i⟩
+                rw [← hpi]
+                have hF : ∀ a ∈ Fintype.piFinset (fun i => (D i).filter (fun x => st i x = b i)), F (q a) = F b :=
+                  by
+                  intro a ha
+                  congr 1
+                  funext i
+                  exact (Finset.mem_filter.mp (Fintype.mem_piFinset.mp ha i)).2
+                rw [Finset.sum_congr rfl (fun a ha => by rw [hF a ha]), ← Finset.mul_sum]
+                rw [← Finset.prod_univ_sum]
+                simp_rw [hmass]
+          [Elab.step] [0.146085] ✅️ 
+                let q : (∀ i, A i) → (I → B) := fun a i => st i (a i)
+                calc
+                  _ = ∑ b : I → B, ∑ a ∈ Fintype.piFinset D with q a = b, F (q a) * ∏ i, mu i (a i) := by
+                    rw [Finset.sum_fiberwise (Fintype.piFinset D) q (fun a => F (q a) * ∏ i, mu i (a i))]
+                  _ = ∑ b : I → B, F b * ∏ i, P i (b i) :=
+                    by
+                    apply Finset.sum_congr rfl
+                    intro b _
+                    have hpi :
+                      (Fintype.piFinset (fun i => (D i).filter (fun a => st i a = b i))) =
+                        (Fintype.piFinset D).filter (fun a => q a = b) :=
+                      by
+                      ext a
+                      simp only [Fintype.mem_piFinset, mem_filter, q]
+                      constructor
+                      · intro h
+                        exact ⟨fun i => (h i).1, funext fun i => (h i).2⟩
+                      · rintro ⟨hD, hq⟩ i
+                        exact ⟨hD i, congrFun hq i⟩
+                    rw [← hpi]
+                    have hF : ∀ a ∈ Fintype.piFinset (fun i => (D i).filter (fun x => st i x = b i)), F (q a) = F b :=
+                      by
+                      intro a ha
+                      congr 1
+                      funext i
+                      exact (Finset.mem_filter.mp (Fintype.mem_piFinset.mp ha i)).2
+                    rw [Finset.sum_congr rfl (fun a ha => by rw [hF a ha]), ← Finset.mul_sum]
+                    rw [← Finset.prod_univ_sum]
+                    simp_rw [hmass]
+            [Elab.step] [0.146065] ✅️ 
+                  let q : (∀ i, A i) → (I → B) := fun a i => st i (a i)
+                  calc
+                    _ = ∑ b : I → B, ∑ a ∈ Fintype.piFinset D with q a = b, F (q a) * ∏ i, mu i (a i) := by
+                      rw [Finset.sum_fiberwise (Fintype.piFinset D) q (fun a => F (q a) * ∏ i, mu i (a i))]
+                    _ = ∑ b : I → B, F b * ∏ i, P i (b i) :=
+                      by
+                      apply Finset.sum_congr rfl
+                      intro b _
+                      have hpi :
+                        (Fintype.piFinset (fun i => (D i).filter (fun a => st i a = b i))) =
+                          (Fintype.piFinset D).filter (fun a => q a = b) :=
+                        by
+                        ext a
+                        simp only [Fintype.mem_piFinset, mem_filter, q]
+                        constructor
+                        · intro h
+                          exact ⟨fun i => (h i).1, funext fun i => (h i).2⟩
+                        · rintro ⟨hD, hq⟩ i
+                          exact ⟨hD i, congrFun hq i⟩
+                      rw [← hpi]
+                      have hF : ∀ a ∈ Fintype.piFinset (fun i => (D i).filter (fun x => st i x = b i)), F (q a) = F b :=
+                        by
+                        intro a ha
+                        congr 1
+                        funext i
+                        exact (Finset.mem_filter.mp (Fintype.mem_piFinset.mp ha i)).2
+                      rw [Finset.sum_congr rfl (fun a ha => by rw [hF a ha]), ← Finset.mul_sum]
+                      rw [← Finset.prod_univ_sum]
+                      simp_rw [hmass]
+              [Elab.step] [0.144952] ✅️ calc
+                    _ = ∑ b : I → B, ∑ a ∈ Fintype.piFinset D with q a = b, F (q a) * ∏ i, mu i (a i) := by
+                      rw [Finset.sum_fiberwise (Fintype.piFinset D) q (fun a => F (q a) * ∏ i, mu i (a i))]
+                    _ = ∑ b : I → B, F b * ∏ i, P i (b i) :=
+                      by
+                      apply Finset.sum_congr rfl
+                      intro b _
+                      have hpi :
+                        (Fintype.piFinset (fun i => (D i).filter (fun a => st i a = b i))) =
+                          (Fintype.piFinset D).filter (fun a => q a = b) :=
+                        by
+                        ext a
+                        simp only [Fintype.mem_piFinset, mem_filter, q]
+                        constructor
+                        · intro h
+                          exact ⟨fun i => (h i).1, funext fun i => (h i).2⟩
+                        · rintro ⟨hD, hq⟩ i
+                          exact ⟨hD i, congrFun hq i⟩
+                      rw [← hpi]
+                      have hF : ∀ a ∈ Fintype.piFinset (fun i => (D i).filter (fun x => st i x = b i)), F (q a) = F b :=
+                        by
+                        intro a ha
+                        congr 1
+                        funext i
+                        exact (Finset.mem_filter.mp (Fintype.mem_piFinset.mp ha i)).2
+                      rw [Finset.sum_congr rfl (fun a ha => by rw [hF a ha]), ← Finset.mul_sum]
+                      rw [← Finset.prod_univ_sum]
+                      simp_rw [hmass]
+                [Elab.step] [0.022405] ✅️ expected type: Sort ?u.90, term
+                    _ = ∑ b : I → B, ∑ a ∈ Fintype.piFinset D with q a = b, F (q a) * ∏ i, mu i (a i)
+                  [Elab.step] [0.022384] ✅️ expected type: Sort ?u.90, term
+                      binrel% Eq✝ _ (∑ b : I → B, ∑ a ∈ Fintype.piFinset D with q a = b, F (q a) * ∏ i, mu i (a i))
+                    [Elab.step] [0.022049] ✅️ expected type: <not-available>, term
+                        Finset.sum✝ (Finset.univ : Finset (I → B))
+                          (fun b ↦ ∑ a ∈ Fintype.piFinset D with q a = b, F (q a) * ∏ i, mu i (a i))
+                      [Elab.app.args] [0.021923] ✅️ elabAppArgs (2 args) `@Finset.sum`
+                        [Elab.step] [0.020488] ✅️ expected type: (I → B) → ℚ, term
+                            (fun b ↦ ∑ a ∈ Fintype.piFinset D with q a = b, F (q a) * ∏ i, mu i (a i))
+                          [Elab.step] [0.020471] ✅️ expected type: (I → B) → ℚ, term
+                              fun b ↦ ∑ a ∈ Fintype.piFinset D with q a = b, F (q a) * ∏ i, mu i (a i)
+                            [Elab.step] [0.020408] ✅️ expected type: ℚ, term
+                                ∑ a ∈ Fintype.piFinset D with q a = b, F (q a) * ∏ i, mu i (a i)
+                              [Elab.step] [0.014191] ✅️ expected type: ℚ, term
+                                  Finset.sum✝ (Finset.filter✝ (fun a ↦ q a = b) (finset% Fintype.piFinset D))
+                                    (fun a ↦ F (q a) * ∏ i, mu i (a i))
+                                [Elab.app.args] [0.013941] ✅️ elabAppArgs (2 args) `@Finset.sum`
+                [Elab.step] [0.098308] ✅️ 
+                      apply Finset.sum_congr rfl
+                      intro b _
+                      have hpi :
+                        (Fintype.piFinset (fun i => (D i).filter (fun a => st i a = b i))) =
+                          (Fintype.piFinset D).filter (fun a => q a = b) :=
+                        by
+                        ext a
+                        simp only [Fintype.mem_piFinset, mem_filter, q]
+                        constructor
+                        · intro h
+                          exact ⟨fun i => (h i).1, funext fun i => (h i).2⟩
+                        · rintro ⟨hD, hq⟩ i
+                          exact ⟨hD i, congrFun hq i⟩
+                      rw [← hpi]
+                      have hF : ∀ a ∈ Fintype.piFinset (fun i => (D i).filter (fun x => st i x = b i)), F (q a) = F b :=
+                        by
+                        intro a ha
+                        congr 1
+                        funext i
+                        exact (Finset.mem_filter.mp (Fintype.mem_piFinset.mp ha i)).2
+                      rw [Finset.sum_congr rfl (fun a ha => by rw [hF a ha]), ← Finset.mul_sum]
+                      rw [← Finset.prod_univ_sum]
+                      simp_rw [hmass]
+                  [Elab.step] [0.098176] ✅️ 
+                        apply Finset.sum_congr rfl
+                        intro b _
+                        have hpi :
+                          (Fintype.piFinset (fun i => (D i).filter (fun a => st i a = b i))) =
+                            (Fintype.piFinset D).filter (fun a => q a = b) :=
+                          by
+                          ext a
+                          simp only [Fintype.mem_piFinset, mem_filter, q]
+                          constructor
+                          · intro h
+                            exact ⟨fun i => (h i).1, funext fun i => (h i).2⟩
+                          · rintro ⟨hD, hq⟩ i
+                            exact ⟨hD i, congrFun hq i⟩
+                        rw [← hpi]
+                        have hF :
+                          ∀ a ∈ Fintype.piFinset (fun i => (D i).filter (fun x => st i x = b i)), F (q a) = F b :=
+                          by
+                          intro a ha
+                          congr 1
+                          funext i
+                          exact (Finset.mem_filter.mp (Fintype.mem_piFinset.mp ha i)).2
+                        rw [Finset.sum_congr rfl (fun a ha => by rw [hF a ha]), ← Finset.mul_sum]
+                        rw [← Finset.prod_univ_sum]
+                        simp_rw [hmass]
+                    [Elab.step] [0.025307] ✅️ have hpi :
+                          (Fintype.piFinset (fun i => (D i).filter (fun a => st i a = b i))) =
+                            (Fintype.piFinset D).filter (fun a => q a = b) :=
+                          by
+                          ext a
+                          simp only [Fintype.mem_piFinset, mem_filter, q]
+                          constructor
+                          · intro h
+                            exact ⟨fun i => (h i).1, funext fun i => (h i).2⟩
+                          · rintro ⟨hD, hq⟩ i
+                            exact ⟨hD i, congrFun hq i⟩
+                      [Elab.step] [0.025271] ✅️ focus
+                            refine
+                              no_implicit_lambda%
+                                (have hpi :
+                                  (Fintype.piFinset (fun i => (D i).filter (fun a => st i a = b i))) =
+                                    (Fintype.piFinset D).filter (fun a => q a = b) :=
+                                  ?body✝;
+                                ?_)
+                            case body✝ =>
+                              with_annotate_state"by"
+                                ( ext a
+                                  simp only [Fintype.mem_piFinset, mem_filter, q]
+                                  constructor
+                                  · intro h
+                                    exact ⟨fun i => (h i).1, funext fun i => (h i).2⟩
+                                  · rintro ⟨hD, hq⟩ i
+                                    exact ⟨hD i, congrFun hq i⟩)
+                        [Elab.step] [0.025260] ✅️ 
+                              refine
+                                no_implicit_lambda%
+                                  (have hpi :
+                                    (Fintype.piFinset (fun i => (D i).filter (fun a => st i a = b i))) =
+                                      (Fintype.piFinset D).filter (fun a => q a = b) :=
+                                    ?body✝;
+                                  ?_)
+                              case body✝ =>
+                                with_annotate_state"by"
+                                  ( ext a
+                                    simp only [Fintype.mem_piFinset, mem_filter, q]
+                                    constructor
+                                    · intro h
+                                      exact ⟨fun i => (h i).1, funext fun i => (h i).2⟩
+                                    · rintro ⟨hD, hq⟩ i
+                                      exact ⟨hD i, congrFun hq i⟩)
+                          [Elab.step] [0.025254] ✅️ 
+                                refine
+                                  no_implicit_lambda%
+                                    (have hpi :
+                                      (Fintype.piFinset (fun i => (D i).filter (fun a => st i a = b i))) =
+                                        (Fintype.piFinset D).filter (fun a => q a = b) :=
+                                      ?body✝;
+                                    ?_)
+                                case body✝ =>
+                                  with_annotate_state"by"
+                                    ( ext a
+                                      simp only [Fintype.mem_piFinset, mem_filter, q]
+                                      constructor
+                                      · intro h
+                                        exact ⟨fun i => (h i).1, funext fun i => (h i).2⟩
+                                      · rintro ⟨hD, hq⟩ i
+                                        exact ⟨hD i, congrFun hq i⟩)
+                            [Elab.step] [0.020459] ✅️ case body✝ =>
+                                  with_annotate_state"by"
+                                    ( ext a
+                                      simp only [Fintype.mem_piFinset, mem_filter, q]
+                                      constructor
+                                      · intro h
+                                        exact ⟨fun i => (h i).1, funext fun i => (h i).2⟩
+                                      · rintro ⟨hD, hq⟩ i
+                                        exact ⟨hD i, congrFun hq i⟩)
+                              [Elab.step] [0.020422] ✅️ with_annotate_state"by"
+                                      ( ext a
+                                        simp only [Fintype.mem_piFinset, mem_filter, q]
+                                        constructor
+                                        · intro h
+                                          exact ⟨fun i => (h i).1, funext fun i => (h i).2⟩
+                                        · rintro ⟨hD, hq⟩ i
+                                          exact ⟨hD i, congrFun hq i⟩)
+                                [Elab.step] [0.020416] ✅️ with_annotate_state"by"
+                                        ( ext a
+                                          simp only [Fintype.mem_piFinset, mem_filter, q]
+                                          constructor
+                                          · intro h
+                                            exact ⟨fun i => (h i).1, funext fun i => (h i).2⟩
+                                          · rintro ⟨hD, hq⟩ i
+                                            exact ⟨hD i, congrFun hq i⟩)
+                                  [Elab.step] [0.020409] ✅️ with_annotate_state"by"
+                                        ( ext a
+                                          simp only [Fintype.mem_piFinset, mem_filter, q]
+                                          constructor
+                                          · intro h
+                                            exact ⟨fun i => (h i).1, funext fun i => (h i).2⟩
+                                          · rintro ⟨hD, hq⟩ i
+                                            exact ⟨hD i, congrFun hq i⟩)
+                                    [Elab.step] [0.020401] ✅️ (
+                                          ext a
+                                          simp only [Fintype.mem_piFinset, mem_filter, q]
+                                          constructor
+                                          · intro h
+                                            exact ⟨fun i => (h i).1, funext fun i => (h i).2⟩
+                                          · rintro ⟨hD, hq⟩ i
+                                            exact ⟨hD i, congrFun hq i⟩)
+                                      [Elab.step] [0.020394] ✅️ 
+                                            ext a
+                                            simp only [Fintype.mem_piFinset, mem_filter, q]
+                                            constructor
+                                            · intro h
+                                              exact ⟨fun i => (h i).1, funext fun i => (h i).2⟩
+                                            · rintro ⟨hD, hq⟩ i
+                                              exact ⟨hD i, congrFun hq i⟩
+                                        [Elab.step] [0.020386] ✅️ 
+                                              ext a
+                                              simp only [Fintype.mem_piFinset, mem_filter, q]
+                                              constructor
+                                              · intro h
+                                                exact ⟨fun i => (h i).1, funext fun i => (h i).2⟩
+                                              · rintro ⟨hD, hq⟩ i
+                                                exact ⟨hD i, congrFun hq i⟩
+                                          [Elab.step] [0.015092] ✅️ simp only [Fintype.mem_piFinset, mem_filter, q]
+                    [Elab.step] [0.026326] ✅️ have hF :
+                          ∀ a ∈ Fintype.piFinset (fun i => (D i).filter (fun x => st i x = b i)), F (q a) = F b :=
+                          by
+                          intro a ha
+                          congr 1
+                          funext i
+                          exact (Finset.mem_filter.mp (Fintype.mem_piFinset.mp ha i)).2
+                      [Elab.step] [0.026250] ✅️ focus
+                            refine
+                              no_implicit_lambda%
+                                (have hF :
+                                  ∀ a ∈ Fintype.piFinset (fun i => (D i).filter (fun x => st i x = b i)),
+                                    F (q a) = F b :=
+                                  ?body✝;
+                                ?_)
+                            case body✝ =>
+                              with_annotate_state"by"
+                                ( intro a ha
+                                  congr 1
+                                  funext i
+                                  exact (Finset.mem_filter.mp (Fintype.mem_piFinset.mp ha i)).2)
+                        [Elab.step] [0.026241] ✅️ 
+                              refine
+                                no_implicit_lambda%
+                                  (have hF :
+                                    ∀ a ∈ Fintype.piFinset (fun i => (D i).filter (fun x => st i x = b i)),
+                                      F (q a) = F b :=
+                                    ?body✝;
+                                  ?_)
+                              case body✝ =>
+                                with_annotate_state"by"
+                                  ( intro a ha
+                                    congr 1
+                                    funext i
+                                    exact (Finset.mem_filter.mp (Fintype.mem_piFinset.mp ha i)).2)
+                          [Elab.step] [0.026235] ✅️ 
+                                refine
+                                  no_implicit_lambda%
+                                    (have hF :
+                                      ∀ a ∈ Fintype.piFinset (fun i => (D i).filter (fun x => st i x = b i)),
+                                        F (q a) = F b :=
+                                      ?body✝;
+                                    ?_)
+                                case body✝ =>
+                                  with_annotate_state"by"
+                                    ( intro a ha
+                                      congr 1
+                                      funext i
+                                      exact (Finset.mem_filter.mp (Fintype.mem_piFinset.mp ha i)).2)
+                            [Elab.step] [0.016527] ✅️ case body✝ =>
+                                  with_annotate_state"by"
+                                    ( intro a ha
+                                      congr 1
+                                      funext i
+                                      exact (Finset.mem_filter.mp (Fintype.mem_piFinset.mp ha i)).2)
+                              [Elab.step] [0.016487] ✅️ with_annotate_state"by"
+                                      ( intro a ha
+                                        congr 1
+                                        funext i
+                                        exact (Finset.mem_filter.mp (Fintype.mem_piFinset.mp ha i)).2)
+                                [Elab.step] [0.016477] ✅️ with_annotate_state"by"
+                                        ( intro a ha
+                                          congr 1
+                                          funext i
+                                          exact (Finset.mem_filter.mp (Fintype.mem_piFinset.mp ha i)).2)
+                                  [Elab.step] [0.016467] ✅️ with_annotate_state"by"
+                                        ( intro a ha
+                                          congr 1
+                                          funext i
+                                          exact (Finset.mem_filter.mp (Fintype.mem_piFinset.mp ha i)).2)
+                                    [Elab.step] [0.016455] ✅️ (
+                                          intro a ha
+                                          congr 1
+                                          funext i
+                                          exact (Finset.mem_filter.mp (Fintype.mem_piFinset.mp ha i)).2)
+                                      [Elab.step] [0.016445] ✅️ 
+                                            intro a ha
+                                            congr 1
+                                            funext i
+                                            exact (Finset.mem_filter.mp (Fintype.mem_piFinset.mp ha i)).2
+                                        [Elab.step] [0.016433] ✅️ 
+                                              intro a ha
+                                              congr 1
+                                              funext i
+                                              exact (Finset.mem_filter.mp (Fintype.mem_piFinset.mp ha i)).2
+                    [Elab.step] [0.011191] ✅️ rw [Finset.sum_congr rfl (fun a ha => by rw [hF a ha]), ← Finset.mul_sum]
+                      [Elab.step] [0.011154] ✅️ (rewrite [Finset.sum_congr rfl (fun a ha => by rw [hF a ha]), ←
+                              Finset.mul_sum];
+                            with_annotate_state"]" (try (with_reducible rfl)))
+                        [Elab.step] [0.011144] ✅️ rewrite [Finset.sum_congr rfl (fun a ha => by rw [hF a ha]), ←
+                                Finset.mul_sum];
+                              with_annotate_state"]" (try (with_reducible rfl))
+                          [Elab.step] [0.011135] ✅️ rewrite [Finset.sum_congr rfl (fun a ha => by rw [hF a ha]), ←
+                                  Finset.mul_sum];
+                                with_annotate_state"]" (try (with_reducible rfl))
+                            [Elab.step] [0.010477] ✅️ rewrite [Finset.sum_congr rfl (fun a ha => by rw [hF a ha]), ←
+                                  Finset.mul_sum]
+                    [Elab.step] [0.023815] ✅️ simp_rw [hmass]
+[Elab.async] [0.039301] ✅️ Lean.Elab.Command.runLintersAsync
+  [Elab.lint] [0.039289] ✅️ running linters
+    [Elab.lint] [0.012032] ✅️ running linter: Batteries.Linter.UnreachableTactic.unreachableTacticLinter
+    [Elab.lint] [0.011197] ✅️ running linter: Mathlib.TacticAnalysis.tacticAnalysis
+[Elab.command] [0.055674] ✅️ theorem one_level_push (P : WZ → ℚ)
+        (habc : P .abc = Pabc (gadgetE 1204) (gadgetW 1204 (1 / 2)) 0 1 (Fin.last 1204))
+        (hab : P .ab_c = Pab_c (gadgetE 1204) (gadgetW 1204 (1 / 2)) 0 1 (Fin.last 1204))
+        (hac : P .ac_b = Pac_b (gadgetE 1204) (gadgetW 1204 (1 / 2)) 0 1 (Fin.last 1204))
+        (hbc : P .a_bc = Pa_bc (gadgetE 1204) (gadgetW 1204 (1 / 2)) 0 1 (Fin.last 1204))
+        (hsep : P .a_b_c = Pa_b_c (gadgetE 1204) (gadgetW 1204 (1 / 2)) 0 1 (Fin.last 1204)) (F : (Fin 6 → WZ) → ℚ) :
+        (∑ S ∈ Fintype.piFinset (fun i : Fin 6 => ((gadgetE 1204).image (Sym2.map (emb i))).powerset),
+            F (fun i => stateOf (S i) (emb i 0) (emb i 1) (emb i 1204)) *
+              ∏ i, weight ((gadgetE 1204).image (Sym2.map (emb i))) (fun _ => (1 / 2 : ℚ)) (S i)) =
+          ∑ φ : Fin 6 → WZ, F φ * ∏ i, P (φ i) :=
+      by
+      let E : Fin 6 → Finset (Sym2 (Fin 7222)) := fun i => (gadgetE 1204).image (Sym2.map (emb i))
+      let st : (i : Fin 6) → Finset (Sym2 (Fin 7222)) → WZ := fun i S => stateOf S (emb i 0) (emb i 1) (emb i 1204)
+      let mu : (i : Fin 6) → Finset (Sym2 (Fin 7222)) → ℚ := fun i S => weight (E i) (fun _ => (1 / 2 : ℚ)) S
+      have hm : ∀ i s, ∑ S ∈ (E i).powerset with st i S = s, mu i S = P s :=
+        by
+        intro i s
+        rw [← copy_state_mass P habc hab hac hbc hsep i s]
+        unfold probOf
+        rw [Finset.sum_filter]
+      exact pi_pushforward_sum (fun i => (E i).powerset) st mu (fun _ => P) hm F
+  [Elab.definition.header] [0.054567] ✅️ Grouping.one_level_push
+    [Elab.step] [0.026220] ✅️ expected type: Sort ?u.85, term
+        (∑ S ∈ Fintype.piFinset (fun i : Fin 6 => ((gadgetE 1204).image (Sym2.map (emb i))).powerset),
+            F (fun i => stateOf (S i) (emb i 0) (emb i 1) (emb i 1204)) *
+              ∏ i, weight ((gadgetE 1204).image (Sym2.map (emb i))) (fun _ => (1 / 2 : ℚ)) (S i)) =
+          ∑ φ : Fin 6 → WZ, F φ * ∏ i, P (φ i)
+      [Elab.step] [0.026165] ✅️ expected type: Sort ?u.85, term
+          binrel% Eq✝
+            (∑ S ∈ Fintype.piFinset (fun i : Fin 6 => ((gadgetE 1204).image (Sym2.map (emb i))).powerset),
+              F (fun i => stateOf (S i) (emb i 0) (emb i 1) (emb i 1204)) *
+                ∏ i, weight ((gadgetE 1204).image (Sym2.map (emb i))) (fun _ => (1 / 2 : ℚ)) (S i))
+            (∑ φ : Fin 6 → WZ, F φ * ∏ i, P (φ i))
+        [Elab.step] [0.020217] ✅️ expected type: <not-available>, term
+            Finset.sum✝ (finset% Fintype.piFinset (fun i : Fin 6 => ((gadgetE 1204).image (Sym2.map (emb i))).powerset))
+              (fun S ↦
+                F (fun i => stateOf (S i) (emb i 0) (emb i 1) (emb i 1204)) *
+                  ∏ i, weight ((gadgetE 1204).image (Sym2.map (emb i))) (fun _ => (1 / 2 : ℚ)) (S i))
+          [Elab.app.args] [0.019938] ✅️ elabAppArgs (2 args) `@Finset.sum`
+            [Elab.step] [0.013839] ✅️ expected type: (Fin 6 → Finset (Sym2 (Fin 7222))) → ℚ, term
+                (fun S ↦
+                  F (fun i => stateOf (S i) (emb i 0) (emb i 1) (emb i 1204)) *
+                    ∏ i, weight ((gadgetE 1204).image (Sym2.map (emb i))) (fun _ => (1 / 2 : ℚ)) (S i))
+              [Elab.step] [0.013800] ✅️ expected type: (Fin 6 → Finset (Sym2 (Fin 7222))) → ℚ, term
+                  fun S ↦
+                    F (fun i => stateOf (S i) (emb i 0) (emb i 1) (emb i 1204)) *
+                      ∏ i, weight ((gadgetE 1204).image (Sym2.map (emb i))) (fun _ => (1 / 2 : ℚ)) (S i)
+                [Elab.step] [0.013661] ✅️ expected type: ℚ, term
+                    F (fun i => stateOf (S i) (emb i 0) (emb i 1) (emb i 1204)) *
+                      ∏ i, weight ((gadgetE 1204).image (Sym2.map (emb i))) (fun _ => (1 / 2 : ℚ)) (S i)
+                  [Elab.step] [0.013610] ✅️ expected type: ℚ, term
+                      binop% HMul.hMul✝ (F (fun i => stateOf (S i) (emb i 0) (emb i 1) (emb i 1204)))
+                        (∏ i, weight ((gadgetE 1204).image (Sym2.map (emb i))) (fun _ => (1 / 2 : ℚ)) (S i))
+[Elab.async] [0.035242] ✅️ elaborating proof of Grouping.one_level_push
+  [Elab.definition.value] [0.034075] ✅️ Grouping.one_level_push
+    [Elab.step] [0.033535] ✅️ 
+          let E : Fin 6 → Finset (Sym2 (Fin 7222)) := fun i => (gadgetE 1204).image (Sym2.map (emb i))
+          let st : (i : Fin 6) → Finset (Sym2 (Fin 7222)) → WZ := fun i S => stateOf S (emb i 0) (emb i 1) (emb i 1204)
+          let mu : (i : Fin 6) → Finset (Sym2 (Fin 7222)) → ℚ := fun i S => weight (E i) (fun _ => (1 / 2 : ℚ)) S
+          have hm : ∀ i s, ∑ S ∈ (E i).powerset with st i S = s, mu i S = P s :=
+            by
+            intro i s
+            rw [← copy_state_mass P habc hab hac hbc hsep i s]
+            unfold probOf
+            rw [Finset.sum_filter]
+          exact pi_pushforward_sum (fun i => (E i).powerset) st mu (fun _ => P) hm F
+      [Elab.step] [0.033521] ✅️ 
+            let E : Fin 6 → Finset (Sym2 (Fin 7222)) := fun i => (gadgetE 1204).image (Sym2.map (emb i))
+            let st : (i : Fin 6) → Finset (Sym2 (Fin 7222)) → WZ := fun i S =>
+              stateOf S (emb i 0) (emb i 1) (emb i 1204)
+            let mu : (i : Fin 6) → Finset (Sym2 (Fin 7222)) → ℚ := fun i S => weight (E i) (fun _ => (1 / 2 : ℚ)) S
+            have hm : ∀ i s, ∑ S ∈ (E i).powerset with st i S = s, mu i S = P s :=
+              by
+              intro i s
+              rw [← copy_state_mass P habc hab hac hbc hsep i s]
+              unfold probOf
+              rw [Finset.sum_filter]
+            exact pi_pushforward_sum (fun i => (E i).powerset) st mu (fun _ => P) hm F
+        [Elab.step] [0.015910] ✅️ have hm : ∀ i s, ∑ S ∈ (E i).powerset with st i S = s, mu i S = P s :=
+              by
+              intro i s
+              rw [← copy_state_mass P habc hab hac hbc hsep i s]
+              unfold probOf
+              rw [Finset.sum_filter]
+          [Elab.step] [0.015883] ✅️ focus
+                refine
+                  no_implicit_lambda%
+                    (have hm : ∀ i s, ∑ S ∈ (E i).powerset with st i S = s, mu i S = P s := ?body✝;
+                    ?_)
+                case body✝ =>
+                  with_annotate_state"by"
+                    ( intro i s
+                      rw [← copy_state_mass P habc hab hac hbc hsep i s]
+                      unfold probOf
+                      rw [Finset.sum_filter])
+            [Elab.step] [0.015876] ✅️ 
+                  refine
+                    no_implicit_lambda%
+                      (have hm : ∀ i s, ∑ S ∈ (E i).powerset with st i S = s, mu i S = P s := ?body✝;
+                      ?_)
+                  case body✝ =>
+                    with_annotate_state"by"
+                      ( intro i s
+                        rw [← copy_state_mass P habc hab hac hbc hsep i s]
+                        unfold probOf
+                        rw [Finset.sum_filter])
+              [Elab.step] [0.015869] ✅️ 
+                    refine
+                      no_implicit_lambda%
+                        (have hm : ∀ i s, ∑ S ∈ (E i).powerset with st i S = s, mu i S = P s := ?body✝;
+                        ?_)
+                    case body✝ =>
+                      with_annotate_state"by"
+                        ( intro i s
+                          rw [← copy_state_mass P habc hab hac hbc hsep i s]
+                          unfold probOf
+                          rw [Finset.sum_filter])
+[Elab.async] [0.021875] ✅️ Lean.Elab.Command.runLintersAsync
+  [Elab.lint] [0.021864] ✅️ running linters
+[Elab.command] [0.103615] ✅️ def twoLevelEquiv {I A : Type*} : ((I → A) × (I → A)) ≃ (I × Fin 2 → A)
+        where
+      toFun := twoLevel
+      invFun f := (fun i => f (i, 0), fun i => f (i, 1))
+      left_inv q := by ext i <;> simp [twoLevel]
+      right_inv
+        f := by
+        funext p
+        rcases p with ⟨i, j⟩
+        fin_cases j <;> simp [twoLevel]
+  [Elab.definition.value] [0.093005] ✅️ Grouping.twoLevelEquiv
+    [Elab.step] [0.016267] ✅️ expected type: (I → A) × (I → A) ≃ (I × Fin 2 → A), term
+        { toFun := twoLevel, invFun f := (fun i => f (i, 0), fun i => f (i, 1)),
+          left_inv q := by ext i <;> simp [twoLevel],
+          right_inv
+            f := by
+            funext p
+            rcases p with ⟨i, j⟩
+            fin_cases j <;> simp [twoLevel] }
+    [Elab.step] [0.047717] ✅️ ext i <;> simp [twoLevel]
+      [Elab.step] [0.047692] ✅️ ext i <;> simp [twoLevel]
+        [Elab.step] [0.047674] ✅️ ext i <;> simp [twoLevel]
+          [Elab.step] [0.047658] ✅️ focus
+                ext i
+                with_annotate_state"<;>" skip
+                all_goals simp [twoLevel]
+            [Elab.step] [0.047645] ✅️ 
+                  ext i
+                  with_annotate_state"<;>" skip
+                  all_goals simp [twoLevel]
+              [Elab.step] [0.047637] ✅️ 
+                    ext i
+                    with_annotate_state"<;>" skip
+                    all_goals simp [twoLevel]
+                [Elab.step] [0.012501] ✅️ ext i
+                [Elab.step] [0.035093] ✅️ all_goals simp [twoLevel]
+                  [Elab.step] [0.030535] ✅️ simp [twoLevel]
+                    [Elab.step] [0.030522] ✅️ simp [twoLevel]
+                      [Elab.step] [0.030504] ✅️ simp [twoLevel]
+                        [Meta.isDefEq] [0.020005] ✅️ 1 = 0 =?= 1 = 0
+                          [Meta.isDefEq] [0.013873] ✅️ 1 =?= 1
+                            [Meta.isDefEq] [0.013839] ✅️ One.toOfNat1 =?= Fin.instOfNat
+                              [Meta.isDefEq] [0.013818] ✅️ { ofNat := One.one } =?= { ofNat := Fin.ofNat 2 1 }
+                                [Meta.isDefEq] [0.013794] ✅️ One.one =?= Fin.ofNat 2 1
+                                  [Meta.isDefEq] [0.013780] ✅️ One.one =?= ⟨1 % 2, ⋯⟩
+                                    [Meta.isDefEq] [0.013749] ✅️ ↑One.one =?= 1 % 2
+                                      [Meta.isDefEq] [0.013735] ✅️ One.one.1 =?= 1 % 2
+                                        [Meta.isDefEq] [0.013696] ✅️ One.one.1 =?= Mod.mod 1 2
+                                          [Meta.isDefEq] [0.013663] ✅️ One.one.1 =?= Nat.mod 1 2
+                                            [Meta.isDefEq.onFailure] [0.013625] ✅️ One.one.1 =?= Nat.mod 1 2
+                                              [Meta.synthInstance] [0.012655] ✅️ One (Fin 2)
+    [Elab.step] [0.027322] ✅️ 
+          funext p
+          rcases p with ⟨i, j⟩
+          fin_cases j <;> simp [twoLevel]
+      [Elab.step] [0.027307] ✅️ 
+            funext p
+            rcases p with ⟨i, j⟩
+            fin_cases j <;> simp [twoLevel]
+        [Elab.step] [0.026536] ✅️ (fin_cases j) <;> simp [twoLevel]
+          [Elab.step] [0.026512] ✅️ focus
+                fin_cases j
+                with_annotate_state"<;>" skip
+                all_goals simp [twoLevel]
+            [Elab.step] [0.026503] ✅️ 
+                  fin_cases j
+                  with_annotate_state"<;>" skip
+                  all_goals simp [twoLevel]
+              [Elab.step] [0.026497] ✅️ 
+                    fin_cases j
+                    with_annotate_state"<;>" skip
+                    all_goals simp [twoLevel]
+                [Elab.step] [0.019545] ✅️ all_goals simp [twoLevel]
+                  [Elab.step] [0.017915] ✅️ simp [twoLevel]
+                    [Elab.step] [0.017901] ✅️ simp [twoLevel]
+                      [Elab.step] [0.017880] ✅️ simp [twoLevel]
+[Elab.async] [0.010157] ✅️ Lean.compileDecls
+  [Compiler] [0.010064] ✅️ compiling: [Grouping.twoLevelEquiv]
+[Elab.async] [0.013885] ✅️ Lean.Elab.Command.runLintersAsync
+  [Elab.lint] [0.013873] ✅️ running linters
+[Elab.async] [0.037620] ✅️ elaborating proof of Grouping.twoLevel_prod
+  [Elab.definition.value] [0.036555] ✅️ Grouping.twoLevel_prod
+    [Elab.step] [0.036208] ✅️ 
+          rw [Fintype.prod_prod_type]
+          simp_rw [Fin.prod_univ_two]
+          simp only [twoLevel, if_pos, Fin.isValue, OfNat.ofNat, if_false]
+          exact Finset.prod_mul_distrib
+      [Elab.step] [0.036189] ✅️ 
+            rw [Fintype.prod_prod_type]
+            simp_rw [Fin.prod_univ_two]
+            simp only [twoLevel, if_pos, Fin.isValue, OfNat.ofNat, if_false]
+            exact Finset.prod_mul_distrib
+        [Elab.step] [0.010434] ✅️ simp_rw [Fin.prod_univ_two]
+        [Elab.step] [0.017220] ✅️ simp only [twoLevel, if_pos, Fin.isValue, OfNat.ofNat, if_false]
+examples/GroupingCore.lean:285:31: warning: This simp argument is unused:
+  Fin.isValue
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [twoLevel, if_pos, OfNat.ofNat, if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+examples/GroupingCore.lean:285:57: warning: This simp argument is unused:
+  if_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [twoLevel, if_pos, Fin.isValue, OfNat.ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+[Elab.async] [0.014431] ✅️ Lean.Elab.Command.runLintersAsync
+  [Elab.lint] [0.014421] ✅️ running linters
+[Elab.command] [0.019231] ✅️ theorem selected_state_match (S₀ S₁ : Fin 6 → Finset (Sym2 (Fin 7222))) :
+        ∀ (i : Fin 6) (l : Fin 2),
+          ((ofEdges (if l = 0 then S₀ i else S₁ i)).Reachable (emb i 0) (emb i 1) ↔
+              twoLevel (copyStates S₀, copyStates S₁) (i, l) = .abc ∨
+                twoLevel (copyStates S₀, copyStates S₁) (i, l) = .ab_c) ∧
+            ((ofEdges (if l = 0 then S₀ i else S₁ i)).Reachable (emb i 1) (emb i 1204) ↔
+                twoLevel (copyStates S₀, copyStates S₁) (i, l) = .abc ∨
+                  twoLevel (copyStates S₀, copyStates S₁) (i, l) = .a_bc) ∧
+              ((ofEdges (if l = 0 then S₀ i else S₁ i)).Reachable (emb i 0) (emb i 1204) ↔
+                twoLevel (copyStates S₀, copyStates S₁) (i, l) = .abc ∨
+                  twoLevel (copyStates S₀, copyStates S₁) (i, l) = .ac_b) :=
+      by
+      intro i l
+      by_cases hl : l = 0
+      · subst l
+        simpa only [twoLevel, copyStates, if_pos] using state_boundary (S₀ i) (emb i 0) (emb i 1) (emb i 1204)
+      · have hl1 : l = 1 := Fin.eq_one_of_ne_zero l hl
+        subst l
+        have h10 : (1 : Fin 2) ≠ 0 := by decide
+        simpa only [twoLevel, copyStates, h10, if_false] using state_boundary (S₁ i) (emb i 0) (emb i 1) (emb i 1204)
+  [Elab.definition.header] [0.018789] ✅️ Grouping.selected_state_match
+    [Elab.step] [0.017338] ✅️ expected type: Sort ?u.15, term
+        ∀ (i : Fin 6) (l : Fin 2),
+          ((ofEdges (if l = 0 then S₀ i else S₁ i)).Reachable (emb i 0) (emb i 1) ↔
+              twoLevel (copyStates S₀, copyStates S₁) (i, l) = .abc ∨
+                twoLevel (copyStates S₀, copyStates S₁) (i, l) = .ab_c) ∧
+            ((ofEdges (if l = 0 then S₀ i else S₁ i)).Reachable (emb i 1) (emb i 1204) ↔
+                twoLevel (copyStates S₀, copyStates S₁) (i, l) = .abc ∨
+                  twoLevel (copyStates S₀, copyStates S₁) (i, l) = .a_bc) ∧
+              ((ofEdges (if l = 0 then S₀ i else S₁ i)).Reachable (emb i 0) (emb i 1204) ↔
+                twoLevel (copyStates S₀, copyStates S₁) (i, l) = .abc ∨
+                  twoLevel (copyStates S₀, copyStates S₁) (i, l) = .ac_b)
+      [Elab.step] [0.017000] ✅️ expected type: Prop, term
+          ((ofEdges (if l = 0 then S₀ i else S₁ i)).Reachable (emb i 0) (emb i 1) ↔
+              twoLevel (copyStates S₀, copyStates S₁) (i, l) = .abc ∨
+                twoLevel (copyStates S₀, copyStates S₁) (i, l) = .ab_c) ∧
+            ((ofEdges (if l = 0 then S₀ i else S₁ i)).Reachable (emb i 1) (emb i 1204) ↔
+                twoLevel (copyStates S₀, copyStates S₁) (i, l) = .abc ∨
+                  twoLevel (copyStates S₀, copyStates S₁) (i, l) = .a_bc) ∧
+              ((ofEdges (if l = 0 then S₀ i else S₁ i)).Reachable (emb i 0) (emb i 1204) ↔
+                twoLevel (copyStates S₀, copyStates S₁) (i, l) = .abc ∨
+                  twoLevel (copyStates S₀, copyStates S₁) (i, l) = .ac_b)
+        [Elab.step] [0.016972] ✅️ expected type: Prop, term
+            And✝
+              ((ofEdges (if l = 0 then S₀ i else S₁ i)).Reachable (emb i 0) (emb i 1) ↔
+                twoLevel (copyStates S₀, copyStates S₁) (i, l) = .abc ∨
+                  twoLevel (copyStates S₀, copyStates S₁) (i, l) = .ab_c)
+              (((ofEdges (if l = 0 then S₀ i else S₁ i)).Reachable (emb i 1) (emb i 1204) ↔
+                  twoLevel (copyStates S₀, copyStates S₁) (i, l) = .abc ∨
+                    twoLevel (copyStates S₀, copyStates S₁) (i, l) = .a_bc) ∧
+                ((ofEdges (if l = 0 then S₀ i else S₁ i)).Reachable (emb i 0) (emb i 1204) ↔
+                  twoLevel (copyStates S₀, copyStates S₁) (i, l) = .abc ∨
+                    twoLevel (copyStates S₀, copyStates S₁) (i, l) = .ac_b))
+          [Elab.app.args] [0.016903] ✅️ elabAppArgs (2 args) `And`
+[Elab.async] [0.038201] ✅️ elaborating proof of Grouping.selected_state_match
+  [Elab.definition.value] [0.036229] ✅️ Grouping.selected_state_match
+    [Elab.step] [0.035420] ✅️ 
+          intro i l
+          by_cases hl : l = 0
+          · subst l
+            simpa only [twoLevel, copyStates, if_pos] using state_boundary (S₀ i) (emb i 0) (emb i 1) (emb i 1204)
+          · have hl1 : l = 1 := Fin.eq_one_of_ne_zero l hl
+            subst l
+            have h10 : (1 : Fin 2) ≠ 0 := by decide
+            simpa only [twoLevel, copyStates, h10, if_false] using
+              state_boundary (S₁ i) (emb i 0) (emb i 1) (emb i 1204)
+      [Elab.step] [0.035403] ✅️ 
+            intro i l
+            by_cases hl : l = 0
+            · subst l
+              simpa only [twoLevel, copyStates, if_pos] using state_boundary (S₀ i) (emb i 0) (emb i 1) (emb i 1204)
+            · have hl1 : l = 1 := Fin.eq_one_of_ne_zero l hl
+              subst l
+              have h10 : (1 : Fin 2) ≠ 0 := by decide
+              simpa only [twoLevel, copyStates, h10, if_false] using
+                state_boundary (S₁ i) (emb i 0) (emb i 1) (emb i 1204)
+        [Elab.step] [0.018314] ✅️ ·
+              subst l
+              simpa only [twoLevel, copyStates, if_pos] using state_boundary (S₀ i) (emb i 0) (emb i 1) (emb i 1204)
+          [Elab.step] [0.018291] ✅️ 
+                subst l
+                simpa only [twoLevel, copyStates, if_pos] using state_boundary (S₀ i) (emb i 0) (emb i 1) (emb i 1204)
+            [Elab.step] [0.018277] ✅️ 
+                  subst l
+                  simpa only [twoLevel, copyStates, if_pos] using state_boundary (S₀ i) (emb i 0) (emb i 1) (emb i 1204)
+              [Elab.step] [0.017746] ✅️ simpa only [twoLevel, copyStates, if_pos] using
+                    state_boundary (S₀ i) (emb i 0) (emb i 1) (emb i 1204)
+        [Elab.step] [0.014444] ✅️ ·
+              have hl1 : l = 1 := Fin.eq_one_of_ne_zero l hl
+              subst l
+              have h10 : (1 : Fin 2) ≠ 0 := by decide
+              simpa only [twoLevel, copyStates, h10, if_false] using
+                state_boundary (S₁ i) (emb i 0) (emb i 1) (emb i 1204)
+          [Elab.step] [0.014353] ✅️ 
+                have hl1 : l = 1 := Fin.eq_one_of_ne_zero l hl
+                subst l
+                have h10 : (1 : Fin 2) ≠ 0 := by decide
+                simpa only [twoLevel, copyStates, h10, if_false] using
+                  state_boundary (S₁ i) (emb i 0) (emb i 1) (emb i 1204)
+            [Elab.step] [0.014339] ✅️ 
+                  have hl1 : l = 1 := Fin.eq_one_of_ne_zero l hl
+                  subst l
+                  have h10 : (1 : Fin 2) ≠ 0 := by decide
+                  simpa only [twoLevel, copyStates, h10, if_false] using
+                    state_boundary (S₁ i) (emb i 0) (emb i 1) (emb i 1204)
+[Elab.async] [0.020925] ✅️ Lean.Elab.Command.runLintersAsync
+  [Elab.lint] [0.020910] ✅️ running linters

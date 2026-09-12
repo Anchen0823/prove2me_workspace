@@ -1,0 +1,90 @@
+{
+  "root_id": "59fb46ad-4ec0-4c68-9838-319eb070efdd",
+  "open_leaves": [
+    {
+      "theorem_id": "24c6e94b-2b96-4f10-b16d-486fa48068eb",
+      "theorem_name": "WeakGoldbach.verified_two_primes_4e14_to_4e18",
+      "status": "Open",
+      "closability": 6
+    },
+    {
+      "theorem_id": "3a85680d-cea1-4235-898e-7419c521bb84",
+      "theorem_name": "RamareSaouter2003.has_prime_in_interval",
+      "status": "Open",
+      "closability": 1
+    },
+    {
+      "theorem_id": "55310293-603e-422d-b934-e32fddc6441c",
+      "theorem_name": "WeakGoldbach.symmetric_vonMangoldt_lower_bound_above_2e18",
+      "status": "Open",
+      "closability": 1
+    },
+    {
+      "theorem_id": "3e8e1ea1-7e26-4d01-b3cb-37f8a0df5f4b",
+      "theorem_name": "TaoFivePrimes.liu_wang_three_primes",
+      "status": "Open",
+      "closability": 0
+    },
+    {
+      "theorem_id": "73281223-e520-4706-9186-a986548dc0d1",
+      "theorem_name": "Richstein2001.segmented_sieve_coverage",
+      "status": "Open",
+      "closability": 0
+    },
+    {
+      "theorem_id": "cf820e86-8667-4076-8a05-a61433cb5bd9",
+      "theorem_name": "TaoFivePrimes.mesoscopic_sifted_pair_correlation_sieve_source",
+      "status": "Open",
+      "closability": 0
+    },
+    {
+      "theorem_id": "3d23bf2a-4938-4e21-a27c-2733e36173b1",
+      "theorem_name": "TaoFivePrimes.exp_sum_estimate_large_q_unit_source_envelope",
+      "status": "Open",
+      "closability": 0
+    },
+    {
+      "theorem_id": "5f71df57-fdd6-4669-9e56-ce36eee723ce",
+      "theorem_name": "TaoFivePrimes.eta1_complementary_correlation",
+      "status": "Open",
+      "closability": 0
+    },
+    {
+      "theorem_id": "846aef3d-70be-4631-bb75-136ff01e68f6",
+      "theorem_name": "WeakGoldbach.integral_main_term_above_2e18",
+      "status": "Open",
+      "closability": 0
+    },
+    {
+      "theorem_id": "e39d0b92-3205-4ca8-a9be-01c09b6c65ec",
+      "theorem_name": "TaoFivePrimes.exp_sum_estimate_section6_source_envelope",
+      "status": "Open",
+      "closability": 0
+    },
+    {
+      "theorem_id": "f4cd87ed-a92c-4886-b0b7-e81a95dd0134",
+      "theorem_name": "TaoFivePrimes.eta1_quadratic_prime_mass",
+      "status": "Open",
+      "closability": 0
+    },
+    {
+      "theorem_id": "f93c4db9-21be-46a1-866d-73e024b79967",
+      "theorem_name": "TaoFivePrimes.exp_sum_estimate_small_q_source_envelope",
+      "status": "Open",
+      "closability": 0
+    },
+    {
+      "theorem_id": "d00b420a-79b6-40a4-8672-45b925bfa352",
+      "theorem_name": "TaoFivePrimes.smoothedExpSum_eta0_one_prop72_source",
+      "status": "Open",
+      "closability": 0
+    },
+    {
+      "theorem_id": "cf6be7a8-2493-479a-9d57-6ee8535546d1",
+      "theorem_name": "TaoFivePrimes.rosser_schoenfeld_psi_bound",
+      "status": "Open",
+      "closability": 0
+    }
+  ],
+  "total": 14
+}

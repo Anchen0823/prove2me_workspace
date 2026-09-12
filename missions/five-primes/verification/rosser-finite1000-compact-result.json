@@ -1,0 +1,7 @@
+{
+  "exit_code": 0,
+  "elapsed_seconds": 231.4333235,
+  "sha256": "F62AE0B818152E385957DB9B16004BD5AA8841E42F2882B06C1C13214B5AE52D",
+  "checked_at": "2026-09-12T20:39:29.9476199+08:00",
+  "scope": "Full 1..1000 prefix with incremental LCM, adaptive powers, and existing exact endpoint 113 proof"
+}

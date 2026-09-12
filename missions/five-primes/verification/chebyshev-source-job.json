@@ -1,0 +1,17 @@
+{
+  "id": "9d1e49ba-ffcf-4edd-9ef6-967edcfc42fc",
+  "kind": "problem",
+  "theorem_name": "TaoFivePrimes.schoenfeld_psi_error_large",
+  "theorem_title": "Explicit two-sided Chebyshev error above 10^8",
+  "formal_statement": "theorem TaoFivePrimes.schoenfeld_psi_error_large (y : ℝ) (hy : 10 ^ 8 ≤ y) : |Chebyshev.psi y - y| ≤ y / (40 * Real.log y) := by sorry",
+  "natural_language_statement": "For every real number y at least 10^8, the second Chebyshev function satisfies $$|\\psi(y)-y|\\le y/(40\\log y).$$ Here psi is the sum of the von Mangoldt function over positive integers at most y. This is the explicit prime-counting input invoked in the proof of Tao's Lemma 4.3. It supplies the unsifted quadratic prime mass estimate by piecewise Abel summation. The statement is unconditional; no Riemann hypothesis assumption is introduced. The source node records a genuine number-theoretic estimate, not an assumption about the mission's particular cutoff.",
+  "definitions": "import Mathlib.NumberTheory.Chebyshev",
+  "source": "T. Tao, Every odd number greater than 1 is the sum of at most five primes, arXiv:1201.6656v4, Section 4, proof of Lemma 4.3 (https://arxiv.org/html/1201.6656v4), invoking L. Schoenfeld, Sharper bounds for the Chebyshev functions theta(x) and psi(x). II, Math. Comp. 30 (1976), Theorem 7. The estimate was checked in Tao's proof; the original Schoenfeld PDF was not independently inspected.",
+  "tags": [],
+  "visibility": "public",
+  "status": "PUBLISHED",
+  "error_message": "",
+  "theorem_id": "3fa7d8d1-e2ce-4057-894d-f39a2f0a4a8d",
+  "created_at": "2026-09-12T20:00:01.050987+08:00",
+  "updated_at": "2026-09-12T20:01:43.555862+08:00"
+}

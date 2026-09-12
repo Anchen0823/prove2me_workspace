@@ -1,0 +1,21 @@
+{
+  "decompositions": [
+    {
+      "submission_id": null,
+      "created_by": null,
+      "created_at": null,
+      "deprecated_at": null,
+      "deprecated_by": null,
+      "children": [
+        {
+          "definition_id": "d5145161-07e1-4f2d-bf49-08bc6090dc85",
+          "definition_name": "TaoFivePrimes_ArcSplit",
+          "theorem_title": "Arc split for Tao's Theorem 8.2: the factors $S_{\\eta_1}$, $S_{\\eta_0}$, $D_{N_0/3}$ and the strongly major arc",
+          "ordinal": 0,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "558a3fe9-9bac-420d-afa8-074a300b2d63",
+  "kind": "problem",
+  "theorem_name": "TaoFivePrimes.eta1_complementary_correlation",
+  "theorem_title": "One-percent complementary Fourier correlation for the Section 8 trapezoid",
+  "formal_statement": "theorem TaoFivePrimes.eta1_complementary_correlation (x : ℕ)\n    (hr_lower : 1 / (2 * (x : ℝ)) ≤ T0 / (3.6 * Real.pi * (x : ℝ)))\n    (hr_upper : T0 / (3.6 * Real.pi * (x : ℝ)) ≤ 1 / 2)\n    (hc8 : (10 ^ 8 : ℝ) ≤ (1 / 10 : ℝ) * x)\n    (hneat : (10 ^ 4 : ℝ) * (3 / 2 : ℝ) ≤ x)\n    (halamo : 5 * (3 / 2 : ℝ) ≤ Real.log ((1 / 10 : ℝ) * x))\n    (h10q : (10 ^ 8 : ℝ) * (9 / 4 : ℝ) ≤ x)\n    (hr0b : 20 * 60 * Real.sqrt (3 / 2 : ℝ) ≤ T0 / (3.6 * Real.pi))\n    (ε : ℝ) (hε : |ε| ≤ 0.02)\n    (hmass : (∑ n ∈ Finset.range (x + 1),\n      siftedVonMangoldt x n * eta1 ((n : ℝ) / x) ^ 2) =\n        (2 / 3 : ℝ) * (1 + ε) * x) :\n    ‖∫ α in (majorArc x)ᶜ, S1 x α *\n      conj (TaoFourierIdentity.fourierPolynomial (Finset.range (x + 1))\n        (fun n ↦ (eta1 ((n : ℝ) / x) : ℂ)) (fun n ↦ (n : ℤ)) α)\n        ∂AddCircle.haarAddCircle‖ ≤\n      0.01 * ((2 / 3 : ℝ) * (1 + ε) * x) := by sorry",
+  "natural_language_statement": "Let x be a positive integer, let eta1 be Tao's Section 8 trapezoidal cutoff,\nand put\n\n$$r=\\frac{T_0}{3.6\\pi x},\\quad T_0=3.29\\cdot10^9,\\quad\nF_x(\\alpha)=\\sum_{n=0}^{x}\\eta_1(n/x)e(n\\alpha).$$\n\nThe unit circle carries probability Haar measure, and E is the closed arc\ndefined by distance at most r from zero. Let S1 be the sifted prime-weighted\nFourier polynomial from the arc-split definition. Assume\n\n$$\\frac1{2x}\\le r\\le\\frac12,\\quad 10^8\\le x/10,\\quad 10^4(3/2)\\le x,$$\n$$5(3/2)\\le\\log(x/10),\\quad10^8(9/4)\\le x,\\quad\n20\\cdot60\\sqrt{3/2}\\le\\frac{T_0}{3.6\\pi}.$$\n\nSuppose a real epsilon satisfies\n\n$$|\\varepsilon|\\le0.02,\\qquad\nM_x:=\\sum_{n=0}^{x}\\Lambda(n)\\mathbf1_{(n,\\sqrt{x}\\#)=1}\\eta_1(n/x)^2\n=\\frac23(1+\\varepsilon)x.$$\n\nThen the complementary correlation obeys\n\n$$\\left|\\int_{E^c}S_1(x,\\alpha)\\overline{F_x(\\alpha)}\\,d\\alpha\\right|\n\\le0.01M_x.$$\n\nThis isolates the tail step in the proof of Proposition 4.8 and its\none-percent comparison in Corollary 4.9, after specializing to Section 8.\nThe mass approximation is an explicit hypothesis, not a conclusion of\nthis lemma. A proof must supply the exponential-sum tail estimate and\nthe required linear prime-mass control for the literal nonsmooth cutoff,\nby a justified approximation or a direct variation argument. Unlike the\nparent theorem, this controls a complementary mixed integral rather than\nthe major-arc square integral.\n",
+  "definitions": "import Definitions.Def_TaoFivePrimes_ArcSplit\nopen MeasureTheory TaoFivePrimes\nopen scoped BigOperators ComplexConjugate",
+  "source": "Terence Tao, Every odd number greater than 1 is the sum of at most five primes, https://arxiv.org/abs/1201.6656v4. Proposition 4.8, proof on printed pp. 19-20, and the one-percent tail comparison in the proof of Corollary 4.9 on printed p. 20; specialized to the Section 8 cutoff with the mass identity explicit.",
+  "tags": [
+    "number-theory",
+    "circle-method",
+    "fourier-analysis"
+  ],
+  "visibility": "public",
+  "status": "PUBLISHED",
+  "error_message": "",
+  "theorem_id": "5f71df57-fdd6-4669-9e56-ce36eee723ce",
+  "created_at": "2026-09-12T18:32:58.626881+08:00",
+  "updated_at": "2026-09-12T18:37:13.119225+08:00"
+}

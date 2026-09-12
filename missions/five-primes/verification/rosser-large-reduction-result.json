@@ -1,0 +1,6 @@
+{
+  "sha256": "28C32E98C9BE3358E21EE2851E9DBF5154D0FD43C4CFC4C5413FC48895E6688C",
+  "checked_at": "2026-09-12T20:11:16.7361731+08:00",
+  "exit_code": 0,
+  "scope": "Conditional Rosser reduction; both explicit error source and finite certificate remain unproved"
+}

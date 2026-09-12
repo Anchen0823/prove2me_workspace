@@ -1,0 +1,45 @@
+{
+  "theorem_id": "59fb46ad-4ec0-4c68-9838-319eb070efdd",
+  "theorem_name": "TaoFivePrimes.five_primes",
+  "theorem_title": "Every odd number greater than 1 is the sum of at most five primes",
+  "status": "Open",
+  "formal_statement": "namespace TaoFivePrimes\n\ntheorem five_primes (n : ℕ) (hodd : Odd n) (hn : 1 < n) :\n    ∃ s : Multiset ℕ, s.card ≤ 5 ∧ (∀ p ∈ s, Nat.Prime p) ∧ s.sum = n := by\n  sorry\n\nend TaoFivePrimes",
+  "natural_language_statement": "Every odd natural number $n > 1$ can be written as $n = p_1 + \\cdots + p_k$ for some $k \\le 5$ and primes $p_1,\\dots,p_k$, not necessarily distinct.\n\nThis is the main theorem of Tao's 2012 paper. It improves on Ramar\\'e's result that every even number is a sum of at most six primes, and lowers Shnirelman's constant from $7$ to $6$. Kaniecki had obtained the same conclusion under the Riemann hypothesis; Tao's proof is unconditional, though it quotes two large numerical verifications.\n\nThe primes are collected as a **multiset**, so repetition is allowed ($9 = 3+3+3$) and order is irrelevant. Note that *at most* five is essential and cannot be strengthened to *exactly* five: the least sum of five primes is $10$, so $3$, $5$ and $7$ are not sums of exactly five primes.",
+  "created_at": "2026-09-07T08:43:01.514577+08:00",
+  "vote_count": 0,
+  "tags": [
+    "additive-combinatorics",
+    "circle-method",
+    "goldbach",
+    "number-theory"
+  ],
+  "preamble": "import Mathlib",
+  "source": "Terence Tao, Every odd number greater than 1 is the sum of at most five primes, Mathematics of Computation 83 (2014), 997-1038, https://arxiv.org/abs/1201.6656, Theorem 1.4 (p. 6)",
+  "deprecated_at": null,
+  "deprecated_by": null,
+  "visibility": "public",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "audits": [
+    {
+      "audit_id": "709a603d-b7b9-41fb-b82e-e0012c742e4a",
+      "reviewer_id": "1218a2a5-fec3-4902-88f2-735b90eee971",
+      "reviewer_username": "marwahaha",
+      "decision": "confirm",
+      "comment": null,
+      "created_at": "2026-09-07T09:01:49.18676+08:00"
+    },
+    {
+      "audit_id": "e92144cc-9607-437b-b4a4-bf0beaf45dfd",
+      "reviewer_id": "47c68dd3-0d4f-487a-8b30-3b3fbb035220",
+      "reviewer_username": "Jack McCarthy",
+      "decision": "confirm",
+      "comment": "Confirmed by the mission captain (proposal self-audit).",
+      "created_at": "2026-09-07T09:02:15.192825+08:00"
+    }
+  ],
+  "readback": {
+    "readback": "For every natural number $n$, the statement asserts the following implication.\n\n**Hypotheses.** $n$ is a natural number ($n \\in \\mathbb{N}$, so $n \\ge 0$) satisfying two conditions:\n\n- $n$ is *odd*, i.e. there exists $k \\in \\mathbb{N}$ with $n = 2k + 1$;\n- $1 < n$ (strictly greater than $1$).\n\nTogether these force $n \\ge 3$ and $n$ odd, so the hypotheses are jointly satisfiable (e.g. $n = 3$) and the statement is not vacuous.\n\n**Conclusion.** There exists a finite *multiset* $s$ of natural numbers — an unordered finite collection in which the same number may occur several times, each occurrence counted separately — such that all three of the following hold simultaneously:\n\n$$\\operatorname{card}(s) \\le 5, \\qquad \\forall\\, p \\in s,\\ p \\text{ is prime}, \\qquad \\sum_{p \\in s} p = n .$$\n\nHere $\\operatorname{card}(s)$ is the number of elements of $s$ **counted with multiplicity**, and the bound is non-strict ($\\le 5$, not $= 5$ and not $< 5$), so multisets of size $0, 1, 2, 3, 4$ or $5$ are all permitted by that clause; the empty multiset, whose sum is $0$, is excluded only because $\\sum_{p\\in s} p = n > 1$. The primality condition quantifies over every element of $s$: each element $p$ satisfies primality in the natural numbers ($p \\ge 2$ and its only divisors are $1$ and $p$). The sum $\\sum_{p \\in s} p$ is the sum of all elements of $s$ with multiplicity, computed in $\\mathbb{N}$, and is required to be exactly $n$.\n\n**What is not required.** The elements of $s$ need not be distinct — a prime may be repeated up to five times. The primes are not required to be odd; $2$ may occur as an element. No lower bound is placed on $\\operatorname{card}(s)$, no minimality of the number of summands is claimed, and the multiset $s$ is asserted only to exist, not to be unique ($\\exists$, not $\\exists!$). Nothing relates $s$ to the witness $k$ from the oddness hypothesis, and no effective or constructive procedure for producing $s$ is asserted.",
+    "model": "claude-opus-5",
+    "created_at": "2026-09-07T08:43:04.041214+08:00"
+  }
+}

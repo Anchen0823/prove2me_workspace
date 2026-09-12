@@ -1,0 +1,7 @@
+{
+  "checked_at": "2026-09-12T18:45:34.3968048+08:00",
+  "path": "examples/five-primes/CutoffDifferences.lean",
+  "sha256": "226CA484A2C544EDA21DE138DE58CC53298B7E8E08B12BFF69F85F73E4886314",
+  "exit_code": 0,
+  "scope": "Hinge decomposition, hinge second-difference nonnegativity, telescoping identity, and exact per-hinge total second difference; combined cutoff bound and circle tail integration remain."
+}

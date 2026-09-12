@@ -1,0 +1,66 @@
+{
+  "mission_id": "cdf62c01-8ad9-4eb0-bbcc-ef94ce25d4f8",
+  "pagination": {
+    "limit": 100,
+    "offset": 0,
+    "total": 4
+  },
+  "milestones": [
+    {
+      "id": "26d9c768-1d83-40d9-8be6-35d8183ef4e8",
+      "title": "Theorem 1.5 — numerical verification of the Riemann hypothesis",
+      "milestone_description": "Let T0 := 3.29 x 10^9. Then all the zeroes of the Riemann zeta function in the strip {s : 0 < Re(s) < 1; 0 <= Im(s) <= T0} lie on the line Re(s) = 1/2. Furthermore, there are at most 10^10 zeroes in this strip. Quoted by Tao from four independent numerical verifications (van de Lune, Wedeniwski, Gourdon, Platt). Feeds Theorem 8.1 and the major-arc analysis of Proposition 7.2. A quoted large-scale computation: listed for graph fidelity, not as a tractable target.",
+      "sort_order": 0,
+      "completed": false,
+      "theorem": {
+        "id": "6f1aec46-0612-46e0-ad8f-22b166a63581",
+        "theorem_name": "TaoFivePrimes.riemann_verified",
+        "status": "Open"
+      },
+      "created_by": "47c68dd3-0d4f-487a-8b30-3b3fbb035220",
+      "created_at": "2026-09-07T09:02:15.071448+08:00"
+    },
+    {
+      "id": "f867fdf1-b1a9-4345-99ee-65dca1591d59",
+      "title": "Theorem 1.6 — numerical verification of the even Goldbach conjecture",
+      "milestone_description": "Let N0 := 4 x 10^14. Then every even number between 4 and N0 is the sum of two primes. Quoted by Tao from Richstein. Used to reduce the five-prime problem to representing x as three primes plus a number between 2 and N0, which is what confines the frequency variable to the arc ||alpha|| << 1/N0. A quoted large-scale computation: listed for graph fidelity, not as a tractable target.",
+      "sort_order": 1,
+      "completed": false,
+      "theorem": {
+        "id": "5247b31b-05f6-40f5-87b2-e5ce7b0e51f3",
+        "theorem_name": "TaoFivePrimes.even_goldbach_verified",
+        "status": "Open"
+      },
+      "created_by": "47c68dd3-0d4f-487a-8b30-3b3fbb035220",
+      "created_at": "2026-09-07T09:02:15.071448+08:00"
+    },
+    {
+      "id": "9da741b9-fbd4-4e34-87e8-6df7624b4432",
+      "title": "Theorem 8.1 — short effective intervals containing primes",
+      "milestone_description": "If x >= 1.1 x 10^10 is a real number, then there is at least one prime p <= x with x - p <= x/(2.8 x 10^7). Quoted by Tao from Ramare-Saouter, Theorem 3, whose proof itself uses Theorem 1.5. Combined with Theorem 1.6 it gives: every odd number between 3 and (2.8 x 10^7)^3 N0 >= 8.7 x 10^36 is the sum of at most five primes, so the goal reduces to odd x above 8.7 x 10^36.",
+      "sort_order": 2,
+      "completed": false,
+      "theorem": {
+        "id": "602f3710-00dc-45f9-9fe3-d647bb5bcfb7",
+        "theorem_name": "TaoFivePrimes.prime_in_short_interval",
+        "status": "Open"
+      },
+      "created_by": "47c68dd3-0d4f-487a-8b30-3b3fbb035220",
+      "created_at": "2026-09-07T09:02:15.071448+08:00"
+    },
+    {
+      "id": "300142e6-406f-4744-be09-e19412386242",
+      "title": "Theorem 8.2 — three odd primes summing into [x - N0, x - 2]",
+      "milestone_description": "Let 8.7 x 10^36 <= x <= exp(3100) be an integer. Then there is an integer in the interval [x - N0, x - 2] which is the sum of three odd primes. This is the circle-method core and the analytic heart of the paper: the lower endpoint is where the elementary reduction stops, the upper endpoint is Liu-Wang's effective Vinogradov threshold. Proved by dissecting into the major arc |alpha| << T0/x (Proposition 7.2), the minor arc T0/x << ||alpha|| << 1/N0 (Theorem 1.3 for the L-infinity bound, Proposition 4.10 for the L^2 bound), and the arc ||alpha|| << 1/N0. Unlike the other milestones this is genuine formalizable mathematics and is independent of Theorems 1.5 and 1.6.",
+      "sort_order": 3,
+      "completed": false,
+      "theorem": {
+        "id": "3d794831-80f4-42ab-a046-bf7422ad866d",
+        "theorem_name": "TaoFivePrimes.three_primes_near",
+        "status": "Open"
+      },
+      "created_by": "47c68dd3-0d4f-487a-8b30-3b3fbb035220",
+      "created_at": "2026-09-07T09:02:15.071448+08:00"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "182d2359-60d0-4c0c-b35e-d19d808caa8b",
+  "kind": "problem",
+  "theorem_name": "TaoFivePrimes.eta1_quadratic_prime_mass",
+  "theorem_title": "Quadratic sifted prime mass for the Section 8 trapezoid",
+  "formal_statement": "theorem TaoFivePrimes.eta1_quadratic_prime_mass (x : ℕ)\n    (hc8 : (10 ^ 8 : ℝ) ≤ (1 / 10 : ℝ) * x)\n    (hneat : (10 ^ 4 : ℝ) * (3 / 2 : ℝ) ≤ x)\n    (halamo : 5 * (3 / 2 : ℝ) ≤ Real.log ((1 / 10 : ℝ) * x))\n    (h10q : (10 ^ 8 : ℝ) * (9 / 4 : ℝ) ≤ x) :\n    ∃ ε : ℝ, |ε| ≤ 0.02 ∧\n      (∑ n ∈ Finset.range (x + 1), siftedVonMangoldt x n * eta1 ((n : ℝ) / x) ^ 2) =\n        (2 / 3 : ℝ) * (1 + ε) * x := by sorry",
+  "natural_language_statement": "Let x be a positive integer and let eta1 be the trapezoidal cutoff from\nSection 8 of Tao's five-primes paper. Set\n\n$$M_x=\\sum_{n=0}^{x}\\Lambda(n)\\mathbf1_{(n,\\sqrt{x}\\#)=1}\\eta_1(n/x)^2.$$\n\nHere the square-root primorial includes primes at most the integer square\nroot of x, exactly as in the platform definition. Assume\n\n$$10^8\\le x/10,\\qquad 10^4(3/2)\\le x,\\qquad\n5(3/2)\\le\\log(x/10),\\qquad 10^8(9/4)\\le x.$$\n\nThen there is a real epsilon such that\n\n$$|\\varepsilon|\\le0.02,\\qquad M_x=\\frac23(1+\\varepsilon)x.$$\n\nThis is the quadratic prime-mass input (4.13) of Corollary 4.9 specialized\nto the Section 8 cutoff. The factor 2/3 is its squared L2 norm; it must not\nbe replaced by 1. The explicit prime estimate, removal of prime powers,\nand passage from the smooth statement to the literal piecewise-linear\ncutoff remain part of this theorem's proof obligation. This statement\ndoes not assert a major-arc energy lower bound.\n",
+  "definitions": "import Definitions.Def_TaoFivePrimes_ArcSplit\nopen scoped BigOperators\nopen TaoFivePrimes",
+  "source": "Terence Tao, Every odd number greater than 1 is the sum of at most five primes, https://arxiv.org/abs/1201.6656v4. Corollary 4.9, equation (4.13), printed p. 20, specialized to the Section 8 cutoff and its squared norm 2/3; includes the nonsmooth-cutoff justification.",
+  "tags": [
+    "number-theory",
+    "circle-method",
+    "fourier-analysis"
+  ],
+  "visibility": "public",
+  "status": "PUBLISHED",
+  "error_message": "",
+  "theorem_id": "f4cd87ed-a92c-4886-b0b7-e81a95dd0134",
+  "created_at": "2026-09-12T18:32:58.518805+08:00",
+  "updated_at": "2026-09-12T18:37:09.445228+08:00"
+}

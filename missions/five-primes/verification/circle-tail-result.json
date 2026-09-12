@@ -1,0 +1,8 @@
+{
+  "checked_at": "2026-09-12T18:58:34.8871532+08:00",
+  "path": "examples/five-primes/CircleTail.lean",
+  "sha256": "9E9F33BF8E9B32764F3F72924245889C506786DD2041105C00A90B5DFB0DB122",
+  "exit_code": 0,
+  "warnings": "One unnecessarySeqFocus style warning",
+  "scope": "Chord identity and lower bound, real pointwise decay 5/(2*x*t^2), and inverse-square interval integral. Full circle complementary integral is not proved."
+}

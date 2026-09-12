@@ -1,0 +1,17 @@
+{
+  "id": "2df28342-7b3c-4598-912e-53f9b05e044d",
+  "kind": "problem",
+  "theorem_name": "TaoFivePrimes.rosser_psi_finite_middle",
+  "theorem_title": "Finite Rosser bound between 1000 and 10^8",
+  "formal_statement": "theorem TaoFivePrimes.rosser_psi_finite_middle (n : ℕ) (hn : 1000 < n) (hN : n < 10 ^ 8) : Chebyshev.psi (n : ℝ) < 1.03883 * (n : ℝ) := by sorry",
+  "natural_language_statement": "For every integer strictly between 1000 and 10^8, the second Chebyshev function satisfies $$\\psi(n)<1.03883n.$$ This is the remaining finite certificate obligation in a range decomposition of the uniform Rosser--Schoenfeld bound. The small range through 1000 is proved separately by exact LCM certificates; the range at least 10^8 follows from an explicit two-sided Chebyshev estimate. This finite obligation is open: numerical interval scouting is not a formal proof.",
+  "definitions": "import Mathlib.NumberTheory.Chebyshev",
+  "source": "Finite restriction of Prove2Me theorem TaoFivePrimes.rosser_schoenfeld_psi_bound (cf6be7a8-2493-479a-9d57-6ee8535546d1), whose source is Rosser and Schoenfeld, Approximate formulas for some functions of prime numbers (1962), Theorem 12. The endpoints 1000 and 10^8 are specific to this formal range decomposition, not claimed to be a separately numbered theorem in that paper.",
+  "tags": [],
+  "visibility": "public",
+  "status": "PUBLISHED",
+  "error_message": "",
+  "theorem_id": "d7089f63-d516-4c70-a5f5-f1ae1e917931",
+  "created_at": "2026-09-12T20:44:44.267506+08:00",
+  "updated_at": "2026-09-12T20:51:43.317506+08:00"
+}

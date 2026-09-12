@@ -1,0 +1,7 @@
+{
+  "sha256": "22D513FB0F8AF8BC3C43FE92446FF55C88C1648926B0A45FE18296ECA4339BFF",
+  "checked_at": "2026-09-12T20:29:54.3455185+08:00",
+  "exit_code": 0,
+  "elapsed_seconds_approx": 278,
+  "scope": "Complete local proof for every integer 1<=n<=1000, using 87 kernel-checked interval certificates; range 1001..99999999 and large explicit source remain unproved"
+}

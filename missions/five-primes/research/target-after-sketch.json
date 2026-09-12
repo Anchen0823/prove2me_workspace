@@ -1,0 +1,25 @@
+{
+  "theorem_id": "3c39e958-7602-4e59-bf6a-4ac45f8fb0a2",
+  "theorem_name": "TaoFivePrimes.S1_major_arc_L2_mass_corollary49_raw",
+  "theorem_title": "Tao Corollary 4.9: normalized raw major-arc mass estimate",
+  "status": "Open",
+  "formal_statement": "theorem TaoFivePrimes.S1_major_arc_L2_mass_corollary49_raw (x : ℕ)\n    (hr_lower : 1 / (2 * (x : ℝ)) ≤ T0 / (3.6 * Real.pi * (x : ℝ)))\n    (hr_upper : T0 / (3.6 * Real.pi * (x : ℝ)) ≤ 1 / 2)\n    (hc8 : (10 ^ 8 : ℝ) ≤ (1 / 10 : ℝ) * x)\n    (hneat : (10 ^ 4 : ℝ) * (3 / 2 : ℝ) ≤ x)\n    (halamo : 5 * (3 / 2 : ℝ) ≤ Real.log ((1 / 10 : ℝ) * x))\n    (h10q : (10 ^ 8 : ℝ) * (9 / 4 : ℝ) ≤ x)\n    (hr0b : 20 * 60 * Real.sqrt (3 / 2 : ℝ) ≤ T0 / (3.6 * Real.pi)) :\n    ∃ eps : ℝ, |eps| ≤ 0.02 ∧\n      0.999 * (0.99 * (1 + eps)) ^ 2 * x ≤\n        (3 / 2 : ℝ) *\n          ∫ alpha in majorArc x, ‖S1 x alpha‖ ^ 2 ∂AddCircle.haarAddCircle := by\n  sorry",
+  "natural_language_statement": "For an integer $x$ in Tao's large-number range, put\n$$r=\\frac{T_0}{3.6\\pi x},\\qquad T_0=3.29\\times10^9.$$\nAssume the two radius bounds $1/(2x)\\le r\\le 1/2$ and the five explicit hypotheses obtained from Corollary 4.9 after taking $c=1/10$ and normalizing the Section 8 trapezoid by $\\eta=\\sqrt{3/2}\\,\\eta_1$. Then there is a real $\\varepsilon$ with $|\\varepsilon|\\le0.02$ such that\n$$0.999\\,[0.99(1+\\varepsilon)]^2x\\le \\frac32\\int_{\\operatorname{majorArc}(x)}|S_1(x,\\alpha)|^2\\,d\\alpha.$$\nThe factor $3/2$ records the squared normalization because $\\|\\eta_1\\|_2^2=2/3$. Keeping $\\varepsilon$ exposes the exact coefficient before the paper rounds the lower bound to $0.94$.",
+  "created_at": "2026-09-09T20:59:29.323816+08:00",
+  "vote_count": 0,
+  "tags": [
+    "additive-number-theory",
+    "analytic-number-theory",
+    "fourier-analysis",
+    "goldbach",
+    "number-theory"
+  ],
+  "preamble": "import Definitions.Def_TaoFivePrimes_ArcSplit\n\nopen MeasureTheory\nopen TaoFivePrimes",
+  "source": "Terence Tao, Every odd number greater than 1 is the sum of at most five primes, arXiv:1201.6656v4, Corollary 4.9 (eqs. 4.8–4.14) specialized in Section 8 using eqs. 8.2, 8.3, 8.7, and 8.9, https://arxiv.org/html/1201.6656v4",
+  "deprecated_at": null,
+  "deprecated_by": null,
+  "visibility": "public",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "audits": [],
+  "readback": null
+}

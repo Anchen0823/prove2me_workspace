@@ -1,0 +1,25 @@
+{
+  "theorem_id": "d5145161-07e1-4f2d-bf49-08bc6090dc85",
+  "theorem_name": "TaoFivePrimes_ArcSplit",
+  "theorem_title": "Arc split for Tao's Theorem 8.2: the factors $S_{\\eta_1}$, $S_{\\eta_0}$, $D_{N_0/3}$ and the strongly major arc",
+  "status": "Definition",
+  "formal_statement": "",
+  "natural_language_statement": "Names for the pieces of the circle-method integrand (8.11) in the proof of Theorem 8.2 of Tao's five-primes paper, at $K = 1000$, building on the definitions `TaoFivePrimes_RepresentationCount` and `TaoFivePrimes_FourierRepresentation`.\n\n* `T0` $= 3.29\\times10^9$, the height to which the Riemann hypothesis is verified (Theorem 1.5).\n* `S1 x α` $= S_{\\eta_1,\\sqrt{x}\\sharp}(x,\\alpha) = \\sum_n \\Lambda(n)\\,\\mathbf 1_{(n,\\sqrt x\\sharp)=1}\\,\\eta_1(n/x)\\,e(n\\alpha)$, the smoothed sifted prime sum carrying the first two primes.\n* `S0 x α` $= S_{\\eta_0,\\sqrt{x/K}\\sharp}(x/K,\\alpha)$, the smaller-scale sum carrying the third prime (Bourgain's trick).\n* `DK H α` $= D_{H/3}(\\alpha) = \\sum_{1\\le n\\le H/3} e(n\\alpha)$, the Dirichlet-type kernel; the application takes $H = N_0 = 4\\times10^{14}$.\n* `majorArc x` $= \\{\\alpha : \\|\\alpha\\|_{\\mathbb R/\\mathbb Z} \\le T_0/(3.6\\pi x)\\}$, the strongly major arc of Proposition 8.3.\n\nThe structural lemma `representationIntegrand_eq` records that `representationIntegrand x H α = S1 x α ^ 2 * S0 x α * DK H α ^ 3 * e(-xα)` definitionally, so that estimates stated for the named factors apply verbatim to the integrand of the exact Fourier identity `representationCount_fourier`.",
+  "created_at": "2026-09-08T10:22:08.969583+08:00",
+  "vote_count": 0,
+  "tags": [
+    "additive-number-theory",
+    "circle-method",
+    "five-primes",
+    "goldbach",
+    "number-theory"
+  ],
+  "definition": "import Definitions.Def_TaoFivePrimes_FourierRepresentation\n\n/-!\n# The major/minor arc split in the proof of Tao's Theorem 8.2\n\nSource: Terence Tao, https://arxiv.org/abs/1201.6656, Section 8, equations (8.11)–(8.12)\nand the discussion following (8.16). Names for the three factors of the circle-method\nintegrand (8.11) at `K = 1000`, and the strongly major arc `‖α‖_{ℝ/ℤ} ≤ T₀/(3.6πx)` with\n`T₀ = 3.29 × 10⁹` (Theorem 1.5).\n-/\n\nopen scoped BigOperators\n\nnamespace TaoFivePrimes\n\n/-- The height `T₀ = 3.29 × 10⁹` to which the Riemann hypothesis is numerically verified\n(Theorem 1.5). -/\nnoncomputable def T0 : ℝ := 3.29 * 10 ^ 9\n\n/-- `S_{η₁,√x♯}(x, α)`: the smoothed, sifted prime exponential sum with cutoff `η₁`\n(the first two primes in (8.11)). -/\nnoncomputable def S1 (x : ℕ) (α : AddCircle (1 : ℝ)) : ℂ :=\n  TaoFourierIdentity.fourierPolynomial (Finset.range (x + 1))\n    (fun n ↦ (siftedVonMangoldt x n * eta1 ((n : ℝ) / x) : ℝ)) (fun n ↦ (n : ℤ)) α\n\n/-- `S_{η₀,√(x/K)♯}(x/K, α)` at `K = 1000`: the smaller-scale sum with cutoff `η₀`\n(Bourgain's trick, the third prime in (8.11)). -/\nnoncomputable def S0 (x : ℕ) (α : AddCircle (1 : ℝ)) : ℂ :=\n  TaoFourierIdentity.fourierPolynomial (Finset.range (x / 1000 + 1))\n    (fun n ↦ (siftedVonMangoldt (x / 1000) n * eta0 (1000 * (n : ℝ) / x) : ℝ))\n    (fun n ↦ (n : ℤ)) α\n\n/-- The Dirichlet-type kernel `D_{H/3}(α) = ∑_{1 ≤ n ≤ H/3} e(nα)`. -/\nnoncomputable def DK (H : ℕ) (α : AddCircle (1 : ℝ)) : ℂ :=\n  TaoFourierIdentity.fourierPolynomial (Finset.Icc 1 (H / 3)) (fun _ ↦ 1) (fun n ↦ (n : ℤ)) α\n\n/-- The strongly major arc `{α : ‖α‖_{ℝ/ℤ} ≤ T₀ / (3.6 π x)}` of Proposition 8.3. -/\ndef majorArc (x : ℕ) : Set (AddCircle (1 : ℝ)) :=\n  {α | ‖α‖ ≤ T0 / (3.6 * Real.pi * x)}\n\n/-- The integrand (8.11) is the product of the three named factors and the phase `e(-xα)`. -/\ntheorem representationIntegrand_eq (x H : ℕ) (α : AddCircle (1 : ℝ)) :\n    representationIntegrand x H α = S1 x α ^ 2 * S0 x α * DK H α ^ 3 * fourier (-(x : ℤ)) α :=\n  rfl\n\nend TaoFivePrimes\n",
+  "source": "T. Tao, Every odd number greater than 1 is the sum of at most five primes, Math. Comp. 83 (2014), 997-1038, https://arxiv.org/abs/1201.6656, Section 8, eqs. (8.11)-(8.12) and the arc split following (8.16); Theorem 1.5 for T_0",
+  "deprecated_at": null,
+  "deprecated_by": null,
+  "visibility": "public",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "audits": [],
+  "readback": null
+}

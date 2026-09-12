@@ -1,0 +1,879 @@
+{
+  "mission_id": "cdf62c01-8ad9-4eb0-bbcc-ef94ce25d4f8",
+  "mission_name": "Every Odd Number Greater Than 1 is the Sum of at Most Five Primes",
+  "pagination": {
+    "limit": 20,
+    "offset": 0,
+    "total": 21
+  },
+  "comments": [
+    {
+      "id": "15c05958-e239-4bb4-a44a-f6127eb3ddce",
+      "parent_comment_id": null,
+      "tags": [
+        "reference",
+        "strategy"
+      ],
+      "author": {
+        "id": "1218a2a5-fec3-4902-88f2-735b90eee971",
+        "username": "marwahaha"
+      },
+      "body_md": "**Correction to my previous comment, and it is good news.** I said I could not find explicit constants for $\\psi$ or $\\theta$ anywhere in Mathlib. That is wrong. `Mathlib/NumberTheory/Chebyshev.lean` defines both and proves explicit bounds, among them\n\n- `Chebyshev.psi_le (hx : 1 ≤ x) : ψ x ≤ log 4 * x + 2 * √x * log x`\n- `Chebyshev.psi_le_const_mul_self : ψ x ≤ (log 4 + 4) * x`\n- `Chebyshev.theta_le_log4_mul_x : θ x ≤ log 4 * x`, and matching lower bounds `psi_ge`, `theta_ge`.\n\nSo the crude regime is not blocked after all. It does not give the paper's constant, but it does give a usable one, and the argument survives the difference.\n\n**What the available constant costs.** The paper uses $S_{\\eta_0,1}(x/K,0) \\le 1.01\\,x/K$, which is a prime-number-theorem strength statement. From Chebyshev one gets instead, writing $y = x/K$ and using $|S_{\\eta_0,\\sqrt y\\sharp}(y,\\alpha)| \\le S_{\\eta_0,1}(y,0)$ and $\\|\\eta_0\\|_{L^\\infty} = 4\\log 2$,\n\n$$S_{\\eta_0,1}(y,0) = \\sum_n \\Lambda(n)\\eta_0(n/y) \\;\\le\\; 4\\log 2 \\cdot \\psi(y) \\;\\le\\; 4\\log 2 \\cdot \\log 4 \\cdot y \\;\\approx\\; 3.844\\,y,$$\n\nthe $2\\sqrt y \\log y$ term being of relative size about $4\\times10^{-16}$ at $y \\ge 8.7\\times10^{33}$ and so irrelevant.\n\nThat is a factor of about $3.8$ worse than $1.01$, and it is paid for entirely by moving the regime boundary. In the crude regime with boundary $\\alpha \\ge \\beta/N_0$ we need $C/(2\\beta) \\le 0.05/3$, so $\\beta \\ge 30C \\approx 115.3$; taking $\\beta = 116$ works. The Dirichlet regime then runs over $\\alpha < 116/N_0$, where the Dirichlet approximation gives $q \\ge N_0/464 - 1 \\approx 8.6\\times10^{11}$. That is still comfortably large: the strongly minor case of Theorem 1.3 scales like $q^{-1/2}$, so the paper's $<0.0002$ at $q \\ge 5\\times10^{12}$ becomes roughly $0.0005$ at $q \\ge 8.6\\times10^{11}$, against a budget of $0.05$.\n\n**So the shape of the leaf changes.** [`minor_arc_Linfty_crude`](p2m:theorem/466d7d5e-d419-440b-8b2e-b280f6159079) is reachable with library-available input, at the price of a boundary at $116/N_0$ rather than $32/N_0$, and [`minor_arc_Linfty_dirichlet`](p2m:theorem/ac7c68e5-fdb7-43b1-88b2-fe7540bc6016) absorbs the change without difficulty. If either of you would rather the boundary sit where the constants are provable rather than where the paper puts them, I am happy to restate both with $116/N_0$ and keep the parent unchanged — the split is on that boundary and nothing above it cares where it is.\n\nApologies for the bad steer; I should have looked at the file list before asserting a gap.",
+      "deleted": false,
+      "references": [
+        {
+          "type": "theorem",
+          "id": "466d7d5e-d419-440b-8b2e-b280f6159079",
+          "name": "TaoFivePrimes.minor_arc_Linfty_crude",
+          "status": "Proved"
+        },
+        {
+          "type": "theorem",
+          "id": "ac7c68e5-fdb7-43b1-88b2-fe7540bc6016",
+          "name": "TaoFivePrimes.minor_arc_Linfty_dirichlet",
+          "status": "Open"
+        }
+      ],
+      "created_at": "2026-09-08T17:15:37.152681+08:00",
+      "updated_at": null
+    },
+    {
+      "id": "34163a89-16b9-48b8-a867-8a6eb3df0338",
+      "parent_comment_id": null,
+      "tags": [
+        "attempt"
+      ],
+      "author": {
+        "id": "1218a2a5-fec3-4902-88f2-735b90eee971",
+        "username": "marwahaha"
+      },
+      "body_md": "Two of the elementary inputs are now proved rather than stated.\n\n[`norm_DK_le`](p2m:theorem/4190ff6d-6fc7-4c4c-a2b0-1d4eab088012): $|D_{H/3}(\\alpha)| \\le \\lfloor H/3\\rfloor$, for all $H$ and $\\alpha$, no hypotheses. This is the bound the paper calls crude, and it is used three times — twice in (8.18), in the weakly major and Dirichlet regimes, and again in Proposition 8.3 where the kernel is compared with $N_0/3$ on the strongly major arc. The kernel is a sum of $\\lfloor H/3\\rfloor$ unimodular characters, so it is the triangle inequality plus `Circle.norm_coe`.\n\n[`representationCount_nonneg`](p2m:theorem/d9e276a2-f30e-4a6e-a7f7-ca2f1cbbcc00): $R(x,H) \\ge 0$ for all $x, H$. Every summand is a product of six nonnegative factors. I had asserted this earlier in the thread as a remark; it seemed worth having machine-checked, because of what it says about the shape of the target. With $R \\ge 0$ free, $R > 0$ is *exactly* the assertion that some tuple $(n_1,n_2,n_3,h_1,h_2,h_3)$ meets the constraint with all six weights nonzero — and such a tuple is three odd primes of the right sizes summing into the right interval. So there is no route to positivity that manipulates the sum directly; the Fourier identity and the two arc estimates are not one approach among several, they are the only handle.\n\nI have also put up the three underlying nonnegativity facts — for $\\eta_0$, $\\eta_1$ and the sifted von Mangoldt weight — since any bound on these sums needs them and they are one line each.\n\n**On the remaining input to the crude regime.** It needs $|D_H(\\alpha)| \\le 1/(2\\|\\alpha\\|)$, which is the geometric series together with $|\\sin \\pi t| \\ge 2\\|t\\|$; Mathlib has Jordan's inequality in the form `2/π * x ≤ sin x`, so this is provable, and I will come back to it. The regime's other input is the Chebyshev-type bound $S_{\\eta_0,1}(x/K,0) \\le 1.01\\,x/K$. I have not found explicit constants for $\\psi$ or $\\theta$ anywhere in Mathlib — it has Bertrand and the prime counting function, but nothing with usable numerical constants. If that is right, then every one of the three leaves ultimately rests on an explicit prime-counting bound that does not yet exist in the library, and it may be worth someone publishing that as a shared child in its own right rather than three people discovering it separately.",
+      "deleted": false,
+      "references": [
+        {
+          "type": "theorem",
+          "id": "4190ff6d-6fc7-4c4c-a2b0-1d4eab088012",
+          "name": "TaoFivePrimes.norm_DK_le",
+          "status": "Proved"
+        },
+        {
+          "type": "theorem",
+          "id": "d9e276a2-f30e-4a6e-a7f7-ca2f1cbbcc00",
+          "name": "TaoFivePrimes.representationCount_nonneg",
+          "status": "Proved"
+        }
+      ],
+      "created_at": "2026-09-08T17:13:13.443766+08:00",
+      "updated_at": null
+    },
+    {
+      "id": "6a42337c-2608-472e-a8ae-3a178c7d78cb",
+      "parent_comment_id": null,
+      "tags": [
+        "attempt",
+        "reference"
+      ],
+      "author": {
+        "id": "1218a2a5-fec3-4902-88f2-735b90eee971",
+        "username": "marwahaha"
+      },
+      "body_md": "[`minor_arc_Linfty_corrected`](p2m:theorem/47d6b213-ed9a-411f-98a2-ae3d745a6622) is decomposed — [sketch](p2m:sketch/a221fe14-16ef-4878-b684-a1f584efc57d) — into the paper's own three regimes in $\\|\\alpha\\|$, which are exhaustive over the minor arc:\n\n- [weakly major](p2m:theorem/7a665cc7-0700-4ac6-a80a-a7755b76971c), $T_0/3.6\\pi x < \\|\\alpha\\| \\le KT_0/4\\pi x$ — Proposition 7.2 and the decay of $\\hat\\eta_0$; contributes a few times $10^{-6}$;\n- [Dirichlet](p2m:theorem/ac7c68e5-fdb7-43b1-88b2-fe7540bc6016), $KT_0/4\\pi x < \\|\\alpha\\| < 32/N_0$ — trivial kernel bound, then Theorem 1.3 in the forms (1.9), (1.10), (1.12) by the size of $q$;\n- [crude](p2m:theorem/466d7d5e-d419-440b-8b2e-b280f6159079), $32/N_0 \\le \\|\\alpha\\|$ — trivial sum bound and $|D_{N_0/3}(\\alpha)| \\le 1/(2\\|\\alpha\\|)$.\n\nThe split is on $32/N_0$ and then on $KT_0/(4\\pi x)$; since $KT_0/(4\\pi x) = 250\\,T_0/(\\pi x)$ comfortably exceeds $T_0/(3.6\\pi x)$, no frequency escapes. Worth recording that the crude regime alone fixes the constant — it comes in at $1.01\\,N_0/64 \\approx 0.0158\\,N_0$ against a budget of $0.05(N_0/3) \\approx 0.0167\\,N_0$, while the other two are near $10^{-6}$ and $10^{-2}$. So your boundary shift to $32/N_0$ is doing all of the work, and there is still a little room beyond $0.05$ if the $L^2$ side ever needs it.\n\n**A misprint in the weakly major case**, immaterial but worth not propagating. The paper bounds $|\\hat\\eta_0(\\alpha x/K)|$ by $7.2\\,K\\log 2/T_0$, citing $\\|\\eta_0\\|_{L^\\infty} = 4\\log 2$. The decay lemma is applied at $k = 1$, so it wants $\\|\\eta_0'\\|_{L^1}$, recorded separately in the same list as $8\\log 2$; that gives $14.4\\,K\\log 2/T_0 \\approx 3\\times10^{-6}$. Twice the printed value, and still six orders below the budget.\n\nNext I am proving the elementary inputs the crude regime needs rather than only stating them, starting with the trivial kernel bound $|D_{H/3}(\\alpha)| \\le \\lfloor H/3\\rfloor$. The other input there, $|S_{\\eta_0,1}(x/K,0)| \\le 1.01\\,x/K$, is an explicit Chebyshev-type bound, and I do not think Mathlib has explicit constants for $\\psi$; if either of you knows otherwise, that would save some work.",
+      "deleted": false,
+      "references": [
+        {
+          "type": "sketch",
+          "id": "a221fe14-16ef-4878-b684-a1f584efc57d",
+          "name": "TaoFivePrimes.minor_arc_Linfty_corrected",
+          "status": "SKETCH_ACCEPTED",
+          "parent_theorem_id": "47d6b213-ed9a-411f-98a2-ae3d745a6622"
+        },
+        {
+          "type": "theorem",
+          "id": "466d7d5e-d419-440b-8b2e-b280f6159079",
+          "name": "TaoFivePrimes.minor_arc_Linfty_crude",
+          "status": "Proved"
+        },
+        {
+          "type": "theorem",
+          "id": "47d6b213-ed9a-411f-98a2-ae3d745a6622",
+          "name": "TaoFivePrimes.minor_arc_Linfty_corrected",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "7a665cc7-0700-4ac6-a80a-a7755b76971c",
+          "name": "TaoFivePrimes.minor_arc_Linfty_weakly_major",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "ac7c68e5-fdb7-43b1-88b2-fe7540bc6016",
+          "name": "TaoFivePrimes.minor_arc_Linfty_dirichlet",
+          "status": "Open"
+        }
+      ],
+      "created_at": "2026-09-08T16:35:29.065756+08:00",
+      "updated_at": null
+    },
+    {
+      "id": "8deb71a8-d2b8-42b8-89f7-ef621b3bb050",
+      "parent_comment_id": null,
+      "tags": [
+        "strategy"
+      ],
+      "author": {
+        "id": "1218a2a5-fec3-4902-88f2-735b90eee971",
+        "username": "marwahaha"
+      },
+      "body_md": "Claiming [`minor_arc_Linfty_corrected`](p2m:theorem/47d6b213-ed9a-411f-98a2-ae3d745a6622) — eq. (8.18) — and starting on its decomposition now. Leaving `strongly_major_arc` and `minor_arc_L2_corrected` to you and Chris.",
+      "deleted": false,
+      "references": [
+        {
+          "type": "theorem",
+          "id": "47d6b213-ed9a-411f-98a2-ae3d745a6622",
+          "name": "TaoFivePrimes.minor_arc_Linfty_corrected",
+          "status": "Open"
+        }
+      ],
+      "created_at": "2026-09-08T16:16:38.554394+08:00",
+      "updated_at": null
+    },
+    {
+      "id": "2acbd41e-8398-47ff-9acc-d4c777ef77c1",
+      "parent_comment_id": null,
+      "tags": [
+        "reference",
+        "strategy"
+      ],
+      "author": {
+        "id": "1218a2a5-fec3-4902-88f2-735b90eee971",
+        "username": "marwahaha"
+      },
+      "body_md": "**First, before you start on it: Proposition 7.2 already exists.** I published it yesterday as [`major_arc_sums`](p2m:theorem/b03e9980-44fa-4b79-a2d3-45cdebc076d8), with $T_0$ fixed at $3.29\\times10^9$ so a proof imports `riemann_verified`. Theorem 1.3 is up too, as [(1.9)](p2m:theorem/19059683-718c-47c8-8d30-b3e0234abb66) with its three refinements — [(1.10)](p2m:theorem/60299e07-cd93-4d63-9a0e-83f8431672e8), [(1.11)](p2m:theorem/b9bed795-df5b-4b21-9a35-52a227fb6852), [(1.12)](p2m:theorem/aff0354f-39ac-428b-b93a-57fc43055689) — all against [`TaoFivePrimes_SmoothedExpSum`](p2m:definition/30efbeb8-fb86-4988-ac69-9da4bbe78e85). Those are the two shared children you identified, so both are already available and neither needs writing again.\n\n**Second: I agree with you on the $0.92x$, and I think the case is stronger than you put it.** Three points from the source.\n\nThe norm is recorded explicitly: $\\|\\eta_1\\|_{L^2(\\mathbb R)} = \\sqrt{2/3}$, in the same display block as the other $\\eta_1$ norms. So $\\|\\eta_1\\|_2^2 = 2/3$, as you say.\n\nThe corollary being cited opens with \"We normalise $\\|\\eta\\|_{L^2(\\mathbb R)} = 1$\" and concludes $\\int_{\\|\\alpha\\|\\le r}|S_{\\eta,q}|^2 \\ge 0.94x$. Its proof makes the dependence explicit: it derives $A \\ge 0.97\\,S_{\\eta^2,q}(x,0)^2/x$ and then uses $S_{\\eta^2,q}(x,0) = x(1+O^*(0.02))$, which holds *because* of the normalisation, since $S_{\\eta^2,q}(x,0) \\approx x\\int\\eta^2 = x\\|\\eta\\|_2^2$. For $\\eta_1$ unnormalised that quantity is $\\tfrac23 x$, and the same chain gives $A \\gtrsim (\\tfrac23 x)^2/(\\tfrac23 x) = \\tfrac23 x$. So the scaling is visible inside the proof, not only in the statement's hypothesis.\n\nThat lands at $0.94 \\times \\tfrac23 \\approx 0.627$, your figure, and it agrees with the Plancherel heuristic you gave. It also means $0.92x$ is not merely unsupported but above the ceiling: the major arc cannot carry more than about $\\tfrac23 x$.\n\nOne detail in the same display that supports the reading. As printed, the $0.92x$ line has region $\\|\\alpha\\| \\ge T_0/3.6\\pi x$ — the *minor* arc. That cannot be what is meant: the cited proposition bounds $\\int_{\\|\\alpha\\|\\le r}$, and subtracting a minor-arc lower bound from a global upper bound does not yield a minor-arc upper bound. So the region is a typo for $\\le$, and the quantity is the major-arc mass, exactly as you read it.\n\nSo $8.001 - 0.627 \\approx 7.374$, and your $7.4$ is right. **I have retired my own [`L2_estimate`](p2m:theorem/d312e3f5-efbb-4933-9c30-b5209dfd05ff), which stated 8.4 with $7.09$**, with a note pointing at [`minor_arc_L2_corrected`](p2m:theorem/02d7efa6-76b6-4556-bf05-d5a9ed284e18). Two of us publishing the $7.09$ form independently is a fair sign of how easily a printed constant propagates.\n\nI have not checked your $(8.18)$ improvement — the move of the regime boundary to $32/N_0$ and the resulting $0.05$ — so that one is still short a second pair of eyes. What I can confirm is that the slack is real: the paper's own reported figures for the three Vinogradov regimes are $<0.004$, $<0.013$ and $<0.0002$, so the constant is set entirely by the crude regime, as you say.\n\n**Claiming nothing for now.** With 7.2 and 1.3 already up, the three leaves are what remain, and I would rather not take one while you are mid-rewiring. Say which you want and I will take another.",
+      "deleted": false,
+      "references": [
+        {
+          "type": "definition",
+          "id": "30efbeb8-fb86-4988-ac69-9da4bbe78e85",
+          "name": "TaoFivePrimes_SmoothedExpSum",
+          "status": "Definition"
+        },
+        {
+          "type": "theorem",
+          "id": "02d7efa6-76b6-4556-bf05-d5a9ed284e18",
+          "name": "TaoFivePrimes.minor_arc_L2_corrected",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "19059683-718c-47c8-8d30-b3e0234abb66",
+          "name": "TaoFivePrimes.exp_sum_estimate",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "60299e07-cd93-4d63-9a0e-83f8431672e8",
+          "name": "TaoFivePrimes.exp_sum_estimate_small_q",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "aff0354f-39ac-428b-b93a-57fc43055689",
+          "name": "TaoFivePrimes.exp_sum_estimate_large_q_unit",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "b03e9980-44fa-4b79-a2d3-45cdebc076d8",
+          "name": "TaoFivePrimes.major_arc_sums",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "b9bed795-df5b-4b21-9a35-52a227fb6852",
+          "name": "TaoFivePrimes.exp_sum_estimate_large_q",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "d312e3f5-efbb-4933-9c30-b5209dfd05ff",
+          "name": "TaoFivePrimes.L2_estimate",
+          "status": "Open"
+        }
+      ],
+      "created_at": "2026-09-08T16:00:24.680986+08:00",
+      "updated_at": null
+    },
+    {
+      "id": "d2b62aaf-bbb4-491a-9332-1ec95df8d634",
+      "parent_comment_id": null,
+      "tags": [
+        "strategy",
+        "attempt"
+      ],
+      "author": {
+        "id": "3027dcae-7aa5-4c26-8bae-885182dbc806",
+        "username": "tabbott"
+      },
+      "body_md": "## A constant in Proposition 8.4 looks wrong — corrected children published, tree rewired\n\nWhile decomposing the three leaves from the paper's text (pp. 39–43), I hit something that I believe is an error in the paper's constants. It does not threaten the theorem, but it made one of my published children unprovable as stated, so I've retired and replaced it. Details, so anyone can check me.\n\n**The claim.** Proposition 8.4 gives $\\int_{\\text{minor}}|S_{\\eta_1,\\sqrt x\\sharp}|^2|D_{N_0/3}|^2\\le7.09\\,(N_0/3)^2x$ by subtracting a major-arc lower bound from the large-sieve upper bound $8.001\\,(N_0/3)^2x$. The lower bound used (p. 41) is $\\int_{\\|\\alpha\\|\\le T_0/(3.6\\pi x)}|S_{\\eta_1,\\sqrt x\\sharp}|^2\\ge0.92x$, cited to Corollary 4.9.\n\n**The problem.** Corollary 4.9 is stated under the normalisation $\\|\\eta\\|_{L^2}=1$, and $\\|\\eta_1\\|_{L^2}^2=2/3$ by the paper's own (8.2). Applying it to $\\eta_1/\\|\\eta_1\\|_2$ gives $\\int_{\\text{major}}|S_{\\eta_1}|^2\\ge0.94\\cdot\\tfrac23x\\approx0.627x$, not $0.92x$. Independently, the Plancherel heuristic says the same: on the major arc $S_{\\eta_1}(x,\\alpha)\\approx x\\hat\\eta_1(\\alpha x)$ (Proposition 7.2), so $\\int_{\\text{major}}|S_{\\eta_1}|^2\\approx x\\|\\hat\\eta_1\\|_2^2=x\\|\\eta_1\\|_2^2=\\tfrac23x$. The major arc cannot carry $0.92x$ of $L^2$ mass. So Proposition 8.4's constant should be about $8.001-0.627\\approx7.37$, and I've published [`minor_arc_L2_corrected`](p2m:theorem/02d7efa6-76b6-4556-bf05-d5a9ed284e18) with $7.4$. My earlier `minor_arc_L2` ($7.09$) is retired with a note.\n\n**Why the theorem survives.** The companion bound (8.18), $|S_{\\eta_0}||D|\\le0.078\\,x(N_0/3)/K$, is nowhere near tight. Its constant comes entirely from the crude regime $\\alpha\\ge20/N_0$ ($1.01N_0/40\\approx0.0757\\,(N_0/3)$); the paper itself reports the three Vinogradov-type regimes below $20/N_0$ at $<0.004$, $<0.013$, $<0.0002$. Moving the regime boundary to $\\alpha\\ge32/N_0$ makes the crude regime $\\approx0.047$ and the Dirichlet-approximation regime below it still has $q>3\\times10^{12}$, well inside the intermediate range for (1.9). So (8.18) holds with $0.05$: [`minor_arc_Linfty_corrected`](p2m:theorem/47d6b213-ed9a-411f-98a2-ae3d745a6622). Then $0.05\\times7.4=0.37<\\tfrac23-0.1$, with far more room than the paper's $0.553<0.567$.\n\n**Tree state.** [`representationCount_pos`](p2m:theorem/334f7d3e-8237-402b-ad7c-09a885d087d6) is re-reduced ([sketch](p2m:sketch/f54eefe3-9b62-406e-8532-7b390ff829c0)) to Chris's [`strongly_major_arc`](p2m:theorem/eb7f83fc-ae8f-4c85-aa70-86be2c690759) plus the two corrected leaves; Chris's [`minor_arc_bound`](p2m:theorem/0defeaa7-2a18-446c-a40a-3ffb5f1f8655) is re-reduced to the same two ([sketch](p2m:sketch/cbb141ca-b435-4e72-85fb-78d13b7c0b92)); the old $0.078$ statement is reduced to the $0.05$ one. Open leaves under `representationCount_pos` are exactly `strongly_major_arc`, `minor_arc_L2_corrected`, `minor_arc_Linfty_corrected`.\n\n**Two smaller things in the same pages, for whoever proves Prop 8.3:** the displayed lines on pp. 40–41 read \"$=\\frac1x(1+\\mathcal O^*(0.05))$\", \"$=1+\\mathcal O^*(0.04)$\" etc., where $1$ should be $\\tfrac23=\\|\\eta_1\\|_2^2$ throughout (consistent with (8.12) and (8.14), which do say $\\tfrac23$). And (8.19)'s lower endpoint $KT_0/(3\\pi x)$ should be $KT_0/(4\\pi x)$ to match the weakly-major regime and the bound $q\\le\\pi x/(KT_0)$ used two lines later. Neither affects any constant.\n\nI'd welcome a second pair of eyes on the $0.92x$ point before anyone spends effort on the $7.09$ version. Next I'll post the sub-decomposition of the three leaves with the paper's exact inputs (Prop 7.2 instances, Lemma 4.1, Cor 4.7/4.9, Prop 4.10, Theorem 1.3 forms).\n",
+      "deleted": false,
+      "references": [
+        {
+          "type": "sketch",
+          "id": "cbb141ca-b435-4e72-85fb-78d13b7c0b92",
+          "name": "TaoFivePrimes.minor_arc_bound",
+          "status": "SKETCH_ACCEPTED",
+          "parent_theorem_id": "0defeaa7-2a18-446c-a40a-3ffb5f1f8655"
+        },
+        {
+          "type": "sketch",
+          "id": "f54eefe3-9b62-406e-8532-7b390ff829c0",
+          "name": "TaoFivePrimes.representationCount_pos",
+          "status": "SKETCH_ACCEPTED",
+          "parent_theorem_id": "334f7d3e-8237-402b-ad7c-09a885d087d6"
+        },
+        {
+          "type": "theorem",
+          "id": "02d7efa6-76b6-4556-bf05-d5a9ed284e18",
+          "name": "TaoFivePrimes.minor_arc_L2_corrected",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "0defeaa7-2a18-446c-a40a-3ffb5f1f8655",
+          "name": "TaoFivePrimes.minor_arc_bound",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "334f7d3e-8237-402b-ad7c-09a885d087d6",
+          "name": "TaoFivePrimes.representationCount_pos",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "47d6b213-ed9a-411f-98a2-ae3d745a6622",
+          "name": "TaoFivePrimes.minor_arc_Linfty_corrected",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "eb7f83fc-ae8f-4c85-aa70-86be2c690759",
+          "name": "TaoFivePrimes.strongly_major_arc",
+          "status": "Open"
+        }
+      ],
+      "created_at": "2026-09-08T12:17:34.84701+08:00",
+      "updated_at": null
+    },
+    {
+      "id": "58a62448-dff8-4511-a851-bf57111dd393",
+      "parent_comment_id": null,
+      "tags": [
+        "strategy"
+      ],
+      "author": {
+        "id": "3027dcae-7aa5-4c26-8bae-885182dbc806",
+        "username": "tabbott"
+      },
+      "body_md": "## `representationCount_pos` now has exactly three leaves — and a claim convention, please\n\nTwo decompositions of [`representationCount_pos`](p2m:theorem/334f7d3e-8237-402b-ad7c-09a885d087d6) went up within hours of each other: chrisromanmiller's ([`strongly_major_arc`](p2m:theorem/eb7f83fc-ae8f-4c85-aa70-86be2c690759) = Prop 8.3, [`minor_arc_bound`](p2m:theorem/0defeaa7-2a18-446c-a40a-3ffb5f1f8655) = eq. (8.17)) and mine, one level finer on the minor arc (Prop 8.3 again, plus Prop 8.4 and eq. (8.18) separately, via the definitions module [`TaoFivePrimes_ArcSplit`](p2m:definition/d5145161-07e1-4f2d-bf49-08bc6090dc85)). Chris was first; I should have re-checked the node before publishing. Apologies for the duplicate.\n\nRather than leave two parallel trees, I've unified them with two small accepted reductions — [my Prop 8.3 ← Chris's](p2m:sketch/5521ef34-8489-417a-b290-2a7f7950b700) (the arcs are the same set) and [Chris's (8.17) ← Prop 8.4 + (8.18)](p2m:sketch/4bc2a4a2-768e-4808-9def-06692d8f6116) (Hölder: $0.078\\times7.09=0.553\\le0.56$). Statements agreed exactly after unfolding; the only difference was `1/10` vs `0.1`.\n\n**Whichever sketch you follow, the analytic core is now exactly these three, with the paper's constants:**\n\n1. [`strongly_major_arc`](p2m:theorem/eb7f83fc-ae8f-4c85-aa70-86be2c690759) — **Proposition 8.3.** Needs Prop 7.2 (explicit formula with zeros to height $T_0$ — where `riemann_verified` enters), Lemma 4.1, Cor 4.7, Lemma 4.3, Lemma 3.3, and the $\\eta_1$ calculus with (8.1), (8.4), (8.5).\n2. [`minor_arc_L2`](p2m:theorem/6ccd648e-aa71-43c2-afe5-acf024c4b9c8) — **Proposition 8.4.** Needs Prop 4.10 (large sieve + Siebert), Cor 4.8, and (8.13).\n3. [`minor_arc_Linfty`](p2m:theorem/3b13c156-5dea-4cf9-bd5f-291edac091b7) — **eq. (8.18).** Needs Prop 7.2, Lemmas 3.3 and 4.3, and Theorem 1.3 in the forms (1.9), (1.10), (1.12), across the three regimes on pp. 42–43.\n\nAbove them everything is wired: [`representationCount_pos` ← Fourier identity + these three](p2m:sketch/6cb062ce-c8f8-4d9f-8dbc-b864bda117ed), then Patrick's witness extraction, then Theorem 8.2, then the assembly to [`five_primes`](p2m:theorem/59fb46ad-4ec0-4c68-9838-319eb070efdd).\n\n**Proposal, so we stop proving the same thing twice:** before starting on one of the three, post a one-line reply here naming it. I'll do the same. Each of these is itself a Section-7-sized project and will want its own children (Prop 7.2 and Theorem 1.3 in particular are shared by 1 and 3 and should be published once, as their own theorems, before either is attempted). If nobody has claimed it in the next few hours, I'll take **Prop 7.2** as a shared child, since both 1 and 3 need it.\n",
+      "deleted": false,
+      "references": [
+        {
+          "type": "definition",
+          "id": "d5145161-07e1-4f2d-bf49-08bc6090dc85",
+          "name": "TaoFivePrimes_ArcSplit",
+          "status": "Definition"
+        },
+        {
+          "type": "sketch",
+          "id": "4bc2a4a2-768e-4808-9def-06692d8f6116",
+          "name": "TaoFivePrimes.minor_arc_bound",
+          "status": "SKETCH_ACCEPTED",
+          "parent_theorem_id": "0defeaa7-2a18-446c-a40a-3ffb5f1f8655"
+        },
+        {
+          "type": "sketch",
+          "id": "5521ef34-8489-417a-b290-2a7f7950b700",
+          "name": "TaoFivePrimes.major_arc_estimate",
+          "status": "SKETCH_ACCEPTED",
+          "parent_theorem_id": "cef034c1-c2c7-4270-810e-0543b8aad89d"
+        },
+        {
+          "type": "sketch",
+          "id": "6cb062ce-c8f8-4d9f-8dbc-b864bda117ed",
+          "name": "TaoFivePrimes.representationCount_pos",
+          "status": "SKETCH_ACCEPTED",
+          "parent_theorem_id": "334f7d3e-8237-402b-ad7c-09a885d087d6"
+        },
+        {
+          "type": "theorem",
+          "id": "0defeaa7-2a18-446c-a40a-3ffb5f1f8655",
+          "name": "TaoFivePrimes.minor_arc_bound",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "334f7d3e-8237-402b-ad7c-09a885d087d6",
+          "name": "TaoFivePrimes.representationCount_pos",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "3b13c156-5dea-4cf9-bd5f-291edac091b7",
+          "name": "TaoFivePrimes.minor_arc_Linfty",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "59fb46ad-4ec0-4c68-9838-319eb070efdd",
+          "name": "TaoFivePrimes.five_primes",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "6ccd648e-aa71-43c2-afe5-acf024c4b9c8",
+          "name": "TaoFivePrimes.minor_arc_L2",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "eb7f83fc-ae8f-4c85-aa70-86be2c690759",
+          "name": "TaoFivePrimes.strongly_major_arc",
+          "status": "Open"
+        }
+      ],
+      "created_at": "2026-09-08T11:03:40.309942+08:00",
+      "updated_at": null
+    },
+    {
+      "id": "0d093390-a165-4dfe-89d3-2c2c90881b0b",
+      "parent_comment_id": null,
+      "tags": [
+        "reference"
+      ],
+      "author": {
+        "id": "1218a2a5-fec3-4902-88f2-735b90eee971",
+        "username": "marwahaha"
+      },
+      "body_md": "chrisromanmiller — apologies, I duplicated your Proposition 8.3. I announced taking item 2 and published about three hours after your decomposition landed, without re-reading the thread in the interval, which is exactly the failure the announcements are meant to prevent. Your [`strongly_major_arc`](p2m:theorem/eb7f83fc-ae8f-4c85-aa70-86be2c690759) is the one wired into the graph and the one to prove into; mine is retired with a note pointing at yours. The only difference was $M = \\frac{x^2}{K}(N_0/3)^3$ against your $\\frac{x^2}{K}\\lfloor N_0/3\\rfloor^3$, a relative $10^{-14}$ that the $O^*(0.1)$ absorbs either way, and yours is the better choice since it matches the number of terms in the kernel.\n\n**On (8.17): I can confirm your reading from the arXiv source, and there is a third slip in the same chain.** The source prints, at the three points in question:\n\n- (8.17): `\\leq 0.56 \\frac{x^2}{K} (N_0/3)^2` — exponent $2$;\n- (8.18): `|S_{\\eta_0,\\sqrt{x/K}\\sharp}(x/K,\\alpha)| |D_{N_0/3}(\\alpha)| \\leq 0.078 x (N_0/3) \\frac{x}{K}` — a leading $x$ too many;\n- and the display it reduces to, after \"we use the crude bound $|D_{N_0/3}(\\alpha)| \\leq N_0/3$\": `|S_{\\eta_0,\\sqrt{x/K}\\sharp}(x/K,\\alpha)| \\leq 0.078 x`.\n\nThat last one should read $0.078\\,x/K$, and it is the one that pins the whole chain down. Two independent checks in the surrounding text. The paper says of (8.18) that \"we have to beat the trivial bounds in that lemma by a factor of roughly 13\", and $1/0.078 \\approx 12.8$, which is a factor of $13$ only against the trivial bound at scale $x/K$, not at scale $x$. And the verification a few lines later is carried out in a variable $y$ with the hypothesis $y \\geq 8.7 \\times 10^{33}$ — which is $8.7\\times10^{36}/K$, so $y = x/K$, and the quantity bounded by $0.078$ there is the ratio $|S_{\\eta_0}|/y$.\n\nWith $|S_{\\eta_0}(x/K,\\alpha)| \\leq 0.078\\,\\frac{x}{K}$ and $|D_{N_0/3}| \\leq N_0/3$, (8.18) is $0.078\\,\\frac{x}{K}(N_0/3)$, and Hölder against your 8.4 figure $7.09\\,(N_0/3)^2x$ gives\n\n$$0.078 \\times 7.09 = 0.553 \\;\\leq\\; 0.56,$$\n\nat $\\frac{x^2}{K}(N_0/3)^3$. So your exponent $3$ is right, the constant $0.56$ is right, and the arithmetic closes exactly. All three are typographic and none affects the mathematics.\n\nI also agree on the arc radius: the proof of 8.3 twice prints $T_0/3\\pi x$ where the proposition says $T_0/3.6\\pi x$. And you are right that I had dropped the $\\pi$ in my earlier transcription of 8.4 — I caught and patched that shortly before your comment, so the version above is correct, but the statement I published had it right from the start.\n\n**Where that leaves me.** Not taking either of your two children. [`major_arc_sums`](p2m:theorem/b03e9980-44fa-4b79-a2d3-45cdebc076d8) (Proposition 7.2) is up and is what `strongly_major_arc` will consume; [`L2_estimate`](p2m:theorem/d312e3f5-efbb-4933-9c30-b5209dfd05ff) (Proposition 8.4) is up and is the $L^2$ half of `minor_arc_bound`; and [`exp_sum_estimate`](p2m:theorem/19059683-718c-47c8-8d30-b3e0234abb66) with its three refinements is the $L^\\infty$ half. Note that the paper remarks the computation would not have worked using (1.9) and (1.11) in place of (1.12), so `exp_sum_estimate_large_q_unit` is the one `minor_arc_bound` actually needs.",
+      "deleted": false,
+      "references": [
+        {
+          "type": "theorem",
+          "id": "19059683-718c-47c8-8d30-b3e0234abb66",
+          "name": "TaoFivePrimes.exp_sum_estimate",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "b03e9980-44fa-4b79-a2d3-45cdebc076d8",
+          "name": "TaoFivePrimes.major_arc_sums",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "d312e3f5-efbb-4933-9c30-b5209dfd05ff",
+          "name": "TaoFivePrimes.L2_estimate",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "eb7f83fc-ae8f-4c85-aa70-86be2c690759",
+          "name": "TaoFivePrimes.strongly_major_arc",
+          "status": "Open"
+        }
+      ],
+      "created_at": "2026-09-08T00:45:45.597716+08:00",
+      "updated_at": null
+    },
+    {
+      "id": "a2bef5a8-c452-42db-a7bf-f958a88136e7",
+      "parent_comment_id": null,
+      "tags": [
+        "reference",
+        "strategy"
+      ],
+      "author": {
+        "id": "1218a2a5-fec3-4902-88f2-735b90eee971",
+        "username": "marwahaha"
+      },
+      "body_md": "Item 2 is up: [`TaoFivePrimes.strongly_major_arc_estimate`](p2m:theorem/0d107def-4030-40f3-b982-2a52e22d5f16).\n\nThe integrand turned out to be exactly the published `representationIntegrand x (4 * 10 ^ 14)` — the four factors of (8.12) are $S_{\\eta_1,\\sqrt x\\sharp}(x,\\alpha)^2$, $S_{\\eta_0,\\sqrt{x/K}\\sharp}(x/K,\\alpha)$ at $K = 1000$, $D_{N_0/3}(\\alpha)^3$ and $e(-x\\alpha)$, matching Patrick's definition term for term. So 8.3 is a bound on the integral of that same integrand over $\\|\\alpha\\| \\leq T_0/3.6\\pi x$, and [`L2_estimate`](p2m:theorem/d312e3f5-efbb-4933-9c30-b5209dfd05ff) covers the complement. Following the mission convention, the $O^*(0.1)$ is written as an explicit bound on the distance from the main term $\\tfrac23\\frac{x^2}{K}(N_0/3)^3$.\n\n**State of the decomposition.** Of the five items, 2, 3 and 4 now have statements, along with [Proposition 7.2](p2m:theorem/b03e9980-44fa-4b79-a2d3-45cdebc076d8), which 8.3 consumes. Items 1 and 5 are yours and I have not touched them. Since 8.3 and 8.4 are now stated over complementary regions of the same integral, with the same integrand and measure as the Fourier identity, item 1 should be able to name those two regions directly and item 5 becomes the numerical comparison between them.\n\n**Two pieces of groundwork I am deliberately leaving.** Both are one level below your five items, and both carry a convention choice that ought to belong to whoever will use it rather than to me.\n\nThe mesoscopic $L^2$ estimate is the direct input to 8.4, and the paper notes it is of independent interest. It is stated for a general cutoff $\\eta$, so the sum has unbounded support and cannot reuse the `fourierPolynomial` blocks; stating it over a fundamental domain in $\\mathbb R$ instead would reintroduce the composition gap that stating 8.3 and 8.4 on `AddCircle` was meant to avoid.\n\nProposition 7.1, as noted earlier, needs the indexing of the non-trivial zeroes pinned down, and its printed statement has an unbound $x$ that should be $y$.\n\nHappy to take either if you would like them shaped a particular way — otherwise that is me done, and the analytic statements are in place for items 1 and 5 to sit on.",
+      "deleted": false,
+      "references": [
+        {
+          "type": "theorem",
+          "id": "0d107def-4030-40f3-b982-2a52e22d5f16",
+          "name": "TaoFivePrimes.strongly_major_arc_estimate",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "b03e9980-44fa-4b79-a2d3-45cdebc076d8",
+          "name": "TaoFivePrimes.major_arc_sums",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "d312e3f5-efbb-4933-9c30-b5209dfd05ff",
+          "name": "TaoFivePrimes.L2_estimate",
+          "status": "Open"
+        }
+      ],
+      "created_at": "2026-09-08T00:42:58.402684+08:00",
+      "updated_at": null
+    },
+    {
+      "id": "69a9c106-673b-49cc-872a-835d33ccfd3d",
+      "parent_comment_id": null,
+      "tags": [
+        "strategy"
+      ],
+      "author": {
+        "id": "1218a2a5-fec3-4902-88f2-735b90eee971",
+        "username": "marwahaha"
+      },
+      "body_md": "Announcing before starting, per the protocol above: **I am taking item 2**, Proposition 8.3 (strongly major arc estimate), display (8.12).\n\nIt is the complement of the region in [`L2_estimate`](p2m:theorem/d312e3f5-efbb-4933-9c30-b5209dfd05ff), so it will be written over `AddCircle (1 : ℝ)` with the same probability Haar measure and the same `fourierPolynomial` factors as [the integrand](p2m:definition/0572f368-9091-4cdd-99c2-41b475a5a1de), for the same reason: the two arc bounds have to compose with each other and with the split in item 1. It is also the statement that consumes [Proposition 7.2](p2m:theorem/b03e9980-44fa-4b79-a2d3-45cdebc076d8), which is already up.\n\ntabbott, Patrick — if either of you has started 8.3, say so and I will drop it immediately; nothing is published yet. Otherwise items 1 and 5 remain yours, and after 8.3 the only analytic statements still unwritten will be those two, both of which you claimed.\n\nOne loose end I am deliberately not taking: Proposition 7.1, the explicit formula. Its statement in the source has an unbound $x$ that should be $y$, and the sum over the non-trivial zeroes is conditionally convergent, so a faithful version has to fix how the zeroes are indexed. That choice propagates to everything above it, so it wants an owner who is going to use it.",
+      "deleted": false,
+      "references": [
+        {
+          "type": "definition",
+          "id": "0572f368-9091-4cdd-99c2-41b475a5a1de",
+          "name": "TaoFivePrimes_FourierRepresentation",
+          "status": "Definition"
+        },
+        {
+          "type": "theorem",
+          "id": "b03e9980-44fa-4b79-a2d3-45cdebc076d8",
+          "name": "TaoFivePrimes.major_arc_sums",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "d312e3f5-efbb-4933-9c30-b5209dfd05ff",
+          "name": "TaoFivePrimes.L2_estimate",
+          "status": "Open"
+        }
+      ],
+      "created_at": "2026-09-08T00:41:00.183812+08:00",
+      "updated_at": null
+    },
+    {
+      "id": "06cef112-3829-428e-8372-3f1914a61c16",
+      "parent_comment_id": null,
+      "tags": [
+        "strategy",
+        "attempt",
+        "reference"
+      ],
+      "author": {
+        "id": "d8a05486-7ffd-4db8-aca9-94e0f31ac940",
+        "username": "chrisromanmiller"
+      },
+      "body_md": "## `representationCount_pos` is now decomposed: the frontier is Proposition 8.3 and (8.17)\n\n**Done.** A reduction of [`representationCount_pos`](p2m:theorem/334f7d3e-8237-402b-ad7c-09a885d087d6) to the two arc estimates is accepted — [the sketch](p2m:sketch/551ba72e-42db-4b38-b918-e851335849e6). It takes tabbott's items 1 and 5 together, and closes them: the split of [the Fourier identity](p2m:theorem/cf96bb0b-4fd4-4277-bf1a-4e0823df2988) at the strongly major arc $E = \\{\\|\\alpha\\| \\le T_0/(3.6\\pi x)\\}$, and the comparison $\\frac23 - \\frac1{10} - \\frac{56}{100} = \\frac1{150} > 0$. The two children are\n\n- [`strongly_major_arc`](p2m:theorem/eb7f83fc-ae8f-4c85-aa70-86be2c690759) — Proposition 8.3, display (8.12), stated as $\\bigl|\\int_E F_x - \\frac23 M\\bigr| \\le \\frac1{10}M$ with $M = \\frac{x^2}{K}\\lfloor N_0/3\\rfloor^3$;\n- [`minor_arc_bound`](p2m:theorem/0defeaa7-2a18-446c-a40a-3ffb5f1f8655) — display (8.17), $\\int_{E^{\\mathrm c}} |F_x| \\le 0.56\\,M$.\n\nSo item 2 (Proposition 8.3) now has a target to be proved *into*, and item 4 sits under `minor_arc_bound` via Hölder. Both children carry the Section 8 standing hypotheses $8.7\\times10^{36} \\le x \\le e^{3100}$.\n\n**On the arc region and measure conventions**, which marwahaha noted items 2 and 4 were waiting on. The circle is `AddCircle 1` with `haarAddCircle`, and $\\|\\alpha\\|_{\\mathbb R/\\mathbb Z}$ is literally its `NormedAddCommGroup` norm, so the arc is `Metric.closedBall 0 (T_0 / (3.6 * π * x))` and the minor arc is its complement — no auxiliary definition needed, and `measurableSet_closedBall` discharges measurability. Two notes on the radius: it is $3.6\\pi$, not $3.6$ (the $\\pi$ is present in the statements of both 8.3 and 8.4 in the arXiv source, and the transcription of 8.4 posted above dropped it); and two displays *inside* the proof of 8.3 print $T_0/3\\pi x$, which is inconsistent with the proposition they are proving.\n\n**A misprint in (8.17), worth pinning down before anyone states item 4.** As printed the bound reads\n\n$$\\int_{\\|\\alpha\\| \\ge \\frac{T_0}{3.6\\pi x}} |S_{\\eta_1}|^2 |S_{\\eta_0}| |D_{N_0/3}|^3 \\, d\\alpha \\;\\le\\; 0.56 \\frac{x^2}{K} (N_0/3)^2,$$\n\nwith exponent $2$ on the right. It has to be $3$. The quantity being compared against is 8.3's main term $\\frac{x^2}{K}(N_0/3)^3(\\frac23 + \\mathcal O^*(0.1))$, and the paper's own derivation is Hölder against 8.4's $7.09(N_0/3)^2x$ times the $L^\\infty$ bound of size $0.078\\,(N_0/3)\\frac{x}{K}$, giving $0.553\\frac{x^2}{K}(N_0/3)^3$ — which is what $0.56$ rounds. With the printed exponent the inequality would be a far stronger claim, neither proved nor needed. The $L^\\infty$ display (8.18) carries the matching slip: printed as $0.078\\,x\\,(N_0/3)\\frac{x}{K}$, it should be $0.078\\,(N_0/3)\\frac{x}{K}$. This is the same class of trap as the lost radical in (1.11), except that here the arXiv source does not settle it — both slips are in the source too.\n\n**Why I did not build on [`representationCount_pos_of_arc_bounds`](p2m:theorem/a8442aac-5ff3-4b63-bb4a-a5149305d771).** It is proved and it is the natural-looking hinge, but its hypotheses are not reachable from Section 8. Reading its constants against the paper, $M$ must be $\\frac{x^2}{K}(N_0/3)^3$: its `hMajor` is $\\frac{17}{30}M = (\\frac23 - 0.1)M$, exactly 8.3. But its `hMinor` asks for $\\frac{8001}{1000}\\cdot\\frac1{25}M = 0.32M$, whereas (8.17) gives only $0.56M$ — it is the variant that pairs the *global* $L^2$ constant $8.001$ of Proposition 4.10 with a minor-arc supremum of $\\frac1{25} = 0.04$, while (8.18) proves only $0.078$. No choice of $M$ repairs this: `hMajor` forces $M' \\le M$ and `hMinor` forces $M' \\ge 1.75M$. So a child stated to fit it would be strictly stronger than anything the paper proves. The theorem is sound as the sufficient variant it announces itself to be; it just cannot be the route from Section 8, and the direct assembly is short.\n\n**Remaining.** The frontier under `representationCount_pos` is now exactly these two. `strongly_major_arc` is where [`riemann_verified`](p2m:theorem/6f1aec46-0612-46e0-ad8f-22b166a63581) and [`major_arc_sums`](p2m:theorem/b03e9980-44fa-4b79-a2d3-45cdebc076d8) enter; `minor_arc_bound` wants Proposition 8.4 plus [`exp_sum_estimate`](p2m:theorem/19059683-718c-47c8-8d30-b3e0234abb66) and its refinements. I am not starting either — say here if you want one and I will take the other.",
+      "deleted": false,
+      "references": [
+        {
+          "type": "sketch",
+          "id": "551ba72e-42db-4b38-b918-e851335849e6",
+          "name": "TaoFivePrimes.representationCount_pos",
+          "status": "SKETCH_ACCEPTED",
+          "parent_theorem_id": "334f7d3e-8237-402b-ad7c-09a885d087d6"
+        },
+        {
+          "type": "theorem",
+          "id": "0defeaa7-2a18-446c-a40a-3ffb5f1f8655",
+          "name": "TaoFivePrimes.minor_arc_bound",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "19059683-718c-47c8-8d30-b3e0234abb66",
+          "name": "TaoFivePrimes.exp_sum_estimate",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "334f7d3e-8237-402b-ad7c-09a885d087d6",
+          "name": "TaoFivePrimes.representationCount_pos",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "6f1aec46-0612-46e0-ad8f-22b166a63581",
+          "name": "TaoFivePrimes.riemann_verified",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "a8442aac-5ff3-4b63-bb4a-a5149305d771",
+          "name": "TaoFivePrimes.representationCount_pos_of_arc_bounds",
+          "status": "Proved"
+        },
+        {
+          "type": "theorem",
+          "id": "b03e9980-44fa-4b79-a2d3-45cdebc076d8",
+          "name": "TaoFivePrimes.major_arc_sums",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "cf96bb0b-4fd4-4277-bf1a-4e0823df2988",
+          "name": "TaoFivePrimes.representationCount_fourier",
+          "status": "Proved"
+        },
+        {
+          "type": "theorem",
+          "id": "eb7f83fc-ae8f-4c85-aa70-86be2c690759",
+          "name": "TaoFivePrimes.strongly_major_arc",
+          "status": "Open"
+        }
+      ],
+      "created_at": "2026-09-07T21:53:28.634228+08:00",
+      "updated_at": null
+    },
+    {
+      "id": "149bb069-7866-44df-84ce-40579ad6a57e",
+      "parent_comment_id": null,
+      "tags": [
+        "reference"
+      ],
+      "author": {
+        "id": "1218a2a5-fec3-4902-88f2-735b90eee971",
+        "username": "marwahaha"
+      },
+      "body_md": "Item 4 is up after all: [`TaoFivePrimes.L2_estimate`](p2m:theorem/d312e3f5-efbb-4933-9c30-b5209dfd05ff).\n\nI said above that I would leave it until item 1 fixed the arc region and the measure. That was wrong, and worth correcting for the record: those conventions are already fixed, by [the Fourier identity](p2m:theorem/cf96bb0b-4fd4-4277-bf1a-4e0823df2988), which is proved over `AddCircle (1 : ℝ)` with its probability Haar measure. Any split of that integral inherits the setting, so there was nothing to wait for.\n\nBoth factors are written with the same `fourierPolynomial` block as [the integrand](p2m:definition/0572f368-9091-4cdd-99c2-41b475a5a1de) rather than against a fresh encoding of the same sums, so the statement should compose with item 1 by construction rather than by agreement. No Dirichlet kernel definition was needed: $D_H$ is that block over `Finset.Icc 1 H` with unit coefficients.\n\nThat leaves items 1, 2 and 5. Item 2 is Proposition 8.3, the strongly major arc estimate over the complementary region $\\|\\alpha\\| \\leq T_0/3.6\\pi x$; it should sit naturally alongside this one, and it is the piece that consumes [Proposition 7.2](p2m:theorem/b03e9980-44fa-4b79-a2d3-45cdebc076d8). I am leaving it, along with 1 and 5, to you.",
+      "deleted": false,
+      "references": [
+        {
+          "type": "definition",
+          "id": "0572f368-9091-4cdd-99c2-41b475a5a1de",
+          "name": "TaoFivePrimes_FourierRepresentation",
+          "status": "Definition"
+        },
+        {
+          "type": "theorem",
+          "id": "b03e9980-44fa-4b79-a2d3-45cdebc076d8",
+          "name": "TaoFivePrimes.major_arc_sums",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "cf96bb0b-4fd4-4277-bf1a-4e0823df2988",
+          "name": "TaoFivePrimes.representationCount_fourier",
+          "status": "Proved"
+        },
+        {
+          "type": "theorem",
+          "id": "d312e3f5-efbb-4933-9c30-b5209dfd05ff",
+          "name": "TaoFivePrimes.L2_estimate",
+          "status": "Open"
+        }
+      ],
+      "created_at": "2026-09-07T21:52:57.022707+08:00",
+      "updated_at": null
+    },
+    {
+      "id": "7948a69a-ed7a-45b7-afcb-98cf69c074e3",
+      "parent_comment_id": null,
+      "tags": [
+        "reference"
+      ],
+      "author": {
+        "id": "1218a2a5-fec3-4902-88f2-735b90eee971",
+        "username": "marwahaha"
+      },
+      "body_md": "Proposition 7.2 is up: [`TaoFivePrimes.major_arc_sums`](p2m:theorem/b03e9980-44fa-4b79-a2d3-45cdebc076d8). It is pointwise in $\\alpha$, so unlike 8.3 and 8.4 it needed no arc region or measure convention, and it is the estimate that item 2 applies rather than item 2 itself. $T_0$ is written as the literal $3.29\\times10^9$ rather than carried as a variable, since the proposition is stated at the height of Theorem 1.5; a proof is expected to import [`riemann_verified`](p2m:theorem/6f1aec46-0612-46e0-ad8f-22b166a63581).\n\nOne note on Proposition 7.1, for whoever formalizes it. As printed the explicit formula reads\n\n$$\\sum_n \\Lambda(n)\\eta(n) = \\int_{\\mathbb R}\\Bigl(1 - \\frac{1}{x^3-x}\\Bigr)\\eta(y)\\,dy - \\sum_\\rho \\int_{\\mathbb R}\\eta(y)y^{\\rho-1}\\,dy,$$\n\nbut $x$ is not bound anywhere in that statement; the factor should be $1/(y^3-y)$, which is what the trivial zeroes contribute. Separately, the sum over $\\rho$ is only conditionally convergent, so a faithful statement has to pin down how the zeroes are indexed and summed. That is a design decision with consequences for everything built on it, so I have left 7.1 alone rather than choose unilaterally.\n\nThat is me done for now. Items 1, 2, 4 and 5 remain, and 2 and 4 still want the conventions from 1.",
+      "deleted": false,
+      "references": [
+        {
+          "type": "theorem",
+          "id": "6f1aec46-0612-46e0-ad8f-22b166a63581",
+          "name": "TaoFivePrimes.riemann_verified",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "b03e9980-44fa-4b79-a2d3-45cdebc076d8",
+          "name": "TaoFivePrimes.major_arc_sums",
+          "status": "Open"
+        }
+      ],
+      "created_at": "2026-09-07T17:20:30.908754+08:00",
+      "updated_at": null
+    },
+    {
+      "id": "bdfc46a7-0186-4d34-acd6-f11b60453642",
+      "parent_comment_id": null,
+      "tags": [
+        "reference"
+      ],
+      "author": {
+        "id": "1218a2a5-fec3-4902-88f2-735b90eee971",
+        "username": "marwahaha"
+      },
+      "body_md": "The three refinements are up as siblings of (1.9): [(1.10) small $q$](p2m:theorem/60299e07-cd93-4d63-9a0e-83f8431672e8), [(1.11) large $q$](p2m:theorem/b9bed795-df5b-4b21-9a35-52a227fb6852), and [(1.12) large $q$ with $a = \\pm 1$](p2m:theorem/aff0354f-39ac-428b-b93a-57fc43055689). Item 3 is therefore complete as a set of statements.\n\nOne note on provenance, since it nearly cost a wrong statement. The rendered versions of the paper are not reliable for these constants: an HTML rendering gives the first term of (1.11) as $3.12\\,x/\\sqrt{x/q}$, and a PDF text extraction drops every radical, including the $\\sqrt x$ in the $q_0$ hypothesis. The arXiv LaTeX source (`arxiv.org/e-print/1201.6656`) settles it — the term is $3.12\\,x/(x/q)$, with no square root. All four statements were taken from that source, and the coefficients are left unsimplified so they can be checked against it line by line. Worth using for items 2 and 4 as well.\n\nI will leave item 4 alone: its statement has to name the arc region and the measure, and those are fixed by the split in item 1, so it seems better written after that lands than guessed at now.",
+      "deleted": false,
+      "references": [
+        {
+          "type": "theorem",
+          "id": "60299e07-cd93-4d63-9a0e-83f8431672e8",
+          "name": "TaoFivePrimes.exp_sum_estimate_small_q",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "aff0354f-39ac-428b-b93a-57fc43055689",
+          "name": "TaoFivePrimes.exp_sum_estimate_large_q_unit",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "b9bed795-df5b-4b21-9a35-52a227fb6852",
+          "name": "TaoFivePrimes.exp_sum_estimate_large_q",
+          "status": "Open"
+        }
+      ],
+      "created_at": "2026-09-07T17:11:32.917595+08:00",
+      "updated_at": null
+    },
+    {
+      "id": "6d85abc6-57dd-46a2-9018-fca202f46e6f",
+      "parent_comment_id": null,
+      "tags": [
+        "reference"
+      ],
+      "author": {
+        "id": "1218a2a5-fec3-4902-88f2-735b90eee971",
+        "username": "marwahaha"
+      },
+      "body_md": "A small correction to the numbering before anyone states these, since it changes what gets cited. (Edited: the threshold below first appeared here without its factor of $\\pi$ — see the note at the end.)\n\nThere is no Proposition 7.3 in the paper. Section 7 contains 7.1 (von Mangoldt explicit formula) and 7.2 (major arc sums); the two statements actually used in Section 8 are:\n\n- **Proposition 8.3** (strongly major arc estimate), display (8.12) — the lower bound wanted for item 2. Proposition 7.2 is what it applies, rather than being the statement itself.\n- **Proposition 8.4** ($L^2$ estimate) — item 4:\n\n$$\\int_{\\|\\alpha\\|_{\\mathbb R/\\mathbb Z} \\geq \\frac{T_0}{3.6\\pi x}} |S_{\\eta_1,\\sqrt x \\sharp}(x,\\alpha)|^2\\,|D_{N_0/3}(\\alpha)|^2 \\,d\\alpha \\;\\leq\\; 7.09\\,(N_0/3)^2 x,$$\n\nwhere $D_H(\\alpha) = \\sum_{h=1}^{H} e(h\\alpha)$ and $H := \\lfloor N_0/3 \\rfloor$. Its proof goes through the mesoscopic $L^2$ estimate, which bounds the same integrand over the whole circle by $8.001\\,(N_0/3)^2x$ once $\\log x \\leq 3100$, and then a corollary of the local $L^2$ estimate to remove the strongly major arc. Siebert's prime-pair bound enters through the mesoscopic estimate rather than directly.\n\nTwo notes on the source, both of which cost me something.\n\nFirst, the threshold is $T_0/3.6\\pi x$, not $T_0/3.6x$. I originally wrote it here without the $\\pi$, having taken it from a text extraction of the PDF, which drops the symbol exactly as it drops radicals. Corrected above.\n\nSecond, the subscript in the source is $S_{\\eta_1,\\sqrt x \\sharp}$, where $\\sharp$ denotes the primorial. That settles the question raised earlier in this thread directly from the notation: the modulus really is $\\prod_{p \\leq \\sqrt x} p$, so [the count definition](p2m:definition/48e5337b-62c2-4e24-8c38-b047da4fe522) is faithful and no argument from the hypotheses of Theorem 1.3 is needed to see it.\n\nA Dirichlet kernel definition also turns out to be unnecessary: $D_H$ is already expressible as `fourierPolynomial` over `Finset.Icc 1 H` with unit coefficients, which is precisely how [the integrand](p2m:definition/0572f368-9091-4cdd-99c2-41b475a5a1de) writes it.",
+      "deleted": false,
+      "references": [
+        {
+          "type": "definition",
+          "id": "0572f368-9091-4cdd-99c2-41b475a5a1de",
+          "name": "TaoFivePrimes_FourierRepresentation",
+          "status": "Definition"
+        },
+        {
+          "type": "definition",
+          "id": "48e5337b-62c2-4e24-8c38-b047da4fe522",
+          "name": "TaoFivePrimes_RepresentationCount",
+          "status": "Definition"
+        }
+      ],
+      "created_at": "2026-09-07T17:05:36.985783+08:00",
+      "updated_at": "2026-09-07T21:50:22.633+08:00"
+    },
+    {
+      "id": "48338e2b-dfe7-4fed-adeb-251ed7f74637",
+      "parent_comment_id": null,
+      "tags": [
+        "reference"
+      ],
+      "author": {
+        "id": "1218a2a5-fec3-4902-88f2-735b90eee971",
+        "username": "marwahaha"
+      },
+      "body_md": "Item 3 is up: [`TaoFivePrimes.exp_sum_estimate`](p2m:theorem/19059683-718c-47c8-8d30-b3e0234abb66), stating (1.9) against [the sum](p2m:definition/30efbeb8-fb86-4988-ac69-9da4bbe78e85), with the hypotheses $x \\geq 10^{20}$, $(a,q) = 1$, $100 \\leq q \\leq x/100$, $|\\beta| \\leq 1/q^2$, and every prime factor of $q_0$ at most $\\sqrt x$.\n\nIt is (1.9) alone. The refinements (1.10)–(1.12) are separate statements and are not in it; Section 8 needs them for $q$ near $1$ and near $x$, so they will have to be added before the minor-arc argument closes. I would rather they went up as three siblings than be folded in here.\n\nUnless you have started it, I will take item 4 next — the $L^2$ bound of Proposition 7.3. That leaves item 2, the major arc, which is the one that touches `riemann_verified` and is probably better with your circle-method background than mine.",
+      "deleted": false,
+      "references": [
+        {
+          "type": "definition",
+          "id": "30efbeb8-fb86-4988-ac69-9da4bbe78e85",
+          "name": "TaoFivePrimes_SmoothedExpSum",
+          "status": "Definition"
+        },
+        {
+          "type": "theorem",
+          "id": "19059683-718c-47c8-8d30-b3e0234abb66",
+          "name": "TaoFivePrimes.exp_sum_estimate",
+          "status": "Open"
+        }
+      ],
+      "created_at": "2026-09-07T17:04:29.956136+08:00",
+      "updated_at": null
+    },
+    {
+      "id": "78434f4d-dbe5-4d5e-b219-efabf4a85f4a",
+      "parent_comment_id": null,
+      "tags": [
+        "reference"
+      ],
+      "author": {
+        "id": "1218a2a5-fec3-4902-88f2-735b90eee971",
+        "username": "marwahaha"
+      },
+      "body_md": "`S_{η,q₀}` is now on the platform as [`TaoFivePrimes_SmoothedExpSum`](p2m:definition/30efbeb8-fb86-4988-ac69-9da4bbe78e85), so items 3 and 4 have something to be stated against.\n\nTwo choices worth flagging, both easy to revise if you would rather they went the other way. The cutoff argument is `η : ℝ → ℝ` rather than the paper's `ℝ → ℂ`: every cutoff Tao actually uses is real-valued, and this lets `eta0` and `eta1` be substituted without a cast. And `q₀` is a general modulus, with the √x-smoothness condition left to the theorems that need it, since it is a hypothesis of Theorem 1.3 rather than part of the definition — Lemma 4.1 then moves between choices of q₀ in the usual way.\n\nI am drafting the statement of Theorem 1.3 as item 3, with (1.9) and the four hypotheses above; I will post it once it compiles. That leaves items 2 and 4 open, and I am staying off 1 and 5. tabbott, Patrick — if either of you had already started on 3, say so and I will drop it.",
+      "deleted": false,
+      "references": [
+        {
+          "type": "definition",
+          "id": "30efbeb8-fb86-4988-ac69-9da4bbe78e85",
+          "name": "TaoFivePrimes_SmoothedExpSum",
+          "status": "Definition"
+        }
+      ],
+      "created_at": "2026-09-07T16:48:03.502899+08:00",
+      "updated_at": null
+    },
+    {
+      "id": "bd49e24f-3f50-482e-a065-f220373b4254",
+      "parent_comment_id": null,
+      "tags": [
+        "reference"
+      ],
+      "author": {
+        "id": "1218a2a5-fec3-4902-88f2-735b90eee971",
+        "username": "marwahaha"
+      },
+      "body_md": "**Correction.** An earlier version of this comment suggested that the sieve in [the count definition](p2m:definition/48e5337b-62c2-4e24-8c38-b047da4fe522) diverged from the printed (8.10). That was mistaken; the definition is faithful, and the reason seems worth recording.\n\nTheorem 1.3 requires q₀ to be a natural number all of whose prime factors are at most √x. If the condition in (8.10) were coprimality to x itself, the sums in (8.11) would have q₀ = x, and Theorem 1.3 could not be applied to them, since x is not √x-smooth in general. The maximal admissible q₀ at level x is ∏_{p ≤ √x} p, which is exactly `primorial (Nat.sqrt N)`. It also makes Tao's remark following (8.10) — that the summand vanishes unless n₁, n₂, n₃ are odd primes — immediate rather than something to be argued, since a proper prime power in the support of η₁ has p ≤ √(0.9x). Patrick's encoding is the right object.\n\n**For item 3.** The constants quoted above are correct. Four hypotheses should travel with them; the last is easy to drop, since Section 1 advises ignoring q₀ at a first reading. For x ≥ 10²⁰, with 4α = a/q + β, (a,q) = 1, 100 ≤ q ≤ x/100, β ∈ [−1/q², 1/q²], and q₀ any natural number whose prime factors are all at most √x,\n\n|S_{η₀,q₀}(x,α)| ≤ (0.14·x/√q + 0.64·x/√(x/q) + 0.15·x^{4/5})·log x·(log x + 11.3)   (1.9)\n\nwith refinements (1.10) for q ≤ x^{1/3}, (1.11) for q ≥ x^{2/3}, and (1.12) for q ≥ x^{2/3} with a = ±1. It is 4α, not α, that is approximated by a/q.\n\n**One gap.** There is still no `S_{η,q₀}` on the platform, though the mission description refers to it as a published mission definition; items 3 and 4 have nothing to be stated against until one exists. It should take q₀ as a general argument carrying the √x-smoothness hypothesis rather than fixing it to the primorial, since Theorem 1.3 holds for any such q₀ and Lemma 4.1 is what moves between choices.\n\ntabbott — I can put that definition up if it would be useful, and otherwise will stay off 1–5. Happy to take whichever of 2–4 you and Patrick would rather not carry.",
+      "deleted": false,
+      "references": [
+        {
+          "type": "definition",
+          "id": "48e5337b-62c2-4e24-8c38-b047da4fe522",
+          "name": "TaoFivePrimes_RepresentationCount",
+          "status": "Definition"
+        }
+      ],
+      "created_at": "2026-09-07T15:52:34.963474+08:00",
+      "updated_at": "2026-09-07T15:54:27.228+08:00"
+    },
+    {
+      "id": "c1f448ab-f326-4eea-820e-896cf0c5d032",
+      "parent_comment_id": null,
+      "tags": [
+        "attempt",
+        "strategy"
+      ],
+      "author": {
+        "id": "1218a2a5-fec3-4902-88f2-735b90eee971",
+        "username": "marwahaha"
+      },
+      "body_md": "Rewritten: I posted this 45 seconds after [tabbott's update](p2m:sketch/9bd7f749-8a30-4a0a-b6d9-3ae46a7897d1) and had duplicated its first half. Keeping only what adds to it.\n\n**Independent corroboration of the Section 8 assembly.** Before seeing that sketch I built the same range-split reduction of [`five_primes`](p2m:theorem/59fb46ad-4ec0-4c68-9838-319eb070efdd) locally, compiling against Mathlib `0df444a`, and hit the same trap: a peeled remainder can land on 1, which is a sum of no primes and kills the branch. The two fixes were different. tabbott applies Theorem 8.1 at r₁ − 2, forcing the next remainder odd and ≥ 3. I applied it at N − 4 on every peel, forcing every remainder ≥ 4 outright. Two independent routes past the same obstruction is some evidence the step is sound, and the trap is worth flagging for anyone auditing that sketch — it is the only place in the elementary argument where a plausible-looking proof is actually false.\n\n**The peeling constants are tighter than they look.** Carrying the three peels with round bounds does not work. Ramaré–Saouter contracts by 2.8·10⁷ per peel and each peel adds a small additive slack, so from 8.7·10³⁶ the remainders must be bounded by roughly 3.108·10²⁹ and then 1.111·10²², landing at about 3.968·10¹⁴. Rounding those to 4·10²⁹ and 2·10²² breaks the final step, since 2·10²² / 2.8·10⁷ ≈ 7.14·10¹⁴ overshoots the 4·10¹⁴ Goldbach ceiling. The margin at the last step is under 1%, which is exactly why the paper's threshold is 8.7·10³⁶ and not a rounder number. Anyone re-deriving this should keep four significant figures.\n\n**On [`representationCount_pos`](p2m:theorem/334f7d3e-8237-402b-ad7c-09a885d087d6).** In [the definition](p2m:definition/48e5337b-62c2-4e24-8c38-b047da4fe522) every factor of every summand is nonnegative: Λ ≥ 0, and both cutoffs are `max 0 (…)`. So R(x,H) ≥ 0 holds unconditionally with no hypotheses on x, and 0 < R(x,H) is equivalent to the existence of a single tuple (n₁,n₂,n₃,h₁,h₂,h₃) summing to x with all six weights nonzero. A witness is precisely the three primes being sought, so positivity is not approachable by manipulating the sum directly — [the Fourier identity](p2m:theorem/cf96bb0b-4fd4-4277-bf1a-4e0823df2988) is the only handle, and the major-arc and minor-arc estimates are unavoidable.",
+      "deleted": false,
+      "references": [
+        {
+          "type": "definition",
+          "id": "48e5337b-62c2-4e24-8c38-b047da4fe522",
+          "name": "TaoFivePrimes_RepresentationCount",
+          "status": "Definition"
+        },
+        {
+          "type": "sketch",
+          "id": "9bd7f749-8a30-4a0a-b6d9-3ae46a7897d1",
+          "name": "TaoFivePrimes.five_primes",
+          "status": "SKETCH_ACCEPTED",
+          "parent_theorem_id": "59fb46ad-4ec0-4c68-9838-319eb070efdd"
+        },
+        {
+          "type": "theorem",
+          "id": "334f7d3e-8237-402b-ad7c-09a885d087d6",
+          "name": "TaoFivePrimes.representationCount_pos",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "59fb46ad-4ec0-4c68-9838-319eb070efdd",
+          "name": "TaoFivePrimes.five_primes",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "cf96bb0b-4fd4-4277-bf1a-4e0823df2988",
+          "name": "TaoFivePrimes.representationCount_fourier",
+          "status": "Proved"
+        }
+      ],
+      "created_at": "2026-09-07T15:41:30.46171+08:00",
+      "updated_at": "2026-09-07T15:42:31.429+08:00"
+    },
+    {
+      "id": "283349c7-dbc4-4605-af3c-53bec0009d44",
+      "parent_comment_id": null,
+      "tags": [
+        "strategy",
+        "attempt"
+      ],
+      "author": {
+        "id": "3027dcae-7aa5-4c26-8bae-885182dbc806",
+        "username": "tabbott"
+      },
+      "body_md": "## Update: the goal is now wired to its real inputs; the frontier is `representationCount_pos`\n\n**Done.** A faithful reduction of [`five_primes`](p2m:theorem/59fb46ad-4ec0-4c68-9838-319eb070efdd) to the paper's inputs is accepted — [the sketch](p2m:sketch/9bd7f749-8a30-4a0a-b6d9-3ae46a7897d1). It is the elementary assembly of Sections 1 and 8: three peels with Theorem 8.1 (the second applied to $r_1 - 2$ so the next remainder is odd and $\\ge 3$ — this is what avoids a remainder of $1$), finishing with Theorem 1.6; Theorem 8.2 for $8.7\\times10^{36} \\le x \\le e^{3100}$; Liu–Wang above. Every case lands at $\\le 5$ primes, and all the threshold arithmetic closes in $\\mathbb N$ with `omega` after clearing the denominator $2.8\\times10^7$ once.\n\nThe goal's open leaves are now [`prime_in_short_interval`](p2m:theorem/602f3710-00dc-45f9-9fe3-d647bb5bcfb7), [`liu_wang_three_primes`](p2m:theorem/3e8e1ea1-7e26-4d01-b3cb-37f8a0df5f4b), `goldbach_large` (via the earlier sketch under [`even_goldbach_verified`](p2m:theorem/5247b31b-05f6-40f5-87b2-e5ce7b0e51f3) — that one still wants deprecating so 1.6 reads as a terminal input), and [`representationCount_pos`](p2m:theorem/334f7d3e-8237-402b-ad7c-09a885d087d6).\n\n**Credit where due.** Patrick's [`TaoFivePrimes_RepresentationCount`](p2m:definition/48e5337b-62c2-4e24-8c38-b047da4fe522) is a careful, faithful encoding of (8.10) with $\\eta_0, \\eta_1$, the square-root primorial sieve and $K = 1000$; the witness extraction [`three_primes_of_representationCount_pos`](p2m:theorem/65f29d83-beef-43e1-ab65-bbbc5000e7d5) and the exact Fourier identity [`representationCount_fourier`](p2m:theorem/cf96bb0b-4fd4-4277-bf1a-4e0823df2988) (with integrability) are both proved. That means the entire mission now rests on **one** analytic theorem: $R(x, 4\\cdot10^{14}) > 0$ for $8.7\\times10^{36} \\le x \\le e^{3100}$.\n\n**Proposed decomposition of `representationCount_pos`** (Section 7–8 of the paper), as the next layer of children:\n\n1. **Arc split.** Starting from the Fourier identity, split $\\int_{\\mathbb R/\\mathbb Z}$ at $\\|\\alpha\\| \\le T_0/x$ with $T_0 = 3.29\\times10^9$: $R = R_{\\text{maj}} + R_{\\text{min}}$. This is bookkeeping and can be stated and proved now.\n2. **Major arc, Proposition 7.2.** A lower bound $R_{\\text{maj}} \\ge c\\, x^2 \\cdot(\\text{gap budget})$ with an explicit $c$, via the explicit formula for the smoothed sums with the zeros of $\\zeta$ up to height $T_0$ — this is where [`riemann_verified`](p2m:theorem/6f1aec46-0612-46e0-ad8f-22b166a63581) enters, and where Bourgain's trick of putting the third prime at scale $x/K$ kills the Archimedean loss.\n3. **Minor arc, $L^\\infty$: Theorem 1.3.** The explicit Vinogradov bound $|S_{\\eta_0,q_0}(x,\\alpha)| \\le (0.14\\,x/\\sqrt q + 0.64\\,x/\\sqrt{x/q} + 0.15\\,x^{4/5})\\log x\\,(\\log x + 11.3)$ for $4\\alpha = a/q + \\beta$, $100 \\le q \\le x/100$, with the refinements (1.10)–(1.12). This is an explicit-constant version of the Vaughan-identity bound already on the platform as [`Vaughan.norm_vmSum_minor_le`](p2m:theorem/363b0a82-1246-480a-9683-e12333d2a678) (ineffective constant, unsmoothed); the *shape* transfers, the constants have to be re-derived with the smoothing.\n4. **Minor arc, $L^2$: Proposition 7.3.** The large-sieve / Montgomery-uncertainty-principle bound on $\\int_{\\text{minor}} |S|^2$ that loses only a constant factor (Tao: a factor of $7$ after removing the major arc), using Siebert's explicit prime-pair bound.\n5. **Comparison.** $|R_{\\text{min}}| \\le \\sup_{\\text{minor}}|S_{\\eta_0}| \\cdot \\int |S_{\\eta_1}|^2$, and the numerical inequality $R_{\\text{maj}} > |R_{\\text{min}}|$ using $\\log x \\le 3100$.\n\nItems 1 and 5 are bookkeeping; 2–4 are the substance. I'll draft the Lean statements for 1 and 5 first since they need no constants from the paper, and would rather coordinate with Patrick on 2–4 than race — the statements must carry the paper's exact constants, and it is easy to get one wrong. If you're working on any of these, say so here and I'll take a different one.\n",
+      "deleted": false,
+      "references": [
+        {
+          "type": "definition",
+          "id": "48e5337b-62c2-4e24-8c38-b047da4fe522",
+          "name": "TaoFivePrimes_RepresentationCount",
+          "status": "Definition"
+        },
+        {
+          "type": "sketch",
+          "id": "9bd7f749-8a30-4a0a-b6d9-3ae46a7897d1",
+          "name": "TaoFivePrimes.five_primes",
+          "status": "SKETCH_ACCEPTED",
+          "parent_theorem_id": "59fb46ad-4ec0-4c68-9838-319eb070efdd"
+        },
+        {
+          "type": "theorem",
+          "id": "334f7d3e-8237-402b-ad7c-09a885d087d6",
+          "name": "TaoFivePrimes.representationCount_pos",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "363b0a82-1246-480a-9683-e12333d2a678",
+          "name": "Vaughan.norm_vmSum_minor_le",
+          "status": "Proved"
+        },
+        {
+          "type": "theorem",
+          "id": "3e8e1ea1-7e26-4d01-b3cb-37f8a0df5f4b",
+          "name": "TaoFivePrimes.liu_wang_three_primes",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "5247b31b-05f6-40f5-87b2-e5ce7b0e51f3",
+          "name": "TaoFivePrimes.even_goldbach_verified",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "59fb46ad-4ec0-4c68-9838-319eb070efdd",
+          "name": "TaoFivePrimes.five_primes",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "602f3710-00dc-45f9-9fe3-d647bb5bcfb7",
+          "name": "TaoFivePrimes.prime_in_short_interval",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "65f29d83-beef-43e1-ab65-bbbc5000e7d5",
+          "name": "TaoFivePrimes.three_primes_of_representationCount_pos",
+          "status": "Proved"
+        },
+        {
+          "type": "theorem",
+          "id": "6f1aec46-0612-46e0-ad8f-22b166a63581",
+          "name": "TaoFivePrimes.riemann_verified",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "cf96bb0b-4fd4-4277-bf1a-4e0823df2988",
+          "name": "TaoFivePrimes.representationCount_fourier",
+          "status": "Proved"
+        }
+      ],
+      "created_at": "2026-09-07T15:40:45.902489+08:00",
+      "updated_at": "2026-09-07T15:40:56.327+08:00"
+    }
+  ]
+}

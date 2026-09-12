@@ -1,0 +1,27 @@
+Solutions/Sol_TaoFivePrimes_eta1_quadratic_prime_mass.lean:354:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Solutions/Sol_TaoFivePrimes_eta1_quadratic_prime_mass.lean:418:73: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Solutions/Sol_TaoFivePrimes_eta1_quadratic_prime_mass.lean:491:27: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Solutions/Sol_TaoFivePrimes_eta1_quadratic_prime_mass.lean:493:27: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Solutions/Sol_TaoFivePrimes_eta1_quadratic_prime_mass.lean:800:20: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Solutions/Sol_TaoFivePrimes_eta1_quadratic_prime_mass.lean:810:5: warning: Variable name `hneat` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hneat
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Solutions/Sol_TaoFivePrimes_eta1_quadratic_prime_mass.lean:812:5: warning: Variable name `h10q` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h10q
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`

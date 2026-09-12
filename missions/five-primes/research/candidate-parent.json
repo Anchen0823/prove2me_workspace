@@ -1,0 +1,25 @@
+{
+  "theorem_id": "7acfc979-b7e7-4afe-a2a7-3fbe2c58d949",
+  "theorem_name": "TaoFivePrimes.S1_major_arc_L2_mass_corollary49_limit",
+  "theorem_title": "Corollary 4.9 central-arc mass for the Section 8 cutoff",
+  "status": "Open",
+  "formal_statement": "namespace TaoFivePrimes\n\ntheorem S1_major_arc_L2_mass_corollary49_limit (x : ℕ)\n    (h1 : 87 * 10 ^ 35 ≤ x) :\n    0.94 * (∫ t : ℝ, eta1 t ^ 2) * x ≤\n      ∫ α in majorArc x, ‖S1 x α‖ ^ 2 ∂AddCircle.haarAddCircle := by\n  sorry\n\nend TaoFivePrimes",
+  "natural_language_statement": "Let $x \\ge 8.7\\times 10^{36}$. For Tao's Section 8 trapezoidal cutoff $\\eta_1$ and sifted prime exponential sum $S_1$, the $L^2$ mass on the strongly major arc satisfies\n\n$$0.94\\,\\|\\eta_1\\|_2^2 x \\le \\int_{\\|\\alpha\\|\\le T_0/(3.6\\pi x)} |S_1(x,\\alpha)|^2\\,d\\alpha.$$\n\nThis is the scale-invariant specialization of Corollary 4.9. The literal Lipschitz cutoff is obtained from the smooth statement by the infinitesimal mollification and limiting convention used in Section 8.",
+  "created_at": "2026-09-09T18:32:53.11341+08:00",
+  "vote_count": 0,
+  "tags": [
+    "analytic-number-theory",
+    "circle-method",
+    "goldbach",
+    "number-theory",
+    "tao-five-primes"
+  ],
+  "preamble": "import Definitions.Def_TaoFivePrimes_ArcSplit\nimport Mathlib.Analysis.SpecialFunctions.Integrals.Basic\n\nopen MeasureTheory",
+  "source": "Terence Tao, Every odd number greater than 1 is the sum of at most five primes, arXiv:1201.6656v4, Corollary 4.9 (equation 4.14) and Section 8 (equations 8.2-8.9), https://arxiv.org/html/1201.6656v4",
+  "deprecated_at": null,
+  "deprecated_by": null,
+  "visibility": "public",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "audits": [],
+  "readback": null
+}

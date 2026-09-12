@@ -1,0 +1,104 @@
+{
+  "theorems": [
+    {
+      "theorem_id": "cf6be7a8-2493-479a-9d57-6ee8535546d1",
+      "theorem_name": "TaoFivePrimes.rosser_schoenfeld_psi_bound",
+      "theorem_title": "Rosser–Schoenfeld: $\\psi(x) \\lt 1.03883\\,x$",
+      "status": "Open",
+      "formal_statement": "namespace TaoFivePrimes\n\ntheorem rosser_schoenfeld_psi_bound :\n    ∀ x : ℕ, 0 < x →\n      (∑ n ∈ Finset.range (x + 1), (Λ n : ℝ)) <\n        1.03883 * (x : ℝ) := by\n  sorry\n\nend TaoFivePrimes",
+      "natural_language_statement": "For every positive integer $x$, the second Chebyshev function satisfies\n\n$$\\psi(x) \\;=\\; \\sum_{n \\le x} \\Lambda(n) \\;\\lt\\; 1.03883\\,x .$$\n\nThis is the explicit prime-mass estimate of Rosser and Schoenfeld, and the constant is sharp in the sense that it cannot be replaced by anything much smaller: the ratio $\\psi(x)/x$ comes within a fraction of a percent of $1.03883$ near $x = 113$, so the bound must be verified against the small-$x$ regime and not only asymptotically. That is what distinguishes it from softer Chebyshev bounds such as $\\psi(x) \\le x\\log 4$, which are far weaker.\n\nIt enters Tao's argument as the crude upper bound on total prime mass used to control error terms.\n\n**Provenance note.** This statement was previously bundled, in a single platform node, with an unrelated Montgomery large-sieve estimate. The two come from different papers and neither depends on the other, so they are separated here.\n\n**Formalization note.** The sum is written over `Finset.range (x + 1)`, i.e. over $n \\le x$, and $\\Lambda$ is Mathlib's `ArithmeticFunction.vonMangoldt`. Note that the mission also carries the weaker `psi_le_112_large`, with constant $1.12$ and only for large $x$; that result does not imply this one.",
+      "created_at": "2026-09-10T17:59:33.40691+08:00",
+      "vote_count": 0,
+      "preamble": "import Definitions.Def_TaoFivePrimes_ArcSplit\nimport Mathlib.MeasureTheory.Integral.Bochner.Set\n\nopen scoped BigOperators ArithmeticFunction.vonMangoldt\nopen MeasureTheory",
+      "source": "J. Barkley Rosser and Lowell Schoenfeld, Approximate formulas for some functions of prime numbers, Illinois J. Math. 6 (1962), 64-94, Theorem 12 (psi(x) < 1.03883 x). Used in Terence Tao, arXiv:1201.6656v4, Section 4.",
+      "tags": [
+        "analytic-number-theory",
+        "chebyshev",
+        "explicit-bounds",
+        "number-theory",
+        "tao-five-primes"
+      ],
+      "created_by": "da7ddf19-79a3-4afa-a245-03d734265eb8",
+      "created_by_username": "shivm",
+      "deprecated_at": null,
+      "visibility": "public",
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)"
+    },
+    {
+      "theorem_id": "b75369cf-8100-4985-a2ce-e27b35030107",
+      "theorem_name": "TaoFivePrimes.montgomery_corollary47_source",
+      "theorem_title": "Montgomery's local $L^2$ concentration bound for the sifted Fourier polynomial",
+      "status": "Proved",
+      "formal_statement": "namespace TaoFivePrimes\n\ntheorem montgomery_corollary47_source :\n    ∀ (x : ℕ) (w : ℕ → ℝ) (R : ℝ),\n      1 < x →\n      1 < R →\n      primorial ⌊R⌋₊ ∣\n        primorial (Nat.sqrt x) →\n      (∫ α in Metric.closedBall (0 : AddCircle (1 : ℝ))\n            (1 / (2 * R ^ 2)),\n          ‖TaoFourierIdentity.fourierPolynomial (Finset.range (x + 1))\n              (fun n ↦\n                ((siftedVonMangoldt x n * w n : ℝ) : ℂ))\n              (fun n ↦ (n : ℤ)) α‖ ^ 2\n            ∂AddCircle.haarAddCircle) ≤\n        (Real.log (x : ℝ) / Real.log R) *\n          (∑ n ∈ Finset.range (x + 1),\n            siftedVonMangoldt x n * (w n) ^ 2) := by\n  sorry\n\nend TaoFivePrimes",
+      "natural_language_statement": "For every $x > 1$, every $R > 1$ and every real weight sequence $w$, provided the primorial of $\\lfloor R\\rfloor$ divides the primorial of $\\lfloor\\sqrt{x}\\rfloor$, the sifted Fourier polynomial obeys the local concentration bound\n\n$$\\int_{\\|\\alpha\\| \\le 1/(2R^2)} |S_w(x,\\alpha)|^2 \\, d\\alpha \\;\\le\\; \\frac{\\log x}{\\log R} \\sum_{n \\le x} \\Lambda_{\\sqrt{x}\\#}(n)\\, w(n)^2 ,$$\n\nwhere $\\Lambda_{\\sqrt{x}\\#}$ is the sifted von Mangoldt weight and $S_w(x,\\cdot)$ the corresponding exponential sum.\n\nThis is the $Q = 1$ case of the Montgomery estimate that Tao invokes at Corollary 4.7, and it is one of the large-sieve inputs to the major-arc analysis: it says the $L^2$ mass of the sifted exponential sum near the origin is controlled by the sifted mass of the weights, with a loss of only $\\log x / \\log R$.\n\n**Provenance note.** This statement was previously bundled, in a single platform node, with the unrelated Rosser--Schoenfeld bound $\\sum_{n\\le x}\\Lambda(n) < 1.03883x$. The two come from different papers and neither depends on the other, so they are separated here to let each be attacked on its own.",
+      "created_at": "2026-09-10T17:59:31.450231+08:00",
+      "vote_count": 0,
+      "preamble": "import Definitions.Def_TaoFivePrimes_ArcSplit\nimport Mathlib.MeasureTheory.Integral.Bochner.Set\n\nopen scoped BigOperators ArithmeticFunction.vonMangoldt\nopen MeasureTheory",
+      "source": "Terence Tao, Every odd number greater than 1 is the sum of at most five primes, arXiv:1201.6656v4, Lemma 4.6 and Corollary 4.7 (the Q = 1 case of the Montgomery estimate).",
+      "tags": [
+        "analytic-number-theory",
+        "large-sieve",
+        "number-theory",
+        "tao-five-primes"
+      ],
+      "created_by": "da7ddf19-79a3-4afa-a245-03d734265eb8",
+      "created_by_username": "shivm",
+      "deprecated_at": null,
+      "visibility": "public",
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)"
+    },
+    {
+      "theorem_id": "cf820e86-8667-4076-8a05-a61433cb5bd9",
+      "theorem_name": "TaoFivePrimes.mesoscopic_sifted_pair_correlation_sieve_source",
+      "theorem_title": "Explicit sifted prime-pair correlation estimate for the mesoscopic L2 bound",
+      "status": "Open",
+      "formal_statement": "namespace TaoFivePrimes\n\ntheorem mesoscopic_sifted_pair_correlation_sieve_source (x H : ℕ)\n    (hx : 1 ≤ x) (hH : 10 ^ 2 ≤ H) :\n    (∑ p ∈ (Finset.range (x + 1)).product (Finset.Icc 1 H),\n      ∑ q ∈ (Finset.range (x + 1)).product (Finset.Icc 1 H),\n        if p.1 + p.2 = q.1 + q.2 then\n          siftedVonMangoldt x p.1 * siftedVonMangoldt x q.1\n        else 0) ≤\n      8 * (((Finset.Icc 1 H).card : ℕ) : ℝ) ^ 2 * x +\n        1.04 * (((Finset.Icc 1 H).card : ℕ) : ℝ) * x * Real.log (x : ℝ) +\n        4 *\n            (Real.exp Real.eulerMascheroniConstant *\n                Real.log (Real.log (2 * (H : ℝ))) +\n              2.507 / Real.log (Real.log (2 * (H : ℝ)))) *\n          (((Finset.Icc 1 H).card : ℕ) : ℝ) * x *\n          Real.log (9 * (H : ℝ)) := by sorry\n\nend TaoFivePrimes",
+      "natural_language_statement": "Let $x\\ge 1$ and $H\\ge 100$. For ordered pairs $(n,h)$ and $(m,k)$ with $0\\le n,m\\le x$ and $1\\le h,k\\le H$ satisfying $n+h=m+k$, sum the product of the sifted von Mangoldt weights $\\Lambda_x(n)\\Lambda_x(m)$, where primes up to $\\sqrt{x}$ have been removed. The correlation is at most the explicit sum of a main term $8H^2x$, a diagonal term $1.04Hx\\log x$, and the stated Rosser--Schoenfeld/Ramare Euler-product correction $4A(H)Hx\\log(9H)$. This is the arithmetic sieve estimate used inside Tao's mesoscopic $L^2$ argument.",
+      "created_at": "2026-09-09T22:54:02.056832+08:00",
+      "vote_count": 0,
+      "preamble": "import Definitions.Def_TaoFivePrimes_ArcSplit\nimport Mathlib.NumberTheory.Harmonic.EulerMascheroni\nopen scoped BigOperators ArithmeticFunction.vonMangoldt",
+      "source": "Terence Tao, Every odd number greater than 1 is the sum of at most five primes, arXiv:1201.6656v4, Section 4, Proposition 4.10 and its proof (the diagonal/off-diagonal prime-pair estimate), https://arxiv.org/abs/1201.6656",
+      "tags": [
+        "additive-number-theory",
+        "number-theory",
+        "prime-pairs",
+        "sieve-methods",
+        "tao-five-primes"
+      ],
+      "created_by": "1218a2a5-fec3-4902-88f2-735b90eee971",
+      "created_by_username": "marwahaha",
+      "deprecated_at": null,
+      "visibility": "public",
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)"
+    },
+    {
+      "theorem_id": "753f5c48-d6dc-4534-bd08-faccf7af7bdc",
+      "theorem_name": "TaoFivePrimes.montgomery_corollary47_and_prime_mass_source",
+      "theorem_title": "Montgomery local concentration and explicit prime mass",
+      "status": "Open",
+      "formal_statement": "namespace TaoFivePrimes\n\ntheorem montgomery_corollary47_and_prime_mass_source :\n    (∀ (x : ℕ) (w : ℕ → ℝ) (R : ℝ),\n      1 < x →\n      1 < R →\n      primorial ⌊R⌋₊ ∣\n        primorial (Nat.sqrt x) →\n      (∫ α in Metric.closedBall (0 : AddCircle (1 : ℝ))\n            (1 / (2 * R ^ 2)),\n          ‖TaoFourierIdentity.fourierPolynomial (Finset.range (x + 1))\n              (fun n ↦\n                ((siftedVonMangoldt x n * w n : ℝ) : ℂ))\n              (fun n ↦ (n : ℤ)) α‖ ^ 2\n            ∂AddCircle.haarAddCircle) ≤\n        (Real.log (x : ℝ) / Real.log R) *\n          (∑ n ∈ Finset.range (x + 1),\n            siftedVonMangoldt x n * (w n) ^ 2)) ∧\n    (∀ x : ℕ, 0 < x →\n      (∑ n ∈ Finset.range (x + 1), (Λ n : ℝ)) <\n        1.03883 * (x : ℝ)) := by\n  sorry\n\nend TaoFivePrimes",
+      "natural_language_statement": "This source theorem combines two uniform analytic estimates. First, for every $x>1$, $R>1$, and real weight sequence $w$, provided $\\lfloor R\\rfloor\\#\\mid\\lfloor\\sqrt{x}\\rfloor\\#$, the sifted Fourier polynomial obeys the local concentration bound $$\\int_{\\|\\alpha\\|\\le 1/(2R^2)}|S_w(x,\\alpha)|^2d\\alpha\\le \\frac{\\log x}{\\log R}\\sum_{n\\le x}\\Lambda_{\\sqrt{x}\\#}(n)w(n)^2.$$ Second, for every positive integer $x$, $$\\sum_{n\\le x}\\Lambda(n)<1.03883x.$$ These are respectively the $Q=1$ case of the Montgomery estimate used in Corollary 4.7 and the explicit Rosser--Schoenfeld prime-mass estimate.",
+      "created_at": "2026-09-09T22:18:14.890423+08:00",
+      "vote_count": 0,
+      "preamble": "import Definitions.Def_TaoFivePrimes_ArcSplit\nimport Mathlib.MeasureTheory.Integral.Bochner.Set\n\nopen scoped BigOperators ArithmeticFunction.vonMangoldt\nopen MeasureTheory",
+      "source": "Terence Tao, Every odd number greater than 1 is the sum of at most five primes, arXiv:1201.6656v4, Lemma 4.6 and Corollary 4.7; J. Barkley Rosser and Lowell Schoenfeld, Approximate formulas for some functions of prime numbers, Theorem 12, https://arxiv.org/abs/1201.6656",
+      "tags": [
+        "analytic-number-theory",
+        "fourier-analysis",
+        "goldbach",
+        "number-theory",
+        "sieve-theory"
+      ],
+      "created_by": "1218a2a5-fec3-4902-88f2-735b90eee971",
+      "created_by_username": "marwahaha",
+      "deprecated_at": null,
+      "visibility": "public",
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)"
+    }
+  ],
+  "total": 4
+}

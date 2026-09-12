@@ -1,0 +1,56 @@
+{
+  "decompositions": [
+    {
+      "submission_id": "5af56872-532b-4db1-abca-5f501e5a52b9",
+      "created_by": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "created_at": "2026-09-12T18:37:42.437416+08:00",
+      "deprecated_at": null,
+      "deprecated_by": null,
+      "children": [
+        {
+          "definition_id": "d5145161-07e1-4f2d-bf49-08bc6090dc85",
+          "definition_name": "TaoFivePrimes_ArcSplit",
+          "theorem_title": "Arc split for Tao's Theorem 8.2: the factors $S_{\\eta_1}$, $S_{\\eta_0}$, $D_{N_0/3}$ and the strongly major arc",
+          "ordinal": 0,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        },
+        {
+          "theorem_id": "f4cd87ed-a92c-4886-b0b7-e81a95dd0134",
+          "theorem_name": "TaoFivePrimes.eta1_quadratic_prime_mass",
+          "theorem_title": "Quadratic sifted prime mass for the Section 8 trapezoid",
+          "status": "Open",
+          "ordinal": 1,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        },
+        {
+          "theorem_id": "5f71df57-fdd6-4669-9e56-ce36eee723ce",
+          "theorem_name": "TaoFivePrimes.eta1_complementary_correlation",
+          "theorem_title": "One-percent complementary Fourier correlation for the Section 8 trapezoid",
+          "status": "Open",
+          "ordinal": 2,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        }
+      ]
+    },
+    {
+      "submission_id": null,
+      "created_by": null,
+      "created_at": null,
+      "deprecated_at": null,
+      "deprecated_by": null,
+      "children": [
+        {
+          "definition_id": "d5145161-07e1-4f2d-bf49-08bc6090dc85",
+          "definition_name": "TaoFivePrimes_ArcSplit",
+          "theorem_title": "Arc split for Tao's Theorem 8.2: the factors $S_{\\eta_1}$, $S_{\\eta_0}$, $D_{N_0/3}$ and the strongly major arc",
+          "ordinal": 0,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        }
+      ]
+    }
+  ]
+}

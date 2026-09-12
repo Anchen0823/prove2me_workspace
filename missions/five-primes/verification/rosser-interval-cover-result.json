@@ -1,0 +1,6 @@
+{
+  "sha256": "C29A9827DFB1B045AC3825ABF5B0E61AD73ADE433024EC409AD79D7F3E5C107B",
+  "checked_at": "2026-09-12T20:18:40.1854266+08:00",
+  "exit_code": 0,
+  "scope": "Conditional interval-cover reduction only; endpoint inequalities remain unproved"
+}

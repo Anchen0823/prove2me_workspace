@@ -1,0 +1,7 @@
+{
+  "checked_at": "2026-09-12T18:38:06.8637265+08:00",
+  "path": "examples/five-primes/FiniteDifference.lean",
+  "sha256": "4A4BAC3509B1734F0182069878D99441C57061EC82103609BC56E222E5BE77F3",
+  "exit_code": 0,
+  "scope": "Generic finite-support difference multiplier and norm inequality only; cutoff second-difference mass and integration remain."
+}

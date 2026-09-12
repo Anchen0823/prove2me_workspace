@@ -1,0 +1,6 @@
+{
+  "sha256": "CED5E20B5091BA1EBA31655EEE748B74CBE3D0BB40E11D78B926217CA9135D26",
+  "checked_at": "2026-09-12T20:20:47.2875814+08:00",
+  "exit_code": 0,
+  "scope": "Complete local proof of psi(113)<1.03883*113, including exact LCM and rational logarithm remainder bounds; no platform submission"
+}

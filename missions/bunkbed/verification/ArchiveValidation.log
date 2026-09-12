@@ -1,0 +1,31 @@
+examples/bunkbed/GroupingCore.lean:285:31: warning: This simp argument is unused:
+  Fin.isValue
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [twoLevel, if_pos, OfNat.ofNat, if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+examples/bunkbed/GroupingCore.lean:285:57: warning: This simp argument is unused:
+  if_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [twoLevel, if_pos, Fin.isValue, OfNat.ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Solutions/Sol_BunkbedFalse_sub_probability_grouping.lean:285:31: warning: This simp argument is unused:
+  Fin.isValue
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [twoLevel, if_pos, OfNat.ofNat, if_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Solutions/Sol_BunkbedFalse_sub_probability_grouping.lean:285:57: warning: This simp argument is unused:
+  if_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [twoLevel, if_pos, Fin.isValue, OfNat.ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'solution' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+Grouping proof and target-type checks passed in 186.09 seconds.
+Local platform theorem mirrors contain sorry placeholders; server verification is authoritative for their dependency status.
