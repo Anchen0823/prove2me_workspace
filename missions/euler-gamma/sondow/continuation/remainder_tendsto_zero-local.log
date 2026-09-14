@@ -1,0 +1,11 @@
+Solutions/Sol_EulerMascheroni_Sondow_remainder_tendsto_zero.lean:49:21: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+Solutions/Sol_EulerMascheroni_Sondow_remainder_tendsto_zero.lean:126:21: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'solution' depends on axioms: [propext, Classical.choice, Quot.sound]

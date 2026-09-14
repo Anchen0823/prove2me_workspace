@@ -1,0 +1,29 @@
+{
+  "theorems": [
+    {
+      "theorem_id": "66a4e48a-f260-4615-92d3-686ca9356509",
+      "theorem_name": "EulerMascheroni.gamma_irrational",
+      "theorem_title": "Euler's constant is irrational",
+      "status": "Open",
+      "formal_statement": "namespace EulerMascheroni\ntheorem gamma_irrational : Irrational Real.eulerMascheroniConstant := by sorry\nend EulerMascheroni",
+      "natural_language_statement": "Euler's constant $\\gamma$ is irrational: $\\gamma \\notin \\mathbb{Q}$.\n\nThis is **open**, and is the weaker of the two arithmetic questions about $\\gamma$ — transcendence implies irrationality but not conversely. It is the older and more famous form of the problem: despite $\\gamma$ having been computed to hundreds of billions of digits, and despite explicit criteria equivalent to its irrationality being available since Sondow's work, no proof is known.\n\nWhat is known is conditional or disjunctive: any rational representation would need a denominator exceeding $10^{244663}$, and at least one of $\\gamma$ and the Euler--Gompertz constant $\\delta$ must be irrational.\n\n**Formalization note.** `Irrational x` is Mathlib's predicate that `x` is not in the range of the coercion $\\mathbb{Q} \\to \\mathbb{R}$.",
+      "created_at": "2026-09-10T14:42:33.788462+08:00",
+      "vote_count": 0,
+      "preamble": "import Definitions.Def_eulerMascheroni_gompertz\n\nopen Real",
+      "source": "Open problem. Survey: J. Lagarias, Euler's constant: Euler's work and modern developments, Bull. Amer. Math. Soc. 50 (2013), https://arxiv.org/abs/1303.1856, Section 5 (Irrationality and transcendence).",
+      "tags": [
+        "constants",
+        "irrationality",
+        "number-theory",
+        "open-problem"
+      ],
+      "created_by": "da7ddf19-79a3-4afa-a245-03d734265eb8",
+      "created_by_username": "shivm",
+      "deprecated_at": null,
+      "visibility": "public",
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)"
+    }
+  ],
+  "total": 1
+}

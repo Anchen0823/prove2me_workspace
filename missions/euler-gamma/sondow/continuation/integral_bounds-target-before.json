@@ -1,0 +1,23 @@
+{
+  "theorem_id": "27c6fe99-da87-4ba6-870b-10ab9e038045",
+  "theorem_name": "EulerMascheroni.Sondow.integral_bounds",
+  "theorem_title": "Positive exponential decay of the Sondow integrals",
+  "status": "Open",
+  "formal_statement": "theorem EulerMascheroni.Sondow.integral_bounds (n : ℕ) (hn : 0 < n) :\n    0 < I n ∧ I n < (1/16:ℝ)^n := by sorry",
+  "natural_language_statement": "For every positive integer $n$,\n$$0<I_n<16^{-n}.$$\nThis is the integral part of Sondow's Lemma 3. It does not use a bound for the least common multiple or the integral evaluation involving Euler's constant.",
+  "created_at": "2026-09-14T17:54:41.904957+08:00",
+  "vote_count": 0,
+  "tags": [
+    "analysis",
+    "formalization",
+    "sondow"
+  ],
+  "preamble": "import Definitions.Def_eulerMascheroni_sondow\nopen EulerMascheroni.Sondow",
+  "source": "J. Sondow, https://arxiv.org/pdf/math/0209070, v2 (2002). Lemma 3, p. 10. An alternative elementary majorant is proved in the submitted solution.",
+  "deprecated_at": null,
+  "deprecated_by": null,
+  "visibility": "public",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "audits": [],
+  "readback": null
+}

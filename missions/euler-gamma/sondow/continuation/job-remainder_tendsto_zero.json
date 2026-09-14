@@ -1,0 +1,21 @@
+{
+  "id": "725cf162-fd3a-46d8-b57b-6ab302a90fed",
+  "kind": "problem",
+  "theorem_name": "EulerMascheroni.Sondow.remainder_tendsto_zero",
+  "theorem_title": "Vanishing of the Sondow geometric-series remainder",
+  "formal_statement": "theorem EulerMascheroni.Sondow.remainder_tendsto_zero (n : ℕ) (hn : 0 < n) :\n    Tendsto (remainder n) atTop (𝓝 0) := by sorry",
+  "natural_language_statement": "For each fixed positive integer $n$,\n$$\\lim_{N\\to\\infty}R_{n,N}=0.$$\nThis justifies removing the geometric-series cutoff in the double integral.",
+  "definitions": "import Definitions.Def_eulerMascheroni_sondowCutoff\nopen EulerMascheroni.Sondow Filter\nopen scoped Topology",
+  "source": "J. Sondow, https://arxiv.org/pdf/math/0209070, v2 (2002). Equation (9), p. 7, and the vanishing-remainder argument, p. 9.",
+  "tags": [
+    "sondow",
+    "formalization",
+    "analysis"
+  ],
+  "visibility": "public",
+  "status": "PUBLISHED",
+  "error_message": "",
+  "theorem_id": "fd0d6179-45fd-43aa-819e-5e803fd80c1d",
+  "created_at": "2026-09-14T17:54:31.267156+08:00",
+  "updated_at": "2026-09-14T17:54:50.239617+08:00"
+}

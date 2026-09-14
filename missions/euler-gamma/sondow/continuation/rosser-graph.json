@@ -1,0 +1,1485 @@
+{
+  "root_id": "cf6be7a8-2493-479a-9d57-6ee8535546d1",
+  "nodes": [
+    {
+      "node_type": "theorem",
+      "theorem_id": "00c91389-a414-4815-a3e6-2df7c4810a4a",
+      "theorem_name": "TaoFivePrimes.strongly_major_arc_prime_sums_to_cutoff_model",
+      "theorem_title": "Corrected verified-RH transfer on the strongly major arc",
+      "status": "Open",
+      "formal_statement": "namespace TaoFivePrimes\n\ntheorem strongly_major_arc_prime_sums_to_cutoff_model (x : ℕ)\n    (h1 : 87 * 10 ^ 35 ≤ x) :\n    let base : ℝ := (x : ℝ) ^ 2 / 1000\n    let cutoffCoefficient : ℂ :=\n      ∫ t : ℝ, ∫ s : ℝ,\n        (((eta1 s * eta1 (1 - s - t / 1000) * eta0 t : ℝ) : ℂ))\n    ‖(∫ α in Metric.closedBall (0 : AddCircle (1 : ℝ))\n            (3.29 * 10 ^ 9 / (3.6 * Real.pi * (x : ℝ))),\n          S1 x α ^ 2 * S0 x α * fourier (-(x : ℤ)) α\n            ∂AddCircle.haarAddCircle) -\n        (base : ℂ) * cutoffCoefficient‖ ≤\n      89 / 1000 * base := by\n  sorry\n\nend TaoFivePrimes",
+      "natural_language_statement": "Put $B=x^2/1000$ and\n\n$$C=\\int_{\\mathbb R}\\int_{\\mathbb R}\\eta_1(s)\\eta_1(1-s-t/1000)\\eta_0(t)\\,ds\\,dt.$$\n\nFor $x\\ge8.7\\times10^{36}$, the strongly-major integral with the positive-shift kernel frozen at its cardinality satisfies\n\n$$\\left|\\int_{\\|\\alpha\\|\\le T_0/(3.6\\pi x)}S_1^2S_0e(-x\\alpha)\\,d\\alpha-BC\\right|\\le0.089B.$$\n\nThis isolates Proposition 8.3's verified-RH prime-sum transfer. The bound uses corrected arithmetic: $A_2=252+256\\log2<430$ gives a $1.5\\times10^{-6}$ eta-zero envelope, and the two eta-one replacement terms are bounded by $0.04178$ and $0.01970$ rather than the paper's erroneous $0.02$ claim for (8.15). With the $0.01$ Fourier tail, the corrected total is below $0.07149<0.089$.",
+      "created_at": "2026-09-09T19:26:01.539563+08:00",
+      "vote_count": 0,
+      "preamble": "import Definitions.Def_TaoFivePrimes_ArcSplit\nimport Mathlib.MeasureTheory.Integral.Bochner.Set\n\nopen MeasureTheory",
+      "source": "Terence Tao, Every odd number greater than 1 is the sum of at most five primes, arXiv:1201.6656v4, Theorem 1.5, Lemma 4.1, Corollary 4.7, Proposition 7.2, and Proposition 8.3 equations (8.12)-(8.16), https://arxiv.org/html/1201.6656v4. Corrects the printed A2 <= 330 and (8.15) <= 0.02x arithmetic slips.",
+      "tags": [
+        "analytic-number-theory",
+        "circle-method",
+        "fourier-analysis",
+        "goldbach",
+        "number-theory",
+        "tao-five-primes"
+      ],
+      "audits": [],
+      "created_by": "1218a2a5-fec3-4902-88f2-735b90eee971",
+      "created_by_username": "marwahaha",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "047f3b9b-99a0-4ac3-a7b3-d183206a3315",
+      "theorem_name": "TaoFivePrimes.strongly_major_arc_eta_cutoff_fourier_bridge_source",
+      "theorem_title": "Fourier inversion and tail bridge for the major-arc cutoffs",
+      "status": "Proved",
+      "formal_statement": "namespace TaoFivePrimes\n\ntheorem strongly_major_arc_eta_cutoff_fourier_bridge_source (x : ℕ)\n    (h1 : 87 * 10 ^ 35 ≤ x) :\n    let A : Set (AddCircle (1 : ℝ)) :=\n      Metric.closedBall 0 (3.29 * 10 ^ 9 / (3.6 * Real.pi * (x : ℝ)))\n    let cutoffCoefficient : ℂ :=\n      ∫ t : ℝ, ∫ s : ℝ,\n        (((eta1 s * eta1 (1 - s - t / 1000) * eta0 t : ℝ) : ℂ))\n    ‖(x : ℂ) *\n          (∫ alpha in A,\n            stronglyMajorCutoffModel eta1 (x : ℝ) alpha ^ 2 *\n              stronglyMajorCutoffModel eta0 ((x : ℝ) / 1000) alpha *\n              fourier (-(x : ℤ)) alpha\n              ∂AddCircle.haarAddCircle) -\n        cutoffCoefficient‖ ≤ (1 / 100 : ℝ) := by\n  sorry\n\nend TaoFivePrimes",
+      "natural_language_statement": "For the literal cutoffs $\\eta_1,\\eta_0$ and the centered arc $A$ of radius $T_0/(3.6\\pi x)$, the scaled truncated Fourier integral $$x\\int_A E_1(\\alpha)^2E_0(\\alpha)e(-x\\alpha)\\,d\\alpha$$ differs by at most $0.01$ from the full convolution $$\\int_{\\mathbb R}\\int_{\\mathbb R}\\eta_1(s)\\eta_1(1-s-t/1000)\\eta_0(t)\\,ds\\,dt.$$ The result isolates ordinary Fourier inversion and the explicit tail estimate; it contains no assertion about primes or zeta zeros.",
+      "created_at": "2026-09-09T22:14:55.845632+08:00",
+      "vote_count": 0,
+      "preamble": "import Definitions.Def_TaoFivePrimes_ArcSplit\nimport Definitions.Def_TaoFivePrimes_stronglyMajorCutoffModel\nimport Mathlib.MeasureTheory.Integral.Bochner.Set\n\nopen MeasureTheory",
+      "source": "Terence Tao, Every odd number greater than 1 is the sum of at most five primes, arXiv:1201.6656v4, proof of Proposition 8.3, Fourier inversion and tail estimate after equation (8.15), https://arxiv.org/abs/1201.6656",
+      "tags": [
+        "fourier-analysis",
+        "goldbach",
+        "number-theory"
+      ],
+      "audits": [],
+      "created_by": "1218a2a5-fec3-4902-88f2-735b90eee971",
+      "created_by_username": "marwahaha",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "0572f368-9091-4cdd-99c2-41b475a5a1de",
+      "theorem_name": "TaoFivePrimes_FourierRepresentation",
+      "theorem_title": "Finite Fourier representation of Tao’s weighted prime count",
+      "status": "Definition",
+      "formal_statement": "",
+      "natural_language_statement": "A finite Fourier polynomial on the unit circle and the integrand for Tao’s weighted representation count. The integrand multiplies two copies of the first prime sum, the prime sum at scale x/1000, three positive-shift sums, and the character of frequency −x. The Fourier identity for this integrand is a separate theorem. The shifts run from 1 through floor(H/3), inclusively.",
+      "created_at": "2026-09-07T10:32:06.12473+08:00",
+      "vote_count": 0,
+      "definition": "import Mathlib.Analysis.Fourier.AddCircle\nimport Definitions.Def_TaoFivePrimes_RepresentationCount\n\n/-!\n# Finite Fourier sums for Tao's weighted representation count\n\nThe product below is the finite-sum form of equation (8.11) in Tao's\nfive-primes paper, https://arxiv.org/abs/1201.6656, at `K = 1000`.\nThe circle has period one and carries its probability Haar measure.\n-/\n\nopen scoped BigOperators\n\nnamespace TaoFourierIdentity\n\n/-- A finite polynomial in the characters of the unit circle. -/\nnoncomputable def fourierPolynomial {ι : Type*} (s : Finset ι) (a : ι → ℂ)\n    (k : ι → ℤ) (α : AddCircle (1 : ℝ)) : ℂ :=\n  ∑ i ∈ s, a i * fourier (k i) α\n\nend TaoFourierIdentity\n\nnamespace TaoFivePrimes\n\n/-- The circle-method integrand for the count, with three positive shift sums. -/\nnoncomputable def representationIntegrand (x H : ℕ) (α : AddCircle (1 : ℝ)) : ℂ :=\n  TaoFourierIdentity.fourierPolynomial (Finset.range (x + 1))\n    (fun n ↦ (siftedVonMangoldt x n * eta1 ((n : ℝ) / x) : ℝ))\n    (fun n ↦ (n : ℤ)) α ^ 2 *\n  TaoFourierIdentity.fourierPolynomial (Finset.range (x / 1000 + 1))\n    (fun n ↦ (siftedVonMangoldt (x / 1000) n * eta0 (1000 * (n : ℝ) / x) : ℝ))\n    (fun n ↦ (n : ℤ)) α *\n  TaoFourierIdentity.fourierPolynomial (Finset.Icc 1 (H / 3)) (fun _ ↦ 1)\n    (fun n ↦ (n : ℤ)) α ^ 3 * fourier (-(x : ℤ)) α\n\nend TaoFivePrimes\n",
+      "source": "Terence Tao, https://arxiv.org/abs/1201.6656, equation (8.11), using the fixed K=1000 chosen immediately afterward. Finite-sum formulation with the count from (8.10).",
+      "tags": [
+        "circle-method",
+        "fourier-analysis",
+        "number-theory"
+      ],
+      "audits": [],
+      "created_by": "17f933ae-8394-408f-914b-efee8b07292c",
+      "created_by_username": "Patrick",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "1bed5b1b-c98f-4a5b-9160-7dd30d82e37f",
+      "theorem_name": "TaoFivePrimes.sum_siftedVonMangoldt_eta1_sq_le_104",
+      "theorem_title": "Sharpened explicit Chebyshev bound for the sifted prime mass against $\\eta_1^2$",
+      "status": "Proved",
+      "formal_statement": "theorem TaoFivePrimes.sum_siftedVonMangoldt_eta1_sq_le_104 (x : ℕ) (h1 : 87 * 10 ^ 35 ≤ x) :\n    ∑ n ∈ Finset.range (x + 1),\n        TaoFivePrimes.siftedVonMangoldt x n * TaoFivePrimes.eta1 ((n : ℝ) / x) ^ 2\n      ≤ 1.04 * x := by sorry",
+      "natural_language_statement": "Let $x\\ge 87\\cdot10^{35}$ be an integer, let $\\eta_1$ be the trapezoidal cutoff of Section 8,\n\n$$\\eta_1(t)=\\bigl(1-10\\operatorname{dist}(t,[0.2,0.8])\\bigr)_{+},$$\n\nand sift the von Mangoldt function by the product of the primes up to $\\sqrt x$. Then the quadratic prime mass carried by the cutoff satisfies\n\n$$\\sum_{n\\le x}\\Lambda(n)\\,\\mathbf 1_{(n,\\sqrt x\\,\\sharp)=1}\\;\\eta_1\\!\\left(\\frac nx\\right)^{2}\\;\\le\\;1.04\\,x .$$\n\nIn the notation of Section 4 the left-hand side is $S_{\\eta_1^2,\\sqrt x\\sharp}(x,0)$, so this is the trivial upper bound (4.3) for the cutoff $\\eta_1^{2}$, whose supremum is $1$ by (8.3), with the constant $1.04$ that the Chebyshev estimate $\\psi(x)\\le1.04\\,x$ of Rosser and Schoenfeld supplies. It is the upper half of the two-sided mass estimate that Section 8 checks against the hypotheses of Corollary 4.9.",
+      "created_at": "2026-09-14T04:00:38.225597+08:00",
+      "vote_count": 0,
+      "preamble": "import Mathlib\nimport Definitions.Def_TaoFivePrimes_ArcSplit",
+      "source": "Terence Tao, \"Every odd number greater than 1 is the sum of at most five primes\", Mathematics of Computation 83 (2014), 997-1038; arXiv:1201.6656, https://arxiv.org/abs/1201.6656, Section 4, Lemma 4.3, equation (4.3), specialised to the cutoff $\\eta_1^2$ of Section 8 (Section 8, equation (8.3) gives $\\|\\eta_1\\|_{L^\\infty}=1$)",
+      "tags": [
+        "analytic-number-theory",
+        "goldbach",
+        "number-theory"
+      ],
+      "audits": [],
+      "created_by": "39239d21-47ea-43c1-be7c-62b7b556902d",
+      "created_by_username": "Hartmann_Psi",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "1dbb406b-10e5-4316-a023-6eba73b6e726",
+      "theorem_name": "TaoFivePrimes.strongly_major_arc_prime_amplitude",
+      "theorem_title": "Strongly-major prime-amplitude bound",
+      "status": "Proved",
+      "formal_statement": "namespace TaoFivePrimes\n\ntheorem strongly_major_arc_prime_amplitude (x : ℕ)\n    (h1 : 87 * 10 ^ 35 ≤ x) :\n    (∫ α in Metric.closedBall (0 : AddCircle (1 : ℝ))\n          (3.29 * 10 ^ 9 / (3.6 * Real.pi * (x : ℝ))),\n        ‖S1 x α‖ ^ 2 * ‖S0 x α‖ ∂AddCircle.haarAddCircle) ≤\n      100 * ((x : ℝ) ^ 2 / 1000) := by\n  sorry\n\nend TaoFivePrimes",
+      "natural_language_statement": "For $x\\ge8.7\\times10^{36}$, the mixed prime amplitude on the strongly major arc satisfies\n\n$$\\int_{\\|\\alpha\\|\\le T_0/(3.6\\pi x)}|S_1(x,\\alpha)|^2|S_0(x,\\alpha)|\\,d\\alpha\\le100\\frac{x^2}{1000}.$$\n\nThe bound follows from the central-arc $L^2$ estimate for $S_1$ and the unconditional pointwise estimate $|S_0|\\le16x/1000$, derived from Mathlib's Chebyshev-function inequality. The direct calculation actually gives the stronger constant $48$.",
+      "created_at": "2026-09-09T19:25:59.365898+08:00",
+      "vote_count": 0,
+      "preamble": "import Definitions.Def_TaoFivePrimes_ArcSplit\nimport Mathlib.MeasureTheory.Integral.Bochner.Set\n\nopen MeasureTheory",
+      "source": "Derived from Tao arXiv:1201.6656v4, Corollary 4.7 and the amplitude-control step in Proposition 8.3, together with the unconditional Chebyshev psi bound formalized in Mathlib, https://arxiv.org/html/1201.6656v4",
+      "tags": [
+        "analytic-number-theory",
+        "circle-method",
+        "fourier-analysis",
+        "goldbach",
+        "number-theory",
+        "tao-five-primes"
+      ],
+      "audits": [],
+      "created_by": "1218a2a5-fec3-4902-88f2-735b90eee971",
+      "created_by_username": "marwahaha",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "1e9a2d48-7c78-4af8-8ff3-8adf4b2b247e",
+      "theorem_name": "TaoFivePrimes_stronglyMajorCutoffModel",
+      "theorem_title": "Centered Fourier cutoff model on the unit circle",
+      "status": "Definition",
+      "formal_statement": "",
+      "natural_language_statement": "For a real cutoff $\\eta$, a real scale $y$, and a point $\\alpha\\in\\mathbb R/\\mathbb Z$, let $\\widetilde\\alpha\\in[-1/2,1/2)$ be the centered representative of $\\alpha$. Define\n$$E_{\\eta,y}(\\alpha)=\\int_{\\mathbb R}\\eta(t)\\exp\\!\\left(2\\pi i\\,y\\widetilde\\alpha t\\right)\\,dt.$$\nThis is the ordinary Fourier transform model, with Tao's positive-phase convention $e(u)=e^{2\\pi i u}$, used to approximate the two sifted prime sums on the strongly major arc in Section 8.",
+      "created_at": "2026-09-09T21:10:10.698248+08:00",
+      "vote_count": 0,
+      "definition": "import Mathlib.Analysis.Fourier.AddCircle\nimport Mathlib.MeasureTheory.Integral.Bochner.Basic\n\nnamespace TaoFivePrimes\n\n/-- The ordinary real Fourier transform of a cutoff, evaluated at the centered\nrepresentative of `alpha : ℝ / ℤ` and a real scale.  This uses Tao's convention\n`e(u) = exp(2 * pi * i * u)`. -/\nnoncomputable def stronglyMajorCutoffModel (eta : ℝ → ℝ) (scale : ℝ)\n    (alpha : AddCircle (1 : ℝ)) : ℂ :=\n  ∫ t : ℝ, (eta t : ℂ) *\n    Complex.exp\n      (2 * Real.pi * Complex.I *\n        ((scale * AddCircle.liftIoc (1 : ℝ) (-(1 / 2 : ℝ)) id alpha) * t))\n\nend TaoFivePrimes\n",
+      "source": "Terence Tao, Every odd number greater than 1 is the sum of at most five primes, arXiv:1201.6656v4, Section 8, especially the Fourier models in eqs. 8.13–8.16, https://arxiv.org/html/1201.6656v4",
+      "tags": [
+        "analytic-number-theory",
+        "fourier-analysis",
+        "goldbach",
+        "number-theory"
+      ],
+      "audits": [],
+      "created_by": "1218a2a5-fec3-4902-88f2-735b90eee971",
+      "created_by_username": "marwahaha",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "23f56258-f2e8-4acb-a0f1-253783b6ae1e",
+      "theorem_name": "TaoFivePrimes.DK_strongly_major_approx",
+      "theorem_title": "Strongly major arc approximation for the shift kernel",
+      "status": "Proved",
+      "formal_statement": "namespace TaoFivePrimes\n\ntheorem DK_strongly_major_approx (x : ℕ) (hx : 87 * 10 ^ 35 ≤ x)\n    (α : AddCircle (1 : ℝ))\n    (hα : α ∈ Metric.closedBall (0 : AddCircle (1 : ℝ))\n      (3.29 * 10 ^ 9 / (3.6 * Real.pi * (x : ℝ)))) :\n    ‖DK (4 * 10 ^ 14) α - ((4 * 10 ^ 14 / 3 : ℕ) : ℂ)‖ ≤\n      (1 / 10 ^ 10 : ℝ) * ((4 * 10 ^ 14 / 3 : ℕ) : ℝ) := by sorry\n\nend TaoFivePrimes",
+      "natural_language_statement": "Let $x\\ge87\\cdot10^{35}$ and let $\\alpha\\in\\mathbb R/\\mathbb Z$ lie on the strongly major arc\n$$\n\\|\\alpha\\|\\le\\frac{3.29\\cdot10^9}{3.6\\pi x}.\n$$\nFor the positive-shift Dirichlet kernel\n$$\nD(\\alpha)=\\sum_{1\\le n\\le\\lfloor(4\\cdot10^{14})/3\\rfloor}e(n\\alpha),\n$$\nprove the explicit relative approximation\n$$\n\\left|D(\\alpha)-\\left\\lfloor\\frac{4\\cdot10^{14}}3\\right\\rfloor\\right|\n\\le10^{-10}\\left\\lfloor\\frac{4\\cdot10^{14}}3\\right\\rfloor.\n$$\nThis is the corrected finite-sum form of equation (8.13). Each character differs from $1$ by at most $2\\pi n\\|\\alpha\\|$; summing the resulting geometric error and using the lower bound on $x$ gives the displayed $10^{-10}$ estimate.",
+      "created_at": "2026-09-09T17:15:35.036765+08:00",
+      "vote_count": 0,
+      "preamble": "import Definitions.Def_TaoFivePrimes_ArcSplit\nimport Mathlib.Analysis.SpecialFunctions.Trigonometric.Bounds",
+      "source": "Terence Tao, Every odd number greater than 1 is the sum of at most five primes, Mathematics of Computation 83 (2014), 997–1038; arXiv:1201.6656v4, Section 8, equation (8.13), p. 33. https://arxiv.org/html/1201.6656v4#S8. The printed center N0/2 is a typo: the definition, equation (8.11), and preceding mean-value calculation all use D_{N0/3}; this formalization uses the exact natural cardinality floor(N0/3).",
+      "tags": [
+        "circle-method",
+        "fourier-analysis",
+        "major-arcs",
+        "number-theory",
+        "tao-five-primes"
+      ],
+      "audits": [],
+      "created_by": "1218a2a5-fec3-4902-88f2-735b90eee971",
+      "created_by_username": "marwahaha",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "25d2bcac-c9d9-463f-8093-7a532ad00a3d",
+      "theorem_name": "TaoFivePrimes.S0_coe_eq_smoothedExpSum",
+      "theorem_title": "Exact identification of S₀ with the smoothed exponential sum",
+      "status": "Proved",
+      "formal_statement": "namespace TaoFivePrimes\n\ntheorem S0_coe_eq_smoothedExpSum (x : ℕ) (hx : 1000 ≤ x) (theta : ℝ) :\n    S0 x (theta : AddCircle (1 : ℝ)) =\n      smoothedExpSum eta0 (primorial (Nat.sqrt (x / 1000)))\n        ((x : ℝ) / 1000) theta := by\n  sorry\n\nend TaoFivePrimes",
+      "natural_language_statement": "Let $x\\ge1000$ be an integer and let $\\theta\\in\\mathbb R$. The finite Fourier factor $S_0$ used in the five-primes arc split is exactly Tao's real-frequency smoothed exponential sum at scale $x/1000$:\n\n$$\nS_0(x,[\\theta])\n=\nS_{\\eta_0,\\,\\sqrt{x/1000}\\,\\sharp}\n\\left(\\frac{x}{1000},\\theta\\right).\n$$\n\nHere $\\eta_0$ is Tao's logarithmic cutoff and\n$\\sqrt{x/1000}\\,\\sharp$ denotes the product of the primes up to\n$\\sqrt{\\lfloor x/1000\\rfloor}$.\n\nThis identity connects the finite additive-circle representation used in Section 8 to the real-frequency exponential-sum estimates of Theorem 1.3.\n\n**Formalization Note** Natural-number division fixes the scale and sieve modulus in the finite definition. The cutoff vanishes at its right endpoint, so extending the finite sum to the unrestricted smoothed sum introduces no terms.",
+      "created_at": "2026-09-09T16:35:09.396731+08:00",
+      "vote_count": 0,
+      "preamble": "import Definitions.Def_TaoFivePrimes_ArcSplit\r\nimport Definitions.Def_TaoFivePrimes_SmoothedExpSum\r\n\r\nopen scoped ArithmeticFunction.vonMangoldt BigOperators",
+      "source": "Terence Tao, “Every odd number greater than 1 is the sum of at most five primes,” Mathematics of Computation 83 (2014), 997–1038, arXiv:1201.6656v4, https://arxiv.org/abs/1201.6656. The definition of S_{η,q₀}(x,α) in Section 1 immediately before equation (1.7), together with the Section 8 choice K=10^3 and the S_{η₀,√(x/K)♯}(x/K,α) factor in equation (8.11).",
+      "tags": [
+        "analytic-number-theory",
+        "five-primes",
+        "fourier-analysis",
+        "number-theory"
+      ],
+      "audits": [],
+      "created_by": "1218a2a5-fec3-4902-88f2-735b90eee971",
+      "created_by_username": "marwahaha",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "30efbeb8-fb86-4988-ac69-9da4bbe78e85",
+      "theorem_name": "TaoFivePrimes_SmoothedExpSum",
+      "theorem_title": "Tao's smoothed exponential sum $S_{\\eta,q_0}(x,\\alpha)$",
+      "status": "Definition",
+      "formal_statement": "",
+      "natural_language_statement": "Tao's five-primes paper does not work with the sharp-cutoff exponential sum $S(x,\\alpha)=\\sum_{n\\leq x}\\Lambda(n)e(\\alpha n)$, but with a smoothed variant. For a piecewise smooth cutoff $\\eta$ and a modulus $q_0$, Section 1 sets\n\n$$S_{\\eta,q_0}(x,\\alpha) \\;:=\\; \\sum_n \\Lambda(n)\\, e(\\alpha n)\\, \\mathbf 1_{(n,q_0)=1}\\, \\eta(n/x),$$\n\nwhere $e(\\theta)=e^{2\\pi i\\theta}$ and $\\Lambda$ is the von Mangoldt function. This is the object estimated by Theorem 1.3, and the factors appearing in the Fourier expression (8.11) for the weighted representation count are instances of it.\n\n**The modulus.** $q_0$ is described in the paper as being of minor technical importance. Taking $q_0=2$ restricts the sum to odd $n$ and saves a factor of two in the explicit constants; because of that restriction it is $4\\alpha$, rather than $\\alpha$, that is approximated by a rational $a/q$ in the paper's estimates. Theorem 1.3 imposes the standing hypothesis that every prime factor of $q_0$ is at most $\\sqrt x$, which is what admits the choice $q_0=\\prod_{p\\leq\\sqrt x}p$ used at level $x$ in Section 8. That hypothesis belongs on the theorems, not on this definition, so it is not imposed here.\n\n**The range of summation.** The sum over $n$ is unrestricted rather than a sum over a finite range, following the paper and the mission's stated convention. The cutoffs actually used ($\\eta_0$ supported on $[1/4,1]$, $\\eta_1$ on $[0.1,0.9]$) are compactly supported away from the origin, so for $x>0$ only finitely many terms are nonzero and the family is summable; the value is the ordinary finite sum.\n\n**Formalization notes.** The cutoff is taken as $\\eta:\\mathbb R\\to\\mathbb R$ rather than the paper's $\\mathbb R\\to\\mathbb C$. Every cutoff used in the paper is real-valued, and this choice lets the existing platform cutoffs `eta0` and `eta1` be substituted without a cast; the complex generality is never used in the estimates. The coprimality condition is `Nat.Coprime n q₀`, which is $\\gcd(n,q_0)=1$, so $q_0=1$ imposes no restriction and $q_0=0$ restricts to $n=1$. The auxiliary `expCircle` is the character $e(\\theta)$.",
+      "created_at": "2026-09-07T16:04:49.699215+08:00",
+      "vote_count": 0,
+      "definition": "import Mathlib.NumberTheory.ArithmeticFunction.VonMangoldt\nimport Mathlib.Analysis.SpecialFunctions.Complex.Circle\n\n/-!\n# The smoothed exponential sum of Tao's five-primes paper\n\nSource: Terence Tao, https://arxiv.org/abs/1201.6656, Section 1, the display\ndefining `S_{η,q₀}(x,α)` immediately before equation (1.7).\n\nThe sum is unrestricted over `n : ℕ`; the cutoffs used in the paper are compactly\nsupported away from `0`, so only finitely many terms are nonzero.\n-/\n\nopen scoped ArithmeticFunction.vonMangoldt\n\nnamespace TaoFivePrimes\n\n/-- `expCircle θ = e(θ) = exp(2πiθ)`, the additive character of the paper. -/\nnoncomputable def expCircle (θ : ℝ) : ℂ :=\n  Complex.exp (2 * Real.pi * Complex.I * θ)\n\n/-- Tao's smoothed exponential sum\n\n`S_{η,q₀}(x, α) = ∑ₙ Λ(n) e(αn) 1_{(n,q₀)=1} η(n/x)`,\n\nfor a cutoff `η`, a modulus `q₀`, a scale `x` and a phase `α`. -/\nnoncomputable def smoothedExpSum (η : ℝ → ℝ) (q₀ : ℕ) (x α : ℝ) : ℂ :=\n  ∑' n : ℕ,\n    if Nat.Coprime n q₀ then\n      (Λ n : ℂ) * expCircle (α * n) * (η ((n : ℝ) / x) : ℂ)\n    else 0\n\nend TaoFivePrimes\n",
+      "source": "Terence Tao, Every odd number greater than 1 is the sum of at most five primes, Mathematics of Computation 83 (2014), 997-1038, https://arxiv.org/abs/1201.6656, Section 1, p. 4, the display defining S_{eta,q_0}(x,alpha) immediately preceding equation (1.7); the q_0 hypothesis is that of Theorem 1.3, p. 5.",
+      "tags": [
+        "circle-method",
+        "exponential-sums",
+        "goldbach",
+        "number-theory"
+      ],
+      "audits": [],
+      "created_by": "1218a2a5-fec3-4902-88f2-735b90eee971",
+      "created_by_username": "marwahaha",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "39f55b4d-803f-4cc8-9bbc-95d2cf849768",
+      "theorem_name": "TaoFivePrimes.smoothedExpSum_eta0_primorial_prop72_source",
+      "theorem_title": "Proposition 7.2 prime-sum approximation for the weakly major arc",
+      "status": "Open",
+      "formal_statement": "namespace TaoFivePrimes\n\ntheorem smoothedExpSum_eta0_primorial_prop72_source\n    (x : ℕ) (h1 : 87 * 10 ^ 35 ≤ x) (theta : ℝ)\n    (hup : |theta| ≤ 1000 * T0 / (4 * Real.pi * x)) :\n    let y : ℝ := (x : ℝ) / 1000\n    ‖smoothedExpSum eta0 (primorial (Nat.sqrt (x / 1000))) y theta -\n        (y : ℂ) * ∫ t : ℝ, (eta0 t : ℂ) * expCircle (theta * y * t)‖ ≤\n      (15 : ℝ) / 10 ^ 7 * y := by\n  sorry\n\nend TaoFivePrimes",
+      "natural_language_statement": "Put $y=x/1000$ and sift the von Mangoldt sum by the primorial of $\\lfloor\\sqrt{x/1000}\\rfloor$. If $x\\ge 8.7\\times10^{36}$ and $|\\theta|\\le 1000T_0/(4\\pi x)$, then this sifted exponential sum differs from $$y\\int_{\\mathbb R}\\eta_0(t)e^{2\\pi i\\theta yt}\\,dt$$ by at most $1.5\\times10^{-6}y$. This is Proposition 7.2 with the verified Riemann-hypothesis height $T_0=3.29\\times10^9$, followed by Lemma 4.1 for the sieve-modulus change. The $1.5\\times10^{-6}$ envelope uses the corrected coefficient $252+256\\log 2\\approx429.45$; the displayed upper bound $330$ in the paper is an arithmetic error.",
+      "created_at": "2026-09-09T22:08:11.384131+08:00",
+      "vote_count": 0,
+      "preamble": "import Definitions.Def_TaoFivePrimes_ArcSplit\nimport Definitions.Def_TaoFivePrimes_SmoothedExpSum",
+      "source": "Terence Tao, Every odd number greater than 1 is the sum of at most five primes, arXiv:1201.6656v4, Lemma 4.1, Proposition 7.2, and Section 8 weakly-major-arc estimate, https://arxiv.org/abs/1201.6656",
+      "tags": [
+        "analytic-number-theory",
+        "goldbach",
+        "number-theory",
+        "riemann-hypothesis"
+      ],
+      "audits": [],
+      "created_by": "1218a2a5-fec3-4902-88f2-735b90eee971",
+      "created_by_username": "marwahaha",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "3fa7d8d1-e2ce-4057-894d-f39a2f0a4a8d",
+      "theorem_name": "TaoFivePrimes.schoenfeld_psi_error_large",
+      "theorem_title": "Explicit two-sided Chebyshev error above 10^8",
+      "status": "Open",
+      "formal_statement": "theorem TaoFivePrimes.schoenfeld_psi_error_large (y : ℝ) (hy : 10 ^ 8 ≤ y) : |Chebyshev.psi y - y| ≤ y / (40 * Real.log y) := by sorry",
+      "natural_language_statement": "For every real number y at least 10^8, the second Chebyshev function satisfies $$|\\psi(y)-y|\\le y/(40\\log y).$$ Here psi is the sum of the von Mangoldt function over positive integers at most y. This is the explicit prime-counting input invoked in the proof of Tao's Lemma 4.3. It supplies the unsifted quadratic prime mass estimate by piecewise Abel summation. The statement is unconditional; no Riemann hypothesis assumption is introduced. The source node records a genuine number-theoretic estimate, not an assumption about the mission's particular cutoff.",
+      "created_at": "2026-09-12T20:01:43.52427+08:00",
+      "vote_count": 0,
+      "preamble": "import Mathlib.NumberTheory.Chebyshev",
+      "source": "T. Tao, Every odd number greater than 1 is the sum of at most five primes, arXiv:1201.6656v4, Section 4, proof of Lemma 4.3 (https://arxiv.org/html/1201.6656v4), invoking L. Schoenfeld, Sharper bounds for the Chebyshev functions theta(x) and psi(x). II, Math. Comp. 30 (1976), Theorem 7. The estimate was checked in Tao's proof; the original Schoenfeld PDF was not independently inspected.",
+      "tags": [],
+      "audits": [],
+      "created_by": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "created_by_username": "Yuxuan Xu",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "48e5337b-62c2-4e24-8c38-b047da4fe522",
+      "theorem_name": "TaoFivePrimes_RepresentationCount",
+      "theorem_title": "Tao's weighted three-prime representation count (K = 1000)",
+      "status": "Definition",
+      "formal_statement": "",
+      "natural_language_statement": "Let $x,H$ be natural numbers. This defines the weighted count in equation (8.10) of Tao's five-primes paper, with the parameter fixed at $K=1000$ as in the proof of Theorem 8.2. Write\n\n$$\\eta_0(t)=4\\max(0,\\log2-|\\log(2t)|)\\quad(t>0),\\qquad\\eta_0(t)=0\\quad(t\\leq0),$$\n$$\\eta_1(t)=\\max(0,1-10\\operatorname{dist}(t,[1/5,4/5])).$$\n\nFor a natural bound $N$, set $A_N(n)=\\Lambda(n)\\mathbf1_{\\gcd(n,\\prod_{p\\leq\\sqrt N}p)=1}$. The representation count is\n\n$$R(x,H)=\\sum_{n_1,n_2\\leq x}\\sum_{n_3\\leq\\lfloor x/1000\\rfloor}\\sum_{1\\leq h_1,h_2,h_3\\leq\\lfloor H/3\\rfloor} A_x(n_1)\\eta_1(n_1/x)A_x(n_2)\\eta_1(n_2/x)A_{\\lfloor x/1000\\rfloor}(n_3)\\eta_0(1000n_3/x)\\mathbf1_{x=n_1+n_2+n_3+h_1+h_2+h_3}.$$\n\nThe application takes $H=4\\cdot10^{14}$. A positive count yields three odd primes with sum in $[x-H,x-2]$; the difficult analytic task is to establish that positivity. The finite natural-number ranges retain their upper endpoints. The zero indices contribute zero because $\\Lambda(0)=0$.\n\n**Formalization Note** Natural division supplies the floor bounds. For nonnegative real $y$, the primes at most $\\sqrt y$ are precisely those at most $\\operatorname{Nat.sqrt}(\\lfloor y\\rfloor)$, so the third primorial has the paper's real square-root cutoff.",
+      "created_at": "2026-09-07T10:17:33.673162+08:00",
+      "vote_count": 0,
+      "definition": "import Mathlib.NumberTheory.ArithmeticFunction.VonMangoldt\nimport Mathlib.NumberTheory.Primorial\nimport Mathlib.Topology.MetricSpace.HausdorffDistance\n\n/-!\n# The weighted representation count in Tao's five-primes proof\n\nSource: Terence Tao, https://arxiv.org/abs/1201.6656, equations (1.7), (8.10),\nand the definition of η₁ at the beginning of Section 8. The proof fixes `K = 1000`.\nNatural division gives the integer bounds in the finite sums. Primorial cutoffs\nare inclusive, as in the paper's Section 2 conventions.\n-/\n\nopen scoped BigOperators ArithmeticFunction.vonMangoldt\n\nnamespace TaoFivePrimes\n\n/-- Tao's logarithmic cutoff, extended by zero to nonpositive arguments. -/\nnoncomputable def eta0 (t : ℝ) : ℝ :=\n  if 0 < t then 4 * max 0 (Real.log 2 - |Real.log (2 * t)|) else 0\n\n/-- The trapezoidal cutoff used for the first two primes in Section 8. -/\nnoncomputable def eta1 (t : ℝ) : ℝ :=\n  max 0 (1 - 10 * Metric.infDist t (Set.Icc (1 / 5 : ℝ) (4 / 5)))\n\n/-- Von Mangoldt with all prime factors at most `sqrt N` removed. -/\nnoncomputable def siftedVonMangoldt (N n : ℕ) : ℝ :=\n  if n.Coprime (primorial (Nat.sqrt N)) then Λ n else 0\n\n/-- Equation (8.10), at `K = 1000`, with a general gap budget `H`.\nThe three positive shifts each have upper bound `H / 3`. -/\nnoncomputable def representationCount (x H : ℕ) : ℝ :=\n  ∑ n₁ ∈ Finset.range (x + 1),\n  ∑ n₂ ∈ Finset.range (x + 1),\n  ∑ n₃ ∈ Finset.range (x / 1000 + 1),\n  ∑ h₁ ∈ Finset.Icc 1 (H / 3),\n  ∑ h₂ ∈ Finset.Icc 1 (H / 3),\n  ∑ h₃ ∈ Finset.Icc 1 (H / 3),\n    if x = n₁ + n₂ + n₃ + h₁ + h₂ + h₃ then\n      siftedVonMangoldt x n₁ * eta1 ((n₁ : ℝ) / x) *\n      siftedVonMangoldt x n₂ * eta1 ((n₂ : ℝ) / x) *\n      siftedVonMangoldt (x / 1000) n₃ * eta0 (1000 * (n₃ : ℝ) / x)\n    else 0\n\nend TaoFivePrimes\n",
+      "source": "Terence Tao, https://arxiv.org/abs/1201.6656, equations (1.7) and (8.10), the definition of eta1 at the start of Section 8, and the choice K=10^3 following (8.11).",
+      "tags": [
+        "circle-method",
+        "exponential-sums",
+        "goldbach",
+        "number-theory"
+      ],
+      "audits": [],
+      "created_by": "17f933ae-8394-408f-914b-efee8b07292c",
+      "created_by_username": "Patrick",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "6b6610ed-d7c4-4f97-a537-b43a3ce04af9",
+      "theorem_name": "TaoFivePrimes.strongly_major_arc_S1_L2_upper_3",
+      "theorem_title": "Central-arc L² upper bound for the first prime sum",
+      "status": "Proved",
+      "formal_statement": "namespace TaoFivePrimes\n\ntheorem strongly_major_arc_S1_L2_upper_3 (x : ℕ)\n    (h1 : 87 * 10 ^ 35 ≤ x) :\n    (∫ α in Metric.closedBall (0 : AddCircle (1 : ℝ))\n          (3.29 * 10 ^ 9 / (3.6 * Real.pi * (x : ℝ))),\n        ‖S1 x α‖ ^ 2 ∂AddCircle.haarAddCircle) ≤ 3 * (x : ℝ) := by\n  sorry\n\nend TaoFivePrimes",
+      "natural_language_statement": "For $x\\ge8.7\\times10^{36}$, the $L^2$ mass of Tao's first sifted prime sum on the strongly major arc is at most $3x$:\n\n$$\\int_{\\|\\alpha\\|\\le T_0/(3.6\\pi x)}|S_1(x,\\alpha)|^2\\,d\\alpha\\le3x.$$\n\nThis is Corollary 4.7 specialized to $q=(\\sqrt{x})\\#$ and the literal Section 8 cutoff $\\eta_1$. Its explicit factor, combined with Lemma 4.3, is below $3$ throughout the stated range.",
+      "created_at": "2026-09-09T19:25:54.809352+08:00",
+      "vote_count": 0,
+      "preamble": "import Definitions.Def_TaoFivePrimes_ArcSplit\nimport Mathlib.MeasureTheory.Integral.Bochner.Set\n\nopen MeasureTheory",
+      "source": "Terence Tao, Every odd number greater than 1 is the sum of at most five primes, arXiv:1201.6656v4, Lemma 4.3, Corollary 4.7, and Proposition 8.3 error estimates, https://arxiv.org/html/1201.6656v4",
+      "tags": [
+        "analytic-number-theory",
+        "circle-method",
+        "fourier-analysis",
+        "goldbach",
+        "number-theory",
+        "tao-five-primes"
+      ],
+      "audits": [],
+      "created_by": "1218a2a5-fec3-4902-88f2-735b90eee971",
+      "created_by_username": "marwahaha",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "753f5c48-d6dc-4534-bd08-faccf7af7bdc",
+      "theorem_name": "TaoFivePrimes.montgomery_corollary47_and_prime_mass_source",
+      "theorem_title": "Montgomery local concentration and explicit prime mass",
+      "status": "Open",
+      "formal_statement": "namespace TaoFivePrimes\n\ntheorem montgomery_corollary47_and_prime_mass_source :\n    (∀ (x : ℕ) (w : ℕ → ℝ) (R : ℝ),\n      1 < x →\n      1 < R →\n      primorial ⌊R⌋₊ ∣\n        primorial (Nat.sqrt x) →\n      (∫ α in Metric.closedBall (0 : AddCircle (1 : ℝ))\n            (1 / (2 * R ^ 2)),\n          ‖TaoFourierIdentity.fourierPolynomial (Finset.range (x + 1))\n              (fun n ↦\n                ((siftedVonMangoldt x n * w n : ℝ) : ℂ))\n              (fun n ↦ (n : ℤ)) α‖ ^ 2\n            ∂AddCircle.haarAddCircle) ≤\n        (Real.log (x : ℝ) / Real.log R) *\n          (∑ n ∈ Finset.range (x + 1),\n            siftedVonMangoldt x n * (w n) ^ 2)) ∧\n    (∀ x : ℕ, 0 < x →\n      (∑ n ∈ Finset.range (x + 1), (Λ n : ℝ)) <\n        1.03883 * (x : ℝ)) := by\n  sorry\n\nend TaoFivePrimes",
+      "natural_language_statement": "This source theorem combines two uniform analytic estimates. First, for every $x>1$, $R>1$, and real weight sequence $w$, provided $\\lfloor R\\rfloor\\#\\mid\\lfloor\\sqrt{x}\\rfloor\\#$, the sifted Fourier polynomial obeys the local concentration bound $$\\int_{\\|\\alpha\\|\\le 1/(2R^2)}|S_w(x,\\alpha)|^2d\\alpha\\le \\frac{\\log x}{\\log R}\\sum_{n\\le x}\\Lambda_{\\sqrt{x}\\#}(n)w(n)^2.$$ Second, for every positive integer $x$, $$\\sum_{n\\le x}\\Lambda(n)<1.03883x.$$ These are respectively the $Q=1$ case of the Montgomery estimate used in Corollary 4.7 and the explicit Rosser--Schoenfeld prime-mass estimate.",
+      "created_at": "2026-09-09T22:18:14.890423+08:00",
+      "vote_count": 0,
+      "preamble": "import Definitions.Def_TaoFivePrimes_ArcSplit\nimport Mathlib.MeasureTheory.Integral.Bochner.Set\n\nopen scoped BigOperators ArithmeticFunction.vonMangoldt\nopen MeasureTheory",
+      "source": "Terence Tao, Every odd number greater than 1 is the sum of at most five primes, arXiv:1201.6656v4, Lemma 4.6 and Corollary 4.7; J. Barkley Rosser and Lowell Schoenfeld, Approximate formulas for some functions of prime numbers, Theorem 12, https://arxiv.org/abs/1201.6656",
+      "tags": [
+        "analytic-number-theory",
+        "fourier-analysis",
+        "goldbach",
+        "number-theory",
+        "sieve-theory"
+      ],
+      "audits": [],
+      "created_by": "1218a2a5-fec3-4902-88f2-735b90eee971",
+      "created_by_username": "marwahaha",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "77dc484e-c2c4-4e1b-8d3d-8ebc9792da48",
+      "theorem_name": "TaoFivePrimes.sum_siftedVonMangoldt_eta1_sq_le",
+      "theorem_title": "Explicit Chebyshev bound for the sifted prime mass against $\\eta_1^2$",
+      "status": "Proved",
+      "formal_statement": "theorem TaoFivePrimes.sum_siftedVonMangoldt_eta1_sq_le (x : ℕ) (h1 : 87 * 10 ^ 35 ≤ x) :\n    ∑ n ∈ Finset.range (x + 1),\n        TaoFivePrimes.siftedVonMangoldt x n * TaoFivePrimes.eta1 ((n : ℝ) / x) ^ 2\n      ≤ 1.08 * x := by sorry",
+      "natural_language_statement": "Let $x\\ge 87\\cdot10^{35}$ be an integer, let $\\eta_1$ be the trapezoidal cutoff of Section 8,\n\n$$\\eta_1(t)=\\bigl(1-10\\operatorname{dist}(t,[0.2,0.8])\\bigr)_{+},$$\n\nand sift the von Mangoldt function by the product of the primes up to $\\sqrt x$. Then the quadratic prime mass carried by the cutoff satisfies\n\n$$\\sum_{n\\le x}\\Lambda(n)\\,\\mathbf 1_{(n,\\sqrt x\\,\\sharp)=1}\\;\\eta_1\\!\\left(\\frac nx\\right)^{2}\\;\\le\\;1.08\\,x .$$\n\nIn the notation of Section 4 the left-hand side is $S_{\\eta_1^2,\\sqrt x\\sharp}(x,0)$, so this is the trivial upper bound (4.3) for the cutoff $\\eta_1^{2}$, whose supremum is $1$ by (8.3). It is the crude form of the mass estimate that Section 8 needs; the constant $1.08$ is superseded by $1.04$, matching the Chebyshev bound $\\psi(x)\\le1.04x$.",
+      "created_at": "2026-09-14T01:25:06.007495+08:00",
+      "vote_count": 0,
+      "preamble": "import Mathlib\nimport Definitions.Def_TaoFivePrimes_ArcSplit",
+      "source": "Terence Tao, \"Every odd number greater than 1 is the sum of at most five primes\", Mathematics of Computation 83 (2014), 997-1038; arXiv:1201.6656, https://arxiv.org/abs/1201.6656, Section 4, Lemma 4.3, equation (4.3), specialised to the cutoff $\\eta_1^2$ of Section 8 (Section 8, equation (8.3) gives $\\|\\eta_1\\|_{L^\\infty}=1$); intermediate constant",
+      "tags": [
+        "analytic-number-theory",
+        "goldbach",
+        "number-theory"
+      ],
+      "audits": [],
+      "created_by": "39239d21-47ea-43c1-be7c-62b7b556902d",
+      "created_by_username": "Hartmann_Psi",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "890427c4-bd83-4412-ad3a-e66d3f0bf738",
+      "theorem_name": "TaoFivePrimes.strongly_major_arc_prop72_eta1_pointwise_prime_sum_source",
+      "theorem_title": "Proposition 7.2 pointwise prime estimate for eta1",
+      "status": "Open",
+      "formal_statement": "namespace TaoFivePrimes\n\ntheorem strongly_major_arc_prop72_eta1_pointwise_prime_sum_source (x : ℕ)\n    (h1 : 87 * 10 ^ 35 ≤ x) :\n    let A : Set (AddCircle (1 : ℝ)) :=\n      Metric.closedBall 0 (3.29 * 10 ^ 9 / (3.6 * Real.pi * (x : ℝ)))\n    ∀ alpha ∈ A,\n      ‖S1 x alpha - (x : ℂ) *\n          stronglyMajorCutoffModel eta1 (x : ℝ) alpha‖ ≤\n        (1 / 10 ^ 6 : ℝ) * (x : ℝ) := by\n  sorry\n\nend TaoFivePrimes",
+      "natural_language_statement": "Let $x\\ge 8.7\\times10^{36}$ and let $A$ be the centered arc of radius $T_0/(3.6\\pi x)$ in $\\mathbb R/\\mathbb Z$. For every $\\alpha\\in A$, the sifted prime exponential sum with the trapezoidal cutoff $\\eta_1$ satisfies $$\\lVert S_1(x,\\alpha)-x\\widehat{\\eta_1}(-x\\alpha)\\rVert\\le 10^{-6}x.$$ This is the distinct $\\eta_1$ specialization of Proposition 7.2 followed by the Lemma 4.1 sieve-modulus comparison.",
+      "created_at": "2026-09-09T22:14:57.617975+08:00",
+      "vote_count": 0,
+      "preamble": "import Definitions.Def_TaoFivePrimes_ArcSplit\nimport Definitions.Def_TaoFivePrimes_stronglyMajorCutoffModel",
+      "source": "Terence Tao, Every odd number greater than 1 is the sum of at most five primes, arXiv:1201.6656v4, Lemma 4.1, Proposition 7.2, and Section 8 strongly-major-arc estimate, https://arxiv.org/abs/1201.6656",
+      "tags": [
+        "analytic-number-theory",
+        "goldbach",
+        "number-theory",
+        "riemann-hypothesis"
+      ],
+      "audits": [],
+      "created_by": "1218a2a5-fec3-4902-88f2-735b90eee971",
+      "created_by_username": "marwahaha",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "8c85073b-2610-405c-a2ae-1db56b8cc061",
+      "theorem_name": "TaoFivePrimes.strongly_major_arc_prop72_fourier_source",
+      "theorem_title": "Verified-RH Fourier source for the strongly major arc",
+      "status": "Open",
+      "formal_statement": "theorem TaoFivePrimes.strongly_major_arc_prop72_fourier_source (x : ℕ)\n    (h1 : 87 * 10 ^ 35 ≤ x) :\n    let A : Set (AddCircle (1 : ℝ)) :=\n      Metric.closedBall 0 (3.29 * 10 ^ 9 / (3.6 * Real.pi * (x : ℝ)))\n    let cutoffCoefficient : ℂ :=\n      ∫ t : ℝ, ∫ s : ℝ,\n        (((eta1 s * eta1 (1 - s - t / 1000) * eta0 t : ℝ) : ℂ))\n    ContinuousOn (stronglyMajorCutoffModel eta1 (x : ℝ)) A ∧\n    ContinuousOn (stronglyMajorCutoffModel eta0 ((x : ℝ) / 1000)) A ∧\n    (∀ alpha ∈ A,\n      ‖S1 x alpha - (x : ℂ) *\n          stronglyMajorCutoffModel eta1 (x : ℝ) alpha‖ ≤\n        (1 / 10 ^ 6 : ℝ) * (x : ℝ)) ∧\n    (∀ alpha ∈ A,\n      ‖S0 x alpha - (((x : ℝ) / 1000 : ℝ) : ℂ) *\n          stronglyMajorCutoffModel eta0 ((x : ℝ) / 1000) alpha‖ ≤\n        (15 / 10 ^ 7 : ℝ) * ((x : ℝ) / 1000)) ∧\n    (∀ alpha ∈ A,\n      ‖stronglyMajorCutoffModel eta0 ((x : ℝ) / 1000) alpha‖ ≤ 1) ∧\n    (∫ alpha in A, ‖stronglyMajorCutoffModel eta1 (x : ℝ) alpha‖ ^ 2\n        ∂AddCircle.haarAddCircle) ≤\n      2 / (3 * (x : ℝ)) ∧\n    ‖(x : ℂ) *\n          (∫ alpha in A,\n            stronglyMajorCutoffModel eta1 (x : ℝ) alpha ^ 2 *\n              stronglyMajorCutoffModel eta0 ((x : ℝ) / 1000) alpha *\n              fourier (-(x : ℤ)) alpha\n              ∂AddCircle.haarAddCircle) -\n        cutoffCoefficient‖ ≤ (1 / 100 : ℝ) := by\n  sorry",
+      "natural_language_statement": "Let\n$$A_x=\\left\\{\\alpha\\in\\mathbb R/\\mathbb Z:\\|\\alpha\\|\\le \\frac{3.29\\times10^9}{3.6\\pi x}\\right\\},$$\nand let $E_1(\\alpha)=E_{\\eta_1,x}(\\alpha)$ and $E_0(\\alpha)=E_{\\eta_0,x/1000}(\\alpha)$ be the centered Fourier cutoff models. For $x\\ge 87\\cdot10^{35}$, the two models are continuous on $A_x$ and satisfy\n$$|S_1(x,\\alpha)-xE_1(\\alpha)|\\le10^{-6}x,$$\n$$|S_0(x,\\alpha)-(x/1000)E_0(\\alpha)|\\le1.5\\times10^{-6}(x/1000),\\qquad |E_0(\\alpha)|\\le1.$$\nMoreover,\n$$\\int_{A_x}|E_1(\\alpha)|^2\\,d\\alpha\\le\\frac{2}{3x},$$\nand the truncated Fourier product differs by at most $0.01$ from the exact full-line cutoff convolution\n$$C=\\int_{\\mathbb R}\\!\\int_{\\mathbb R}\\eta_1(s)\\eta_1(1-s-t/1000)\\eta_0(t)\\,ds\\,dt.$$\nThis packages the remaining verified-RH explicit-formula, sieve-removal, Plancherel, Fourier-tail, and inversion inputs in Tao's strongly-major-arc argument. The $1.5\\times10^{-6}$ envelope corrects the paper's numerical estimate $252+256\\log 2\\le330$; the actual constant is below $430$.",
+      "created_at": "2026-09-09T21:13:29.907158+08:00",
+      "vote_count": 0,
+      "preamble": "import Definitions.Def_TaoFivePrimes_ArcSplit\nimport Definitions.Def_TaoFivePrimes_stronglyMajorCutoffModel\nimport Mathlib.MeasureTheory.Integral.Bochner.Set\n\nopen MeasureTheory\nopen TaoFivePrimes",
+      "source": "Terence Tao, Every odd number greater than 1 is the sum of at most five primes, arXiv:1201.6656v4, Proposition 7.2 and Section 8, especially eqs. 8.13–8.16 and the Fourier-tail/inversion passage following eq. 8.16, https://arxiv.org/html/1201.6656v4",
+      "tags": [
+        "additive-number-theory",
+        "analytic-number-theory",
+        "fourier-analysis",
+        "goldbach",
+        "number-theory",
+        "riemann-hypothesis"
+      ],
+      "audits": [],
+      "created_by": "1218a2a5-fec3-4902-88f2-735b90eee971",
+      "created_by_username": "marwahaha",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "a344a104-cfea-4b7d-b89c-1e96a9269db0",
+      "theorem_name": "TaoFivePrimes.strongly_major_arc_eta1_restricted_plancherel_source",
+      "theorem_title": "Restricted Plancherel bound for the eta1 cutoff",
+      "status": "Proved",
+      "formal_statement": "namespace TaoFivePrimes\n\ntheorem strongly_major_arc_eta1_restricted_plancherel_source (x : ℕ)\n    (h1 : 87 * 10 ^ 35 ≤ x) :\n    (∫ alpha in\n        Metric.closedBall (0 : AddCircle (1 : ℝ))\n          (3.29 * 10 ^ 9 / (3.6 * Real.pi * (x : ℝ))),\n        ‖stronglyMajorCutoffModel eta1 (x : ℝ) alpha‖ ^ 2\n          ∂AddCircle.haarAddCircle) ≤\n      2 / (3 * (x : ℝ)) := by\n  sorry\n\nend TaoFivePrimes",
+      "natural_language_statement": "Let $E_1(\\alpha)=\\int_{\\mathbb R}\\eta_1(t)e^{2\\pi i x\\alpha t}\\,dt$ and let $A$ be the centered arc of radius $T_0/(3.6\\pi x)$. For $x\\ge8.7\\times10^{36}$, $$\\int_A |E_1(\\alpha)|^2\\,d\\alpha\\le \\frac{2}{3x}.$$ This is the restriction of real Plancherel after the change of variables $u=x\\alpha$, using the exact identity $\\int\\eta_1(t)^2dt=2/3$.",
+      "created_at": "2026-09-09T22:14:57.443919+08:00",
+      "vote_count": 0,
+      "preamble": "import Definitions.Def_TaoFivePrimes_ArcSplit\nimport Definitions.Def_TaoFivePrimes_stronglyMajorCutoffModel\nimport Mathlib.MeasureTheory.Integral.Bochner.Set\n\nopen MeasureTheory",
+      "source": "Terence Tao, Every odd number greater than 1 is the sum of at most five primes, arXiv:1201.6656v4, Section 8, equations (8.2) and the Plancherel step in Proposition 8.3, https://arxiv.org/abs/1201.6656",
+      "tags": [
+        "fourier-analysis",
+        "goldbach",
+        "number-theory"
+      ],
+      "audits": [],
+      "created_by": "1218a2a5-fec3-4902-88f2-735b90eee971",
+      "created_by_username": "marwahaha",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "b75369cf-8100-4985-a2ce-e27b35030107",
+      "theorem_name": "TaoFivePrimes.montgomery_corollary47_source",
+      "theorem_title": "Montgomery's local $L^2$ concentration bound for the sifted Fourier polynomial",
+      "status": "Proved",
+      "formal_statement": "namespace TaoFivePrimes\n\ntheorem montgomery_corollary47_source :\n    ∀ (x : ℕ) (w : ℕ → ℝ) (R : ℝ),\n      1 < x →\n      1 < R →\n      primorial ⌊R⌋₊ ∣\n        primorial (Nat.sqrt x) →\n      (∫ α in Metric.closedBall (0 : AddCircle (1 : ℝ))\n            (1 / (2 * R ^ 2)),\n          ‖TaoFourierIdentity.fourierPolynomial (Finset.range (x + 1))\n              (fun n ↦\n                ((siftedVonMangoldt x n * w n : ℝ) : ℂ))\n              (fun n ↦ (n : ℤ)) α‖ ^ 2\n            ∂AddCircle.haarAddCircle) ≤\n        (Real.log (x : ℝ) / Real.log R) *\n          (∑ n ∈ Finset.range (x + 1),\n            siftedVonMangoldt x n * (w n) ^ 2) := by\n  sorry\n\nend TaoFivePrimes",
+      "natural_language_statement": "For every $x > 1$, every $R > 1$ and every real weight sequence $w$, provided the primorial of $\\lfloor R\\rfloor$ divides the primorial of $\\lfloor\\sqrt{x}\\rfloor$, the sifted Fourier polynomial obeys the local concentration bound\n\n$$\\int_{\\|\\alpha\\| \\le 1/(2R^2)} |S_w(x,\\alpha)|^2 \\, d\\alpha \\;\\le\\; \\frac{\\log x}{\\log R} \\sum_{n \\le x} \\Lambda_{\\sqrt{x}\\#}(n)\\, w(n)^2 ,$$\n\nwhere $\\Lambda_{\\sqrt{x}\\#}$ is the sifted von Mangoldt weight and $S_w(x,\\cdot)$ the corresponding exponential sum.\n\nThis is the $Q = 1$ case of the Montgomery estimate that Tao invokes at Corollary 4.7, and it is one of the large-sieve inputs to the major-arc analysis: it says the $L^2$ mass of the sifted exponential sum near the origin is controlled by the sifted mass of the weights, with a loss of only $\\log x / \\log R$.\n\n**Provenance note.** This statement was previously bundled, in a single platform node, with the unrelated Rosser--Schoenfeld bound $\\sum_{n\\le x}\\Lambda(n) < 1.03883x$. The two come from different papers and neither depends on the other, so they are separated here to let each be attacked on its own.",
+      "created_at": "2026-09-10T17:59:31.450231+08:00",
+      "vote_count": 0,
+      "preamble": "import Definitions.Def_TaoFivePrimes_ArcSplit\nimport Mathlib.MeasureTheory.Integral.Bochner.Set\n\nopen scoped BigOperators ArithmeticFunction.vonMangoldt\nopen MeasureTheory",
+      "source": "Terence Tao, Every odd number greater than 1 is the sum of at most five primes, arXiv:1201.6656v4, Lemma 4.6 and Corollary 4.7 (the Q = 1 case of the Montgomery estimate).",
+      "tags": [
+        "analytic-number-theory",
+        "large-sieve",
+        "number-theory",
+        "tao-five-primes"
+      ],
+      "audits": [],
+      "created_by": "da7ddf19-79a3-4afa-a245-03d734265eb8",
+      "created_by_username": "shivm",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "c78fd776-bb76-45ac-a6f4-78fd9213d230",
+      "theorem_name": "TaoFivePrimes.strongly_major_arc_discrete_to_cutoff_model",
+      "theorem_title": "Strongly major arc: reduction to the cutoff convolution",
+      "status": "Open",
+      "formal_statement": "namespace TaoFivePrimes\n\ntheorem strongly_major_arc_discrete_to_cutoff_model (x : ℕ)\n    (h1 : 87 * 10 ^ 35 ≤ x) :\n    let scale : ℝ :=\n      (x : ℝ) ^ 2 / 1000 * ((4 * 10 ^ 14 / 3 : ℕ) : ℝ) ^ 3\n    let cutoffCoefficient : ℂ :=\n      ∫ t : ℝ, ∫ s : ℝ,\n        (((eta1 s * eta1 (1 - s - t / 1000) * eta0 t : ℝ) : ℂ))\n    ‖(∫ α in Metric.closedBall (0 : AddCircle (1 : ℝ))\n            (3.29 * 10 ^ 9 / (3.6 * Real.pi * (x : ℝ))),\n          representationIntegrand x (4 * 10 ^ 14) α\n            ∂AddCircle.haarAddCircle) -\n        (scale : ℂ) * cutoffCoefficient‖ ≤\n      9 / 100 * scale := by sorry\n\nend TaoFivePrimes",
+      "natural_language_statement": "For an integer $x\\ge 87\\cdot10^{35}$, set\n$$\nM=\\frac{x^2}{1000}\\left\\lfloor\\frac{4\\cdot10^{14}}3\\right\\rfloor^3\n$$\nand define the full-line cutoff coefficient\n$$\nC=\\int_{\\mathbb R}\\int_{\\mathbb R}\n \\eta_1(s)\\eta_1\\!\\left(1-s-\\frac{t}{1000}\\right)\\eta_0(t)\\,ds\\,dt.\n$$\nLet $I(x)$ be the integral of Tao's finite circle-method representation integrand over the closed central arc\n$$\n\\|\\alpha\\|\\le \\frac{3.29\\cdot10^9}{3.6\\pi x}.\n$$\nProve the explicit approximation\n$$\n|I(x)-MC|\\le 0.09M.\n$$\nThis statement isolates the analytic part of Proposition 8.3: the verified-RH major-arc approximations for the three prime sums, removal of the primorial sieve factors, approximation of the positive-shift kernel, the two Cauchy--Schwarz error integrals, and the Fourier tail. It retains the cutoff convolution $C$ exactly, so its normalization is handled separately.",
+      "created_at": "2026-09-09T17:07:46.694984+08:00",
+      "vote_count": 0,
+      "preamble": "import Definitions.Def_TaoFivePrimes_FourierRepresentation\nimport Mathlib.Analysis.Normed.Group.AddCircle\nimport Mathlib.MeasureTheory.Integral.Bochner.Set\n\nopen MeasureTheory",
+      "source": "Terence Tao, Every odd number greater than 1 is the sum of at most five primes, Mathematics of Computation 83 (2014), 997–1038; arXiv:1201.6656v4, Section 8, Proposition 8.3 and equations (8.12)–(8.16), pp. 32–35. https://arxiv.org/html/1201.6656v4#S8. This child stops at the exact cutoff convolution before the source normalization slip. It uses the corrected N0/3 in (8.13), alpha*x/K in the eta0 Fourier factor, and central radius T0/(3.6*pi*x). The 0.09 budget safely contains the source analytic errors while excluding the separate cutoff-mass correction.",
+      "tags": [
+        "analytic-number-theory",
+        "circle-method",
+        "major-arcs",
+        "number-theory",
+        "prime-numbers",
+        "tao-five-primes"
+      ],
+      "audits": [],
+      "created_by": "1218a2a5-fec3-4902-88f2-735b90eee971",
+      "created_by_username": "marwahaha",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "cef034c1-c2c7-4270-810e-0543b8aad89d",
+      "theorem_name": "TaoFivePrimes.major_arc_estimate",
+      "theorem_title": "Proposition 8.3: the strongly major arc estimate (8.12)",
+      "status": "Open",
+      "formal_statement": "namespace TaoFivePrimes\n\ntheorem major_arc_estimate (x : ℕ) (h1 : 87 * 10 ^ 35 ≤ x) (h2 : (x : ℝ) ≤ Real.exp 3100) :\n    ‖(∫ α in majorArc x, representationIntegrand x (4 * 10 ^ 14) α ∂AddCircle.haarAddCircle)\n        - ((2 / 3 * ((x : ℝ) ^ 2 / 1000 * ((4 * 10 ^ 14 / 3 : ℕ) : ℝ) ^ 3) : ℝ) : ℂ)‖\n      ≤ 0.1 * ((x : ℝ) ^ 2 / 1000 * ((4 * 10 ^ 14 / 3 : ℕ) : ℝ) ^ 3) := by sorry\n\nend TaoFivePrimes",
+      "natural_language_statement": "**Strongly major arc estimate (Proposition 8.3).** Let $8.7\\times10^{36}\\le x\\le e^{3100}$ be an integer, $K=1000$, $N_0=4\\times10^{14}$, $T_0=3.29\\times10^9$. Then\n$$\\int_{\\|\\alpha\\|_{\\mathbb R/\\mathbb Z}\\le\\frac{T_0}{3.6\\pi x}} S_{\\eta_1,\\sqrt x\\sharp}(x,\\alpha)^2\\,S_{\\eta_0,\\sqrt{x/K}\\sharp}(x/K,\\alpha)\\,D_{N_0/3}(\\alpha)^3\\,e(-x\\alpha)\\,d\\alpha \\;=\\; \\frac{x^2}{K}\\Big(\\frac{N_0}{3}\\Big)^3\\Big(\\frac23+\\mathcal O^*(0.1)\\Big),$$\ni.e. the integral over the strongly major arc differs from $\\frac23\\cdot\\frac{x^2}{K}(N_0/3)^3$ by at most $0.1\\cdot\\frac{x^2}{K}(N_0/3)^3$ in absolute value. Here $N_0/3$ is the integer $\\lfloor N_0/3\\rfloor$, matching the length of the kernel `DK`.\n\nThis is the main term of the circle-method argument for Theorem 8.2. In the paper it is proved from: the mean-value bound (8.13) $D_{N_0/3}(\\alpha)=(N_0/3)(1+\\mathcal O^*(10^{-10}))$ on the arc; Proposition 7.2 (the von Mangoldt explicit formula with the zeros of $\\zeta$ up to height $T_0$ — this is where Theorem 1.5, the numerical verification of RH, enters), which gives $S_{\\eta_0,1}(x/K,\\alpha)=\\frac xK(\\hat\\eta_0(\\alpha x/K)+\\mathcal O^*(10^{-6}))$ and $S_{\\eta_1,1}(x,\\alpha)=x(\\hat\\eta_1(\\alpha x)+\\mathcal O^*(10^{-6}))$ on the arc; Lemma 4.1 to remove the sieve; Corollary 4.7 and Lemma 4.3 to control the error terms (8.15)–(8.16) by $0.02x$; and the calculus identity $\\int\\eta_1(s)\\eta_1(1-s-t/K)\\,ds=1+\\mathcal O^*(10/K)$ using (8.1), (8.4), (8.5).\n\nThe integral is over the probability Haar measure on $\\mathbb R/\\mathbb Z$, restricted to `majorArc x`; the integrand is `representationIntegrand`, which equals the displayed product by `representationIntegrand_eq`.",
+      "created_at": "2026-09-08T10:22:29.190738+08:00",
+      "vote_count": 0,
+      "preamble": "import Definitions.Def_TaoFivePrimes_ArcSplit\nopen MeasureTheory",
+      "source": "T. Tao, Every odd number greater than 1 is the sum of at most five primes, Math. Comp. 83 (2014), 997-1038, https://arxiv.org/abs/1201.6656, Section 8, Proposition 8.3, eq. (8.12), pp. 38-41",
+      "tags": [
+        "additive-number-theory",
+        "circle-method",
+        "five-primes",
+        "goldbach",
+        "number-theory"
+      ],
+      "audits": [],
+      "created_by": "3027dcae-7aa5-4c26-8bae-885182dbc806",
+      "created_by_username": "tabbott",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": true
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "cf6be7a8-2493-479a-9d57-6ee8535546d1",
+      "theorem_name": "TaoFivePrimes.rosser_schoenfeld_psi_bound",
+      "theorem_title": "Rosser–Schoenfeld: $\\psi(x) \\lt 1.03883\\,x$",
+      "status": "Open",
+      "formal_statement": "namespace TaoFivePrimes\n\ntheorem rosser_schoenfeld_psi_bound :\n    ∀ x : ℕ, 0 < x →\n      (∑ n ∈ Finset.range (x + 1), (Λ n : ℝ)) <\n        1.03883 * (x : ℝ) := by\n  sorry\n\nend TaoFivePrimes",
+      "natural_language_statement": "For every positive integer $x$, the second Chebyshev function satisfies\n\n$$\\psi(x) \\;=\\; \\sum_{n \\le x} \\Lambda(n) \\;\\lt\\; 1.03883\\,x .$$\n\nThis is the explicit prime-mass estimate of Rosser and Schoenfeld, and the constant is sharp in the sense that it cannot be replaced by anything much smaller: the ratio $\\psi(x)/x$ comes within a fraction of a percent of $1.03883$ near $x = 113$, so the bound must be verified against the small-$x$ regime and not only asymptotically. That is what distinguishes it from softer Chebyshev bounds such as $\\psi(x) \\le x\\log 4$, which are far weaker.\n\nIt enters Tao's argument as the crude upper bound on total prime mass used to control error terms.\n\n**Provenance note.** This statement was previously bundled, in a single platform node, with an unrelated Montgomery large-sieve estimate. The two come from different papers and neither depends on the other, so they are separated here.\n\n**Formalization note.** The sum is written over `Finset.range (x + 1)`, i.e. over $n \\le x$, and $\\Lambda$ is Mathlib's `ArithmeticFunction.vonMangoldt`. Note that the mission also carries the weaker `psi_le_112_large`, with constant $1.12$ and only for large $x$; that result does not imply this one.",
+      "created_at": "2026-09-10T17:59:33.40691+08:00",
+      "vote_count": 0,
+      "preamble": "import Definitions.Def_TaoFivePrimes_ArcSplit\nimport Mathlib.MeasureTheory.Integral.Bochner.Set\n\nopen scoped BigOperators ArithmeticFunction.vonMangoldt\nopen MeasureTheory",
+      "source": "J. Barkley Rosser and Lowell Schoenfeld, Approximate formulas for some functions of prime numbers, Illinois J. Math. 6 (1962), 64-94, Theorem 12 (psi(x) < 1.03883 x). Used in Terence Tao, arXiv:1201.6656v4, Section 4.",
+      "tags": [
+        "analytic-number-theory",
+        "chebyshev",
+        "explicit-bounds",
+        "number-theory",
+        "tao-five-primes"
+      ],
+      "audits": [],
+      "created_by": "da7ddf19-79a3-4afa-a245-03d734265eb8",
+      "created_by_username": "shivm",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "d00b420a-79b6-40a4-8672-45b925bfa352",
+      "theorem_name": "TaoFivePrimes.smoothedExpSum_eta0_one_prop72_source",
+      "theorem_title": "Verified-RH eta0 prime-sum approximation at modulus one",
+      "status": "Open",
+      "formal_statement": "namespace TaoFivePrimes\n\ntheorem smoothedExpSum_eta0_one_prop72_source\n    (x : ℕ) (h1 : 87 * 10 ^ 35 ≤ x) (theta : ℝ)\n    (hup : |theta| ≤ 1000 * T0 / (4 * Real.pi * x)) :\n    let y : ℝ := (x : ℝ) / 1000\n    ‖smoothedExpSum eta0 1 y theta -\n        (y : ℂ) * ∫ t : ℝ, (eta0 t : ℂ) * expCircle (theta * y * t)‖ ≤\n      (141 : ℝ) / 10 ^ 8 * y := by sorry\n\nend TaoFivePrimes",
+      "natural_language_statement": "Let $x\\ge 8.7\\times 10^{36}$, set $y=x/1000$, and assume $|\\theta|\\le 1000T_0/(4\\pi x)$. The unsieved, logarithmically smoothed von Mangoldt exponential sum at modulus $1$ differs from its Fourier-integral main term by at most $1.41\\times 10^{-6}y$. This is the verified-RH Proposition 7.2 input before the elementary primorial-modulus transfer.",
+      "created_at": "2026-09-09T23:23:42.297432+08:00",
+      "vote_count": 0,
+      "preamble": "import Definitions.Def_TaoFivePrimes_ArcSplit\nimport Definitions.Def_TaoFivePrimes_SmoothedExpSum",
+      "source": "Terence Tao, Every odd number greater than 1 is the sum of at most five primes, arXiv:1201.6656v4, Section 7, Proposition 7.2, specialized in Section 8 to eta0 and y=x/1000 with the corrected variation coefficient, https://arxiv.org/abs/1201.6656",
+      "tags": [
+        "additive-number-theory",
+        "exponential-sums",
+        "number-theory",
+        "tao-five-primes",
+        "verified-rh"
+      ],
+      "audits": [],
+      "created_by": "1218a2a5-fec3-4902-88f2-735b90eee971",
+      "created_by_username": "marwahaha",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "d4854f25-d5e0-443d-89e8-0aa15f90e19e",
+      "theorem_name": "TaoFivePrimes.strongly_major_arc_S1_L2_corollary47_source",
+      "theorem_title": "Corollary 4.7 bound for the central $S_1$ mass",
+      "status": "Proved",
+      "formal_statement": "namespace TaoFivePrimes\n\n\ntheorem strongly_major_arc_S1_L2_corollary47_source (x : ℕ)\n    (h1 : 87 * 10 ^ 35 ≤ x) :\n    (∫ α in Metric.closedBall (0 : AddCircle (1 : ℝ))\n          (3.29 * 10 ^ 9 / (3.6 * Real.pi * (x : ℝ))),\n        ‖S1 x α‖ ^ 2 ∂AddCircle.haarAddCircle) ≤\n      (2 /\n          (1 - Real.log (2 * T0 / (3.6 * Real.pi)) /\n            Real.log (x : ℝ))) *\n        (1.04 * (x : ℝ)) := by sorry\n\nend TaoFivePrimes",
+      "natural_language_statement": "Let $x\\ge 87\\cdot10^{35}$ be an integer, let $T_0=3.29\\cdot10^9$, and let $S_1(x,\\alpha)=S_{\\eta_1,\\sqrt{x}\\#}(x,\\alpha)$ be the sifted exponential sum formed with the trapezoidal cutoff $\\eta_1$. On the central arc of radius $T_0/(3.6\\pi x)$, its squared mass satisfies\n$$\n\\int_{\\|\\alpha\\|_{\\mathbb R/\\mathbb Z}\\le T_0/(3.6\\pi x)} |S_1(x,\\alpha)|^2\\,d\\alpha\n\\le \\frac{2}{1-\\dfrac{\\log(2T_0/(3.6\\pi))}{\\log x}}\\,(1.04x).\n$$\nThis is Corollary 4.7 specialized to the literal Section 8 cutoff and the primorial modulus, followed by Lemma 4.3 and $\\|\\eta_1^2\\|_\\infty=1$. It records the sharp cited route; the additional factor $4\\log 2$ printed later in display (8.17) comes from a weaker derivative-variation estimate and is not part of this specialization.",
+      "created_at": "2026-09-09T20:30:25.482929+08:00",
+      "vote_count": 0,
+      "preamble": "import Definitions.Def_TaoFivePrimes_ArcSplit\nimport Mathlib.MeasureTheory.Integral.Bochner.Set\n\nopen scoped BigOperators",
+      "source": "Terence Tao, Every odd number greater than 1 is the sum of at most five primes, arXiv:1201.6656v4, Corollary 4.7 and Lemma 4.3, specialized to the Section 8 cutoff and radius: https://arxiv.org/html/1201.6656v4",
+      "tags": [
+        "analytic-number-theory",
+        "fourier-analysis",
+        "number-theory"
+      ],
+      "audits": [],
+      "created_by": "1218a2a5-fec3-4902-88f2-735b90eee971",
+      "created_by_username": "marwahaha",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "d5145161-07e1-4f2d-bf49-08bc6090dc85",
+      "theorem_name": "TaoFivePrimes_ArcSplit",
+      "theorem_title": "Arc split for Tao's Theorem 8.2: the factors $S_{\\eta_1}$, $S_{\\eta_0}$, $D_{N_0/3}$ and the strongly major arc",
+      "status": "Definition",
+      "formal_statement": "",
+      "natural_language_statement": "Names for the pieces of the circle-method integrand (8.11) in the proof of Theorem 8.2 of Tao's five-primes paper, at $K = 1000$, building on the definitions `TaoFivePrimes_RepresentationCount` and `TaoFivePrimes_FourierRepresentation`.\n\n* `T0` $= 3.29\\times10^9$, the height to which the Riemann hypothesis is verified (Theorem 1.5).\n* `S1 x α` $= S_{\\eta_1,\\sqrt{x}\\sharp}(x,\\alpha) = \\sum_n \\Lambda(n)\\,\\mathbf 1_{(n,\\sqrt x\\sharp)=1}\\,\\eta_1(n/x)\\,e(n\\alpha)$, the smoothed sifted prime sum carrying the first two primes.\n* `S0 x α` $= S_{\\eta_0,\\sqrt{x/K}\\sharp}(x/K,\\alpha)$, the smaller-scale sum carrying the third prime (Bourgain's trick).\n* `DK H α` $= D_{H/3}(\\alpha) = \\sum_{1\\le n\\le H/3} e(n\\alpha)$, the Dirichlet-type kernel; the application takes $H = N_0 = 4\\times10^{14}$.\n* `majorArc x` $= \\{\\alpha : \\|\\alpha\\|_{\\mathbb R/\\mathbb Z} \\le T_0/(3.6\\pi x)\\}$, the strongly major arc of Proposition 8.3.\n\nThe structural lemma `representationIntegrand_eq` records that `representationIntegrand x H α = S1 x α ^ 2 * S0 x α * DK H α ^ 3 * e(-xα)` definitionally, so that estimates stated for the named factors apply verbatim to the integrand of the exact Fourier identity `representationCount_fourier`.",
+      "created_at": "2026-09-08T10:22:08.969583+08:00",
+      "vote_count": 0,
+      "definition": "import Definitions.Def_TaoFivePrimes_FourierRepresentation\n\n/-!\n# The major/minor arc split in the proof of Tao's Theorem 8.2\n\nSource: Terence Tao, https://arxiv.org/abs/1201.6656, Section 8, equations (8.11)–(8.12)\nand the discussion following (8.16). Names for the three factors of the circle-method\nintegrand (8.11) at `K = 1000`, and the strongly major arc `‖α‖_{ℝ/ℤ} ≤ T₀/(3.6πx)` with\n`T₀ = 3.29 × 10⁹` (Theorem 1.5).\n-/\n\nopen scoped BigOperators\n\nnamespace TaoFivePrimes\n\n/-- The height `T₀ = 3.29 × 10⁹` to which the Riemann hypothesis is numerically verified\n(Theorem 1.5). -/\nnoncomputable def T0 : ℝ := 3.29 * 10 ^ 9\n\n/-- `S_{η₁,√x♯}(x, α)`: the smoothed, sifted prime exponential sum with cutoff `η₁`\n(the first two primes in (8.11)). -/\nnoncomputable def S1 (x : ℕ) (α : AddCircle (1 : ℝ)) : ℂ :=\n  TaoFourierIdentity.fourierPolynomial (Finset.range (x + 1))\n    (fun n ↦ (siftedVonMangoldt x n * eta1 ((n : ℝ) / x) : ℝ)) (fun n ↦ (n : ℤ)) α\n\n/-- `S_{η₀,√(x/K)♯}(x/K, α)` at `K = 1000`: the smaller-scale sum with cutoff `η₀`\n(Bourgain's trick, the third prime in (8.11)). -/\nnoncomputable def S0 (x : ℕ) (α : AddCircle (1 : ℝ)) : ℂ :=\n  TaoFourierIdentity.fourierPolynomial (Finset.range (x / 1000 + 1))\n    (fun n ↦ (siftedVonMangoldt (x / 1000) n * eta0 (1000 * (n : ℝ) / x) : ℝ))\n    (fun n ↦ (n : ℤ)) α\n\n/-- The Dirichlet-type kernel `D_{H/3}(α) = ∑_{1 ≤ n ≤ H/3} e(nα)`. -/\nnoncomputable def DK (H : ℕ) (α : AddCircle (1 : ℝ)) : ℂ :=\n  TaoFourierIdentity.fourierPolynomial (Finset.Icc 1 (H / 3)) (fun _ ↦ 1) (fun n ↦ (n : ℤ)) α\n\n/-- The strongly major arc `{α : ‖α‖_{ℝ/ℤ} ≤ T₀ / (3.6 π x)}` of Proposition 8.3. -/\ndef majorArc (x : ℕ) : Set (AddCircle (1 : ℝ)) :=\n  {α | ‖α‖ ≤ T0 / (3.6 * Real.pi * x)}\n\n/-- The integrand (8.11) is the product of the three named factors and the phase `e(-xα)`. -/\ntheorem representationIntegrand_eq (x H : ℕ) (α : AddCircle (1 : ℝ)) :\n    representationIntegrand x H α = S1 x α ^ 2 * S0 x α * DK H α ^ 3 * fourier (-(x : ℤ)) α :=\n  rfl\n\nend TaoFivePrimes\n",
+      "source": "T. Tao, Every odd number greater than 1 is the sum of at most five primes, Math. Comp. 83 (2014), 997-1038, https://arxiv.org/abs/1201.6656, Section 8, eqs. (8.11)-(8.12) and the arc split following (8.16); Theorem 1.5 for T_0",
+      "tags": [
+        "additive-number-theory",
+        "circle-method",
+        "five-primes",
+        "goldbach",
+        "number-theory"
+      ],
+      "audits": [],
+      "created_by": "3027dcae-7aa5-4c26-8bae-885182dbc806",
+      "created_by_username": "tabbott",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "d7089f63-d516-4c70-a5f5-f1ae1e917931",
+      "theorem_name": "TaoFivePrimes.rosser_psi_finite_middle",
+      "theorem_title": "Finite Rosser bound between 1000 and 10^8",
+      "status": "Open",
+      "formal_statement": "theorem TaoFivePrimes.rosser_psi_finite_middle (n : ℕ) (hn : 1000 < n) (hN : n < 10 ^ 8) : Chebyshev.psi (n : ℝ) < 1.03883 * (n : ℝ) := by sorry",
+      "natural_language_statement": "For every integer strictly between 1000 and 10^8, the second Chebyshev function satisfies $$\\psi(n)<1.03883n.$$ This is the remaining finite certificate obligation in a range decomposition of the uniform Rosser--Schoenfeld bound. The small range through 1000 is proved separately by exact LCM certificates; the range at least 10^8 follows from an explicit two-sided Chebyshev estimate. This finite obligation is open: numerical interval scouting is not a formal proof.",
+      "created_at": "2026-09-12T20:51:43.229964+08:00",
+      "vote_count": 0,
+      "preamble": "import Mathlib.NumberTheory.Chebyshev",
+      "source": "Finite restriction of Prove2Me theorem TaoFivePrimes.rosser_schoenfeld_psi_bound (cf6be7a8-2493-479a-9d57-6ee8535546d1), whose source is Rosser and Schoenfeld, Approximate formulas for some functions of prime numbers (1962), Theorem 12. The endpoints 1000 and 10^8 are specific to this formal range decomposition, not claimed to be a separately numbered theorem in that paper.",
+      "tags": [],
+      "audits": [],
+      "created_by": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "created_by_username": "Yuxuan Xu",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "eb7f83fc-ae8f-4c85-aa70-86be2c690759",
+      "theorem_name": "TaoFivePrimes.strongly_major_arc",
+      "theorem_title": "Proposition 8.3 — strongly major arc estimate",
+      "status": "Open",
+      "formal_statement": "namespace TaoFivePrimes\n\ntheorem strongly_major_arc (x : ℕ) (h1 : 87 * 10 ^ 35 ≤ x) (h2 : (x : ℝ) ≤ Real.exp 3100) :\n    ‖(∫ α in Metric.closedBall (0 : AddCircle (1 : ℝ))\n            (3.29 * 10 ^ 9 / (3.6 * Real.pi * (x : ℝ))),\n          representationIntegrand x (4 * 10 ^ 14) α ∂AddCircle.haarAddCircle) -\n        ((2 / 3 * ((x : ℝ) ^ 2 / 1000 * ((4 * 10 ^ 14 / 3 : ℕ) : ℝ) ^ 3) : ℝ) : ℂ)‖ ≤\n      1 / 10 * ((x : ℝ) ^ 2 / 1000 * ((4 * 10 ^ 14 / 3 : ℕ) : ℝ) ^ 3) := by sorry\n\nend TaoFivePrimes",
+      "natural_language_statement": "**Proposition 8.3 of Tao's five-primes paper: the strongly major arc estimate.**\n\nFix the constants of Section 8 of the paper: the Goldbach verification height $N_0 = 4\\times10^{14}$, the Bourgain scale parameter $K = 10^3$, and the Riemann-hypothesis verification height $T_0 = 3.29\\times10^9$. Let $x$ be an integer with\n\n$$8.7\\times10^{36} \\le x \\le e^{3100}.$$\n\nWrite $\\eta_1(t) = (1 - 10\\,\\mathrm{dist}(t,[0.2,0.8]))_+$ and $\\eta_0(t) = 4(\\log 2 - |\\log 2t|)_+$ for the two cutoffs, $S_{\\eta,q}(y,\\alpha) = \\sum_n \\Lambda(n)\\mathbf 1_{(n,q)=1}\\eta(n/y)e(n\\alpha)$ for the smoothed prime exponential sum, $D_H(\\alpha) = \\sum_{1\\le n\\le H} e(n\\alpha)$ for the Dirichlet kernel, and\n\n$$F_x(\\alpha) \\;=\\; S_{\\eta_1,\\sqrt x\\sharp}(x,\\alpha)^2\\, S_{\\eta_0,\\sqrt{x/K}\\sharp}(x/K,\\alpha)\\, D_{N_0/3}(\\alpha)^3\\, e(-x\\alpha)$$\n\nfor the circle-method integrand of equation (8.11). Set\n\n$$M \\;=\\; \\frac{x^2}{K}\\left\\lfloor \\frac{N_0}{3}\\right\\rfloor^{3}.$$\n\nThen the integral of $F_x$ over the strongly major arc satisfies\n\n$$\\left|\\; \\int_{\\|\\alpha\\|_{\\mathbb R/\\mathbb Z} \\le \\frac{T_0}{3.6\\pi x}} F_x(\\alpha)\\,d\\alpha \\;-\\; \\frac{2}{3}M \\;\\right| \\;\\le\\; \\frac{1}{10}\\,M .$$\n\nThe paper writes this conclusion as $\\frac{x^2}{K}(N_0/3)^3\\bigl(\\frac23 + \\mathcal O^*(0.1)\\bigr)$, where $\\mathcal O^*(c)$ denotes a quantity of magnitude at most $c$.\n\nThis is the main term of the circle method for Theorem 8.2: it says the near-zero frequencies already contribute the full expected size $\\frac23\\frac{x^2}{K}(N_0/3)^3$ of the weighted representation count, with a relative error of at most $0.1$. Paired with the complementary minor arc bound it yields the positivity of that count, which is the one remaining analytic obligation of the whole five-primes argument.\n\n**Formalization Note** The circle is `AddCircle 1` carrying its Haar probability measure, and $\\|\\alpha\\|_{\\mathbb R/\\mathbb Z}$ is its norm, the distance from $\\alpha$ to the nearest integer; the strongly major arc is therefore the closed ball of radius $T_0/(3.6\\pi x)$ about $0$. The integrand is the published `representationIntegrand`, whose three finite Fourier polynomials agree with $S_{\\eta_1,\\sqrt x\\sharp}(x,\\cdot)$, $S_{\\eta_0,\\sqrt{x/K}\\sharp}(x/K,\\cdot)$ and $D_{N_0/3}$ because $\\eta_1$ is supported in $[0.1,0.9]$ and $\\eta_0$ in $(1/4,1)$, so the truncated ranges lose nothing.\n\nThe Dirichlet kernel sums over $1 \\le n \\le \\lfloor N_0/3\\rfloor$, which is what the paper's $\\sum_{1\\le n\\le N_0/3}$ means, and $M$ is written with $\\lfloor N_0/3\\rfloor^3$ to match it; the gap between $(N_0/3)^3$ and $\\lfloor N_0/3\\rfloor^3$ is a relative $8\\times10^{-15}$, far inside the stated slack of $0.1$.\n\nThe radius uses $3.6\\pi$, as in the statement of Proposition 8.3 and in Proposition 8.4; two displays inside the proof print $3\\pi$ instead, which is inconsistent with the surrounding argument. The upper bound $x \\le e^{3100}$ is not needed for this proposition, whose proof uses only $x \\ge 8.7\\times10^{36}$; it is carried because it is a standing hypothesis of Section 8.",
+      "created_at": "2026-09-07T21:50:03.480368+08:00",
+      "vote_count": 0,
+      "preamble": "import Definitions.Def_TaoFivePrimes_FourierRepresentation\nimport Mathlib.Analysis.Normed.Group.AddCircle\nimport Mathlib.MeasureTheory.Integral.Bochner.Set\nopen MeasureTheory",
+      "source": "Terence Tao, Every odd number greater than 1 is the sum of at most five primes, Mathematics of Computation 83 (2014), 997-1038, https://arxiv.org/abs/1201.6656, Section 8 (Sums of five primes), Proposition 8.3 (Strongly major arc estimate), display (8.12); with K = 10^3 fixed after (8.11), N_0 = 4*10^14 (Theorem 1.6) and T_0 = 3.29*10^9 (Theorem 1.5). Constants read from the arXiv LaTeX source, https://arxiv.org/e-print/1201.6656.",
+      "tags": [
+        "circle-method",
+        "exponential-sums",
+        "goldbach",
+        "number-theory"
+      ],
+      "audits": [],
+      "created_by": "d8a05486-7ffd-4db8-aca9-94e0f31ac940",
+      "created_by_username": "chrisromanmiller",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": true
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "f17d0f4a-0d1a-4df2-bc77-c551df334e99",
+      "theorem_name": "TaoFivePrimes.eta0_primorial_sieve_transfer",
+      "theorem_title": "Direct primorial-sieve transfer for the eta0 exponential sum",
+      "status": "Proved",
+      "formal_statement": "namespace TaoFivePrimes\n\ntheorem eta0_primorial_sieve_transfer\n    (x : ℕ) (h1 : 87 * 10 ^ 35 ≤ x) (theta : ℝ) :\n    let y : ℝ := (x : ℝ) / 1000\n    ‖smoothedExpSum eta0 (primorial (Nat.sqrt (x / 1000))) y theta -\n        smoothedExpSum eta0 1 y theta‖ ≤\n      (9 : ℝ) / 10 ^ 8 * y := by sorry\n\nend TaoFivePrimes",
+      "natural_language_statement": "Let $x\\ge 8.7\\times 10^{36}$ and put $y=x/1000$. For the logarithmic cutoff $\\eta_0$, changing the smoothed von Mangoldt sum from modulus $1$ to the primorial of $\\lfloor\\sqrt{x/1000}\\rfloor$ changes its value by at most $9\\times 10^{-8}y$, uniformly in the real frequency. This is the specialized sieve-modulus transfer used after Proposition 7.2.",
+      "created_at": "2026-09-09T23:23:35.040251+08:00",
+      "vote_count": 0,
+      "preamble": "import Definitions.Def_TaoFivePrimes_RepresentationCount\nimport Definitions.Def_TaoFivePrimes_SmoothedExpSum\nimport Mathlib.NumberTheory.Chebyshev\nimport Mathlib.Analysis.Complex.ExponentialBounds\nopen scoped BigOperators ArithmeticFunction.vonMangoldt\nopen MeasureTheory",
+      "source": "Terence Tao, Every odd number greater than 1 is the sum of at most five primes, arXiv:1201.6656v4, Section 4, Lemma 4.1, specialized to eta0 and q=(sqrt(x/1000))#, https://arxiv.org/abs/1201.6656",
+      "tags": [
+        "additive-number-theory",
+        "fourier-analysis",
+        "number-theory",
+        "sieve-methods",
+        "tao-five-primes"
+      ],
+      "audits": [],
+      "created_by": "1218a2a5-fec3-4902-88f2-735b90eee971",
+      "created_by_username": "marwahaha",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "fe792adc-e64b-4f34-acf3-aa1a412545c9",
+      "theorem_name": "TaoFivePrimes.eta_cutoff_model_mass",
+      "theorem_title": "Mass of the shifted cutoff convolution",
+      "status": "Proved",
+      "formal_statement": "namespace TaoFivePrimes\n\ntheorem eta_cutoff_model_mass :\n    let cutoffCoefficient : ℂ :=\n      ∫ t : ℝ, ∫ s : ℝ,\n        (((eta1 s * eta1 (1 - s - t / 1000) * eta0 t : ℝ) : ℂ))\n    ‖cutoffCoefficient - (((2 / 3 : ℝ) : ℂ))‖ ≤ 1 / 100 := by sorry\n\nend TaoFivePrimes",
+      "natural_language_statement": "For Tao's cutoffs\n$$\n\\eta_0(t)=4(\\log 2-|\\log(2t)|)_+,\n\\qquad\n\\eta_1(t)=(1-10\\,\\mathrm{dist}(t,[0.2,0.8]))_+,\n$$\nprove that the shifted autocorrelation coefficient\n$$\nC=\\int_{\\mathbb R}\\int_{\\mathbb R}\n \\eta_1(s)\\eta_1\\!\\left(1-s-\\frac{t}{1000}\\right)\\eta_0(t)\\,ds\\,dt\n$$\nsatisfies\n$$\n\\left|C-\\frac23\\right|\\le 0.01.\n$$\nIndeed, symmetry gives the unshifted value $\\int\\eta_1^2=2/3$. Since $\\eta_1$ is $10$-Lipschitz, $\\eta_0$ is a nonnegative unit-mass cutoff supported on $[1/4,1]$, and $\\int\\eta_1=7/10$, the translation changes the coefficient by at most $(10/1000)(7/10)=0.007$.",
+      "created_at": "2026-09-09T17:07:45.038363+08:00",
+      "vote_count": 0,
+      "preamble": "import Definitions.Def_TaoFivePrimes_RepresentationCount\nimport Mathlib.MeasureTheory.Integral.Bochner.Basic\nimport Mathlib.MeasureTheory.Measure.Lebesgue.Basic\n\nopen MeasureTheory",
+      "source": "Terence Tao, Every odd number greater than 1 is the sum of at most five primes, Mathematics of Computation 83 (2014), 997–1038; arXiv:1201.6656v4, equations (1.7), (8.1)–(8.5), and the cutoff-convolution calculation following (8.16), pp. 32 and 35. https://arxiv.org/html/1201.6656v4#S8. The paper incorrectly centers this convolution at 1; its own equation (8.2) gives integral eta1^2 = 2/3. The formal statement uses the corrected center 2/3 and the literal K=1000 cutoffs.",
+      "tags": [
+        "circle-method",
+        "integration",
+        "major-arcs",
+        "number-theory",
+        "real-analysis",
+        "tao-five-primes"
+      ],
+      "audits": [],
+      "created_by": "1218a2a5-fec3-4902-88f2-735b90eee971",
+      "created_by_username": "marwahaha",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "sketch",
+      "node_id": "sketch-11751692-de02-4b67-8b2f-44fe1593d392",
+      "submission_id": "11751692-de02-4b67-8b2f-44fe1593d392",
+      "parent_theorem_id": "cf6be7a8-2493-479a-9d57-6ee8535546d1",
+      "status": "SKETCH_ACCEPTED",
+      "username": "Yuxuan Xu",
+      "explanation": "We reduce the uniform Rosser--Schoenfeld inequality\n\n$$\\sum_{m\\le n}\\Lambda(m)<1.03883n\\qquad(n\\ge1)$$\n\nto two explicit remaining inputs: the finite inequality for integers strictly\nbetween 1000 and $10^8$, and the two-sided Chebyshev estimate\n\n$$|\\psi(y)-y|\\le\\frac{y}{40\\log y}\\qquad(y\\ge10^8).$$\n\nBoth inputs are assumptions of this sketch. The small range through 1000 is\nproved within the submitted file by exact arithmetic, without an open input.\n\nFor the small range, use Mathlib's identity\n\n$$\\psi(n)=\\log\\operatorname{lcm}(1,\\ldots,n).$$\n\nExact integer certificates bound successive least common multiples by powers\nof two. The rigorous bound $\\log2\\le0.693147181$ converts these certificates\nto upper bounds for $\\psi$. The bounds at upper endpoints cover 87 intervals\nbecause $\\psi$ is nondecreasing, while the desired upper bound increases with\nthe argument. The interval coverage and integer comparisons are checked in\nLean. At 31 and 32, taking a small integer power retains enough fractional\nprecision. At 113, an exact least common multiple and a rational mantissa\nbound are combined with logarithm series estimates with proven remainders.\nThis yields a complete proof for every integer from 1 through 1000.\n\nFor the large range, the imported two-sided estimate gives\n\n$$\\psi(y)\\le y+\\frac{y}{40\\log y}.$$\n\nHere $\\log y\\ge1$, so\n\n$$\\psi(y)\\le1.025y<1.03883y.$$\n\nThe only range not covered by these two arguments is\n\n$$1000<n<10^8.$$\n\nThat finite certificate is the other open child of the reduction. Numerical\nscouting is not used as a proof of this child. Finally, the sum in the target\nis identified with Mathlib's Chebyshev function; its additional term at zero\nvanishes. The three ranges therefore exhaust the exact target's domain.\n",
+      "created_at": "2026-09-12T21:34:30.853284+08:00",
+      "child_count": 2,
+      "deprecated_at": null
+    },
+    {
+      "node_type": "sketch",
+      "node_id": "sketch-1a208298-aa57-41a6-b5f6-a7f0aa6af032",
+      "submission_id": "1a208298-aa57-41a6-b5f6-a7f0aa6af032",
+      "parent_theorem_id": "753f5c48-d6dc-4534-bd08-faccf7af7bdc",
+      "status": "SKETCH_ACCEPTED",
+      "username": "shivm",
+      "explanation": "The source node bundles two entirely independent analytic estimates into a single conjunction. This submission separates them, deriving the conjunction from one child for each half; both children are assumptions here rather than results.\n\n**The two halves.** The first conjunct is the $Q = 1$ case of the Montgomery estimate underlying Tao's Corollary 4.7: for $x > 1$, $R > 1$ and any real weight sequence $w$, subject to the primorial divisibility condition,\n\n$$\\int_{\\|\\alpha\\| \\le 1/(2R^2)} |S_w(x,\\alpha)|^2 \\, d\\alpha \\;\\le\\; \\frac{\\log x}{\\log R} \\sum_{n \\le x} \\Lambda_{\\sqrt{x}\\#}(n)\\, w(n)^2 .$$\n\nThe second is the explicit Rosser--Schoenfeld prime-mass bound\n\n$$\\psi(x) \\;=\\; \\sum_{n \\le x} \\Lambda(n) \\;<\\; 1.03883\\,x \\qquad (x \\ge 1).$$\n\n**Why they are separated.** These come from different papers — the first from Tao's Lemma 4.6 and Corollary 4.7, the second from Rosser and Schoenfeld's Theorem 12 of 1962 — and neither depends on the other. They are also of quite different character: the first is a large-sieve $L^2$ concentration estimate, the second a sharp elementary-analytic bound whose constant is essentially attained near $x = 113$, so that it must be checked against small $x$ rather than only asymptotically. Bundled as a conjunction, neither half can be closed independently, and any solver must supply both at once; separated, each becomes a target in its own right and either can be discharged on its own.\n\n**The reduction.** Once the two halves are available as separate statements, the conjunction is their pairing, with no further content. The Lean proof is the anonymous constructor applied to the two imported children.\n\n**A remark on the sibling node.** The mission already carries a proved bound `psi_le_112_large`, giving $\\psi(x) \\le 1.12x$ for $10^{20} \\le x$ with $\\log x \\le 3100$. That does not imply the Rosser--Schoenfeld bound: its constant is larger and its range is restricted, whereas the statement here is uniform over all positive integers and with the smaller constant $1.03883$.",
+      "created_at": "2026-09-10T18:00:28.993605+08:00",
+      "child_count": 2,
+      "deprecated_at": null
+    },
+    {
+      "node_type": "sketch",
+      "node_id": "sketch-284007eb-647f-403a-9402-b680c000a9c0",
+      "submission_id": "284007eb-647f-403a-9402-b680c000a9c0",
+      "parent_theorem_id": "1dbb406b-10e5-4316-a023-6eba73b6e726",
+      "status": "ACCEPTED",
+      "username": "marwahaha",
+      "explanation": null,
+      "created_at": "2026-09-09T19:26:31.053058+08:00",
+      "child_count": 1,
+      "deprecated_at": null
+    },
+    {
+      "node_type": "sketch",
+      "node_id": "sketch-4aefa4a6-0c3d-4586-b9f7-2657be613a35",
+      "submission_id": "4aefa4a6-0c3d-4586-b9f7-2657be613a35",
+      "parent_theorem_id": "39f55b4d-803f-4cc8-9bbc-95d2cf849768",
+      "status": "SKETCH_ACCEPTED",
+      "username": "marwahaha",
+      "explanation": "This source reduction separates verified-RH Proposition 7.2 at modulus one from the primorial sieve transfer. The transfer contributes 9/10^8 of y and the q=1 approximation contributes 141/10^8 of y; the triangle inequality and exact arithmetic give the published 15/10^7 bound. The transfer child has an independent no-sorry Lean proof, so the only remaining analytic input is the narrower modulus-one Proposition 7.2 estimate.",
+      "created_at": "2026-09-09T23:29:33.20813+08:00",
+      "child_count": 2,
+      "deprecated_at": null
+    },
+    {
+      "node_type": "sketch",
+      "node_id": "sketch-5521ef34-8489-417a-b290-2a7f7950b700",
+      "submission_id": "5521ef34-8489-417a-b290-2a7f7950b700",
+      "parent_theorem_id": "cef034c1-c2c7-4270-810e-0543b8aad89d",
+      "status": "SKETCH_ACCEPTED",
+      "username": "tabbott",
+      "explanation": "We prove Proposition 8.3 in the form\n\n$$\\Bigl\\|\\int_{\\mathrm{majorArc}(x)} F_x(\\alpha)\\,d\\alpha - \\tfrac23 M\\Bigr\\| \\le 0.1\\,M,\\qquad M=\\frac{x^2}{1000}\\Bigl\\lfloor\\frac{4\\cdot 10^{14}}{3}\\Bigr\\rfloor^{3},$$\n\nfor $8.7\\cdot10^{36}\\le x\\le e^{3100}$, by reduction to the platform theorem `TaoFivePrimes.strongly_major_arc`, which asserts the identical estimate with the arc written as the closed ball $\\{\\alpha\\in\\mathbb R/\\mathbb Z : \\|\\alpha\\|\\le 3.29\\cdot10^9/(3.6\\pi x)\\}$ and the error constant written as $1/10$.\n\nThe only content of the reduction is the identification of the two domains of integration. By definition, `majorArc x` is the set $\\{\\alpha : \\|\\alpha\\| \\le T_0/(3.6\\pi x)\\}$ with $T_0 = 3.29\\cdot 10^9$, while membership in `Metric.closedBall 0 r` is the condition $\\mathrm{dist}(\\alpha,0)\\le r$, and in a normed group $\\mathrm{dist}(\\alpha,0)=\\|\\alpha\\|$. Unfolding $T_0$ therefore gives\n\n$$\\mathrm{majorArc}(x) = \\overline{B}\\Bigl(0,\\ \\frac{3.29\\cdot10^9}{3.6\\pi x}\\Bigr)$$\n\nas an equality of sets (lemma `majorArc_eq_closedBall`, proved by extensionality). Rewriting the integral along this identity and replacing $0.1$ by $1/10$, the goal becomes literally the statement of `strongly_major_arc`, which is assumed as the child of this reduction.\n",
+      "created_at": "2026-09-08T10:57:41.133713+08:00",
+      "child_count": 2,
+      "deprecated_at": null
+    },
+    {
+      "node_type": "sketch",
+      "node_id": "sketch-73679b53-24ca-4846-bd15-ef7b4a5ca672",
+      "submission_id": "73679b53-24ca-4846-bd15-ef7b4a5ca672",
+      "parent_theorem_id": "6b6610ed-d7c4-4f97-a537-b43a3ce04af9",
+      "status": "ACCEPTED",
+      "username": "Hartmann_Psi",
+      "explanation": "**A clean numerical form of the central-arc $L^2$ bound.**\n\nCorollary 4.7 of Tao's paper, specialised to the cutoff $\\eta_1$ and the strongly major\narc, gives\n$$\\int_{\\|\\alpha\\|\\le T_0/(3.6\\pi x)} |S_1(x,\\alpha)|^2\\,d\\alpha\n  \\;\\le\\;\\frac{2}{1-\\dfrac{\\log\\bigl(2T_0/(3.6\\pi)\\bigr)}{\\log x}}\\cdot 1.04\\,x ,$$\nwhich is the platform lemma `TaoFivePrimes.strongly_major_arc_S1_L2_corollary47_source`.\nThe shape of the factor is dictated by Montgomery's local concentration bound: the arc\n$\\|\\alpha\\|\\le 1/(2R^2)$ costs a factor $\\log x/\\log R$, and here\n$R=\\sqrt{1.8\\pi x/T_0}$, so $\\log R=\\tfrac12\\bigl(\\log x-\\log(2T_0/(3.6\\pi))\\bigr)$.\n\nFor downstream use the $x$-dependent factor is a nuisance, and since it is decreasing in\n$x$ it can be replaced by its value at the left endpoint of the window. This submission\nperforms that replacement, obtaining the constant bound $3x$.\n\nThe estimate is genuinely a numerical one, and it is proved here without evaluating a\nsingle logarithm to decimal accuracy, by comparing both logarithms with $\\log 2$:\n\n* $2T_0/(3.6\\pi)\\le 2^{30}$, because $2T_0=6.58\\times10^{9}$ while\n  $3.6\\pi\\cdot 2^{30}>3.6\\cdot 3\\cdot 2^{30}>1.15\\times10^{10}$; hence\n  $\\log\\bigl(2T_0/(3.6\\pi)\\bigr)\\le 30\\log 2$.\n* $x\\ge 8.7\\times10^{36}\\ge 2^{122}$, hence $\\log x\\ge 122\\log 2$.\n\nDividing the two, the ratio $\\log(2T_0/(3.6\\pi))/\\log x$ is at most $30/122$ — the factor\n$\\log 2$ cancels exactly, so no decimal expansion of $\\log 2$ or of $\\pi$ beyond\n$\\pi>3$ is ever needed. Consequently\n$$\\frac{2}{1-\\log(2T_0/(3.6\\pi))/\\log x}\\;\\le\\;\\frac{2}{92/122}=\\frac{61}{23},$$\nand $\\tfrac{61}{23}\\cdot 1.04=2.7583\\ldots\\le 3$. The remaining margin of about $8\\%$ is\nwhat makes the clean constant $3$ available on the whole window $x\\ge 8.7\\times10^{36}$.\n",
+      "created_at": "2026-09-12T23:24:14.79197+08:00",
+      "child_count": 2,
+      "deprecated_at": null
+    },
+    {
+      "node_type": "sketch",
+      "node_id": "sketch-77047314-cb6a-4c37-bca8-ea8772d528d1",
+      "submission_id": "77047314-cb6a-4c37-bca8-ea8772d528d1",
+      "parent_theorem_id": "c78fd776-bb76-45ac-a6f4-78fd9213d230",
+      "status": "SKETCH_ACCEPTED",
+      "username": "Hartmann_Psi",
+      "explanation": "**Replacing the shift kernel by $\\lfloor H/3\\rfloor$ on the strongly major arc.**\n\nOn the strongly major arc $E=\\{\\|\\alpha\\|\\le T_0/(3.6\\pi x)\\}$ the Dirichlet-type kernel\n$D_{H/3}$ is nearly constant: `TaoFivePrimes.DK_strongly_major_approx` gives\n$$\\bigl\\|D_{H/3}(\\alpha)-\\lfloor H/3\\rfloor\\bigr\\|\\;\\le\\;10^{-10}\\lfloor H/3\\rfloor,\n\\qquad \\alpha\\in E .$$\nThis submission uses that to pass from the three-factor estimate of\n`TaoFivePrimes.strongly_major_arc_prime_sums_to_cutoff_model`,\n$$\\Bigl\\|\\int_E S_1^2S_0\\,e(-x\\alpha)-\\frac{x^2}{K}\\,\\mathfrak c\\Bigr\\|\\le\\frac{89}{1000}\\cdot\\frac{x^2}{K},$$\nto the full integrand (8.11), which carries the extra factor $D_{H/3}^3$:\n$$\\Bigl\\|\\int_E S_1^2S_0D_{H/3}^3\\,e(-x\\alpha)-M\\,\\mathfrak c\\Bigr\\|\\le\\frac{9}{100}M,\n\\qquad M=\\frac{x^2}{K}\\Bigl\\lfloor\\frac H3\\Bigr\\rfloor^3 .$$\n\n*The decomposition.* Writing $\\kappa=\\lfloor H/3\\rfloor$ and\n$G=S_1^2S_0\\,e(-x\\alpha)$, the integrand splits exactly as\n$$G\\,D_{H/3}^3\\;=\\;\\kappa^3\\,G\\;+\\;G\\,\\bigl(D_{H/3}^3-\\kappa^3\\bigr),$$\nand both pieces are continuous, hence integrable on the compact circle, so the integral\nsplits along it. The first piece is $\\kappa^3$ times the three-factor integral, and since\n$M=(x^2/K)\\kappa^3$ the main terms match on the nose, leaving an error\n$\\kappa^3\\cdot\\frac{89}{1000}\\frac{x^2}{K}=\\frac{89}{1000}M$.\n\n*The kernel error.* For the second piece, factor\n$D^3-\\kappa^3=(D-\\kappa)(D^2+D\\kappa+\\kappa^2)$. From\n$\\|D-\\kappa\\|\\le10^{-10}\\kappa$ one gets $\\|D\\|\\le(1+10^{-10})\\kappa$, hence\n$$\\|D^2+D\\kappa+\\kappa^2\\|\\le\\bigl((1+10^{-10})^2+(1+10^{-10})+1\\bigr)\\kappa^2\\le4\\kappa^2,$$\nso $\\|D^3-\\kappa^3\\|\\le4\\cdot10^{-10}\\kappa^3$ pointwise on $E$. Since\n$\\|G\\|=\\|S_1\\|^2\\|S_0\\|$ — the phase has modulus one — the second piece is bounded by\n$$4\\cdot10^{-10}\\kappa^3\\int_E\\|S_1\\|^2\\|S_0\\|\n  \\;\\le\\;4\\cdot10^{-10}\\kappa^3\\cdot100\\cdot\\frac{x^2}{K}\\;=\\;4\\cdot10^{-8}M,$$\nusing the amplitude bound `TaoFivePrimes.strongly_major_arc_prime_amplitude`. This is the\nstep for which that (very lossy) bound exists: because the kernel error is $10^{-10}$, an\namplitude constant of $100$ is eight orders of magnitude more than good enough.\n\n*Total.* $\\frac{89}{1000}+4\\cdot10^{-8}\\le\\frac{9}{100}$, which is the claim. The budget of\nthe proposition is $9\\%$ and the kernel replacement consumes $4\\times10^{-6}$ of it; all\nthe room goes to the prime-sum approximation.\n",
+      "created_at": "2026-09-13T00:40:15.732478+08:00",
+      "child_count": 4,
+      "deprecated_at": null
+    },
+    {
+      "node_type": "sketch",
+      "node_id": "sketch-9ea91af0-c22b-4772-a861-31edc0a7823d",
+      "submission_id": "9ea91af0-c22b-4772-a861-31edc0a7823d",
+      "parent_theorem_id": "eb7f83fc-ae8f-4c85-aa70-86be2c690759",
+      "status": "SKETCH_ACCEPTED",
+      "username": "marwahaha",
+      "explanation": "Write\n$$\nM=\\frac{x^2}{1000}\\left\\lfloor\\frac{4\\cdot10^{14}}3\\right\\rfloor^3\n$$\nand let\n$$\nC=\\int_{\\mathbb R}\\int_{\\mathbb R}\n \\eta_1(s)\\eta_1\\!\\left(1-s-\\frac{t}{1000}\\right)\\eta_0(t)\\,ds\\,dt.\n$$\nThe proof separates the analytic major-arc approximation from the elementary normalization of the cutoff convolution.\n\nThe source child `TaoFivePrimes.strongly_major_arc_discrete_to_cutoff_model` asserts that the actual central-arc integral $I(x)$ satisfies\n$$\n|I(x)-MC|\\le0.09M.\n$$\nThis is the part of Tao's Proposition 8.3 that uses the verified-RH major-arc estimates, the sieve-factor transfer, the positive-shift kernel approximation, the two Cauchy--Schwarz error bounds, and the Fourier tail. Its statement incorporates the corrected $N_0/3$ kernel and retains $C$ exactly.\n\nThe second child `TaoFivePrimes.eta_cutoff_model_mass` supplies the corrected cutoff calculation\n$$\n\\left|C-\\frac23\\right|\\le0.01.\n$$\nThe center is $2/3$ because the unshifted autocorrelation is $\\int\\eta_1^2=2/3$; the paper's subsequent center $1$ is a normalization slip. The literal shift changes the coefficient by at most $0.007$, so the child has slack.\n\nSince $M\\ge0$, multiplication gives\n$$\n\\left|M C-\\frac23M\\right|\\le0.01M.\n$$\nApplying the triangle inequality to\n$$\nI(x)-\\frac23M=(I(x)-MC)+M\\left(C-\\frac23\\right)\n$$\nthen yields $(0.09+0.01)M=0.10M$, exactly the target. The upper hypothesis $x\\le e^{3100}$ is part of the parent statement but is not required by this strongly-major estimate.",
+      "created_at": "2026-09-09T17:08:49.907888+08:00",
+      "child_count": 2,
+      "deprecated_at": null
+    },
+    {
+      "node_type": "sketch",
+      "node_id": "sketch-9f805125-864b-42b7-94b3-edf0d22a1202",
+      "submission_id": "9f805125-864b-42b7-94b3-edf0d22a1202",
+      "parent_theorem_id": "c78fd776-bb76-45ac-a6f4-78fd9213d230",
+      "status": "SKETCH_ACCEPTED",
+      "username": "marwahaha",
+      "explanation": null,
+      "created_at": "2026-09-09T19:27:53.675003+08:00",
+      "child_count": 3,
+      "deprecated_at": null
+    },
+    {
+      "node_type": "sketch",
+      "node_id": "sketch-a8ae482b-3741-4505-8781-e7cc8b05dd09",
+      "submission_id": "a8ae482b-3741-4505-8781-e7cc8b05dd09",
+      "parent_theorem_id": "890427c4-bd83-4412-ad3a-e66d3f0bf738",
+      "status": "SKETCH_ACCEPTED",
+      "username": "Johan Mercedes",
+      "explanation": "This is a proof-sketch reduction of the frontier theorem\n`TaoFivePrimes.strongly_major_arc_prop72_eta1_pointwise_prime_sum_source` to the\nexisting open source package\n`TaoFivePrimes.strongly_major_arc_prop72_fourier_source`.\n\nFor the same integer `x` and lower-bound hypothesis `h1`, the imported theorem\nuses exactly the same centered arc\n\n`Metric.closedBall 0 (3.29 * 10^9 / (3.6 * pi * x))`.\n\nIts conclusion is a conjunction collecting the strongly-major-arc inputs.  The\nthird conjunct is precisely the target pointwise estimate\n\n`||S1 x alpha - x * stronglyMajorCutoffModel eta1 x alpha|| <= 10^-6 * x`\n\nfor every `alpha` in that arc.  Therefore the reduction is just the projection\n`.2.2.1`; it introduces no additional mathematical assumptions and contains no\n`sorry` of its own.\n\nThe remaining open obligation is exactly the source-faithful verified-RH/Fourier\npackage already represented by the imported child theorem.  Once that theorem is\nproved, this frontier node resolves automatically.\n",
+      "created_at": "2026-09-12T13:01:15.441469+08:00",
+      "child_count": 1,
+      "deprecated_at": null
+    },
+    {
+      "node_type": "sketch",
+      "node_id": "sketch-acd90895-95c6-4a8f-81d3-1dd009cd32fe",
+      "submission_id": "acd90895-95c6-4a8f-81d3-1dd009cd32fe",
+      "parent_theorem_id": "00c91389-a414-4815-a3e6-2df7c4810a4a",
+      "status": "SKETCH_ACCEPTED",
+      "username": "marwahaha",
+      "explanation": "Reduction to the corrected Proposition 7.2/Fourier source envelope and the already reduced local S1 L2 bound. The wrapper proves the exact AddCircle arc measure bound, derives L1 estimates for S1 and its Fourier model, replaces S0 with cost 4.5e-6 of base and S1 squared with cost 0.075, applies the 0.01 Fourier tail/inversion bridge, and verifies 0.0000045 + 0.075 + 0.01 < 0.089. The solution is root-level, sorry-free, and exactly matches the target.",
+      "created_at": "2026-09-09T21:14:23.739904+08:00",
+      "child_count": 2,
+      "deprecated_at": null
+    },
+    {
+      "node_type": "sketch",
+      "node_id": "sketch-bc7aed09-f073-4001-b16e-b5eca01a79f8",
+      "submission_id": "bc7aed09-f073-4001-b16e-b5eca01a79f8",
+      "parent_theorem_id": "eb7f83fc-ae8f-4c85-aa70-86be2c690759",
+      "status": "SKETCH_ACCEPTED",
+      "username": "Hartmann_Psi",
+      "explanation": "**Proposition 8.3: the strongly major arc estimate.**\n\nOn the strongly major arc $E=\\{\\|\\alpha\\|_{\\mathbb R/\\mathbb Z}\\le T_0/(3.6\\pi x)\\}$ the\ncircle-method integrand (8.11) has a main term, and Proposition 8.3 says the integral\nreproduces it to within $10\\%$:\n$$\\Bigl\\|\\int_E F(\\alpha)\\,d\\alpha-\\frac23 M\\Bigr\\|\\;\\le\\;\\frac1{10}M,\n\\qquad M=\\frac{x^2}{K}\\Bigl\\lfloor\\frac H3\\Bigr\\rfloor^{3},$$\nat $K=1000$, $H=N_0=4\\times10^{14}$.\n\nThe proof in the paper proceeds in two conceptually separate stages, and the platform\ncarries them as two separate statements.\n\n*Stage one: replace the arithmetic by the cutoff model.* Proposition 7.2 lets one replace\neach prime sum on $E$ by $x$ (respectively $x/K$) times the Fourier transform of its\ncutoff, and `TaoFivePrimes.DK_strongly_major_approx` lets one replace $D_{H/3}$ by\n$\\lfloor H/3\\rfloor$. What survives is a purely analytic constant, the triple cutoff\ncorrelation\n$$\\mathfrak c\\;=\\;\\int_{\\mathbb R}\\int_{\\mathbb R}\n   \\eta_1(s)\\,\\eta_1\\!\\bigl(1-s-\\tfrac{t}{K}\\bigr)\\,\\eta_0(t)\\,ds\\,dt .$$\nThe outcome is `TaoFivePrimes.strongly_major_arc_discrete_to_cutoff_model`:\n$$\\Bigl\\|\\int_E F-M\\,\\mathfrak c\\Bigr\\|\\;\\le\\;\\frac{9}{100}M .$$\n\n*Stage two: evaluate the constant.* The correlation $\\mathfrak c$ is a concrete\ntwo-dimensional integral of piecewise-linear cutoffs, and\n`TaoFivePrimes.eta_cutoff_model_mass` (already proved) evaluates it to within a percent:\n$\\|\\mathfrak c-\\tfrac23\\|\\le\\tfrac1{100}$. The value $\\tfrac23$ is $\\int\\eta_1^2$, the\n$K\\to\\infty$ limit in which $\\eta_0$ acts as a unit mass.\n\n*Combining.* Writing the difference as\n$$\\int_E F-\\frac23M\\;=\\;\\Bigl(\\int_E F-M\\,\\mathfrak c\\Bigr)+M\\Bigl(\\mathfrak c-\\frac23\\Bigr)$$\nand applying the triangle inequality, the first bracket costs $\\tfrac9{100}M$ and the\nsecond $M\\cdot\\tfrac1{100}$, because $M\\ge0$ and so\n$\\|M(\\mathfrak c-\\tfrac23)\\|=M\\,\\|\\mathfrak c-\\tfrac23\\|$. The total is\n$$\\frac{9}{100}M+\\frac{1}{100}M=\\frac1{10}M,$$\nwhich is the claim — with no slack at all: the $9\\%$ of stage one and the $1\\%$ of stage\ntwo are exactly the budget Proposition 8.3 allows.\n",
+      "created_at": "2026-09-12T23:59:34.925088+08:00",
+      "child_count": 3,
+      "deprecated_at": null
+    },
+    {
+      "node_type": "sketch",
+      "node_id": "sketch-cbb20e0e-7847-45f7-b617-6939eda6ccec",
+      "submission_id": "cbb20e0e-7847-45f7-b617-6939eda6ccec",
+      "parent_theorem_id": "d4854f25-d5e0-443d-89e8-0aa15f90e19e",
+      "status": "ACCEPTED",
+      "username": "Hartmann_Psi",
+      "explanation": "# The strongly major arc $L^2$ estimate, with Tao's constant $1.04$\n\nWe must show, for $x \\ge 8.7\\cdot 10^{36}$,\n$$\\int_{|\\alpha|\\le \\frac{3.29\\cdot 10^{9}}{3.6\\pi x}} |S_1(x,\\alpha)|^2\\,d\\alpha\n \\;\\le\\; \\frac{2}{1-\\frac{\\log c}{\\log x}}\\cdot 1.04\\,x,\n \\qquad c := \\frac{2T_0}{3.6\\pi}.$$\n\nThe proof is the composition of two ingredients, and the whole content of the argument is\nthat the two fit together *exactly* — no slack is spent on the arithmetic factor.\n\n## 1. The Montgomery input at the right radius\n\n`montgomery_corollary47_source` is the large-sieve/Montgomery bound: for any weight $w$ and\nany $R>1$ whose primorial divides that of $\\sqrt x$,\n$$\\int_{|\\alpha| \\le \\frac1{2R^2}}\n   \\Bigl|\\sum_{n\\le x}\\Lambda^\\sharp_x(n)\\,w(n)\\,e(n\\alpha)\\Bigr|^2 d\\alpha\n \\;\\le\\; \\frac{\\log x}{\\log R}\\sum_{n\\le x}\\Lambda^\\sharp_x(n)\\,w(n)^2 .$$\n\nChoose\n$$R := \\sqrt{x/c}, \\qquad c = \\frac{2T_0}{3.6\\pi},$$\nwhich is exactly calibrated so that the Montgomery radius *is* the strongly major arc:\n$$\\frac1{2R^2} = \\frac{c}{2x} = \\frac{T_0}{3.6\\pi x} = \\frac{3.29\\cdot 10^{9}}{3.6\\pi x},$$\nsince $T_0 = 3.29\\cdot 10^{9}$ (`hradius`, closed by `field_simp` after unfolding `T0`).\nTaking $w(n) = \\eta_1(n/x)$ makes the exponential sum literally $S_1(x,\\alpha)$ — definitionally\nso, which is why `hS1eq` is `rfl`.\n\nThe divisibility hypothesis holds because $R^2 = x/c \\le x$ with $c > 4\\cdot 10^{8} > 1$\n(bounds on $c$ from $3 < \\pi < 4$), so $\\lfloor R\\rfloor \\le \\lfloor\\sqrt x\\rfloor$ and\n`primorial_dvd_primorial` applies.\n\n## 2. The arithmetic factor is an identity, not an estimate\n\nWith $R = \\sqrt{x/c}$,\n$$\\log R = \\tfrac12\\bigl(\\log x - \\log c\\bigr),\n\\qquad\\text{hence}\\qquad\n\\frac{\\log x}{\\log R} = \\frac{2\\log x}{\\log x - \\log c} = \\frac{2}{1 - \\frac{\\log c}{\\log x}} .$$\nThis is `hfac`, and it is an exact equality: the factor produced by Montgomery's inequality\nat this radius is precisely the factor appearing in Tao's statement. Positivity of $\\log R$\n(needed to divide) follows from $\\log x \\ge 122\\log 2$ — from $x \\ge 8.7\\cdot10^{36} \\ge 2^{122}$ —\nagainst $\\log c \\le 30\\log 2$, from $c < 7\\cdot 10^{8} < 2^{30}$.\n\n## 3. The prime mass\n\nThe second factor is supplied by `sum_siftedVonMangoldt_eta1_sq_le_104`,\n$$\\sum_{n\\le x}\\Lambda^\\sharp_x(n)\\,\\eta_1(n/x)^2 \\le 1.04\\,x ,$$\nthe sharpened explicit Chebyshev bound (a $2000$-level nested layer cake; the exact\npartial-summation value is $\\tfrac32\\log 2 = 1.03972\\ldots$, so $1.04$ is genuinely\nclose to optimal for this method). Multiplying by the non-negative factor of step 2\nfinishes the proof.\n\n## Formalization note\n\nThe only two places where an inequality rather than an identity is used are the\npositivity of $\\log R$ and the final monotonicity step; everything else — the radius, the\nfactor, and the identification of the exponential sum — is exact.\n",
+      "created_at": "2026-09-14T04:05:18.721831+08:00",
+      "child_count": 3,
+      "deprecated_at": null
+    },
+    {
+      "node_type": "sketch",
+      "node_id": "sketch-cfb25fed-0657-4be5-9284-514db5435ae2",
+      "submission_id": "cfb25fed-0657-4be5-9284-514db5435ae2",
+      "parent_theorem_id": "cef034c1-c2c7-4270-810e-0543b8aad89d",
+      "status": "SKETCH_ACCEPTED",
+      "username": "Hartmann_Psi",
+      "explanation": "**Proposition 8.3 on the set `majorArc x`.**\n\nOn the strongly major arc $E=\\{\\|\\alpha\\|_{\\mathbb R/\\mathbb Z}\\le T_0/(3.6\\pi x)\\}$ the\ncircle-method integrand (8.11) has a main term, and Proposition 8.3 says the integral\nreproduces it to within $10\\%$:\n$$\\Bigl\\|\\int_E F(\\alpha)\\,d\\alpha-\\frac23 M\\Bigr\\|\\;\\le\\;\\frac1{10}M,\n\\qquad M=\\frac{x^2}{K}\\Bigl\\lfloor\\frac H3\\Bigr\\rfloor^{3},$$\nat $K=1000$, $H=N_0=4\\times10^{14}$.\n\nThe proof in the paper proceeds in two conceptually separate stages, and the platform\ncarries them as two separate statements.\n\n*Stage one: replace the arithmetic by the cutoff model.* Proposition 7.2 lets one replace\neach prime sum on $E$ by $x$ (respectively $x/K$) times the Fourier transform of its\ncutoff, and `TaoFivePrimes.DK_strongly_major_approx` lets one replace $D_{H/3}$ by\n$\\lfloor H/3\\rfloor$. What survives is a purely analytic constant, the triple cutoff\ncorrelation\n$$\\mathfrak c\\;=\\;\\int_{\\mathbb R}\\int_{\\mathbb R}\n   \\eta_1(s)\\,\\eta_1\\!\\bigl(1-s-\\tfrac{t}{K}\\bigr)\\,\\eta_0(t)\\,ds\\,dt .$$\nThe outcome is `TaoFivePrimes.strongly_major_arc_discrete_to_cutoff_model`:\n$$\\Bigl\\|\\int_E F-M\\,\\mathfrak c\\Bigr\\|\\;\\le\\;\\frac{9}{100}M .$$\n\n*Stage two: evaluate the constant.* The correlation $\\mathfrak c$ is a concrete\ntwo-dimensional integral of piecewise-linear cutoffs, and\n`TaoFivePrimes.eta_cutoff_model_mass` (already proved) evaluates it to within a percent:\n$\\|\\mathfrak c-\\tfrac23\\|\\le\\tfrac1{100}$. The value $\\tfrac23$ is $\\int\\eta_1^2$, the\n$K\\to\\infty$ limit in which $\\eta_0$ acts as a unit mass.\n\n*Combining.* Writing the difference as\n$$\\int_E F-\\frac23M\\;=\\;\\Bigl(\\int_E F-M\\,\\mathfrak c\\Bigr)+M\\Bigl(\\mathfrak c-\\frac23\\Bigr)$$\nand applying the triangle inequality, the first bracket costs $\\tfrac9{100}M$ and the\nsecond $M\\cdot\\tfrac1{100}$, because $M\\ge0$ and so\n$\\|M(\\mathfrak c-\\tfrac23)\\|=M\\,\\|\\mathfrak c-\\tfrac23\\|$. The total is\n$$\\frac{9}{100}M+\\frac{1}{100}M=\\frac1{10}M,$$\nwhich is the claim — with no slack at all: the $9\\%$ of stage one and the $1\\%$ of stage\ntwo are exactly the budget Proposition 8.3 allows.\n\nThe region is written here as `majorArc x`, the set $\\{\\|\\alpha\\|\\le T_0/(3.6\\pi x)\\}$, rather\nthan as a closed ball; the two agree because $\\|\\alpha\\|=d(\\alpha,0)$ on the circle and\n$T_0=3.29\\times10^{9}$, and that identification is proved and used to transport the\nregion.\n",
+      "created_at": "2026-09-12T23:59:35.931515+08:00",
+      "child_count": 3,
+      "deprecated_at": null
+    },
+    {
+      "node_type": "sketch",
+      "node_id": "sketch-e5ded8d7-6566-4e7e-9ddf-44fe17c11352",
+      "submission_id": "e5ded8d7-6566-4e7e-9ddf-44fe17c11352",
+      "parent_theorem_id": "d4854f25-d5e0-443d-89e8-0aa15f90e19e",
+      "status": "SKETCH_ACCEPTED",
+      "username": "Hartmann_Psi",
+      "explanation": "**Corollary 4.7 for the strongly major arc, from Montgomery's local concentration bound\nand the Chebyshev estimate.**\n\nTao's Corollary 4.7 says that the $L^2$ mass of a sifted prime exponential sum on a small\narc around the origin is at most a factor $\\log x/\\log R$ times its total weight, where\n$1/(2R^2)$ is the radius of the arc. Specialised to the cutoff $\\eta_1$ and the strongly\nmajor arc $\\|\\alpha\\|\\le T_0/(3.6\\pi x)$, it gives\n$$\\int_{\\|\\alpha\\|\\le T_0/(3.6\\pi x)}|S_1(x,\\alpha)|^2\\,d\\alpha\n  \\;\\le\\;\\frac{2}{1-\\dfrac{\\log\\bigl(2T_0/(3.6\\pi)\\bigr)}{\\log x}}\\cdot 1.04\\,x .$$\nThis submission derives that statement from the two inputs it is made of.\n\n**Choice of the radius.** Write $c:=2T_0/(3.6\\pi)$ and set\n$$R:=\\sqrt{x/c}.$$\nThen $1/(2R^2)=c/(2x)=T_0/(3.6\\pi x)$, so Montgomery's arc is *exactly* the strongly major\narc of the statement — no inclusion or monotonicity step is needed. With\n$T_0=3.29\\times10^{9}$ and $3<\\pi<4$ one has $4\\times10^{8}<c<7\\times10^{8}$, whence\n$R^2=x/c>1$ and $R>1$, as Montgomery's hypothesis requires.\n\n**The sieve hypothesis.** Montgomery's corollary is stated for the sifted weight\n$\\Lambda^\\sharp$ removing all prime factors up to $\\sqrt x$, and requires\n$\\lfloor R\\rfloor^\\sharp \\mid (\\sqrt x)^\\sharp$ — i.e. $\\lfloor R\\rfloor\\le\\lfloor\\sqrt x\\rfloor$,\nafter which the primorials divide by monotonicity of the product over primes. Since\n$c>1$ we have $R^2=x/c\\le x$, so $\\lfloor R\\rfloor^2\\le R^2\\le x$ and the required\ninequality of integers follows from the characterisation $m\\le\\lfloor\\sqrt x\\rfloor\n\\iff m^2\\le x$.\n\n**The factor.** By construction\n$\\log R=\\tfrac12(\\log x-\\log c)$, so\n$$\\frac{\\log x}{\\log R}=\\frac{2\\log x}{\\log x-\\log c}=\\frac{2}{1-\\log c/\\log x},$$\nwhich is precisely the factor in the statement. That both $\\log R$ and $\\log x-\\log c$\nare positive is checked by comparing with $\\log 2$: $x\\ge 8.7\\times10^{36}\\ge 2^{122}$\ngives $\\log x\\ge 122\\log 2$, and $c<7\\times10^{8}<2^{30}$ gives $\\log c\\le 30\\log 2$, so\n$\\log x-\\log c\\ge 92\\log 2>0$. No decimal value of $\\log 2$ or of $\\pi$ beyond $3<\\pi<4$\nis used anywhere.\n\n**The prime mass.** It remains to bound the weight\n$\\sum_{n\\le x}\\Lambda^\\sharp(n)\\eta_1(n/x)^2$ by $1.04\\,x$. The cutoff $\\eta_1$ is a\ntrapezoid with values in $[0,1]$, so $\\eta_1^2\\le 1$; and $\\Lambda^\\sharp\\le\\Lambda$\npointwise, since sifting only replaces some values by zero. Hence the weight is at most\n$\\psi(x)=\\sum_{n\\le x}\\Lambda(n)$, and the Rosser--Schoenfeld bound\n$\\psi(x)<1.03883\\,x$ (`TaoFivePrimes.rosser_schoenfeld_psi_bound`) finishes, with the\nsmall slack $1.03883\\le 1.04$ that the statement allows.\n",
+      "created_at": "2026-09-12T23:30:38.029142+08:00",
+      "child_count": 3,
+      "deprecated_at": null
+    },
+    {
+      "node_type": "sketch",
+      "node_id": "sketch-f3e766ce-5f45-4618-ba52-b0e5e1e6c756",
+      "submission_id": "f3e766ce-5f45-4618-ba52-b0e5e1e6c756",
+      "parent_theorem_id": "8c85073b-2610-405c-a2ae-1db56b8cc061",
+      "status": "SKETCH_ACCEPTED",
+      "username": "marwahaha",
+      "explanation": "Source-faithful split into three independent analytic inputs: the eta1 Proposition 7.2 pointwise prime estimate, restricted Plancherel, and the cutoff Fourier inversion/tail bridge. The broader corrected eta0 Proposition 7.2 theorem is reused from the weakly-major branch. The submitted Lean wrapper proves integrability and continuity of both cutoff transforms, integral eta0 = 1, the bound ||E0|| <= 1, the centered-chart geometry, and derives the narrow S0 estimate from the shared source using the proved S0/smoothed-sum identity.",
+      "created_at": "2026-09-09T22:15:39.551439+08:00",
+      "child_count": 5,
+      "deprecated_at": null
+    },
+    {
+      "node_type": "sketch",
+      "node_id": "sketch-f6ed4bf1-c050-464d-8b52-884a2925d7d6",
+      "submission_id": "f6ed4bf1-c050-464d-8b52-884a2925d7d6",
+      "parent_theorem_id": "6b6610ed-d7c4-4f97-a537-b43a3ce04af9",
+      "status": "ACCEPTED",
+      "username": "Hartmann_Psi",
+      "explanation": "**Corollary 4.7 on the strongly major arc, with the clean constant $3x$ — now unconditional.**\n\n$$\\int_{\\|\\alpha\\|\\le T_0/(3.6\\pi x)} |S_1(x,\\alpha)|^2\\,d\\alpha \\;\\le\\; 3x,\n\\qquad x \\ge 8.7\\times10^{36}.$$\n\nBoth ingredients are proved theorems, so nothing here is conditional on an open input — in\nparticular the Rosser–Schoenfeld bound $\\psi(x)<1.03883x$, through which this estimate is\nusually routed, is not needed.\n\n**The radius.** Set $c := 2T_0/(3.6\\pi)$ and $R := \\sqrt{x/c}$. Then $1/(2R^2) = c/(2x) =\nT_0/(3.6\\pi x)$, so Montgomery's arc in\n`TaoFivePrimes.montgomery_corollary47_source` is *exactly* the strongly major arc — no\ninclusion or monotonicity step is needed. With $3<\\pi<4$ one has\n$4\\times10^{8}<c<7\\times10^{8}$, hence $R>1$; and $c>1$ forces $\\lfloor R\\rfloor^2\\le x$,\nwhich is the sieve hypothesis $\\lfloor R\\rfloor^\\sharp \\mid (\\sqrt x)^\\sharp$.\n\n**The factor.** By construction $\\log R = \\tfrac12(\\log x - \\log c)$, so\n$$\\frac{\\log x}{\\log R} = \\frac{2\\log x}{\\log x - \\log c} \\le \\frac{61}{23},$$\nproved by comparing both logarithms with $\\log 2$: from $x\\ge2^{122}$ and $c<2^{30}$ one\ngets $\\log x\\ge122\\log2$ and $\\log c\\le30\\log2$, and the inequality needed,\n$61\\log c\\le15\\log x$, is $1830\\log2\\le1830\\log2$. No decimal expansion of $\\log 2$, and no\nbound on $\\pi$ beyond $3<\\pi<4$, is used.\n\n**The prime mass.** Montgomery's corollary applied with the weight $w(n)=\\eta_1(n/x)$\nleaves $\\sum_{n\\le x}\\Lambda^\\sharp_x(n)\\eta_1(n/x)^2$, and\n`TaoFivePrimes.sum_siftedVonMangoldt_eta1_sq_le` bounds it by $1.08x$ using only Mathlib's\nChebyshev theory — a four-level discrete layer cake over the *nested* level sets\n$\\{\\eta_1>k/4\\}=(\\tfrac1{10}+\\tfrac k{40},\\tfrac9{10}-\\tfrac k{40})$, so that the upper\nChebyshev bound is charged only at the right endpoints and the lower one only at the left\nendpoints. The naive bound $\\eta_1^2\\le1$ would give $0.9\\log4-0.1\\log2 = 1.178$, which is\nnot enough.\n\n**Conclusion.** $\\tfrac{61}{23}\\cdot1.08 = 2.8643\\ldots \\le 3$, with about $4.5\\%$ to spare.\n",
+      "created_at": "2026-09-14T01:43:36.088047+08:00",
+      "child_count": 3,
+      "deprecated_at": null
+    },
+    {
+      "node_type": "sketch",
+      "node_id": "sketch-f8e6078f-8598-4e7c-b74f-c665dc31550f",
+      "submission_id": "f8e6078f-8598-4e7c-b74f-c665dc31550f",
+      "parent_theorem_id": "1dbb406b-10e5-4316-a023-6eba73b6e726",
+      "status": "ACCEPTED",
+      "username": "Hartmann_Psi",
+      "explanation": "**The strongly-major prime amplitude bound, proved outright from Montgomery's\nconcentration inequality and Chebyshev's $4^n$ bound.**\n\nThe quantity estimated here,\n$$\\int_{\\|\\alpha\\|\\le T_0/(3.6\\pi x)} |S_1(x,\\alpha)|^2\\,|S_0(x,\\alpha)|\\,d\\alpha\n  \\;\\le\\;100\\cdot\\frac{x^2}{K},\\qquad K=1000,$$\nis the crude amplitude bound that controls the error made when the shift kernel\n$D_{H/3}$ is replaced by $\\lfloor H/3\\rfloor$ on the strongly major arc: the replacement\nerror is bounded by $3\\bigl(\\sup_E|D_{H/3}-\\lfloor H/3\\rfloor|\\bigr)\\lfloor H/3\\rfloor^2$\ntimes exactly this integral. Because `TaoFivePrimes.DK_strongly_major_approx` supplies a\nrelative error of $10^{-10}$, the constant here may be enormously lossy and still be\nuseful — which is what makes the estimate provable without any explicit prime number\ntheorem.\n\nThe proof has three ingredients and no numerical input beyond $3<\\pi<4$ and\n$\\log 2<0.6931471808$.\n\n**1. Sifting reduces everything to Chebyshev.** The weight\n$\\Lambda^\\sharp_N(n)=\\Lambda(n)\\mathbf 1_{(n,(\\sqrt N)^\\sharp)=1}$ is supported, below $N$,\non the *primes* alone. Indeed if $\\Lambda^\\sharp_N(n)\\neq0$ then $n=p^k$ is a prime power;\ncoprimality to the primorial forces $p>\\lfloor\\sqrt N\\rfloor$, and then $k\\ge2$ would give\n$n\\ge p^2\\ge(\\lfloor\\sqrt N\\rfloor+1)^2>N$, contradicting $n\\le N$. Hence $k=1$. Summing,\n$$\\sum_{n\\le N}\\Lambda^\\sharp_N(n)\\;\\le\\;\\sum_{p\\le N}\\log p\\;=\\;\\log N^\\sharp\\;\\le\\;N\\log 4,$$\nthe last step being Mathlib's `primorial_le_four_pow`. This replaces the\nRosser--Schoenfeld constant $1.03883$ by the elementary $\\log 4=1.3863\\ldots$; the slack\nin the statement absorbs the difference many times over.\n\n**2. The $L^\\infty$ bound on $S_0$.** The cutoff $\\eta_0(t)=4(\\log 2-|\\log 2t|)_+$ is\nbounded by $4\\log 2$, and every character has modulus one, so the triangle inequality plus\nstep 1 give\n$$\\|S_0(x,\\alpha)\\|\\;\\le\\;4\\log 2\\cdot\\lfloor x/K\\rfloor\\log 4\n  \\qquad\\text{for every }\\alpha .$$\n\n**3. The $L^2$ bound on $S_1$, via Corollary 4.7.** Take\n$R=\\sqrt{x/c}$ with $c=2T_0/(3.6\\pi)$, so that Montgomery's arc $\\|\\alpha\\|\\le 1/(2R^2)$ is\n*exactly* the strongly major arc. The sieve hypothesis $\\lfloor R\\rfloor^\\sharp\\mid\n(\\sqrt x)^\\sharp$ holds because $c>1$ forces $\\lfloor R\\rfloor^2\\le x$. Applying\n`TaoFivePrimes.montgomery_corollary47_source` with the trapezoidal weight\n$w(n)=\\eta_1(n/x)$, and using $\\eta_1\\le1$ together with step 1,\n$$\\int_{E}|S_1(x,\\alpha)|^2\\,d\\alpha\\;\\le\\;\\frac{\\log x}{\\log R}\\sum_{n\\le x}\\Lambda^\\sharp_x(n)\\eta_1(n/x)^2\n  \\;\\le\\;\\frac{61}{23}\\,x\\log 4 .$$\nThe factor is bounded by comparing both logarithms with $\\log 2$: from $x\\ge2^{122}$ and\n$c<2^{30}$ one gets $\\log x\\ge122\\log2$ and $\\log c\\le30\\log2$, and since\n$\\log x/\\log R=2\\log x/(\\log x-\\log c)$ the bound $61/23$ follows with $\\log 2$ cancelling\nexactly — the inequality $61\\log c\\le15\\log x$ needed is $1830\\log2\\le1830\\log2$.\n\n**Putting it together.** Pulling the $L^\\infty$ bound out of the integral — legitimate\nbecause both integrands are continuous, hence integrable on the compact circle against\nthe Haar probability measure, a fact proved here from scratch since $S_1$ and $S_0$ are\nfinite Fourier polynomials — gives\n$$\\int_E|S_1|^2|S_0|\\;\\le\\;\\Bigl(4\\log2\\cdot\\frac{x}{K}\\log4\\Bigr)\\cdot\\frac{61}{23}x\\log4\n  \\;=\\;16(\\log2)^3\\cdot\\frac{61}{23}\\cdot\\frac{x^2}{K}\\;\\le\\;14.14\\cdot\\frac{x^2}{K},$$\ncomfortably inside the stated $100\\,x^2/K$.\n",
+      "created_at": "2026-09-13T00:17:45.571331+08:00",
+      "child_count": 2,
+      "deprecated_at": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "6b6610ed-d7c4-4f97-a537-b43a3ce04af9",
+      "target": "sketch-acd90895-95c6-4a8f-81d3-1dd009cd32fe",
+      "kind": "sketch"
+    },
+    {
+      "source": "8c85073b-2610-405c-a2ae-1db56b8cc061",
+      "target": "sketch-acd90895-95c6-4a8f-81d3-1dd009cd32fe",
+      "kind": "sketch"
+    },
+    {
+      "source": "sketch-acd90895-95c6-4a8f-81d3-1dd009cd32fe",
+      "target": "00c91389-a414-4815-a3e6-2df7c4810a4a",
+      "kind": "sketch"
+    },
+    {
+      "source": "6b6610ed-d7c4-4f97-a537-b43a3ce04af9",
+      "target": "sketch-284007eb-647f-403a-9402-b680c000a9c0",
+      "kind": "sketch"
+    },
+    {
+      "source": "sketch-284007eb-647f-403a-9402-b680c000a9c0",
+      "target": "1dbb406b-10e5-4316-a023-6eba73b6e726",
+      "kind": "sketch"
+    },
+    {
+      "source": "b75369cf-8100-4985-a2ce-e27b35030107",
+      "target": "sketch-f8e6078f-8598-4e7c-b74f-c665dc31550f",
+      "kind": "sketch"
+    },
+    {
+      "source": "d5145161-07e1-4f2d-bf49-08bc6090dc85",
+      "target": "sketch-f8e6078f-8598-4e7c-b74f-c665dc31550f",
+      "kind": "sketch"
+    },
+    {
+      "source": "sketch-f8e6078f-8598-4e7c-b74f-c665dc31550f",
+      "target": "1dbb406b-10e5-4316-a023-6eba73b6e726",
+      "kind": "sketch"
+    },
+    {
+      "source": "77dc484e-c2c4-4e1b-8d3d-8ebc9792da48",
+      "target": "sketch-f6ed4bf1-c050-464d-8b52-884a2925d7d6",
+      "kind": "sketch"
+    },
+    {
+      "source": "b75369cf-8100-4985-a2ce-e27b35030107",
+      "target": "sketch-f6ed4bf1-c050-464d-8b52-884a2925d7d6",
+      "kind": "sketch"
+    },
+    {
+      "source": "d5145161-07e1-4f2d-bf49-08bc6090dc85",
+      "target": "sketch-f6ed4bf1-c050-464d-8b52-884a2925d7d6",
+      "kind": "sketch"
+    },
+    {
+      "source": "sketch-f6ed4bf1-c050-464d-8b52-884a2925d7d6",
+      "target": "6b6610ed-d7c4-4f97-a537-b43a3ce04af9",
+      "kind": "sketch"
+    },
+    {
+      "source": "d4854f25-d5e0-443d-89e8-0aa15f90e19e",
+      "target": "sketch-73679b53-24ca-4846-bd15-ef7b4a5ca672",
+      "kind": "sketch"
+    },
+    {
+      "source": "d5145161-07e1-4f2d-bf49-08bc6090dc85",
+      "target": "sketch-73679b53-24ca-4846-bd15-ef7b4a5ca672",
+      "kind": "sketch"
+    },
+    {
+      "source": "sketch-73679b53-24ca-4846-bd15-ef7b4a5ca672",
+      "target": "6b6610ed-d7c4-4f97-a537-b43a3ce04af9",
+      "kind": "sketch"
+    },
+    {
+      "source": "b75369cf-8100-4985-a2ce-e27b35030107",
+      "target": "sketch-1a208298-aa57-41a6-b5f6-a7f0aa6af032",
+      "kind": "sketch"
+    },
+    {
+      "source": "cf6be7a8-2493-479a-9d57-6ee8535546d1",
+      "target": "sketch-1a208298-aa57-41a6-b5f6-a7f0aa6af032",
+      "kind": "sketch"
+    },
+    {
+      "source": "sketch-1a208298-aa57-41a6-b5f6-a7f0aa6af032",
+      "target": "753f5c48-d6dc-4534-bd08-faccf7af7bdc",
+      "kind": "sketch"
+    },
+    {
+      "source": "00c91389-a414-4815-a3e6-2df7c4810a4a",
+      "target": "sketch-9f805125-864b-42b7-94b3-edf0d22a1202",
+      "kind": "sketch"
+    },
+    {
+      "source": "1dbb406b-10e5-4316-a023-6eba73b6e726",
+      "target": "sketch-9f805125-864b-42b7-94b3-edf0d22a1202",
+      "kind": "sketch"
+    },
+    {
+      "source": "23f56258-f2e8-4acb-a0f1-253783b6ae1e",
+      "target": "sketch-9f805125-864b-42b7-94b3-edf0d22a1202",
+      "kind": "sketch"
+    },
+    {
+      "source": "sketch-9f805125-864b-42b7-94b3-edf0d22a1202",
+      "target": "c78fd776-bb76-45ac-a6f4-78fd9213d230",
+      "kind": "sketch"
+    },
+    {
+      "source": "00c91389-a414-4815-a3e6-2df7c4810a4a",
+      "target": "sketch-77047314-cb6a-4c37-bca8-ea8772d528d1",
+      "kind": "sketch"
+    },
+    {
+      "source": "1dbb406b-10e5-4316-a023-6eba73b6e726",
+      "target": "sketch-77047314-cb6a-4c37-bca8-ea8772d528d1",
+      "kind": "sketch"
+    },
+    {
+      "source": "23f56258-f2e8-4acb-a0f1-253783b6ae1e",
+      "target": "sketch-77047314-cb6a-4c37-bca8-ea8772d528d1",
+      "kind": "sketch"
+    },
+    {
+      "source": "d5145161-07e1-4f2d-bf49-08bc6090dc85",
+      "target": "sketch-77047314-cb6a-4c37-bca8-ea8772d528d1",
+      "kind": "sketch"
+    },
+    {
+      "source": "sketch-77047314-cb6a-4c37-bca8-ea8772d528d1",
+      "target": "c78fd776-bb76-45ac-a6f4-78fd9213d230",
+      "kind": "sketch"
+    },
+    {
+      "source": "c78fd776-bb76-45ac-a6f4-78fd9213d230",
+      "target": "sketch-cfb25fed-0657-4be5-9284-514db5435ae2",
+      "kind": "sketch"
+    },
+    {
+      "source": "d5145161-07e1-4f2d-bf49-08bc6090dc85",
+      "target": "sketch-cfb25fed-0657-4be5-9284-514db5435ae2",
+      "kind": "sketch"
+    },
+    {
+      "source": "fe792adc-e64b-4f34-acf3-aa1a412545c9",
+      "target": "sketch-cfb25fed-0657-4be5-9284-514db5435ae2",
+      "kind": "sketch"
+    },
+    {
+      "source": "sketch-cfb25fed-0657-4be5-9284-514db5435ae2",
+      "target": "cef034c1-c2c7-4270-810e-0543b8aad89d",
+      "kind": "sketch"
+    },
+    {
+      "source": "d5145161-07e1-4f2d-bf49-08bc6090dc85",
+      "target": "sketch-5521ef34-8489-417a-b290-2a7f7950b700",
+      "kind": "sketch"
+    },
+    {
+      "source": "eb7f83fc-ae8f-4c85-aa70-86be2c690759",
+      "target": "sketch-5521ef34-8489-417a-b290-2a7f7950b700",
+      "kind": "sketch"
+    },
+    {
+      "source": "sketch-5521ef34-8489-417a-b290-2a7f7950b700",
+      "target": "cef034c1-c2c7-4270-810e-0543b8aad89d",
+      "kind": "sketch"
+    },
+    {
+      "source": "3fa7d8d1-e2ce-4057-894d-f39a2f0a4a8d",
+      "target": "sketch-11751692-de02-4b67-8b2f-44fe1593d392",
+      "kind": "sketch"
+    },
+    {
+      "source": "d7089f63-d516-4c70-a5f5-f1ae1e917931",
+      "target": "sketch-11751692-de02-4b67-8b2f-44fe1593d392",
+      "kind": "sketch"
+    },
+    {
+      "source": "sketch-11751692-de02-4b67-8b2f-44fe1593d392",
+      "target": "cf6be7a8-2493-479a-9d57-6ee8535546d1",
+      "kind": "sketch"
+    },
+    {
+      "source": "1bed5b1b-c98f-4a5b-9160-7dd30d82e37f",
+      "target": "sketch-cbb20e0e-7847-45f7-b617-6939eda6ccec",
+      "kind": "sketch"
+    },
+    {
+      "source": "b75369cf-8100-4985-a2ce-e27b35030107",
+      "target": "sketch-cbb20e0e-7847-45f7-b617-6939eda6ccec",
+      "kind": "sketch"
+    },
+    {
+      "source": "d5145161-07e1-4f2d-bf49-08bc6090dc85",
+      "target": "sketch-cbb20e0e-7847-45f7-b617-6939eda6ccec",
+      "kind": "sketch"
+    },
+    {
+      "source": "sketch-cbb20e0e-7847-45f7-b617-6939eda6ccec",
+      "target": "d4854f25-d5e0-443d-89e8-0aa15f90e19e",
+      "kind": "sketch"
+    },
+    {
+      "source": "b75369cf-8100-4985-a2ce-e27b35030107",
+      "target": "sketch-e5ded8d7-6566-4e7e-9ddf-44fe17c11352",
+      "kind": "sketch"
+    },
+    {
+      "source": "cf6be7a8-2493-479a-9d57-6ee8535546d1",
+      "target": "sketch-e5ded8d7-6566-4e7e-9ddf-44fe17c11352",
+      "kind": "sketch"
+    },
+    {
+      "source": "d5145161-07e1-4f2d-bf49-08bc6090dc85",
+      "target": "sketch-e5ded8d7-6566-4e7e-9ddf-44fe17c11352",
+      "kind": "sketch"
+    },
+    {
+      "source": "sketch-e5ded8d7-6566-4e7e-9ddf-44fe17c11352",
+      "target": "d4854f25-d5e0-443d-89e8-0aa15f90e19e",
+      "kind": "sketch"
+    },
+    {
+      "source": "c78fd776-bb76-45ac-a6f4-78fd9213d230",
+      "target": "sketch-bc7aed09-f073-4001-b16e-b5eca01a79f8",
+      "kind": "sketch"
+    },
+    {
+      "source": "d5145161-07e1-4f2d-bf49-08bc6090dc85",
+      "target": "sketch-bc7aed09-f073-4001-b16e-b5eca01a79f8",
+      "kind": "sketch"
+    },
+    {
+      "source": "fe792adc-e64b-4f34-acf3-aa1a412545c9",
+      "target": "sketch-bc7aed09-f073-4001-b16e-b5eca01a79f8",
+      "kind": "sketch"
+    },
+    {
+      "source": "sketch-bc7aed09-f073-4001-b16e-b5eca01a79f8",
+      "target": "eb7f83fc-ae8f-4c85-aa70-86be2c690759",
+      "kind": "sketch"
+    },
+    {
+      "source": "c78fd776-bb76-45ac-a6f4-78fd9213d230",
+      "target": "sketch-9ea91af0-c22b-4772-a861-31edc0a7823d",
+      "kind": "sketch"
+    },
+    {
+      "source": "fe792adc-e64b-4f34-acf3-aa1a412545c9",
+      "target": "sketch-9ea91af0-c22b-4772-a861-31edc0a7823d",
+      "kind": "sketch"
+    },
+    {
+      "source": "sketch-9ea91af0-c22b-4772-a861-31edc0a7823d",
+      "target": "eb7f83fc-ae8f-4c85-aa70-86be2c690759",
+      "kind": "sketch"
+    },
+    {
+      "source": "047f3b9b-99a0-4ac3-a7b3-d183206a3315",
+      "target": "sketch-f3e766ce-5f45-4618-ba52-b0e5e1e6c756",
+      "kind": "sketch"
+    },
+    {
+      "source": "25d2bcac-c9d9-463f-8093-7a532ad00a3d",
+      "target": "sketch-f3e766ce-5f45-4618-ba52-b0e5e1e6c756",
+      "kind": "sketch"
+    },
+    {
+      "source": "39f55b4d-803f-4cc8-9bbc-95d2cf849768",
+      "target": "sketch-f3e766ce-5f45-4618-ba52-b0e5e1e6c756",
+      "kind": "sketch"
+    },
+    {
+      "source": "890427c4-bd83-4412-ad3a-e66d3f0bf738",
+      "target": "sketch-f3e766ce-5f45-4618-ba52-b0e5e1e6c756",
+      "kind": "sketch"
+    },
+    {
+      "source": "a344a104-cfea-4b7d-b89c-1e96a9269db0",
+      "target": "sketch-f3e766ce-5f45-4618-ba52-b0e5e1e6c756",
+      "kind": "sketch"
+    },
+    {
+      "source": "sketch-f3e766ce-5f45-4618-ba52-b0e5e1e6c756",
+      "target": "8c85073b-2610-405c-a2ae-1db56b8cc061",
+      "kind": "sketch"
+    },
+    {
+      "source": "d00b420a-79b6-40a4-8672-45b925bfa352",
+      "target": "sketch-4aefa4a6-0c3d-4586-b9f7-2657be613a35",
+      "kind": "sketch"
+    },
+    {
+      "source": "f17d0f4a-0d1a-4df2-bc77-c551df334e99",
+      "target": "sketch-4aefa4a6-0c3d-4586-b9f7-2657be613a35",
+      "kind": "sketch"
+    },
+    {
+      "source": "sketch-4aefa4a6-0c3d-4586-b9f7-2657be613a35",
+      "target": "39f55b4d-803f-4cc8-9bbc-95d2cf849768",
+      "kind": "sketch"
+    },
+    {
+      "source": "8c85073b-2610-405c-a2ae-1db56b8cc061",
+      "target": "sketch-a8ae482b-3741-4505-8781-e7cc8b05dd09",
+      "kind": "sketch"
+    },
+    {
+      "source": "sketch-a8ae482b-3741-4505-8781-e7cc8b05dd09",
+      "target": "890427c4-bd83-4412-ad3a-e66d3f0bf738",
+      "kind": "sketch"
+    },
+    {
+      "source": "d5145161-07e1-4f2d-bf49-08bc6090dc85",
+      "target": "00c91389-a414-4815-a3e6-2df7c4810a4a",
+      "kind": "structural"
+    },
+    {
+      "source": "d5145161-07e1-4f2d-bf49-08bc6090dc85",
+      "target": "1dbb406b-10e5-4316-a023-6eba73b6e726",
+      "kind": "structural"
+    },
+    {
+      "source": "d5145161-07e1-4f2d-bf49-08bc6090dc85",
+      "target": "6b6610ed-d7c4-4f97-a537-b43a3ce04af9",
+      "kind": "structural"
+    },
+    {
+      "source": "d5145161-07e1-4f2d-bf49-08bc6090dc85",
+      "target": "753f5c48-d6dc-4534-bd08-faccf7af7bdc",
+      "kind": "structural"
+    },
+    {
+      "source": "0572f368-9091-4cdd-99c2-41b475a5a1de",
+      "target": "c78fd776-bb76-45ac-a6f4-78fd9213d230",
+      "kind": "structural"
+    },
+    {
+      "source": "d5145161-07e1-4f2d-bf49-08bc6090dc85",
+      "target": "cef034c1-c2c7-4270-810e-0543b8aad89d",
+      "kind": "structural"
+    },
+    {
+      "source": "d5145161-07e1-4f2d-bf49-08bc6090dc85",
+      "target": "cf6be7a8-2493-479a-9d57-6ee8535546d1",
+      "kind": "structural"
+    },
+    {
+      "source": "d5145161-07e1-4f2d-bf49-08bc6090dc85",
+      "target": "d4854f25-d5e0-443d-89e8-0aa15f90e19e",
+      "kind": "structural"
+    },
+    {
+      "source": "0572f368-9091-4cdd-99c2-41b475a5a1de",
+      "target": "eb7f83fc-ae8f-4c85-aa70-86be2c690759",
+      "kind": "structural"
+    },
+    {
+      "source": "48e5337b-62c2-4e24-8c38-b047da4fe522",
+      "target": "0572f368-9091-4cdd-99c2-41b475a5a1de",
+      "kind": "structural"
+    },
+    {
+      "source": "d5145161-07e1-4f2d-bf49-08bc6090dc85",
+      "target": "1bed5b1b-c98f-4a5b-9160-7dd30d82e37f",
+      "kind": "structural"
+    },
+    {
+      "source": "d5145161-07e1-4f2d-bf49-08bc6090dc85",
+      "target": "23f56258-f2e8-4acb-a0f1-253783b6ae1e",
+      "kind": "structural"
+    },
+    {
+      "source": "d5145161-07e1-4f2d-bf49-08bc6090dc85",
+      "target": "77dc484e-c2c4-4e1b-8d3d-8ebc9792da48",
+      "kind": "structural"
+    },
+    {
+      "source": "1e9a2d48-7c78-4af8-8ff3-8adf4b2b247e",
+      "target": "8c85073b-2610-405c-a2ae-1db56b8cc061",
+      "kind": "structural"
+    },
+    {
+      "source": "d5145161-07e1-4f2d-bf49-08bc6090dc85",
+      "target": "8c85073b-2610-405c-a2ae-1db56b8cc061",
+      "kind": "structural"
+    },
+    {
+      "source": "d5145161-07e1-4f2d-bf49-08bc6090dc85",
+      "target": "b75369cf-8100-4985-a2ce-e27b35030107",
+      "kind": "structural"
+    },
+    {
+      "source": "0572f368-9091-4cdd-99c2-41b475a5a1de",
+      "target": "d5145161-07e1-4f2d-bf49-08bc6090dc85",
+      "kind": "structural"
+    },
+    {
+      "source": "48e5337b-62c2-4e24-8c38-b047da4fe522",
+      "target": "fe792adc-e64b-4f34-acf3-aa1a412545c9",
+      "kind": "structural"
+    },
+    {
+      "source": "1e9a2d48-7c78-4af8-8ff3-8adf4b2b247e",
+      "target": "047f3b9b-99a0-4ac3-a7b3-d183206a3315",
+      "kind": "structural"
+    },
+    {
+      "source": "d5145161-07e1-4f2d-bf49-08bc6090dc85",
+      "target": "047f3b9b-99a0-4ac3-a7b3-d183206a3315",
+      "kind": "structural"
+    },
+    {
+      "source": "30efbeb8-fb86-4988-ac69-9da4bbe78e85",
+      "target": "25d2bcac-c9d9-463f-8093-7a532ad00a3d",
+      "kind": "structural"
+    },
+    {
+      "source": "d5145161-07e1-4f2d-bf49-08bc6090dc85",
+      "target": "25d2bcac-c9d9-463f-8093-7a532ad00a3d",
+      "kind": "structural"
+    },
+    {
+      "source": "30efbeb8-fb86-4988-ac69-9da4bbe78e85",
+      "target": "39f55b4d-803f-4cc8-9bbc-95d2cf849768",
+      "kind": "structural"
+    },
+    {
+      "source": "d5145161-07e1-4f2d-bf49-08bc6090dc85",
+      "target": "39f55b4d-803f-4cc8-9bbc-95d2cf849768",
+      "kind": "structural"
+    },
+    {
+      "source": "1e9a2d48-7c78-4af8-8ff3-8adf4b2b247e",
+      "target": "890427c4-bd83-4412-ad3a-e66d3f0bf738",
+      "kind": "structural"
+    },
+    {
+      "source": "d5145161-07e1-4f2d-bf49-08bc6090dc85",
+      "target": "890427c4-bd83-4412-ad3a-e66d3f0bf738",
+      "kind": "structural"
+    },
+    {
+      "source": "1e9a2d48-7c78-4af8-8ff3-8adf4b2b247e",
+      "target": "a344a104-cfea-4b7d-b89c-1e96a9269db0",
+      "kind": "structural"
+    },
+    {
+      "source": "d5145161-07e1-4f2d-bf49-08bc6090dc85",
+      "target": "a344a104-cfea-4b7d-b89c-1e96a9269db0",
+      "kind": "structural"
+    },
+    {
+      "source": "30efbeb8-fb86-4988-ac69-9da4bbe78e85",
+      "target": "d00b420a-79b6-40a4-8672-45b925bfa352",
+      "kind": "structural"
+    },
+    {
+      "source": "d5145161-07e1-4f2d-bf49-08bc6090dc85",
+      "target": "d00b420a-79b6-40a4-8672-45b925bfa352",
+      "kind": "structural"
+    },
+    {
+      "source": "30efbeb8-fb86-4988-ac69-9da4bbe78e85",
+      "target": "f17d0f4a-0d1a-4df2-bc77-c551df334e99",
+      "kind": "structural"
+    },
+    {
+      "source": "48e5337b-62c2-4e24-8c38-b047da4fe522",
+      "target": "f17d0f4a-0d1a-4df2-bc77-c551df334e99",
+      "kind": "structural"
+    }
+  ],
+  "has_hidden_deprecated_sketches": false
+}

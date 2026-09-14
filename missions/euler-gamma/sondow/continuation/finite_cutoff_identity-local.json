@@ -1,0 +1,10 @@
+{
+  "file": "D:\\users\\self_projects\\prove2me_workspace\\Solutions\\Sol_EulerMascheroni_Sondow_finite_cutoff_identity.lean",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "exit_code": 0,
+  "sha256": "E656B46739296C04DB2E484C07219992BB61A1FCCEAE1610172FC3D8C90FB7F9"
+}

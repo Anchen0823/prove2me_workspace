@@ -1,0 +1,2669 @@
+{
+  "sha": "a5154676af9aa3095150ee410cdda80555aa0642",
+  "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/a5154676af9aa3095150ee410cdda80555aa0642",
+  "tree": [
+    {
+      "path": ".docker",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ebc99e9d0d1ec41ee35a700d17bcf2f12b5ebee9",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/ebc99e9d0d1ec41ee35a700d17bcf2f12b5ebee9"
+    },
+    {
+      "path": ".docker/gitpod",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b90ec29988c3658828a37c150d7fa7cf8f3f8011",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/b90ec29988c3658828a37c150d7fa7cf8f3f8011"
+    },
+    {
+      "path": ".docker/gitpod/Dockerfile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ceb9319979c72183c6254b51d58fe230d54a013a",
+      "size": 633,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/ceb9319979c72183c6254b51d58fe230d54a013a"
+    },
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "739b92943da020eb9426b3c5a789048067d119f9",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/739b92943da020eb9426b3c5a789048067d119f9"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "09947e738232c1321fcafccc282763f8a2953c92",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/09947e738232c1321fcafccc282763f8a2953c92"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/task.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59bad1c179b50f82c7e32dacb6fd3f11fec9ebe9",
+      "size": 342,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/59bad1c179b50f82c7e32dacb6fd3f11fec9ebe9"
+    },
+    {
+      "path": ".github/dependabot.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c0e66be47f354674437249fb548fd31f85238b2",
+      "size": 415,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/5c0e66be47f354674437249fb548fd31f85238b2"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7741353e3ba705e9087915118f61e24294f94f5c",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/7741353e3ba705e9087915118f61e24294f94f5c"
+    },
+    {
+      "path": ".github/workflows/05-pr-comment.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b89c058cdb725e7b289db86132c2be2968f84aa1",
+      "size": 6304,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/b89c058cdb725e7b289db86132c2be2968f84aa1"
+    },
+    {
+      "path": ".github/workflows/auto-label-ai-disclosure.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cdccb211f2c6eb05f7518123b1232acb965adf6a",
+      "size": 4592,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/cdccb211f2c6eb05f7518123b1232acb965adf6a"
+    },
+    {
+      "path": ".github/workflows/build.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b274a389196174e7d9c7d0ee7ce6bed1b8c90dd0",
+      "size": 2712,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/b274a389196174e7d9c7d0ee7ce6bed1b8c90dd0"
+    },
+    {
+      "path": ".github/workflows/create-release.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "891670666246e81b1cbca065872491bafe0298b4",
+      "size": 562,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/891670666246e81b1cbca065872491bafe0298b4"
+    },
+    {
+      "path": ".github/workflows/intentions.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "971016bcd5d65db38792eb66fadd0477ba3ff720",
+      "size": 352,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/971016bcd5d65db38792eb66fadd0477ba3ff720"
+    },
+    {
+      "path": ".github/workflows/update.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d9eebb6a29e8025d9565c6238b341e9371a51cd",
+      "size": 2222,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/4d9eebb6a29e8025d9565c6238b341e9371a51cd"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c7e9e501ea5e1ca02095f85cb544702674f23b0f",
+      "size": 750,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/c7e9e501ea5e1ca02095f85cb544702674f23b0f"
+    },
+    {
+      "path": ".gitpod.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3102eb97b93cfc27a297c1fc76e701483bd50013",
+      "size": 319,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/3102eb97b93cfc27a297c1fc76e701483bd50013"
+    },
+    {
+      "path": ".vscode",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7edfb2d5a8e7b0835da73ddeced54560700ed2e3",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/7edfb2d5a8e7b0835da73ddeced54560700ed2e3"
+    },
+    {
+      "path": ".vscode/extensions.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fec4c99285b2bcc53a957795f47114cb8c50cea3",
+      "size": 336,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/fec4c99285b2bcc53a957795f47114cb8c50cea3"
+    },
+    {
+      "path": ".vscode/settings.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1948c3d786c578e089f7093dce0925f0a1563ef1",
+      "size": 1050,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/1948c3d786c578e089f7093dce0925f0a1563ef1"
+    },
+    {
+      "path": "CITATION.cff",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ecc8d5b9216f30e231dc8351d62d17deb114faf",
+      "size": 879,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/6ecc8d5b9216f30e231dc8351d62d17deb114faf"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ee56154cf975f72b0928ae6d7ded1f331e6b5fe",
+      "size": 6307,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/9ee56154cf975f72b0928ae6d7ded1f331e6b5fe"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "size": 11357,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64"
+    },
+    {
+      "path": "PULL_REQUEST_STYLE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99c3718c287af41ad6068066041aa3516966d66b",
+      "size": 29267,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/99c3718c287af41ad6068066041aa3516966d66b"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "96803f1c864f9f6e636f5c8f80ee90314f58df29",
+      "size": 8976,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/96803f1c864f9f6e636f5c8f80ee90314f58df29"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0d6c69f41f423420bf6f05f259c4bd381c6e0cf6",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/0d6c69f41f423420bf6f05f259c4bd381c6e0cf6"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Auxiliary.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7c6eb542096280940df90097907387c59bab458",
+      "size": 3236,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/a7c6eb542096280940df90097907387c59bab458"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Backlund",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9e6cc469b8920d326619fd1cc76cc2e4ef57fff1",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/9e6cc469b8920d326619fd1cc76cc2e4ef57fff1"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Backlund/ZeroCountCrude.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16eaf705a7cb7077239e661a1523614b30e2c406",
+      "size": 57088,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/16eaf705a7cb7077239e661a1523614b30e2c406"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/BorelCaratheodory.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "067cc53a377b0e9a0c8fc81222fa3ec71a51756c",
+      "size": 14240,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/067cc53a377b0e9a0c8fc81222fa3ec71a51756c"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/BrunTitchmarsh.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e586f4bec3fa69d76499efc20cd4350c0ea483e",
+      "size": 20931,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/5e586f4bec3fa69d76499efc20cd4350c0ea483e"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Consequences.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d9e5b2240193c17ad5fac6d6768951c8b6d497a",
+      "size": 139036,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/2d9e5b2240193c17ad5fac6d6768951c8b6d497a"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Defs.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d7c9a7d60360e00cf02934003a45da58387010a3",
+      "size": 11240,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/d7c9a7d60360e00cf02934003a45da58387010a3"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/EulerMaclaurin.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "511e9a163128be2729afdf85f564f5ec61dd4d93",
+      "size": 3439,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/511e9a163128be2729afdf85f564f5ec61dd4d93"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/EulerMascheroniBounds.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14d3482d2b966f8a39d64e6ed348e140e86cf14c",
+      "size": 23953,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/14d3482d2b966f8a39d64e6ed348e140e86cf14c"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Fourier.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9688eb9f79ce972799c279b3bf006fdf7b0b8ddb",
+      "size": 8888,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/9688eb9f79ce972799c279b3bf006fdf7b0b8ddb"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/GeneralMeromorphic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa4d218f3e597362cd42d62171a592988303bd7f",
+      "size": 4749,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/fa4d218f3e597362cd42d62171a592988303bd7f"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/HadamardFactorization.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5218320f167865ddc7ee2b12e5fed3eb8e97746",
+      "size": 196,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/a5218320f167865ddc7ee2b12e5fed3eb8e97746"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/HoffsteinLockhart.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "afeaf059f340ce7b7d9e1e0956a2157a659d33bc",
+      "size": 2498,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/afeaf059f340ce7b7d9e1e0956a2157a659d33bc"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9c096b66cfdc3d7028e04a5c693476998934ba97",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/9c096b66cfdc3d7028e04a5c693476998934ba97"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/BKLNW",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "997c971870cadca007878736fdf0047197e1e27f",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/997c971870cadca007878736fdf0047197e1e27f"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/BKLNW/BKLNW.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b3de4f3b910609e4fd376e9bd0fc084730208cf",
+      "size": 125279,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/8b3de4f3b910609e4fd376e9bd0fc084730208cf"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/BKLNW/BKLNW_a2_bounds.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6caf66759934b44cafcf238a580e6c1e3cd1310",
+      "size": 26849,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/f6caf66759934b44cafcf238a580e6c1e3cd1310"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/BKLNW/BKLNW_app.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5584d7bc4325a0747d5cfdf16eafff66b3bea3a",
+      "size": 46167,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/e5584d7bc4325a0747d5cfdf16eafff66b3bea3a"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/BKLNW/BKLNW_app_tables.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "98b1fbf1568bd117481caa32fcd1f35bb6b9a06d",
+      "size": 327959,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/98b1fbf1568bd117481caa32fcd1f35bb6b9a06d"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/BKLNW/BKLNW_table10_dispatch.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3fc7ace4e93c99491fe9ca8198b4c26092e040b9",
+      "size": 193127,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/3fc7ace4e93c99491fe9ca8198b4c26092e040b9"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/BKLNW/BKLNW_table10_next.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42838092109249e06a2a795a1e6c83eb77ad4236",
+      "size": 118767,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/42838092109249e06a2a795a1e6c83eb77ad4236"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/BKLNW/BKLNW_table10_rows.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45cc022de3827ebcc88c55e06d474332a0d7197d",
+      "size": 1286,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/45cc022de3827ebcc88c55e06d474332a0d7197d"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/BKLNW/BKLNW_table10_rows_20_43.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c165737ed0047c7a350c362c1db389d9bdb8ca2e",
+      "size": 158521,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/c165737ed0047c7a350c362c1db389d9bdb8ca2e"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/BKLNW/BKLNW_table10_rows_44_59.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0027bbee869f8351948e14c4c173e13e5b991c3b",
+      "size": 96015,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/0027bbee869f8351948e14c4c173e13e5b991c3b"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/BKLNW/BKLNW_table10_rows_65_85.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c0c8554c30aeb48b7e0bc7e06c9d1173f1ebcd5",
+      "size": 19523,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/1c0c8554c30aeb48b7e0bc7e06c9d1173f1ebcd5"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/BKLNW/BKLNW_table10_rows_90_95.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "459e565a2ccf30d3502cf5ac3694357576519d2f",
+      "size": 7466,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/459e565a2ccf30d3502cf5ac3694357576519d2f"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/BKLNW/BKLNW_table10_rows_core.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "760900b2da6eedec8687258e078ae42e09baab02",
+      "size": 39510,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/760900b2da6eedec8687258e078ae42e09baab02"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/BKLNW/BKLNW_table10_rows_misc.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19de0f17945fc1d4da820b34ff2c12518ce5d0ad",
+      "size": 20101,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/19de0f17945fc1d4da820b34ff2c12518ce5d0ad"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/BKLNW/BKLNW_table10_rows_regime3_100_1875.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "173a424356a8c3a3009c92eee3115aba94b657a9",
+      "size": 89116,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/173a424356a8c3a3009c92eee3115aba94b657a9"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/BKLNW/BKLNW_table10_rows_regime3_10600_12500.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4100b8e7fcc42c3dc4aa2ac12321a9e628316bb1",
+      "size": 94373,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/4100b8e7fcc42c3dc4aa2ac12321a9e628316bb1"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/BKLNW/BKLNW_table10_rows_regime3_12600_24000.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6460b3d499a3085a147b9edee8e6602d4a46a3d5",
+      "size": 85893,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/6460b3d499a3085a147b9edee8e6602d4a46a3d5"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/BKLNW/BKLNW_table10_rows_regime3_1900_2375.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e985b0efce922bef72c53c557b4533492a0628d",
+      "size": 89909,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/2e985b0efce922bef72c53c557b4533492a0628d"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/BKLNW/BKLNW_table10_rows_regime3_2400_2875.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55b1659e9cb28b0db7572581d97691e40d0f0d96",
+      "size": 89957,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/55b1659e9cb28b0db7572581d97691e40d0f0d96"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/BKLNW/BKLNW_table10_rows_regime3_2900_3375.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cdf7293bb2a81171e580bdb8749fa5783013db2a",
+      "size": 90119,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/cdf7293bb2a81171e580bdb8749fa5783013db2a"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/BKLNW/BKLNW_table10_rows_regime3_3400_3875.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2dce2d27b40a84a831d182d5a73142925f592c44",
+      "size": 90325,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/2dce2d27b40a84a831d182d5a73142925f592c44"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/BKLNW/BKLNW_table10_rows_regime3_3900_4375.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "85844753263d2bc18944bbf80ec6bc6ab4870dcc",
+      "size": 90485,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/85844753263d2bc18944bbf80ec6bc6ab4870dcc"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/BKLNW/BKLNW_table10_rows_regime3_4400_4875.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "13950d0c5f2118fff81b85b56be50ac9e5352291",
+      "size": 90655,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/13950d0c5f2118fff81b85b56be50ac9e5352291"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/BKLNW/BKLNW_table10_rows_regime3_4900_6500.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53f31228c00d4483b974195c662cafd911ae3c10",
+      "size": 90993,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/53f31228c00d4483b974195c662cafd911ae3c10"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/BKLNW/BKLNW_table10_rows_regime3_6600_8500.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa7f3e89e47b08ee225f04b6a106bb5e4c261438",
+      "size": 91859,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/fa7f3e89e47b08ee225f04b6a106bb5e4c261438"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/BKLNW/BKLNW_table10_rows_regime3_8600_10500.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a2eecaeef38f8d681d7f50a5fbe76b4e9e217e97",
+      "size": 92947,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/a2eecaeef38f8d681d7f50a5fbe76b4e9e217e97"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/BKLNW/BKLNW_table10_values.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a02ca48bb238c3f567a55569cc8383fefc10e2eb",
+      "size": 92675,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/a02ca48bb238c3f567a55569cc8383fefc10e2eb"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/BKLNW/BKLNW_table11_dispatch.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84ff32e8f740efc45504649f2ea1d75870b6699f",
+      "size": 31462,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/84ff32e8f740efc45504649f2ea1d75870b6699f"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/BKLNW/BKLNW_table11_suffix.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69a2bba7f73bc1f1660fb32c641f5cb9b45135ed",
+      "size": 278028,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/69a2bba7f73bc1f1660fb32c641f5cb9b45135ed"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/BKLNW/BKLNW_tables.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f186e176a8c96d8e0d4037ef10b71326cd3ac793",
+      "size": 111096,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/f186e176a8c96d8e0d4037ef10b71326cd3ac793"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/Buthe.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb726358b3e28f2ad4bb77ba05324ca778ea8d19",
+      "size": 10069,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/eb726358b3e28f2ad4bb77ba05324ca778ea8d19"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/CH2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d5763e7854638bbbae1ec0d4118d8716f32d9078",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/d5763e7854638bbbae1ec0d4118d8716f32d9078"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/CH2/CH2.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a93bb21616a871c808d99eb68ffdb8ed404e738e",
+      "size": 259089,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/a93bb21616a871c808d99eb68ffdb8ed404e738e"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/CH2/CH2_part1.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a8b6c54838d7ce91d27c2dd47ce85310cecf4cb",
+      "size": 375802,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/9a8b6c54838d7ce91d27c2dd47ce85310cecf4cb"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/Chebyshev.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee5573470d4b129aa2f9425a61c6815f879fb3d3",
+      "size": 32056,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/ee5573470d4b129aa2f9425a61c6815f879fb3d3"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/Dusart.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5aa91a160e79110d1b50c95470fc25d65497ad72",
+      "size": 31165,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/5aa91a160e79110d1b50c95470fc25d65497ad72"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/Erdos392.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3bdc61027413cc1f33dfc11e1328b0859dc8ef5e",
+      "size": 172725,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/3bdc61027413cc1f33dfc11e1328b0859dc8ef5e"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2c49b00dc4e5fdc75f8e5c3c33b8744290b1fbe",
+      "size": 271607,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/d2c49b00dc4e5fdc75f8e5c3c33b8744290b1fbe"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Cor23.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65a93d831138b8d4aaf6e70b9e9fc542754fa967",
+      "size": 39561,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/65a93d831138b8d4aaf6e70b9e9fc542754fa967"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Cor23All.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "57043af54805d27b2d529a87e9e7a308493509fe",
+      "size": 2336,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/57043af54805d27b2d529a87e9e7a308493509fe"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Cor23Cor14Tail.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80df2105a00eca4b5ecbf437f7a80ffe6cb7ec14",
+      "size": 11252,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/80df2105a00eca4b5ecbf437f7a80ffe6cb7ec14"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Cor23Row1.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2fb030ee49d0ec2bce3622ce2e4b67af47deb9e4",
+      "size": 14628,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/2fb030ee49d0ec2bce3622ce2e4b67af47deb9e4"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Cor23Row2.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77b0ed982920952afbdff18fb196d94c964f7e23",
+      "size": 14052,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/77b0ed982920952afbdff18fb196d94c964f7e23"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Cor23Row3.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c7096c1fb3c2ddca03758d7a8682aba5fb298ed",
+      "size": 12250,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/0c7096c1fb3c2ddca03758d7a8682aba5fb298ed"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Cor23Row4.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c00a3da753f8e1d39af5aa11a3907d17e74e38e1",
+      "size": 12899,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/c00a3da753f8e1d39af5aa11a3907d17e74e38e1"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Cor23Row6.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "459a697b8f7d0329e9d0ba193d55c68ee1e13475",
+      "size": 6006,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/459a697b8f7d0329e9d0ba193d55c68ee1e13475"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Cor23Row7.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b56197fad654abfe0c30e7eae7bb3cc53638a805",
+      "size": 5776,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/b56197fad654abfe0c30e7eae7bb3cc53638a805"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Cor23Row8.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fae10fceab2e9adf919be98eb4cd32e566243332",
+      "size": 9551,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/fae10fceab2e9adf919be98eb4cd32e566243332"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Cor23Row9.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a456c223e295d497f898d81ed83c4345df6f6c22",
+      "size": 9549,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/a456c223e295d497f898d81ed83c4345df6f6c22"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Cor24.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2404d90a01f6fccb49d3ddd1c6716c2743b5c4df",
+      "size": 3064,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/2404d90a01f6fccb49d3ddd1c6716c2743b5c4df"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Cor24All.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0cfdf2436e22c0c74c02c5e639aa2c5e6513da3d",
+      "size": 2120,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/0cfdf2436e22c0c74c02c5e639aa2c5e6513da3d"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Cor24CheckedNumerics.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d655cbdc859b290d2e1b9f642c0a40345b347aa",
+      "size": 7428,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/1d655cbdc859b290d2e1b9f642c0a40345b347aa"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Cor24Row1.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b99cbfd778fcb680c4fd80aef404ffa23862ab7",
+      "size": 6146,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/9b99cbfd778fcb680c4fd80aef404ffa23862ab7"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Cor24Row10.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ef6e952289bf2a96be7868f42f92e4a8a864d79",
+      "size": 7597,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/5ef6e952289bf2a96be7868f42f92e4a8a864d79"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Cor24Row11.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52dd668e0d567e52e63a8b76b1c4296790046fa3",
+      "size": 23543,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/52dd668e0d567e52e63a8b76b1c4296790046fa3"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Cor24Row2.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e9fe6e1b1c990d79646a03188e21e195261a194",
+      "size": 6498,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/9e9fe6e1b1c990d79646a03188e21e195261a194"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Cor24Row3.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8beb76543e0b74fe1cf1bb37a20b9819160dd83a",
+      "size": 7651,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/8beb76543e0b74fe1cf1bb37a20b9819160dd83a"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Cor24Row4.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e22b20d14f13ca64f96b8cfcf4424868fb08cae6",
+      "size": 14411,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/e22b20d14f13ca64f96b8cfcf4424868fb08cae6"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Cor24Row5.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f26220d033f8ec55e9403f9f55b84af9e0c91cb7",
+      "size": 6248,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/f26220d033f8ec55e9403f9f55b84af9e0c91cb7"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Cor24Row6.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3162be9362d034f1acef1fab5e2f9088a437bfb4",
+      "size": 7439,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/3162be9362d034f1acef1fab5e2f9088a437bfb4"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Cor24Row7.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2745e502f30c949f894b3631526d849303f55559",
+      "size": 7465,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/2745e502f30c949f894b3631526d849303f55559"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Cor24Row8.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "086fb1ac31c203c3b9366bc0a481f8f77cd354a9",
+      "size": 7475,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/086fb1ac31c203c3b9366bc0a481f8f77cd354a9"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Cor24Row9.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a88ea0ef677a7abb1188dd0cda6b7b9903be347b",
+      "size": 7471,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/a88ea0ef677a7abb1188dd0cda6b7b9903be347b"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Cor24TrustedNumerics.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "942508e55a3bf64bdf89f93e37fc3d019dcf45e4",
+      "size": 10793,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/942508e55a3bf64bdf89f93e37fc3d019dcf45e4"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Floor",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "48b5e7465dcee09f60d0f30c47c648239dbda2e8",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/48b5e7465dcee09f60d0f30c47c648239dbda2e8"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Floor/Cor22Floor.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94b0b45e6fa7d3a8127a3f777a28ece4fdae06cd",
+      "size": 12185,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/94b0b45e6fa7d3a8127a3f777a28ece4fdae06cd"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Tables",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "63f689cb17413a4e3ed682e49df4033b22f36e1d",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/63f689cb17413a4e3ed682e49df4033b22f36e1d"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Tables/Table4Ext.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76a0e479699cbf6d5939f2538fb6741cc99314a3",
+      "size": 6172,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/76a0e479699cbf6d5939f2538fb6741cc99314a3"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Tables/Table4ExtCore.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8bfaa4bb90ae35a25f6147e01715327d2cea02fc",
+      "size": 8584,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/8bfaa4bb90ae35a25f6147e01715327d2cea02fc"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Tables/Table4ExtData_00.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f89c3c869241fd96d770d38e47d8bd30ad5dc8c0",
+      "size": 70226,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/f89c3c869241fd96d770d38e47d8bd30ad5dc8c0"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Tables/Table4ExtData_01.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0372072b29e7e908bc60083150a70852a7b24d01",
+      "size": 73378,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/0372072b29e7e908bc60083150a70852a7b24d01"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Tables/Table4ExtData_02.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "871bc0d99fc268e7264d3eaced9ad939deea7f39",
+      "size": 75440,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/871bc0d99fc268e7264d3eaced9ad939deea7f39"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Tables/Table4ExtData_03.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9bba115493163f24ce7cda3c908d3005e967bd8",
+      "size": 78145,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/b9bba115493163f24ce7cda3c908d3005e967bd8"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Tables/Table4ExtData_04.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a4b43964cdfb1e296bcf9eab7bd1574f02d8af67",
+      "size": 80989,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/a4b43964cdfb1e296bcf9eab7bd1574f02d8af67"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Tables/Table4ExtData_05.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ae52a9b3aade3523021e045572c86e334131479",
+      "size": 83353,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/7ae52a9b3aade3523021e045572c86e334131479"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Tables/Table4ExtData_06.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3e1009fd46ac4b6d47156202205bc4186e0ee4e",
+      "size": 85643,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/c3e1009fd46ac4b6d47156202205bc4186e0ee4e"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Tables/Table4ExtData_07.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6be1326e1cdbe851148007951fe745998c1bae2",
+      "size": 87925,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/a6be1326e1cdbe851148007951fe745998c1bae2"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Tables/Table4ExtData_08.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42a1ad85a4a6d46804aca6ad9aad9c3a452d77c9",
+      "size": 89762,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/42a1ad85a4a6d46804aca6ad9aad9c3a452d77c9"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Tables/Table4ExtData_09.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b013348aafc182ca8266742f508eaaee5828f5a",
+      "size": 91714,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/9b013348aafc182ca8266742f508eaaee5828f5a"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Tables/Table4ExtData_10.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6242af9dc76987c6a58dcc511727e8008d30552",
+      "size": 96629,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/f6242af9dc76987c6a58dcc511727e8008d30552"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Tables/Table4ExtData_11.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d620a67eefc231644c8e6d47246dd275b35bbbd",
+      "size": 98112,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/4d620a67eefc231644c8e6d47246dd275b35bbbd"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Tables/Table4ExtData_12.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4fedcdcdeebee7311c7d573e6943d93bd547459b",
+      "size": 102845,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/4fedcdcdeebee7311c7d573e6943d93bd547459b"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Tables/Table4ExtData_13.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ac577e8d673bd8a0e146631e8ce44fe90c967b7",
+      "size": 64206,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/2ac577e8d673bd8a0e146631e8ce44fe90c967b7"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Tables/Table4ExtGenCore.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "710eb4339aa0c84fdfb59ee1888fc8ad146295b9",
+      "size": 10203,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/710eb4339aa0c84fdfb59ee1888fc8ad146295b9"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2Tables/Table4ExtGenQuarterCore.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68fb302ad113735887a868f0d7c288a1d5bc1f7c",
+      "size": 10131,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/68fb302ad113735887a868f0d7c288a1d5bc1f7c"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FKS2TrustedNumerics.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5321ae2dab2a8472a14ba33bbf265d6d13fbce21",
+      "size": 7932,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/5321ae2dab2a8472a14ba33bbf265d6d13fbce21"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FioriKadiriSwidinsky",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fb6a41d42c3702450b834a79eccc3d6da23b9a9e",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/fb6a41d42c3702450b834a79eccc3d6da23b9a9e"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FioriKadiriSwidinsky/FioriKadiriSwidinsky.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "639cac55142a5a20bdf9bef5a0549b5ab214c8ae",
+      "size": 38200,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/639cac55142a5a20bdf9bef5a0549b5ab214c8ae"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/FioriKadiriSwidinsky/FioriKadiriSwidinsky_tables.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07b7246bf4212103a39f31ae977a0bc02b9b8e42",
+      "size": 3734,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/07b7246bf4212103a39f31ae977a0bc02b9b8e42"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/Goldbach.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76a813d479384c54d5e9ae64e6ad2fa44d3d3053",
+      "size": 13042,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/76a813d479384c54d5e9ae64e6ad2fa44d3d3053"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/HadamardLogDerivative.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf68a2107582bf3798e52f8dfe36e2a6e981421b",
+      "size": 11783,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/cf68a2107582bf3798e52f8dfe36e2a6e981421b"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/KLN.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8deb90f22f812473ce45f82b224576b2148e744",
+      "size": 5734,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/d8deb90f22f812473ce45f82b224576b2148e744"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/Kadiri.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "226babae866f12a54d2e404e938bb538ceee1c1d",
+      "size": 183935,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/226babae866f12a54d2e404e938bb538ceee1c1d"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/KadiriEq11Base.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf40c34935a43c9886ccf08c507311223e5db5bf",
+      "size": 1374,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/bf40c34935a43c9886ccf08c507311223e5db5bf"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/KadiriEq11Reduction.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db026f0b075857f88575a347faebb663a0491af7",
+      "size": 43640,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/db026f0b075857f88575a347faebb663a0491af7"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/KadiriEq12Foundations.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01e0072d73191d271f53069ac665d58381e605aa",
+      "size": 32930,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/01e0072d73191d271f53069ac665d58381e605aa"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/KadiriEq12Helpers.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7fac4fa5684b2a08cf0fbd4b7e80d42f32fe501",
+      "size": 33826,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/a7fac4fa5684b2a08cf0fbd4b7e80d42f32fe501"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/KadiriEq13.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2c2d0db801a3ffbe08c48d5027439336d22b8b4",
+      "size": 20653,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/f2c2d0db801a3ffbe08c48d5027439336d22b8b4"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/KadiriEq14.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ddf52ee4941ea5f78291dff2728c2f7b273b082a",
+      "size": 37588,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/ddf52ee4941ea5f78291dff2728c2f7b273b082a"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/KadiriEq15.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "375a9888d4e32bbffd12df6f3a2f6a5792e9f186",
+      "size": 30941,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/375a9888d4e32bbffd12df6f3a2f6a5792e9f186"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/KadiriEq15GammaFactor.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f50c24cac35ac542a98402c0d9f19c779da13a0c",
+      "size": 8262,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/f50c24cac35ac542a98402c0d9f19c779da13a0c"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/KadiriEq15LaplaceStrip.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "690942ec95cd23ae4d0a49bb7879bb1a557626e5",
+      "size": 10819,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/690942ec95cd23ae4d0a49bb7879bb1a557626e5"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/KadiriSupport.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5f18d4afcaba4353da9fcf26c6af02df014bf08",
+      "size": 17612,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/f5f18d4afcaba4353da9fcf26c6af02df014bf08"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/KadiriZeroCounting.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0621bd9eed1281e3d0219b8787d3bd66178d2830",
+      "size": 111293,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/0621bd9eed1281e3d0219b8787d3bd66178d2830"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/Lcm.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19ce2c591e2ae6c6b6f08d79c70ecce60ccc82dc",
+      "size": 76430,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/19ce2c591e2ae6c6b6f08d79c70ecce60ccc82dc"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/LeanCertEnclosures.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77858defa87defe17d0cfe588612ea70f8963ea8",
+      "size": 12372,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/77858defa87defe17d0cfe588612ea70f8963ea8"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/Li2Bounds.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "798a296b2a16769c607506e8395ba25aff0b5514",
+      "size": 11104,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/798a296b2a16769c607506e8395ba25aff0b5514"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/LiSeries.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4cb2956a6a42c163b26f13c47f4287a26f11f8d",
+      "size": 46933,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/e4cb2956a6a42c163b26f13c47f4287a26f11f8d"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/LnFactorialSeries.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f606ff7d5548a9d0e4f038cc22ab02ef8903623",
+      "size": 6176,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/1f606ff7d5548a9d0e4f038cc22ab02ef8903623"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/LogTables.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac0c10884471465ac688c6bd041cdb8c3f004b54",
+      "size": 59594,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/ac0c10884471465ac688c6bd041cdb8c3f004b54"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/Mertens.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f087e9110d6d1fe7c3627e4118bd89c0b4667a06",
+      "size": 113982,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/f087e9110d6d1fe7c3627e4118bd89c0b4667a06"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/MobiusLemma.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f3c5a6ed9f2a817b2e47c000b5abaf087a30b03",
+      "size": 34071,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/9f3c5a6ed9f2a817b2e47c000b5abaf087a30b03"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/PVIdentity.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4dba1e8114f2e1fa3ed4ebf3aebf6ca94a24967f",
+      "size": 43826,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/4dba1e8114f2e1fa3ed4ebf3aebf6ca94a24967f"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/PrimaryDefinitions.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39978a88ced44146c454837667ab798e47ed57c2",
+      "size": 381,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/39978a88ced44146c454837667ab798e47ed57c2"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/PrimarySummary.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f27799598058fa2d8a09a248168c1e8f1040ea1e",
+      "size": 533,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/f27799598058fa2d8a09a248168c1e8f1040ea1e"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/PrimeInInterval.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "746d7def4c99ab0c8dea91a1fde7484b299da9b0",
+      "size": 13291,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/746d7def4c99ab0c8dea91a1fde7484b299da9b0"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/PrimeTables.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3cc2a6d099ec6db457125cd9f2845e63cb7c2ead",
+      "size": 4522,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/3cc2a6d099ec6db457125cd9f2845e63cb7c2ead"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/Ramanujan",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8fe0f43f5e895d66df4ff0a65fcb769ce93ae30f",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/8fe0f43f5e895d66df4ff0a65fcb769ce93ae30f"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/Ramanujan/Ramanujan.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "047df33343cb9fa093675baf21bf55f05032cabe",
+      "size": 124444,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/047df33343cb9fa093675baf21bf55f05032cabe"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/Ramanujan/RamanujanCalculations.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7012ed2b37a80491505cfdc8f9f744910c785655",
+      "size": 51510,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/7012ed2b37a80491505cfdc8f9f744910c785655"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/RosserSchoenfeld",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8f3ea05d93ebc67c149ab1f6508a743eea47b889",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/8f3ea05d93ebc67c149ab1f6508a743eea47b889"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/RosserSchoenfeld/RSPrimeLower.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e427cb901f7152caa01418ccc8fe9b5f302a1eb",
+      "size": 8548,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/4e427cb901f7152caa01418ccc8fe9b5f302a1eb"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/RosserSchoenfeld/RosserSchoenfeldPrime.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0533123764856ac5bc38f95b18b56551747d380a",
+      "size": 48507,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/0533123764856ac5bc38f95b18b56551747d380a"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/RosserSchoenfeld/RosserSchoenfeldPrime_tables.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "367e85a52cfab57c8f7b67a5762ef0ca01f300d3",
+      "size": 622,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/367e85a52cfab57c8f7b67a5762ef0ca01f300d3"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/RosserSchoenfeld/RosserSchoenfeldZeta.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee867878666dfebb3d2a44af2495b53cea61d6f3",
+      "size": 1014,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/ee867878666dfebb3d2a44af2495b53cea61d6f3"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/SecondaryDefinitions.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b7c25d8957f1e23fc40a4396c176524928ee1bb",
+      "size": 9395,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/6b7c25d8957f1e23fc40a4396c176524928ee1bb"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/SecondarySummary.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3e58516c0c8c4ea8467cb1fcac533ee397489d4",
+      "size": 12773,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/a3e58516c0c8c4ea8467cb1fcac533ee397489d4"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/TMEEMT.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2135db2aff17dd62ba4aa41bc3a34f40d4d85638",
+      "size": 80630,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/2135db2aff17dd62ba4aa41bc3a34f40d4d85638"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/ZetaAppendix.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5756e29e5bcdcd4feed5776fb056f43969b48043",
+      "size": 303280,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/5756e29e5bcdcd4feed5776fb056f43969b48043"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/ZetaDefinitions.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c43b8f33146af9785bb12864d6ee5fbbe25a7907",
+      "size": 7527,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/c43b8f33146af9785bb12864d6ee5fbbe25a7907"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/ZetaSummary.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed5673b793f9e48ec94a6ca2827cd14747941906",
+      "size": 4053,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/ed5673b793f9e48ec94a6ca2827cd14747941906"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/eSHP",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d6ad12bd28cd6919ff628cefb3aba74f383fe1d8",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/d6ad12bd28cd6919ff628cefb3aba74f383fe1d8"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/eSHP/eSHP.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff45f31f43555c288fc81266a8711f02bb7a3c46",
+      "size": 20591,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/ff45f31f43555c288fc81266a8711f02bb7a3c46"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IEANTN/eSHP/eSHP_tables.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3dd073bc499c491b91c676da2bf29358235e1f13",
+      "size": 3641,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/3dd073bc499c491b91c676da2bf29358235e1f13"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/IwaniecKowalskiCh1.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c427e0ddfbe8f62636487afbe6d2e74f983ba2dd",
+      "size": 96321,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/c427e0ddfbe8f62636487afbe6d2e74f983ba2dd"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/LaplaceInversion.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b080a3be21494c25600d9b79e0f83cd9bd502d9a",
+      "size": 118402,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/b080a3be21494c25600d9b79e0f83cd9bd502d9a"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a61fb02191d2b788bc49affee3f7ec2eaf15fb90",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/a61fb02191d2b788bc49affee3f7ec2eaf15fb90"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Algebra",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1c34116a7c3959cc3fc41fba1c7bfc6bf8ef3f19",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/1c34116a7c3959cc3fc41fba1c7bfc6bf8ef3f19"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Algebra/Notation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "24264183112c01e483834c58d7c3780b69524c61",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/24264183112c01e483834c58d7c3780b69524c61"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Algebra/Notation/Support.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "13d3575b14d663481b15e0099f75c42739668f40",
+      "size": 279,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/13d3575b14d663481b15e0099f75c42739668f40"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Algebra/Order",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "15f085663f3b53f9043a376d04ef731214aae5cc",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/15f085663f3b53f9043a376d04ef731214aae5cc"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Algebra/Order/Floor",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9b0f285de3b6b1d90cc0a1d87f978180776fde36",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/9b0f285de3b6b1d90cc0a1d87f978180776fde36"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Algebra/Order/Floor/Ring.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af5984341c2a331e16260af698607f5744eb5354",
+      "size": 409,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/af5984341c2a331e16260af698607f5744eb5354"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "05d5b882b3ad079024651b663911ae84fd9e8f91",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/05d5b882b3ad079024651b663911ae84fd9e8f91"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Asymptotics",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ff82d7eb42bbbe52919b1da438ed945f49a301bb",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/ff82d7eb42bbbe52919b1da438ed945f49a301bb"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Asymptotics/Asymptotics.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc51688f7332e0caf3bd4d1b50c1d0052d304103",
+      "size": 1670,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/dc51688f7332e0caf3bd4d1b50c1d0052d304103"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Asymptotics/Uniformly.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58a60c7a2cae9d92d9bd3b5c3c09d7f8482f3403",
+      "size": 7515,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/58a60c7a2cae9d92d9bd3b5c3c09d7f8482f3403"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Calculus",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "99dca185bc44f9ac0c392c8d0037e47b9c0c5bb7",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/99dca185bc44f9ac0c392c8d0037e47b9c0c5bb7"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Calculus/Deriv",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4fc4971d8aaaba75e42c27e4d06bf16223050461",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/4fc4971d8aaaba75e42c27e4d06bf16223050461"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Calculus/Deriv/Polynomial.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00d934551bf7deedd271c54f0c7e6eeedab51b91",
+      "size": 2064,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/00d934551bf7deedd271c54f0c7e6eeedab51b91"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Complex",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5524ac433c09613fe8e4da4b4019b8481e83d25d",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/5524ac433c09613fe8e4da4b4019b8481e83d25d"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Complex/AbsMax.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a17762cfd40f57fe67fde7dec89fa2b03e086b9",
+      "size": 1394,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/4a17762cfd40f57fe67fde7dec89fa2b03e086b9"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Complex/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0421333de364d2664faf71a2a97ce196bc39a9c",
+      "size": 2947,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/e0421333de364d2664faf71a2a97ce196bc39a9c"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Complex/BorelCaratheodory.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "495e4f61cefe86c9f29fcd7e408ca04910554dd8",
+      "size": 2118,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/495e4f61cefe86c9f29fcd7e408ca04910554dd8"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Complex/CanonicalDecomposition.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d929fe6c48e8981d57607b8fb993792c824c972a",
+      "size": 563,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/d929fe6c48e8981d57607b8fb993792c824c972a"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Complex/CanonicalProduct.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58a31feab43e132acc55dd08dcd07d50f785df68",
+      "size": 13405,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/58a31feab43e132acc55dd08dcd07d50f785df68"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Complex/CartanBound.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "86bddd0b9535edc44d023c1ff756cc189802194e",
+      "size": 36426,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/86bddd0b9535edc44d023c1ff756cc189802194e"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Complex/CartanInverseFactorBound.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a794098051aa28045d139c0ae7f31653067aad7",
+      "size": 7503,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/3a794098051aa28045d139c0ae7f31653067aad7"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Complex/CartanMajorantBound.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "27bb05dd9e540271e18ca5c53c7bb23dd96308c8",
+      "size": 31611,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/27bb05dd9e540271e18ca5c53c7bb23dd96308c8"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Complex/CartanProductBound.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ecca9056969cf7bc92102431143b253aaf603d2c",
+      "size": 4064,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/ecca9056969cf7bc92102431143b253aaf603d2c"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Complex/CauchyIntegral.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "066eaa748c84b1265e6266ccc24e5e07b9733393",
+      "size": 580,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/066eaa748c84b1265e6266ccc24e5e07b9733393"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Complex/Convex.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d5eecb4b54588144a4559c52b8247f3ba50681e",
+      "size": 7344,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/1d5eecb4b54588144a4559c52b8247f3ba50681e"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Complex/Divisor.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d3dbc03ce770dde3510b8c534ead5eba4d748810",
+      "size": 16899,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/d3dbc03ce770dde3510b8c534ead5eba4d748810"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Complex/DivisorComplement.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4225b961356f832ca5c368deefe4b916cc524327",
+      "size": 22684,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/4225b961356f832ca5c368deefe4b916cc524327"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Complex/DivisorConvergence.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "57d785f7f2d102aa864671276039b99c510bf345",
+      "size": 19340,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/57d785f7f2d102aa864671276039b99c510bf345"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Complex/DivisorFiber.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "afe24fc4fbb77b0f6fa8f564298482f7c6aa7aa8",
+      "size": 8959,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/afe24fc4fbb77b0f6fa8f564298482f7c6aa7aa8"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Complex/DivisorIndex.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7291b28e5f1713cc86085c2b560aaa5b5e6eaae",
+      "size": 4684,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/b7291b28e5f1713cc86085c2b560aaa5b5e6eaae"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Complex/DivisorPartialProductFactor.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c88df4f556d60cdb929b365610d9b386659a6b6",
+      "size": 10203,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/8c88df4f556d60cdb929b365610d9b386659a6b6"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Complex/DivisorQuotientConvergence.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a4566576abaf260c41a9d67a33a0abbbab7ba5a",
+      "size": 26937,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/3a4566576abaf260c41a9d67a33a0abbbab7ba5a"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Complex/DivisorQuotientRemovable.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e925843b2eb4db12dd22e7186c3d51edca5f945",
+      "size": 16297,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/8e925843b2eb4db12dd22e7186c3d51edca5f945"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Complex/DivisorUnits.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad2482426537b578503ca123b88ac6c89e91b8c0",
+      "size": 3459,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/ad2482426537b578503ca123b88ac6c89e91b8c0"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Complex/ExpPoly.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41cf51386f021785cb3c36dd7ab577d80ffeb14b",
+      "size": 19812,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/41cf51386f021785cb3c36dd7ab577d80ffeb14b"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Complex/ExpPoly",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1f7fcc50d0693de8e286af451fbfd0af41744849",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/1f7fcc50d0693de8e286af451fbfd0af41744849"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Complex/ExpPoly/Growth.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25a614af37055185823e634883688d9bdf89777f",
+      "size": 18274,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/25a614af37055185823e634883688d9bdf89777f"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Complex/HadamardFactorization.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20048812c96d5f73d715b837503851871df26b26",
+      "size": 27822,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/20048812c96d5f73d715b837503851871df26b26"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Complex/HadamardFactorization",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "67a2966726bc4cd5af441fe0372436da187affbc",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/67a2966726bc4cd5af441fe0372436da187affbc"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Complex/HadamardFactorization/Growth.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3aa8d5970ff75c5c9d3673248b2a294607301637",
+      "size": 25095,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/3aa8d5970ff75c5c9d3673248b2a294607301637"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Complex/HadamardFactorization/Order.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "02e0c427228ad182b67f7d66702012af82a6f25b",
+      "size": 14186,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/02e0c427228ad182b67f7d66702012af82a6f25b"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Complex/HadamardFactorization/Summability.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "43ed18f1035a2edfc92ca524411c2e6f8f93a56e",
+      "size": 29819,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/43ed18f1035a2edfc92ca524411c2e6f8f93a56e"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Complex/LocallyUniformLimit.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e36878215df0151c6b7891d01193d908583bedd8",
+      "size": 2462,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/e36878215df0151c6b7891d01193d908583bedd8"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Complex/Norm.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af10204c1b143f272a7fe0d7b9b9824e1af57f17",
+      "size": 2446,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/af10204c1b143f272a7fe0d7b9b9824e1af57f17"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Complex/Trigonometric.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6942cf2a1be96e90da122926d543bff1bc6c0f9",
+      "size": 1875,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/f6942cf2a1be96e90da122926d543bff1bc6c0f9"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Complex/ValueDistribution",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "172577beb4529d6f38690eb0a1d6b51ea8159041",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/172577beb4529d6f38690eb0a1d6b51ea8159041"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Complex/ValueDistribution/LogCounting",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a9d5cb94079c45116f7db7c3be625344825fa8ae",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/a9d5cb94079c45116f7db7c3be625344825fa8ae"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Complex/ValueDistribution/LogCounting/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84a6f04ab49697e16ccb885d666bb7b9b03d2025",
+      "size": 5497,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/84a6f04ab49697e16ccb885d666bb7b9b03d2025"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Complex/ValueDistribution/LogCounting/Growth.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4785c56d4d84be8df79112d37d42e1dfc721a1c5",
+      "size": 10532,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/4785c56d4d84be8df79112d37d42e1dfc721a1c5"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Complex/WeierstrassFactor.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6744f73085dc26a384689a2edeb3eeaa8efc2e0",
+      "size": 21748,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/a6744f73085dc26a384689a2edeb3eeaa8efc2e0"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Meromorphic",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8091d285bba76a0a3a9116b3ed60840ccb2ecdb6",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/8091d285bba76a0a3a9116b3ed60840ccb2ecdb6"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Meromorphic/DivisorHolomorphic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b5e71d500536bd3b2bc573145164fc7d7aea990",
+      "size": 961,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/3b5e71d500536bd3b2bc573145164fc7d7aea990"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/Meromorphic/DivisorSupport.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "efcddbb534e09cf2516a202ffcdc67dfe44e3632",
+      "size": 5318,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/efcddbb534e09cf2516a202ffcdc67dfe44e3632"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/SpecialFunctions",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "756cf6d1cbe1b40fcfbc91791c27d5cf71982316",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/756cf6d1cbe1b40fcfbc91791c27d5cf71982316"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/SpecialFunctions/CompletedXi.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38ee8374fb2b63338d1f73fa6db93e277b3e48a6",
+      "size": 2957,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/38ee8374fb2b63338d1f73fa6db93e277b3e48a6"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/SpecialFunctions/Complex",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4c4a3b38d3098a152042c2d94c20ed1d5636a818",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/4c4a3b38d3098a152042c2d94c20ed1d5636a818"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/SpecialFunctions/Complex/LogBounds.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c71df4615695d64d71235fde6adccc0075edb9ca",
+      "size": 11235,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/c71df4615695d64d71235fde6adccc0075edb9ca"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/SpecialFunctions/Exp.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40556b6525d9d9ebd03f07ddfbe32c69de100a90",
+      "size": 1824,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/40556b6525d9d9ebd03f07ddfbe32c69de100a90"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/SpecialFunctions/Gamma",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ddcacf1c71b77fdb91172a074cbedb3c1d23d6af",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/ddcacf1c71b77fdb91172a074cbedb3c1d23d6af"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/SpecialFunctions/Gamma/CriticalLineDecay.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34f62515cb1d8e49f3d66a695e9b1c2f69936631",
+      "size": 4695,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/34f62515cb1d8e49f3d66a695e9b1c2f69936631"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/SpecialFunctions/Gamma/DigammaSeries.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "81685e8d0bce956856c8a7076e200e306782eacd",
+      "size": 42578,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/81685e8d0bce956856c8a7076e200e306782eacd"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/SpecialFunctions/Gamma/GammaStirlingAux.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e63ae8bdce23f76e469598f6210ef12ee0e7b7f6",
+      "size": 4432,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/e63ae8bdce23f76e469598f6210ef12ee0e7b7f6"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/SpecialFunctions/Gamma/IntegralBounds.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00d4cc4169426c628991bbd62e15e87b2fcf5d04",
+      "size": 3823,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/00d4cc4169426c628991bbd62e15e87b2fcf5d04"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/SpecialFunctions/Gamma/StripBounds.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db19bf58d7a3f2f0735ae280e3a2ad5d0b46aea2",
+      "size": 35257,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/db19bf58d7a3f2f0735ae280e3a2ad5d0b46aea2"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/SpecialFunctions/GammaBounds.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9061dbd94015cfdc6e6db0a1271d2b71ad3590b2",
+      "size": 11450,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/9061dbd94015cfdc6e6db0a1271d2b71ad3590b2"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/SpecialFunctions/ImproperIntegrals.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9bdce8a10623b7c9a7d66d045553fff25ff3448",
+      "size": 3176,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/b9bdce8a10623b7c9a7d66d045553fff25ff3448"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/SpecialFunctions/Log",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3f6365cd965251ffa3b7a0819e165986375c9be6",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/3f6365cd965251ffa3b7a0819e165986375c9be6"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/SpecialFunctions/Log/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1fa2d2b6a88a2b891dc7674914e8e3fa7d19472c",
+      "size": 679,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/1fa2d2b6a88a2b891dc7674914e8e3fa7d19472c"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/SpecialFunctions/Log/Dyadic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd40f87285a287b1ac7ea7ba86626f1daaa4e4f6",
+      "size": 14788,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/bd40f87285a287b1ac7ea7ba86626f1daaa4e4f6"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/SpecialFunctions/Log/ExpGrowth.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51bf41c686b4f515513668b693c1c30472fee9df",
+      "size": 9652,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/51bf41c686b4f515513668b693c1c30472fee9df"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/SpecialFunctions/Log/PosLog.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "02d6f425b8ec28f6aaf08c956107026dc741795d",
+      "size": 1850,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/02d6f425b8ec28f6aaf08c956107026dc741795d"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/SpecialFunctions/Pow",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4d638516f0817a95415720cb7a40046f264e05f6",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/4d638516f0817a95415720cb7a40046f264e05f6"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/SpecialFunctions/Pow/Deriv.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2447c0df07a70f16c5f7a3ce4f751c31e1680ec",
+      "size": 3020,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/d2447c0df07a70f16c5f7a3ce4f751c31e1680ec"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Analysis/SpecialFunctions/Pow/Real.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29938794398f7b7fec4fe16f3b883cb3ec077b4f",
+      "size": 2044,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/29938794398f7b7fec4fe16f3b883cb3ec077b4f"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/MeasureTheory",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "77c9c7b282c4aeb6f70dae94cfc58d9cdcf07650",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/77c9c7b282c4aeb6f70dae94cfc58d9cdcf07650"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/MeasureTheory/Integral",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "63b7cf0aa2674fdd4e88381ad57d96918c041ce7",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/63b7cf0aa2674fdd4e88381ad57d96918c041ce7"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/MeasureTheory/Integral/IntegrableOn.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18c99ed837117f5c997030ad43155db04580c23b",
+      "size": 706,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/18c99ed837117f5c997030ad43155db04580c23b"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/MeasureTheory/Integral/IntervalIntegral",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7ee3bde0af8f17ec8d604a12f68a2c2a8bf3b08a",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/7ee3bde0af8f17ec8d604a12f68a2c2a8bf3b08a"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/MeasureTheory/Integral/IntervalIntegral/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00c9bafbc831f2a1fa96c3cfd91235a41fd19f5b",
+      "size": 883,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/00c9bafbc831f2a1fa96c3cfd91235a41fd19f5b"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/NumberTheory",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "28ccf79c60471b84ff6c617a581341a2b8dcdc51",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/28ccf79c60471b84ff6c617a581341a2b8dcdc51"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/NumberTheory/AbelSummation.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9dbbe54f3c2375edda0cd72eec2bb539a854ad23",
+      "size": 2680,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/9dbbe54f3c2375edda0cd72eec2bb539a854ad23"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/NumberTheory/Chebyshev.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5362ac083afde19354e5b6c9f87c73b259b0be6e",
+      "size": 6641,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/5362ac083afde19354e5b6c9f87c73b259b0be6e"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/NumberTheory/LSeries",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1cd5173ba0ca8d6219714a59052e1df4b858d09c",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/1cd5173ba0ca8d6219714a59052e1df4b858d09c"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/NumberTheory/LSeries/RiemannZeta.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83d1caa8e666550a98f331cf5efc11f0b812a4e7",
+      "size": 16061,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/83d1caa8e666550a98f331cf5efc11f0b812a4e7"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/NumberTheory/LSeries/RiemannZetaAbelContinuation.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "158c0c203f911fe4b8ff78a7a0b6c27b066497d1",
+      "size": 11021,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/158c0c203f911fe4b8ff78a7a0b6c27b066497d1"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/NumberTheory/LSeries/RiemannZetaAbelKernel.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c78800e0d036cba72ac6483818adbec318d3f625",
+      "size": 11741,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/c78800e0d036cba72ac6483818adbec318d3f625"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/NumberTheory/LSeries/RiemannZetaConvexity.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68e806871d3167915bd4aec3c323c6b866a4f296",
+      "size": 7738,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/68e806871d3167915bd4aec3c323c6b866a4f296"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/NumberTheory/LSeries/RiemannZetaHadamard.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc69331dbe72eb9604c12bff9e56ff70762a4529",
+      "size": 26841,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/fc69331dbe72eb9604c12bff9e56ff70762a4529"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/NumberTheory/LSeries/RiemannZetaPartialSum.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16f0ad1dce1b72566604f298bbc5516f97e741ef",
+      "size": 10953,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/16f0ad1dce1b72566604f298bbc5516f97e741ef"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/NumberTheory/LSeries/RiemannZetaStripBound.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "450e8c3a8316d6533d5a13295527ba41dcfc6438",
+      "size": 978,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/450e8c3a8316d6533d5a13295527ba41dcfc6438"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/NumberTheory/LSeries/RiemannZetaValues.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5913c0c5cdefc415d53ce436388b6449461ee573",
+      "size": 6763,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/5913c0c5cdefc415d53ce436388b6449461ee573"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/NumberTheory/LSeries/ZetaFiniteOrder.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9156c82d6a4b3a1f9b6d9428983654d1aa81793",
+      "size": 41933,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/d9156c82d6a4b3a1f9b6d9428983654d1aa81793"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/NumberTheory/LSeries/ZetaFunctionalEquation.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "48adc5f60ee2b3193ab62751ebc57cf23bb2318a",
+      "size": 1228,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/48adc5f60ee2b3193ab62751ebc57cf23bb2318a"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/NumberTheory/Sieve",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f585980d1c532e75aade7d1eca7f80d3d44b52f4",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/f585980d1c532e75aade7d1eca7f80d3d44b52f4"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/NumberTheory/Sieve/AuxResults.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "707916415b49ce89ba2a01585dae4b331b7dc9f5",
+      "size": 11194,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/707916415b49ce89ba2a01585dae4b331b7dc9f5"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/NumberTheory/Sieve/Basic.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "318c9dc92fadb0531bd6a623ef3c4a4a5e82d439",
+      "size": 11241,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/318c9dc92fadb0531bd6a623ef3c4a4a5e82d439"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/NumberTheory/Sieve/Selberg.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d15cd012a9ab802c698e3f9ec3a7fd4c3f4b4866",
+      "size": 17517,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/d15cd012a9ab802c698e3f9ec3a7fd4c3f4b4866"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/NumberTheory/Sieve/SelbergBounds.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df3e7f3aed3d3cd5bb529222c640f2701efef8a6",
+      "size": 22512,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/df3e7f3aed3d3cd5bb529222c640f2701efef8a6"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Topology",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dbd0db9b88c95a62b34c2a706f50f746424d0e7d",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/dbd0db9b88c95a62b34c2a706f50f746424d0e7d"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Topology/MetricSpace",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c065372865563b24a658eabe666ae999359b42c5",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/c065372865563b24a658eabe666ae999359b42c5"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Topology/MetricSpace/Annulus.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc5d51d1a78e7a3276fcfe4a69fbb63bb72c273d",
+      "size": 18904,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/fc5d51d1a78e7a3276fcfe4a69fbb63bb72c273d"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Mathlib/Topology/MetricSpace/Cauchy.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc7af935462611e00697237f9581607e6f48c6b5",
+      "size": 1585,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/cc7af935462611e00697237f9581607e6f48c6b5"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/MediumPNT.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e6424e5ffdfa1d4ba46e7573ad6c1572df4f529",
+      "size": 179323,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/7e6424e5ffdfa1d4ba46e7573ad6c1572df4f529"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/MellinCalculus.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b4ddbfe98acaeceb5cf6726e32d3c1f7254ac664",
+      "size": 65187,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/b4ddbfe98acaeceb5cf6726e32d3c1f7254ac664"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/PerronFormula.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45af7197507bc85c19b0e146425e427053a6e9d1",
+      "size": 54446,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/45af7197507bc85c19b0e146425e427053a6e9d1"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Rectangle.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4fbdabc6770340215f3477378ce824b8718cfc47",
+      "size": 13651,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/4fbdabc6770340215f3477378ce824b8718cfc47"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/RectangleArgumentPrinciple.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b45242201beea8c25c9010125893b2bf53ac177",
+      "size": 16634,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/0b45242201beea8c25c9010125893b2bf53ac177"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/ResidueCalcOnRectangles.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60088d4f2c2e415eeb08a7838a040c5d17442acd",
+      "size": 65096,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/60088d4f2c2e415eeb08a7838a040c5d17442acd"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/SincKernelErrorBounds.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d36446562acb043cfd087141a827238e510cb3a6",
+      "size": 3381,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/d36446562acb043cfd087141a827238e510cb3a6"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/SmoothExistence.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b33edf879b1117ae0912512529051f0ba77b7d9e",
+      "size": 4738,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/b33edf879b1117ae0912512529051f0ba77b7d9e"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Sobolev.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f98bcbccc7ba3b9c9ee02ec95404731085368f9",
+      "size": 15951,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/1f98bcbccc7ba3b9c9ee02ec95404731085368f9"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/StrongPNT.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2bf71bffb01b4d314ce862e712512d284e1dd8ea",
+      "size": 185288,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/2bf71bffb01b4d314ce862e712512d284e1dd8ea"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Tactic",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bee6ac17bcc27243348c2f9c06f0dfdc70e0a62f",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/bee6ac17bcc27243348c2f9c06f0dfdc70e0a62f"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Tactic/AdditiveCombination.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b411a42e010aec55dc46b502a9969002ddb08126",
+      "size": 8397,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/b411a42e010aec55dc46b502a9969002ddb08126"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Tactic/Simprocs.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6991c50ac19d74710a3b2161de3f5f055ccf00fd",
+      "size": 1156,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/6991c50ac19d74710a3b2161de3f5f055ccf00fd"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Unused",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "315599dfac7a376b19792f0fe9620009ff002e11",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/315599dfac7a376b19792f0fe9620009ff002e11"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Unused/Fejer_I_know_this_is_dirty_but_it_typechecks.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fbf09c6bea6d3331635dd00fcb6f355dd9b375f4",
+      "size": 161790,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/fbf09c6bea6d3331635dd00fcb6f355dd9b375f4"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Unused/Hardy_Tauberian_theorem.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70d22fe46bdb3cee54d3235d96cd5fcf6a216252",
+      "size": 19273,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/70d22fe46bdb3cee54d3235d96cd5fcf6a216252"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Unused/MyMV_A3a.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "661a74a18ecefb4e719f68267d0ff8888af929d7",
+      "size": 83693,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/661a74a18ecefb4e719f68267d0ff8888af929d7"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Unused/ZetaBoundsUnused.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb5e3de00c7f11ee75f40ce99179b3ab1b8e1105",
+      "size": 1986,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/fb5e3de00c7f11ee75f40ce99179b3ab1b8e1105"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/Wiener.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "afb3522a3e00ca36a9242752477ecaa9e913dce8",
+      "size": 221508,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/afb3522a3e00ca36a9242752477ecaa9e913dce8"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/ZetaBounds.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c613cac8d3a09906c4ca0c7ca8106e1d295e5b2f",
+      "size": 170200,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/c613cac8d3a09906c4ca0c7ca8106e1d295e5b2f"
+    },
+    {
+      "path": "PrimeNumberTheoremAnd/ZetaConj.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "063d7652d9ad35d7b5758ffa1b568cde9ced6dbb",
+      "size": 2726,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/063d7652d9ad35d7b5758ffa1b568cde9ced6dbb"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44f0182d3a8b9886c0ba350dd3a61d0844df9093",
+      "size": 2444,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/44f0182d3a8b9886c0ba350dd3a61d0844df9093"
+    },
+    {
+      "path": "blueprint",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "400c546b67676ac9c36f574e00e88f3e69d9ac0d",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/400c546b67676ac9c36f574e00e88f3e69d9ac0d"
+    },
+    {
+      "path": "blueprint/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "68570633d691b35ff80f169cfbb0e58602b991de",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/68570633d691b35ff80f169cfbb0e58602b991de"
+    },
+    {
+      "path": "blueprint/src/blueprint.sty",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "306b18c8425cdfe8e8276c7389958bc127b4cc31",
+      "size": 64,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/306b18c8425cdfe8e8276c7389958bc127b4cc31"
+    },
+    {
+      "path": "blueprint/src/blueprint.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "601a1e1530a4dad1f9bb97c14cc4107e00349326",
+      "size": 10068,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/601a1e1530a4dad1f9bb97c14cc4107e00349326"
+    },
+    {
+      "path": "blueprint/src/latexmkrc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38d5963054f6b33f66acd04945ac69f2522ad2bc",
+      "size": 181,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/38d5963054f6b33f66acd04945ac69f2522ad2bc"
+    },
+    {
+      "path": "blueprint/src/plastex.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0be20ecaae2115d326aff820f64cba3828503c41",
+      "size": 270,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/0be20ecaae2115d326aff820f64cba3828503c41"
+    },
+    {
+      "path": "blueprint/src/print.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3633458be21c4cd35679977713dee50b9e8949a7",
+      "size": 655,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/3633458be21c4cd35679977713dee50b9e8949a7"
+    },
+    {
+      "path": "blueprint/src/references.bib",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "071f672671983cbc2fc8f04960f038a22644da3f",
+      "size": 33620,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/071f672671983cbc2fc8f04960f038a22644da3f"
+    },
+    {
+      "path": "blueprint/src/style.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e6ef429b0eab92201c63aca6d5196691b3edc96",
+      "size": 1392,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/0e6ef429b0eab92201c63aca6d5196691b3edc96"
+    },
+    {
+      "path": "blueprint/src/web.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4adb119558dc7af882ff454f8e8d698d55f2a2c3",
+      "size": 393,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/4adb119558dc7af882ff454f8e8d698d55f2a2c3"
+    },
+    {
+      "path": "errata",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cb6eb823b39592d0313c0399361eee9542cd7414",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/cb6eb823b39592d0313c0399361eee9542cd7414"
+    },
+    {
+      "path": "errata/tme-emt",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "36a434445f3e245e58e4204178c45d03aa5c8af4",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/36a434445f3e245e58e4204178c45d03aa5c8af4"
+    },
+    {
+      "path": "errata/tme-emt/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "28867f91f33fb04f1f675286fab7e1bcb2a47c9a",
+      "size": 459,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/28867f91f33fb04f1f675286fab7e1bcb2a47c9a"
+    },
+    {
+      "path": "errata/tme-emt/tme-emt-errata.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef2c745a00e6b9320c36ad46e1fe0c8a23ab2e9b",
+      "size": 253060,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/ef2c745a00e6b9320c36ad46e1fe0c8a23ab2e9b"
+    },
+    {
+      "path": "errata/tme-emt/tme-emt-errata.tex",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "947b16a62e0efc797454b41c091ef578fbfdfb02",
+      "size": 19194,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/947b16a62e0efc797454b41c091ef578fbfdfb02"
+    },
+    {
+      "path": "examples",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9bd103b30569004eeb020bfcf5a1b0574b5ba3f9",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/9bd103b30569004eeb020bfcf5a1b0574b5ba3f9"
+    },
+    {
+      "path": "examples/CheckRectangleArgumentPrinciple.lean",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83e6fc52fbeab32d96344f033f5dd4724bad5985",
+      "size": 421,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/83e6fc52fbeab32d96344f033f5dd4724bad5985"
+    },
+    {
+      "path": "home_page",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "677b87a487cc29eba57dd06441104cfca127fcf2",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/677b87a487cc29eba57dd06441104cfca127fcf2"
+    },
+    {
+      "path": "home_page/404.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fcebf3fc686b660b2ffd6dade67a1e3845d5c471",
+      "size": 418,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/fcebf3fc686b660b2ffd6dade67a1e3845d5c471"
+    },
+    {
+      "path": "home_page/Gemfile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "78763738cedcaabfbf523667af03977779873747",
+      "size": 802,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/78763738cedcaabfbf523667af03977779873747"
+    },
+    {
+      "path": "home_page/Gemfile.lock",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ee4c9470e9b9f5ab89027581447480f4f09d3cc",
+      "size": 7905,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/5ee4c9470e9b9f5ab89027581447480f4f09d3cc"
+    },
+    {
+      "path": "home_page/_config.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "727aeebc33c12ae1c693755648a4e8bae4cc0f6c",
+      "size": 1466,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/727aeebc33c12ae1c693755648a4e8bae4cc0f6c"
+    },
+    {
+      "path": "home_page/_includes",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e0503d4c036361e026f9ebbe84ea23a5648f7a69",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/e0503d4c036361e026f9ebbe84ea23a5648f7a69"
+    },
+    {
+      "path": "home_page/_includes/mathjax.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab9c0075fe32e8d3f93281207b974da8dbf09df4",
+      "size": 565,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/ab9c0075fe32e8d3f93281207b974da8dbf09df4"
+    },
+    {
+      "path": "home_page/_layouts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fc5584d7a3d60e53db52e3a2e64a107bf81ae47e",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/fc5584d7a3d60e53db52e3a2e64a107bf81ae47e"
+    },
+    {
+      "path": "home_page/_layouts/default.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ace1f9823ccad7f75ea82dc9fc6142eea77ce43",
+      "size": 2046,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/7ace1f9823ccad7f75ea82dc9fc6142eea77ce43"
+    },
+    {
+      "path": "home_page/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "df5e99cb10976e8f6ec0464da03cc2befca1195e",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/df5e99cb10976e8f6ec0464da03cc2befca1195e"
+    },
+    {
+      "path": "home_page/assets/css",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3e9b4571d026bca4f6da09038853480659c3defd",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/3e9b4571d026bca4f6da09038853480659c3defd"
+    },
+    {
+      "path": "home_page/assets/css/style.scss",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41b493f362cc2e0bb0b37d2c3e3d80c1ded8b867",
+      "size": 248,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/41b493f362cc2e0bb0b37d2c3e3d80c1ded8b867"
+    },
+    {
+      "path": "home_page/index.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d6850e2e4a2ba7d334893d3c25da7b8928c75c7",
+      "size": 558,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/2d6850e2e4a2ba7d334893d3c25da7b8928c75c7"
+    },
+    {
+      "path": "home_page/upstreaming.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b783cde5b063fe94a2d4a0c1bb5581f6e9565ba7",
+      "size": 77,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/b783cde5b063fe94a2d4a0c1bb5581f6e9565ba7"
+    },
+    {
+      "path": "lake-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a1e5713cf8afd243f7fb662ae9fbd76b0656c0d",
+      "size": 4395,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/0a1e5713cf8afd243f7fb662ae9fbd76b0656c0d"
+    },
+    {
+      "path": "lakefile.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1cb4c4507a1b1ae3515337a5ac36916c3c8287d0",
+      "size": 912,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/1cb4c4507a1b1ae3515337a5ac36916c3c8287d0"
+    },
+    {
+      "path": "lean-toolchain",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ec5999cc044e45c8e7c613fc6830e018b47d595",
+      "size": 25,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/0ec5999cc044e45c8e7c613fc6830e018b47d595"
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "81d593fefd63ad440f1a4d03f1fb7a56d02567bd",
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/trees/81d593fefd63ad440f1a4d03f1fb7a56d02567bd"
+    },
+    {
+      "path": "scripts/fks2_extract_table4.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9a2823d3b21e4a92624d338fa1d7af869a26cb5",
+      "size": 1297,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/d9a2823d3b21e4a92624d338fa1d7af869a26cb5"
+    },
+    {
+      "path": "scripts/fks2_gen_table4_cells.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74d8602aa0f29a072193d46b4c5a9c0dba392bc2",
+      "size": 2994,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/74d8602aa0f29a072193d46b4c5a9c0dba392bc2"
+    },
+    {
+      "path": "scripts/gen_log_tables.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d91b6c61828df943afc24374dbcad1435bf165a8",
+      "size": 2189,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/d91b6c61828df943afc24374dbcad1435bf165a8"
+    },
+    {
+      "path": "scripts/lean_import_closure.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a00c76a057d9ac760beeb0660b67b0857e7b368",
+      "size": 10936,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/4a00c76a057d9ac760beeb0660b67b0857e7b368"
+    },
+    {
+      "path": "scripts/noshake.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db1222e3d246891abd07fe810cfe90adc75fcd5e",
+      "size": 125,
+      "url": "https://api.github.com/repos/AlexKontorovich/PrimeNumberTheoremAnd/git/blobs/db1222e3d246891abd07fe810cfe90adc75fcd5e"
+    }
+  ],
+  "truncated": false
+}

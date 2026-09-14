@@ -1,0 +1,45 @@
+ℹ [3408/3417] Replayed Solutions.SondowRationalIntegral
+info: Solutions/SondowRationalIntegral.lean:97:0: 'EulerMascheroni.Sondow.rational_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solutions/SondowRationalIntegral.lean:98:0: 'EulerMascheroni.Sondow.rational_integral_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solutions/SondowRationalIntegral.lean:99:0: 'EulerMascheroni.Sondow.reciprocal_log_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solutions/SondowRationalIntegral.lean:100:0: 'EulerMascheroni.Sondow.reciprocal_log_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solutions/SondowRationalIntegral.lean:101:0: 'EulerMascheroni.Sondow.rational_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solutions/SondowRationalIntegral.lean:102:0: 'EulerMascheroni.Sondow.unit_rpow_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3409/3417] Replayed Solutions.SondowLogMoment
+info: Solutions/SondowLogMoment.lean:137:0: 'EulerMascheroni.Sondow.logarithmic_moment_parameter_integrable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Solutions/SondowLogMoment.lean:138:0: 'EulerMascheroni.Sondow.logarithmic_moment_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solutions/SondowLogMoment.lean:139:0: 'EulerMascheroni.Sondow.logarithmic_moment_eq_rational' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solutions/SondowLogMoment.lean:140:0: 'EulerMascheroni.Sondow.logarithmic_moment_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solutions/SondowLogMoment.lean:141:0: 'EulerMascheroni.Sondow.logarithmic_moment_off_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solutions/SondowLogMoment.lean:142:0: 'EulerMascheroni.Sondow.logarithmic_nat_moment_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solutions/SondowLogMoment.lean:143:0: 'EulerMascheroni.Sondow.logarithmic_nat_moment_off_diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3410/3417] Replayed Solutions.SondowKernelExpansion
+info: Solutions/SondowKernelExpansion.lean:61:0: 'EulerMascheroni.Sondow.weighted_binomial_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solutions/SondowKernelExpansion.lean:62:0: 'EulerMascheroni.Sondow.numerator_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solutions/SondowKernelExpansion.lean:63:0: 'EulerMascheroni.Sondow.truncated_kernel_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3411/3417] Replayed Solutions.SondowTruncatedIntegral
+info: Solutions/SondowTruncatedIntegral.lean:124:0: 'EulerMascheroni.Sondow.integralKernel_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solutions/SondowTruncatedIntegral.lean:125:0: 'EulerMascheroni.Sondow.truncated_integral_moment_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3412/3417] Replayed Solutions.SondowFiniteSums
+info: Solutions/SondowFiniteSums.lean:57:0: 'EulerMascheroni.Sondow.harmonic_moment_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solutions/SondowFiniteSums.lean:58:0: 'EulerMascheroni.Sondow.rectangular_sum_difference' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solutions/SondowFiniteSums.lean:59:0: 'EulerMascheroni.Sondow.logarithmic_moment_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3413/3417] Replayed Solutions.SondowFiniteMoments
+info: Solutions/SondowFiniteMoments.lean:33:0: 'EulerMascheroni.Sondow.finite_diagonal_moments' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solutions/SondowFiniteMoments.lean:34:0: 'EulerMascheroni.Sondow.finite_off_diagonal_moments' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3414/3417] Replayed Solutions.SondowSymmetricSums
+info: Solutions/SondowSymmetricSums.lean:30:0: 'EulerMascheroni.Sondow.symmetric_square_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3415/3417] Replayed Solutions.SondowFiniteEvaluation
+info: Solutions/SondowFiniteEvaluation.lean:74:0: 'EulerMascheroni.Sondow.finite_cutoff_evaluation' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3416/3417] Replayed Solutions.SondowBinomialCoefficients
+info: Solutions/SondowBinomialCoefficients.lean:54:0: 'EulerMascheroni.Sondow.signed_triangular_choose_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3417/3417] Built Solutions.SondowCutoffAlgebra (33s)
+info: Solutions/SondowCutoffAlgebra.lean:140:0: 'EulerMascheroni.Sondow.boundary_log_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solutions/SondowCutoffAlgebra.lean:141:0: 'EulerMascheroni.Sondow.diagonal_cutoff_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solutions/SondowCutoffAlgebra.lean:142:0: 'EulerMascheroni.Sondow.finite_cutoff_signed_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solutions/SondowCutoffAlgebra.lean:143:0: 'EulerMascheroni.Sondow.finite_cutoff_identity_of_logarithmic_forms_equal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Build completed successfully (3417 jobs).

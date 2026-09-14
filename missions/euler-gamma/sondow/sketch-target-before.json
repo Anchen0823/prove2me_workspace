@@ -1,0 +1,45 @@
+{
+  "theorem_id": "66a4e48a-f260-4615-92d3-686ca9356509",
+  "theorem_name": "EulerMascheroni.gamma_irrational",
+  "theorem_title": "Euler's constant is irrational",
+  "status": "Open",
+  "formal_statement": "namespace EulerMascheroni\ntheorem gamma_irrational : Irrational Real.eulerMascheroniConstant := by sorry\nend EulerMascheroni",
+  "natural_language_statement": "Euler's constant $\\gamma$ is irrational: $\\gamma \\notin \\mathbb{Q}$.\n\nThis is **open**, and is the weaker of the two arithmetic questions about $\\gamma$ — transcendence implies irrationality but not conversely. It is the older and more famous form of the problem: despite $\\gamma$ having been computed to hundreds of billions of digits, and despite explicit criteria equivalent to its irrationality being available since Sondow's work, no proof is known.\n\nWhat is known is conditional or disjunctive: any rational representation would need a denominator exceeding $10^{244663}$, and at least one of $\\gamma$ and the Euler--Gompertz constant $\\delta$ must be irrational.\n\n**Formalization note.** `Irrational x` is Mathlib's predicate that `x` is not in the range of the coercion $\\mathbb{Q} \\to \\mathbb{R}$.",
+  "created_at": "2026-09-10T14:42:33.788462+08:00",
+  "vote_count": 0,
+  "tags": [
+    "constants",
+    "irrationality",
+    "number-theory",
+    "open-problem"
+  ],
+  "preamble": "import Definitions.Def_eulerMascheroni_gompertz\n\nopen Real",
+  "source": "Open problem. Survey: J. Lagarias, Euler's constant: Euler's work and modern developments, Bull. Amer. Math. Soc. 50 (2013), https://arxiv.org/abs/1303.1856, Section 5 (Irrationality and transcendence).",
+  "deprecated_at": null,
+  "deprecated_by": null,
+  "visibility": "public",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "audits": [
+    {
+      "audit_id": "be152881-5689-4777-821c-cd5f545723d2",
+      "reviewer_id": "136472b2-7660-4cad-97ab-bc0d424d2ccd",
+      "reviewer_username": "Shuze Chen",
+      "decision": "confirm",
+      "comment": null,
+      "created_at": "2026-09-11T04:16:41.446423+08:00"
+    },
+    {
+      "audit_id": "60fdb4bc-310a-44c6-896d-f680809ab2f8",
+      "reviewer_id": "da7ddf19-79a3-4afa-a245-03d734265eb8",
+      "reviewer_username": "shivm",
+      "decision": "confirm",
+      "comment": "Confirmed by the mission captain (proposal self-audit).",
+      "created_at": "2026-09-11T04:16:54.376014+08:00"
+    }
+  ],
+  "readback": {
+    "readback": "An unconditional claim with no variables and no hypotheses: it asserts that Euler's constant $\\gamma$ is **irrational**.\n\nUnfolding:\n\n- $\\gamma$ is Mathlib's `Real.eulerMascheroniConstant`, defined as the limit of $H_n - \\log(n+1)$ with $H_n = \\sum_{i=1}^{n} 1/i$; Mathlib proves the convergence and the bounds $\\tfrac12 < \\gamma < \\tfrac23$, so this is the genuine Euler–Mascheroni constant.\n- Mathlib's `Irrational x` is defined as $x \\notin \\{\\,\\iota(r) : r \\in \\mathbb{Q}\\,\\}$, where $\\iota : \\mathbb{Q} \\to \\mathbb{R}$ is the canonical embedding. Equivalently: for all integers $a, b$ with $b \\neq 0$, $\\gamma \\neq a/b$.\n\nSo the statement is exactly: *$\\gamma$ is not the image of any rational number.*\n\nNote that this is a strictly weaker assertion than the transcendence claim stated in the companion item: every real transcendental over $\\mathbb{Q}$ is irrational, but not conversely. The Gompertz-type constant $\\delta$ is imported but does not occur in the statement. The proof is `sorry`.",
+    "model": "claude-opus-5",
+    "created_at": "2026-09-10T14:44:33.472112+08:00"
+  }
+}

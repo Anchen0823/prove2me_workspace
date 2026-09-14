@@ -1,0 +1,23 @@
+{
+  "theorem_id": "747d96a7-9576-41e1-801a-228e9d36c4cd",
+  "theorem_name": "EulerMascheroni.Sondow.integral_identity",
+  "theorem_title": "Sondow integral evaluation",
+  "status": "Open",
+  "formal_statement": "theorem EulerMascheroni.Sondow.integral_identity (n : ℕ) (hn : 0 < n) :\n    I n = ((2*n).choose n : ℝ) * Real.eulerMascheroniConstant + L n - (A n : ℝ) := by sorry",
+  "natural_language_statement": "For every positive integer $n$,\n$$I_n=\\binom{2n}{n}\\gamma+L_n-A_n.$$\nThis is a known analytic identity, left as a formalization obligation.",
+  "created_at": "2026-09-14T17:08:21.473856+08:00",
+  "vote_count": 0,
+  "tags": [
+    "euler-mascheroni",
+    "formalization",
+    "sondow"
+  ],
+  "preamble": "import Definitions.Def_eulerMascheroni_sondow\nopen EulerMascheroni.Sondow",
+  "source": "Jonathan Sondow, Criteria for Irrationality of Euler's Constant, https://arxiv.org/pdf/math/0209070 (v2, 4 October 2002). Theorem 1, equation (7), pp. 6-9.",
+  "deprecated_at": null,
+  "deprecated_by": null,
+  "visibility": "public",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "audits": [],
+  "readback": null
+}

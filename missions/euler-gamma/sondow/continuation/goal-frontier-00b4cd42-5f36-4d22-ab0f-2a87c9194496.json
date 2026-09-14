@@ -1,0 +1,18 @@
+{
+  "root_id": "00b4cd42-5f36-4d22-ab0f-2a87c9194496",
+  "open_leaves": [
+    {
+      "theorem_id": "3fa7d8d1-e2ce-4057-894d-f39a2f0a4a8d",
+      "theorem_name": "TaoFivePrimes.schoenfeld_psi_error_large",
+      "status": "Open",
+      "closability": 0
+    },
+    {
+      "theorem_id": "d7089f63-d516-4c70-a5f5-f1ae1e917931",
+      "theorem_name": "TaoFivePrimes.rosser_psi_finite_middle",
+      "status": "Open",
+      "closability": 0
+    }
+  ],
+  "total": 2
+}

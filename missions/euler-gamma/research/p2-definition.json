@@ -1,0 +1,22 @@
+{
+  "theorem_id": "141b7d16-0bb6-4737-a466-4000e9a699f6",
+  "theorem_name": "eulerMascheroni_p2Approximation",
+  "theorem_title": "Explicit second-order Euler approximants and saddle models",
+  "status": "Definition",
+  "formal_statement": "",
+  "natural_language_statement": "The rational binomial coefficients, numerator and denominator of the p=2 higher-order Euler approximants, together with explicit real saddle models. SaddleLimits and SharpRate are propositions recording research targets; this definition asserts neither of them.",
+  "created_at": "2026-09-12T07:57:14.621013+08:00",
+  "vote_count": 0,
+  "tags": [
+    "euler-mascheroni",
+    "rational-approximation"
+  ],
+  "definition": "import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic\nimport Mathlib.NumberTheory.Harmonic.EulerMascheroni\nimport Mathlib.Data.Nat.Choose.Basic\n\nopen scoped BigOperators\n\nnamespace EulerMascheroni.P2\n\n/-- The published p=2 binomial summand, over the rationals. -/\ndef coefficient (n k : ℕ) : ℚ :=\n  (n.choose k : ℚ)^2 * ((n+k).choose k : ℚ)^2 / (k.factorial : ℚ)\n\ndef Q (n : ℕ) : ℚ := ∑ k ∈ Finset.range (n+1), coefficient n k\n\ndef P (n : ℕ) : ℚ := - ∑ k ∈ Finset.range (n+1),\n  coefficient n k * (2 * harmonic (n+k) + 2 * harmonic (n-k) - 5 * harmonic k)\n\nnoncomputable def F (n : ℕ) : ℝ :=\n  (Q n : ℝ) * Real.eulerMascheroniConstant - (P n : ℝ)\n\nnoncomputable def scale (n : ℕ) : ℝ := (n : ℝ) ^ (4 / 5 : ℝ)\nnoncomputable def subscale (n : ℕ) : ℝ := (n : ℝ) ^ (2 / 5 : ℝ)\nnoncomputable def theta : ℝ := 2 * Real.pi / 5\nnoncomputable def rate : ℝ := 5 * (1 - Real.cos theta)\n\nnoncomputable def phase (n : ℕ) : ℝ :=\n  5 * scale n * Real.sin theta - (2/3 : ℝ) * subscale n * Real.sin (3*theta)\n    - 2*theta\n\nnoncomputable def qModel (n : ℕ) : ℝ :=\n  Real.exp (5 * scale n - (2/3 : ℝ) * subscale n + 1/5) /\n    (4 * Real.pi^2 * Real.sqrt 5 * scale n^2)\n\nnoncomputable def fModel (n : ℕ) : ℝ :=\n  Real.exp (5 * scale n * Real.cos theta -\n    (2/3 : ℝ) * subscale n * Real.cos (3*theta) + 1/5) /\n    (Real.pi * Real.sqrt 5 * scale n^2)\n\n/-- The two analytic assertions required by the relative-error reduction.\nThey are a proposition, not axioms or claimed theorems. Indices start at 1. -/\ndef SaddleLimits : Prop :=\n  Filter.Tendsto (fun n : ℕ => (Q (n+1) : ℝ) / qModel (n+1) - 1)\n    Filter.atTop (nhds 0) ∧\n  Filter.Tendsto (fun n : ℕ => F (n+1) / fModel (n+1) - Real.sin (phase (n+1)))\n    Filter.atTop (nhds 0)\n\n/-- A zero-safe formulation of the predicted sharp exponential rate.\nUnlike a real-valued log convention, this does not assign log(0)=0. -/\ndef SharpRate : Prop := ∀ ε : ℝ, 0 < ε →\n  (∀ᶠ n : ℕ in Filter.atTop,\n    |Real.eulerMascheroniConstant - (P (n+1) : ℝ) / (Q (n+1) : ℝ)| ≤\n      Real.exp ((-rate + ε) * scale (n+1))) ∧\n  (∃ᶠ n : ℕ in Filter.atTop,\n    Real.exp ((-rate - ε) * scale (n+1)) ≤\n      |Real.eulerMascheroniConstant - (P (n+1) : ℝ) / (Q (n+1) : ℝ)|)\n\nend EulerMascheroni.P2\n",
+  "source": "Van Assche–Wolfs, arXiv:2404.09799v3, section 5, higher-order construction. Explicit p=2 saddle models derived in local research draft SADDLE_DRAFT.md (11 September 2026), not attributed to a proved theorem in the source.",
+  "deprecated_at": null,
+  "deprecated_by": null,
+  "visibility": "public",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "audits": [],
+  "readback": null
+}

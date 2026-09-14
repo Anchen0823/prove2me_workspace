@@ -1,0 +1,11 @@
+{
+  "theorem_id": "5239d436-3a3f-481d-96a5-30c3f3bc1fc9",
+  "started_at": "2026-09-14T14:42:48.1551320+08:00",
+  "source_sha256": "157534F02F4146AAF345C618E1198A7CBEB48CA5FC62D5E5555C3FFBA08BF45B",
+  "local_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "local_exit_code": 0
+}

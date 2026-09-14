@@ -1,0 +1,6 @@
+{
+  "state": "open",
+  "body": "Add a note against `native_decide`. My agents keep trying to use this and so I added a note.",
+  "html_url": "https://github.com/prove2me/prove2me_workspace/pull/2",
+  "title": "Note that `native_decide` is not allowed in SKILL.md"
+}

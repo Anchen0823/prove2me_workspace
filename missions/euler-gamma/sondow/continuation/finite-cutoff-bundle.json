@@ -1,0 +1,84 @@
+{
+  "file": "D:\\users\\self_projects\\prove2me_workspace\\Solutions\\Sol_EulerMascheroni_Sondow_finite_cutoff_identity.lean",
+  "sha256": "e656b46739296c04db2e484c07219992bb61a1fcceae1610172fc3d8c90fb7f9",
+  "modules": [
+    {
+      "module": "Solutions.SondowRationalIntegral",
+      "sha256": "800861e50af5d542cc25f35f048dfd4714fbec86d3640f17db8e4952b0a1e97e"
+    },
+    {
+      "module": "Solutions.SondowLogMoment",
+      "sha256": "ab6ddd7195f09a7783d3c96e867edd7170e7b51046fca1e2af8ec1091a626f78"
+    },
+    {
+      "module": "Solutions.SondowKernelExpansion",
+      "sha256": "6ee7994e39826c252a153a4870828c898546d813b427517c65701e52cbb92971"
+    },
+    {
+      "module": "Solutions.SondowTruncatedIntegral",
+      "sha256": "70524d63a12b03b165fe007699c630c9096a4d44011179b2e393127e9a130f38"
+    },
+    {
+      "module": "Solutions.SondowFiniteSums",
+      "sha256": "7a2453ef4dd59b96f48d5b922515ab7d2ca591cd2b2ef34e3746931372d72ab0"
+    },
+    {
+      "module": "Solutions.SondowFiniteMoments",
+      "sha256": "1398a946db38d11940e5084ebe9946b1c4b94c8c91415493575c64d73f2d6b7c"
+    },
+    {
+      "module": "Solutions.SondowSymmetricSums",
+      "sha256": "c024bf7466534a20bbbd8789acf69a9f7f70dab6cdf82b0b5baf7049a4c6d594"
+    },
+    {
+      "module": "Solutions.SondowFiniteEvaluation",
+      "sha256": "fcc5d4c1a51402f4b5cf967f5f3aabdb84200d91cea7ec6119a81ecc6d6d55ba"
+    },
+    {
+      "module": "Solutions.SondowBinomialCoefficients",
+      "sha256": "42e0f034388b7d97a147b50741566776a01951092c233f5e72cc48a47bdf04bf"
+    },
+    {
+      "module": "Solutions.SondowCutoffAlgebra",
+      "sha256": "102be701664eb8a20f7227a6790983c0c00fd5a7e16b0ae1f7a4e115377a5182"
+    },
+    {
+      "module": "Solutions.SondowAlternatingReciprocals",
+      "sha256": "63976689d10f935cc10da741cf1e56d9e68ce9bee050ec11491198ffc5724fbe"
+    },
+    {
+      "module": "Solutions.SondowBinomialRows",
+      "sha256": "9ea3bfc38d341ed005a4f1d757453292894f40bcfce717e6192214c9d069cf43"
+    },
+    {
+      "module": "Solutions.SondowRectangleIdentity",
+      "sha256": "c07960af74ed15c7b0c9f05cb93f051c7167585300cf8ec50ec797b56803cb47"
+    },
+    {
+      "module": "Solutions.SondowPrefixSymmetry",
+      "sha256": "4b008e5f9d3656749719ceb1097c3bab1f24ad0c675fb5b467ba86ca254fbafe"
+    },
+    {
+      "module": "Solutions.SondowTripleReindex",
+      "sha256": "462c0b26cb48ed3dd2dfc83b2466f77e02948d60a1f7efcee062b4cfdf6ecc18"
+    },
+    {
+      "module": "Solutions.SondowLogarithmicForms",
+      "sha256": "ff240d7f02ec75e1b8dd1084911bedd6dabac3d1d0d52e9b558524437be212b6"
+    }
+  ],
+  "imports": [
+    "Mathlib.MeasureTheory.Integral.IntegralEqImproper",
+    "Mathlib.Analysis.SpecialFunctions.Log.Deriv",
+    "Mathlib.Analysis.SpecialFunctions.ImproperIntegrals",
+    "Mathlib.Tactic",
+    "Mathlib.MeasureTheory.Integral.Prod",
+    "Definitions.Def_eulerMascheroni_sondowCutoff",
+    "Mathlib.Data.Nat.Choose.Sum",
+    "Mathlib.Algebra.Ring.GeomSum",
+    "Mathlib.NumberTheory.Harmonic.Defs",
+    "Mathlib.Analysis.SpecialFunctions.Log.Basic",
+    "Mathlib.Data.Nat.Choose.Vandermonde",
+    "Mathlib.Algebra.BigOperators.Intervals"
+  ]
+}

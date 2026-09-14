@@ -1,0 +1,144 @@
+{
+  "theorems": [
+    {
+      "theorem_id": "e968787d-5f26-4338-af7e-74888eaf4d79",
+      "theorem_name": "EulerMascheroni.Sondow.scaled_A_integral",
+      "theorem_title": "Clearing the denominators of Sondow harmonic sums",
+      "status": "Proved",
+      "formal_statement": "theorem EulerMascheroni.Sondow.scaled_A_integral (n : ℕ) :\n    ∃ z : ℤ, (d (2*n) : ℝ) * (A n : ℝ) = z := by sorry",
+      "natural_language_statement": "For every nonnegative integer $n$,\n$$d_{2n}A_n\\in\\mathbb Z.$$\nThe endpoint $n=0$ gives zero. This arithmetic fact clears the harmonic denominators in the integral identity.",
+      "created_at": "2026-09-14T17:08:44.60669+08:00",
+      "vote_count": 0,
+      "preamble": "import Definitions.Def_eulerMascheroni_sondow\nopen EulerMascheroni.Sondow",
+      "source": "Jonathan Sondow, Criteria for Irrationality of Euler's Constant, https://arxiv.org/pdf/math/0209070 (v2, 4 October 2002). Theorem 1, p. 6; denominator observation following equation (11), p. 8.",
+      "tags": [
+        "euler-mascheroni",
+        "formalization",
+        "sondow"
+      ],
+      "created_by": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "created_by_username": "Yuxuan Xu",
+      "deprecated_at": null,
+      "visibility": "public",
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)"
+    },
+    {
+      "theorem_id": "00b4cd42-5f36-4d22-ab0f-2a87c9194496",
+      "theorem_name": "EulerMascheroni.Sondow.scaled_integral_bounds",
+      "theorem_title": "Sondow scaled positive remainder bound",
+      "status": "Open",
+      "formal_statement": "theorem EulerMascheroni.Sondow.scaled_integral_bounds (n : ℕ) (hn : 0 < n) :\n    0 < (d (2*n) : ℝ) * I n ∧ (d (2*n) : ℝ) * I n < (1/2 : ℝ)^n := by sorry",
+      "natural_language_statement": "For every positive integer $n$,\n$$0<d_{2n}I_n<2^{-n}.$$\nThis follows from the established bounds $d_{2n}<8^n$ and $0<I_n<16^{-n}$. It is a known estimate awaiting formalization.",
+      "created_at": "2026-09-14T17:08:41.950168+08:00",
+      "vote_count": 0,
+      "preamble": "import Definitions.Def_eulerMascheroni_sondow\nopen EulerMascheroni.Sondow",
+      "source": "Jonathan Sondow, Criteria for Irrationality of Euler's Constant, https://arxiv.org/pdf/math/0209070 (v2, 4 October 2002). Lemma 3, p. 10.",
+      "tags": [
+        "euler-mascheroni",
+        "formalization",
+        "sondow"
+      ],
+      "created_by": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "created_by_username": "Yuxuan Xu",
+      "deprecated_at": null,
+      "visibility": "public",
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)"
+    },
+    {
+      "theorem_id": "747d96a7-9576-41e1-801a-228e9d36c4cd",
+      "theorem_name": "EulerMascheroni.Sondow.integral_identity",
+      "theorem_title": "Sondow integral evaluation",
+      "status": "Open",
+      "formal_statement": "theorem EulerMascheroni.Sondow.integral_identity (n : ℕ) (hn : 0 < n) :\n    I n = ((2*n).choose n : ℝ) * Real.eulerMascheroniConstant + L n - (A n : ℝ) := by sorry",
+      "natural_language_statement": "For every positive integer $n$,\n$$I_n=\\binom{2n}{n}\\gamma+L_n-A_n.$$\nThis is a known analytic identity, left as a formalization obligation.",
+      "created_at": "2026-09-14T17:08:21.473856+08:00",
+      "vote_count": 0,
+      "preamble": "import Definitions.Def_eulerMascheroni_sondow\nopen EulerMascheroni.Sondow",
+      "source": "Jonathan Sondow, Criteria for Irrationality of Euler's Constant, https://arxiv.org/pdf/math/0209070 (v2, 4 October 2002). Theorem 1, equation (7), pp. 6-9.",
+      "tags": [
+        "euler-mascheroni",
+        "formalization",
+        "sondow"
+      ],
+      "created_by": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "created_by_username": "Yuxuan Xu",
+      "deprecated_at": null,
+      "visibility": "public",
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)"
+    },
+    {
+      "theorem_id": "ebf8a88e-ef15-4154-8773-6ee4404e2d96",
+      "theorem_name": "EulerMascheroni.Sondow.fractional_lower_bound_conjecture",
+      "theorem_title": "Open Sondow fractional-part condition for Euler irrationality",
+      "status": "Open",
+      "formal_statement": "theorem EulerMascheroni.Sondow.fractional_lower_bound_conjecture :\n    ∀ N : ℕ, ∃ n : ℕ, N ≤ n ∧ 0 < n ∧\n      (1/2 : ℝ)^n ≤ Int.fract ((d (2*n) : ℝ) * L n) := by sorry",
+      "natural_language_statement": "Conjectural arithmetic condition: for every natural number $N$, there is an integer $n\\ge\\max(N,1)$ such that\n$$\\{d_{2n}L_n\\}\\ge2^{-n}.$$\nHere $\\{x\\}=x-\\lfloor x\\rfloor$. This is the sufficient hypothesis of Sondow's Corollary 6, not a theorem proved in that paper. It is the unresolved arithmetic ingredient of this proposed route to irrationality; finite numerical evidence does not establish it.",
+      "created_at": "2026-09-14T17:06:59.396652+08:00",
+      "vote_count": 0,
+      "preamble": "import Definitions.Def_eulerMascheroni_sondow\nopen EulerMascheroni.Sondow",
+      "source": "Jonathan Sondow, Criteria for Irrationality of Euler's Constant, https://arxiv.org/pdf/math/0209070 (v2, 4 October 2002). Corollary 6, p. 11; numerical discussion p. 4. Only the conditional implication is established by the source; the displayed infinite-occurrence assertion is an open conjectural target.",
+      "tags": [
+        "conjecture",
+        "euler-mascheroni",
+        "sondow"
+      ],
+      "created_by": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "created_by_username": "Yuxuan Xu",
+      "deprecated_at": null,
+      "visibility": "public",
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)"
+    },
+    {
+      "theorem_id": "b3aa1aab-7502-4c10-9f7b-e005a6771e56",
+      "theorem_name": "eulerMascheroni_sondow",
+      "theorem_title": "Sondow harmonic sums, logarithmic forms and double integrals",
+      "status": "Definition",
+      "formal_statement": "",
+      "natural_language_statement": "Let $d_n=\\operatorname{lcm}(1,\\ldots,n)$ and $H_m=\\sum_{j=1}^m1/j$. Define\n$$A_n=\\sum_{i=0}^n\\binom ni^2H_{n+i},$$\n$$L_n=\\sum_{k=1}^n\\sum_{i=0}^{\\min(k-1,n-k)}\\sum_{j=i+1}^{n-i}\\frac{2\\binom ni^2}{j}\\log(n+k),$$\n$$I_n=\\int_0^1\\int_0^1\\frac{[x(1-x)y(1-y)]^n}{(1-xy)(-\\log(xy))}\\,dy\\,dx.$$\nThese are Sondow's explicit quantities. His identity $d_{2n}L_n=\\log S_n$ allows the criterion to use $d_{2n}L_n$ directly, without constructing the large integer product $S_n$. Results using the integral require $n>0$.",
+      "created_at": "2026-09-14T17:04:55.317605+08:00",
+      "vote_count": 0,
+      "definition": "import Mathlib.Algebra.GCDMonoid.Finset\nimport Mathlib.NumberTheory.Harmonic.Defs\nimport Mathlib.NumberTheory.Harmonic.EulerMascheroni\nimport Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic\nimport Mathlib.Algebra.Order.Floor.Ring\n\nnoncomputable section\nnamespace EulerMascheroni.Sondow\nopen Finset\n\ndef d (n : ℕ) : ℕ := (Icc 1 n).lcm id\n\ndef A (n : ℕ) : ℚ :=\n  ∑ i ∈ range (n + 1), (n.choose i : ℚ)^2 * harmonic (n + i)\n\n-- Sondow (2002), equation (8); all three summation ranges are inclusive.\ndef L (n : ℕ) : ℝ :=\n  ∑ k ∈ Icc 1 n, ∑ i ∈ Icc 0 (min (k - 1) (n - k)),\n    ∑ j ∈ Icc (i + 1) (n - i),\n      2 * (n.choose i : ℝ)^2 / (j : ℝ) * Real.log (n + k : ℕ)\n\ndef I (n : ℕ) : ℝ :=\n  ∫ x in (0 : ℝ)..1, ∫ y in (0 : ℝ)..1,\n    (x * (1 - x) * y * (1 - y))^n / ((1 - x*y) * (-Real.log (x*y)))\n\nend EulerMascheroni.Sondow\n",
+      "source": "Jonathan Sondow, Criteria for Irrationality of Euler's Constant, https://arxiv.org/pdf/math/0209070 (v2, 4 October 2002). Equations (2), (6), (8), pp. 2, 3, 6; Lemma 2, p. 9.",
+      "tags": [
+        "euler-mascheroni",
+        "irrationality",
+        "sondow"
+      ],
+      "created_by": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "created_by_username": "Yuxuan Xu",
+      "deprecated_at": null,
+      "visibility": "public",
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)"
+    },
+    {
+      "theorem_id": "66a4e48a-f260-4615-92d3-686ca9356509",
+      "theorem_name": "EulerMascheroni.gamma_irrational",
+      "theorem_title": "Euler's constant is irrational",
+      "status": "Open",
+      "formal_statement": "namespace EulerMascheroni\ntheorem gamma_irrational : Irrational Real.eulerMascheroniConstant := by sorry\nend EulerMascheroni",
+      "natural_language_statement": "Euler's constant $\\gamma$ is irrational: $\\gamma \\notin \\mathbb{Q}$.\n\nThis is **open**, and is the weaker of the two arithmetic questions about $\\gamma$ — transcendence implies irrationality but not conversely. It is the older and more famous form of the problem: despite $\\gamma$ having been computed to hundreds of billions of digits, and despite explicit criteria equivalent to its irrationality being available since Sondow's work, no proof is known.\n\nWhat is known is conditional or disjunctive: any rational representation would need a denominator exceeding $10^{244663}$, and at least one of $\\gamma$ and the Euler--Gompertz constant $\\delta$ must be irrational.\n\n**Formalization note.** `Irrational x` is Mathlib's predicate that `x` is not in the range of the coercion $\\mathbb{Q} \\to \\mathbb{R}$.",
+      "created_at": "2026-09-10T14:42:33.788462+08:00",
+      "vote_count": 0,
+      "preamble": "import Definitions.Def_eulerMascheroni_gompertz\n\nopen Real",
+      "source": "Open problem. Survey: J. Lagarias, Euler's constant: Euler's work and modern developments, Bull. Amer. Math. Soc. 50 (2013), https://arxiv.org/abs/1303.1856, Section 5 (Irrationality and transcendence).",
+      "tags": [
+        "constants",
+        "irrationality",
+        "number-theory",
+        "open-problem"
+      ],
+      "created_by": "da7ddf19-79a3-4afa-a245-03d734265eb8",
+      "created_by_username": "shivm",
+      "deprecated_at": null,
+      "visibility": "public",
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)"
+    }
+  ],
+  "total": 6
+}

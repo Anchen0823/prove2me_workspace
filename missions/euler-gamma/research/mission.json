@@ -1,0 +1,34 @@
+{
+  "id": "6790b278-59df-4c76-a117-0d7e6d3c1117",
+  "name": "Irrationality and transcendence of Euler's constant",
+  "description": "## What the constant is\n\nEuler's constant $\\gamma$ measures the gap between the harmonic numbers and the logarithm:\n\n$$\\gamma \\;=\\; \\lim_{n\\to\\infty}\\left(\\sum_{k=1}^{n}\\frac{1}{k} \\;-\\; \\log n\\right) \\;=\\; 0.5772156649\\ldots$$\n\nIt appears wherever the harmonic series is compared against an integral, and it is the value at $1$ of the digamma function, $\\psi(1) = -\\gamma$, equivalently $\\gamma = -\\Gamma'(1)$. Among the classical constants of analysis it is the conspicuous one whose arithmetic nature is unknown.\n\n## What is being asked\n\nFor $\\pi$ and $e$ the arithmetic questions were settled long ago: both are irrational and transcendental. For $\\gamma$, **neither is known**. It is not known whether $\\gamma$ is irrational, and a fortiori not whether it is transcendental, though it is universally expected to be both.\n\nThe goal theorem of this mission is transcendence,\n\n$$\\gamma \\notin \\overline{\\mathbb{Q}},$$\n\nwith irrationality carried as a separate, weaker target — a proof of transcendence yields irrationality immediately, but not conversely, and irrationality alone would already be a landmark.\n\n## What is actually known\n\nProgress has come in three forms, and the milestones below formalize each.\n\n**Conditional bounds on a putative denominator.** If $\\gamma$ were rational, its denominator would have to be enormous. Brent and McMillan (1980), computing $\\gamma$ to $30{,}000$ places by an algorithm built on modified Bessel functions, showed any denominator exceeds $10^{15000}$; a continued-fraction analysis by Papanikolaou (1997) pushed this past $10^{244663}$. These are not steps toward a proof so much as a measurement of how far brute computation can go.\n\n**Disjunctive results.** The strongest unconditional statements pair $\\gamma$ with the Euler–Gompertz constant\n\n$$\\delta \\;=\\; \\int_0^{\\infty} \\frac{e^{-u}}{1+u}\\, du \\;=\\; 0.5963473623\\ldots$$\n\nAptekarev, building on work of Mahler and Shidlovskii, observed that **at least one of $\\gamma$ and $\\delta$ is irrational**. Rivoal later strengthened this to **at least one of them is transcendental**. Neither argument isolates which, and that is precisely the obstruction: the Padé-approximation machinery that controls the pair does not separate them.\n\n**Irrationality criteria.** Sondow, adapting Beukers' treatment of Apéry's theorem for $\\zeta(3)$, gave criteria equivalent to the irrationality of $\\gamma$ in terms of the fractional parts of certain integer sequences. They reformulate the problem rather than resolve it.\n\n## Timeline\n\n- **1734** — Euler introduces the constant and computes it to six decimals.\n- **1790s–1800s** — Mascheroni computes further digits; the constant acquires its second name.\n- **1873** — Hermite proves $e$ transcendental; **1882** — Lindemann does the same for $\\pi$. The methods do not reach $\\gamma$.\n- **1980** — Brent and McMillan: if $\\gamma = p/q$ then $q > 10^{15000}$.\n- **1997** — Papanikolaou: the same denominator exceeds $10^{244663}$.\n- **2009** — Aptekarev: at least one of $\\gamma$, $\\delta$ is irrational.\n- **2012** — Rivoal: at least one of $\\gamma$, $\\delta$ is transcendental.\n- **2010s** — Murty, Saradha and others obtain transcendence results for generalized Euler–Lehmer constants, again leaving $\\gamma$ itself untouched.\n\n## Formalization notes\n\nMathlib provides the constant as `Real.eulerMascheroniConstant`, defined as the limit of $\\sum_{k\\le n} 1/k - \\log n$, together with the identifications $\\psi(1) = -\\gamma$ and $\\gamma = -\\Gamma'(1)$ and the numeric bounds $1/2 < \\gamma < 2/3$. `Irrational` and `Transcendental ℚ` are Mathlib's standard predicates. The Euler–Gompertz constant is not in Mathlib and is supplied here as a mission definition.",
+  "created_at": "2026-09-11T04:16:54.137707+08:00",
+  "mission_type": "OpenProblem",
+  "visibility": "public",
+  "release_requested_at": null,
+  "fields": [
+    {
+      "id": "b2d3e691-5991-46d9-917d-047b9d4de3c7",
+      "slug": "analysis",
+      "name": "Analysis"
+    },
+    {
+      "id": "e76e77ab-38dd-426d-a533-0b37fb6dbabc",
+      "slug": "number-theory",
+      "name": "Number Theory"
+    }
+  ],
+  "creator": {
+    "id": "da7ddf19-79a3-4afa-a245-03d734265eb8",
+    "username": "shivm"
+  },
+  "main_theorem": {
+    "theorem_id": "1f5d0eac-7c79-43aa-b5f9-0cd302f56ad9",
+    "theorem_name": "EulerMascheroni.gamma_transcendental",
+    "theorem_title": "Euler's constant is transcendental",
+    "formal_statement": "namespace EulerMascheroni\ntheorem gamma_transcendental : Transcendental ℚ Real.eulerMascheroniConstant := by sorry\nend EulerMascheroni",
+    "natural_language_statement": "Euler's constant\n\n$$\\gamma \\;=\\; \\lim_{n\\to\\infty}\\left(\\sum_{k=1}^{n}\\frac{1}{k} - \\log n\\right)$$\n\nis transcendental: it is not a root of any non-zero polynomial with rational coefficients.\n\nThis is the goal of the mission and is **open**. It is expected to be true — no classical constant of this kind is believed to be algebraic — but nothing close to a proof is known, and even the far weaker assertion that $\\gamma$ is irrational is open. The transcendence methods that settled $e$ (Hermite, 1873) and $\\pi$ (Lindemann, 1882) do not apply, because $\\gamma$ is not known to be a period or a value of the exponential at an algebraic point.\n\n**Formalization note.** `Transcendental ℚ x` is Mathlib's predicate that `x` is not algebraic over $\\mathbb{Q}$, and `Real.eulerMascheroniConstant` is Mathlib's definition of $\\gamma$ as the limit of $\\sum_{k \\le n} 1/k - \\log n$.",
+    "status": "Open",
+    "deprecated_at": null
+  }
+}

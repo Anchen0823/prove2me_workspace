@@ -1,0 +1,57 @@
+{
+  "decompositions": [
+    {
+      "submission_id": null,
+      "created_by": null,
+      "created_at": null,
+      "deprecated_at": null,
+      "deprecated_by": null,
+      "children": [
+        {
+          "definition_id": "b3aa1aab-7502-4c10-9f7b-e005a6771e56",
+          "definition_name": "eulerMascheroni_sondow",
+          "theorem_title": "Sondow harmonic sums, logarithmic forms and double integrals",
+          "ordinal": 0,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        }
+      ]
+    },
+    {
+      "submission_id": "d8eba62a-98e7-4a07-bbcf-9f42f90a8cb8",
+      "created_by": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "created_at": "2026-09-14T17:56:06.943822+08:00",
+      "deprecated_at": null,
+      "deprecated_by": null,
+      "children": [
+        {
+          "theorem_id": "d27e4fda-75c8-48f4-bc64-5050678b070c",
+          "theorem_name": "EulerMascheroni.Sondow.finite_cutoff_identity",
+          "theorem_title": "Finite cutoff evaluation for Sondow integrals",
+          "status": "Open",
+          "ordinal": 0,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        },
+        {
+          "theorem_id": "fd0d6179-45fd-43aa-819e-5e803fd80c1d",
+          "theorem_name": "EulerMascheroni.Sondow.remainder_tendsto_zero",
+          "theorem_title": "Vanishing of the Sondow geometric-series remainder",
+          "status": "Proved",
+          "ordinal": 1,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        },
+        {
+          "theorem_id": "c6bf4441-d3be-46f0-a6b1-4343826caf49",
+          "theorem_name": "EulerMascheroni.Sondow.cutoffError_tendsto_zero",
+          "theorem_title": "Vanishing finite-shift correction in Sondow evaluation",
+          "status": "Proved",
+          "ordinal": 2,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        }
+      ]
+    }
+  ]
+}

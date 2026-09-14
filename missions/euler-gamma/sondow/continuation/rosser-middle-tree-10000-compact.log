@@ -1,0 +1,1 @@
+'EulerMascheroni.Sondow.rosser_middle_to_10000' depends on axioms: [propext, Classical.choice, Quot.sound]

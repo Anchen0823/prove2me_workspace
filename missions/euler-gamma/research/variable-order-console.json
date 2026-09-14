@@ -1,0 +1,200 @@
+{
+  "samples": 8033,
+  "n_range": [
+    1,
+    256
+  ],
+  "p_rule": "0 <= p < ceil(6 H_n); all larger orders excluded analytically by the proved bound",
+  "gamma_interval_log10_width": -191.23110291278778,
+  "certified_signs": 8033,
+  "retrieved_graph_acyclic": true,
+  "graph_node_count": 102,
+  "graph_edge_count": 182,
+  "graph_has_truncated_nodes": true,
+  "best_per_large_n": [
+    {
+      "n": 32,
+      "p": 0,
+      "log10_denominator": 59.11919786090783,
+      "approx_log10_abs_linear_form": 42.28919558000291,
+      "log10_absolute_error_upper": -16.830002280904978,
+      "numerator_nonpositive": false,
+      "large_order_excluded": false,
+      "primitive_abs_form_lt_one": false,
+      "primitive_abs_form_gt_one": true,
+      "primitive_abs_form_lt_half": false
+    },
+    {
+      "n": 48,
+      "p": 0,
+      "log10_denominator": 92.94453045234792,
+      "approx_log10_abs_linear_form": 70.33742577996952,
+      "log10_absolute_error_upper": -22.60710467237857,
+      "numerator_nonpositive": false,
+      "large_order_excluded": false,
+      "primitive_abs_form_lt_one": false,
+      "primitive_abs_form_gt_one": true,
+      "primitive_abs_form_lt_half": false
+    },
+    {
+      "n": 64,
+      "p": 0,
+      "log10_denominator": 124.14165987054263,
+      "approx_log10_abs_linear_form": 96.22274705689654,
+      "log10_absolute_error_upper": -27.91891281364599,
+      "numerator_nonpositive": false,
+      "large_order_excluded": false,
+      "primitive_abs_form_lt_one": false,
+      "primitive_abs_form_gt_one": true,
+      "primitive_abs_form_lt_half": false
+    },
+    {
+      "n": 96,
+      "p": 0,
+      "log10_denominator": 211.60294444401413,
+      "approx_log10_abs_linear_form": 173.07288997781802,
+      "log10_absolute_error_upper": -38.530054466196134,
+      "numerator_nonpositive": false,
+      "large_order_excluded": false,
+      "primitive_abs_form_lt_one": false,
+      "primitive_abs_form_gt_one": true,
+      "primitive_abs_form_lt_half": false
+    },
+    {
+      "n": 128,
+      "p": 0,
+      "log10_denominator": 298.94350995542476,
+      "approx_log10_abs_linear_form": 253.30840404277376,
+      "log10_absolute_error_upper": -45.63510591265094,
+      "numerator_nonpositive": false,
+      "large_order_excluded": false,
+      "primitive_abs_form_lt_one": false,
+      "primitive_abs_form_gt_one": true,
+      "primitive_abs_form_lt_half": false
+    },
+    {
+      "n": 192,
+      "p": 0,
+      "log10_denominator": 475.1868010948802,
+      "approx_log10_abs_linear_form": 414.86432188962294,
+      "log10_absolute_error_upper": -60.32247920525742,
+      "numerator_nonpositive": false,
+      "large_order_excluded": false,
+      "primitive_abs_form_lt_one": false,
+      "primitive_abs_form_gt_one": true,
+      "primitive_abs_form_lt_half": false
+    },
+    {
+      "n": 256,
+      "p": 0,
+      "log10_denominator": 661.9934972926036,
+      "approx_log10_abs_linear_form": 588.3099933823923,
+      "log10_absolute_error_upper": -73.68350391021113,
+      "numerator_nonpositive": false,
+      "large_order_excluded": false,
+      "primitive_abs_form_lt_one": false,
+      "primitive_abs_form_gt_one": true,
+      "primitive_abs_form_lt_half": false
+    }
+  ],
+  "cases_below_one": [
+    {
+      "n": 1,
+      "p": 0,
+      "log10_denominator": 0.3010299956639812,
+      "approx_log10_abs_linear_form": -0.811264588842846,
+      "log10_absolute_error_upper": -1.1122945845067989,
+      "numerator_nonpositive": false,
+      "large_order_excluded": false,
+      "primitive_abs_form_lt_one": true,
+      "primitive_abs_form_gt_one": false,
+      "primitive_abs_form_lt_half": true
+    },
+    {
+      "n": 1,
+      "p": 1,
+      "log10_denominator": 0.47712125471966244,
+      "approx_log10_abs_linear_form": -0.5712935366694865,
+      "log10_absolute_error_upper": -1.0484147913891775,
+      "numerator_nonpositive": false,
+      "large_order_excluded": false,
+      "primitive_abs_form_lt_one": true,
+      "primitive_abs_form_gt_one": false,
+      "primitive_abs_form_lt_half": true
+    },
+    {
+      "n": 1,
+      "p": 4,
+      "log10_denominator": 1.2304489213782739,
+      "approx_log10_abs_linear_form": -0.7273840968196055,
+      "log10_absolute_error_upper": -1.957833018197789,
+      "numerator_nonpositive": false,
+      "large_order_excluded": false,
+      "primitive_abs_form_lt_one": true,
+      "primitive_abs_form_gt_one": false,
+      "primitive_abs_form_lt_half": true
+    },
+    {
+      "n": 2,
+      "p": 0,
+      "log10_denominator": 1.3424226808222062,
+      "approx_log10_abs_linear_form": -0.5210651997487048,
+      "log10_absolute_error_upper": -1.8634878805708013,
+      "numerator_nonpositive": false,
+      "large_order_excluded": false,
+      "primitive_abs_form_lt_one": true,
+      "primitive_abs_form_gt_one": false,
+      "primitive_abs_form_lt_half": true
+    },
+    {
+      "n": 2,
+      "p": 1,
+      "log10_denominator": 1.806179973983887,
+      "approx_log10_abs_linear_form": -1.2350960717302542,
+      "log10_absolute_error_upper": -3.041276045714085,
+      "numerator_nonpositive": false,
+      "large_order_excluded": false,
+      "primitive_abs_form_lt_one": true,
+      "primitive_abs_form_gt_one": false,
+      "primitive_abs_form_lt_half": true
+    },
+    {
+      "n": 2,
+      "p": 2,
+      "log10_denominator": 1.0413926851582251,
+      "approx_log10_abs_linear_form": -0.4567115137477913,
+      "log10_absolute_error_upper": -1.4981041989060486,
+      "numerator_nonpositive": false,
+      "large_order_excluded": false,
+      "primitive_abs_form_lt_one": true,
+      "primitive_abs_form_gt_one": false,
+      "primitive_abs_form_lt_half": true
+    },
+    {
+      "n": 3,
+      "p": 0,
+      "log10_denominator": 1.9444826721501687,
+      "approx_log10_abs_linear_form": -0.6882006173851778,
+      "log10_absolute_error_upper": -2.6326832895354073,
+      "numerator_nonpositive": false,
+      "large_order_excluded": false,
+      "primitive_abs_form_lt_one": true,
+      "primitive_abs_form_gt_one": false,
+      "primitive_abs_form_lt_half": true
+    },
+    {
+      "n": 4,
+      "p": 0,
+      "log10_denominator": 3.558708570533166,
+      "approx_log10_abs_linear_form": -0.2834066310339267,
+      "log10_absolute_error_upper": -3.8421152015671396,
+      "numerator_nonpositive": false,
+      "large_order_excluded": false,
+      "primitive_abs_form_lt_one": true,
+      "primitive_abs_form_gt_one": false,
+      "primitive_abs_form_lt_half": false
+    }
+  ],
+  "all_scanned_forms_gt_one_from_n_8": true,
+  "limitation": "Finite exact-rational parameter scan; no infinite-subsequence conclusion. Gamma enclosure theorem is used on paper, not yet formalized in Lean."
+}

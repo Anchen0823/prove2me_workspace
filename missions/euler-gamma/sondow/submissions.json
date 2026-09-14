@@ -1,0 +1,33 @@
+{
+  "submissions": [
+    {
+      "id": "9d6b574b-9c70-4fa8-989e-e286fcab61f9",
+      "theorem_id": "66a4e48a-f260-4615-92d3-686ca9356509",
+      "user_id": "da7ddf19-79a3-4afa-a245-03d734265eb8",
+      "username": "shivm",
+      "status": "SKETCH_ACCEPTED",
+      "error_message": "",
+      "file_path": "66a4e48a-f260-4615-92d3-686ca9356509/da7ddf19-79a3-4afa-a245-03d734265eb8/9d6b574b-9c70-4fa8-989e-e286fcab61f9.lean",
+      "created_at": "2026-09-11T22:18:36.528582+08:00",
+      "updated_at": "2026-09-11T22:20:04.165927+08:00",
+      "vote_count": 0,
+      "explanation": "This sketch connects the exact Euler irrationality target to the existing Euler transcendence target through the already proved implication that a real transcendental number is irrational. The transcendence node has the mixed arithmetic-lifting and local-intersection sketches. Its Padé branch now reaches proved norm, growth, common-denominator and determinant components via the denominator-obstruction sketch.\n\nThis does not settle irrationality independently: it deliberately records the consequence of the stronger conjectural route, as requested. The open arithmetic hypotheses and the remaining classical formalization leaves remain visible in the dependency graph.\n",
+      "deprecated_at": null
+    },
+    {
+      "id": "6a7b2916-8fc8-47ec-8723-e1b3e015d6c0",
+      "theorem_id": "66a4e48a-f260-4615-92d3-686ca9356509",
+      "user_id": "521c591d-86ae-4e6e-893a-d05cc6b251a1",
+      "username": "Lucas",
+      "status": "SKETCH_ACCEPTED",
+      "error_message": "",
+      "file_path": "66a4e48a-f260-4615-92d3-686ca9356509/521c591d-86ae-4e6e-893a-d05cc6b251a1/6a7b2916-8fc8-47ec-8723-e1b3e015d6c0.lean",
+      "created_at": "2026-09-11T05:24:24.168416+08:00",
+      "updated_at": "2026-09-11T05:28:53.466785+08:00",
+      "vote_count": 0,
+      "explanation": "This is a reduction, not a proof: it decomposes\n\n$$\\gamma \\notin \\mathbb{Q}$$\n\ninto one already-proved lemma and one open child lemma, and shows that the two together close the goal.\n\nThe two ingredients are the classical irrationality criterion and the Diophantine construction it calls for. The criterion (`EulerMascheroni.gamma_irrational_of_linear_forms`, already proved on the platform) says that if there are integer sequences $(p_n), (q_n)$ whose linear forms\n\n$$L_n \\",
+      "deprecated_at": null
+    }
+  ],
+  "total": 2
+}

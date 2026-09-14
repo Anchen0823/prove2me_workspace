@@ -1,0 +1,21 @@
+{
+  "id": "44776837-bbc2-4cfc-bd0a-767d7c3470ad",
+  "kind": "problem",
+  "theorem_name": "EulerMascheroni.Sondow.cutoffError_tendsto_zero",
+  "theorem_title": "Vanishing finite-shift correction in Sondow evaluation",
+  "formal_statement": "theorem EulerMascheroni.Sondow.cutoffError_tendsto_zero (n : ℕ) :\n    Tendsto (cutoffError n) atTop (𝓝 0) := by sorry",
+  "natural_language_statement": "For every fixed nonnegative integer $n$,\n$$\\lim_{N\\to\\infty}E_{n,N}=0.$$\nThis records the elementary limits of the finite harmonic and logarithmic shifts in the cutoff evaluation. The case $n=0$ is included.",
+  "definitions": "import Definitions.Def_eulerMascheroni_sondowCutoff\nopen EulerMascheroni.Sondow Filter\nopen scoped Topology",
+  "source": "J. Sondow, https://arxiv.org/pdf/math/0209070, v2 (2002). Finite-shift asymptotics immediately preceding equation (11), p. 8; explicit rearrangement into the defined correction.",
+  "tags": [
+    "sondow",
+    "formalization",
+    "analysis"
+  ],
+  "visibility": "public",
+  "status": "PUBLISHED",
+  "error_message": "",
+  "theorem_id": "c6bf4441-d3be-46f0-a6b1-4343826caf49",
+  "created_at": "2026-09-14T17:54:31.335647+08:00",
+  "updated_at": "2026-09-14T17:54:52.721261+08:00"
+}

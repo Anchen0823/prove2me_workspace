@@ -1,0 +1,21 @@
+{
+  "id": "5ed7e73f-adc3-4ac4-a8ab-606f2e7d3e46",
+  "kind": "problem",
+  "theorem_name": "EulerMascheroni.Sondow.finite_cutoff_identity",
+  "theorem_title": "Finite cutoff evaluation for Sondow integrals",
+  "formal_statement": "theorem EulerMascheroni.Sondow.finite_cutoff_identity (n N : ℕ) (hn : 0 < n) (hN : 0 < N) :\n    I n - remainder n N = ((2*n).choose n : ℝ) *\n      ((harmonic N : ℝ)-Real.log N) + L n - (A n : ℝ) + cutoffError n N := by sorry",
+  "natural_language_statement": "For positive integers $n,N$,\n$$I_n-R_{n,N}=\\binom{2n}{n}(H_N-\\log N)+L_n-A_n+E_{n,N}.$$\nThis finite identity combines the binomial expansion, integration of the geometric truncation, and the combinatorial identification of the logarithmic form. It is a known source-derived identity awaiting formalization; it assumes no irrationality conjecture.",
+  "definitions": "import Definitions.Def_eulerMascheroni_sondowCutoff\nopen EulerMascheroni.Sondow",
+  "source": "J. Sondow, https://arxiv.org/pdf/math/0209070, v2 (2002). Finite evaluation, p. 8, with equations (6), (8), (11), the binomial identities on p. 9, and Lemma 2. The displayed statement is an exact rearrangement for N>0.",
+  "tags": [
+    "sondow",
+    "formalization",
+    "analysis"
+  ],
+  "visibility": "public",
+  "status": "PUBLISHED",
+  "error_message": "",
+  "theorem_id": "d27e4fda-75c8-48f4-bc64-5050678b070c",
+  "created_at": "2026-09-14T17:54:31.384958+08:00",
+  "updated_at": "2026-09-14T17:54:44.208608+08:00"
+}

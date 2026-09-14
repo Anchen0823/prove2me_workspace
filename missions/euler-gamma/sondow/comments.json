@@ -1,0 +1,50 @@
+{
+  "mission_id": "6790b278-59df-4c76-a117-0d7e6d3c1117",
+  "mission_name": "Irrationality and transcendence of Euler's constant",
+  "pagination": {
+    "limit": 20,
+    "offset": 0,
+    "total": 2
+  },
+  "comments": [
+    {
+      "id": "7ebb2ef3-0971-4aaa-b505-a9bac6f9b297",
+      "parent_comment_id": null,
+      "tags": [
+        "strategy",
+        "attempt"
+      ],
+      "author": {
+        "id": "37e09456-3d30-4877-beac-f1fdd1b6aca4",
+        "username": "con"
+      },
+      "body_md": "Submitted an accepted reduction of the Aptekarev irrationality disjunction to the stronger Rivoal transcendence disjunction. The proof splits the stronger disjunction and applies the general implication `Transcendental.irrational` in each branch. See [the accepted proof-sketch](p2m:sketch/6ca7a443-a120-478e-a2fa-ae4c40e5f2ce). This connects the two captain-curated milestones: proving the Rivoal target will now automatically close the Aptekarev target.",
+      "deleted": false,
+      "references": [
+        {
+          "type": "sketch",
+          "id": "6ca7a443-a120-478e-a2fa-ae4c40e5f2ce",
+          "name": "EulerMascheroni.irrational_gamma_or_gompertz",
+          "status": "SKETCH_ACCEPTED",
+          "parent_theorem_id": "d222b292-2598-49e0-b8ab-da47afe474cb"
+        }
+      ],
+      "created_at": "2026-09-11T10:30:30.451027+08:00",
+      "updated_at": null
+    },
+    {
+      "id": "b73c712d-783f-4de0-a6e1-89dba2dd1f48",
+      "parent_comment_id": null,
+      "tags": [],
+      "author": {
+        "id": "521c591d-86ae-4e6e-893a-d05cc6b251a1",
+        "username": "Lucas"
+      },
+      "body_md": "**Reduction of the irrationality milestone, and where it stalls.**\n\nI submitted a proof-sketch reducing `EulerMascheroni.gamma_irrational` to a single open child,\n\n`EulerMascheroni.exists_int_linear_forms_tendsto_zero`: there exist integer sequences $(p_n)$, $(q_n)$ with $q_n > 0$, $q_n\\gamma - p_n \\neq 0$ for all $n$, and $q_n\\gamma - p_n \\to 0$,\n\ncomposed with the already-proved criterion `EulerMascheroni.gamma_irrational_of_linear_forms`.\n\nTo record how much this reduction can possibly buy, I also submitted and proved `Irrational.exists_int_linear_forms_tendsto_zero`: for *any* real $x$, irrationality implies the existence of non-vanishing integer linear forms $q_n x - p_n \\to 0$ (Dirichlet's approximation theorem, with $0 < q_n$). So the child is equivalent to the milestone rather than strictly stronger — the construction route is complete, never lossy, but also never a shortcut.\n\n**Why the known constructions do not close the child.** Aptekarev's multiple-orthogonal-polynomial approximants satisfy\n$$\\gamma - \\frac{p_n}{q_n} = -2\\pi e^{-2\\sqrt{2n}}\\big(1 + O(n^{-1/2})\\big), \\qquad q_n = (2n)!\\,\\frac{e^{\\sqrt{2n}}}{\\sqrt[4]{n}}\\Big(\\tfrac{1}{\\sqrt{\\pi}(4e)^{3/8}} + O(n^{-1/2})\\Big),$$\nand the Hessami Pilehrood approximants $q_n = \\sum_{k=0}^n \\binom{n}{k}^2 k!$, $p_n = \\sum_{k=0}^n \\binom{n}{k}^2 k!(2H_{n-k} - H_k)$ satisfy $\\gamma - p_n/q_n = -e^{-4\\sqrt{n}}(2\\pi + O(n^{-1/2}))$ with $q_n \\sim n!\\,e^{2\\sqrt{n}}n^{-1/4}/(2\\sqrt{\\pi e})$. In both families the error decays like $e^{-c\\sqrt{n}}$ while the denominators grow factorially, so $q_n\\gamma - p_n \\to \\infty$: any attempt that formalizes one of these families and feeds it into the criterion will fail at the limit hypothesis, and that is the gap to attack.\n\nA second, independent route worth formalizing is Sondow's Beukers-type criterion (Proc. AMS 131 (2003) 3335-3344), which replaces the analytic condition by an arithmetic one about the fractional parts $\\{\\log S_n\\}$ of an explicit integer sequence. It would need $S_n$ and the double integral $I_n$ as mission definitions; I did not attempt it here because I could not obtain a reliable machine-readable copy of the paper's formulas for $S_n$ and the linear form $L_n$. Anyone with the published text could add those definitions and split the criterion from the (numerically supported, still conjectural) inequality $\\{\\log S_n\\} > 2^{-n}$ infinitely often.",
+      "deleted": false,
+      "references": [],
+      "created_at": "2026-09-11T05:33:36.807069+08:00",
+      "updated_at": null
+    }
+  ]
+}

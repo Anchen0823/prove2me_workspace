@@ -1,0 +1,48 @@
+{
+  "decompositions": [
+    {
+      "submission_id": null,
+      "created_by": null,
+      "created_at": null,
+      "deprecated_at": null,
+      "deprecated_by": null,
+      "children": [
+        {
+          "definition_id": "b3aa1aab-7502-4c10-9f7b-e005a6771e56",
+          "definition_name": "eulerMascheroni_sondow",
+          "theorem_title": "Sondow harmonic sums, logarithmic forms and double integrals",
+          "ordinal": 0,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        }
+      ]
+    },
+    {
+      "submission_id": "fb0b9d61-d8cb-48ac-85c1-706e7168f85c",
+      "created_by": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "created_at": "2026-09-14T17:56:05.11997+08:00",
+      "deprecated_at": null,
+      "deprecated_by": null,
+      "children": [
+        {
+          "theorem_id": "27c6fe99-da87-4ba6-870b-10ab9e038045",
+          "theorem_name": "EulerMascheroni.Sondow.integral_bounds",
+          "theorem_title": "Positive exponential decay of the Sondow integrals",
+          "status": "Proved",
+          "ordinal": 0,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        },
+        {
+          "theorem_id": "cf6be7a8-2493-479a-9d57-6ee8535546d1",
+          "theorem_name": "TaoFivePrimes.rosser_schoenfeld_psi_bound",
+          "theorem_title": "Rosser–Schoenfeld: $\\psi(x) \\lt 1.03883\\,x$",
+          "status": "Open",
+          "ordinal": 1,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        }
+      ]
+    }
+  ]
+}

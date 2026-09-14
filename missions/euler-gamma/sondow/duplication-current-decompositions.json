@@ -1,0 +1,120 @@
+{
+  "decompositions": [
+    {
+      "submission_id": null,
+      "created_by": null,
+      "created_at": null,
+      "deprecated_at": null,
+      "deprecated_by": null,
+      "children": [
+        {
+          "definition_id": "b7f6f4d7-9e18-4738-b85c-2581be7e5505",
+          "definition_name": "eulerMascheroni_gompertz",
+          "theorem_title": "The Euler–Gompertz constant $\\delta$",
+          "ordinal": 0,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        }
+      ]
+    },
+    {
+      "submission_id": "d9951c5a-02f3-471b-a2b7-33a7ce6ec038",
+      "created_by": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "created_at": "2026-09-14T17:09:08.448727+08:00",
+      "deprecated_at": null,
+      "deprecated_by": null,
+      "children": [
+        {
+          "theorem_id": "747d96a7-9576-41e1-801a-228e9d36c4cd",
+          "theorem_name": "EulerMascheroni.Sondow.integral_identity",
+          "theorem_title": "Sondow integral evaluation",
+          "status": "Open",
+          "ordinal": 0,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        },
+        {
+          "theorem_id": "00b4cd42-5f36-4d22-ab0f-2a87c9194496",
+          "theorem_name": "EulerMascheroni.Sondow.scaled_integral_bounds",
+          "theorem_title": "Sondow scaled positive remainder bound",
+          "status": "Open",
+          "ordinal": 1,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        },
+        {
+          "theorem_id": "e968787d-5f26-4338-af7e-74888eaf4d79",
+          "theorem_name": "EulerMascheroni.Sondow.scaled_A_integral",
+          "theorem_title": "Clearing the denominators of Sondow harmonic sums",
+          "status": "Proved",
+          "ordinal": 2,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        },
+        {
+          "theorem_id": "ebf8a88e-ef15-4154-8773-6ee4404e2d96",
+          "theorem_name": "EulerMascheroni.Sondow.fractional_lower_bound_conjecture",
+          "theorem_title": "Open Sondow fractional-part condition for Euler irrationality",
+          "status": "Open",
+          "ordinal": 3,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        }
+      ]
+    },
+    {
+      "submission_id": "6a7b2916-8fc8-47ec-8723-e1b3e015d6c0",
+      "created_by": "521c591d-86ae-4e6e-893a-d05cc6b251a1",
+      "created_at": "2026-09-11T05:24:24.168416+08:00",
+      "deprecated_at": null,
+      "deprecated_by": null,
+      "children": [
+        {
+          "theorem_id": "356a755b-76f9-4b25-9a5d-a0877ebb47a9",
+          "theorem_name": "EulerMascheroni.gamma_irrational_of_linear_forms",
+          "theorem_title": "Irrationality of $\\gamma$ from linear forms tending to zero",
+          "status": "Proved",
+          "ordinal": 0,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        },
+        {
+          "theorem_id": "7cfdfd24-8781-4193-a881-93684053aa63",
+          "theorem_name": "EulerMascheroni.exists_int_linear_forms_tendsto_zero",
+          "theorem_title": "Vanishing integer linear forms in $\\gamma$",
+          "status": "Open",
+          "ordinal": 1,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        }
+      ]
+    },
+    {
+      "submission_id": "9d6b574b-9c70-4fa8-989e-e286fcab61f9",
+      "created_by": "da7ddf19-79a3-4afa-a245-03d734265eb8",
+      "created_at": "2026-09-11T22:18:36.528582+08:00",
+      "deprecated_at": null,
+      "deprecated_by": null,
+      "children": [
+        {
+          "theorem_id": "1f5d0eac-7c79-43aa-b5f9-0cd302f56ad9",
+          "theorem_name": "EulerMascheroni.gamma_transcendental",
+          "theorem_title": "Euler's constant is transcendental",
+          "status": "Open",
+          "ordinal": 0,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        },
+        {
+          "theorem_id": "d777a7c5-9d53-42b6-8ce7-86612a31cdb2",
+          "theorem_name": "EulerMascheroni.gamma_irrational_of_transcendental",
+          "theorem_title": "Transcendence of $\\gamma$ implies its irrationality",
+          "status": "Proved",
+          "ordinal": 1,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        }
+      ]
+    }
+  ]
+}

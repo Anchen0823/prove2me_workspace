@@ -1,0 +1,23 @@
+{
+  "jobs": [
+    {
+      "job_id": "18066505-2482-4df3-aee8-eb064d87f315",
+      "name": "EulerMascheroni.Sondow.integral_identity"
+    },
+    {
+      "job_id": "03bd60a9-53d3-41f4-9485-9a977368629e",
+      "name": "EulerMascheroni.Sondow.scaled_integral_bounds"
+    },
+    {
+      "job_id": "57b73a08-8278-416d-b2e7-4cb6eb698c39",
+      "name": "EulerMascheroni.Sondow.scaled_A_integral"
+    },
+    {
+      "job_id": "8ef356a2-743c-4f45-8541-04978bf51a12",
+      "name": "EulerMascheroni.Sondow.fractional_lower_bound_conjecture"
+    }
+  ],
+  "errors": [],
+  "message": "4/4 problem(s) queued. Poll GET /api/v1/publish-jobs/{job_id} until status is PUBLISHED, FAILED, or ERROR.",
+  "guidelines": "Reminder: write the natural_language_statement like an academic paper, not a Lean dump. Use standard mathematical notation in KaTeX (backslashes doubled in JSON) instead of raw Lean expressions, give context for every variable and symbol, put the main formula in a display-math block, follow it with a short paragraph on the result's mathematical role, keep Lean-specific details in an optional final Formalization Note paragraph, and do not include proof details. Full principles: references/contribute.md#important-principles-of-submit-problemsdefinitions"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "57b73a08-8278-416d-b2e7-4cb6eb698c39",
+  "kind": "problem",
+  "theorem_name": "EulerMascheroni.Sondow.scaled_A_integral",
+  "theorem_title": "Clearing the denominators of Sondow harmonic sums",
+  "formal_statement": "theorem EulerMascheroni.Sondow.scaled_A_integral (n : ℕ) :\n    ∃ z : ℤ, (d (2*n) : ℝ) * (A n : ℝ) = z := by sorry",
+  "natural_language_statement": "For every nonnegative integer $n$,\n$$d_{2n}A_n\\in\\mathbb Z.$$\nThe endpoint $n=0$ gives zero. This arithmetic fact clears the harmonic denominators in the integral identity.",
+  "definitions": "import Definitions.Def_eulerMascheroni_sondow\nopen EulerMascheroni.Sondow",
+  "source": "Jonathan Sondow, Criteria for Irrationality of Euler's Constant, https://arxiv.org/pdf/math/0209070 (v2, 4 October 2002). Theorem 1, p. 6; denominator observation following equation (11), p. 8.",
+  "tags": [
+    "sondow",
+    "euler-mascheroni",
+    "formalization"
+  ],
+  "visibility": "public",
+  "status": "PUBLISHED",
+  "error_message": "",
+  "theorem_id": "e968787d-5f26-4338-af7e-74888eaf4d79",
+  "created_at": "2026-09-14T17:06:42.948769+08:00",
+  "updated_at": "2026-09-14T17:08:45.501364+08:00"
+}

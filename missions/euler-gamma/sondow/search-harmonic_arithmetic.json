@@ -1,0 +1,28 @@
+{
+  "theorems": [
+    {
+      "theorem_id": "e6294ba0-0977-449b-83ab-2bf4f8404c88",
+      "theorem_name": "ArithmeticE.harmonic_arithmetic",
+      "theorem_title": "Exponential coefficient and common-denominator bounds for harmonic numbers",
+      "status": "Proved",
+      "formal_statement": "theorem ArithmeticE.harmonic_arithmetic : ArithmeticE.RationalArithmetic harmonic := by sorry\n",
+      "natural_language_statement": "The rational sequence $H_n=\\sum_{k=1}^n1/k$ has exponentially bounded absolute values and exponentially bounded positive common denominators. Explicit denominators are $D_n=\\operatorname{lcm}(1,\\ldots,n)$; Chebyshev's estimate bounds $D_n$ by $\\exp((\\log4+4)n)$. These are the arithmetic coefficient conditions for $e^z\\operatorname{Ein}(z)$.",
+      "created_at": "2026-09-11T23:53:01.020261+08:00",
+      "vote_count": 0,
+      "preamble": "import Definitions.Def_rationalEArithmetic",
+      "source": "Beukers, A refined version of the Siegel–Shidlovskii theorem, https://webspace.science.uu.nl/~beuke106/siegelshidlovskii.pdf, pp. 1–6, especially Corollary 2.2 and Theorem 3.2. Explicit specialization and arithmetic verification for the Euler system.",
+      "tags": [
+        "e-functions",
+        "formalization",
+        "transcendence"
+      ],
+      "created_by": "da7ddf19-79a3-4afa-a245-03d734265eb8",
+      "created_by_username": "shivm",
+      "deprecated_at": null,
+      "visibility": "public",
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)"
+    }
+  ],
+  "total": 1
+}

@@ -1,0 +1,2 @@
+missions/euler-gamma/sondow/continuation/balanced-largest-block-cbv.lean:5:699643: error: `simp` failed: maximum number of steps exceeded
+'diagnostic' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

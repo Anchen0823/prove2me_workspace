@@ -1,0 +1,21 @@
+{
+  "id": "354ea1ea-7415-4b49-a564-9d79a15f237a",
+  "kind": "definition",
+  "theorem_name": "eulerMascheroni_sondowCutoff",
+  "theorem_title": "Sondow cutoff remainder and finite-shift correction",
+  "formal_statement": "",
+  "natural_language_statement": "Write $K_n(x,y)=[x(1-x)y(1-y)]^n/((1-xy)(-\\log(xy)))$. Define\n$$R_{n,N}=\\int_0^1\\int_0^1 K_n(x,y)(xy)^N\\,dy\\,dx,$$\n$$E_{n,N}=\\sum_{i=0}^n\\binom ni^2(H_{N+n+i}-H_N)\n+2\\sum_{0\\le i<j\\le n}\\frac{(-1)^{i+j}\\binom ni\\binom nj}{j-i}\n\\sum_{k=1}^{j-i}\\log\\left(1+\\frac{n+i+k}{N}\\right).$$\nThe remainder comes from truncating the geometric series. The correction collects finite shifts after extracting $H_N-\\log N$. The finite evaluation uses $n,N>0$; no theorem is asserted by these definitions.",
+  "definitions": "import Definitions.Def_eulerMascheroni_sondow\n\nnoncomputable section\nnamespace EulerMascheroni.Sondow\nopen Finset\n\ndef remainder (n N : ℕ) : ℝ :=\n  ∫ x in (0:ℝ)..1, ∫ y in (0:ℝ)..1,\n    ((x*(1-x)*y*(1-y))^n / ((1-x*y)*(-Real.log (x*y)))) * (x*y)^N\n\n-- The finite-shift terms in the evaluation of I_n - R_{n,N}.\ndef cutoffError (n N : ℕ) : ℝ :=\n  (∑ i ∈ range (n+1), (n.choose i : ℝ)^2 *\n    ((harmonic (N+n+i) : ℝ) - (harmonic N : ℝ))) +\n  2 * ∑ i ∈ range (n+1), ∑ j ∈ Icc (i+1) n,\n    ((-1:ℝ)^(i+j)*(n.choose i : ℝ)*(n.choose j : ℝ)/(j-i:ℕ)) *\n      ∑ k ∈ Icc 1 (j-i), Real.log (1+(n+i+k:ℕ)/(N:ℝ))\n\nend EulerMascheroni.Sondow\n",
+  "source": "J. Sondow, https://arxiv.org/pdf/math/0209070, v2 (2002). Equation (9), p. 7; finite evaluation and asymptotic rearrangement, pp. 8-9.",
+  "tags": [
+    "sondow",
+    "euler-mascheroni",
+    "analysis"
+  ],
+  "visibility": "public",
+  "status": "PUBLISHED",
+  "error_message": "",
+  "theorem_id": "dd585389-a283-47e7-b0b5-40f1a2be0a3a",
+  "created_at": "2026-09-14T17:52:50.41727+08:00",
+  "updated_at": "2026-09-14T17:53:00.77288+08:00"
+}

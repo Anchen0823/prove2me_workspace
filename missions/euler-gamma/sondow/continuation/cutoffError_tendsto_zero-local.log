@@ -1,0 +1,7 @@
+Solutions/Sol_EulerMascheroni_Sondow_cutoffError_tendsto_zero.lean:10:12: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+Solutions/Sol_EulerMascheroni_Sondow_cutoffError_tendsto_zero.lean:16:6: warning: Unused tactic linter: `congr 1` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'solution' depends on axioms: [propext, Classical.choice, Quot.sound]

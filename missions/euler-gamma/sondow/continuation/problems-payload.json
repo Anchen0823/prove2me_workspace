@@ -1,0 +1,57 @@
+{
+  "env": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "problems": [
+    {
+      "theorem_name": "EulerMascheroni.Sondow.integral_bounds",
+      "theorem_title": "Positive exponential decay of the Sondow integrals",
+      "preamble": "import Definitions.Def_eulerMascheroni_sondow\nopen EulerMascheroni.Sondow",
+      "formal_statement": "theorem EulerMascheroni.Sondow.integral_bounds (n : ℕ) (hn : 0 < n) :\n    0 < I n ∧ I n < (1/16:ℝ)^n := by sorry",
+      "natural_language_statement": "For every positive integer $n$,\n$$0<I_n<16^{-n}.$$\nThis is the integral part of Sondow's Lemma 3. It does not use a bound for the least common multiple or the integral evaluation involving Euler's constant.",
+      "source": "J. Sondow, https://arxiv.org/pdf/math/0209070, v2 (2002). Lemma 3, p. 10. An alternative elementary majorant is proved in the submitted solution.",
+      "tags": [
+        "sondow",
+        "formalization",
+        "analysis"
+      ]
+    },
+    {
+      "theorem_name": "EulerMascheroni.Sondow.remainder_tendsto_zero",
+      "theorem_title": "Vanishing of the Sondow geometric-series remainder",
+      "preamble": "import Definitions.Def_eulerMascheroni_sondowCutoff\nopen EulerMascheroni.Sondow Filter\nopen scoped Topology",
+      "formal_statement": "theorem EulerMascheroni.Sondow.remainder_tendsto_zero (n : ℕ) (hn : 0 < n) :\n    Tendsto (remainder n) atTop (𝓝 0) := by sorry",
+      "natural_language_statement": "For each fixed positive integer $n$,\n$$\\lim_{N\\to\\infty}R_{n,N}=0.$$\nThis justifies removing the geometric-series cutoff in the double integral.",
+      "source": "J. Sondow, https://arxiv.org/pdf/math/0209070, v2 (2002). Equation (9), p. 7, and the vanishing-remainder argument, p. 9.",
+      "tags": [
+        "sondow",
+        "formalization",
+        "analysis"
+      ]
+    },
+    {
+      "theorem_name": "EulerMascheroni.Sondow.cutoffError_tendsto_zero",
+      "theorem_title": "Vanishing finite-shift correction in Sondow evaluation",
+      "preamble": "import Definitions.Def_eulerMascheroni_sondowCutoff\nopen EulerMascheroni.Sondow Filter\nopen scoped Topology",
+      "formal_statement": "theorem EulerMascheroni.Sondow.cutoffError_tendsto_zero (n : ℕ) :\n    Tendsto (cutoffError n) atTop (𝓝 0) := by sorry",
+      "natural_language_statement": "For every fixed nonnegative integer $n$,\n$$\\lim_{N\\to\\infty}E_{n,N}=0.$$\nThis records the elementary limits of the finite harmonic and logarithmic shifts in the cutoff evaluation. The case $n=0$ is included.",
+      "source": "J. Sondow, https://arxiv.org/pdf/math/0209070, v2 (2002). Finite-shift asymptotics immediately preceding equation (11), p. 8; explicit rearrangement into the defined correction.",
+      "tags": [
+        "sondow",
+        "formalization",
+        "analysis"
+      ]
+    },
+    {
+      "theorem_name": "EulerMascheroni.Sondow.finite_cutoff_identity",
+      "theorem_title": "Finite cutoff evaluation for Sondow integrals",
+      "preamble": "import Definitions.Def_eulerMascheroni_sondowCutoff\nopen EulerMascheroni.Sondow",
+      "formal_statement": "theorem EulerMascheroni.Sondow.finite_cutoff_identity (n N : ℕ) (hn : 0 < n) (hN : 0 < N) :\n    I n - remainder n N = ((2*n).choose n : ℝ) *\n      ((harmonic N : ℝ)-Real.log N) + L n - (A n : ℝ) + cutoffError n N := by sorry",
+      "natural_language_statement": "For positive integers $n,N$,\n$$I_n-R_{n,N}=\\binom{2n}{n}(H_N-\\log N)+L_n-A_n+E_{n,N}.$$\nThis finite identity combines the binomial expansion, integration of the geometric truncation, and the combinatorial identification of the logarithmic form. It is a known source-derived identity awaiting formalization; it assumes no irrationality conjecture.",
+      "source": "J. Sondow, https://arxiv.org/pdf/math/0209070, v2 (2002). Finite evaluation, p. 8, with equations (6), (8), (11), the binomial identities on p. 9, and Lemma 2. The displayed statement is an exact rearrangement for N>0.",
+      "tags": [
+        "sondow",
+        "formalization",
+        "analysis"
+      ]
+    }
+  ]
+}
