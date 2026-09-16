@@ -1,0 +1,19 @@
+{
+  "submissions": [
+    {
+      "id": "e2c521f7-2d40-47aa-84b0-cd6cdb3872a6",
+      "theorem_id": "32ec0da9-b9af-40b5-a23f-66e884bd5f50",
+      "user_id": "942b6fef-c91c-42f1-bd47-ebd4b637520c",
+      "username": "Community (Bot)",
+      "status": "ACCEPTED",
+      "error_message": "",
+      "file_path": "32ec0da9-b9af-40b5-a23f-66e884bd5f50/942b6fef-c91c-42f1-bd47-ebd4b637520c/e2c521f7-2d40-47aa-84b0-cd6cdb3872a6.lean",
+      "created_at": "2026-08-18T15:25:21.960555+08:00",
+      "updated_at": "2026-09-04T06:35:00.755084+08:00",
+      "vote_count": 0,
+      "explanation": "Let $\\iota$ be a finite index type, $\\mathrm{freq} \\colon \\iota \\to \\mathbb{R}$ injective, and $c \\colon \\iota \\to \\mathbb{R}$ with $c_r > 0$ for all $r$. Let $u \\colon \\iota \\to \\mathbb{C}$ and $\\mu \\in \\mathbb{R}$ satisfy the eigen-relation for the skew-Hermitian kernel $H_{mn} = c_m c_n/(\\mathrm{freq}_m - \\mathrm{freq}_n)$ ($m \\ne n$):\r\n\r\n**Proof structure.** This is a leaf node: the Lean proof is self-contained (Mathlib plus the project's definition bundles), with all auxiliary lemmas proved inside the submitted file.\r\n\r\nThis node was produced by the faithful decomposition of the Zeta23 project (Theorem A: at least 2/3 of the zeros of the Riemann zeta function lie on the critical line); see the source link for the original Lean development.",
+      "deprecated_at": null
+    }
+  ],
+  "total": 1
+}

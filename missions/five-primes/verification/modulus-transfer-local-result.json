@@ -1,0 +1,9 @@
+{
+  "open_theorem_imports": 0,
+  "checked_at": "2026-09-12T21:42:58.2805566+08:00",
+  "command": "lake env lean -DautoImplicit=false Solutions/Sol_TaoFivePrimes_small_q_modulus_transfer_source_envelope.lean",
+  "warnings": "Unnecessary tactic sequencing only",
+  "sha256": "BA5944F9D2D1AD758D582D985E9C0AA9E32BF0D464C4A4F622E742F131C16F48",
+  "exit_code": 0,
+  "session_id": 95888
+}

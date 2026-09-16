@@ -1,0 +1,7 @@
+{
+  "exit_code": 0,
+  "sha256": "C493F3EEE618DAFF739D51EDF7AD19BE5E8E0A5A225B9E66046ED2B8DB365B53",
+  "checked_at": "2026-09-12T21:19:25.6659016+08:00",
+  "scope": "Exact-target sketch; two open analytic inputs; zero-modulus branch and logarithmic specialization proved locally",
+  "warnings": "Unused target hypotheses hqx, hlarge, hV; exact target binders retained"
+}

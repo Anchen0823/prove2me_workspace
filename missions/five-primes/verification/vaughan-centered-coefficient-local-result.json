@@ -1,0 +1,8 @@
+{
+  "scope": "Auxiliary centered coefficient bound; not a proof of the full Type II estimate",
+  "command": "lake env lean -DautoImplicit=false examples/five-primes/VaughanCenteredCoefficient.lean",
+  "exit_code": 0,
+  "session_id": 74210,
+  "checked_at": "2026-09-12T21:45:48.7210890+08:00",
+  "sha256": "90CDA01498AA6FBE4B12FDE4A4241788A841C9ED74518D2DEA12FA1DD8811467"
+}

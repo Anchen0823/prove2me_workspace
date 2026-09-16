@@ -1,6 +1,6 @@
 import Mathlib
 
-import Definitions.Def_TaoFivePrimes_ArcSplit
+
 
 import Theorems.Thm_TaoFivePrimes_schoenfeld_psi_error_large
 
@@ -30,15 +30,6 @@ theorem psi_le_of_lcm_le_power (n k : ℕ)
   have hl := Real.log_le_log hp hr
   rw [Real.log_pow] at hl
   exact hl.trans (mul_le_mul_of_nonneg_left log_two_upper_for_lcm (Nat.cast_nonneg k))
-
-set_option maxRecDepth 16384 in
-set_option maxHeartbeats 1000000 in
-theorem lcm_1000_upper : Nat.lcmUpto 1000 ≤ 2 ^ 1438 := by decide
-
-theorem rosser_at_1000 : Chebyshev.psi (1000 : ℝ) < 1.03883 * 1000 := by
-  have h := psi_le_of_lcm_le_power 1000 1438 lcm_1000_upper
-  norm_num at h ⊢
-  linarith
 
 /-- A power certificate can retain extra fractional bits at tight endpoints. -/
 theorem psi_mul_le_of_lcm_power (n d k : ℕ)
@@ -582,189 +573,360 @@ private theorem lcm_value_1000 : Nat.lcmUpto 1000 = 7128865274665093053166384155
 /-- Generated integer certificates, all checked by the Lean kernel. -/
 theorem rosser_up_to_1000 (n : ℕ) (hn : 0 < n) (hN : n ≤ 1000) :
     Chebyshev.psi (n : ℝ) < 1.03883 * (n : ℝ) := by
-  have hcover : (1 ≤ n ∧ n ≤ 1) ∨ (2 ≤ n ∧ n ≤ 2) ∨ (3 ≤ n ∧ n ≤ 4) ∨ (5 ≤ n ∧ n ≤ 6) ∨ (7 ≤ n ∧ n ≤ 8) ∨ (9 ≤ n ∧ n ≤ 10) ∨ (11 ≤ n ∧ n ≤ 12) ∨ (13 ≤ n ∧ n ≤ 15) ∨ (16 ≤ n ∧ n ≤ 16) ∨ (17 ≤ n ∧ n ≤ 18) ∨ (19 ≤ n ∧ n ≤ 22) ∨ (23 ≤ n ∧ n ≤ 24) ∨ (25 ≤ n ∧ n ≤ 28) ∨ (29 ≤ n ∧ n ≤ 30) ∨ (31 ≤ n ∧ n ≤ 31) ∨ (32 ≤ n ∧ n ≤ 32) ∨ (33 ≤ n ∧ n ≤ 36) ∨ (37 ≤ n ∧ n ≤ 40) ∨ (41 ≤ n ∧ n ≤ 42) ∨ (43 ≤ n ∧ n ≤ 46) ∨ (47 ≤ n ∧ n ≤ 48) ∨ (49 ≤ n ∧ n ≤ 52) ∨ (53 ≤ n ∧ n ≤ 58) ∨ (59 ≤ n ∧ n ≤ 60) ∨ (61 ≤ n ∧ n ≤ 66) ∨ (67 ≤ n ∧ n ≤ 70) ∨ (71 ≤ n ∧ n ≤ 72) ∨ (73 ≤ n ∧ n ≤ 78) ∨ (79 ≤ n ∧ n ≤ 82) ∨ (83 ≤ n ∧ n ≤ 88) ∨ (89 ≤ n ∧ n ≤ 96) ∨ (97 ≤ n ∧ n ≤ 102) ∨ (103 ≤ n ∧ n ≤ 106) ∨ (107 ≤ n ∧ n ≤ 108) ∨ (109 ≤ n ∧ n ≤ 112) ∨ (113 ≤ n ∧ n ≤ 113) ∨ (114 ≤ n ∧ n ≤ 120) ∨ (121 ≤ n ∧ n ≤ 126) ∨ (127 ≤ n ∧ n ≤ 130) ∨ (131 ≤ n ∧ n ≤ 136) ∨ (137 ≤ n ∧ n ≤ 148) ∨ (149 ≤ n ∧ n ≤ 156) ∨ (157 ≤ n ∧ n ≤ 166) ∨ (167 ≤ n ∧ n ≤ 172) ∨ (173 ≤ n ∧ n ≤ 178) ∨ (179 ≤ n ∧ n ≤ 190) ∨ (191 ≤ n ∧ n ≤ 196) ∨ (197 ≤ n ∧ n ≤ 198) ∨ (199 ≤ n ∧ n ≤ 210) ∨ (211 ≤ n ∧ n ≤ 226) ∨ (227 ≤ n ∧ n ≤ 238) ∨ (239 ≤ n ∧ n ≤ 250) ∨ (251 ≤ n ∧ n ≤ 262) ∨ (263 ≤ n ∧ n ≤ 270) ∨ (271 ≤ n ∧ n ≤ 280) ∨ (281 ≤ n ∧ n ≤ 288) ∨ (289 ≤ n ∧ n ≤ 306) ∨ (307 ≤ n ∧ n ≤ 316) ∨ (317 ≤ n ∧ n ≤ 336) ∨ (337 ≤ n ∧ n ≤ 352) ∨ (353 ≤ n ∧ n ≤ 366) ∨ (367 ≤ n ∧ n ≤ 382) ∨ (383 ≤ n ∧ n ≤ 400) ∨ (401 ≤ n ∧ n ≤ 420) ∨ (421 ≤ n ∧ n ≤ 438) ∨ (439 ≤ n ∧ n ≤ 456) ∨ (457 ≤ n ∧ n ≤ 466) ∨ (467 ≤ n ∧ n ≤ 486) ∨ (487 ≤ n ∧ n ≤ 502) ∨ (503 ≤ n ∧ n ≤ 522) ∨ (523 ≤ n ∧ n ≤ 546) ∨ (547 ≤ n ∧ n ≤ 570) ∨ (571 ≤ n ∧ n ≤ 598) ∨ (599 ≤ n ∧ n ≤ 618) ∨ (619 ≤ n ∧ n ≤ 642) ∨ (643 ≤ n ∧ n ≤ 660) ∨ (661 ≤ n ∧ n ≤ 682) ∨ (683 ≤ n ∧ n ≤ 708) ∨ (709 ≤ n ∧ n ≤ 738) ∨ (739 ≤ n ∧ n ≤ 768) ∨ (769 ≤ n ∧ n ≤ 808) ∨ (809 ≤ n ∧ n ≤ 840) ∨ (841 ≤ n ∧ n ≤ 876) ∨ (877 ≤ n ∧ n ≤ 910) ∨ (911 ≤ n ∧ n ≤ 952) ∨ (953 ≤ n ∧ n ≤ 996) ∨ (997 ≤ n ∧ n ≤ 1000) := by omega
-  rcases hcover with h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h
-  · exact rosser_interval_of_power 1 1 1 (by rw [lcm_value_1]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 2 2 2 (by rw [lcm_value_2]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 3 4 4 (by rw [lcm_value_4]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 5 6 6 (by rw [lcm_value_6]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 7 8 10 (by rw [lcm_value_8]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 9 10 12 (by rw [lcm_value_10]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 11 12 15 (by rw [lcm_value_12]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 13 15 19 (by rw [lcm_value_15]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 16 16 20 (by rw [lcm_value_16]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 17 18 24 (by rw [lcm_value_18]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 19 22 28 (by rw [lcm_value_22]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 23 24 33 (by rw [lcm_value_24]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 25 28 37 (by rw [lcm_value_28]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 29 30 42 (by rw [lcm_value_30]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · have heq : n = 31 := by omega
-    subst n
-    have hp := psi_mul_le_of_lcm_power 31 4 185 (by rw [lcm_value_31]; decide)
-    norm_num at hp ⊢
-    linarith
-  · have heq : n = 32 := by omega
-    subst n
-    have hp := psi_mul_le_of_lcm_power 32 2 95 (by rw [lcm_value_32]; decide)
-    norm_num at hp ⊢
-    linarith
-  · exact rosser_interval_of_power 33 36 48 (by rw [lcm_value_36]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 37 40 53 (by rw [lcm_value_40]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 41 42 58 (by rw [lcm_value_42]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 43 46 64 (by rw [lcm_value_46]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 47 48 69 (by rw [lcm_value_48]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 49 52 72 (by rw [lcm_value_52]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 53 58 78 (by rw [lcm_value_58]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 59 60 84 (by rw [lcm_value_60]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 61 66 90 (by rw [lcm_value_66]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 67 70 96 (by rw [lcm_value_70]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 71 72 103 (by rw [lcm_value_72]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 73 78 109 (by rw [lcm_value_78]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 79 82 117 (by rw [lcm_value_82]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 83 88 123 (by rw [lcm_value_88]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 89 96 130 (by rw [lcm_value_96]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 97 102 143 (by rw [lcm_value_102]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 103 106 150 (by rw [lcm_value_106]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 107 108 156 (by rw [lcm_value_108]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 109 112 163 (by rw [lcm_value_112]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · have heq : n = 113 := by omega
-    subst n
-    exact rosser_at_113
-  · exact rosser_interval_of_power 114 120 170 (by rw [lcm_value_120]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 121 126 176 (by rw [lcm_value_126]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 127 130 184 (by rw [lcm_value_130]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 131 136 191 (by rw [lcm_value_136]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 137 148 205 (by rw [lcm_value_148]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 149 156 219 (by rw [lcm_value_156]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 157 166 234 (by rw [lcm_value_166]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 167 172 245 (by rw [lcm_value_172]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 173 178 252 (by rw [lcm_value_178]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 179 190 267 (by rw [lcm_value_190]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 191 196 283 (by rw [lcm_value_196]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 197 198 290 (by rw [lcm_value_198]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 199 210 298 (by rw [lcm_value_210]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 211 226 313 (by rw [lcm_value_226]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 227 238 337 (by rw [lcm_value_238]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 239 250 354 (by rw [lcm_value_250]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 251 262 371 (by rw [lcm_value_262]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 263 270 387 (by rw [lcm_value_270]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 271 280 404 (by rw [lcm_value_280]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 281 288 420 (by rw [lcm_value_288]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 289 306 432 (by rw [lcm_value_306]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 307 316 457 (by rw [lcm_value_316]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 317 336 474 (by rw [lcm_value_336]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 337 352 502 (by rw [lcm_value_352]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 353 366 523 (by rw [lcm_value_366]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 367 382 549 (by rw [lcm_value_382]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 383 400 574 (by rw [lcm_value_400]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 401 420 600 (by rw [lcm_value_420]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 421 438 627 (by rw [lcm_value_438]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 439 456 653 (by rw [lcm_value_456]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 457 466 680 (by rw [lcm_value_466]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 467 486 697 (by rw [lcm_value_486]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 487 502 724 (by rw [lcm_value_502]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 503 522 752 (by rw [lcm_value_522]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 523 546 775 (by rw [lcm_value_546]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 547 570 811 (by rw [lcm_value_570]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 571 598 848 (by rw [lcm_value_598]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 599 618 894 (by rw [lcm_value_618]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 619 642 925 (by rw [lcm_value_642]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 643 660 962 (by rw [lcm_value_660]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 661 682 990 (by rw [lcm_value_682]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 683 708 1018 (by rw [lcm_value_708]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 709 738 1058 (by rw [lcm_value_738]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 739 768 1106 (by rw [lcm_value_768]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 769 808 1144 (by rw [lcm_value_808]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 809 840 1212 (by rw [lcm_value_840]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 841 876 1256 (by rw [lcm_value_876]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 877 910 1305 (by rw [lcm_value_910]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 911 952 1364 (by rw [lcm_value_952]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 953 996 1428 (by rw [lcm_value_996]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
-  · exact rosser_interval_of_power 997 1000 1438 (by rw [lcm_value_1000]; decide) (by norm_num)
-      n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+  by_cases hsplit_166 : n ≤ 166
+  · by_cases hsplit_48 : n ≤ 48
+    · by_cases hsplit_18 : n ≤ 18
+      · by_cases hsplit_8 : n ≤ 8
+        · by_cases hsplit_2 : n ≤ 2
+          · by_cases hsplit_1 : n ≤ 1
+            · have h : 1 ≤ n ∧ n ≤ 1 := by omega
+              exact rosser_interval_of_power 1 1 1 (by rw [lcm_value_1]; decide) (by norm_num)
+                n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+            · have h : 2 ≤ n ∧ n ≤ 2 := by omega
+              exact rosser_interval_of_power 2 2 2 (by rw [lcm_value_2]; decide) (by norm_num)
+                n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+          · by_cases hsplit_4 : n ≤ 4
+            · have h : 3 ≤ n ∧ n ≤ 4 := by omega
+              exact rosser_interval_of_power 3 4 4 (by rw [lcm_value_4]; decide) (by norm_num)
+                n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+            · by_cases hsplit_6 : n ≤ 6
+              · have h : 5 ≤ n ∧ n ≤ 6 := by omega
+                exact rosser_interval_of_power 5 6 6 (by rw [lcm_value_6]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+              · have h : 7 ≤ n ∧ n ≤ 8 := by omega
+                exact rosser_interval_of_power 7 8 10 (by rw [lcm_value_8]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+        · by_cases hsplit_12 : n ≤ 12
+          · by_cases hsplit_10 : n ≤ 10
+            · have h : 9 ≤ n ∧ n ≤ 10 := by omega
+              exact rosser_interval_of_power 9 10 12 (by rw [lcm_value_10]; decide) (by norm_num)
+                n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+            · have h : 11 ≤ n ∧ n ≤ 12 := by omega
+              exact rosser_interval_of_power 11 12 15 (by rw [lcm_value_12]; decide) (by norm_num)
+                n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+          · by_cases hsplit_15 : n ≤ 15
+            · have h : 13 ≤ n ∧ n ≤ 15 := by omega
+              exact rosser_interval_of_power 13 15 19 (by rw [lcm_value_15]; decide) (by norm_num)
+                n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+            · by_cases hsplit_16 : n ≤ 16
+              · have h : 16 ≤ n ∧ n ≤ 16 := by omega
+                exact rosser_interval_of_power 16 16 20 (by rw [lcm_value_16]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+              · have h : 17 ≤ n ∧ n ≤ 18 := by omega
+                exact rosser_interval_of_power 17 18 24 (by rw [lcm_value_18]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+      · by_cases hsplit_31 : n ≤ 31
+        · by_cases hsplit_24 : n ≤ 24
+          · by_cases hsplit_22 : n ≤ 22
+            · have h : 19 ≤ n ∧ n ≤ 22 := by omega
+              exact rosser_interval_of_power 19 22 28 (by rw [lcm_value_22]; decide) (by norm_num)
+                n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+            · have h : 23 ≤ n ∧ n ≤ 24 := by omega
+              exact rosser_interval_of_power 23 24 33 (by rw [lcm_value_24]; decide) (by norm_num)
+                n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+          · by_cases hsplit_28 : n ≤ 28
+            · have h : 25 ≤ n ∧ n ≤ 28 := by omega
+              exact rosser_interval_of_power 25 28 37 (by rw [lcm_value_28]; decide) (by norm_num)
+                n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+            · by_cases hsplit_30 : n ≤ 30
+              · have h : 29 ≤ n ∧ n ≤ 30 := by omega
+                exact rosser_interval_of_power 29 30 42 (by rw [lcm_value_30]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+              · have h : 31 ≤ n ∧ n ≤ 31 := by omega
+                have heq : n = 31 := by omega
+                subst n
+                have hp := psi_mul_le_of_lcm_power 31 4 185 (by rw [lcm_value_31]; decide)
+                norm_num at hp ⊢
+                linarith
+        · by_cases hsplit_40 : n ≤ 40
+          · by_cases hsplit_32 : n ≤ 32
+            · have h : 32 ≤ n ∧ n ≤ 32 := by omega
+              have heq : n = 32 := by omega
+              subst n
+              have hp := psi_mul_le_of_lcm_power 32 2 95 (by rw [lcm_value_32]; decide)
+              norm_num at hp ⊢
+              linarith
+            · by_cases hsplit_36 : n ≤ 36
+              · have h : 33 ≤ n ∧ n ≤ 36 := by omega
+                exact rosser_interval_of_power 33 36 48 (by rw [lcm_value_36]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+              · have h : 37 ≤ n ∧ n ≤ 40 := by omega
+                exact rosser_interval_of_power 37 40 53 (by rw [lcm_value_40]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+          · by_cases hsplit_42 : n ≤ 42
+            · have h : 41 ≤ n ∧ n ≤ 42 := by omega
+              exact rosser_interval_of_power 41 42 58 (by rw [lcm_value_42]; decide) (by norm_num)
+                n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+            · by_cases hsplit_46 : n ≤ 46
+              · have h : 43 ≤ n ∧ n ≤ 46 := by omega
+                exact rosser_interval_of_power 43 46 64 (by rw [lcm_value_46]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+              · have h : 47 ≤ n ∧ n ≤ 48 := by omega
+                exact rosser_interval_of_power 47 48 69 (by rw [lcm_value_48]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+    · by_cases hsplit_102 : n ≤ 102
+      · by_cases hsplit_70 : n ≤ 70
+        · by_cases hsplit_58 : n ≤ 58
+          · by_cases hsplit_52 : n ≤ 52
+            · have h : 49 ≤ n ∧ n ≤ 52 := by omega
+              exact rosser_interval_of_power 49 52 72 (by rw [lcm_value_52]; decide) (by norm_num)
+                n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+            · have h : 53 ≤ n ∧ n ≤ 58 := by omega
+              exact rosser_interval_of_power 53 58 78 (by rw [lcm_value_58]; decide) (by norm_num)
+                n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+          · by_cases hsplit_60 : n ≤ 60
+            · have h : 59 ≤ n ∧ n ≤ 60 := by omega
+              exact rosser_interval_of_power 59 60 84 (by rw [lcm_value_60]; decide) (by norm_num)
+                n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+            · by_cases hsplit_66 : n ≤ 66
+              · have h : 61 ≤ n ∧ n ≤ 66 := by omega
+                exact rosser_interval_of_power 61 66 90 (by rw [lcm_value_66]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+              · have h : 67 ≤ n ∧ n ≤ 70 := by omega
+                exact rosser_interval_of_power 67 70 96 (by rw [lcm_value_70]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+        · by_cases hsplit_82 : n ≤ 82
+          · by_cases hsplit_72 : n ≤ 72
+            · have h : 71 ≤ n ∧ n ≤ 72 := by omega
+              exact rosser_interval_of_power 71 72 103 (by rw [lcm_value_72]; decide) (by norm_num)
+                n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+            · by_cases hsplit_78 : n ≤ 78
+              · have h : 73 ≤ n ∧ n ≤ 78 := by omega
+                exact rosser_interval_of_power 73 78 109 (by rw [lcm_value_78]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+              · have h : 79 ≤ n ∧ n ≤ 82 := by omega
+                exact rosser_interval_of_power 79 82 117 (by rw [lcm_value_82]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+          · by_cases hsplit_88 : n ≤ 88
+            · have h : 83 ≤ n ∧ n ≤ 88 := by omega
+              exact rosser_interval_of_power 83 88 123 (by rw [lcm_value_88]; decide) (by norm_num)
+                n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+            · by_cases hsplit_96 : n ≤ 96
+              · have h : 89 ≤ n ∧ n ≤ 96 := by omega
+                exact rosser_interval_of_power 89 96 130 (by rw [lcm_value_96]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+              · have h : 97 ≤ n ∧ n ≤ 102 := by omega
+                exact rosser_interval_of_power 97 102 143 (by rw [lcm_value_102]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+      · by_cases hsplit_120 : n ≤ 120
+        · by_cases hsplit_108 : n ≤ 108
+          · by_cases hsplit_106 : n ≤ 106
+            · have h : 103 ≤ n ∧ n ≤ 106 := by omega
+              exact rosser_interval_of_power 103 106 150 (by rw [lcm_value_106]; decide) (by norm_num)
+                n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+            · have h : 107 ≤ n ∧ n ≤ 108 := by omega
+              exact rosser_interval_of_power 107 108 156 (by rw [lcm_value_108]; decide) (by norm_num)
+                n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+          · by_cases hsplit_112 : n ≤ 112
+            · have h : 109 ≤ n ∧ n ≤ 112 := by omega
+              exact rosser_interval_of_power 109 112 163 (by rw [lcm_value_112]; decide) (by norm_num)
+                n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+            · by_cases hsplit_113 : n ≤ 113
+              · have h : 113 ≤ n ∧ n ≤ 113 := by omega
+                have heq : n = 113 := by omega
+                subst n
+                exact rosser_at_113
+              · have h : 114 ≤ n ∧ n ≤ 120 := by omega
+                exact rosser_interval_of_power 114 120 170 (by rw [lcm_value_120]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+        · by_cases hsplit_136 : n ≤ 136
+          · by_cases hsplit_126 : n ≤ 126
+            · have h : 121 ≤ n ∧ n ≤ 126 := by omega
+              exact rosser_interval_of_power 121 126 176 (by rw [lcm_value_126]; decide) (by norm_num)
+                n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+            · by_cases hsplit_130 : n ≤ 130
+              · have h : 127 ≤ n ∧ n ≤ 130 := by omega
+                exact rosser_interval_of_power 127 130 184 (by rw [lcm_value_130]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+              · have h : 131 ≤ n ∧ n ≤ 136 := by omega
+                exact rosser_interval_of_power 131 136 191 (by rw [lcm_value_136]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+          · by_cases hsplit_148 : n ≤ 148
+            · have h : 137 ≤ n ∧ n ≤ 148 := by omega
+              exact rosser_interval_of_power 137 148 205 (by rw [lcm_value_148]; decide) (by norm_num)
+                n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+            · by_cases hsplit_156 : n ≤ 156
+              · have h : 149 ≤ n ∧ n ≤ 156 := by omega
+                exact rosser_interval_of_power 149 156 219 (by rw [lcm_value_156]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+              · have h : 157 ≤ n ∧ n ≤ 166 := by omega
+                exact rosser_interval_of_power 157 166 234 (by rw [lcm_value_166]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+  · by_cases hsplit_438 : n ≤ 438
+    · by_cases hsplit_270 : n ≤ 270
+      · by_cases hsplit_198 : n ≤ 198
+        · by_cases hsplit_178 : n ≤ 178
+          · by_cases hsplit_172 : n ≤ 172
+            · have h : 167 ≤ n ∧ n ≤ 172 := by omega
+              exact rosser_interval_of_power 167 172 245 (by rw [lcm_value_172]; decide) (by norm_num)
+                n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+            · have h : 173 ≤ n ∧ n ≤ 178 := by omega
+              exact rosser_interval_of_power 173 178 252 (by rw [lcm_value_178]; decide) (by norm_num)
+                n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+          · by_cases hsplit_190 : n ≤ 190
+            · have h : 179 ≤ n ∧ n ≤ 190 := by omega
+              exact rosser_interval_of_power 179 190 267 (by rw [lcm_value_190]; decide) (by norm_num)
+                n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+            · by_cases hsplit_196 : n ≤ 196
+              · have h : 191 ≤ n ∧ n ≤ 196 := by omega
+                exact rosser_interval_of_power 191 196 283 (by rw [lcm_value_196]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+              · have h : 197 ≤ n ∧ n ≤ 198 := by omega
+                exact rosser_interval_of_power 197 198 290 (by rw [lcm_value_198]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+        · by_cases hsplit_238 : n ≤ 238
+          · by_cases hsplit_210 : n ≤ 210
+            · have h : 199 ≤ n ∧ n ≤ 210 := by omega
+              exact rosser_interval_of_power 199 210 298 (by rw [lcm_value_210]; decide) (by norm_num)
+                n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+            · by_cases hsplit_226 : n ≤ 226
+              · have h : 211 ≤ n ∧ n ≤ 226 := by omega
+                exact rosser_interval_of_power 211 226 313 (by rw [lcm_value_226]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+              · have h : 227 ≤ n ∧ n ≤ 238 := by omega
+                exact rosser_interval_of_power 227 238 337 (by rw [lcm_value_238]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+          · by_cases hsplit_250 : n ≤ 250
+            · have h : 239 ≤ n ∧ n ≤ 250 := by omega
+              exact rosser_interval_of_power 239 250 354 (by rw [lcm_value_250]; decide) (by norm_num)
+                n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+            · by_cases hsplit_262 : n ≤ 262
+              · have h : 251 ≤ n ∧ n ≤ 262 := by omega
+                exact rosser_interval_of_power 251 262 371 (by rw [lcm_value_262]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+              · have h : 263 ≤ n ∧ n ≤ 270 := by omega
+                exact rosser_interval_of_power 263 270 387 (by rw [lcm_value_270]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+      · by_cases hsplit_336 : n ≤ 336
+        · by_cases hsplit_288 : n ≤ 288
+          · by_cases hsplit_280 : n ≤ 280
+            · have h : 271 ≤ n ∧ n ≤ 280 := by omega
+              exact rosser_interval_of_power 271 280 404 (by rw [lcm_value_280]; decide) (by norm_num)
+                n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+            · have h : 281 ≤ n ∧ n ≤ 288 := by omega
+              exact rosser_interval_of_power 281 288 420 (by rw [lcm_value_288]; decide) (by norm_num)
+                n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+          · by_cases hsplit_306 : n ≤ 306
+            · have h : 289 ≤ n ∧ n ≤ 306 := by omega
+              exact rosser_interval_of_power 289 306 432 (by rw [lcm_value_306]; decide) (by norm_num)
+                n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+            · by_cases hsplit_316 : n ≤ 316
+              · have h : 307 ≤ n ∧ n ≤ 316 := by omega
+                exact rosser_interval_of_power 307 316 457 (by rw [lcm_value_316]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+              · have h : 317 ≤ n ∧ n ≤ 336 := by omega
+                exact rosser_interval_of_power 317 336 474 (by rw [lcm_value_336]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+        · by_cases hsplit_382 : n ≤ 382
+          · by_cases hsplit_352 : n ≤ 352
+            · have h : 337 ≤ n ∧ n ≤ 352 := by omega
+              exact rosser_interval_of_power 337 352 502 (by rw [lcm_value_352]; decide) (by norm_num)
+                n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+            · by_cases hsplit_366 : n ≤ 366
+              · have h : 353 ≤ n ∧ n ≤ 366 := by omega
+                exact rosser_interval_of_power 353 366 523 (by rw [lcm_value_366]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+              · have h : 367 ≤ n ∧ n ≤ 382 := by omega
+                exact rosser_interval_of_power 367 382 549 (by rw [lcm_value_382]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+          · by_cases hsplit_400 : n ≤ 400
+            · have h : 383 ≤ n ∧ n ≤ 400 := by omega
+              exact rosser_interval_of_power 383 400 574 (by rw [lcm_value_400]; decide) (by norm_num)
+                n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+            · by_cases hsplit_420 : n ≤ 420
+              · have h : 401 ≤ n ∧ n ≤ 420 := by omega
+                exact rosser_interval_of_power 401 420 600 (by rw [lcm_value_420]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+              · have h : 421 ≤ n ∧ n ≤ 438 := by omega
+                exact rosser_interval_of_power 421 438 627 (by rw [lcm_value_438]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+    · by_cases hsplit_660 : n ≤ 660
+      · by_cases hsplit_522 : n ≤ 522
+        · by_cases hsplit_466 : n ≤ 466
+          · by_cases hsplit_456 : n ≤ 456
+            · have h : 439 ≤ n ∧ n ≤ 456 := by omega
+              exact rosser_interval_of_power 439 456 653 (by rw [lcm_value_456]; decide) (by norm_num)
+                n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+            · have h : 457 ≤ n ∧ n ≤ 466 := by omega
+              exact rosser_interval_of_power 457 466 680 (by rw [lcm_value_466]; decide) (by norm_num)
+                n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+          · by_cases hsplit_486 : n ≤ 486
+            · have h : 467 ≤ n ∧ n ≤ 486 := by omega
+              exact rosser_interval_of_power 467 486 697 (by rw [lcm_value_486]; decide) (by norm_num)
+                n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+            · by_cases hsplit_502 : n ≤ 502
+              · have h : 487 ≤ n ∧ n ≤ 502 := by omega
+                exact rosser_interval_of_power 487 502 724 (by rw [lcm_value_502]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+              · have h : 503 ≤ n ∧ n ≤ 522 := by omega
+                exact rosser_interval_of_power 503 522 752 (by rw [lcm_value_522]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+        · by_cases hsplit_598 : n ≤ 598
+          · by_cases hsplit_546 : n ≤ 546
+            · have h : 523 ≤ n ∧ n ≤ 546 := by omega
+              exact rosser_interval_of_power 523 546 775 (by rw [lcm_value_546]; decide) (by norm_num)
+                n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+            · by_cases hsplit_570 : n ≤ 570
+              · have h : 547 ≤ n ∧ n ≤ 570 := by omega
+                exact rosser_interval_of_power 547 570 811 (by rw [lcm_value_570]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+              · have h : 571 ≤ n ∧ n ≤ 598 := by omega
+                exact rosser_interval_of_power 571 598 848 (by rw [lcm_value_598]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+          · by_cases hsplit_618 : n ≤ 618
+            · have h : 599 ≤ n ∧ n ≤ 618 := by omega
+              exact rosser_interval_of_power 599 618 894 (by rw [lcm_value_618]; decide) (by norm_num)
+                n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+            · by_cases hsplit_642 : n ≤ 642
+              · have h : 619 ≤ n ∧ n ≤ 642 := by omega
+                exact rosser_interval_of_power 619 642 925 (by rw [lcm_value_642]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+              · have h : 643 ≤ n ∧ n ≤ 660 := by omega
+                exact rosser_interval_of_power 643 660 962 (by rw [lcm_value_660]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+      · by_cases hsplit_808 : n ≤ 808
+        · by_cases hsplit_708 : n ≤ 708
+          · by_cases hsplit_682 : n ≤ 682
+            · have h : 661 ≤ n ∧ n ≤ 682 := by omega
+              exact rosser_interval_of_power 661 682 990 (by rw [lcm_value_682]; decide) (by norm_num)
+                n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+            · have h : 683 ≤ n ∧ n ≤ 708 := by omega
+              exact rosser_interval_of_power 683 708 1018 (by rw [lcm_value_708]; decide) (by norm_num)
+                n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+          · by_cases hsplit_738 : n ≤ 738
+            · have h : 709 ≤ n ∧ n ≤ 738 := by omega
+              exact rosser_interval_of_power 709 738 1058 (by rw [lcm_value_738]; decide) (by norm_num)
+                n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+            · by_cases hsplit_768 : n ≤ 768
+              · have h : 739 ≤ n ∧ n ≤ 768 := by omega
+                exact rosser_interval_of_power 739 768 1106 (by rw [lcm_value_768]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+              · have h : 769 ≤ n ∧ n ≤ 808 := by omega
+                exact rosser_interval_of_power 769 808 1144 (by rw [lcm_value_808]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+        · by_cases hsplit_910 : n ≤ 910
+          · by_cases hsplit_840 : n ≤ 840
+            · have h : 809 ≤ n ∧ n ≤ 840 := by omega
+              exact rosser_interval_of_power 809 840 1212 (by rw [lcm_value_840]; decide) (by norm_num)
+                n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+            · by_cases hsplit_876 : n ≤ 876
+              · have h : 841 ≤ n ∧ n ≤ 876 := by omega
+                exact rosser_interval_of_power 841 876 1256 (by rw [lcm_value_876]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+              · have h : 877 ≤ n ∧ n ≤ 910 := by omega
+                exact rosser_interval_of_power 877 910 1305 (by rw [lcm_value_910]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+          · by_cases hsplit_952 : n ≤ 952
+            · have h : 911 ≤ n ∧ n ≤ 952 := by omega
+              exact rosser_interval_of_power 911 952 1364 (by rw [lcm_value_952]; decide) (by norm_num)
+                n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+            · by_cases hsplit_996 : n ≤ 996
+              · have h : 953 ≤ n ∧ n ≤ 996 := by omega
+                exact rosser_interval_of_power 953 996 1428 (by rw [lcm_value_996]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
+              · have h : 997 ≤ n ∧ n ≤ 1000 := by omega
+                exact rosser_interval_of_power 997 1000 1438 (by rw [lcm_value_1000]; decide) (by norm_num)
+                  n (by exact_mod_cast h.1) (by exact_mod_cast h.2)
 
 end TaoFivePrimes
 

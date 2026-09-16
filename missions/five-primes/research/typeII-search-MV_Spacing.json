@@ -1,0 +1,49 @@
+{
+  "theorems": [
+    {
+      "theorem_id": "4fa6b3ef-efa2-4a66-95c7-3c908fc74d1d",
+      "theorem_name": "Zeta23_MV_Spacing",
+      "theorem_title": "Admissible frequency–gap pairs and their disjoint intervals $I_t$ (MV step 0)",
+      "status": "Definition",
+      "formal_statement": "",
+      "natural_language_statement": "This bundle fixes the admissibility structure used throughout the project's proof of the Montgomery–Vaughan inequality. For a finite index type $\\iota$ and functions $\\lambda, \\delta : \\iota \\to \\mathbb{R}$ (`freq`, `δ`):\n\n- `MV.Adm freq δ` is the proposition (a structure) that the pair is **admissible**: $\\lambda$ is injective, $\\delta_r > 0$ for all $r$, and $\\delta_r \\le |\\lambda_r - \\lambda_s|$ for all $s \\neq r$ — exactly the hypothesis shape of `Zeta23.MVHilbert`. This generalizes the literature's minimal-gap choice $\\delta_r = \\min_{s\\neq r}|\\lambda_r - \\lambda_s|$.\n- `MV.Adm.itv` assigns to each index $t$ the open interval\n$$I_t \\;:=\\; \\bigl(\\lambda_t - \\tfrac{\\delta_t}{2},\\; \\lambda_t + \\tfrac{\\delta_t}{2}\\bigr),$$\nwhich under admissibility are pairwise disjoint.\n\nRole: the disjointness of the intervals $I_t$ drives, by comparison with $\\int |u - \\lambda_s|^{-\\sigma}\\,du$, the elementary spacing lemmas $\\sum_{t\\neq s} \\delta_t/(\\lambda_s-\\lambda_t)^2 \\le 9/\\delta_s$, $\\sum_{t\\neq s} \\delta_t/(\\lambda_s-\\lambda_t)^4 \\le 27/\\delta_s^3$, and a two-point variant — replacing Preissmann's lemmas with self-contained arguments at worse (but sufficient) constants. These feed the quadratic-form and eigenvalue steps that culminate in the diagonal Montgomery–Vaughan inequality `MVDiag`.",
+      "created_at": "2026-08-18T04:07:09.125151+08:00",
+      "vote_count": 0,
+      "definition": "import Mathlib\n\n/-\nCopyright (c) 2026 Anthropic, PBC. All rights reserved.\nReleased under Apache 2.0 license as described in the file LICENSE.\nSPDX-License-Identifier: Apache-2.0\n-/\n\n\n/-!\n# MV step 0 — spacing lemmas for admissible weights\n\nFor an injective `freq : ι → ℝ` on a finite index type with ADMISSIBLE weights `δ`\n(`0 < δ r` and `δ r ≤ |freq r − freq s|` for all `s ≠ r` — the shape of Zeta23.MVHilbert),\nthe open intervals `I_t = (freq t − δ t/2, freq t + δ t/2)` are pairwise disjoint, giving\nby comparison with `∫ |u − freq s|^{−σ} du`:\n\n* `spacing_sq`   (σ = 2):  Σ_{t≠s} δ t/(freq s − freq t)²  ≤  9/δ s\n* `spacing_four` (σ = 4):  Σ_{t≠s} δ t/(freq s − freq t)⁴  ≤  27/(δ s)³\n* `two_point`:  Σ_{k≠ℓ,m} δ k/((freq k − freq ℓ)²(freq k − freq m)²)\n                  ≤ 36(δ ℓ + δ m)/(δ ℓ · δ m · (freq ℓ − freq m)²)\n\nThese replace [Preissmann 1984, Lemmes 1 & 6] (cited without proof in arXiv:2203.14950)\nwith elementary arguments at worse constants — sufficient for the ∃C form.\n-/\n\nnoncomputable section\nopen MeasureTheory Real Set Finset\nopen scoped BigOperators\n\nnamespace Zeta23\nnamespace MV\n\nvariable {ι : Type*} [Fintype ι] [DecidableEq ι]\n\n/-- Admissibility of weights (matches Zeta23.MVHilbert's hypotheses). -/\nstructure Adm (freq δ : ι → ℝ) : Prop where\n  inj : Function.Injective freq\n  pos : ∀ r, 0 < δ r\n  le : ∀ r s, r ≠ s → δ r ≤ |freq r - freq s|\n\nnamespace Adm\n\nvariable {freq δ : ι → ℝ} (h : Adm freq δ)\n\n/-- The interval `I_t`. -/\ndef itv (t : ι) : Set ℝ := Set.Ioo (freq t - δ t / 2) (freq t + δ t / 2)\n\n\n\n\n\n\n\nsection MainSpacing\nvariable (h : Adm freq δ) (s : ι)\n\n\n\n\n\nend MainSpacing\n\n\n\n\n\nend Adm\nend MV\nend Zeta23\n",
+      "source": "https://github.com/anthropics/zeta-23-lean/blob/182afbf851aa42a8ae78507be83f2356d3a33260/Zeta23/MV/Spacing.lean",
+      "tags": [
+        "analysis",
+        "zeta23"
+      ],
+      "created_by": "942b6fef-c91c-42f1-bd47-ebd4b637520c",
+      "created_by_username": "Community (Bot)",
+      "deprecated_at": null,
+      "visibility": "public",
+      "mathlib_rev": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+      "env_display_name": "Mathlib c5ea003 (Lean v4.30.0)"
+    },
+    {
+      "theorem_id": "98678d5a-3659-4ac8-8602-86d289ad91ec",
+      "theorem_name": "Zeta23_MV_Spacing",
+      "theorem_title": "Admissible frequency–gap pairs and their disjoint intervals $I_t$ (MV step 0)",
+      "status": "Definition",
+      "formal_statement": "",
+      "natural_language_statement": "This bundle fixes the admissibility structure used throughout the project's proof of the Montgomery–Vaughan inequality. For a finite index type $\\iota$ and functions $\\lambda, \\delta : \\iota \\to \\mathbb{R}$ (`freq`, `δ`):\n\n- `MV.Adm freq δ` is the proposition (a structure) that the pair is **admissible**: $\\lambda$ is injective, $\\delta_r > 0$ for all $r$, and $\\delta_r \\le |\\lambda_r - \\lambda_s|$ for all $s \\neq r$ — exactly the hypothesis shape of `Zeta23.MVHilbert`. This generalizes the literature's minimal-gap choice $\\delta_r = \\min_{s\\neq r}|\\lambda_r - \\lambda_s|$.\n- `MV.Adm.itv` assigns to each index $t$ the open interval\n$$I_t \\;:=\\; \\bigl(\\lambda_t - \\tfrac{\\delta_t}{2},\\; \\lambda_t + \\tfrac{\\delta_t}{2}\\bigr),$$\nwhich under admissibility are pairwise disjoint.\n\nRole: the disjointness of the intervals $I_t$ drives, by comparison with $\\int |u - \\lambda_s|^{-\\sigma}\\,du$, the elementary spacing lemmas $\\sum_{t\\neq s} \\delta_t/(\\lambda_s-\\lambda_t)^2 \\le 9/\\delta_s$, $\\sum_{t\\neq s} \\delta_t/(\\lambda_s-\\lambda_t)^4 \\le 27/\\delta_s^3$, and a two-point variant — replacing Preissmann's lemmas with self-contained arguments at worse (but sufficient) constants. These feed the quadratic-form and eigenvalue steps that culminate in the diagonal Montgomery–Vaughan inequality `MVDiag`.",
+      "created_at": "2026-08-18T04:07:09.125151+08:00",
+      "vote_count": 0,
+      "definition": "import Mathlib\n\n/-\nCopyright (c) 2026 Anthropic, PBC. All rights reserved.\nReleased under Apache 2.0 license as described in the file LICENSE.\nSPDX-License-Identifier: Apache-2.0\n-/\n\n\n/-!\n# MV step 0 — spacing lemmas for admissible weights\n\nFor an injective `freq : ι → ℝ` on a finite index type with ADMISSIBLE weights `δ`\n(`0 < δ r` and `δ r ≤ |freq r − freq s|` for all `s ≠ r` — the shape of Zeta23.MVHilbert),\nthe open intervals `I_t = (freq t − δ t/2, freq t + δ t/2)` are pairwise disjoint, giving\nby comparison with `∫ |u − freq s|^{−σ} du`:\n\n* `spacing_sq`   (σ = 2):  Σ_{t≠s} δ t/(freq s − freq t)²  ≤  9/δ s\n* `spacing_four` (σ = 4):  Σ_{t≠s} δ t/(freq s − freq t)⁴  ≤  27/(δ s)³\n* `two_point`:  Σ_{k≠ℓ,m} δ k/((freq k − freq ℓ)²(freq k − freq m)²)\n                  ≤ 36(δ ℓ + δ m)/(δ ℓ · δ m · (freq ℓ − freq m)²)\n\nThese replace [Preissmann 1984, Lemmes 1 & 6] (cited without proof in arXiv:2203.14950)\nwith elementary arguments at worse constants — sufficient for the ∃C form.\n-/\n\nnoncomputable section\nopen MeasureTheory Real Set Finset\nopen scoped BigOperators\n\nnamespace Zeta23\nnamespace MV\n\nvariable {ι : Type*} [Fintype ι] [DecidableEq ι]\n\n/-- Admissibility of weights (matches Zeta23.MVHilbert's hypotheses). -/\nstructure Adm (freq δ : ι → ℝ) : Prop where\n  inj : Function.Injective freq\n  pos : ∀ r, 0 < δ r\n  le : ∀ r s, r ≠ s → δ r ≤ |freq r - freq s|\n\nnamespace Adm\n\nvariable {freq δ : ι → ℝ} (h : Adm freq δ)\n\n/-- The interval `I_t`. -/\ndef itv (t : ι) : Set ℝ := Set.Ioo (freq t - δ t / 2) (freq t + δ t / 2)\n\n\n\n\n\n\n\nsection MainSpacing\nvariable (h : Adm freq δ) (s : ι)\n\n\n\n\n\nend MainSpacing\n\n\n\n\n\nend Adm\nend MV\nend Zeta23\n",
+      "source": "https://github.com/anthropics/zeta-23-lean/blob/182afbf851aa42a8ae78507be83f2356d3a33260/Zeta23/MV/Spacing.lean",
+      "tags": [
+        "analysis",
+        "zeta23"
+      ],
+      "created_by": "942b6fef-c91c-42f1-bd47-ebd4b637520c",
+      "created_by_username": "Community (Bot)",
+      "deprecated_at": null,
+      "visibility": "public",
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)"
+    }
+  ],
+  "total": 2
+}

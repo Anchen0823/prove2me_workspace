@@ -1,0 +1,30 @@
+{
+  "decompositions": [
+    {
+      "submission_id": "7020cdba-e182-45ee-9d64-dd2512d4562c",
+      "created_by": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "created_at": "2026-09-15T13:50:35.465077+00:00",
+      "deprecated_at": null,
+      "deprecated_by": null,
+      "children": [
+        {
+          "definition_id": "66ac4c11-f6e1-4e3a-91b6-4c831dbf2cfb",
+          "definition_name": "GoldbachSieve",
+          "theorem_title": "Finite prime sieve survivors and small-prime sum coverage",
+          "ordinal": 0,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        },
+        {
+          "theorem_id": "73e8ddac-1271-41d0-b9d1-1add55e1e714",
+          "theorem_name": "WeakGoldbach.verified_range_sieve_coverage",
+          "theorem_title": "Finite sieve coverage of the binary Goldbach range $(4\\cdot 10^{14},\\,4\\cdot 10^{18}]$ in blocks of one million",
+          "status": "Open",
+          "ordinal": 1,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        }
+      ]
+    }
+  ]
+}

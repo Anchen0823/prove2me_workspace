@@ -1,6 +1,36 @@
 # Five-Primes Mission: Proof Implementation
 
-Last updated: 2026-09-12 (Asia/Shanghai).
+Last updated: 2026-09-13 (Asia/Shanghai).
+
+Latest: the concrete Type I analytic sum estimate is now proved with exact
+`96/pi^2`, without an assumed variation or decay bound. Sixteen modules
+pass in 19.662 seconds without `sorryAx`. The main remaining analytic task
+is Type II; Vaughan identification and final assembly are also outstanding.
+The goal remains active: complete both types, submit, then Git.
+See [Type II work plan](typeII-work-plan.md). Older progress entries below
+are chronological and are superseded where they list Type I analytic gaps.
+
+Latest Type II continuation proves stronger unit spacing, an integer-grid
+Hilbert eigenvalue bound of 7/2, and the cosecant kernel approximation.
+Twenty modules check in 21.406 seconds without `sorryAx`. Conversion to the
+matrix/quadratic-form estimate and the full Type II bound remain unproved.
+The active goal is unchanged; no new submission or Git action has occurred.
+
+Current active scope: the user's continued request to resolve
+`theorem51_unit_numerator_bound`. Eleven auxiliary modules now pass the
+combined check (18.362 seconds, no `sorryAx`), including the exact odd Fourier
+bridge, log-product calculus, and a bounded-variation transfer theorem.
+The actual piecewise slope still needs to be connected to its variation
+budget, and the sharp Type II estimate remains missing. No new platform
+submission was made. See [current proof progress](theorem51-progress.md).
+The chronological entries below retain earlier mission work.
+
+Latest goal continuation supersedes the preceding variation gap: the actual
+zero-extended slope now has a complete variation bound, with all three jumps
+included, and the actual amplitude is continuous. Fourteen modules pass the
+joint Lean check in 18.790 seconds without `sorryAx`. Its integral increment
+identity and discrete/Type I assembly remain, together with the Type II
+estimate. The goal is still to finish both, submit to the platform, then Git.
 
 ## Latest implementation update
 
@@ -230,3 +260,454 @@ work and repeated polling now; the earlier plan to wait for a terminal
 verdict extended that requested boundary. Resume only on an explicit
 new user request. The available goal tool cannot set a paused status;
 do not mark the mathematical mission complete to simulate a pause.
+
+## Explicit new request: large-q envelope
+
+The user requested TaoFivePrimes.exp_sum_estimate_large_q_unit_source_envelope
+as a new, bounded task after stopping the earlier run. Its verified proof
+sketch is submitted as 308e42ec-6604-4445-8b66-e021c99c18bb; latest status
+PENDING. It uses existing Open modulus transfer plus the new general
+Theorem 5.1 input e1794571-24bf-41f1-8f08-9296fbea9a90 (Open). The proof
+itself handles q0=0 and the logarithm specialization. See large-q-work-plan.md.
+Follow only this submission to completion; do not resume unrestricted work.
+
+### Large-q result confirmed
+
+Submission 308e42ec-6604-4445-8b66-e021c99c18bb is SKETCH_ACCEPTED,
+with no error message. The target remains Open with two Open analytic
+inputs: theorem51_unit_numerator_bound and
+small_q_modulus_transfer_source_envelope. Its decomposition was checked
+on the server. The requested scoped contribution is finished; no new
+target work or automatic Git push follows. See large-q-work-plan.md.
+
+### Rosser timeout repaired on explicit user request
+
+The user supplied the Rosser 300-second timeout screenshot. The replacement
+submission `11751692-de02-4b67-8b2f-44fe1593d392` is now `SKETCH_ACCEPTED`,
+with no server error. Local checking of the exact submitted file dropped
+from the prior 227.327 seconds to 77.237 seconds after balancing interval
+cases and removing unused work. The target remains Open with exactly two
+Open inputs: `schoenfeld_psi_error_large` and `rosser_psi_finite_middle`.
+The timeout repair is complete; unrestricted mission work is not resumed.
+See [the repair record](rosser-timeout-fix.md).
+
+## Explicit request: resolve large-q dependencies
+
+The modulus-transfer child is now **Proved**. Complete proof submission
+`26fa51c0-287c-4b4b-a6b8-3ac048574313` is **ACCEPTED**. It proves the stronger
+constant 18 and uses no Open theorem assumptions. The large-q parent remains
+Open with one Open theorem child, `theorem51_unit_numerator_bound`.
+
+A local auxiliary proof of the centered Vaughan coefficient bound also passes
+Lean checking. The explicit Type I/II estimates are not yet proved, and no
+submission for that remaining dependency has been made. See
+[dependency resolution](dependency-resolution.md) for evidence and the exact
+remaining analytic work. This does not change the unrelated Rosser result.
+
+## Remaining Theorem 5.1: subsequent proof attempt
+
+The exact real-cutoff centered Vaughan identities, their restriction to
+w > V, the half-log support bound, a valid sine lower envelope, and the
+Type II algebra/constant rounding now pass local Lean checking. A specific
+intermediate sine comparison in the cited paper fails even for permitted
+parameters; a checked local replacement is available. This is not a disproof
+of Theorem 5.1.
+
+The explicit smoothed Type I estimate and the sharp bilinear large-sieve
+estimate remain missing. The target is still Open; no new proof/sketch was
+submitted. The current work has no software or authentication blocker.
+See [Theorem 5.1 progress](theorem51-progress.md), with reproducible checks.
+
+## Further continuation: corrected Type I sum proved
+
+The odd-index trigonometric sum is now proved for both unit numerator signs,
+retaining the target's exact `96/pi^2` coefficient after Fourier decay.
+The finite-support Fourier second-difference bound, conditional Type I
+assembly, and actual cutoff amplitude's finite support are also checked.
+The expanded eight-module check passed in 18.343 seconds without `sorryAx`.
+
+The amplitude's second-difference total estimate and the sharp Type II
+large-sieve estimate remain unproved. The target is not solved, and no new
+platform submission has been made. The current entry point remains
+[Theorem 5.1 progress](theorem51-progress.md); earlier Type I gap descriptions
+are superseded by that document's narrower remaining obligations.
+
+## Submission cadence correction (2026-09-13)
+
+The user explicitly requested incremental platform submissions rather than
+waiting for the whole Type II proof. The previous all-at-once submission
+gate is superseded. Publish substantive verified intermediate results,
+then connect them through genuine reductions; do not count disconnected
+auxiliary theorems as resolved leaves of the mission tree.
+
+New local results: the integer Hilbert quadratic-form and double-sum bounds
+with constant 7/2, a general Hermitian spectral bound, and the off-diagonal
+bounded-kernel error estimate. The combined 23-module check passed in
+23.634 seconds, with no sorryAx.
+
+Published intermediate theorem: TaoFivePrimes.integer_hilbert_sum_bound,
+16161f30-78e9-4015-90f7-d191d003f4ed. Full proof submitted as
+ebc80926-623c-4483-aa9f-2178d3505ef9.
+Current evidence is verification/integer-hilbert-verdict.json.
+The theorem is not yet connected to the mission dependency graph. The
+original theorem51 target remains Open. Next priority is a meaningful
+Type I / Type II / Vaughan reduction that exposes and reuses proved work.
+
+Server verification completed: submission
+`ebc80926-623c-4483-aa9f-2178d3505ef9` is ACCEPTED, with empty error message.
+The intermediate theorem `TaoFivePrimes.integer_hilbert_sum_bound` is now
+Proved. This is a complete independent intermediate proof; it is not yet a
+resolved leaf in the original mission tree, because the connecting Type II
+reduction has not been submitted. No claim is made that theorem51 is solved.
+
+## Theorem 5.1 decomposition interface (2026-09-13)
+
+The public sums interface is published as definition
+0638cceb-6d09-4432-b62a-48c625773961. It contains only definitions of the
+positive odd divisor set, actual Type I sum, centered coefficient, and
+actual Type II sum.
+
+The three child publication jobs are recorded in
+verification/theorem51-children-publish-response.json. The Type I interface
+and self-contained proof compile (18.706 seconds; no sorryAx), as does the
+exact-parent three-child reduction. The latter is only a reduction and has
+explicit Open Vaughan and Type II dependencies.
+
+Run scripts/submit_theorem51_reduction.ps1 -Part typeI or -Part parent only
+after the existing jobs publish. The script checks current target status,
+exact signatures, and local proof hashes, and guards against duplicate or
+uncertain submissions. Do not create replacement jobs just because the
+queue is slow. Consult the matching verification/*-verdict.json files for
+server outcomes. This supersedes earlier all-at-once submission instructions.
+
+The three child nodes are now published:
+- Vaughan: 197dea21-9471-497e-ba7a-3372b3e6eab7.
+- Type I: d0fdae67-dec9-4bf7-9f8e-7772e9446b85.
+- Type II: 605a083b-e6e1-4471-b532-c6f34ea1a76a.
+
+The Type I complete proof was submitted as
+ a4144d51-5149-4860-b501-1c52d5cf290d.
+The exact-parent reduction was submitted as
+ 5bd1af4a-f623-40c7-9293-b97b334da035.
+Poll these same submission ids; do not submit duplicates. The combined
+24-module auxiliary check passes in 21.731 seconds, without sorryAx.
+No Git action has been performed: full Type II and Vaughan closure remain
+required by the active goal. Incremental submissions do not redefine that goal.
+
+Parent reduction ACCEPTED AS SKETCH:
+`5bd1af4a-f623-40c7-9293-b97b334da035` is SKETCH_ACCEPTED with no error.
+A fresh /decompositions read confirms all three new theorem children are
+connected to the original theorem51 target. Evidence:
+research/theorem51-decompositions-connected.json.
+Type I proof verification is still pending at this snapshot; do not infer
+its acceptance from the parent's sketch verdict.
+
+## Verified connected Type I completion
+
+Type I submission `a4144d51-5149-4860-b501-1c52d5cf290d` is ACCEPTED with
+an empty error message. Together with the accepted parent sketch
+`5bd1af4a-f623-40c7-9293-b97b334da035`, this closes the Type I leaf in the
+original theorem51 dependency tree. The remaining children are the actual
+Vaughan decomposition and centered Type II estimate. The whole target and
+active goal are not complete. No proof job remains pending for these two
+submissions, and no Git commit has been made for this goal.
+
+Next: work on the two named Open children and submit incremental reductions
+that reuse the existing proved Type I and integer Hilbert results. Preserve
+the full goal: Type I and II plus platform completion followed by Git.
+
+## Type II sine-kernel connection (2026-09-13)
+
+New checked files:
+- Theorem51KernelConstants.lean proves the short-arc condition from
+  h <= (q+1)/q^2, q >= 100 and |j-k| <= q/2, and proves
+  1 + (7/2)/(pi*h) + q/2 <= 2*q from h >= (q-1)/q^2.
+- Theorem51CosecantForm.lean combines the integer Hilbert inequality and
+  bounded-kernel error into an actual cosecant quadratic-form bound. On a
+  half-modulus block with card-1 <= q/2, its coefficient is at most 2*q-1.
+  The difference of two unit-phase conjugates divided by 2i obeys the same
+  estimate. No cosecant quadratic-form bound is assumed.
+
+The next concrete missing step is the finite geometric-sum Gram identity.
+For an interval containing N integer indices, express the off-diagonal
+kernel as the difference of two phase-conjugated cosecant forms divided by
+2i (up to a harmless sign). The diagonal contributes N times the energy;
+N <= interval_length+1 then gives interval_length+2*q. This must be proved,
+not inferred merely from the cosecant estimate. Afterward, connect the
+bilinear block/subdivision/counting and scale integration to the existing
+Open Type II node 605a083b-e6e1-4471-b532-c6f34ea1a76a.
+
+The original parent sketch and Type I proof remain accepted. This turn
+adds local Type II proof infrastructure but no new platform submission.
+Vaughan and Type II remain Open, and the goal remains active; Git is not due
+until the requested full proof/submission end state is achieved.
+
+## Actual finite exponential-sum bound (2026-09-13)
+
+Theorem51GeometricKernel.lean now proves the angular character identities,
+the finite geometric-sum/cosecant identity (including N=0), and the finite
+Gram expansion. Theorem51FiniteLargeSieve.lean uses these identities and the
+proved cosecant bound to establish the actual exponential-sum estimate:
+
+sum_{j<N} |sum_m exp(-2*pi*i*j*h*idx_m) x_m|^2
+  <= (N+2*q-1) * sum_m |x_m|^2.
+
+Assumptions: q>=100, (q-1)/q^2<=h<=(q+1)/q^2, injective integer indices,
+pairwise index distance<=q/2, and card-1<=q/2. The translated version permits
+j+t for arbitrary real t without changing the coefficient. These results
+assume neither a Gram bound nor a geometric-kernel estimate.
+
+Next steps: discharge the block cardinality bound from integer spacing,
+convert odd d and w interval sums to this row/column convention (including
+phase sign), apply bilinear Cauchy--Schwarz and subdivision, then prove the
+scale-integral estimate. N<=interval_length+1 yields the required coefficient
+interval_length+2*q. The original connected Type II leaf is still Open.
+No new platform mutation or Git operation was made in this continuation.
+
+## Bilinear blocks and exact odd counting (2026-09-13)
+
+Theorem51BlockCounting.lean proves integer_index_card_le, eliminating the
+separate cardinality hypothesis of the finite large sieve. It also proves
+that odd integers in [A,B] have cardinality at most (B-A)/2+1, including the
+empty-set case.
+
+Theorem51BilinearBlock.lean proves the actual single-block bilinear bound
+and its finite-block subdivision version by two applications of
+Cauchy--Schwarz. The subdivision conclusion retains exactly the factor
+card(blocks) * (N+2q-1) * total_column_energy * row_energy. The column index
+type is currently uniform across blocks (zero padding is available).
+
+Theorem51TypeIICounts.lean proves the odd row count <=1.1*W/4 for W>=40,
+the odd column count <=1.1*x/(4W) for x/W>=40, and the exact 1.1/8 square-root
+prefactor when the row coefficients have the half-log-square budget.
+
+The actual odd d,w interval partition, row/column phase normalization,
+Mobius and centered-coefficient energy instantiation, and scale integration
+are still outstanding. Do not claim that the Open Type II leaf is solved
+from these generic block estimates. Next work should implement that concrete
+reindexing and subdivision rather than reproving the Hilbert or sine kernel.
+The platform Type I proof and parent sketch remain accepted; no new platform
+submission or Git operation was made in this continuation.
+
+## Actual odd-row and coefficient interfaces (2026-09-13)
+
+Theorem51OddBilinearPhase.lean proves the positive angular-frequency version
+by conjugation and the exact e(alpha*d*w) phase identity for d=2m+1 and
+w=2(j+t). unit_odd_bilinear_block applies the bound to that literal kernel
+when 4*alpha lies in the positive unit window.
+
+Theorem51OddRows.lean reindexes the image of an integer interval under
+n -> 2n+1 into a finite range, including the empty interval. Its theorem
+unit_odd_rectangle bounds the literal sum over those odd w, with the exact
+row cardinality in the large-sieve factor and in the coefficient energy.
+
+Theorem51CoefficientEnergy.lean proves the half-log and squared-energy
+bounds for theorem51Centered (the exact coefficient of the public Type II
+interface), and the finite squared-energy bound for Mobius coefficients.
+
+Still missing: the actual d-column partition and zero-padding/reindexing,
+instantiation of integer coefficients via positive natural arguments,
+negative-alpha normalization, and the scale integral. A concrete partition
+route is to use half-index endpoints L=ceil((x/(2W)-1)/2), R=floor((x/W-1)/2)
+and integer block size M=ceil(q/2). Block width M-1<=q/2, and for a nonempty
+column interval, K=floor((R-L)/M)+1 satisfies K<=x/(2Wq)+1. Use zero padding
+only beyond R and outside d>U; prove that it preserves the actual sum and
+energy. Do not replace the concrete partition with an assumed block estimate.
+
+No new platform submission or Git action in this continuation. Type I and
+the parent reduction remain accepted; Vaughan and Type II remain unresolved.
+
+## Concrete column subdivision (2026-09-13)
+
+Theorem51ColumnPartition.lean proves consecutive range-block enumeration,
+zero-padding invariance, exact integer-interval subdivision, and preservation
+of the coefficient squared energy. It proves coverage by
+K=(u-l).toNat/M+1 for M>0 and the quantitative block-count bound from the
+real span and M>=q/2. half_modulus_block_size provides both size inequalities
+for M=(q+1)/2 with natural q. Empty intervals are handled by zero padding.
+
+Theorem51PaddedRectangle.lean now applies those exact identities to the
+literal odd-row/odd-column expCircle kernel. unit_padded_odd_rectangle
+bounds the original integer-column interval, without assuming that an
+external decomposition exists or that padded energy is preserved. The only
+partition inputs are its actual K,M, coverage, and half-modulus size bound;
+all sum and energy identities are proved internally.
+
+Next instantiate L,R,l,u using the ceil/floor half-index endpoints for
+[x/(2W),x/W] and [W/2,W], choose M=(q+1)/2, and prove the desired K bound.
+Use coefficient masks for d>U and w>V. Establish positive arguments before
+casting the actual centered and Mobius coefficients through Int.toNat.
+This should produce the concrete scale-W bound with prefactor 1.1/8;
+negative-alpha normalization and the scale integral are still needed.
+No new platform submission or Git action was made in this continuation.
+
+## Concrete positive-frequency scale estimate (2026-09-13)
+
+Theorem51ScaleIntervals.lean proves the ceil/floor odd interval interfaces,
+row and column counts, and K <= x/(2Wq)+1 for M=(q+1)/2.
+Theorem51ScaleCoefficients.lean defines the actual cutoff-masked Mobius and
+public centered coefficients, and proves their squared-energy bounds.
+Theorem51ScaleBound.lean now combines the exact padded rectangle with these
+counts and energies. theorem51_scale_bound_positive proves
+
+  norm(theorem51ScaleSum x alpha U V W)
+    <= (1.1/8) * sqrt((W/4+2q)*(x/(2Wq)+1)*x) * log W
+
+for q>=100, W>=40, x/W>=40 and the positive unit frequency window for 4*alpha.
+The scale sum has the literal expCircle(alpha*d*w) kernel and actual d>U,
+w>V masks; it assumes no coefficient-energy or rectangle estimates.
+The combined 39-module check passes without sorryAx. Evidence is in
+verification/theorem51-progress-result.json and theorem51-progress.log.
+
+Next: prove conjugation invariance for the real coefficients, obtain the
+signed unit-numerator version, and expose the scale-sum definition for a
+connected Type II reduction. The scale-integral identity/interchange and
+its explicit integral estimate remain to be formalized. Do not count this
+local scale theorem as a platform-closed leaf. No platform submission or
+Git commit was made in this continuation; the full goal remains active.
+
+## Connected Type II scale leaf accepted (2026-09-13)
+
+The actual signed scale estimate is now a proved child of the original Type II
+node, not an isolated auxiliary theorem. The server decomposition was refreshed
+and saved in research/typeII-decompositions-connected.json.
+
+- Scale definition TaoFivePrimes_Theorem51Scale: published,
+  7b97188e-8d91-404d-9639-ba742bc9e86b. It contains definitions only.
+- TaoFivePrimes.theorem51_scale_bound_signed: Proved,
+  b111b484-f725-4569-8504-3d222a36c577.
+  Complete proof 01825288-444e-47ce-977d-b0f445697fa4: ACCEPTED.
+- Existing Type II node 605a083b-e6e1-4471-b532-c6f34ea1a76a:
+  sketch 13a21c90-5dd8-416e-82bb-7dc312825516: SKETCH_ACCEPTED.
+- Its remaining child TaoFivePrimes.theorem51_typeII_of_scale_bound:
+  b46d7b94-7c1d-4d9d-980f-18230c005f4c, Open.
+
+The new reduction derives q>=100, W>=40 and x/W>=40 from the original
+parameters for V<=W<=x/U, then supplies the proved pointwise bound to the
+integration child. That child explicitly assumes only this pointwise bound
+in addition to the original parameters; it still requires the eta_0 integral
+bridge and the numerical integrated bound. The Type II parent is still Open.
+Vaughan remains Open. Type I remains Proved. The full goal is not complete,
+and no Git commit or push was performed.
+
+Local additions: Theorem51ScaleSigned proves conjugation and both numerator
+signs. Scale interval/coefficient/sum definitions moved into the public
+Definitions/Def_TaoFivePrimes_Theorem51Scale.lean module; the proof modules
+import it without duplicate definitions. The complete submitted leaf bundles
+22 auxiliary proof modules and passes in 31.26 seconds without sorryAx.
+The exact parent submission passes locally in 25.60 seconds as a reduction.
+
+Further integration progress, not yet submitted: Theorem51ScaleIntegrals
+proves integral(log(t)/t) = log(b/a)*log(a*b)/2 for 0<a<=b.
+Theorem51ScaleSupport proves the actual scale sum vanishes for W<=V and,
+when U,W>0, for x/U<=W. The combined 42-module check passes in 35.54 seconds,
+without sorryAx. Existing cached example .olean files from before the public
+-definition refactor may be stale: refresh their imports in dependency order
+before standalone import checks, or use the combined checker.
+
+Next work: prove the eta_0 scale identity and finite-sum/integral interchange
+for theorem51ScaleSum, use the proved support restriction, then integrate the
+coupled radical majorant and apply typeII_round_constants. Do not reprove the
+finite Hilbert/large-sieve/scale analysis; it is now a closed platform leaf.
+
+## Eta scale identity and finite Type II support (2026-09-13)
+
+Theorem51EtaScale.lean proves eta0_log_overlap, including empty and touching
+windows, then eta0_scale_integral over Icc(max(w,r/2), min(2w,r)).
+scale_pair_mem converts this interval to the literal constraints
+x/(2W)<=d<=x/W and W/2<=w<=W for positive d,w. The resulting theorem
+eta0_pair_scale_integral proves the exact eta0(d*w/x)=4*integral pair-weight
+identity. scale_pair_integrable proves integrability of that weight; the
+complex-weighted and finite_eta0_scale_integral theorems justify finite
+sum/integral interchange with arbitrary complex coefficients.
+
+Theorem51TypeIIFinite.lean proves that the exact public Type II double tsum
+is the norm of a finite double sum over 1<=d,w<=Nat.ceil(x), for x>0 and
+U,V>=1. Terms outside this rectangle vanish because either a cutoff guard
+fails or d*w/x>=1 and eta0 vanishes. The summand definition is identical
+to the public Type II summand, including both coprimality conditions.
+
+The combined 44-module check passes in 35.89 seconds without sorryAx.
+No new platform submission or Git operation in this continuation. The last
+platform state is unchanged: signed scale leaf Proved; integration reduction
+and Vaughan Open; Type I Proved. The full goal remains active.
+
+Next concrete connection: apply finite_eta0_scale_integral to the product
+of the finite natural rectangles, with coefficient equal to the guarded
+Mobius*centered*expCircle product. Prove the finite kernel sum equals
+(theorem51ScaleSum x alpha U V W)/W on V<=W<=x/U by odd Nat/Int reindexing.
+Outside that interval use the proved scale support and the strict U,V masks.
+This will give the actual Type II scale-integral bridge; do not introduce it
+as an assumed identity. Then use the integral norm inequality and integrate
+the already proved coupled radical bound and log weight.
+
+## Actual Type II scale-integral bridge proved (2026-09-13)
+
+Theorem51FiniteScaleBridge.lean instantiates the pairwise eta0 integral for
+the exact guarded Mobius*centered*expCircle coefficient. It proves global
+integrability of the finite kernel, the exact public Type II integral
+representation, and the integral norm inequality.
+
+Theorem51NatOddReindex.lean proves a positive natural/odd integer interval
+sum bijection. Theorem51ScaleReindex.lean applies it to both actual columns
+and rows, proving theorem51NatScaleSum_eq. Theorem51ActualScaleKernel.lean
+then proves the literal finite integral kernel equals theorem51ScaleSum/W,
+including all cutoff and coprimality guards.
+
+Theorem51ScaleIntegralBridge.lean proves support outside [V,x/U] vanishes,
+and establishes the actual bridge
+
+  theorem51TypeII x alpha U V
+    <= 4 * integral_{V..x/U} norm(theorem51ScaleSum x alpha U V W)/W.
+
+Its assumptions are only x>0, U>=1, V>=1, UV<=x. The accompanying theorem
+theorem51_scale_weight_integrable proves interval integrability of the
+actual norm-weighted scale function, needed for integral monotonicity.
+These are proved identities/inequalities, not assumed interfaces.
+
+Theorem51RootIntegrals.lean proves the exact integrals of 1/sqrt(t) and
+1/(t*sqrt(t)), plus the weighted bounds, for 1<=a<=b:
+
+  integral log(t)/sqrt(t) <= 2*sqrt(b)*log(b),
+  integral log(t)/(t*sqrt(t)) <= (2/sqrt(a))*log(b).
+
+Combined verification: 50 modules, 34.94 seconds, exit 0, no sorryAx.
+No platform submission or Git operation was made in this continuation.
+The accepted scale leaf and Type II sketch remain the latest publications;
+the integration child and Vaughan are still Open. Full goal remains active.
+
+Next: combine the proved scale hypothesis and typeII_radical_unit with the
+actual integrable bridge. Rewrite its four roots as
+A + B*sqrt(W) + C/sqrt(W), where
+A=x/(2*sqrt(2)*sqrt(q))+sqrt(2)*x/sqrt(x/q),
+B=sqrt(x)/2, C=x/sqrt(2). Integrate with integral_log_div_factorized and the
+two new weighted bounds. Normalize sqrt(x)*sqrt(x/U)=x/sqrt(U), then use
+already-proved typeII_round_constants for 0.1,0.39,0.55,0.78. Submit the
+complete proof to b46d7b94-7c1d-4d9d-980f-18230c005f4c and verify cascade.
+
+## Type I and Type II both Proved on Prove2Me (2026-09-13)
+
+Integration proof f5179f27-fc47-4065-97d8-6db29f368927 is ACCEPTED.
+The Type II parent 605a083b-e6e1-4471-b532-c6f34ea1a76a automatically became
+Proved; Type I was independently refreshed and remains Proved. The original
+Theorem 5.1 frontier now contains only Vaughan. Full mission completion is
+not claimed. See typeI-typeII-platform-results.md for exact IDs and evidence.
+
+The requested Git-after-platform milestone is now being performed for the
+completed Type I/II estimates. Earlier notes postponing every Git action
+until Vaughan closure were too broad; the broader dependency goal remains
+active after recording this completed, separately verifiable milestone.
+
+## Requested Type I/II goal completed and pushed (2026-09-13)
+
+Both exact connected Type I and Type II targets are Proved, and integration
+submission f5179f27-fc47-4065-97d8-6db29f368927 is ACCEPTED. Git commit
+3b4d2f35afeb0155b74de1d0071b7cd49a47efb6 was pushed to origin/main and its
+remote SHA verified through the GitHub API. Git connectivity was restored
+by applying the already-enabled Windows proxy to that push only.
+
+The explicit goal 'solve Type I and II, submit to the platform, then git' is
+complete. This does not assert completion of Theorem 5.1 or the overall
+five-primes mission: the separate Vaughan decomposition remains Open.
+Earlier notes treating Vaughan closure as a prerequisite for this specific
+Type I/II Git milestone overstated that goal's scope.

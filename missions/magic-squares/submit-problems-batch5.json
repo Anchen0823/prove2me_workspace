@@ -1,0 +1,28 @@
+{
+ "problems": [
+  {
+   "theorem_name": "MagicSquares.magic_three_param_sufficient",
+   "theorem_title": "The three-parameter array is a magic square of line sum 3e",
+   "formal_statement": "namespace MagicSquares\n\ntheorem magic_three_param_sufficient (e a c : ℕ) (h : IsParam3 e a c) :\n    IsMagic (mkMagic3 e a c) (3 * e) := by sorry\n\nend MagicSquares",
+   "natural_language_statement": "**The parametrization is sound.** Let $e,a,c$ be nonnegative integers\nsatisfying the admissibility inequalities\n\n$$\ne \\le a+c,\\qquad a+c \\le 3e,\\qquad a \\le e+c,\\qquad c \\le e+a ,\n$$\n\nand let $M(a,c)$ be the array\n\n$$\n\\begin{pmatrix}\na & 3e-a-c & c\\\\\ne+c-a & e & e+a-c\\\\\n2e-c & a+c-e & 2e-a\n\\end{pmatrix} .\n$$\n\nThen $M(a,c)$ is a **magic square** of line sum $3e$: all three rows, all three\ncolumns, and both main diagonals sum to $3e$.\n\nThe inequalities are exactly what makes the truncations in $\\mathbb{N}$ harmless.\nRow $0$ needs $a+c\\le 3e$ so that $3e-a-c$ is not truncated; row $1$ needs\n$a\\le e+c$ and $c\\le e+a$ for the same reason on $e+c-a$ and $e+a-c$; row $2$\nneeds $c\\le 2e$, $a+c\\ge e$ and $a\\le 2e$, and the bounds $a,c\\le 2e$ follow\nfrom the hypotheses by adding $a\\le e+c$ to $a+c\\le 3e$ (giving $2a\\le 4e$) and\nsymmetrically. The columns and diagonals are then pure cancellation.\n\nTogether with the companion *necessary* direction this shows that the map\n$(a,c)\\mapsto M(a,c)$ is a parametrization of the order-three magic squares of\nline sum $3e$.\n\n**Formalization Note** `mkMagic3` is defined over $\\mathbb{N}$ with truncated\nsubtraction, so every line identity is proved by `omega` after discharging the\nrelevant non-truncation side condition. The statement is otherwise unconditional\napart from admissibility.",
+   "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nimport Definitions.Def_MagicSquaresParam3\n",
+   "source": "Beck, Cohen, Cuomo & Gribelyuk, The number of ``magic'' squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707--717; arXiv:math/0201013v3. G. Xin, Constructing all magic squares of order three, Discrete Math. 308 (2008); arXiv:math/0610771.",
+   "tags": [
+    "combinatorics",
+    "magic-squares"
+   ]
+  },
+  {
+   "theorem_name": "MagicSquares.magic_three_param_necessary",
+   "theorem_title": "Every order-three magic square of line sum 3e is the parametrized one",
+   "formal_statement": "namespace MagicSquares\n\ntheorem magic_three_param_necessary (e : ℕ) (M : Square 3 ℕ)\n    (hM : IsMagic M (3 * e)) :\n    M = mkMagic3 e (M 0 0) (M 0 2) := by sorry\n\nend MagicSquares",
+   "natural_language_statement": "**The parametrization is complete.** Let $M$ be a $3\\times3$ magic square with\nnonnegative integer entries and line sum $3e$. Then $M$ is *exactly* the\nparametrized array built from its two top corners:\n\n$$\nM \\;=\\; \\begin{pmM_{00}trix}\nM_{00} & 3e-M_{00}-M_{02} & M_{02}\\\\\ne+M_{02}-M_{00} & e & e+M_{00}-M_{02}\\\\\n2e-M_{02} & M_{00}+M_{02}-e & 2e-M_{00}\n\\end{pmM_{00}trix} ,\n$$\n\nwhere $a=M_{00}$ and $c=M_{02}$.\n\nThe eight line identities determine the remaining seven cells uniquely. The\ncentre is $e$ (MacMahon's identity $3M_{11}=s$ with $s=3e$). The two diagonals\ngive $M_{22}=2e-M_{00}$ and $M_{20}=2e-M_{02}$; row $0$ then gives\n$M_{01}=3e-M_{00}-M_{02}$; column $0$ and column $2$ give\n$M_{10}=e+M_{02}-M_{00}$ and $M_{12}=e+M_{00}-M_{02}$; and column $1$ gives\n$M_{21}=M_{00}+M_{02}-e$. Since $M$ is a genuine square over $\\mathbb{N}$, none\nof these subtractions truncates.\n\nConsequently a $3\\times3$ magic square of line sum $3e$ is determined by its two\ntop corners, and the pair $(M_{00},M_{02})$ satisfies precisely the\nadmissibility inequalities — the count of such squares is therefore the count of\nadmissible pairs, which is MacMahon's $2e^{2}+2e+1$.\n\n**Formalization Note** The proof expands the eight line identities of `IsMagic`\nand closes each of the nine cell equalities by `omega`; no integrality\nhypothesis beyond working over $\\mathbb{N}$ is needed.",
+   "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nimport Definitions.Def_MagicSquaresParam3\n",
+   "source": "Beck, Cohen, Cuomo & Gribelyuk, The number of ``magic'' squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707--717; arXiv:math/0201013v3. G. Xin, Constructing all magic squares of order three, Discrete Math. 308 (2008); arXiv:math/0610771.",
+   "tags": [
+    "combinatorics",
+    "magic-squares"
+   ]
+  }
+ ]
+}

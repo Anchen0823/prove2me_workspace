@@ -1,0 +1,12 @@
+{
+  "root_id": "24c6e94b-2b96-4f10-b16d-486fa48068eb",
+  "open_leaves": [
+    {
+      "theorem_id": "73e8ddac-1271-41d0-b9d1-1add55e1e714",
+      "theorem_name": "WeakGoldbach.verified_range_sieve_coverage",
+      "status": "Open",
+      "closability": 0
+    }
+  ],
+  "total": 1
+}

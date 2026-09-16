@@ -1,0 +1,76 @@
+{
+ "problems": [
+  {
+   "theorem_name": "MagicSquares.magic_constant_of_normal",
+   "theorem_title": "Magic constant of a normal magic square",
+   "formal_statement": "namespace MagicSquares\n\ntheorem magic_constant_of_normal (n : ℕ) (M : Square n ℕ) (s : ℕ)\n    (hN : IsNormal M) (hM : IsMagic M s) :\n    2 * s = n * (n ^ 2 + 1) := by sorry\n\nend MagicSquares",
+   "natural_language_statement": "Every normal magic square has the magic constant\n$n(n^{2}+1)/2$.\n\nLet $M$ be an $n \\times n$ array whose entries are exactly the integers $1,2,\\dots,n^{2}$,\neach used once, and suppose every row, every column and both main diagonals of $M$ sum to the\nsame number $s$. Then\n\n$$\n2s = n\\,(n^{2}+1).\n$$\n\nEquivalently $s = n(n^{2}+1)/2$, the classical magic constant: it is $\\tfrac{1}{n}$ of the sum\n$1+2+\\cdots+n^{2} = n^{2}(n^{2}+1)/2$ of all entries.\n\n**Formalization Note** The division by $2$ is avoided by multiplying through, so the statement\nis an identity in $\\mathbb{N}$. Normality is the conjunction of the entry bounds\n$1 \\le M_{ij} \\le n^{2}$ with injectivity of the index-to-entry map.",
+   "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nopen MagicSquares",
+   "source": "Standard folklore; stated e.g. in Weisstein, MathWorld, \"Magic Square\", eq. for the magic constant of a normal magic square.",
+   "tags": [
+    "combinatorics",
+    "magic-squares"
+   ]
+  },
+  {
+   "theorem_name": "MagicSquares.center_of_order_three",
+   "theorem_title": "The centre of a 3x3 magic square is one third of the line sum",
+   "formal_statement": "namespace MagicSquares\n\ntheorem center_of_order_three (M : Square 3 ℕ) (s : ℕ)\n    (hM : IsMagic M s) :\n    3 * M 1 1 = s := by sorry\n\nend MagicSquares",
+   "natural_language_statement": "In a $3 \\times 3$ magic square the centre entry is\nexactly one third of the magic constant.\n\nLet $M$ be a $3 \\times 3$ array of natural numbers whose three rows, three columns and two\nmain diagonals all sum to the same number $s$. Then\n\n$$\n3 \\cdot M_{1,1} = s ,\n$$\n\nwhere $M_{1,1}$ is the central entry (indices are `Fin 3`, so the centre is the index $1$).\n\nThe proof is the classical one: add the middle row, the middle column and the two diagonals.\nThe centre is counted four times and every other cell exactly once, so the total is\n$3s + 3M_{1,1}$; but it is also $4s$, whence $s = 3M_{1,1}$.\n\n**Formalization Note** Everything stays in $\\mathbb{N}$, so no divisibility hypothesis is\nneeded: the identity itself forces $3 \\mid s$.",
+   "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nopen MagicSquares",
+   "source": "Classical (Lo Shu); see Beck, Cohen, Cuomo & Gribelyuk, arXiv:math/0201013v3, Section 2, where the $3\\times3$ magic square is parametrised by the centre entry $e$ with line sum $3e$.",
+   "tags": [
+    "combinatorics",
+    "magic-squares"
+   ]
+  },
+  {
+   "theorem_name": "MagicSquares.normal_order_two_none",
+   "theorem_title": "There is no normal magic square of order 2",
+   "formal_statement": "namespace MagicSquares\n\ntheorem normal_order_two_none :\n    ¬ ∃ (M : Square 2 ℕ) (s : ℕ), IsNormal M ∧ IsMagic M s := by sorry\n\nend MagicSquares",
+   "natural_language_statement": "No $2 \\times 2$ array can have the four distinct\nentries $1,2,3,4$ and be magic.\n\nSuppose $M = \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}$ has all rows, columns and both\ndiagonals summing to $s$. Comparing the first row $a+b=s$ with the main diagonal $a+d=s$ gives\n$b=d$, contradicting the requirement that the four entries be distinct. Hence no **normal**\nmagic square of order $2$ exists.\n\nThis is the $n=2$ instance of the general fact that normal magic squares exist for every order\n$n \\ge 1$ except $n = 2$.\n\n**Formalization Note** `IsNormal` supplies injectivity of the index-to-entry map, and the two\ncells $(0,1)$ and $(1,1)$ are distinct, so the equality $b=d$ is immediately contradictory.",
+   "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nopen MagicSquares",
+   "source": "Classical; consistent with Beck, Cohen, Cuomo & Gribelyuk, arXiv:math/0201013v3, Section 2, where $M_{2}(t)=1$ for even $t$ and $0$ otherwise (i.e. every order-2 magic square has four equal entries).",
+   "tags": [
+    "combinatorics",
+    "magic-squares"
+   ]
+  },
+  {
+   "theorem_name": "MagicSquares.magic_count_three_divisible",
+   "theorem_title": "MacMahon's count of 3x3 magic squares with line sum a multiple of 3",
+   "formal_statement": "namespace MagicSquares\n\ntheorem magic_count_three_divisible (e : ℕ) :\n    magicCount 3 (3 * e) = 2 * e ^ 2 + 2 * e + 1 := by sorry\n\nend MagicSquares",
+   "natural_language_statement": "MacMahon's 1915 count of $3 \\times 3$ magic squares\nwhose line sum is a multiple of $3$.\n\nWrite $M_{3}(t)$ for the number of $3 \\times 3$ arrays of nonnegative integers whose three\nrows, three columns and two main diagonals all sum to $t$ (entries need not be distinct). Then\n$M_{3}(t)$ vanishes unless $3 \\mid t$, and for $t = 3e$,\n\n$$\nM_{3}(3e) = 2e^{2} + 2e + 1 ,\n$$\n\nwhich is the integral form of $\\tfrac{2}{9}t^{2} + \\tfrac{2}{3}t + 1$.\n\nThe companion statement `MagicSquares.magic_count_three_otherwise` records the vanishing when\n$3 \\nmid t$; together they give the complete counting function.\n\n**Formalization Note** `magicCount n t` counts arrays with entries in `Fin (t+1)` satisfying\nthe magic identities after coercion to `ℕ`. This is lossless because every entry of a\nnonnegative magic square with line sum $t$ is at most $t$.",
+   "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nopen MagicSquares",
+   "source": "Beck, Cohen, Cuomo & Gribelyuk, The number of ``magic'' squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707-717; arXiv:math/0201013v3, Section 2, MacMahon's formula for $M_{3}(t)$ (1915).",
+   "tags": [
+    "combinatorics",
+    "magic-squares"
+   ]
+  },
+  {
+   "theorem_name": "MagicSquares.magic_count_three_otherwise",
+   "theorem_title": "No 3x3 magic square has a line sum coprime to 3",
+   "formal_statement": "namespace MagicSquares\n\ntheorem magic_count_three_otherwise (t : ℕ) (ht : ¬ 3 ∣ t) :\n    magicCount 3 t = 0 := by sorry\n\nend MagicSquares",
+   "natural_language_statement": "If $t$ is not divisible by $3$, there is no\n$3 \\times 3$ magic square with line sum $t$.\n\nWrite $M_{3}(t)$ for the number of $3 \\times 3$ arrays of nonnegative integers whose three\nrows, three columns and two main diagonals all sum to $t$. Then\n\n$$\n3 \\nmid t \\;\\Longrightarrow\\; M_{3}(t) = 0 .\n$$\n\nThis is an immediate consequence of the fact that the centre entry satisfies\n$3M_{1,1} = t$; see `MagicSquares.center_of_order_three`. Together with\n`MagicSquares.magic_count_three_divisible` this determines $M_{3}$ completely.",
+   "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nopen MagicSquares",
+   "source": "Beck, Cohen, Cuomo & Gribelyuk, The number of ``magic'' squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707-717; arXiv:math/0201013v3, Section 2, MacMahon's formula for $M_{3}(t)$ (1915).",
+   "tags": [
+    "combinatorics",
+    "magic-squares"
+   ]
+  },
+  {
+   "theorem_name": "MagicSquares.semi_magic_count_three",
+   "theorem_title": "MacMahon's count of 3x3 semi-magic squares by line sum",
+   "formal_statement": "namespace MagicSquares\n\ntheorem semi_magic_count_three (t : ℕ) :\n    semiMagicCount 3 t = 3 * ((t + 3).choose 4) + ((t + 2).choose 2) := by sorry\n\nend MagicSquares",
+   "natural_language_statement": "MacMahon's 1915 formula for the number of\n$3 \\times 3$ semi-magic squares of a given line sum.\n\nWrite $H_{3}(t)$ for the number of $3 \\times 3$ arrays of nonnegative integers whose three rows\nand three columns all sum to $t$ (the diagonals are unconstrained, and entries need not be\ndistinct). Then\n\n$$\nH_{3}(t) = 3\\binom{t+3}{4} + \\binom{t+2}{2}.\n$$\n\nUnlike the magic count $M_{3}(t)$, this is an honest polynomial in $t$ of degree\n$(3-1)^{2} = 4$: Ehrhart and Stanley proved that $H_{n}(t)$ is a polynomial of degree\n$(n-1)^{2}$ for every $n$, satisfying the reciprocity law $H_{n}(-n-t) = (-1)^{n-1}H_{n}(t)$.\n\n**Formalization Note** `semiMagicCount n t` counts arrays with entries in `Fin (t+1)` whose\nrow and column sums are $t$ after coercion to `ℕ`; the bound on entries makes the finite\nsearch space exact.",
+   "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nopen MagicSquares",
+   "source": "Beck, Cohen, Cuomo & Gribelyuk, The number of ``magic'' squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707-717; arXiv:math/0201013v3, Section 2, Theorem 1 (MacMahon's formula for $H_{3}(t)$).",
+   "tags": [
+    "combinatorics",
+    "magic-squares"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,7 @@
+{
+  "exit_code": 0,
+  "command": "lake env lean -DautoImplicit=false Solutions/Sol_TaoFivePrimes_integer_hilbert_sum_bound.lean",
+  "sorryAx_found": false,
+  "checked_at": "2026-09-13T00:47:52.8861991+08:00",
+  "sha256": "120ADAF84ADD1F6643E0608E717EAAFE79B7646F4AABB56FDC95D8B4D1ADFD2D"
+}

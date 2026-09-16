@@ -1,0 +1,19 @@
+{
+  "ratings": [
+    {
+      "theorem_id": "24c6e94b-2b96-4f10-b16d-486fa48068eb",
+      "score": 7,
+      "reasoning": "A faithfully sourced finite computational verification (Oliveira e Silva-Herzog-Pardi, the segment above Richstein's 4e14 up to 4e18). Worth 7: a real, well-posed obligation at the base of the ternary Goldbach verification, though no direct Lean proof is within reach of current tooling."
+    },
+    {
+      "theorem_id": "73e8ddac-1271-41d0-b9d1-1add55e1e714",
+      "score": 7,
+      "reasoning": "The certificate form of the same obligation in the platform's sieve interface: a well-posed finite-set inclusion that is a reusable target."
+    },
+    {
+      "theorem_id": "73281223-e520-4706-9186-a986548dc0d1",
+      "score": 7,
+      "reasoning": "Richstein's finite sieve coverage obligation, the model this interface follows."
+    }
+  ]
+}

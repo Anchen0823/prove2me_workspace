@@ -1,0 +1,19 @@
+{
+  "theorem_id": "e1794571-24bf-41f1-8f08-9296fbea9a90",
+  "theorem_name": "TaoFivePrimes.theorem51_unit_numerator_bound",
+  "theorem_title": "Tao Theorem 5.1 with unit numerator: unoptimized modulus-two bound",
+  "status": "Open",
+  "formal_statement": "theorem TaoFivePrimes.theorem51_unit_numerator_bound\n    (x alpha beta U V : ℝ) (a : ℤ) (q : ℕ)\n    (hq : 4 ≤ q) (haq : Nat.Coprime a.natAbs q) (haunit : a.natAbs = 1)\n    (halpha : 4 * alpha = (a : ℝ) / q + beta)\n    (hbeta : |beta| ≤ 1 / (q : ℝ) ^ 2)\n    (hU40 : 40 ≤ U) (hV40 : 40 ≤ V) (hUx : U < x) (hVx : V < x)\n    (hUV : U * V ≤ x / 4) (hUV2 : x ≤ U * V ^ 2)\n    (hUVq : U * V < (q : ℝ) - 1) :\n    ‖TaoFivePrimes.smoothedExpSum TaoFivePrimes.eta0 2 x alpha‖ ≤\n      (96 / Real.pi ^ 2) * (x / (x / q) ^ 2) *\n          Real.log (4 * x) * Real.log (4 * Real.exp 1 * q / Real.pi) +\n        (0.1 * (x / Real.sqrt q) + 0.39 * (x / Real.sqrt (x / q))) *\n          Real.log (x / (U * V)) * Real.log (V * x / U) +\n        (0.55 * (x / Real.sqrt U) + 0.78 * (x / Real.sqrt V)) *\n          Real.log (x / U) := by sorry",
+  "natural_language_statement": "Let $q\\ge4$, let $a$ be an integer with $|a|=1$ and $(a,q)=1$, and suppose $4\\alpha=a/q+\\beta$ with $|\\beta|\\le q^{-2}$. Let $40\\le U,V<x$, $UV\\le x/4$, $UV^2\\ge x$, and $UV<q-1$. Then\n\n$$\\begin{aligned}\n|S_{\\eta_0,2}(x,\\alpha)|\\le{}&\\frac{96}{\\pi^2}\\frac{x}{(x/q)^2}\\log(4x)\\log\\left(\\frac{4eq}{\\pi}\\right)\\\\\n&+\\left(0.1\\frac{x}{\\sqrt q}+0.39\\frac{x}{\\sqrt{x/q}}\\right)\\log\\left(\\frac{x}{UV}\\right)\\log\\left(\\frac{Vx}{U}\\right)\\\\\n&+\\left(0.55\\frac{x}{\\sqrt U}+0.78\\frac{x}{\\sqrt V}\\right)\\log\\left(\\frac{x}{U}\\right).\n\\end{aligned}$$\n\nThis is the unit-numerator alternative in Tao's Theorem 5.1, before choosing the Vaughan parameters. It is an analytic source estimate for modulus two; it does not contain a change-of-modulus assumption, a large-denominator restriction, or the later specialization $U=x/V^2$. The Type I and Type II estimates needed to prove it remain an open obligation.",
+  "created_at": "2026-09-12T21:23:09.780217+08:00",
+  "vote_count": 0,
+  "tags": [],
+  "preamble": "import Definitions.Def_TaoFivePrimes_SmoothedExpSum\nimport Definitions.Def_TaoFivePrimes_RepresentationCount\nimport Mathlib.Analysis.SpecialFunctions.Pow.Real",
+  "source": "Terence Tao, Every odd number greater than 1 is the sum of at most five primes, arXiv:1201.6656v4, Theorem 5.1: equations (5.5) and (5.6), with (5.4) replaced by (5.7) under a=+/-1 and UV<q-1. https://arxiv.org/html/1201.6656v4#S5",
+  "deprecated_at": null,
+  "deprecated_by": null,
+  "visibility": "public",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "audits": [],
+  "readback": null
+}

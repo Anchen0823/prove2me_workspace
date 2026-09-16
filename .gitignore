@@ -11,3 +11,9 @@ lake-manifest.json
 
 # OS noise
 .DS_Store
+
+# Scratch Lean probes (tmp/*.lean are throwaway import/syntax checks)
+tmp/
+
+# Local API response dumps that are regenerated on every submit
+missions/*/verification/*.log

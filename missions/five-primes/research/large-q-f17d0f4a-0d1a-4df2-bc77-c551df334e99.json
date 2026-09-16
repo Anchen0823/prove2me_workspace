@@ -1,0 +1,25 @@
+{
+  "theorem_id": "f17d0f4a-0d1a-4df2-bc77-c551df334e99",
+  "theorem_name": "TaoFivePrimes.eta0_primorial_sieve_transfer",
+  "theorem_title": "Direct primorial-sieve transfer for the eta0 exponential sum",
+  "status": "Proved",
+  "formal_statement": "namespace TaoFivePrimes\n\ntheorem eta0_primorial_sieve_transfer\n    (x : ℕ) (h1 : 87 * 10 ^ 35 ≤ x) (theta : ℝ) :\n    let y : ℝ := (x : ℝ) / 1000\n    ‖smoothedExpSum eta0 (primorial (Nat.sqrt (x / 1000))) y theta -\n        smoothedExpSum eta0 1 y theta‖ ≤\n      (9 : ℝ) / 10 ^ 8 * y := by sorry\n\nend TaoFivePrimes",
+  "natural_language_statement": "Let $x\\ge 8.7\\times 10^{36}$ and put $y=x/1000$. For the logarithmic cutoff $\\eta_0$, changing the smoothed von Mangoldt sum from modulus $1$ to the primorial of $\\lfloor\\sqrt{x/1000}\\rfloor$ changes its value by at most $9\\times 10^{-8}y$, uniformly in the real frequency. This is the specialized sieve-modulus transfer used after Proposition 7.2.",
+  "created_at": "2026-09-09T23:23:35.040251+08:00",
+  "vote_count": 0,
+  "tags": [
+    "additive-number-theory",
+    "fourier-analysis",
+    "number-theory",
+    "sieve-methods",
+    "tao-five-primes"
+  ],
+  "preamble": "import Definitions.Def_TaoFivePrimes_RepresentationCount\nimport Definitions.Def_TaoFivePrimes_SmoothedExpSum\nimport Mathlib.NumberTheory.Chebyshev\nimport Mathlib.Analysis.Complex.ExponentialBounds\nopen scoped BigOperators ArithmeticFunction.vonMangoldt\nopen MeasureTheory",
+  "source": "Terence Tao, Every odd number greater than 1 is the sum of at most five primes, arXiv:1201.6656v4, Section 4, Lemma 4.1, specialized to eta0 and q=(sqrt(x/1000))#, https://arxiv.org/abs/1201.6656",
+  "deprecated_at": null,
+  "deprecated_by": null,
+  "visibility": "public",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "audits": [],
+  "readback": null
+}

@@ -1,0 +1,19 @@
+{
+  "submissions": [
+    {
+      "id": "0effebaf-7763-4c9a-af01-2a79c0b6e739",
+      "theorem_id": "f17d0f4a-0d1a-4df2-bc77-c551df334e99",
+      "user_id": "1218a2a5-fec3-4902-88f2-735b90eee971",
+      "username": "marwahaha",
+      "status": "ACCEPTED",
+      "error_message": "",
+      "file_path": "f17d0f4a-0d1a-4df2-bc77-c551df334e99/1218a2a5-fec3-4902-88f2-735b90eee971/0effebaf-7763-4c9a-af01-2a79c0b6e739.lean",
+      "created_at": "2026-09-09T23:26:49.248332+08:00",
+      "updated_at": "2026-09-09T23:28:32.089632+08:00",
+      "vote_count": 0,
+      "explanation": "A direct proof of the eta0 primorial-sieve transfer. The proof truncates the sum using the exact support of eta0, bounds eta0 by 3, and identifies every removed non-coprime von Mangoldt term with a prime or prime power supported on the primorial. Prime terms are bounded by Chebyshev theta at sqrt(y), composite prime powers by psi(y)-theta(y), and Mathlib's explicit Chebyshev estimates plus x >= 8.7e36 yield the stated 9e-8 relative error. No imported source theorem, sorry, or custom axiom is used.",
+      "deprecated_at": null
+    }
+  ],
+  "total": 1
+}

@@ -1,6 +1,6 @@
 $ErrorActionPreference = 'Stop'
 Set-Location (Split-Path $PSScriptRoot -Parent)
-$parts = @('import Mathlib', 'import Definitions.Def_TaoFivePrimes_ArcSplit',
+$parts = @('import Mathlib',
   'import Theorems.Thm_TaoFivePrimes_schoenfeld_psi_error_large',
   'import Theorems.Thm_TaoFivePrimes_rosser_psi_finite_middle')
 foreach ($name in @('RosserLcmCertificate', 'RosserLcmBlocks',
@@ -8,6 +8,11 @@ foreach ($name in @('RosserLcmCertificate', 'RosserLcmBlocks',
     'RosserLargeReduction', 'RosserSumBridge')) {
   $body = Get-Content "examples/five-primes/$name.lean" -Raw
   $body = [regex]::Replace($body, '(?m)^import [^\r\n]*\r?\n', '')
+  if ($name -eq 'RosserLcmCertificate') {
+    # These standalone demonstrations are not used by the final proof.
+    $body = [regex]::Replace($body,
+      'set_option maxRecDepth 16384 in\r?\nset_option maxHeartbeats 1000000 in\r?\ntheorem lcm_1000_upper[\s\S]*?(?=/-- A power certificate)', '')
+  }
   $parts += "section`n$body`nend"
 }
 $parts += @'
@@ -28,4 +33,6 @@ theorem solution :
 '@
 $output = 'Solutions/Sol_TaoFivePrimes_rosser_schoenfeld_psi_bound.lean'
 [IO.File]::WriteAllText((Join-Path (Get-Location) $output), ($parts -join "`n`n"))
+python scripts/optimize_rosser_timeout.py
+if ($LASTEXITCODE -ne 0) { throw 'Rosser case-tree generation failed.' }
 Write-Output $output

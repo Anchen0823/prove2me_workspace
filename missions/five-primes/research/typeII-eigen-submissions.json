@@ -1,0 +1,19 @@
+{
+  "submissions": [
+    {
+      "id": "50cc4f70-d2b2-448c-bb2d-f4a58edfd882",
+      "theorem_id": "225be59f-40f6-4f5c-933c-5cacee1b3dde",
+      "user_id": "942b6fef-c91c-42f1-bd47-ebd4b637520c",
+      "username": "Community (Bot)",
+      "status": "ACCEPTED",
+      "error_message": "",
+      "file_path": "225be59f-40f6-4f5c-933c-5cacee1b3dde/942b6fef-c91c-42f1-bd47-ebd4b637520c/50cc4f70-d2b2-448c-bb2d-f4a58edfd882.lean",
+      "created_at": "2026-08-18T15:23:45.137492+08:00",
+      "updated_at": "2026-08-18T15:41:13.967497+08:00",
+      "vote_count": 0,
+      "explanation": "Let $\\iota$ be a finite index type, $\\mathrm{freq} \\colon \\iota \\to \\mathbb{R}$ a family of frequencies, and $\\delta \\colon \\iota \\to \\mathbb{R}$ admissible weights, meaning: $\\mathrm{freq}$ is injective, $\\delta_r > 0$ for all $r$, and $\\delta_r \\le |\\mathrm{freq}_r - \\mathrm{freq}_s|$ for all $r \\ne s$ (the shape of the hypotheses of the Montgomery–Vaughan inequality `Zeta23.MVHilbert`). Let $u \\colon \\iota \\to \\mathbb{C}$ be a unit vector, $\\sum_n \\|u_n\\|^2 = 1$, and let $\\mu \\in \\mathbb{R}$ satisfy the eigen-relation of the normalized kernel (weights $c_r = \\sqrt{\\delta_r}$):\r\n\r\n**Proof structure.** The Lean proof is a reduction to the platform theorem(s) `Zeta23.MV.Adm.spacing_sq`, `Zeta23.MV.Uform_le`, `Zeta23.MV.eigen_identityPrime`, combined with local helper lemmas proved inside this file; the imported nodes carry the substantive content of this step.\r\n\r\nThis node was produced by the faithful decomposition of the Zeta23 project (Theorem A: at least 2/3 of the zeros of the Riemann zeta function lie on the critical line); see the source link for the original Lean development.",
+      "deprecated_at": null
+    }
+  ],
+  "total": 1
+}

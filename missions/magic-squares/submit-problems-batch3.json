@@ -1,0 +1,30 @@
+{
+ "problems": [
+  {
+   "theorem_name": "MagicSquares.magic_three_param_bij",
+   "theorem_title": "MacMahon parametrization: 3x3 magic squares vs admissible pairs",
+   "formal_statement": "namespace MagicSquares\n\ntheorem magic_three_param_bij (e : ℕ) :\n    magicCount 3 (3 * e) = paramCount e := by sorry\n\nend MagicSquares",
+   "natural_language_statement": "The map\n$$M \\longmapsto (M_{00},\\, M_{02})$$\nis a bijection from the $3 \\times 3$ magic squares with nonnegative entries and\nline sum $3e$ onto the admissible parameter pairs\n$$\\{(a,c) \\in \\mathbb{N}^{2} : e \\le a + c \\le 3e,\\; a \\le e + c,\\; c \\le e + a\\}.$$\nConsequently the two counting functions agree: $M_{3}(3e) = \\mathrm{paramCount}(e)$.\n\n**Injectivity.** MacMahon's centre identity gives $M_{11} = e$; then the diagonal\nand anti-diagonal identities give $M_{22} = 2e - a$ and $M_{20} = 2e - c$, the row\nand column identities fill in $M_{01} = 3e - a - c$, $M_{21} = a + c - e$,\n$M_{10} = e + c - a$, $M_{12} = e + a - c$, and $M_{02} = c$, $M_{00} = a$ by\ndefinition. So $(a,c)$ determines $M$ completely.\n\n**Surjectivity.** Given an admissible pair, the array `mkMagic3 e a c` has\nnonnegative entries (that is exactly what admissibility says, together with the\nimplied bounds $a, c \\le 2e$) and its three rows, three columns and two diagonals\nall sum to $3e$; each entry is at most $3e$, so it lies in the search space\n$\\{0,\\dots,3e\\}$ used by `magicCount`.\n\n**Formalization Note** `magicCount 3 (3*e)` counts arrays with entries in\n`Fin (3*e+1)`; `paramCount e` counts the finset `paramSet e`. The bijection is\nexpressed as an equality of cardinalities.",
+   "source": "P. A. MacMahon, Combinatory Analysis (1915); G. Xin, Constructing all magic squares of order three (2008).",
+   "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nimport Definitions.Def_MagicSquaresParam3\nopen MagicSquares",
+   "tags": [
+    "combinatorics",
+    "magic-squares",
+    "enumerative-combinatorics"
+   ]
+  },
+  {
+   "theorem_name": "MagicSquares.param_three_card",
+   "theorem_title": "Counting admissible MacMahon parameters for 3x3 squares",
+   "formal_statement": "namespace MagicSquares\n\ntheorem param_three_card (e : ℕ) :\n    paramCount e = 2 * e ^ 2 + 2 * e + 1 := by sorry\n\nend MagicSquares",
+   "natural_language_statement": "The number of admissible MacMahon parameter pairs for\nline sum $3e$ is\n$$\\mathrm{paramCount}(e) \\;=\\; \\#\\{(a,c) \\in \\mathbb{N}^{2} : e \\le a+c \\le 3e,\\;\na \\le e+c,\\; c \\le e+a\\} \\;=\\; 2e^{2} + 2e + 1 .$$\n\n**Proof.** Substituting $p = a - e$ and $q = c - e$, the four inequalities read\n$|p+q| \\le e$ and $|p-q| \\le e$, and since\n$\\max(|p+q|,|p-q|) = |p| + |q|$ this is exactly $|p| + |q| \\le e$: the\n$\\ell_{1}$ ball of radius $e$ in $\\mathbb{Z}^{2}$. On the sphere\n$|p| + |q| = k$ there are $4k$ lattice points for $k \\ge 1$ and one for $k = 0$,\nso the ball has\n$$1 + \\sum_{k=1}^{e} 4k \\;=\\; 1 + 2e(e+1) \\;=\\; 2e^{2} + 2e + 1$$\npoints.\n\nEquivalently one may sum over $a$: for fixed $a \\in [0,2e]$ the admissible $c$\nform the interval $[\\,|a-e|,\\ \\min(a+e,\\,3e-a)\\,]$, which has $2a+1$ elements when\n$a \\le e$ and $4e-2a+1$ elements when $a \\ge e$; summing gives\n$(e+1)^{2} + e^{2} = 2e^{2} + 2e + 1$.\n\n**Formalization Note** `paramCount e` is the cardinality of the finset\n`paramSet e`, defined by filtering the box $[0,2e] \\times [0,2e]$ — the bounds\n$a, c \\le 2e$ are implied by admissibility, so this is lossless.",
+   "source": "P. A. MacMahon, Combinatory Analysis (1915): $M_3(t) = \\tfrac{2}{9}t^2 + \\tfrac{2}{3}t + 1$ for $3 \\mid t$.",
+   "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nimport Definitions.Def_MagicSquaresParam3\nopen MagicSquares",
+   "tags": [
+    "combinatorics",
+    "magic-squares",
+    "enumerative-combinatorics"
+   ]
+  }
+ ]
+}

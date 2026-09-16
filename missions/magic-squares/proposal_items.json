@@ -1,0 +1,47 @@
+[
+ [
+  "def MagicSquares",
+  "be2f2b6a-a540-47ae-b487-ac22532a2745",
+  "182d898c-fb5d-4250-be1f-0f8d64fe0d3d"
+ ],
+ [
+  "def MagicSquaresParam3",
+  "68eaae9b-d759-4a2a-83f6-741ecdbca5f8",
+  "39206e13-f3e7-43ff-8fdd-cc5fbb9a28ce"
+ ],
+ [
+  "center_of_order_three",
+  "ebbc5687-663f-472d-afb6-f760546652db",
+  "5c25dcb7-88f0-4a61-a0d9-7035602d3036"
+ ],
+ [
+  "order_three_opposite_sum_eq_twice_center",
+  "695c1fc5-a4a3-4ee4-9eda-9a132228ba46",
+  "9c7590ea-20c1-4dfb-8f99-e1c7b27e56b7"
+ ],
+ [
+  "magic_three_param_sufficient",
+  "665c40f1-688c-4f40-aafb-1b8d82bbeb35",
+  "3362a1e7-4ed9-446c-88ff-9a6988efa9c5"
+ ],
+ [
+  "magic_three_param_necessary",
+  "4e513d72-b4b7-419b-a0e6-dc115ee77a94",
+  "5aaca2ee-dbe6-429e-b061-518aaf16a004"
+ ],
+ [
+  "magic_three_param_bij",
+  "f62c9364-c183-42f8-84b8-a6ac8e72ade7",
+  "2445e7be-f0cb-41a1-b0d2-3eca5ee7b577"
+ ],
+ [
+  "param_three_card",
+  "8063946a-dd43-4ff9-9107-f3e4d7cb040b",
+  "6a4132b8-befa-4132-a5ed-bbbc880fcab9"
+ ],
+ [
+  "magic_count_three_divisible (GOAL)",
+  "393a2adc-5e8e-4847-b9c6-f7b141a5114e",
+  "1deef7f3-752a-4c8f-8c59-4f6f8c9f33cd"
+ ]
+]

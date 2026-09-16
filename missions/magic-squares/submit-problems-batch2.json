@@ -1,0 +1,52 @@
+{
+ "problems": [
+  {
+   "theorem_name": "MagicSquares.normal_order_three_constant",
+   "theorem_title": "The magic constant of a normal 3x3 magic square is 15",
+   "formal_statement": "namespace MagicSquares\n\ntheorem normal_order_three_constant (M : Square 3 ℕ) (s : ℕ)\n    (hN : IsNormal M) (hM : IsMagic M s) :\n    s = 15 := by sorry\n\nend MagicSquares",
+   "natural_language_statement": "Every normal $3 \\times 3$ magic square has line sum $15$.\n\nA **normal** magic square of order $3$ has entries exactly $1, 2, \\dots, 9$, each used once.\nIts magic constant is therefore\n$$\\frac{1}{3}\\,(1 + 2 + \\cdots + 9) = \\frac{45}{3} = 15 .$$\n\nThis is the $n = 3$ instance of the general magic-constant identity\n$2s = n(n^{2}+1)$, which here reads $2s = 3 \\cdot 10 = 30$.\n\n**Formalization Note** The statement avoids division: with the hypothesis\n`IsNormal M` and `IsMagic M s` the general identity gives `2 * s = 30`, and `s = 15`\nfollows by linear arithmetic over $\\mathbb{N}$.",
+   "source": "Standard folklore on the Lo Shu square; the general identity is the magic-constant formula for normal magic squares.",
+   "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nopen MagicSquares",
+   "tags": [
+    "combinatorics",
+    "magic-squares"
+   ]
+  },
+  {
+   "theorem_name": "MagicSquares.normal_order_three_center_five",
+   "theorem_title": "The centre of a normal 3x3 magic square is 5",
+   "formal_statement": "namespace MagicSquares\n\ntheorem normal_order_three_center_five (M : Square 3 ℕ) (s : ℕ)\n    (hN : IsNormal M) (hM : IsMagic M s) :\n    M 1 1 = 5 := by sorry\n\nend MagicSquares",
+   "natural_language_statement": "The centre cell of every normal $3 \\times 3$ magic square is $5$.\n\nIn any $3 \\times 3$ magic square of line sum $s$ the centre entry is $s/3$\n(MacMahon): adding the middle row, the middle column and the two diagonals counts\nthe centre four times and every other cell once, giving\n$\\mathrm{total} + 3\\,M_{11} = 4s$ while $\\mathrm{total} = 3s$. For a *normal*\nsquare $s = 15$, so $M_{11} = 5$.\n\n**Formalization Note** This is an immediate consequence of the two children\n`MagicSquares.normal_order_three_constant` ($s = 15$) and\n`MagicSquares.center_of_order_three` ($3\\,M_{11} = s$); the natural-number\narithmetic is discharged by `omega`.",
+   "source": "MacMahon (1915) for the centre identity; normality fixes $s = 15$.",
+   "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nopen MagicSquares",
+   "tags": [
+    "combinatorics",
+    "magic-squares"
+   ]
+  },
+  {
+   "theorem_name": "MagicSquares.normal_order_three_associative",
+   "theorem_title": "A normal 3x3 magic square is associative with constant 10",
+   "formal_statement": "namespace MagicSquares\n\ntheorem normal_order_three_associative (M : Square 3 ℕ) (s : ℕ)\n    (hN : IsNormal M) (hM : IsMagic M s) :\n    IsAssociative M 10 := by sorry\n\nend MagicSquares",
+   "natural_language_statement": "Every normal $3 \\times 3$ magic square is **associative**\n(also called *regular* or *symmetric through the centre*) with complement constant $10$:\nany two centrally opposite cells add up to $10$,\n$$M_{ij} + M_{2-i,\\,2-j} = 10 \\qquad \\text{for all } 0 \\le i, j \\le 2 .$$\n\nIndeed the centre is $5$, and each opposite pair lies together with the centre on a\nrow, a column, or one of the two diagonals, all of which sum to $15$; hence each pair\nsums to $15 - 5 = 10$.\n\nThe pair $\\{M_{11}, M_{11}\\}$ is covered too, as $5 + 5 = 10$.\n\n**Formalization Note** `IsAssociative M c` is\n`\\forall i j, M i j + M (Fin.rev i) (Fin.rev j) = c`, and `Fin.rev` is the\nreversal $i \\mapsto 2-i$ on `Fin 3`. The proof splits the nine index pairs with\n`fin_cases` and closes each by `omega` from the row/column/diagonal identities and\n`s = 15`.",
+   "source": "Classical Lo Shu structure theory; see e.g. the associative-square discussion in Beck, Cohen, Cuomo & Gribelyuk, The number of ``magic'' squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707--717; arXiv:math/0201013v3.",
+   "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nopen MagicSquares",
+   "tags": [
+    "combinatorics",
+    "magic-squares"
+   ]
+  },
+  {
+   "theorem_name": "MagicSquares.panmagic_is_magic",
+   "theorem_title": "Every panmagic square is magic",
+   "formal_statement": "namespace MagicSquares\n\ntheorem panmagic_is_magic {n : ℕ} [NeZero n]\n    (M : Square n ℕ) (s : ℕ) (hP : IsPanMagic M s) :\n    IsMagic M s := by sorry\n\nend MagicSquares",
+   "natural_language_statement": "A **panmagic** (pandiagonal) square is in particular a magic square.\n\nBy definition `IsPanMagic M s` requires every row and every column to sum to $s$\n(the semi-magic condition) and, in addition, *every* broken diagonal in both\ndirections to sum to $s$. The two main diagonals are the broken diagonals of\noffset $0$, so both main diagonal sums equal $s$, which is exactly the extra\ncontent of `IsMagic M s` over `IsSemiMagic M s`.\n\n**Formalization Note** `brokenDiagSum M k` is $\\sum_i M_{i,\\, i+k}$ with the column\nindex read modulo $n$, so `brokenDiagSum M 0 = diagSum M`. For the anti-diagonal one\nuses `brokenAntiDiagSum M 0`, i.e. $\\sum_i M_{i,\\, n-1-i}$, which is\n`antiDiagSum M`. Only $n \\neq 0$ is needed so that `Fin n` carries the additive\nstructure used to speak of offsets.",
+   "source": "Beck, Cohen, Cuomo & Gribelyuk, The number of ``magic'' squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707--717; arXiv:math/0201013v3., Section 1 (definitions of $P_n$ versus $M_n$).",
+   "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nopen MagicSquares",
+   "tags": [
+    "combinatorics",
+    "magic-squares"
+   ]
+  }
+ ]
+}

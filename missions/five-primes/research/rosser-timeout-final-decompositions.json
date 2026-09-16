@@ -1,0 +1,48 @@
+{
+  "decompositions": [
+    {
+      "submission_id": null,
+      "created_by": null,
+      "created_at": null,
+      "deprecated_at": null,
+      "deprecated_by": null,
+      "children": [
+        {
+          "definition_id": "d5145161-07e1-4f2d-bf49-08bc6090dc85",
+          "definition_name": "TaoFivePrimes_ArcSplit",
+          "theorem_title": "Arc split for Tao's Theorem 8.2: the factors $S_{\\eta_1}$, $S_{\\eta_0}$, $D_{N_0/3}$ and the strongly major arc",
+          "ordinal": 0,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        }
+      ]
+    },
+    {
+      "submission_id": "11751692-de02-4b67-8b2f-44fe1593d392",
+      "created_by": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "created_at": "2026-09-12T21:34:30.853284+08:00",
+      "deprecated_at": null,
+      "deprecated_by": null,
+      "children": [
+        {
+          "theorem_id": "3fa7d8d1-e2ce-4057-894d-f39a2f0a4a8d",
+          "theorem_name": "TaoFivePrimes.schoenfeld_psi_error_large",
+          "theorem_title": "Explicit two-sided Chebyshev error above 10^8",
+          "status": "Open",
+          "ordinal": 0,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        },
+        {
+          "theorem_id": "d7089f63-d516-4c70-a5f5-f1ae1e917931",
+          "theorem_name": "TaoFivePrimes.rosser_psi_finite_middle",
+          "theorem_title": "Finite Rosser bound between 1000 and 10^8",
+          "status": "Open",
+          "ordinal": 1,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        }
+      ]
+    }
+  ]
+}

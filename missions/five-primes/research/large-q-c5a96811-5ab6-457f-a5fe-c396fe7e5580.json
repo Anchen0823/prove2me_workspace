@@ -1,0 +1,26 @@
+{
+  "theorem_id": "c5a96811-5ab6-457f-a5fe-c396fe7e5580",
+  "theorem_name": "TaoFivePrimes.small_q_modulus_two_source_envelope",
+  "theorem_title": "Small-q source envelope at modulus 2",
+  "status": "Open",
+  "formal_statement": "namespace TaoFivePrimes\n\ntheorem small_q_modulus_two_source_envelope\n    (x alpha beta : ℝ) (a : ℤ) (q : ℕ)\n    (hx : (10 : ℝ) ^ 20 ≤ x)\n    (hq : 100 ≤ q) (hqx : (q : ℝ) ≤ x / 100)\n    (haq : Nat.Coprime a.natAbs q)\n    (halpha : 4 * alpha = (a : ℝ) / q + beta)\n    (hbeta : |beta| ≤ 1 / (q : ℝ) ^ 2)\n    (hsmall : (q : ℝ) ≤ x ^ (1 / 3 : ℝ)) :\n    ‖smoothedExpSum eta0 2 x alpha‖ ≤\n      (x / q) * Real.log (2 * x) *\n          (0.5 * Real.log (2 * x / (q : ℝ) ^ 2 + 4) +\n            0.9 * (8 + Real.log q)) +\n        (0.301 * Real.log q ^ 2 + 2.66 * Real.log q) *\n          (x / Real.sqrt q) := by\n  sorry\n\nend TaoFivePrimes",
+  "natural_language_statement": "Let $x\\ge 10^{20}$ and suppose\n\n$$4\\alpha=\\frac aq+\\beta,\\qquad 100\\le q\\le x/100,\\qquad (a,q)=1,\\qquad |\\beta|\\le q^{-2},\\qquad q\\le x^{1/3}.$$\n\nFor Tao's cutoff $\\eta_0$, the modulus-two smoothed von Mangoldt sum satisfies\n\n$$\\begin{aligned}\n|S_{\\eta_0,2}(x,\\alpha)|\\le{}&\\frac{x}{q}\\log(2x)\\left[\\frac12\\log\\left(\\frac{2x}{q^2}+4\\right)+0.9(8+\\log q)\\right]\\\\\n&+(0.301\\log^2 q+2.66\\log q)\\frac{x}{\\sqrt q}.\n\\end{aligned}$$\n\nThis is the small-denominator cancellation estimate before changing the coprimality modulus. It isolates the Vaughan Type I/II part of Tao's Section 6 derivation of (1.10).",
+  "created_at": "2026-09-12T20:47:20.95098+08:00",
+  "vote_count": 0,
+  "tags": [
+    "analytic-number-theory",
+    "circle-method",
+    "exponential-sums",
+    "goldbach",
+    "number-theory",
+    "tao-five-primes"
+  ],
+  "preamble": "import Definitions.Def_TaoFivePrimes_SmoothedExpSum\nimport Definitions.Def_TaoFivePrimes_RepresentationCount\nimport Mathlib.Analysis.SpecialFunctions.Pow.Real",
+  "source": "Terence Tao, Every odd number greater than 1 is the sum of at most five primes, arXiv:1201.6656v4, Theorem 5.1 (equations (5.4)-(5.6)) and Section 6 derivation of equation (1.10), https://arxiv.org/html/1201.6656v4",
+  "deprecated_at": null,
+  "deprecated_by": null,
+  "visibility": "public",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "audits": [],
+  "readback": null
+}

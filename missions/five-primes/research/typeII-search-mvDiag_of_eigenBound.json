@@ -1,0 +1,139 @@
+{
+  "theorems": [
+    {
+      "theorem_id": "a5818d8c-3377-4e6a-a550-b834deba3ba8",
+      "theorem_name": "Zeta23.MV.star_dotProduct_mulVec_eq",
+      "theorem_title": "Spectral expansion $x^* A x = \\sum_i \\nu_i \\,|(U^* x)_i|^2$ for a Hermitian matrix",
+      "status": "Proved",
+      "formal_statement": "theorem Zeta23.MV.star_dotProduct_mulVec_eq {A : Matrix ι ι ℂ} (hA : A.IsHermitian) (x : ι → ℂ) :\n    star x ⬝ᵥ (A *ᵥ x)\n      = ((∑ i, hA.eigenvalues i *\n          ‖(star (hA.eigenvectorUnitary : Matrix ι ι ℂ) *ᵥ x) i‖ ^ 2 : ℝ) : ℂ) := by sorry\n",
+      "natural_language_statement": "Let $A$ be a Hermitian matrix over $\\mathbb{C}$ indexed by a finite type $\\iota$, with real eigenvalues $\\nu_i$ (Mathlib's `Matrix.IsHermitian.eigenvalues`) and eigenvector unitary $U$ (`Matrix.IsHermitian.eigenvectorUnitary`, the unitary whose columns form an orthonormal eigenbasis). Then for every complex vector $x \\colon \\iota \\to \\mathbb{C}$, the Hermitian form expands spectrally:\n$$x^* A x \\;=\\; \\sum_i \\nu_i \\,\\bigl\\| (U^* x)_i \\bigr\\|^2 ,$$\nwhere the left side is the complex number $\\overline{x} \\cdot (A x)$ (Lean's `star x ⬝ᵥ (A *ᵥ x)`) and the right side is a real sum coerced to $\\mathbb{C}$ — in particular the identity records that the Hermitian form is real-valued.\n\nThis lemma lives in the spectral-reduction step of the Montgomery–Vaughan argument (module `Zeta23.MV.Duality`): expanding $y^* M y$ in the eigenbasis of the Hermitian matrix $M = iK$ is what converts the eigenvalue bound $|\\nu| \\le 13$ into the diagonal Montgomery–Vaughan inequality, via its consumer `Zeta23.MV.mvDiag_of_eigenBound`.",
+      "created_at": "2026-08-18T04:54:05.828285+08:00",
+      "vote_count": 0,
+      "preamble": "import Mathlib\nimport Mathlib.Algebra.BigOperators.Finprod\nimport Mathlib.Analysis.CStarAlgebra.Classes\nimport Mathlib.Analysis.Calculus.ContDiff.Defs\nimport Mathlib.Analysis.InnerProductSpace.Basic\nimport Mathlib.Analysis.Matrix.PosDef\nimport Mathlib.Analysis.SpecialFunctions.Gamma.Digamma\nimport Mathlib.Analysis.SpecialFunctions.Pow.Complex\nimport Mathlib.Data.Matrix.Basic\nimport Mathlib.Data.Set.Card\nimport Mathlib.MeasureTheory.Integral.Bochner.Basic\nimport Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic\nimport Mathlib.MeasureTheory.Measure.Lebesgue.Basic\nimport Mathlib.NumberTheory.ArithmeticFunction.VonMangoldt\nimport Definitions.Def_Zeta23_Defs\nimport Definitions.Def_Zeta23_Hypotheses\nimport Definitions.Def_Zeta23_LinAlg_HermitianPosPart\nimport Definitions.Def_Zeta23_LinAlg_PosIndex\nimport Definitions.Def_Zeta23_MV\nimport Definitions.Def_Zeta23_MV_Duality\nimport Definitions.Def_Zeta23_MV_Spacing\n\nopen Finset Complex Matrix Unitary\nopen scoped BigOperators ComplexConjugate\nopen Zeta23\nopen MV\nvariable {ι : Type} [Fintype ι] [DecidableEq ι]\n",
+      "source": "https://github.com/anthropics/zeta-23-lean/blob/182afbf851aa42a8ae78507be83f2356d3a33260/Zeta23/MV/Duality.lean#L72-L90",
+      "tags": [
+        "linear-algebra",
+        "zeta23"
+      ],
+      "created_by": "942b6fef-c91c-42f1-bd47-ebd4b637520c",
+      "created_by_username": "Community (Bot)",
+      "deprecated_at": null,
+      "visibility": "public",
+      "mathlib_rev": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+      "env_display_name": "Mathlib c5ea003 (Lean v4.30.0)"
+    },
+    {
+      "theorem_id": "0cbd2473-a4cb-4713-90d9-b84ce0620ed6",
+      "theorem_name": "Zeta23.MV.star_dotProduct_mulVec_eq",
+      "theorem_title": "Spectral expansion $x^* A x = \\sum_i \\nu_i \\,|(U^* x)_i|^2$ for a Hermitian matrix",
+      "status": "Proved",
+      "formal_statement": "theorem Zeta23.MV.star_dotProduct_mulVec_eq {A : Matrix ι ι ℂ} (hA : A.IsHermitian) (x : ι → ℂ) :\n    star x ⬝ᵥ (A *ᵥ x)\n      = ((∑ i, hA.eigenvalues i *\n          ‖(star (hA.eigenvectorUnitary : Matrix ι ι ℂ) *ᵥ x) i‖ ^ 2 : ℝ) : ℂ) := by sorry\n",
+      "natural_language_statement": "Let $A$ be a Hermitian matrix over $\\mathbb{C}$ indexed by a finite type $\\iota$, with real eigenvalues $\\nu_i$ (Mathlib's `Matrix.IsHermitian.eigenvalues`) and eigenvector unitary $U$ (`Matrix.IsHermitian.eigenvectorUnitary`, the unitary whose columns form an orthonormal eigenbasis). Then for every complex vector $x \\colon \\iota \\to \\mathbb{C}$, the Hermitian form expands spectrally:\n$$x^* A x \\;=\\; \\sum_i \\nu_i \\,\\bigl\\| (U^* x)_i \\bigr\\|^2 ,$$\nwhere the left side is the complex number $\\overline{x} \\cdot (A x)$ (Lean's `star x ⬝ᵥ (A *ᵥ x)`) and the right side is a real sum coerced to $\\mathbb{C}$ — in particular the identity records that the Hermitian form is real-valued.\n\nThis lemma lives in the spectral-reduction step of the Montgomery–Vaughan argument (module `Zeta23.MV.Duality`): expanding $y^* M y$ in the eigenbasis of the Hermitian matrix $M = iK$ is what converts the eigenvalue bound $|\\nu| \\le 13$ into the diagonal Montgomery–Vaughan inequality, via its consumer `Zeta23.MV.mvDiag_of_eigenBound`.",
+      "created_at": "2026-08-18T04:54:05.828285+08:00",
+      "vote_count": 0,
+      "preamble": "import Mathlib\nimport Mathlib.Algebra.BigOperators.Finprod\nimport Mathlib.Analysis.CStarAlgebra.Classes\nimport Mathlib.Analysis.Calculus.ContDiff.Defs\nimport Mathlib.Analysis.InnerProductSpace.Basic\nimport Mathlib.Analysis.Matrix.PosDef\nimport Mathlib.Analysis.SpecialFunctions.Gamma.Digamma\nimport Mathlib.Analysis.SpecialFunctions.Pow.Complex\nimport Mathlib.Data.Matrix.Basic\nimport Mathlib.Data.Set.Card\nimport Mathlib.MeasureTheory.Integral.Bochner.Basic\nimport Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic\nimport Mathlib.MeasureTheory.Measure.Lebesgue.Basic\nimport Mathlib.NumberTheory.ArithmeticFunction.VonMangoldt\nimport Definitions.Def_Zeta23_Defs\nimport Definitions.Def_Zeta23_Hypotheses\nimport Definitions.Def_Zeta23_LinAlg_HermitianPosPart\nimport Definitions.Def_Zeta23_LinAlg_PosIndex\nimport Definitions.Def_Zeta23_MV\nimport Definitions.Def_Zeta23_MV_Duality\nimport Definitions.Def_Zeta23_MV_Spacing\n\nopen Finset Complex Matrix Unitary\nopen scoped BigOperators ComplexConjugate\nopen Zeta23\nopen MV\nvariable {ι : Type} [Fintype ι] [DecidableEq ι]\n",
+      "source": "https://github.com/anthropics/zeta-23-lean/blob/182afbf851aa42a8ae78507be83f2356d3a33260/Zeta23/MV/Duality.lean#L72-L90",
+      "tags": [
+        "linear-algebra",
+        "zeta23"
+      ],
+      "created_by": "942b6fef-c91c-42f1-bd47-ebd4b637520c",
+      "created_by_username": "Community (Bot)",
+      "deprecated_at": null,
+      "visibility": "public",
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)"
+    },
+    {
+      "theorem_id": "f946fbd7-7af5-4378-bc46-63924edb955f",
+      "theorem_name": "Zeta23.MV.mvDiag_of_eigenBound",
+      "theorem_title": "Spectral reduction: an eigenvalue bound yields the diagonal Montgomery–Vaughan inequality",
+      "status": "Proved",
+      "formal_statement": "theorem Zeta23.MV.mvDiag_of_eigenBound {C : ℝ} (hb : EigenBound C) : MVDiag C := by sorry\n",
+      "natural_language_statement": "Let $C \\in \\mathbb{R}$. The hypothesis `EigenBound C` states that for every finite index type, every admissible pair $(\\mathrm{freq}, \\delta)$ (injective frequencies, $\\delta_r > 0$, $\\delta_r \\le |\\mathrm{freq}_r - \\mathrm{freq}_s|$ for $r \\ne s$), every unit vector $u$ and every real $\\mu$ satisfying the eigen-relation $\\sum_{n \\ne m} \\frac{\\sqrt{\\delta_m}\\sqrt{\\delta_n}}{\\mathrm{freq}_m - \\mathrm{freq}_n} u_n = \\mu i\\, u_m$ (all $m$), one has $|\\mu| \\le C$. The conclusion `MVDiag C` is the literature (diagonal) form of the Montgomery–Vaughan weighted Hilbert inequality: for every finite index type, admissible $(\\mathrm{freq}, \\delta)$, and complex vector $x$,\n\n$$\\Bigl\\| \\sum_{r \\ne s} \\frac{x_r\\, \\overline{x_s}}{\\mathrm{freq}_r - \\mathrm{freq}_s} \\Bigr\\| \\;\\le\\; C\\, \\sum_r \\frac{\\|x_r\\|^2}{\\delta_r}.$$\n\nThe theorem proves `EigenBound C` $\\Rightarrow$ `MVDiag C`. Proof: with $M = iK$, $K_{rs} = \\sqrt{\\delta_r}\\sqrt{\\delta_s}/(\\mathrm{freq}_r - \\mathrm{freq}_s)$ off the diagonal, $M$ is Hermitian and every eigenvalue has modulus $\\le C$ (`abs_eigenvalue_le`); expanding $y^* M y$ in Mathlib's eigenbasis gives $|y^* M y| \\le C \\|y\\|^2$, and substituting $y_r = x_r/\\sqrt{\\delta_r}$ lands exactly on the displayed inequality.\n\n**Role.** This closes the spectral part of the project's self-contained Montgomery–Vaughan proof: combined with `eigen_bound` ($C = 13$) and the polarization step `MVHilbert_of_diag`, it discharges the H-MV hypothesis unconditionally. It is consumed by the top-level assemblies `Zeta23.thmA3` and `Zeta23.thmA3_cumulative` of Theorem A.",
+      "created_at": "2026-08-18T04:53:49.134312+08:00",
+      "vote_count": 0,
+      "preamble": "import Mathlib\nimport Mathlib.Algebra.BigOperators.Finprod\nimport Mathlib.Analysis.CStarAlgebra.Classes\nimport Mathlib.Analysis.Calculus.ContDiff.Defs\nimport Mathlib.Analysis.InnerProductSpace.Basic\nimport Mathlib.Analysis.Matrix.PosDef\nimport Mathlib.Analysis.SpecialFunctions.Gamma.Digamma\nimport Mathlib.Analysis.SpecialFunctions.Pow.Complex\nimport Mathlib.Data.Matrix.Basic\nimport Mathlib.Data.Set.Card\nimport Mathlib.MeasureTheory.Integral.Bochner.Basic\nimport Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic\nimport Mathlib.MeasureTheory.Measure.Lebesgue.Basic\nimport Mathlib.NumberTheory.ArithmeticFunction.VonMangoldt\nimport Definitions.Def_Zeta23_Defs\nimport Definitions.Def_Zeta23_Hypotheses\nimport Definitions.Def_Zeta23_LinAlg_HermitianPosPart\nimport Definitions.Def_Zeta23_LinAlg_PosIndex\nimport Definitions.Def_Zeta23_MV\nimport Definitions.Def_Zeta23_MV_Duality\nimport Definitions.Def_Zeta23_MV_Spacing\n\nopen Finset Complex Matrix Unitary\nopen scoped BigOperators ComplexConjugate\nopen Zeta23\nopen MV\nvariable {ι : Type} [Fintype ι] [DecidableEq ι]\n",
+      "source": "https://github.com/anthropics/zeta-23-lean/blob/182afbf851aa42a8ae78507be83f2356d3a33260/Zeta23/MV/Duality.lean#L156-L193",
+      "tags": [
+        "analysis",
+        "linear-algebra",
+        "zeta23"
+      ],
+      "created_by": "942b6fef-c91c-42f1-bd47-ebd4b637520c",
+      "created_by_username": "Community (Bot)",
+      "deprecated_at": null,
+      "visibility": "public",
+      "mathlib_rev": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+      "env_display_name": "Mathlib c5ea003 (Lean v4.30.0)"
+    },
+    {
+      "theorem_id": "ba4fc2f1-1747-48dd-89db-fe2cde52c5ac",
+      "theorem_name": "Zeta23.MV.mvDiag_of_eigenBound",
+      "theorem_title": "Spectral reduction: an eigenvalue bound yields the diagonal Montgomery–Vaughan inequality",
+      "status": "Proved",
+      "formal_statement": "theorem Zeta23.MV.mvDiag_of_eigenBound {C : ℝ} (hb : EigenBound C) : MVDiag C := by sorry\n",
+      "natural_language_statement": "Let $C \\in \\mathbb{R}$. The hypothesis `EigenBound C` states that for every finite index type, every admissible pair $(\\mathrm{freq}, \\delta)$ (injective frequencies, $\\delta_r > 0$, $\\delta_r \\le |\\mathrm{freq}_r - \\mathrm{freq}_s|$ for $r \\ne s$), every unit vector $u$ and every real $\\mu$ satisfying the eigen-relation $\\sum_{n \\ne m} \\frac{\\sqrt{\\delta_m}\\sqrt{\\delta_n}}{\\mathrm{freq}_m - \\mathrm{freq}_n} u_n = \\mu i\\, u_m$ (all $m$), one has $|\\mu| \\le C$. The conclusion `MVDiag C` is the literature (diagonal) form of the Montgomery–Vaughan weighted Hilbert inequality: for every finite index type, admissible $(\\mathrm{freq}, \\delta)$, and complex vector $x$,\n\n$$\\Bigl\\| \\sum_{r \\ne s} \\frac{x_r\\, \\overline{x_s}}{\\mathrm{freq}_r - \\mathrm{freq}_s} \\Bigr\\| \\;\\le\\; C\\, \\sum_r \\frac{\\|x_r\\|^2}{\\delta_r}.$$\n\nThe theorem proves `EigenBound C` $\\Rightarrow$ `MVDiag C`. Proof: with $M = iK$, $K_{rs} = \\sqrt{\\delta_r}\\sqrt{\\delta_s}/(\\mathrm{freq}_r - \\mathrm{freq}_s)$ off the diagonal, $M$ is Hermitian and every eigenvalue has modulus $\\le C$ (`abs_eigenvalue_le`); expanding $y^* M y$ in Mathlib's eigenbasis gives $|y^* M y| \\le C \\|y\\|^2$, and substituting $y_r = x_r/\\sqrt{\\delta_r}$ lands exactly on the displayed inequality.\n\n**Role.** This closes the spectral part of the project's self-contained Montgomery–Vaughan proof: combined with `eigen_bound` ($C = 13$) and the polarization step `MVHilbert_of_diag`, it discharges the H-MV hypothesis unconditionally. It is consumed by the top-level assemblies `Zeta23.thmA3` and `Zeta23.thmA3_cumulative` of Theorem A.",
+      "created_at": "2026-08-18T04:53:49.134312+08:00",
+      "vote_count": 0,
+      "preamble": "import Mathlib\nimport Mathlib.Algebra.BigOperators.Finprod\nimport Mathlib.Analysis.CStarAlgebra.Classes\nimport Mathlib.Analysis.Calculus.ContDiff.Defs\nimport Mathlib.Analysis.InnerProductSpace.Basic\nimport Mathlib.Analysis.Matrix.PosDef\nimport Mathlib.Analysis.SpecialFunctions.Gamma.Digamma\nimport Mathlib.Analysis.SpecialFunctions.Pow.Complex\nimport Mathlib.Data.Matrix.Basic\nimport Mathlib.Data.Set.Card\nimport Mathlib.MeasureTheory.Integral.Bochner.Basic\nimport Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic\nimport Mathlib.MeasureTheory.Measure.Lebesgue.Basic\nimport Mathlib.NumberTheory.ArithmeticFunction.VonMangoldt\nimport Definitions.Def_Zeta23_Defs\nimport Definitions.Def_Zeta23_Hypotheses\nimport Definitions.Def_Zeta23_LinAlg_HermitianPosPart\nimport Definitions.Def_Zeta23_LinAlg_PosIndex\nimport Definitions.Def_Zeta23_MV\nimport Definitions.Def_Zeta23_MV_Duality\nimport Definitions.Def_Zeta23_MV_Spacing\n\nopen Finset Complex Matrix Unitary\nopen scoped BigOperators ComplexConjugate\nopen Zeta23\nopen MV\nvariable {ι : Type} [Fintype ι] [DecidableEq ι]\n",
+      "source": "https://github.com/anthropics/zeta-23-lean/blob/182afbf851aa42a8ae78507be83f2356d3a33260/Zeta23/MV/Duality.lean#L156-L193",
+      "tags": [
+        "analysis",
+        "linear-algebra",
+        "zeta23"
+      ],
+      "created_by": "942b6fef-c91c-42f1-bd47-ebd4b637520c",
+      "created_by_username": "Community (Bot)",
+      "deprecated_at": null,
+      "visibility": "public",
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)"
+    },
+    {
+      "theorem_id": "f3c89962-1761-4bb3-b642-95affd9a955a",
+      "theorem_name": "Zeta23.MV.abs_eigenvalue_le",
+      "theorem_title": "Eigenvalues of the Hermitian matrix $M = iK$ are bounded by $C$",
+      "status": "Proved",
+      "formal_statement": "theorem Zeta23.MV.abs_eigenvalue_le {C : ℝ} (hb : EigenBound C) {freq δ : ι → ℝ} (h : Adm freq δ) (j : ι) :\n    |(Mmat_isHermitian freq δ).eigenvalues j| ≤ C := by sorry\n",
+      "natural_language_statement": "Let $C \\in \\mathbb{R}$ and assume `EigenBound C`: for every finite index type, every admissible pair $(\\mathrm{freq}, \\delta)$ (injective frequencies, $\\delta_r > 0$, $\\delta_r \\le |\\mathrm{freq}_r - \\mathrm{freq}_s|$ for $r \\ne s$), every unit vector $u$ ($\\sum_n \\|u_n\\|^2 = 1$) and every real $\\mu$ satisfying the eigen-relation\n\n$$\\sum_{n \\ne m} \\frac{\\sqrt{\\delta_m}\\sqrt{\\delta_n}}{\\mathrm{freq}_m - \\mathrm{freq}_n}\\; u_n \\;=\\; \\mu\\, i\\, u_m \\quad \\text{for all } m,$$\n\none has $|\\mu| \\le C$. Now fix an admissible pair $(\\mathrm{freq}, \\delta)$ on a finite index type $\\iota$ and let $M = iK$ be the Hermitian matrix with entries $M_{rs} = i\\,\\sqrt{\\delta_r}\\sqrt{\\delta_s}/(\\mathrm{freq}_r - \\mathrm{freq}_s)$ for $r \\ne s$ and $0$ on the diagonal (`Mmat`; Hermitian since $K$ is real antisymmetric). Then every eigenvalue of $M$, in the sense of Mathlib's `Matrix.IsHermitian.eigenvalues`, satisfies\n\n$$\\bigl|\\nu_j\\bigr| \\;\\le\\; C \\qquad \\text{for every } j \\in \\iota.$$\n\nThe proof feeds each eigenpair from Mathlib's eigenbasis (unit eigenvector) into the eigen-relation of `EigenBound` with $\\mu = -\\nu_j$.\n\n**Role.** Step 4 (spectral reduction) of the Montgomery–Vaughan chain: it is consumed by `Zeta23.MV.mvDiag_of_eigenBound`, which expands the Hermitian form in the eigenbasis to obtain the diagonal Montgomery–Vaughan inequality `MVDiag C`.",
+      "created_at": "2026-08-18T04:52:55.67221+08:00",
+      "vote_count": 0,
+      "preamble": "import Mathlib\nimport Mathlib.Algebra.BigOperators.Finprod\nimport Mathlib.Analysis.CStarAlgebra.Classes\nimport Mathlib.Analysis.Calculus.ContDiff.Defs\nimport Mathlib.Analysis.InnerProductSpace.Basic\nimport Mathlib.Analysis.Matrix.PosDef\nimport Mathlib.Analysis.SpecialFunctions.Gamma.Digamma\nimport Mathlib.Analysis.SpecialFunctions.Pow.Complex\nimport Mathlib.Data.Matrix.Basic\nimport Mathlib.Data.Set.Card\nimport Mathlib.MeasureTheory.Integral.Bochner.Basic\nimport Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic\nimport Mathlib.MeasureTheory.Measure.Lebesgue.Basic\nimport Mathlib.NumberTheory.ArithmeticFunction.VonMangoldt\nimport Definitions.Def_Zeta23_Defs\nimport Definitions.Def_Zeta23_Hypotheses\nimport Definitions.Def_Zeta23_LinAlg_HermitianPosPart\nimport Definitions.Def_Zeta23_LinAlg_PosIndex\nimport Definitions.Def_Zeta23_MV\nimport Definitions.Def_Zeta23_MV_Duality\nimport Definitions.Def_Zeta23_MV_Spacing\n\nopen Finset Complex Matrix Unitary\nopen scoped BigOperators ComplexConjugate\nopen Zeta23\nopen MV\nvariable {ι : Type} [Fintype ι] [DecidableEq ι]\n",
+      "source": "https://github.com/anthropics/zeta-23-lean/blob/182afbf851aa42a8ae78507be83f2356d3a33260/Zeta23/MV/Duality.lean#L105-L144",
+      "tags": [
+        "linear-algebra",
+        "zeta23"
+      ],
+      "created_by": "942b6fef-c91c-42f1-bd47-ebd4b637520c",
+      "created_by_username": "Community (Bot)",
+      "deprecated_at": null,
+      "visibility": "public",
+      "mathlib_rev": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+      "env_display_name": "Mathlib c5ea003 (Lean v4.30.0)"
+    },
+    {
+      "theorem_id": "85841cdc-8c74-426b-b849-6d47afb5d691",
+      "theorem_name": "Zeta23.MV.abs_eigenvalue_le",
+      "theorem_title": "Eigenvalues of the Hermitian matrix $M = iK$ are bounded by $C$",
+      "status": "Proved",
+      "formal_statement": "theorem Zeta23.MV.abs_eigenvalue_le {C : ℝ} (hb : EigenBound C) {freq δ : ι → ℝ} (h : Adm freq δ) (j : ι) :\n    |(Mmat_isHermitian freq δ).eigenvalues j| ≤ C := by sorry\n",
+      "natural_language_statement": "Let $C \\in \\mathbb{R}$ and assume `EigenBound C`: for every finite index type, every admissible pair $(\\mathrm{freq}, \\delta)$ (injective frequencies, $\\delta_r > 0$, $\\delta_r \\le |\\mathrm{freq}_r - \\mathrm{freq}_s|$ for $r \\ne s$), every unit vector $u$ ($\\sum_n \\|u_n\\|^2 = 1$) and every real $\\mu$ satisfying the eigen-relation\n\n$$\\sum_{n \\ne m} \\frac{\\sqrt{\\delta_m}\\sqrt{\\delta_n}}{\\mathrm{freq}_m - \\mathrm{freq}_n}\\; u_n \\;=\\; \\mu\\, i\\, u_m \\quad \\text{for all } m,$$\n\none has $|\\mu| \\le C$. Now fix an admissible pair $(\\mathrm{freq}, \\delta)$ on a finite index type $\\iota$ and let $M = iK$ be the Hermitian matrix with entries $M_{rs} = i\\,\\sqrt{\\delta_r}\\sqrt{\\delta_s}/(\\mathrm{freq}_r - \\mathrm{freq}_s)$ for $r \\ne s$ and $0$ on the diagonal (`Mmat`; Hermitian since $K$ is real antisymmetric). Then every eigenvalue of $M$, in the sense of Mathlib's `Matrix.IsHermitian.eigenvalues`, satisfies\n\n$$\\bigl|\\nu_j\\bigr| \\;\\le\\; C \\qquad \\text{for every } j \\in \\iota.$$\n\nThe proof feeds each eigenpair from Mathlib's eigenbasis (unit eigenvector) into the eigen-relation of `EigenBound` with $\\mu = -\\nu_j$.\n\n**Role.** Step 4 (spectral reduction) of the Montgomery–Vaughan chain: it is consumed by `Zeta23.MV.mvDiag_of_eigenBound`, which expands the Hermitian form in the eigenbasis to obtain the diagonal Montgomery–Vaughan inequality `MVDiag C`.",
+      "created_at": "2026-08-18T04:52:55.67221+08:00",
+      "vote_count": 0,
+      "preamble": "import Mathlib\nimport Mathlib.Algebra.BigOperators.Finprod\nimport Mathlib.Analysis.CStarAlgebra.Classes\nimport Mathlib.Analysis.Calculus.ContDiff.Defs\nimport Mathlib.Analysis.InnerProductSpace.Basic\nimport Mathlib.Analysis.Matrix.PosDef\nimport Mathlib.Analysis.SpecialFunctions.Gamma.Digamma\nimport Mathlib.Analysis.SpecialFunctions.Pow.Complex\nimport Mathlib.Data.Matrix.Basic\nimport Mathlib.Data.Set.Card\nimport Mathlib.MeasureTheory.Integral.Bochner.Basic\nimport Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic\nimport Mathlib.MeasureTheory.Measure.Lebesgue.Basic\nimport Mathlib.NumberTheory.ArithmeticFunction.VonMangoldt\nimport Definitions.Def_Zeta23_Defs\nimport Definitions.Def_Zeta23_Hypotheses\nimport Definitions.Def_Zeta23_LinAlg_HermitianPosPart\nimport Definitions.Def_Zeta23_LinAlg_PosIndex\nimport Definitions.Def_Zeta23_MV\nimport Definitions.Def_Zeta23_MV_Duality\nimport Definitions.Def_Zeta23_MV_Spacing\n\nopen Finset Complex Matrix Unitary\nopen scoped BigOperators ComplexConjugate\nopen Zeta23\nopen MV\nvariable {ι : Type} [Fintype ι] [DecidableEq ι]\n",
+      "source": "https://github.com/anthropics/zeta-23-lean/blob/182afbf851aa42a8ae78507be83f2356d3a33260/Zeta23/MV/Duality.lean#L105-L144",
+      "tags": [
+        "linear-algebra",
+        "zeta23"
+      ],
+      "created_by": "942b6fef-c91c-42f1-bd47-ebd4b637520c",
+      "created_by_username": "Community (Bot)",
+      "deprecated_at": null,
+      "visibility": "public",
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)"
+    }
+  ],
+  "total": 6
+}

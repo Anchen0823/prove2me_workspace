@@ -1,0 +1,23 @@
+{
+  "theorem_id": "3d23bf2a-4938-4e21-a27c-2733e36173b1",
+  "theorem_name": "TaoFivePrimes.exp_sum_estimate_large_q_unit_source_envelope",
+  "theorem_title": "Tao (1.12): large-denominator source envelope",
+  "status": "Open",
+  "formal_statement": "namespace TaoFivePrimes\n\n\ntheorem exp_sum_estimate_large_q_unit_source_envelope\n    (x alpha beta U V : ℝ) (a : ℤ) (q q0 : ℕ)\n    (hx : (10 : ℝ) ^ 20 ≤ x)\n    (hq : 100 ≤ q) (hqx : (q : ℝ) ≤ x / 100)\n    (haq : Nat.Coprime a.natAbs q) (haunit : a.natAbs = 1)\n    (halpha : 4 * alpha = (a : ℝ) / q + beta)\n    (hbeta : |beta| ≤ 1 / (q : ℝ) ^ 2)\n    (hq0 : ∀ p ∈ q0.primeFactors, (p : ℝ) ≤ Real.sqrt x)\n    (hlarge : x ^ (2 / 3 : ℝ) ≤ (q : ℝ))\n    (hU : U = x / V ^ 2) (hV : V = 1.02 * x / q)\n    (hU40 : 40 ≤ U) (hV40 : 40 ≤ V)\n    (hUx : U < x) (hVx : V < x)\n    (hUV : U * V ≤ x / 4) (hUV2 : x ≤ U * V ^ 2)\n    (hUVq : U * V < (q : ℝ) - 1) :\n    ‖smoothedExpSum eta0 q0 x alpha‖ ≤\n      (96 / Real.pi ^ 2) * (x / (x / q) ^ 2) *\n          Real.log (4 * x) * Real.log (4 * Real.exp 1 * q / Real.pi) +\n        (0.1 * (x / Real.sqrt q) +\n          0.39 * (x / Real.sqrt (x / q))) * 3 * Real.log V ^ 2 +\n        (0.55 * (x / Real.sqrt U) +\n          0.78 * (x / Real.sqrt V)) * 2 * Real.log V +\n        20.16 * Real.sqrt x := by sorry\n\nend TaoFivePrimes",
+  "natural_language_statement": "Let $x\\ge 10^{20}$ and let $a/q$ approximate $4\\alpha$ with $100\\le q\\le x/100$, $(a,q)=1$, $|4\\alpha-a/q|\\le q^{-2}$, $|a|=1$, and $q\\ge x^{2/3}$. Let $q_0$ have no prime divisor greater than $\\sqrt{x}$. For real parameters $U,V$ satisfying $U=x/V^2$, $V=1.02x/q$, $40\\le U,V<x$, $UV\\le x/4$, $x\\le UV^2$, and $UV<q-1$, the smoothed von Mangoldt sum obeys\n$$\n\\begin{aligned}\n|S_{\\eta_0,q_0}(x,\\alpha)|\\le{}&\\frac{96}{\\pi^2}\\frac{x}{(x/q)^2}\\log(4x)\\log\\!\\left(\\frac{4eq}{\\pi}\\right)\\\\\n&+3\\left(0.1\\frac{x}{\\sqrt q}+0.39\\frac{x}{\\sqrt{x/q}}\\right)\\log^2 V\\\\\n&+2\\left(0.55\\frac{x}{\\sqrt U}+0.78\\frac{x}{\\sqrt V}\\right)\\log V+20.16\\sqrt x.\n\\end{aligned}\n$$\nThis is the explicit Section 6 envelope obtained from Tao Theorem 5.1 and the special Type I estimate (5.7). The final term records the modulus change from $2$ to $q_0$ through modulus $1$.",
+  "created_at": "2026-09-09T20:08:30.863309+08:00",
+  "vote_count": 0,
+  "tags": [
+    "analytic-number-theory",
+    "exponential-sums",
+    "number-theory"
+  ],
+  "preamble": "import Definitions.Def_TaoFivePrimes_SmoothedExpSum\nimport Definitions.Def_TaoFivePrimes_RepresentationCount\nimport Mathlib.Analysis.SpecialFunctions.Pow.Real",
+  "source": "Terence Tao, Every odd number greater than 1 is the sum of at most five primes, arXiv:1201.6656v4, Section 5 equations (5.5)-(5.7) and Section 6 proof of Theorem 1.3 equation (1.12), with Lemma 4.1: https://arxiv.org/html/1201.6656v4",
+  "deprecated_at": null,
+  "deprecated_by": null,
+  "visibility": "public",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "audits": [],
+  "readback": null
+}

@@ -1,0 +1,72 @@
+{
+  "decompositions": [
+    {
+      "submission_id": "308e42ec-6604-4445-8b66-e021c99c18bb",
+      "created_by": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "created_at": "2026-09-12T21:23:53.988197+08:00",
+      "deprecated_at": null,
+      "deprecated_by": null,
+      "children": [
+        {
+          "definition_id": "30efbeb8-fb86-4988-ac69-9da4bbe78e85",
+          "definition_name": "TaoFivePrimes_SmoothedExpSum",
+          "theorem_title": "Tao's smoothed exponential sum $S_{\\eta,q_0}(x,\\alpha)$",
+          "ordinal": 0,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        },
+        {
+          "definition_id": "48e5337b-62c2-4e24-8c38-b047da4fe522",
+          "definition_name": "TaoFivePrimes_RepresentationCount",
+          "theorem_title": "Tao's weighted three-prime representation count (K = 1000)",
+          "ordinal": 1,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        },
+        {
+          "theorem_id": "e1794571-24bf-41f1-8f08-9296fbea9a90",
+          "theorem_name": "TaoFivePrimes.theorem51_unit_numerator_bound",
+          "theorem_title": "Tao Theorem 5.1 with unit numerator: unoptimized modulus-two bound",
+          "status": "Open",
+          "ordinal": 2,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        },
+        {
+          "theorem_id": "cba0b2b8-5272-44e3-8764-6f3c559ebc64",
+          "theorem_name": "TaoFivePrimes.small_q_modulus_transfer_source_envelope",
+          "theorem_title": "Transfer the small-q estimate from modulus 2 to q₀",
+          "status": "Proved",
+          "ordinal": 3,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        }
+      ]
+    },
+    {
+      "submission_id": null,
+      "created_by": null,
+      "created_at": null,
+      "deprecated_at": null,
+      "deprecated_by": null,
+      "children": [
+        {
+          "definition_id": "30efbeb8-fb86-4988-ac69-9da4bbe78e85",
+          "definition_name": "TaoFivePrimes_SmoothedExpSum",
+          "theorem_title": "Tao's smoothed exponential sum $S_{\\eta,q_0}(x,\\alpha)$",
+          "ordinal": 0,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        },
+        {
+          "definition_id": "48e5337b-62c2-4e24-8c38-b047da4fe522",
+          "definition_name": "TaoFivePrimes_RepresentationCount",
+          "theorem_title": "Tao's weighted three-prime representation count (K = 1000)",
+          "ordinal": 1,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        }
+      ]
+    }
+  ]
+}

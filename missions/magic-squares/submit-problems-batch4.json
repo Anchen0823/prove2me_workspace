@@ -1,0 +1,76 @@
+{
+ "problems": [
+  {
+   "theorem_name": "MagicSquares.total_sum_eq_n_line_sum",
+   "theorem_title": "Total sum of a semi-magic square is n times the line sum",
+   "formal_statement": "namespace MagicSquares\n\ntheorem total_sum_eq_n_line_sum {n : ℕ} {α : Type*} [AddCommMonoid α]\n    (M : Square n α) (s : α) (hM : IsSemiMagic M s) :\n    totalSum M = n • s := by sorry\n\nend MagicSquares",
+   "natural_language_statement": "**Row-sum aggregation.** Let $A$ be an $n\\times n$ array over an additive\ncommutative monoid, and suppose every row sums to the same value $S$ (a\n*semi-magic square* of line sum $S$). Then the sum of **all** $n^{2}$ entries is\n\n$$\n\\sum_{i}\\sum_{j} A_{ij} \\;=\\; n\\,S .\n$$\n\nIndeed the total is the sum of the $n$ row sums, each of which equals $S$. This\nis the first structural identity of the theory: it is what converts the\n*row* condition into a global constraint, and it is the reason the magic\nconstant of a normal magic square of order $n$ must be $n(n^{2}+1)/2$ — the\nentries are $1,\\dots,n^{2}$, whose total is $n^{2}(n^{2}+1)/2$, and dividing by\n$n$ gives the line sum.\n\n**Formalization Note** Entries live in an arbitrary `AddCommMonoid`, so the\nstatement reads $n\\bullet S$ (`nsmul`) rather than $n\\cdot S$; over $\\mathbb{N}$\nor a semiring the two coincide. Only the row half of `IsSemiMagic` is used.",
+   "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\n",
+   "source": "Beck, Cohen, Cuomo & Gribelyuk, The number of ``magic'' squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707--717; arXiv:math/0201013v3.",
+   "tags": [
+    "combinatorics",
+    "magic-squares"
+   ]
+  },
+  {
+   "theorem_name": "MagicSquares.transpose_preserves_magic",
+   "theorem_title": "Transposing a magic square preserves magicness",
+   "formal_statement": "namespace MagicSquares\n\ntheorem transpose_preserves_magic {n : ℕ} {α : Type*} [AddCommMonoid α]\n    (M : Square n α) (s : α) (hM : IsMagic M s) :\n    IsMagic (transpose M) s := by sorry\n\nend MagicSquares",
+   "natural_language_statement": "**Transposition.** If $A$ is a magic square of line sum $S$, so is its\ntranspose $A^{\\mathsf T}$, with the same line sum.\n\nThe square is a symmetry of the $n\\times n$ grid, so it permutes the lines:\nrows of $A^{\\mathsf T}$ are the columns of $A$ and vice versa, while each main\ndiagonal is fixed. Hence every line of $A^{\\mathsf T}$ is a line of $A$ and\nstill sums to $S$, and the same holds verbatim for panmagic (pandiagonal)\nsquares, whose broken diagonals are also carried to broken diagonals.\n\n**Formalization Note** `transpose` is the entrywise flip $(i,j)\\mapsto(j,i)$\nfrom `Definitions.Def_MagicSquaresTransforms`. The four line sums are tracked by\n`rowSum_transpose`, `colSum_transpose`, `diagSum_transpose` and\n`antiDiagSum_transpose`; the anti-diagonal case uses that $i\\mapsto n-1-i$ is a\nbijection of $\\mathrm{Fin}\\,n$, so reindexing the sum is legitimate.",
+   "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nimport Definitions.Def_MagicSquaresTransforms\n",
+   "source": "Beck, Cohen, Cuomo & Gribelyuk, The number of ``magic'' squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707--717; arXiv:math/0201013v3.",
+   "tags": [
+    "combinatorics",
+    "magic-squares"
+   ]
+  },
+  {
+   "theorem_name": "MagicSquares.flipVertical_preserves_magic",
+   "theorem_title": "Vertical flip preserves magicness",
+   "formal_statement": "namespace MagicSquares\n\ntheorem flipVertical_preserves_magic {n : ℕ} {α : Type*} [AddCommMonoid α]\n    (M : Square n α) (s : α) (hM : IsMagic M s) :\n    IsMagic (flipVertical M) s := by sorry\n\nend MagicSquares",
+   "natural_language_statement": "**Vertical reflection.** Reversing the order of the rows of a magic square\nagain gives a magic square, with the same line sum.\n\nThe reflection $(i,j)\\mapsto(n-1-i,\\,j)$ sends rows to rows and columns to\ncolumns, so every row and column of the reflected array is a row or column of the\noriginal and sums to $S$. The two main diagonals are **interchanged**: the\ndescending diagonal of the reflected square is the ascending diagonal of the\noriginal, and conversely. Since a magic square requires both diagonals to sum to\n$S$, the reflected array satisfies all the conditions.\n\nTogether with the horizontal flip and the transpose, this generates the full\ndihedral symmetry group of order $8$ of the square, under which the set of magic\nsquares of a fixed line sum is closed — the fact that makes \"up to symmetry\"\ncounts meaningful.\n\n**Formalization Note** `flipVertical` reverses the row index via `Fin.rev`.\nColumn sums are invariant because $i\\mapsto n-1-i$ permutes $\\mathrm{Fin}\\,n$, and\nthe diagonal swap is proved by the same reindexing.",
+   "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nimport Definitions.Def_MagicSquaresTransforms\n",
+   "source": "Beck, Cohen, Cuomo & Gribelyuk, The number of ``magic'' squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707--717; arXiv:math/0201013v3.",
+   "tags": [
+    "combinatorics",
+    "magic-squares"
+   ]
+  },
+  {
+   "theorem_name": "MagicSquares.flipHorizontal_preserves_magic",
+   "theorem_title": "Horizontal flip preserves magicness",
+   "formal_statement": "namespace MagicSquares\n\ntheorem flipHorizontal_preserves_magic {n : ℕ} {α : Type*} [AddCommMonoid α]\n    (M : Square n α) (s : α) (hM : IsMagic M s) :\n    IsMagic (flipHorizontal M) s := by sorry\n\nend MagicSquares",
+   "natural_language_statement": "**Horizontal reflection.** Reversing the order of the columns of a magic square\nagain gives a magic square, with the same line sum.\n\nThis is the mirror image of the vertical flip: $(i,j)\\mapsto(i,\\,n-1-j)$ sends\ncolumns to columns and rows to rows, and interchanges the two main diagonals. All\nlines therefore still sum to $S$.\n\n**Formalization Note** `flipHorizontal` reverses the column index via `Fin.rev`.\nRow sums are invariant by reindexing; the two diagonals are swapped.",
+   "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nimport Definitions.Def_MagicSquaresTransforms\n",
+   "source": "Beck, Cohen, Cuomo & Gribelyuk, The number of ``magic'' squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707--717; arXiv:math/0201013v3.",
+   "tags": [
+    "combinatorics",
+    "magic-squares"
+   ]
+  },
+  {
+   "theorem_name": "MagicSquares.affine_preserves_magic",
+   "theorem_title": "Affine substitution preserves the magic property",
+   "formal_statement": "namespace MagicSquares\n\ntheorem affine_preserves_magic {n : ℕ} {α : Type*} [Semiring α]\n    (M : Square n α) (s a b : α) (hM : IsMagic M s) :\n    IsMagic (affine a b M) (a * s + n • b) := by sorry\n\nend MagicSquares",
+   "natural_language_statement": "**Affine substitution.** Let $A$ be a magic square of order $n$ with line sum\n$S$, and let $a,b$ be scalars. The array $A'$ with entries\n\n$$\nA'_{ij} \\;=\\; a\\,A_{ij} + b\n$$\n\nis again magic, with line sum\n\n$$\nS' \\;=\\; aS + nb .\n$$\n\nEach line has exactly $n$ entries, so its sum becomes $aS+nb$; this applies to\nrows, columns and both main diagonals alike. The shift by $b$ contributes $nb$\nbecause it is added $n$ times along the line.\n\nTwo consequences drive the enumerative theory. Taking $a=1$ shows that the\ncounting function depends only on the line sum up to translation, and taking\n$a=-1,\\ b=n^{2}+1$ over $\\mathbb{Z}$ gives the classical *complement*\n$A\\mapsto n^{2}+1-A$, which sends a normal magic square of order $n$ to another\none with line sum $n(n^{2}+1)-S$.\n\n**Formalization Note** `affine a b M` is the entrywise map from\n`Definitions.Def_MagicSquaresTransforms`. The ring law is used only to distribute\n$a$ over a finite sum and to collapse $\\sum_{j} b$ to $n\\bullet b$.",
+   "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nimport Definitions.Def_MagicSquaresTransforms\n",
+   "source": "Beck, Cohen, Cuomo & Gribelyuk, The number of ``magic'' squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707--717; arXiv:math/0201013v3.",
+   "tags": [
+    "combinatorics",
+    "magic-squares"
+   ]
+  },
+  {
+   "theorem_name": "MagicSquares.order_three_opposite_sum_eq_twice_center",
+   "theorem_title": "In an order-three magic square, opposite cells sum to twice the centre",
+   "formal_statement": "namespace MagicSquares\n\ntheorem order_three_opposite_sum_eq_twice_center\n    (M : Square 3 ℕ) (s : ℕ) (hM : IsMagic M s) (i j : Fin 3) :\n    M i j + M (Fin.rev i) (Fin.rev j) = 2 * M 1 1 := by sorry\n\nend MagicSquares",
+   "natural_language_statement": "**Opposite cells in an order-three magic square.** Let $A$ be a $3\\times3$\nmagic square with line sum $S$. Then for **every** pair of centrally opposite\ncells,\n\n$$\nA_{ij} + A_{2-i,\\,2-j} \\;=\\; 2\\,A_{11} .\n$$\n\nEquivalently, an order-three magic square is automatically *associative* with\ncomplement constant $2A_{11}$. Since MacMahon's identity gives $S = 3A_{11}$,\neach such pair sums to $\\tfrac23 S$, and in particular the square is determined\nby its centre: every opposite pair is pinned to twice it.\n\nThe four pairs are $(1,1)$–$(3,3)$ and $(1,3)$–$(3,1)$ (the two diagonals) and\n$(1,2)$–$(3,2)$, $(2,1)$–$(2,3)$ (the middle column and middle row); the fifth\n\"pair\" is the centre with itself, which is trivial. This is the structural fact\nbehind the classical parametrisation of $3\\times3$ magic squares by two corner\nentries: once $A_{11}$ and one corner are chosen, all remaining cells follow.\n\n**Formalization Note** Cells are indexed by `Fin 3` and `Fin.rev` is the\nreversal $i\\mapsto 2-i$, so $(i,j)$ and $(\\mathrm{rev}\\,i,\\mathrm{rev}\\,j)$ are\nthe centrally opposite pair. The proof expands the nine line identities and\nfinishes by linear arithmetic; no integrality hypothesis beyond $\\mathbb{N}$ is\nneeded.",
+   "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\n",
+   "source": "Beck, Cohen, Cuomo & Gribelyuk, The number of ``magic'' squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707--717; arXiv:math/0201013v3.",
+   "tags": [
+    "combinatorics",
+    "magic-squares"
+   ]
+  }
+ ]
+}
