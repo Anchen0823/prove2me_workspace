@@ -1,0 +1,42 @@
+[
+ {
+  "label": "def MagicSquares",
+  "theorem_id": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+  "item_id": "2209c120-dab0-4743-a54b-0d5b7551177f"
+ },
+ {
+  "label": "def MagicSquaresSemiMagic3",
+  "theorem_id": "983f535e-819e-4d18-baba-388fb3c39413",
+  "item_id": "cfb5a26c-6525-430d-b7df-34f9ee58a18d"
+ },
+ {
+  "label": "def MagicSquaresCompositions",
+  "theorem_id": "73ed6522-7b76-4bfc-b852-f197b90ec3b2",
+  "item_id": "2150c4ee-542a-4d3f-bf16-eb0991c7d6e7"
+ },
+ {
+  "label": "comps_card",
+  "theorem_id": "65af2905-cd30-4bb9-aa15-3ea5f86790e0",
+  "item_id": "67df37ac-fafb-440e-8961-88b9abba8ac6"
+ },
+ {
+  "label": "sm3_canonical",
+  "theorem_id": "650b0511-bff1-4101-84b1-a49d5bef9849",
+  "item_id": "bf0afdd3-3246-4b1d-9b02-cee8b7d50d8d"
+ },
+ {
+  "label": "sm3_bij",
+  "theorem_id": "c4897555-460d-4fc5-8a01-732b5d8f39c9",
+  "item_id": "a5be31bb-4194-408b-b603-c72e69303121"
+ },
+ {
+  "label": "sm3_params_card",
+  "theorem_id": "7d09e267-c923-49c2-91f3-76185a464ad4",
+  "item_id": "15159fb2-cea4-40b5-bf4c-6074ece4d9e8"
+ },
+ {
+  "label": "semi_magic_count_three (GOAL)",
+  "theorem_id": "55e2191d-be25-4e6d-af7a-4635a34e5c63",
+  "item_id": "a05cbd36-a1aa-409a-8a5d-907e38a49f3b"
+ }
+]

@@ -2,7 +2,7 @@
 
 负责人：anche（徐宇轩） · 环境：Lean 4.33.1 / Mathlib `0df444a3` · 平台：prove2.me v0.10.4
 
-最后更新：2026-09-16 22:55（Asia/Shanghai）
+最后更新：2026-09-17 02:20（goal 已 Proved）（Asia/Shanghai）
 
 ## 0. 本次会话的主线
 
@@ -77,9 +77,9 @@
 | `MagicSquares.order_three_opposite_sum_eq_twice_center` | `695c1fc5-a4a3-4ee4-9eda-9a132228ba46` | **Proved** | ✅ 2 |
 | `MagicSquares.magic_three_param_sufficient` | `665c40f1-688c-4f40-aafb-1b8d82bbeb35` | **Proved** | ✅ 3 |
 | `MagicSquares.magic_three_param_necessary` | `4e513d72-b4b7-419b-a0e6-dc115ee77a94` | **Proved** | ✅ 4 |
-| `MagicSquares.magic_three_param_bij` | `f62c9364-c183-42f8-84b8-a6ac8e72ade7` | 证明已提交 `2b7bc6bc`（待轮询） | ✅ 5 |
-| `MagicSquares.param_three_card` | `8063946a-dd43-4ff9-9107-f3e4d7cb040b` | **Open** | ✅ 6 |
-| `MagicSquares.magic_count_three_divisible` | `393a2adc-5e8e-4847-b9c6-f7b141a5114e` | **Open** — 归约已 ACCEPTED（`2e4cb80a`），待两个子引理证毕后自动转 Proved | GOAL |
+| `MagicSquares.magic_three_param_bij` | `f62c9364-c183-42f8-84b8-a6ac8e72ade7` | **Proved** | ✅ 5 |
+| `MagicSquares.param_three_card` | `8063946a-dd43-4ff9-9107-f3e4d7cb040b` | **Proved**（submission `db22e0b4`，ACCEPTED） | ✅ 6 |
+| `MagicSquares.magic_count_three_divisible` | `393a2adc-5e8e-4847-b9c6-f7b141a5114e` | **Proved** — GOAL 已达成（2026-09-17） | GOAL |
 | `MagicSquares.semi_magic_count_three` | `55e2191d-be25-4e6d-af7a-4635a34e5c63` | **Open** | |
 
 ## 5. MacMahon 计数定理的分解树

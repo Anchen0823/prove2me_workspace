@@ -1,0 +1,14 @@
+import Mathlib
+#check Fin.cons
+#check Fin.tail
+#check Fin.cons_self_tail
+#check Fin.tail_cons
+#check Fin.cons_zero
+#check Fin.cons_succ
+#check Fin.sum_univ_succ
+#check Fin.sum_univ_castSucc
+#check Finset.sum_range_reflect
+#check Finset.single_le_sum
+#check Nat.choose_succ_succ
+#check Finset.card_sigma
+#check Finset.mem_sigma

@@ -1,0 +1,55 @@
+{
+ "problems": [
+  {
+   "theorem_name": "MagicSquares.comps_card",
+   "theorem_title": "Stars and bars: the number of compositions of n into k parts",
+   "formal_statement": "namespace MagicSquares\n\ntheorem comps_card (N k n : ℕ) (hn : n ≤ N) :\n    (comps N (k + 1) n).card = (n + k).choose n := by sorry\n\nend MagicSquares",
+   "natural_language_statement": "**Stars and bars.** The number of compositions of $n$ into\n$k+1$ nonnegative parts is\n\n$$\\#\\{x\\in\\mathbb{N}^{k+1} : x_{0}+\\cdots+x_{k}=n\\}=\\binom{n+k}{n}.$$\n\nThis is the classical stars-and-bars count, stated in the boxed form used\nthroughout the mission: `comps N (k+1) n` is the finite set of functions\n$\\mathrm{Fin}(k+1)\\to\\mathrm{Fin}(N+1)$ whose values sum to $n$, and the\nhypothesis $n\\le N$ guarantees the box is inactive — every coordinate of such a\ntuple is at most $n$, hence at most $N$.\n\n**Proof.** Splitting off the first coordinate identifies compositions of $n$\ninto $k+2$ parts with the disjoint union, over $i=0,\\dots,n$, of the\ncompositions of $n-i$ into $k+1$ parts; this gives the recurrence\n$c(k+1,n)=\\sum_{i\\le n}c(k,n-i)$ with $c(0,n)=[n=0]$. The binomial\n$\\binom{n+k}{n}$ satisfies the same recurrence by the hockey-stick identity\n$\\sum_{j\\le n}\\binom{j+k}{j}=\\binom{n+k+1}{n}$, which is itself an immediate\ninduction from Pascal's rule.\n\n**Formalization Note** The count is taken inside a fixed box $\\mathrm{Fin}(N+1)$\nbecause $\\mathbb{N}^{k}$ has no `Fintype`; holding $N$ fixed while $k$ and $n$\nvary is what lets the induction avoid any reindexing of the tail.",
+   "preamble": "import Mathlib\nimport Definitions.Def_MagicSquaresCompositions\nopen MagicSquares",
+   "source": "P. A. MacMahon, Combinatory Analysis (1915); M. Beck, T. Cohen, J. Cuomo, P. Gribelyuk, The number of \"magic\" squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707-717; arXiv:math/0201013v3, Section 2, Theorem 1.",
+   "tags": [
+    "combinatorics",
+    "enumerative-combinatorics"
+   ]
+  },
+  {
+   "theorem_name": "MagicSquares.sm3_canonical",
+   "theorem_title": "Canonical decomposition of a 3x3 semi-magic square",
+   "formal_statement": "namespace MagicSquares\n\ntheorem sm3_canonical (M : Square 3 ℕ) (t : ℕ) (hM : IsSemiMagic M t) :\n    ∃ u v w x y z : ℕ,\n      M = sm3Of u v w x y z ∧\n        u + v + w + x + y + z = t ∧\n          min x (min y z) = 0 ∧\n            ∀ u' v' w' x' y' z' : ℕ,\n              M = sm3Of u' v' w' x' y' z' →\n                min x' (min y' z') = 0 →\n                  u' = u ∧ v' = v ∧ w' = w ∧ x' = x ∧ y' = y ∧ z' = z := by sorry\n\nend MagicSquares",
+   "natural_language_statement": "Every $3\\times3$ semi-magic square with\nnonnegative integer entries and line sum $t$ can be written **uniquely** as a\nnonnegative integer combination\n\n$$M=u\\,D+v\\,E+w\\,F+x\\,A+y\\,B+z\\,C$$\n\nof the six order-three permutation matrices, normalized by\n$\\min(x,y,z)=0$. Here $D,E,F$ are the three even transversals (the identity and\nthe two $3$-cycles) and $A,B,C$ the three odd ones (the transpositions).\n\n**Existence.** Put $u=\\min D$, $v=\\min E$, $w=\\min F$ and subtract\n$uD+vE+wF$; the residual $M'$ is again semi-magic and each of its three even\ntransversals has minimum $0$. Writing $M'$ in the four-parameter form\n$$\\begin{pmatrix} a & b & t'-a-b\\\\ c & d & t'-c-d\\\\\nt'-a-c & t'-b-d & a+b+c+d-t'\\end{pmatrix},$$\nthe three vanishing minima read\n$$\\min(a,d,a+b+c+d-t')=\\min(b,t'-c-d,t'-a-c)=\\min(t'-a-b,c,t'-b-d)=0.$$\nIf $b>c$ then each of the three ways for the middle minimum to vanish forces\nthe opposite inequality: $b=0$ is impossible, $t'-c-d=0$ gives $c+d=t'$ and\nhence $b\\le c$ from $b+d\\le t'$, and $t'-a-c=0$ gives $a+c=t'$ and hence\n$b\\le c$ from $a+b\\le t'$. So $b\\le c$, and symmetrically $c\\le b$; thus\n$b=c$, which is exactly the statement that $M'$ is a combination of $A,B,C$\nalone.\n\n**Uniqueness.** The normalization is essential: without it the single relation\n$D+E+F=A+B+C$ (both sides equal the all-ones matrix) would identify distinct\n$6$-tuples. With $\\min(x,y,z)=0$ the coefficients are recovered from $M$ by\n$u=\\min D$, $v=\\min E$, $w=\\min F$ and $x=M_{00}-u$, $y=M_{11}-u$, $z=M_{01}-v$.\n\n**Formalization Note** `sm3Of` is defined over $\\mathbb{N}$ with truncated\nsubtraction where necessary, so every recovery identity has to be stated with\nthe admissibility inequalities as explicit hypotheses.",
+   "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nimport Definitions.Def_MagicSquaresSemiMagic3\nopen MagicSquares",
+   "source": "P. A. MacMahon, Combinatory Analysis (1915); M. Beck, T. Cohen, J. Cuomo, P. Gribelyuk, The number of \"magic\" squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707-717; arXiv:math/0201013v3, Section 2, Theorem 1.",
+   "tags": [
+    "combinatorics",
+    "magic-squares",
+    "enumerative-combinatorics"
+   ]
+  },
+  {
+   "theorem_name": "MagicSquares.sm3_bij",
+   "theorem_title": "Bijection between semi-magic squares and normalized parameters",
+   "formal_statement": "namespace MagicSquares\n\ntheorem sm3_bij (t : ℕ) : semiMagicCount 3 t = sm3Count t := by sorry\n\nend MagicSquares",
+   "natural_language_statement": "The map\n\n$$(u,v,w,x,y,z)\\longmapsto uD+vE+wF+xA+yB+zC$$\n\nis a bijection from the normalized coefficient vectors — six nonnegative\nintegers summing to $t$ with $\\min(x,y,z)=0$ — onto the $3\\times3$ semi-magic\nsquares of line sum $t$. Consequently\n\n$$H_{3}(t)=\\mathrm{sm3Count}(t).$$\n\nSurjectivity and injectivity are exactly the two halves of `sm3_canonical`;\nwhat is left is the bookkeeping that turns a bijection of carriers into an\nequality of `Finset.card`s. Two coercions have to be handled explicitly. First,\n`semiMagicCount 3 t` counts arrays with entries in `Fin (t+1)`, so the forward\nmap must be read into that finite type — legitimate because every entry of a\nsemi-magic square of line sum $t$ is at most $t$. Second, `sm3Count t` counts\nfunctions `Fin 6 → Fin (t+1)`, and the bound is again lossless because the six\ncoefficients sum to $t$.\n\n**Formalization Note** Both directions therefore need a `Finset.card_bij`\nwith an explicit proof that the round trip is the identity on each side.",
+   "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nimport Definitions.Def_MagicSquaresSemiMagic3\nopen MagicSquares",
+   "source": "P. A. MacMahon, Combinatory Analysis (1915); M. Beck, T. Cohen, J. Cuomo, P. Gribelyuk, The number of \"magic\" squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707-717; arXiv:math/0201013v3, Section 2, Theorem 1.",
+   "tags": [
+    "combinatorics",
+    "magic-squares",
+    "enumerative-combinatorics"
+   ]
+  },
+  {
+   "theorem_name": "MagicSquares.sm3_params_card",
+   "theorem_title": "Counting the normalized coefficient vectors",
+   "formal_statement": "namespace MagicSquares\n\ntheorem sm3_params_card (t : ℕ) :\n    sm3Count t = 3 * ((t + 3).choose 4) + ((t + 2).choose 2) := by sorry\n\nend MagicSquares",
+   "natural_language_statement": "The number of normalized coefficient vectors —\nsix nonnegative integers summing to $t$ whose odd part $(x,y,z)$ has minimum\n$0$ — is\n\n$$\\mathrm{sm3Count}(t)=3\\binom{t+3}{4}+\\binom{t+2}{2}.$$\n\n**Proof.** Partition the vectors according to the *first* zero among\n$(x,y,z)$. If $x=0$ the remaining five coordinates are arbitrary nonnegative\nintegers summing to $t$, giving $\\binom{t+4}{4}$ vectors. If $x>0$ and $y=0$,\nsubtract $1$ from $x$ and the remaining five coordinates sum to $t-1$, giving\n$\\binom{t+3}{4}$. If $x>0$, $y>0$ and $z=0$, subtract $1$ from each of $x$ and\n$y$ and the remaining five sum to $t-2$, giving $\\binom{t+2}{4}$. Hence\n\n$$\\mathrm{sm3Count}(t)=\\binom{t+4}{4}+\\binom{t+3}{4}+\\binom{t+2}{4}.$$\n\nTwo applications of Pascal's identity collapse this to MacMahon's form:\n$\\binom{t+4}{4}=\\binom{t+3}{4}+\\binom{t+3}{3}$ and\n$\\binom{t+3}{4}=\\binom{t+2}{4}+\\binom{t+2}{3}$, so the sum equals\n$3\\binom{t+3}{4}+\\bigl(\\binom{t+3}{3}-\\binom{t+2}{3}\\bigr)$, and one more\ninstance of Pascal gives $\\binom{t+3}{3}-\\binom{t+2}{3}=\\binom{t+2}{2}$.\n\n**Formalization Note** The three counts of five-part compositions come from\n`comps_card`. Because all arithmetic stays in $\\mathbb{N}$, the Pascal steps\nmust be arranged so that no subtraction is truncated.",
+   "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nimport Definitions.Def_MagicSquaresSemiMagic3\nopen MagicSquares",
+   "source": "P. A. MacMahon, Combinatory Analysis (1915); M. Beck, T. Cohen, J. Cuomo, P. Gribelyuk, The number of \"magic\" squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707-717; arXiv:math/0201013v3, Section 2, Theorem 1.",
+   "tags": [
+    "combinatorics",
+    "magic-squares",
+    "enumerative-combinatorics"
+   ]
+  }
+ ]
+}

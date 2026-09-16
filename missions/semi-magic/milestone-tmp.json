@@ -1,0 +1,5 @@
+{
+ "item_id": "a05cbd36-a1aa-409a-8a5d-907e38a49f3b",
+ "milestone_title": "MacMahon's semi-magic count",
+ "milestone_description": "Assembling the two children: $H_{3}(t)=\\mathrm{sm3Count}(t)$ from the bijection, and $\\mathrm{sm3Count}(t)=3\\binom{t+3}{4}+\\binom{t+2}{2}$ from the parameter count. The result is a **polynomial** in $t$ of degree $4=(3-1)^{2}$, the order-three case of the Ehrhart/Stanley theorem that $H_{n}$ is a polynomial of degree $(n-1)^{2}$ — in contrast with the magic count $M_{3}$, which is only a quasi-polynomial."
+}

@@ -66,6 +66,39 @@
   the mission DAG (their `/theorems/<id>/graph` shows `edges = []`). Pass
   `mission_id` when you want the node inside the graph.
 
+- **提交 problem 的端点是 `/submit-problem`（单数）**。写成 `/submit-problems` 会返回
+  404 的 HTML 页面而不是 JSON（容易误判成网络问题）。payload 仍是
+  `{"problems": [...]}`，一次可排队多个，响应里给 `jobs[].job_id`，
+  再轮询 `/publish-jobs/<job_id>` 拿 `theorem_id`。
+- **Mission 的 goal 节点不接受 milestone**：给 goal 的 item 发
+  `/mission-proposals/<id>/milestones` 会报
+  `The goal takes no milestone metadata`；milestone 只挂在支撑子目标上。
+- 让节点进入 mission DAG 的机制是 **proposal items**（`POST
+  /mission-proposals/<id>/items`，`{"kind":"reference","theorem_id":...}`），
+  不是提交时传 mission_id；随后 `PATCH` 设 `main_item_id` + `item_order`。
+
+## Lean 工程坑（Fin / Finset，2026-09-17）
+
+- **`Fin.cons` 是依赖类型版本**，高阶合一常把类型族留成元变量，随后到 `ℕ` 的
+  强制转换报 `has type ?m j but is expected to have type ℕ`。必须显式钉住：
+  `Fin.cons (n := k) (α := fun _ => Fin (N+1)) x q`。
+  同理 `simp [Fin.cons_zero, Fin.cons_succ]` 也会踩；改用 `change` 让 Lean
+  用 definitional equality 展开更稳。
+- `change i + ∑ j : Fin k, ... = n` 在 `change` 里解析会乱 → 必须
+  `change i + (∑ j : Fin k, ...) = n`（加括号）。
+- `Finset.single_le_sum` 在被局部变量遮蔽时推断失败 → 用命名参数显式给
+  `s :=`、`f :=`。
+- `Finset.sum_range_reflect f (n+1)` 给的是 `∑ j, f (n-j) = ∑ j, f j`，
+  正好是拆分递推需要的 reindex，别手写。
+- **`Finset.mem_filter.mp (by simpa [...] using h)`** 常在 solution 文件里失败：
+  simp 把 `< n+1` 归成 `≤ n`，签名 `?m ∈ ?s ∧ ?p ?m` 对不上。
+  解法：先写一条**显式类型**的 `have h' : x ∈ (...).filter p := by simpa ... using h`，
+  再 `Finset.mem_filter.mp h'`。
+- 新增 `Definitions/*.lean` 后必须先 `lake build Definitions.Def_X` 生成 olean，
+  否则引用它的 `lake env lean` 报 `object file ... does not exist`。
+- 计数定理若形如 `C(n+k-1, n)`，把陈述写成「`k+1` 个部分」而非「`k` 个部分」，
+  这样公式里没有 `k-1`，`k=0` 时不会因 Nat 截断减法出错。
+
 ## Reusable proof technique: beating a too-weak "count" hypothesis
 
 When a hypothesis carries a covering count `⌊W/L⌋ + 1` that over-counts at the
