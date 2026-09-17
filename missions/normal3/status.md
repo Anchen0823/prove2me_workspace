@@ -1,6 +1,6 @@
 # Mission: normal3 — 三阶幻方的完整分类（洛书唯一性）
 
-负责人：anche（徐宇轩） · 环境：Lean 4.33.1 / Mathlib `0df444a3` · 平台：prove2.me v0.10.4
+负责人：anche（徐宇轩） · 环境：Lean 4.33.1 / Mathlib `0df444a3` · 平台：prove2.me v0.10.3
 
 创建：2026-09-17 · 最后更新：2026-09-17 15:35（两个节点全部 Proved）
 

@@ -8,7 +8,7 @@ import subprocess
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PY = r"C:/Users/anche/.workbuddy/binaries/python/versions/3.13.12/python.exe"
+PY = sys.executable
 API = os.path.join(ROOT, "scripts", "p2m_api.py")
 
 ITEMS = [

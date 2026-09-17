@@ -34,7 +34,7 @@ if($v.exit_code -ne 0 -or $v.sha256 -ne (Get-FileHash $file).Hash){throw 'Local 
 if($Part -eq 'scale' -and $v.sorryAx_found){throw 'Unproved proof dependency'}
 $s=Get-Content $file -Raw
 if($s -match '\bsorry\b|\baxiom\b|import examples\.') {throw 'Unexpected proof placeholder or local import'}
-if($Part -eq 'scale' -and $s -match 'import Theorems\.') {throw 'Type I must be a complete proof'}
+if($Part -eq 'scale' -and $s -match 'import Theorems\.') {throw 'Scale leaf must be a complete proof'}
 $actual=[regex]::Match($s,'(?s)theorem solution\s*(.*?)\s*:= by').Groups[1].Value -replace '\s',''
 $pattern='(?s)theorem '+[regex]::Escape($name)+'\s*(.*?)\s*:= by'
 $expected=[regex]::Match($t.formal_statement,$pattern).Groups[1].Value -replace '\s',''

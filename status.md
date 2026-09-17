@@ -4,9 +4,20 @@ Last updated: 2026-09-17 (Asia/Shanghai)
 
 ## Current work
 
-Active mission: **Every Odd Number Greater Than 1 is the Sum of at Most Five Primes**. See [the mission handoff](missions/five-primes/status.md).
+Active mission: **none - waiting on the user's next pick.**
 
-Current phase: resolve the remaining Theorem 5.1 dependency of the accepted large-q sketch, on the user's explicit continuation request. The modulus-transfer dependency is already Proved. Local Type I calculus and bounded-variation work continues; the target is not yet proved. See [the current proof gap](missions/five-primes/theorem51-progress.md). The earlier Rosser timeout repair remains complete and is unrelated to this active task.
+The magic-squares line opened on 2026-09-16 is **finished**: Mission I, II and
+III all have their goal node `Proved` (2026-09-17), and every published node in
+the three missions is `Proved`. Proposals I and II are `Reviewed`, III is
+`In review`. Measured node counts are in
+[the project review](missions/project-review-2026-09-17.md).
+
+Lines with work still open (platform node counts measured 2026-09-17):
+**Every Odd Number ... Five Primes** - 50 nodes, 28 Open, including 2
+`Disproved`; **Weak Goldbach** - 18 Open; **Irrationality of Euler's gamma** -
+about 16 Open. The next magic-squares candidate, counting panmagic and
+symmetric order-three squares, is scouted numerically in the project review and
+awaits a go-ahead.
 
 Write mathematical work, Lean code, and handoff documents in English. Report progress to the user in Chinese.
 
@@ -14,10 +25,13 @@ Write mathematical work, Lean code, and handoff documents in English. Report pro
 
 | Mission | Status | Handoff |
 | --- | --- | --- |
-| **Magic Squares I: MacMahon's Enumeration of Order-Three Magic Squares** | **Active.** 17 theorems Proved; 1 open child (`param_three_card`) before the goal auto-resolves. Mission proposal `In review`. | [Magic-squares handoff](missions/magic-squares/status.md) · [通俗说明](missions/magic-squares/intro.md) |
-| Every Odd Number Greater Than 1 is the Sum of at Most Five Primes | Open; 13 frontier leaves on 2026-09-12; complementary correlation Proved, quadratic prime mass Open | [Five-primes handoff](missions/five-primes/status.md) |
-| The Bunkbed Conjecture Is False | Root `Proved`; zero open leaves, verified 2026-09-12 | [Bunkbed archive](missions/bunkbed/status.md) |
-| Weak Goldbach Conjecture — target `WeakGoldbach.verified_two_primes_4e14_to_4e18` | Target Open, reduced on 2026-09-15 to one Open sieve-coverage child | [Weak-Goldbach handoff](missions/weak-goldbach/status.md) |
+| **Magic Squares I: MacMahon's Enumeration of Order-Three Magic Squares** | **Complete.** Goal `MagicSquares.magic_count_three_divisible` `Proved` on 2026-09-17; all nodes `Proved`. Proposal `Reviewed`. | [Magic-squares handoff](missions/magic-squares/status.md) - [intro](missions/magic-squares/intro.md) |
+| **Magic Squares II: MacMahon's Semi-Magic Count** | **Complete.** Goal `MagicSquares.semi_magic_count_three` `Proved` on 2026-09-17; all nodes `Proved`. Proposal `Reviewed`. | [Semi-magic handoff](missions/semi-magic/status.md) |
+| **Magic Squares III: Normal Order-Three Squares (Lo Shu uniqueness)** | **Complete.** Goal `MagicSquares.magic_three_normal_eight` `Proved` on 2026-09-17; both nodes `Proved`. Proposal `In review`. | [Normal3 handoff](missions/normal3/status.md) |
+| Every Odd Number Greater Than 1 is the Sum of At Most Five Primes | Open; 50 nodes, 28 Open on 2026-09-17, including 2 `Disproved` nodes | [Five-primes handoff](missions/five-primes/status.md) |
+| The Bunkbed Conjecture Is False | Root `Proved`; zero open leaves | [Bunkbed archive](missions/bunkbed/status.md) |
+| Weak Goldbach Conjecture - target `WeakGoldbach.verified_two_primes_4e14_to_4e18` | Target Open, reduced to one Open sieve-coverage child; 18 nodes Open | [Weak-Goldbach handoff](missions/weak-goldbach/status.md) |
+| Irrationality of Euler's gamma | Partly `Proved`; about 16 nodes Open. No dashboard page yet. | [Euler-gamma checkpoint](missions/euler-gamma/SESSION-CHECKPOINT.md) |
 
 ## Start the next mission
 
@@ -516,16 +530,19 @@ parametrization is complete; and — the hard one — the map
 $M\mapsto(M_{00},M_{02})$ is a **bijection** onto the admissible parameter
 pairs, so $M_3(3e)=\mathrm{paramCount}(e)$ (submission `2b7bc6bc`, ACCEPTED).
 
-**Remaining.** One open child, `MagicSquares.param_three_card`
-(`8063946a`): $\mathrm{paramCount}(e)=2e^2+2e+1$. The mathematics is settled
-(fibre-wise in $a$: interval length $2a+1$ for $a\le e$ and $4e-2a+1$ for
-$a\ge e$, giving $(e+1)^2+(e+1)^2-(2e+1)$); the work left is Lean engineering —
-a `Finset.sigma` fibre decomposition and two finite sums. When it lands, the
-goal auto-resolves, since the parent reduction `2e4cb80a` is already ACCEPTED.
-`MagicSquares.semi_magic_count_three` ($H_3$) is untouched.
+**Outcome (2026-09-17).** `param_three_card` (`8063946a`) landed - submission
+`db22e0b4`, ACCEPTED - and the goal `magic_count_three_divisible`
+auto-resolved to `Proved`, closing Mission I. The proof is the fibre
+decomposition sketched above, carried out with `Finset.card_bij` over `a`
+followed by two finite sums. Missions II and III closed the same day:
+`MagicSquares.semi_magic_count_three` ($H_3$) is `Proved`
+([semi-magic handoff](missions/semi-magic/status.md)), and the
+normal-order-three classification - the Lo Shu uniqueness theorem - is
+`Proved` ([normal3 handoff](missions/normal3/status.md)).
 
-**Literature.** 11 papers under `referpaper/` (3.0 MB), listed in
-[referpaper/README.md](referpaper/README.md): the counting line
+**Literature.** 12 PDFs under `referpaper/` (3.0 MB);
+[referpaper/README.md](referpaper/README.md) catalogs 11 of them (one recent
+addition is not listed there yet): the counting line
 (Beck–Cohen–Cuomo–Gribelyuk 2003 is the definitional baseline), the
 construction line (Xin 2008, the direct source of the parametrization), and
 three open-problem papers on squares of squares.

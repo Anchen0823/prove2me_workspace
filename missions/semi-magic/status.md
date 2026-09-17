@@ -1,6 +1,6 @@
 # Mission: semi-magic — 三阶半幻方计数 $H_3(t)$
 
-负责人：anche（徐宇轩） · 环境：Lean 4.33.1 / Mathlib `0df444a3` · 平台：prove2.me v0.10.4
+负责人：anche（徐宇轩） · 环境：Lean 4.33.1 / Mathlib `0df444a3` · 平台：prove2.me v0.10.3
 
 创建：2026-09-17 · 最后更新：2026-09-17 14:40（**Mission II 全部完成**：4 个子节点 + goal 全 Proved）（`comps_card` / `sm3_canonical` / `sm3_params_card` 已 Proved）（Asia/Shanghai）
 

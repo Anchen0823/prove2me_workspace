@@ -10,11 +10,8 @@ These follow the mobile plan:
 import io
 import json
 import os
-import subprocess
-import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PY = sys.executable
 
 BECK = (
     "Beck, Cohen, Cuomo & Gribelyuk, The number of ``magic'' squares, cubes and "

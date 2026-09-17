@@ -4,23 +4,24 @@ credentials.json
 # Local Lean project files (agent-local, environment-specific; see references/lean-setup.md)
 lean-toolchain
 lakefile.lean
-lakefile.olean
 lake-manifest.json
 .lake/
 *.olean
 
 # OS noise
 .DS_Store
+__pycache__/
 
 # Scratch Lean probes (tmp/*.lean are throwaway import/syntax checks)
 tmp/
 
-# Local API response dumps that are regenerated on every submit
-missions/*/verification/*.log
+# Local API response dumps that are regenerated on every submit.
+# `**/` (not `*/`) so that logs nested at any depth are covered too.
+missions/**/*.log
 
 # Script scratch payloads (written by seed/set helpers, no lasting value)
-missions/*/item-tmp.json
-missions/*/milestone-tmp.json
+missions/**/item-tmp.json
+missions/**/milestone-tmp.json
 
 # Generated finite certificates (Euler-gamma / Sondow-Rosser line).
 # These are machine-generated, tens of MB each, and dominate the repo size.
@@ -28,4 +29,10 @@ missions/*/milestone-tmp.json
 # missions/euler-gamma/sondow/ROSSER-FINITE-CERTIFICATES.md, so nothing is lost.
 # Regenerate into tmp/ instead.
 Solutions/SondowRosserMiddle*.lean
+Solutions/SondowRosserMiddle*.json
 missions/euler-gamma/sondow/continuation/failed-recursion-*.lean
+
+# Machine-written diagnostics for the balanced-largest-block search. Each is a
+# few lines of Lean wrapping a ~700 KB literal; conclusions are recorded in
+# missions/euler-gamma/sondow/.
+balanced-largest-block-*.lean

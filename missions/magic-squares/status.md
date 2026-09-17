@@ -1,6 +1,6 @@
 # Mission: magic-squares — 幻方形式化基础建设
 
-负责人：anche（徐宇轩） · 环境：Lean 4.33.1 / Mathlib `0df444a3` · 平台：prove2.me v0.10.4
+负责人：anche（徐宇轩） · 环境：Lean 4.33.1 / Mathlib `0df444a3` · 平台：prove2.me v0.10.3
 
 最后更新：2026-09-17 02:20（goal 已 Proved）（Asia/Shanghai）
 

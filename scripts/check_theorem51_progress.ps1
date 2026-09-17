@@ -139,7 +139,11 @@ $src=($imports -join "`n")+"`n"+($bodies -join "`n")+@'
 Set-Content $check $src -NoNewline
 $timer=[Diagnostics.Stopwatch]::StartNew()
 $log='missions/five-primes/verification/theorem51-progress.log'
-& 'C:\Users\anche\.elan\toolchains\leanprover--lean4---v4.33.1\bin\lake.exe' env lean '-DautoImplicit=false' $check *> $log
+$toolchain=(Get-Content lean-toolchain -Raw).Trim()
+$toolchainDirectory=$toolchain.Replace('/','--').Replace(':','---')
+$lake=Join-Path $env:USERPROFILE ".elan/toolchains/$toolchainDirectory/bin/lake.exe"
+if(-not (Test-Path -LiteralPath $lake)){throw "The pinned Lake executable was not found: $lake"}
+& $lake env lean '-DautoImplicit=false' $check *> $log
 $code=$LASTEXITCODE
 $timer.Stop()
 $result=@{

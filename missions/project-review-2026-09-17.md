@@ -164,7 +164,7 @@ Five Primes 剩 28 个 Open，**其中 2 个节点状态是 `Disproved`**
 ## 5. 瘦身（2026-09-17 18:55 已执行）
 
 只做了安全的一步：`git rm --cached` + 补 `.gitignore`，**不动历史、不 force push**。
-文件全部保留在磁盘上，这些生成物的来源信息（生成器 / 哈希 / 结论）仍完整记录在
+文件当时全部保留在磁盘上；这些生成物的来源信息（生成器 / 哈希 / 结论）仍完整记录在
 `missions/euler-gamma/sondow/ROSSER-FINITE-CERTIFICATES.md`，不会因为移出版本控制而丢。
 
 ```bash
@@ -191,6 +191,15 @@ git rm --cached \
 
 剩下最大的单个文件是 `missions/euler-gamma/research/variable-order-results.json`
 (3.3 MB)，40 个 >200 KB 的文件合计 16.8 MB —— 都在健康范围内，不需要再动。
+
+**后续（2026-09-17 19:10 与本轮审查后）**
+
+- 那 5 个大生成物已于 19:10 **从磁盘物理删除**，共释放 199.7 MB。因为它们当时
+  已经 untrack，物理删除**不会、也无法产生新的 commit**，所以 `git log` 里看不到。
+- 本轮审查后又做了一轮脱管：13 个 `SondowRosserMiddle*.{lean,json}`、
+  3 个 `balanced-largest-block-*.lean`、43 个 `.log`，共 59 个文件
+  （**磁盘文件全部保留**），`.gitignore` 一并放宽为 `missions/**/*.log` 等。
+  实测：跟踪文件 1033 → **974**，索引树 22.5 MB → **18.1 MB**。
 
 **还没做的**：`.git` 仍是 146 MB，因为那 196 MB 还躺在历史里。要压下来得用
 `git filter-repo` 重写历史 + force push。**不可逆，等你点头再做。**

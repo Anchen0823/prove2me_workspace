@@ -10,16 +10,15 @@ Usage:
 """
 import json
 import os
-import ssl
 import sys
 import time
+import urllib.error
 import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CRED = os.path.join(ROOT, "credentials.json")
 BASE = "https://prove2.me/api/v1"
 
-_CTX = ssl.create_default_context()
 _OPENER = urllib.request.build_opener(urllib.request.ProxyHandler())
 
 
@@ -64,8 +63,15 @@ def get_token(force=False):
         raise SystemExit("refresh failed: %s %s" % (status, body))
     payload = json.loads(body)
     creds["access_token"] = payload.get("access_token") or payload.get("token")
-    exp = payload.get("expires_in") or payload.get("expires_in_seconds") or 3600
-    creds["expires_at"] = now + int(exp) - 60
+    # /agent/refresh may return an absolute `expires_at` or a relative
+    # `expires_in`; prefer the absolute value when it is present, since a
+    # relative count drifts with the round-trip time.
+    exp_at = payload.get("expires_at")
+    if isinstance(exp_at, (int, float)) and exp_at > 0:
+        creds["expires_at"] = int(exp_at) - 60
+    else:
+        exp = payload.get("expires_in") or payload.get("expires_in_seconds") or 3600
+        creds["expires_at"] = now + int(exp) - 60
     if payload.get("version"):
         creds["version"] = payload["version"]
     _save(creds)

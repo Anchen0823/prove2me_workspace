@@ -11,10 +11,18 @@ Lean 4 / Mathlib 打 prove2.me 众包形式化平台的工作区。细节一律�
 - Lean `leanprover/lean4:v4.33.1`（elan），Mathlib
   `0df444a360eaa60ab8c11dca51a86af692955474`，已构建在 `.lake/`（约 8.4 GB，**绝不删**）。
 - 单文件检查：`lake env lean <file>`；模块检查：`lake build <Module.Name>`；
-  全部默认目标：`lake build`（慢，几分钟到十几分钟）。
+  全部默认目标：`lake build`（**很慢**，100 来个自有模块合计 30–90 分钟）。
+- ⚠️ **全量并行 `lake build` 在本机会随机失败 ~20–35 个模块**：
+  `failed to read file '...olean[.private]'`，出错文件横跨 elan 工具链与
+  mathlib 包、每次名单不同 ⇒ 并发 IO 竞争（AV/索引器/执行层之一，未定位）。
+  单模块构建从不失败。对策：全量跑完导出失败名单**串行逐个补编**
+  （脚本模式见 2026-09-17 日志「晚班」节）。
 - `lakefile.lean` 给 `Definitions`/`Theorems`/`Solutions` 开了 `autoImplicit false`；
   `examples/` 不是 lean_lib，在那里跑 lean 是 autoImplicit ON。
   **提交前必须把证明挪进 `Solutions/` 再编译一遍。**
+- ⚠️ **lakefile.lean / lean-toolchain / lake-manifest.json 都在 `.gitignore` 里、
+  未被 git 跟踪**（有意如此，注释写的是 "agent-local"）。所以：改了 lakefile
+  **不会进 commit**，克隆仓库后也拿不到构建配置。要让 Lake 生效只能在本机改。
 
 ## Prove2me 平台约定
 
@@ -77,6 +85,22 @@ Lean 4 / Mathlib 打 prove2.me 众包形式化平台的工作区。细节一律�
   否则 `end` 报 "expected 'lemma'"。
 - 平台对 tactic 冗余敏感：本地能过的 `rw ...; ring` 可能报 "No goals to be solved"
   → 用 `simpa [...]`。偶发 `Import parser timed out after 5s`，重提即可。
+- 🔴 **Lake library target 必须有「根模块文件」**：写 `lean_lib «Solutions» where`
+  时 Lake 会把名字当成一个**模块**去找 `Solutions.lean`。我们没有这个文件，
+  于是 `lake build`（以及 `lake build Solutions`，三个 lib 全一样）在 job
+  computation 阶段就报 `Solutions: some modules have bad imports`，**一个任务都
+  不会跑**。而 `lake build Solutions.Sol_X`（指定到模块）一直能过 —— 所以这个坑
+  长期没人发现，因为大家只跑模块级/单文件级命令。
+  **修法**（已改）：显式给每个 lib 写
+  `roots := #[]` + `globs := #[.submodules \`Solutions]`。
+  另一种可行修法是补一个空的 `Solutions.lean`，但那样会让 `import Solutions`
+  意外合法，不如前者干净。
+- `import examples.…`（带连字符目录要用 `examples.«five-primes».X`）在未被声明为
+  lib 时，`lake build <源文件路径>` 会报 unknown module source path；单个模块能
+  编译不代表它是注册过的 Lake 模块。真要用就把那个模块声明成 lib（已在 lakefile
+  里为 `RosserLcmBlocks` 做了）。
+- **`lake script`/lake 诊断时别用 `timeout` 掐它**：超时会 SIGTERM 掉正在编译的
+  lean 子进程，报 "Lean exited with code 143"，看起来像编译错。
 
 ## 各 mission 状态指针
 
@@ -85,18 +109,25 @@ Lean 4 / Mathlib 打 prove2.me 众包形式化平台的工作区。细节一律�
 | Magic Squares I（$M_3$ 计数） | `magic-squares` | goal Proved，proposal Reviewed |
 | Magic Squares II（$H_3$ 半幻方） | `semi-magic` | goal Proved，proposal Reviewed |
 | Magic Squares III（洛书唯一性） | `normal3` | goal Proved，proposal In review |
-| Every Odd Number … Five Primes | `five-primes` | Type I/II Proved；Vaughan 与 20+ 解析节点 Open |
+| Every Odd Number … Five Primes | `five-primes` | Open；50 节点 / 28 Open（含 2 个 Disproved），2026-09-17 实测 |
 | Weak Goldbach | `weak-goldbach` | 目标 Open，已归约到一个筛覆盖孩子 |
 | Bunkbed is False | `bunkbed` | 全部封版归档 |
 | Irrationality of Euler's γ | `euler-gamma` | 部分 Proved，见 `sondow/INTEGRAL-IDENTITY-COMPLETE.md` |
 
-## 仓库卫生（2026-09-17 瘦身已落地，commit `c2bbb0e`）
+## 仓库卫生（两轮瘦身，2026-09-17）
 
-- **1032 个跟踪文件、22.5 MB，>5MB 的文件 0 个**（瘦身前 1041 / 222 MB）。
-- 曾经的大坑：4 个 Sondow/Rosser 自动生成的有限证书合计 196 MB（88%），
-  含 `failed-recursion-rosser-middle-1000000.lean`（35 MB，名字里就写着 failed）。
-  `git rm --cached` 已移出版本控制、**文件仍在磁盘上**，来源信息留档在
-  `missions/euler-gamma/sondow/ROSSER-FINITE-CERTIFICATES.md`。
+- **第一轮 `c2bbb0e`**：只做 `git rm --cached`，当前树脱管了 5 个大证书；
+  blob 仍在历史里，`.git` 一点没变小。
+- **第二轮（同一天）**：又脱管 59 个文件（13 个 `SondowRosserMiddle*.{lean,json}`、
+  3 个 `balanced-largest-block-*.lean`、43 个 `.log`），**磁盘文件全部保留**。
+  现在 **974 个跟踪文件 / 索引树 18.1 MB**（第一轮后是 1033 / 21.5 MB）。
+- 5 个大生成证书已于 2026-09-17 19:10 **从磁盘物理删除**（释放 199.7 MB）。
+  因为文件当时已 untrack，物理删除**不产生 commit**，git log 里看不到；
+  来源信息留档在 `missions/euler-gamma/sondow/ROSSER-FINITE-CERTIFICATES.md`。
+- `.gitignore` 覆盖已放宽为 `missions/**/*.log`、`missions/**/item-tmp.json`、
+  `missions/**/milestone-tmp.json`，并新增
+  `Solutions/SondowRosserMiddle*.json`、`balanced-largest-block-*.lean`。
+  **新生成的证书产物一律写进 `tmp/`。**
 - `.gitignore` 已加：
   `Solutions/SondowRosserMiddle*.lean`、
   `missions/euler-gamma/sondow/continuation/failed-recursion-*.lean`、
@@ -111,6 +142,9 @@ Lean 4 / Mathlib 打 prove2.me 众包形式化平台的工作区。细节一律�
   命令拿 SIGTERM、无输出。根因未定，不是沙箱问题。
   恢复：`rm -f .git/index.lock && git checkout HEAD -- .`（多跑一遍直到 status 干净）。
   要删文件请用资源管理器或 PowerShell。
+- ⚠️ **同一条消息里并行发两个 Bash 调用，其中一个会被 SIGTERM 干掉、且无输出**
+  （2026-09-17 复现三次，串行就正常）。上面的「Solutions 消失」很可能同源于此。
+  要跑长命令就用 `run_in_background`，但**后台跑的时候也别再发第二条 Bash**。
 
 ## 工作习惯（已确立）
 

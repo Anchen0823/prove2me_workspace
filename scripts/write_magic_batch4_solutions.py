@@ -2,10 +2,8 @@
 """Write the six Solutions/ files for batch 4 and check them locally."""
 import io
 import os
-import subprocess
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-LEANY = r"c:\Users\anche\.elan\toolchains\leanprover--lean4---v4.33.1\bin\lean.exe"
 
 HEAD_BASE = """import Mathlib
 import Definitions.Def_MagicSquares

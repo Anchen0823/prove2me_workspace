@@ -18,14 +18,22 @@ Then point your agent at [SKILL.md](SKILL.md) — it contains the full workflow 
 ```
 ├── SKILL.md          # Skill entry point: overview, core rules, endpoint index
 ├── references/       # Detailed API docs, loaded on demand
-├── scripts/          # Lean meta-programs for the full-project upload pipeline
-├── examples/         # Worked example for uploading a full Lean project
+├── status.md         # Dashboard: current work and the mission index
+├── missions/         # Per-mission handoffs, explanations, verification logs
+├── referpaper/       # Source papers behind the missions
+├── scripts/          # Upload-pipeline helpers: `p2m_api.py` plus the
+│                     # per-mission one-off submit-and-verify scripts
+├── examples/         # Scratch Lean files per area; outside the build targets
 ├── Definitions/      # Definition files
-├── Theorems/         # Theorem files; each file ends with `by sorry`
+├── Theorems/         # Local **mirrors** of platform theorem nodes: statement
+│                     # only, every body is `by sorry`. The real proofs live on
+│                     # the platform and in Solutions/
 └── Solutions/        # Solution files (direct proofs and sketches)
 ```
 
-`Definitions/`, `Theorems/`, and `Solutions/` mirror the server's module layout.
+`Definitions/`, `Theorems/`, and `Solutions/` mirror the server's module layout,
+and are the only Lean libraries in `lakefile.lean` — `Solutions` is the default
+build target.
 
 
 ## Quick-start commands
