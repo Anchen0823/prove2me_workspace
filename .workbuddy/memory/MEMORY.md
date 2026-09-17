@@ -20,9 +20,10 @@ Lean 4 / Mathlib 打 prove2.me 众包形式化平台的工作区。细节一律�
 - `lakefile.lean` 给 `Definitions`/`Theorems`/`Solutions` 开了 `autoImplicit false`；
   `examples/` 不是 lean_lib，在那里跑 lean 是 autoImplicit ON。
   **提交前必须把证明挪进 `Solutions/` 再编译一遍。**
-- ⚠️ **lakefile.lean / lean-toolchain / lake-manifest.json 都在 `.gitignore` 里、
-  未被 git 跟踪**（有意如此，注释写的是 "agent-local"）。所以：改了 lakefile
-  **不会进 commit**，克隆仓库后也拿不到构建配置。要让 Lake 生效只能在本机改。
+- ✅ **lakefile.lean / lean-toolchain / lake-manifest.json 自 `eaccd16` 起已被
+  `git add -f` 纳入版本控制**（此前被 `.gitignore` 忽略、注释写 "agent-local"）。
+  ⚠️ 它们仍在 `.gitignore` 规则里，所以**新增/改动这三个文件必须 `git add -f`**，
+  否则 `git status` 里看不到、也进不了 commit。
 
 ## Prove2me 平台约定
 
