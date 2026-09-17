@@ -17,3 +17,15 @@ tmp/
 
 # Local API response dumps that are regenerated on every submit
 missions/*/verification/*.log
+
+# Script scratch payloads (written by seed/set helpers, no lasting value)
+missions/*/item-tmp.json
+missions/*/milestone-tmp.json
+
+# Generated finite certificates (Euler-gamma / Sondow-Rosser line).
+# These are machine-generated, tens of MB each, and dominate the repo size.
+# Their generators, hashes and conclusions are recorded in
+# missions/euler-gamma/sondow/ROSSER-FINITE-CERTIFICATES.md, so nothing is lost.
+# Regenerate into tmp/ instead.
+Solutions/SondowRosserMiddle*.lean
+missions/euler-gamma/sondow/continuation/failed-recursion-*.lean

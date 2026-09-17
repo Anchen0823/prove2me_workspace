@@ -1,157 +1,108 @@
 # Project memory — prove2me_workspace
 
-## Environment (Windows, this machine)
+Lean 4 / Mathlib 打 prove2.me 众包形式化平台的工作区。细节一律写在
+`missions/<slug>/status.md`，这里只放跨 mission 复用的硬规则和踩坑清单。
 
-- Bash starts with a broken PATH: every Bash command must begin with
-  `export PATH="/usr/bin:/bin:/c/Windows/System32:/c/Windows:$PATH";`.
-- The PowerShell tool returned no captured output in this session — prefer Bash.
-- Lean: `leanprover/lean4:v4.33.1` via `elan`; Mathlib
-  `0df444a360eaa60ab8c11dca51a86af692955474`, already built under `.lake/`.
-  Never delete `.lake/`.
-- Ad-hoc checking: `lake env lean <file.lean>` (raw `lean.exe` needs
-  Windows-style `LEAN_PATH` entries). Module checks: `lake build <Module.Name>`.
-- `omega` can fail with "maximum recursion depth" on `Nat` goals mixing huge
-  literals with `/`; split into explicit `Nat.div_mul_le_self` /
-  `Nat.add_le_add_left` / `calc` steps, or raise `maxRecDepth`.
-- **Finset binder notation**: `∑ k in s, f k` does NOT parse in this Mathlib
-  revision — always write `∑ k ∈ s, f k` (works, and `#check` prints it that way).
-- `Finset.eq_empty_iff_forall_not_mem` does not exist; use
-  `Finset.not_nonempty_iff_eq_empty` (`¬ s.Nonempty ↔ s = ∅`).
-- `lakefile.lean` sets `autoImplicit false` for the libs (`Definitions`,
-  `Theorems`, `Solutions`), but `examples/` is **not** a `lean_lib`, so
-  `lake env lean examples/...` runs with autoImplicit ON. Always move a proof
-  into `Solutions/` and re-check before submitting.
-- Any `def` using `Finset.filter` on a propositional predicate must sit inside
-  `noncomputable section`, or Lean rejects the generated `Classical.propDecidable`.
+## 环境（本机 Windows）
 
-## Prove2me conventions
+- Bash 的 PATH 是坏的：**每条命令都要先**
+  `export PATH="/usr/bin:/bin:/c/Windows/System32:/c/Windows:$PATH";`
+  PowerShell 工具在此会话取不到输出，别用。
+- Lean `leanprover/lean4:v4.33.1`（elan），Mathlib
+  `0df444a360eaa60ab8c11dca51a86af692955474`，已构建在 `.lake/`（约 8.4 GB，**绝不删**）。
+- 单文件检查：`lake env lean <file>`；模块检查：`lake build <Module.Name>`；
+  全部默认目标：`lake build`（慢，几分钟到十几分钟）。
+- `lakefile.lean` 给 `Definitions`/`Theorems`/`Solutions` 开了 `autoImplicit false`；
+  `examples/` 不是 lean_lib，在那里跑 lean 是 autoImplicit ON。
+  **提交前必须把证明挪进 `Solutions/` 再编译一遍。**
 
-- API helper: `scripts/p2m_api.py` (`token`, `get`, `raw`, `post`, `patch`,
-  `verify`, `patch-explain`). Credentials live in `credentials.json`; never print
-  or commit them.
-- Pass JSON bodies as files (`python scripts/p2m_api.py post <path> <file>`);
-  inline single-quoted JSON gets mangled by this shell.
-- Do not issue two Edit calls to the same file in one message — parallel
-  read-modify-write races lose one of them.
-- A reduction imports children as `import Theorems.Thm_<name with '.' → '_'>`
-  (e.g. `MagicSquares.center_of_order_three` →
-  `Theorems.Thm_MagicSquares_center_of_order_three`), never the target itself, and
-  must be `sorry`-free; the child must be published with `/submit-problem` first.
-  Submissions are asynchronous: poll `/verify?submission_id=` to a terminal
-  status (`ACCEPTED` / `SKETCH_ACCEPTED` / `FAILED`), and poll
-  `/publish-jobs/<job_id>` for problems/definitions. `/submission/{id}` is a
-  404 HTML page — the polling endpoint is `GET /verify?submission_id=`.
-- **Publish order is a hard dependency.** A problem whose `preamble` imports
-  `Definitions.Def_X` fails with `unknown import` if `Def_X` was submitted in the
-  same command and is not yet `PUBLISHED`. Submit the definition, poll it to
-  PUBLISHED, then submit the problems.
-- Local mirrors of platform theorems for offline type-checking go in
-  `Theorems/Thm_<slug>.lean` (built with `lake build Theorems.Thm_<slug>`).
-- Preamble may hold imports and `set_option` only; own `def`s go through
-  `/submit-definition` as `Definitions.Def_<name>`.
-- **Self-containment gate before every submit.** Local `lake` resolves
-  local-only modules that the server does not have. A `Solutions/*.lean` may only
-  import things actually published on the platform — check the mission node list
-  first. Concretely, `Definitions.Def_TaoFivePrimes_Theorem51VinogradovSharp`
-  compiles locally but is **not** on the platform (only
-  `TaoFivePrimes_Theorem51Sums` / `0638cceb` exists), so any submission using it
-  fails server-side. Inline such helpers into the solution file instead.
-- **Never trust node IDs recorded in `session-*.md` / `report-*.md`.** They drift
-  and some were fabricated across summarizations. Re-read the live list:
-  `python tmp/list_nodes.py [name-filter]` pages `/theorems?mission_id=...`
-  (the helper already exists; otherwise quote the URL — see below).
-- `python scripts/p2m_api.py raw '<path>?a=b&c=d'` — **the path must be
-  single-quoted**, else bash eats `&` and the request 404s.
-- Nodes published via `/submit-problem` without a `mission_id` land **outside**
-  the mission DAG (their `/theorems/<id>/graph` shows `edges = []`). Pass
-  `mission_id` when you want the node inside the graph.
+## Prove2me 平台约定
 
-- **提交 problem 的端点是 `/submit-problem`（单数）**。写成 `/submit-problems` 会返回
-  404 的 HTML 页面而不是 JSON（容易误判成网络问题）。payload 仍是
-  `{"problems": [...]}`，一次可排队多个，响应里给 `jobs[].job_id`，
-  再轮询 `/publish-jobs/<job_id>` 拿 `theorem_id`。
-- **Mission 的 goal 节点不接受 milestone**：给 goal 的 item 发
-  `/mission-proposals/<id>/milestones` 会报
-  `The goal takes no milestone metadata`；milestone 只挂在支撑子目标上。
-- 让节点进入 mission DAG 的机制是 **proposal items**（`POST
-  /mission-proposals/<id>/items`，`{"kind":"reference","theorem_id":...}`），
-  不是提交时传 mission_id；随后 `PATCH` 设 `main_item_id` + `item_order`。
+- API 助手：`scripts/p2m_api.py`（`token|get|raw|post|patch|verify|patch-explain`）。
+  凭据在 `credentials.json`，永不打印/提交。JSON body 传**文件**，别内联。
+- `raw '<path>?a=b&c=d'`：**路径必须单引号**，否则 bash 吃掉 `&` 导致 404。
+- 端点：problem 是 `/submit-problem`（**单数**，复数会返回 404 HTML）；
+  definition 是 `/submit-definition`。两者都返回 `jobs[].job_id`，
+  轮询 `/publish-jobs/<job_id>` 拿 id；提交轮询是 `GET /verify?submission_id=`。
+  终态：`ACCEPTED` / `SKETCH_ACCEPTED` / `FAILED`。
+- **发布顺序是硬依赖**：preamble 引用 `Definitions.Def_X` 时，`Def_X` 必须先到
+  PUBLISHED，否则 `unknown import`。
+- **入 DAG 靠 proposal items**：`POST /mission-proposals/<id>/items`
+  （`{"kind":"reference","theorem_id":...}`）+ `PATCH` 设 `main_item_id`/`item_order`。
+  提交时传 `mission_id` 不会让节点进图。
+- **goal 节点不接受 milestone**；milestone 只挂支撑子目标。
+- **自包含闸门**：本地 lake 能解析服务器上没有的模块。提交前核对 mission 节点清单，
+  只 import 平台真正有的东西；没有的内联到 solution 文件里。
+- 归约里 children 写成 `import Theorems.Thm_<名字里 . → _>`，且必须 sorry-free；
+  孩子要先发布。Theorems/ 里的本地镜像一律 `by sorry`。
+- **不要相信 `session-*.md`/`report-*.md` 里记的节点 id**，会漂移或被编造。重新拉实时列表。
+- 写 deltas： `tmp/survey_missions.py`（全部 mission）、`tmp/scout_next_targets.py`
+  （数值侦察候选目标，改文件里的 MISSIONS/target 即可）。
 
-## Lean 工程坑（Fin / Finset，2026-09-17）
+## Lean 踩坑清单（高频）
 
-- **`Fin.cons` 是依赖类型版本**，高阶合一常把类型族留成元变量，随后到 `ℕ` 的
-  强制转换报 `has type ?m j but is expected to have type ℕ`。必须显式钉住：
-  `Fin.cons (n := k) (α := fun _ => Fin (N+1)) x q`。
-  同理 `simp [Fin.cons_zero, Fin.cons_succ]` 也会踩；改用 `change` 让 Lean
-  用 definitional equality 展开更稳。
-- `change i + ∑ j : Fin k, ... = n` 在 `change` 里解析会乱 → 必须
-  `change i + (∑ j : Fin k, ...) = n`（加括号）。
-- `Finset.single_le_sum` 在被局部变量遮蔽时推断失败 → 用命名参数显式给
-  `s :=`、`f :=`。
-- `Finset.sum_range_reflect f (n+1)` 给的是 `∑ j, f (n-j) = ∑ j, f j`，
-  正好是拆分递推需要的 reindex，别手写。
-- **`Finset.mem_filter.mp (by simpa [...] using h)`** 常在 solution 文件里失败：
-  simp 把 `< n+1` 归成 `≤ n`，签名 `?m ∈ ?s ∧ ?p ?m` 对不上。
-  解法：先写一条**显式类型**的 `have h' : x ∈ (...).filter p := by simpa ... using h`，
-  再 `Finset.mem_filter.mp h'`。
-- 新增 `Definitions/*.lean` 后必须先 `lake build Definitions.Def_X` 生成 olean，
-  否则引用它的 `lake env lean` 报 `object file ... does not exist`。
-- 计数定理若形如 `C(n+k-1, n)`，把陈述写成「`k+1` 个部分」而非「`k` 个部分」，
-  这样公式里没有 `k-1`，`k=0` 时不会因 Nat 截断减法出错。
+- **`∑ k in s, f k` 在本 Mathlib 版本不解析**，写 `∑ k ∈ s, f k`。
+- `Finset.eq_empty_iff_forall_not_mem` 不存在 → 用 `Finset.not_nonempty_iff_eq_empty`。
+- 用 `Finset.filter` + 命题谓词的 def 必须放 `noncomputable section`。
+- **`Fin.cons` 是依赖类型版**，必须钉住类型族
+  `Fin.cons (n := k) (α := fun _ => Fin (N+1)) x q`，否则元变量留到 ℕ 转换时炸。
+  同理 `simp [Fin.cons_zero, Fin.cons_succ]` 会踩 → 用 `change` 让 definitional
+  equality 展开。
+- `change i + ∑ j : Fin k, ... = n` 解析会乱 → 加括号
+  `change i + (∑ j : Fin k, ...) = n`。
+- `Finset.single_le_sum` 被局部变量遮蔽时推断失败 → 显式 `s :=`、`f :=`。
+- `Finset.sum_range_reflect f (n+1)` 给 `∑ j, f (n-j) = ∑ j, f j`，拆分递推直接用。
+- `Finset.mem_filter.mp (by simpa [...] using h)` 常失败（simp 把 `< n+1` 归成 `≤ n`
+  ，签名对不上）→ **先写一条显式类型的 `have h' : x ∈ (...).filter p := by simpa ...`**。
+- **计数定理形如 `C(n+k-1,n)` 时把陈述写成「k+1 个部分」**，避开 `k-1` 的 Nat 截断减法。
+- 新增 `Definitions/*.lean` 后必须先 `lake build Definitions.Def_X` 生成 olean。
+- `omega` 对混着大字面量和 `/` 的 Nat 目标会 "maximum recursion depth" →
+  拆成 `Nat.div_mul_le_self` / `calc` 显式步骤。**`omega` 原生支持 `min`**
+  （`min a b = 0` 直接喂；定理名是 `Nat.min_eq_zero_iff`）。
+- **`Square n α` = `Matrix (Fin n) (Fin n) α`**。造具体方阵用嵌套向量
+  `![![a,b,c],![d,e,f],![g,h,i]]`；`!![a,b,c]` 是单行矩阵，类型不对。
+- `ext i j` 对 `Square` 会展开到 Nat 值相等，**其后不要再加 `apply Fin.ext`**。
+  跨 `Fin (t+1)` 与 `ℕ` 用 `congrArg (fun x : Fin (t+1) => (x : ℕ))`。
+- `ext` 处理 `Finset (ℕ × ℕ)` 时**先 `rcases` 拆配对**，否则 `rfl` 作用在 `ac.1` 上失败。
+- **`simp` 不展开 `Fin n` 上的全称量词** → 显式 `Fin.forall_fin_succ` 剥到地面实例
+  再 `norm_num`。（`Fin.forall_fin_three` 不存在。）
+- 具体成员资格（如 `(2,4) ∈ paramSet 5`）用 `norm_num [paramSet, IsParam3]`；
+  `simp` 只展开到 range/product/filter 就停住。
+- **平台禁止 `native_decide`**（"trusts compiled native code"）→ 用 `norm_num [...]`/`decide`。
+- **心跳上限 200000**：solution 顶部加 `set_option maxHeartbeats 0`；别用
+  `dsimp [x] at h` 展开 let（很贵），改 `have hx_def : x = ... := rfl` 再交给 omega。
+- **solution 文件的 `theorem solution` 必须在 namespace 之外**（顶层）：
+  `namespace X` 放辅助 → `end X` → `open X` → `theorem solution`。放里面平台报
+  `Unknown identifier solution`。移动时前面的 `/-- -/` doc comment 必须一起搬走，
+  否则 `end` 报 "expected 'lemma'"。
+- 平台对 tactic 冗余敏感：本地能过的 `rw ...; ring` 可能报 "No goals to be solved"
+  → 用 `simpa [...]`。偶发 `Import parser timed out after 5s`，重提即可。
 
-- **solution 文件里 `theorem solution` 必须在 namespace 之外**（顶层）。正确结构：
-  `namespace MagicSquares` 放辅助定义/引理 → `end MagicSquares` → `open MagicSquares`
-  → `theorem solution`。放在 namespace 内平台报
-  `Unknown identifier \`solution\``（`autoImplicit false` 下更明显）。
-- **平台心跳上限 200000**：`omega` 或 `dsimp` 展开大项会报
-  `timeout at tactic execution, maximum number of heartbeats`。对策：solution 顶部加
-  `set_option maxHeartbeats 0`，并避免用 `dsimp [x] at h` 展开 `let` 定义——
-  改用显式 `have hx_def : x = ... := rfl` 再交给 `omega`。
-- **`omega` 原生支持 `min`**：`min a b = 0` 这类条件可以直接喂给 `omega`，
-  不必手工 `rw [Nat.min_eq_zero_iff]`（该定理名是 `Nat.min_eq_zero_iff`，
-  **没有** `Nat.min_eq_zero`）。`min_eq_zero` 是通用名（需 IsBotZeroClass）。
-- **`Square n α` 是 `Matrix (Fin n) (Fin n) α`**：构造具体方阵用嵌套向量
-  `![![a,b,c],![d,e,f],![g,h,i]]`；`!![a,b,c]` 是**单行矩阵**（`Matrix (Fin 1) (Fin 3)`），
-  类型不对。
+## 各 mission 状态指针
 
-- **`simp` 不展开 `Fin n` 上的全称量词**：要显式给 `Fin.forall_fin_succ`
-  （递归剥到地面实例），再交给 `norm_num`。`Fin.forall_fin_three` 不存在。
-- **平台禁止 `native_decide`**：报 "trusts compiled native code instead of the
-  kernel"。算具体有限集合的基数改用 `norm_num [...]` 或 `decide`。
-- **doc comment 不能悬空**：把 `theorem` 移出 namespace 时，它前面的 `/-- ... -/`
-  必须一起搬走，否则 `end` 处报 "expected 'lemma'"。
-- **`ext` 后对 `Finset (ℕ × ℕ)` 要先 `rcases` 拆开配对**，否则 `rfl` 作用在
-  `ac.1` 上会失败（"not of the form (x = t)"）。
-- 具体元素的成员资格（如 `(2,4) ∈ paramSet 5`）用 `norm_num [paramSet, IsParam3]`；
-  `simp` 只会展开到 `range`/`product`/`filter` 就停住。
+| mission | slug | 状态 |
+|---|---|---|
+| Magic Squares I（$M_3$ 计数） | `magic-squares` | goal Proved，proposal Reviewed |
+| Magic Squares II（$H_3$ 半幻方） | `semi-magic` | goal Proved，proposal Reviewed |
+| Magic Squares III（洛书唯一性） | `normal3` | goal Proved，proposal In review |
+| Every Odd Number … Five Primes | `five-primes` | Type I/II Proved；Vaughan 与 20+ 解析节点 Open |
+| Weak Goldbach | `weak-goldbach` | 目标 Open，已归约到一个筛覆盖孩子 |
+| Bunkbed is False | `bunkbed` | 全部封版归档 |
+| Irrationality of Euler's γ | `euler-gamma` | 部分 Proved，见 `sondow/INTEGRAL-IDENTITY-COMPLETE.md` |
 
-## Reusable proof technique: beating a too-weak "count" hypothesis
+## 仓库卫生（2026-09-17 实测）
 
-When a hypothesis carries a covering count `⌊W/L⌋ + 1` that over-counts at the
-very case you need (here `W = L`, giving 2 instead of 1), do **not** try to extract
-the sharp count — a larger count is a *weaker* bound, so it cannot be sharpened by
-rewriting. Instead split:
+- 1041 个跟踪文件、222 MB；**4 个 >5MB 的文件占 196 MB（88%）**，全是
+  Sondow/Rosser 自动生成的有限证书：
+  `Solutions/SondowRosserMiddleTree1000000.lean` (96 MB)、
+  `solutions/...Tree1000000Compact.lean` (36 MB)、
+  `missions/euler-gamma/sondow/continuation/failed-recursion-rosser-middle-1000000.lean`
+  (35 MB，名字里就有 failed)、`Solutions/SondowRosserMiddleBalanced1000000.lean` (29 MB)。
+  已在提交历史里 → 下一步 gitignore + `git rm --cached`，彻底瘦身要 filter-repo。
+- `missions/*/item-tmp.json`、`milestone-tmp.json` 是脚本临时载荷，无保留价值
+  （magic-squares 已删，semi-magic / normal3 还留着）。
 
-1. Bound the LHS by `#terms · A` using `#terms ≤ q` obtained from an interval
-   **cardinality** (`Int.card_Ioc` on a width-`q` interval gives exactly `q`),
-   which avoids any integer division / `⌊·/2⌋` bookkeeping.
-2. Recover `q · A ≤ RHS` from a **degenerate instance** of the same hypothesis
-   chosen so that every summand is exactly `A` and the count is exactly 1.
+## 用户偏好
 
-Choosing the degenerate phase so the sine vanishes *identically* is what makes
-step 2 work with no analytic input and no coprimality hypothesis.
-
-## Mission design pattern (learned from the Weak Goldbach mission)
-
-For mission nodes that are genuine finite computational verifications
-("verified-computation cores"), the platform's accepted pattern is to reduce
-them to a **finite, block-indexed certificate obligation** in a published
-interface (here `Definitions.Def_GoldbachSieve`: `survivors`, `pairSums`), with
-the reduction itself inlining the generic soundness lemmas
-(survivor ⇒ prime needs `hi ≤ cutoff^2`; `pairSums` ⇒ Goldbach representation).
-Neighbours: `Richstein2001.segmented_sieve_coverage`,
-`WeakGoldbach.verified_range_sieve_coverage` (`73e8ddac`).
-
-Mission handoffs live in `missions/<slug>/status.md`; scratch Lean goes in
-`examples/<slug>/`; platform evidence (payloads, verdicts, JSON reads) is stored
-next to the handoff.
+- 数学/Lean/文档写英文，给他的汇报写中文。Lean 教学不要拆太碎，给完整证明任务。
+- **严格区分「我确认了」和「我推测」**——数值验证了不等于形式化证明了。

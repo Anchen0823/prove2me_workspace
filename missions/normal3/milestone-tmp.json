@@ -1,5 +1,0 @@
-{
- "item_id": "4f56eb44-73da-49c1-afdc-74aeb1a817ff",
- "milestone_title": "Normality inside the MacMahon family",
- "milestone_description": "Characterize which admissible parameter pairs $(a,c)\\in\\mathrm{paramSet}\\ 5$ make $\\mathrm{mkMagic3}(5,a,c)$ normal: exactly the eight pairs $(2,4),(2,6),(4,2),(4,8),(6,2),(6,8),(8,4),(8,6)$. Normality first bounds $1\\le a,c\\le 9$, reducing the problem to $81$ ground instances; each is then decided by evaluation, after `IsNormal` is rewritten into explicit quantifiers over `Fin 3` and unfolded with `Fin.forall_fin_succ`."
-}
