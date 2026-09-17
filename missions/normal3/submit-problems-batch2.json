@@ -1,0 +1,17 @@
+{
+ "problems": [
+  {
+   "theorem_name": "MagicSquares.magic_three_normal_eight",
+   "theorem_title": "There are exactly eight normal magic squares of order three",
+   "formal_statement": "namespace MagicSquares\n\ntheorem magic_three_normal_eight : normalParamCount 5 = 8 := by sorry\n\nend MagicSquares",
+   "natural_language_statement": "**Lo Shu uniqueness.** Exactly eight admissible\nparameter pairs give a normal magic square of order three:\n\n$$\\mathrm{normalParamCount}(5)=8,$$\n\nwhere $\\mathrm{normalParamCount}(e)$ counts the pairs $(a,c)\\in\\mathrm{paramSet}(e)$\nfor which $\\mathrm{mkMagic3}(e,a,c)$ is normal.\n\nBy `magic_three_param_bij` the admissible parameter pairs are in bijection with\nthe $3\\times3$ magic squares of line sum $15$, so this is precisely the statement\nthat there are **eight** normal magic squares of order three — the eight images\nof\n\n$$\\begin{pmatrix}4&9&2\\\\3&5&7\\\\8&1&6\\end{pmatrix}$$\n\nunder the symmetry group $D_{4}$ of the square. Equivalently: the Lo Shu square\nis the *unique* normal magic square of order three up to symmetry.\n\nThis is the oldest non-trivial classification in combinatorics, and the reason\norder three is exceptional: for $n=4$ there are $880$ normal squares up to\nsymmetry, and for $n\\ge5$ no classification is known.\n\n**Proof.** Immediate from `magic_three_normal_classify`, which characterizes\nnormality by the eight parameter pairs $(2,4),(2,6),(4,2),(4,8),(6,2),(6,8),(8,4),(8,6)$:\nthe defining filter of `normalParamSet 5` selects exactly those eight, and they\nare distinct.",
+   "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nimport Definitions.Def_MagicSquaresParam3\nimport Definitions.Def_MagicSquaresNormal3\nopen MagicSquares",
+   "source": "P. A. MacMahon, Combinatory Analysis (1916); W. S. Andrews, Magic Squares and Cubes, 2nd ed., Dover, 1960.",
+   "tags": [
+    "combinatorics",
+    "magic-squares",
+    "enumerative-combinatorics"
+   ]
+  }
+ ]
+}

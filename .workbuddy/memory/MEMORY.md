@@ -114,6 +114,17 @@
   `![![a,b,c],![d,e,f],![g,h,i]]`；`!![a,b,c]` 是**单行矩阵**（`Matrix (Fin 1) (Fin 3)`），
   类型不对。
 
+- **`simp` 不展开 `Fin n` 上的全称量词**：要显式给 `Fin.forall_fin_succ`
+  （递归剥到地面实例），再交给 `norm_num`。`Fin.forall_fin_three` 不存在。
+- **平台禁止 `native_decide`**：报 "trusts compiled native code instead of the
+  kernel"。算具体有限集合的基数改用 `norm_num [...]` 或 `decide`。
+- **doc comment 不能悬空**：把 `theorem` 移出 namespace 时，它前面的 `/-- ... -/`
+  必须一起搬走，否则 `end` 处报 "expected 'lemma'"。
+- **`ext` 后对 `Finset (ℕ × ℕ)` 要先 `rcases` 拆开配对**，否则 `rfl` 作用在
+  `ac.1` 上会失败（"not of the form (x = t)"）。
+- 具体元素的成员资格（如 `(2,4) ∈ paramSet 5`）用 `norm_num [paramSet, IsParam3]`；
+  `simp` 只会展开到 `range`/`product`/`filter` 就停住。
+
 ## Reusable proof technique: beating a too-weak "count" hypothesis
 
 When a hypothesis carries a covering count `⌊W/L⌋ + 1` that over-counts at the

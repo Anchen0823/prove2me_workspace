@@ -1,0 +1,17 @@
+[
+ {
+  "label": "def MagicSquaresParam3",
+  "theorem_id": "68eaae9b-d759-4a2a-83f6-741ecdbca5f8",
+  "item_id": "0fd71324-e0bb-478b-9d81-c0e6dc895645"
+ },
+ {
+  "label": "magic_three_normal_classify",
+  "theorem_id": "c677420b-bca2-41da-b9e3-f804919a1235",
+  "item_id": "4f56eb44-73da-49c1-afdc-74aeb1a817ff"
+ },
+ {
+  "label": "magic_three_normal_eight (GOAL)",
+  "theorem_id": "15e75fbb-7830-416b-ac11-6471accdd4e9",
+  "item_id": "79df094d-a56e-4e1f-9cd5-5bd1b221ce6a"
+ }
+]

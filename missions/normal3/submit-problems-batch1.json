@@ -1,0 +1,30 @@
+{
+ "problems": [
+  {
+   "theorem_name": "MagicSquares.magic_three_normal_classify",
+   "theorem_title": "The normal members of MacMahon's order-three family",
+   "formal_statement": "namespace MagicSquares\n\ntheorem magic_three_normal_classify (a c : ℕ) (hac : (a, c) ∈ paramSet 5) :\n    IsNormal (mkMagic3 5 a c) ↔\n      (a = 2 ∧ c = 4) ∨ (a = 2 ∧ c = 6) ∨ (a = 4 ∧ c = 2) ∨ (a = 4 ∧ c = 8) ∨\n        (a = 6 ∧ c = 2) ∨ (a = 6 ∧ c = 8) ∨ (a = 8 ∧ c = 4) ∨ (a = 8 ∧ c = 6) := by sorry\n\nend MagicSquares",
+   "natural_language_statement": "**Characterization of the normal squares inside\nMacMahon's order-three family.**\n\nFor $(a,c)\\in\\mathrm{paramSet}\\ 5$,\n\n$$\\mathrm{mkMagic3}(5,a,c)\\ \\text{is normal}\\iff (a,c)\\in\\{(2,4),(2,6),(4,2),(4,8),(6,2),(6,8),(8,4),(8,6)\\}.$$\n\nHere *normal* means the nine entries lie in $[1,9]$ and are pairwise distinct,\ni.e. they are a permutation of $1,\\dots,9$; and\n\n$$\\mathrm{mkMagic3}(5,a,c)=\n\\begin{pmatrix}\na & 15-a-c & c\\\\\n5+c-a & 5 & 5+a-c\\\\\n10-c & a+c-5 & 10-a\n\\end{pmatrix}.$$\n\n**Proof.** Normality forces $1\\le a\\le 9$ and $1\\le c\\le 9$, since $a=M_{00}$ and\n$c=M_{02}$ are entries. This leaves $81$ pairs, each of which is a ground\ninstance and is settled by evaluation. The eight surviving pairs are exactly\nthose for which the corner entries $a$ and $c$ are distinct members of\n$\\{2,4,6,8\\}$ with $a+c\\ne 10$; the pairs with $a+c=10$ are excluded because\nthen $M_{21}=a+c-5=5$ coincides with the centre.\n\n**Formalization Note** `IsNormal` is stated with a `Function.Injective`, which is\nnot decidable as given, so it is first rewritten into an explicit conjunction of\nentrywise bounds over `Fin 3` and pairwise-distinctness of the nine positions.\nThe quantifiers over `Fin 3` are then unfolded with `Fin.forall_fin_succ` before\n`norm_num` decides the resulting ground instances. Because the parametrization\nis over $\\mathbb{N}$, entries such as $a+c-5$ and $15-a-c$ truncate at zero, and\neach instance is evaluated with the truncation in place.",
+   "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nimport Definitions.Def_MagicSquaresParam3\nopen MagicSquares",
+   "source": "P. A. MacMahon, Combinatory Analysis (1916); W. S. Andrews, Magic Squares and Cubes, 2nd ed., Dover, 1960; M. Beck, T. Cohen, J. Cuomo, P. Gribelyuk, Amer. Math. Monthly 110 (2003), 707-717; arXiv:math/0201013v3.",
+   "tags": [
+    "combinatorics",
+    "magic-squares",
+    "enumerative-combinatorics"
+   ]
+  },
+  {
+   "theorem_name": "MagicSquares.magic_three_normal_eight",
+   "theorem_title": "There are exactly eight normal magic squares of order three",
+   "formal_statement": "namespace MagicSquares\n\ntheorem magic_three_normal_eight :\n    ((paramSet 5).filter fun ac => IsNormal (mkMagic3 5 ac.1 ac.2)).card = 8 := by sorry\n\nend MagicSquares",
+   "natural_language_statement": "**Lo Shu uniqueness.** Exactly eight admissible\nparameter pairs give a normal magic square of order three:\n\n$$\\#\\{(a,c)\\in\\mathrm{paramSet}\\ 5:\\ \\mathrm{mkMagic3}(5,a,c)\\ \\text{normal}\\}=8.$$\n\nBy `magic_three_param_bij`, the admissible parameter pairs are in bijection with\nthe $3\\times3$ magic squares of line sum $15$, so this is precisely the statement\nthat there are **eight** normal magic squares of order three — the eight images\nof\n\n$$\\begin{pmatrix}4&9&2\\\\3&5&7\\\\8&1&6\\end{pmatrix}$$\n\nunder the symmetry group $D_{4}$ of the square. Equivalently: the Lo Shu square\nis the *unique* normal magic square of order three up to symmetry.\n\nThis is the oldest non-trivial classification in combinatorics, and the reason\norder three is exceptional: for $n=4$ there are $880$ normal squares up to\nsymmetry, and for $n\\ge5$ no classification is known.\n\n**Proof.** Immediate from `magic_three_normal_classify`: the filter selects\nexactly the eight listed pairs, and the eight pairs are distinct.",
+   "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nimport Definitions.Def_MagicSquaresParam3\nopen MagicSquares",
+   "source": "P. A. MacMahon, Combinatory Analysis (1916); W. S. Andrews, Magic Squares and Cubes, 2nd ed., Dover, 1960; M. Beck, T. Cohen, J. Cuomo, P. Gribelyuk, Amer. Math. Monthly 110 (2003), 707-717; arXiv:math/0201013v3.",
+   "tags": [
+    "combinatorics",
+    "magic-squares",
+    "enumerative-combinatorics"
+   ]
+  }
+ ]
+}
