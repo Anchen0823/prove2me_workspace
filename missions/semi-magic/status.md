@@ -2,7 +2,7 @@
 
 负责人：anche（徐宇轩） · 环境：Lean 4.33.1 / Mathlib `0df444a3` · 平台：prove2.me v0.10.4
 
-创建：2026-09-17 · 最后更新：2026-09-17 13:10（Asia/Shanghai）
+创建：2026-09-17 · 最后更新：2026-09-17 13:50（`comps_card` / `sm3_canonical` / `sm3_params_card` 已 Proved）（Asia/Shanghai）
 
 ## 0. 定位
 
@@ -44,17 +44,17 @@ $k$ 元拆分）、`compsCount`。
 | theorem_name | id | 状态 |
 |---|---|---|
 | `MagicSquares.comps_card` | `65af2905-cd30-4bb9-aa15-3ea5f86790e0` | **Proved**（submission `2fa100b1`，ACCEPTED） |
-| `MagicSquares.sm3_canonical` | `650b0511-bff1-4101-84b1-a49d5bef9849` | 证明已提交 `870d6a8e`（待轮询） |
+| `MagicSquares.sm3_canonical` | `650b0511-bff1-4101-84b1-a49d5bef9849` | **Proved**（submission `53ee298a`，ACCEPTED） |
 | `MagicSquares.sm3_bij` | `c4897555-460d-4fc5-8a01-732b5d8f39c9` | **Open** |
 | `MagicSquares.sm3_params_card` | `7d09e267-c923-49c2-91f3-76185a464ad4` | **Proved**（submission `55dc6de9`，ACCEPTED） |
 | `MagicSquares.semi_magic_count_three` | `55e2191d-be25-4e6d-af7a-4635a34e5c63` | **Open** — GOAL |
 
 ```
-semi_magic_count_three (GOAL)
-├── sm3_bij           : semiMagicCount 3 t = sm3Count t
-│   └── sm3_canonical : 典范分解存在 + 唯一（min(x,y,z)=0）
-└── sm3_params_card   : sm3Count t = 3 C(t+3,4) + C(t+2,2)
-    └── comps_card    : stars and bars（k+1 部分 → C(n+k, n)）
+semi_magic_count_three (GOAL)              ← 待证（归约体）
+├── sm3_bij           : semiMagicCount 3 t = sm3Count t   ← Open，下一个
+│   └── sm3_canonical : 典范分解存在 + 唯一（min(x,y,z)=0）  ✅ Proved
+└── sm3_params_card   : sm3Count t = 3 C(t+3,4) + C(t+2,2) ✅ Proved
+    └── comps_card    : stars and bars（k+1 部分 → C(n+k, n)） ✅ Proved
 ```
 
 归约体（待提交）
