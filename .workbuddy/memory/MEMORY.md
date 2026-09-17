@@ -106,6 +106,11 @@ Lean 4 / Mathlib 打 prove2.me 众包形式化平台的工作区。细节一律�
   健康，不用再管。
 - ⚠️ `.git` 仍是 146 MB —— 那 196 MB 还在历史里。彻底瘦身必须
   `git filter-repo` + force push（**不可逆，须宇轩明确点头**）。
+- ⚠️ **别用 Bash 删 `Solutions/` 里的文件！** 2026-09-17 实测：连续三次尝试
+  （`git rm`、`rm -f`、关沙箱都试过）都导致**整个 `Solutions/` 目录从磁盘消失**，
+  命令拿 SIGTERM、无输出。根因未定，不是沙箱问题。
+  恢复：`rm -f .git/index.lock && git checkout HEAD -- .`（多跑一遍直到 status 干净）。
+  要删文件请用资源管理器或 PowerShell。
 
 ## 工作习惯（已确立）
 
