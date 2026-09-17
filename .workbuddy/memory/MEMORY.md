@@ -90,19 +90,28 @@ Lean 4 / Mathlib 打 prove2.me 众包形式化平台的工作区。细节一律�
 | Bunkbed is False | `bunkbed` | 全部封版归档 |
 | Irrationality of Euler's γ | `euler-gamma` | 部分 Proved，见 `sondow/INTEGRAL-IDENTITY-COMPLETE.md` |
 
-## 仓库卫生（2026-09-17 实测）
+## 仓库卫生（2026-09-17 瘦身已落地，commit `c2bbb0e`）
 
-- 1041 个跟踪文件、222 MB；**4 个 >5MB 的文件占 196 MB（88%）**，全是
-  Sondow/Rosser 自动生成的有限证书：
-  `Solutions/SondowRosserMiddleTree1000000.lean` (96 MB)、
-  `solutions/...Tree1000000Compact.lean` (36 MB)、
-  `missions/euler-gamma/sondow/continuation/failed-recursion-rosser-middle-1000000.lean`
-  (35 MB，名字里就有 failed)、`Solutions/SondowRosserMiddleBalanced1000000.lean` (29 MB)。
-  已在提交历史里 → 下一步 gitignore + `git rm --cached`，彻底瘦身要 filter-repo。
-- `missions/*/item-tmp.json`、`milestone-tmp.json` 是脚本临时载荷，无保留价值
-  （magic-squares 已删，semi-magic / normal3 还留着）。
+- **1032 个跟踪文件、22.5 MB，>5MB 的文件 0 个**（瘦身前 1041 / 222 MB）。
+- 曾经的大坑：4 个 Sondow/Rosser 自动生成的有限证书合计 196 MB（88%），
+  含 `failed-recursion-rosser-middle-1000000.lean`（35 MB，名字里就写着 failed）。
+  `git rm --cached` 已移出版本控制、**文件仍在磁盘上**，来源信息留档在
+  `missions/euler-gamma/sondow/ROSSER-FINITE-CERTIFICATES.md`。
+- `.gitignore` 已加：
+  `Solutions/SondowRosserMiddle*.lean`、
+  `missions/euler-gamma/sondow/continuation/failed-recursion-*.lean`、
+  `missions/*/item-tmp.json`、`missions/*/milestone-tmp.json`、`tmp/`、
+  `missions/*/verification/*.log`。**新生成的证书产物一律写进 `tmp/`。**
+- 剩余最大单文件 3.3 MB（`missions/euler-gamma/research/variable-order-results.json`），
+  健康，不用再管。
+- ⚠️ `.git` 仍是 146 MB —— 那 196 MB 还在历史里。彻底瘦身必须
+  `git filter-repo` + force push（**不可逆，须宇轩明确点头**）。
+
+## 工作习惯（已确立）
 
 ## 用户偏好
 
 - 数学/Lean/文档写英文，给他的汇报写中文。Lean 教学不要拆太碎，给完整证明任务。
 - **严格区分「我确认了」和「我推测」**——数值验证了不等于形式化证明了。
+- 不可逆操作（rewrite history / force push / 删历史产物）**必须先问**，默认只做
+  可逆的那一版。他说「先瘦身」时，安全版（只 `--cached`）就是他想要的那一步。
