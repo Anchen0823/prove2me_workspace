@@ -1,0 +1,12 @@
+import Mathlib
+#check min_eq_zero
+#check Nat.min_eq_zero
+#check min_eq_zero_iff
+#check Nat.min_eq_zero_iff
+#check min_eq_left
+#check min_eq_right
+#check Nat.min_eq_left
+#check Nat.min_eq_right
+#check lt_min_iff
+#check min_le_left
+#check min_le_right

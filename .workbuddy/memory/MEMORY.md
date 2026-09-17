@@ -99,6 +99,21 @@
 - 计数定理若形如 `C(n+k-1, n)`，把陈述写成「`k+1` 个部分」而非「`k` 个部分」，
   这样公式里没有 `k-1`，`k=0` 时不会因 Nat 截断减法出错。
 
+- **solution 文件里 `theorem solution` 必须在 namespace 之外**（顶层）。正确结构：
+  `namespace MagicSquares` 放辅助定义/引理 → `end MagicSquares` → `open MagicSquares`
+  → `theorem solution`。放在 namespace 内平台报
+  `Unknown identifier \`solution\``（`autoImplicit false` 下更明显）。
+- **平台心跳上限 200000**：`omega` 或 `dsimp` 展开大项会报
+  `timeout at tactic execution, maximum number of heartbeats`。对策：solution 顶部加
+  `set_option maxHeartbeats 0`，并避免用 `dsimp [x] at h` 展开 `let` 定义——
+  改用显式 `have hx_def : x = ... := rfl` 再交给 `omega`。
+- **`omega` 原生支持 `min`**：`min a b = 0` 这类条件可以直接喂给 `omega`，
+  不必手工 `rw [Nat.min_eq_zero_iff]`（该定理名是 `Nat.min_eq_zero_iff`，
+  **没有** `Nat.min_eq_zero`）。`min_eq_zero` 是通用名（需 IsBotZeroClass）。
+- **`Square n α` 是 `Matrix (Fin n) (Fin n) α`**：构造具体方阵用嵌套向量
+  `![![a,b,c],![d,e,f],![g,h,i]]`；`!![a,b,c]` 是**单行矩阵**（`Matrix (Fin 1) (Fin 3)`），
+  类型不对。
+
 ## Reusable proof technique: beating a too-weak "count" hypothesis
 
 When a hypothesis carries a covering count `⌊W/L⌋ + 1` that over-counts at the

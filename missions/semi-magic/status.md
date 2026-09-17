@@ -2,7 +2,7 @@
 
 负责人：anche（徐宇轩） · 环境：Lean 4.33.1 / Mathlib `0df444a3` · 平台：prove2.me v0.10.4
 
-创建：2026-09-17 · 最后更新：2026-09-17 02:20（Asia/Shanghai）
+创建：2026-09-17 · 最后更新：2026-09-17 13:10（Asia/Shanghai）
 
 ## 0. 定位
 
@@ -20,8 +20,7 @@ $$H_{3}(t)=3\binom{t+3}{4}+\binom{t+2}{2},$$
 - **id**：`6ceb0b04-0e12-4909-a3b7-21581fe08d59`
 - **名称**：*Magic Squares II: MacMahon's Enumeration of Order-Three Semi-Magic Squares*
 - **类型**：`ResearchPaper` · **字段**：Combinatorics `55eec41b-ff24-45ad-96b6-49d7a6869286`
-- 状态：`Draft`，需宇轩在网页端逐项确认后 Submit（平台规则：goal 不挂 milestone，
-  故只提交 4 个支撑 milestone）
+- 状态：`Reviewed`（2026-09-17，待 moderator 审核）
 
 ## 2. 已发布节点
 
@@ -44,10 +43,10 @@ $k$ 元拆分）、`compsCount`。
 
 | theorem_name | id | 状态 |
 |---|---|---|
-| `MagicSquares.comps_card` | `65af2905-cd30-4bb9-aa15-3ea5f86790e0` | 证明已提交 `2fa100b1`（待轮询） |
-| `MagicSquares.sm3_canonical` | `650b0511-bff1-4101-84b1-a49d5bef9849` | **Open**（核心难点） |
+| `MagicSquares.comps_card` | `65af2905-cd30-4bb9-aa15-3ea5f86790e0` | **Proved**（submission `2fa100b1`，ACCEPTED） |
+| `MagicSquares.sm3_canonical` | `650b0511-bff1-4101-84b1-a49d5bef9849` | 证明已提交 `870d6a8e`（待轮询） |
 | `MagicSquares.sm3_bij` | `c4897555-460d-4fc5-8a01-732b5d8f39c9` | **Open** |
-| `MagicSquares.sm3_params_card` | `7d09e267-c923-49c2-91f3-76185a464ad4` | **Open** |
+| `MagicSquares.sm3_params_card` | `7d09e267-c923-49c2-91f3-76185a464ad4` | **Proved**（submission `55dc6de9`，ACCEPTED） |
 | `MagicSquares.semi_magic_count_three` | `55e2191d-be25-4e6d-af7a-4635a34e5c63` | **Open** — GOAL |
 
 ```

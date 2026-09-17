@@ -25,7 +25,7 @@
 - **构造**：Xin (2008) 3 阶幻方完全参数化 —— 本工作参数化的直接来源。
 - **开放问题**：Pierrat–Thiriet–Zimmermann（平方数幻方）；Rome–Yamagishi (2024)；Flores (2024)。
 
-## 3. Mission（2026-09-16 创建，待宇轩在网页确认）
+## 3. Mission（2026-09-16 创建，已 Reviewed，2026-09-17）
 
 - **Proposal id**：`c66f86f5-4921-40de-bce2-fb6564aebc67`
 - **名称**：*Magic Squares I: MacMahon's Enumeration of Order-Three Magic Squares*
@@ -33,8 +33,7 @@
 - **Goal item**：`MagicSquares.magic_count_three_divisible`
 - **Milestones**：6 个（见下表「milestone」列）
 
-⚠️ Proposal 处于 `Draft`，**只有宇轩本人能在网页端逐项确认并提交**；
-提交后经 moderator 审核才成为公开 mission。
+Proposal 已处于 `Reviewed`；待 moderator 审核后成为公开 mission。
 
 ## 4. 已发布内容
 

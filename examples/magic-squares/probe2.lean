@@ -1,0 +1,15 @@
+import Mathlib
+#check Finset.filter_union_right
+#check Finset.filter_or
+#check Finset.filter_and
+#check Finset.filter_not
+#check Finset.card_union
+#check Finset.disjoint_filter_filter
+#check Finset.filter_eq
+#check Nat.choose_add_choose
+#check Nat.choose_succ_succ
+#check Nat.choose_symm
+#check Nat.choose_eq_zero_of_lt
+#check Nat.choose_succ_right
+#check Nat.choose_le_succ
+#check Nat.add_sub_assoc
