@@ -20,7 +20,8 @@ lean_lib «SpencerRoute» where
              `examples.«magic-squares».spencer.Recursion,
              `examples.«magic-squares».spencer.Aggregate,
              `examples.«magic-squares».spencer.Rank,
-             `examples.«magic-squares».spencer.Sharp]
+             `examples.«magic-squares».spencer.Sharp,
+             `examples.«magic-squares».spencer.Degree]
 -- Every library declares an empty `roots` plus explicit globs. Without this,
 -- Lake treats the library name as a *module* and looks for a root file
 -- (`Definitions.lean` / `Theorems.lean` / `Solutions.lean`); those files do not

@@ -1,12 +1,26 @@
 # Magic Squares V — proposal status
 
-Last updated: 2026-09-19 (Asia/Shanghai).
+Last updated: 2026-09-19 21:20 (Asia/Shanghai).
 
-**Proposal id `3a8476fd-e093-414d-a8d8-e020d2466a57`, status `In review`** — Submitted by the user
-on 2026-09-19 ~13:47; the six draft items were published as platform nodes (all `Open`, see
-`published-nodes.json`) and `semi_magic_count_one` is already **Proved**.  **Mission IV** went live
-as `df1cb8cc`; mission V itself is *not* live yet, which is why the milestone text is still frozen
-(see the note at the end of this file).
+✅ **Mission V is LIVE.**  Proposal id `3a8476fd-e093-414d-a8d8-e020d2466a57` flipped from
+`In review` to **`Reviewed`** (proposal `updated_at` `2026-09-19T15:01:27Z`), re-verified
+2026-09-19 21:1x local by `GET /mission-proposals/3a8476fd-…`:
+
+```
+status     = Reviewed
+mission_id = e06131f8-1bf5-47c4-b8f4-507f107269e0
+```
+
+`GET /missions/e06131f8-…/milestones` returns all **7** milestones in attack order.  Three
+consequences, all of which were blocked before:
+
+* the **milestone text is now captain-editable**, so the `vol(B_4)` correction recorded further
+  down can finally be applied (together with a correction comment in the mission discussion);
+* the Spencer-route payoff theorems can be **published as mission nodes** by attaching a
+  milestone — the user is the captain of these missions, so no external review is needed;
+* `semi_magic_polynomial_exists` (the goal's milestone `72482ba2`) is still `Open`, and its
+  formal statement is *exactly* what the Spencer route was built to prove — see the Brick 11
+  section at the end of this file for how close it now is.
 
 | | |
 |---|---|
@@ -162,12 +176,27 @@ passes a *named* definition for exactly this reason.
 
 ### Ladder state
 
-| node | status |
-|---|---|
-| `semi_magic_count_two`, `semi_magic_count_three` | Proved (references) |
-| **`semi_magic_count_one`** | **Proved** |
-| `semi_magic_count_four`, `semi_magic_polynomial_exists`, `semi_magic_reciprocity`, `semi_magic_vanishing` | Open |
-| `semi_magic_polynomial` (goal) | Open |
+Platform status of the six draft nodes (re-read from `/missions/e06131f8-…/milestones`,
+2026-09-19 21:1x local), next to what the Spencer route already proves **locally**:
+
+| node | platform | Spencer route (local, `lake build SpencerRoute`, no `sorry`/`axiom`) |
+|---|---|---|
+| `semi_magic_count_two`, `semi_magic_count_three` | Proved (references) | — |
+| **`semi_magic_count_one`** | **Proved** | — |
+| `semi_magic_count_four` | Open | — (concrete `n = 4` interpolation, not on the Spencer route) |
+| **`semi_magic_polynomial_exists`** | Open | **almost**: degree exactly `(n-1)²` and agreement for `t ≥ 1` — `exists_polynomial_semiMagicCount_degree_eq`; **missing the `t = 0` value** |
+| `semi_magic_reciprocity` | Open | — (S5) |
+| `semi_magic_vanishing` | Open | — (S5 says the two are the same content) |
+| `semi_magic_polynomial` (goal) | Open | — |
+
+The published `semi_magic_polynomial_exists` asks for
+
+```lean
+∃ p : Polynomial ℚ, p.natDegree = (n - 1) ^ 2 ∧ ∀ t : ℕ, p.eval (t : ℚ) = (semiMagicCount n t : ℚ)
+```
+
+(verified verbatim from `GET /theorems/3dc34529-feed-4b21-bd4f-443097422b63`; the `∀ t : ℕ` is the
+whole difficulty — our local theorem carries the extra hypothesis `1 ≤ t`).
 
 ## The `H_4` polynomial is confirmed by the literature — and one claim in the description is wrong
 
@@ -251,10 +280,10 @@ verified locally with `#print axioms` → only `propext, Classical.choice, Quot.
 platform node yet*: mission V has no mission id (proposal `In review`), so there is nothing to
 attach it to — see the note at the end of this file.
 
-Still to do: the sharp degree bound `(n-1)²` via the face rank `ρ(B) = |B| - v(B) + c(B)` (S3) and
-the value at line sum `0` (equivalently Ehrhart–Macdonald reciprocity at `-1`, S5).  §8 of
-`SPENCER-ROUTE.md` records the design of what was done and the open questions for S3/S5;
-when S3 lands it must be a **new** declaration, not an edit of this one.
+Still to do at the time of writing: the sharp degree bound `(n-1)²` (S3) and the value at line sum
+`0` (equivalently Ehrhart–Macdonald reciprocity at `-1`, S5).  §8 of `SPENCER-ROUTE.md` records the
+design; each new rung must be a **new** declaration, not an edit of an existing one.  (S3 has since
+landed, and so has its lower half — both below.)
 
 ✅ **S3 landed 2026-09-19 ~24:00** — the sharp degree bound is proved locally, as **new**
 declarations, in two new files (`spencer/Rank.lean`, `spencer/Sharp.lean`, both added to the
@@ -273,8 +302,8 @@ strictness lemma: `rankB C < rankB B` for candidates `C ⊂ B` that contain a pe
 — proved by duality (`LinearMap.range_dualMap_eq_dualAnnihilator_ker`) plus a two-summing
 contradiction over the `σ`- and `τ`-cells, using exactly the candidate constraint
 `B \ φ(σ) ⊆ C`.  Degenerate candidates (`rankB C = rankB B`) never contain a permutation, so
-their counts vanish identically.  Publishing both nodes is still blocked on mission V going
-live (`3a8476fd` `In review`).
+their counts vanish identically.  Publishing both nodes is now unblocked — mission V is live
+(`e06131f8`, see the top of this file).
 
 **Note on the published description.**  The proposal's Timeline bullet for `n = 4` says the
 leading coefficient `11/11340` *is* `vol(B_4)`; that is wrong by a factor of `n^{n-1} = 64`
@@ -286,6 +315,70 @@ correction notice until then.
 ✅ **Confirmed 2026-09-19 20:00** — the fix is still blocked, and it is *not* an oversight:
 mission **IV** is the one that went live (`df1cb8cc`, cf. `../../.workbuddy/memory/PLATFORM-NOTES.md`),
 while mission V's proposal `3a8476fd` is still `In review`, so its description and items remain
-un-PATCHable and the milestone text has not yet become captain-editable.  Re-check
-`GET /mission-proposals/3a8476fd-e093-414d-a8d8-e020d2466a57` for `status` before retrying; when it
-flips, do both halves (milestone wording **and** a correction comment in the discussion).
+un-PATCHable and the milestone text has not yet become captain-editable.
+
+✅ **Unblocked 2026-09-19 21:1x** — the proposal has since flipped to `Reviewed` with
+`mission_id = e06131f8-…`, so the milestone text **is** captain-editable now.  Do both halves:
+correct the `vol(B_4)` wording in the milestone, **and** post a correction notice in the mission
+discussion so the fix is on the record.  Neither has been done yet.
+
+---
+
+## ✅ Brick 11: the exact degree — the matching lower bound (2026-09-19 ~21:00)
+
+`Sharp.lean` gave `natDegree ≤ (n-1)²`; the other inequality was the last open piece of step 4 of
+Spencer's four.  It is now proved, in a **new** file `examples/magic-squares/spencer/Degree.lean`
+(~375 lines, clean, added to the `SpencerRoute` lake lib; `lake build SpencerRoute` passes,
+`#print axioms` → only `propext, Classical.choice, Quot.sound`):
+
+```lean
+theorem exists_polynomial_semiMagicCount_degree_eq (n : ℕ) (hn : 1 ≤ n) :
+    ∃ p : Polynomial ℚ, p.natDegree = (n - 1) ^ 2 ∧
+      ∀ t : ℕ, 1 ≤ t → p.eval (t : ℚ) = (semiMagicCount n t : ℚ)
+```
+
+Note the signature is now *character-for-character* the platform's `semi_magic_polynomial_exists`
+except for the trailing hypothesis `1 ≤ t`.
+
+**Method — an explicit linear family, not Ehrhart.**  For a square of order `n + 1` and line sum
+`(n + 1) * s`, take any `c : Fin n → Fin n → Fin (s / n + 1)` (that is, `(n*n)` free parameters,
+each in a box of size `s / n + 1`) and build the `(n+1) × (n+1)` matrix
+
+* `M p q = s + c p q` on the top-left `n × n` block,
+* `M p last = s - Σ_q c p q` (last column), `M last q = s - Σ_p c p q` (last row),
+* `M last last = s + Σ_{p,q} c p q` (corner).
+
+Every line sums to `n*s + Σc + (s - Σc) = (n+1)*s`, and `c p q ≤ s/n` gives `Σ_q c p q ≤ n*(s/n) ≤ s`,
+so all entries are `ℕ`.  The block is recovered from `M` by `c p q = M p q - s`, so the map is
+injective and
+
+```lean
+theorem semiMagicCount_ge_family (n s : ℕ) (hn : 1 ≤ n) :
+    (s / n + 1) ^ (n * n) ≤ semiMagicCount (n + 1) ((n + 1) * s)
+```
+
+Growth `≥ s^((n-1)²)` at `n' = n - 1` then forces `natDegree ≥ (n-1)²`, via the purely elementary
+lemma
+
+```lean
+theorem le_natDegree_of_lowerBound {p : Polynomial ℚ} {d : ℕ} {A : ℚ} (hA : 1 ≤ A)
+    (h : ∀ s : ℕ, 1 ≤ s → (s : ℚ) ^ d ≤ p.eval (A * (s : ℚ))) : d ≤ p.natDegree
+```
+
+(`p.eval x ≤ B * x ^ e` with `B` = Σ|coeff| for `x ≥ 1` from `eval_le_mul_pow`, against
+`s ^ d = s ^ (d - e) * s ^ e ≥ s * s ^ e` at a large `s` — `by_contra` + `exists_nat_gt`; no
+analysis, no asymptotics).
+
+**What this does *not* settle.**  The published goal quantifies over **all** `t : ℕ`, and the
+Spencer machinery only ever produces agreement for `t ≥ 1` (§4.1 of `SPENCER-ROUTE.md`): the
+support-set recursion has no term for the empty support, so the value at line sum `0` is invisible
+to it.  Closing `semi_magic_polynomial_exists` therefore needs **S5**, i.e. `p(0) = H_n(0) = 1`,
+equivalently `q(-1) = 1` for the shifted polynomial — which is Ehrhart–Macdonald reciprocity at
+`-1` (`B_n` has no interior lattice points for `n ≥ 2`).  The exact degree is what makes S5
+*checkable*: with `n` values already pinned it is a single extra evaluation, not a search.
+
+**Files added this round** (all previously **untracked**, now committed together with `Degree.lean`
+so that the tree actually builds from `HEAD`): `spencer/Spencer.lean`, `spencer/HallSupport.lean`,
+`spencer/SupportSplit.lean`, `spencer/Recursion.lean`, `spencer/Aggregate.lean`,
+`spencer/Degree.lean` + the `lakefile.lean` `SpencerRoute` roots.  (`Rank.lean`/`Sharp.lean` were
+already in `d880dd8`, but their five dependencies were not — the committed tree did not build.)

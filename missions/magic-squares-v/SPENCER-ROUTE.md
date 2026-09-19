@@ -225,6 +225,54 @@ The matching **lower** bound (`deg ≥ (n-1)²`, needed to turn `≤` into `=`) 
 question; the cheapest route is probably an explicit family of `c · t^{(n-1)²}` semi-magic
 squares, but that is not costed yet.
 
+> ✅ **S3 lower bound landed 2026-09-19**, in `spencer/Degree.lean` (~375 lines, clean, eighth root
+> of the `SpencerRoute` lib).  The family is even more explicit than "`c · t^{(n-1)²}`": for order
+> `n + 1` and line sum `(n + 1) * s`, put a free block of `n * n` parameters with
+> `c : Fin n → Fin n → Fin (s / n + 1)` on the top-left `n × n` corner and let the line-sum
+> conditions fill in the last row, the last column and the corner:
+>
+> ```
+> M p q      = s + c p q          (top-left block)
+> M p last   = s - Σ_q c p q      (last column)
+> M last q   = s - Σ_p c p q      (last row)
+> M last last = s + Σ_{p,q} c p q (corner)
+> ```
+>
+> Every line sums to `n*s + Σc + (s - Σc) = (n+1)*s`; `c p q ≤ s / n` bounds `Σ_q c p q ≤ n*(s/n) ≤ s`
+> so all entries are `ℕ`; and `c p q = M p q - s` inverts the construction, so it is injective and
+>
+> ```lean
+> theorem semiMagicCount_ge_family (n s : ℕ) (hn : 1 ≤ n) :
+>     (s / n + 1) ^ (n * n) ≤ semiMagicCount (n + 1) ((n + 1) * s)
+> ```
+>
+> Growth like `s ^ ((n-1)²)` then forces the degree, through a lemma that needs no analysis:
+>
+> ```lean
+> theorem le_natDegree_of_lowerBound {p : Polynomial ℚ} {d : ℕ} {A : ℚ} (hA : 1 ≤ A)
+>     (h : ∀ s : ℕ, 1 ≤ s → (s : ℚ) ^ d ≤ p.eval (A * (s : ℚ))) : d ≤ p.natDegree
+> ```
+>
+> `by_contra d ≤ p.natDegree`; at `x ≥ 1`, `p.eval x ≤ B * x ^ e` where `B = Σ |coeff|` and
+> `e = p.natDegree` (`eval_le_mul_pow`, from `eval_eq_sum_range` + `Finset.sum_le_sum`); for `e < d`
+> and `s` large, `s ^ d = s ^ (d - e) * s ^ e ≥ s * s ^ e` while the hypothesis gives
+> `s ^ d ≤ p.eval (A * s) ≤ B * A ^ e * s ^ e`, so cancelling `s ^ e > 0` yields `s ≤ B * A ^ e`,
+> contradicting the choice of `s` (`exists_nat_gt`).  Pure `ℕ`/`ℚ` arithmetic — deliberately no
+> asymptotics, since none is needed.
+>
+> Payoff (note the signature is now character-for-character the platform's
+> `semi_magic_polynomial_exists`, apart from the trailing `1 ≤ t`):
+>
+> ```lean
+> theorem exists_polynomial_semiMagicCount_degree_eq (n : ℕ) (hn : 1 ≤ n) :
+>     ∃ p : Polynomial ℚ, p.natDegree = (n - 1) ^ 2 ∧
+>       ∀ t : ℕ, 1 ≤ t → p.eval (t : ℚ) = (semiMagicCount n t : ℚ)
+> ```
+>
+> `#print axioms` on all three new declarations → only `propext, Classical.choice, Quot.sound`.
+> Step 4 is therefore **finished**, in both directions; §5's table and §8 record what is left
+> overall (only S5).
+
 > ✅ **S3 upper bound landed 2026-09-19.**  Done in `spencer/Rank.lean` + `spencer/Sharp.lean`,
 > exactly along the "zero-line-sum space" disguise of `ρ` sketched above — no graphs, no
 > vertices, no components.  Highlights:
@@ -257,7 +305,7 @@ squares, but that is not costed yet.
 | S2b | the split `T ↦ T - P` and its support behaviour | **done**, `spencer/SupportSplit.lean` |
 | S2c | cardinal assembly: fibres `{supp = C}`, `B \ φ ⊆ C ⊆ B`, partition the level-`s` fibre (completes step 3) | **done**, `card_matFiber_split` + `card_matFiber_recurrence` in `spencer/SupportSplit.lean` |
 | S2d | cancellation of the ambient bound; Hall choice of `σ_B` for a support set `B`; well-founded induction on `B.card` + `isPolyDegLe_of_recurrence_succ` ⇒ `g_B` polynomial | **done**, `spencer/Recursion.lean` (`isPolyDegLe_gB`) |
-| S3 | degree bound via `ρ` (step 4, sharp version) and/or the lower bound | **upper bound done** 2026-09-19 (`spencer/Rank.lean` + `spencer/Sharp.lean`); the matching lower bound `deg ≥ (n-1)²` is still open |
+| S3 | degree bound via `ρ` (step 4, sharp version) **and** the matching lower bound | **done, both directions** 2026-09-19 — upper bound `spencer/Rank.lean` + `spencer/Sharp.lean`; lower bound `spencer/Degree.lean`, giving the **exact** degree `(n-1)²` for `t ≥ 1` (`exists_polynomial_semiMagicCount_degree_eq`) |
 | S4a | the cardinality bridge: `semiMagicCount n t = Σ_{B ⊆ univ} #(matFiber n t t B)`, i.e. `matBox n t` is `univ` transported along `↑` | **done**, `spencer/Aggregate.lean` (`semiMagicCount_eq_sum_matFiber`) |
 | S4b | `IsPolyDegLe` is closed under the shift `r ↦ r + 1` and under sums over a finite set, so `t ↦ semiMagicCount n t` agrees with a polynomial for `t ≥ 1` | **done**, `spencer/Aggregate.lean` (`exists_polynomial_semiMagicCount_pos`, degree `≤ n * n`) |
 | S5 | `q(-1) = 1` (= reciprocity at −1) | the hard one; see §4.1 |
@@ -265,6 +313,11 @@ squares, but that is not costed yet.
 Suggested ordering given §4.1: **S2 → S3 → S4, then publish the `t ≥ 1` statement as a new
 node**, and treat S5 as its own research problem.  `semi_magic_count_four` (`n = 4`) has the
 same two subtleties plus a concrete interpolation problem, so it is *not* an easier substitute.
+
+Status 2026-09-19: **S1, S2a–d, S3 (both directions) and S4a–b are all closed.**  The whole
+combinatorial core of Spencer's proof plus the exact degree bound now exist locally, with no
+`sorry` and no `axiom`; **S5 is the only rung left**, and it is a genuinely separate research
+problem (Ehrhart–Macdonald reciprocity at `-1`).
 
 ## 6. Fallback if S5 does not yield
 
@@ -303,7 +356,24 @@ theorem exists_polynomial_semiMagicCount_sharp (n : ℕ) :
       ∀ t : ℕ, 1 ≤ t → p.eval (t : ℚ) = (semiMagicCount n t : ℚ)
 ```
 
-This is the theorem §6 recommended publishing.  Both nodes go up together once mission V is live.
+This is the theorem §6 recommended publishing.  Both nodes could go up together once mission V is
+live — **and mission V is live now** (`e06131f8-1bf5-47c4-b8f4-507f107269e0`; proposal `3a8476fd`
+flipped to `Reviewed` at `2026-09-19T15:01:27Z`), so publishing is a captain action away.
+
+✅ **And the exact-degree sibling too** (2026-09-19, `spencer/Degree.lean`) — the strongest of the
+three local nodes, and the one that differs from the published goal only by the hypothesis `1 ≤ t`:
+
+```lean
+theorem exists_polynomial_semiMagicCount_degree_eq (n : ℕ) (hn : 1 ≤ n) :
+    ∃ p : Polynomial ℚ, p.natDegree = (n - 1) ^ 2 ∧
+      ∀ t : ℕ, 1 ≤ t → p.eval (t : ℚ) = (semiMagicCount n t : ℚ)
+```
+
+⚠️ **Do not publish this as the goal node.**  The published `semi_magic_polynomial_exists`
+quantifies over **all** of `ℕ` (`∀ t : ℕ, …`, verified from
+`GET /theorems/3dc34529-feed-4b21-bd4f-443097422b63`), so `degree_eq` is a sibling, not a solution.
+Publishing it as the goal would be false advertising; publish it as its own node under the same
+milestone (or a new one), and leave the goal `Open` until S5 lands.
 
 ## 7. Implementation notes for S2b (found the hard way, 2026-09-19)
 
@@ -384,12 +454,12 @@ never has to be materialised.
 
 ### 8.1 Building
 
-The four files import each other, so they are a real Lake library (2026-09-19, added alongside
-`RosserLcmBlocks` in `lakefile.lean`); since S3 landed the lib has **seven** roots
-(`Spencer, HallSupport, SupportSplit, Recursion, Aggregate, Rank, Sharp`):
+The files import each other, so they are a real Lake library (2026-09-19, added alongside
+`RosserLcmBlocks` in `lakefile.lean`); since S3 and Brick 11 landed the lib has **eight** roots
+(`Spencer, HallSupport, SupportSplit, Recursion, Aggregate, Rank, Sharp, Degree`):
 
 ```
-lake build SpencerRoute          # builds all five, ~2-3 min cold, one module ~30 s warm
+lake build SpencerRoute          # builds all eight, ~2-3 min cold, one module ~30 s warm
 ```
 
 The library is **not** a default target, so a plain `lake build` is unaffected.  Module names inside
@@ -455,3 +525,36 @@ both as predicted:
 Result: `exists_polynomial_semiMagicCount_pos` of §6, degree `≤ n * n`.  §4.1 is the reason the
 statement cannot cover `t = 0`; the sharp `(n-1)²` (S3 / §4.2) is independent of S4 and can be
 attacked either before or after.
+
+✅ Both sharpenings have since landed — `spencer/Sharp.lean` (degree `≤ (n-1)²`) and
+`spencer/Degree.lean` (degree `= (n-1)²`, via the explicit family of §4.2).  The local endpoint is
+now `exists_polynomial_semiMagicCount_degree_eq`, still with the `1 ≤ t` restriction; the crude
+`exists_polynomial_semiMagicCount_pos` is kept because it is the published `§6` sibling and its
+statement must not be edited in place.
+
+### 8.4 Brick 11 — build and verify — **done**
+
+```lean
+-- tmp/axiom_check_degree.lean
+import examples.«magic-squares».spencer.Degree
+#print axioms MagicSquaresSpencer.semiMagicCount_ge_family
+#print axioms MagicSquaresSpencer.le_natDegree_of_lowerBound
+#print axioms MagicSquaresSpencer.exists_polynomial_semiMagicCount_degree_eq
+```
+
+→ all three report `[propext, Classical.choice, Quot.sound]`.  Implementation notes worth keeping,
+all of them `simp`/`rw` friction rather than mathematics:
+
+* `lowerBlock` is defined with the branch test `(i : ℕ) = n`, but `Fin.castSucc p`'s value is
+  `↑p`; `simp only [lowerBlock]` leaves the `if` unreduced.  The fix is to state the side
+  conditions as `¬(((Fin.castSucc p : Fin (n+1)) : ℕ) = n)` and finish with
+  `rw [if_neg hi, if_neg hj, blockIdx_castSucc hn p]` (or `if_pos (Fin.val_last n)` for the last
+  index).  Four `lowerBlock_*` lemmas, one per block corner.
+* `∑ i ∈ u, (a - X i) = u.card * a - ∑ i ∈ u, X i` is **not** in Mathlib in usable form; it is
+  proved here by `Finset` induction (`sum_sub_const`), with the insert step needing
+  `u.card * a + a = (u.card + 1) * a` handed to `omega` explicitly rather than left to `ring`.
+* `Fin.sum_univ_castSucc` (not `sum_univ_succ`) is the split `∑ i, f i = ∑ i, f (i.castSucc) + f (Fin.last n)`
+  used for every row/column sum.
+* `push_neg` is deprecated in this pin alongside `autoImplicit false`; use `push Not`.
+* `le_or_lt` / `lt_or_le` are not in scope as bare names in this file — `by_cases hn2 : 1 < n`
+  with an explicit `n ≤ 1` branch is the rewrite that compiles.
