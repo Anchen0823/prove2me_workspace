@@ -10,6 +10,17 @@ require mathlib from git
 -- It is not a default target; it is only ever built as a dependency.
 lean_lib «RosserLcmBlocks» where
   roots := #[`examples.«five-primes».RosserLcmBlocks]
+-- Same story for the Spencer (1980) route to the general-n semi-magic rung of
+-- mission V: it is a small development split over files that import each
+-- other, so the pieces have to be real Lake modules.  Not a default target.
+lean_lib «SpencerRoute» where
+  roots := #[`examples.«magic-squares».spencer.Spencer,
+             `examples.«magic-squares».spencer.HallSupport,
+             `examples.«magic-squares».spencer.SupportSplit,
+             `examples.«magic-squares».spencer.Recursion,
+             `examples.«magic-squares».spencer.Aggregate,
+             `examples.«magic-squares».spencer.Rank,
+             `examples.«magic-squares».spencer.Sharp]
 -- Every library declares an empty `roots` plus explicit globs. Without this,
 -- Lake treats the library name as a *module* and looks for a root file
 -- (`Definitions.lean` / `Theorems.lean` / `Solutions.lean`); those files do not
