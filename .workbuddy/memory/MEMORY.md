@@ -1,157 +1,108 @@
 # Project memory — prove2me_workspace
 
-Lean 4 / Mathlib 打 prove2.me 众包形式化平台的工作区。细节一律写在
-`missions/<slug>/status.md`，这里只放跨 mission 复用的硬规则和踩坑清单。
+Lean 4 / Mathlib 打 prove2.me 众包形式化平台。**本文件只做索引**：
 
-## 环境（本机 Windows）
+| 想找什么 | 去哪 |
+|---|---|
+| Lean / Mathlib 踩坑、tactic 怪癖 | `memory/LEAN-PITFALLS.md` |
+| 平台 API、成员资格、draft 校验、盲审、两种提交模式 | `memory/PLATFORM-NOTES.md` |
+| 幻方领域数据、BCCG 文献、可选路线 | `memory/MAGIC-SQUARES-REF.md` |
+| 单个 mission 的设计与进度 | `missions/<slug>/status.md` |
 
-- Bash 的 PATH 是坏的：**每条命令都要先**
+## 环境（Windows）
+
+- Bash PATH 是坏的：**每条命令先**
   `export PATH="/usr/bin:/bin:/c/Windows/System32:/c/Windows:$PATH";`
-  PowerShell 工具在此会话取不到输出，别用。
-- Lean `leanprover/lean4:v4.33.1`（elan），Mathlib
-  `0df444a360eaa60ab8c11dca51a86af692955474`，已构建在 `.lake/`（约 8.4 GB，**绝不删**）。
-- 单文件检查：`lake env lean <file>`；模块检查：`lake build <Module.Name>`；
-  全部默认目标：`lake build`（**很慢**，100 来个自有模块合计 30–90 分钟）。
-- ⚠️ **全量并行 `lake build` 在本机会随机失败 ~20–35 个模块**：
-  `failed to read file '...olean[.private]'`，出错文件横跨 elan 工具链与
-  mathlib 包、每次名单不同 ⇒ 并发 IO 竞争（AV/索引器/执行层之一，未定位）。
-  单模块构建从不失败。对策：全量跑完导出失败名单**串行逐个补编**
-  （脚本模式见 2026-09-17 日志「晚班」节）。
-- `lakefile.lean` 给 `Definitions`/`Theorems`/`Solutions` 开了 `autoImplicit false`；
-  `examples/` 不是 lean_lib，在那里跑 lean 是 autoImplicit ON。
-  **提交前必须把证明挪进 `Solutions/` 再编译一遍。**
-- ✅ **lakefile.lean / lean-toolchain / lake-manifest.json 自 `eaccd16` 起已被
-  `git add -f` 纳入版本控制**（此前被 `.gitignore` 忽略、注释写 "agent-local"）。
-  ⚠️ 它们仍在 `.gitignore` 规则里，所以**新增/改动这三个文件必须 `git add -f`**，
-  否则 `git status` 里看不到、也进不了 commit。
-
-## Prove2me 平台约定
-
-- API 助手：`scripts/p2m_api.py`（`token|get|raw|post|patch|verify|patch-explain`）。
-  凭据在 `credentials.json`，永不打印/提交。JSON body 传**文件**，别内联。
-- `raw '<path>?a=b&c=d'`：**路径必须单引号**，否则 bash 吃掉 `&` 导致 404。
-- 端点：problem 是 `/submit-problem`（**单数**，复数会返回 404 HTML）；
-  definition 是 `/submit-definition`。两者都返回 `jobs[].job_id`，
-  轮询 `/publish-jobs/<job_id>` 拿 id；提交轮询是 `GET /verify?submission_id=`。
-  终态：`ACCEPTED` / `SKETCH_ACCEPTED` / `FAILED`。
-- **发布顺序是硬依赖**：preamble 引用 `Definitions.Def_X` 时，`Def_X` 必须先到
-  PUBLISHED，否则 `unknown import`。
-- **入 DAG 靠 proposal items**：`POST /mission-proposals/<id>/items`
-  （`{"kind":"reference","theorem_id":...}`）+ `PATCH` 设 `main_item_id`/`item_order`。
-  提交时传 `mission_id` 不会让节点进图。
-- **goal 节点不接受 milestone**；milestone 只挂支撑子目标。
-- **自包含闸门**：本地 lake 能解析服务器上没有的模块。提交前核对 mission 节点清单，
-  只 import 平台真正有的东西；没有的内联到 solution 文件里。
-- 归约里 children 写成 `import Theorems.Thm_<名字里 . → _>`，且必须 sorry-free；
-  孩子要先发布。Theorems/ 里的本地镜像一律 `by sorry`。
-- **不要相信 `session-*.md`/`report-*.md` 里记的节点 id**，会漂移或被编造。重新拉实时列表。
-- 写 deltas： `tmp/survey_missions.py`（全部 mission）、`tmp/scout_next_targets.py`
-  （数值侦察候选目标，改文件里的 MISSIONS/target 即可）。
-
-## Lean 踩坑清单（高频）
-
-- **`∑ k in s, f k` 在本 Mathlib 版本不解析**，写 `∑ k ∈ s, f k`。
-- `Finset.eq_empty_iff_forall_not_mem` 不存在 → 用 `Finset.not_nonempty_iff_eq_empty`。
-- 用 `Finset.filter` + 命题谓词的 def 必须放 `noncomputable section`。
-- **`Fin.cons` 是依赖类型版**，必须钉住类型族
-  `Fin.cons (n := k) (α := fun _ => Fin (N+1)) x q`，否则元变量留到 ℕ 转换时炸。
-  同理 `simp [Fin.cons_zero, Fin.cons_succ]` 会踩 → 用 `change` 让 definitional
-  equality 展开。
-- `change i + ∑ j : Fin k, ... = n` 解析会乱 → 加括号
-  `change i + (∑ j : Fin k, ...) = n`。
-- `Finset.single_le_sum` 被局部变量遮蔽时推断失败 → 显式 `s :=`、`f :=`。
-- `Finset.sum_range_reflect f (n+1)` 给 `∑ j, f (n-j) = ∑ j, f j`，拆分递推直接用。
-- `Finset.mem_filter.mp (by simpa [...] using h)` 常失败（simp 把 `< n+1` 归成 `≤ n`
-  ，签名对不上）→ **先写一条显式类型的 `have h' : x ∈ (...).filter p := by simpa ...`**。
-- **计数定理形如 `C(n+k-1,n)` 时把陈述写成「k+1 个部分」**，避开 `k-1` 的 Nat 截断减法。
-- 新增 `Definitions/*.lean` 后必须先 `lake build Definitions.Def_X` 生成 olean。
-- `omega` 对混着大字面量和 `/` 的 Nat 目标会 "maximum recursion depth" →
-  拆成 `Nat.div_mul_le_self` / `calc` 显式步骤。**`omega` 原生支持 `min`**
-  （`min a b = 0` 直接喂；定理名是 `Nat.min_eq_zero_iff`）。
-- **`Square n α` = `Matrix (Fin n) (Fin n) α`**。造具体方阵用嵌套向量
-  `![![a,b,c],![d,e,f],![g,h,i]]`；`!![a,b,c]` 是单行矩阵，类型不对。
-- `ext i j` 对 `Square` 会展开到 Nat 值相等，**其后不要再加 `apply Fin.ext`**。
-  跨 `Fin (t+1)` 与 `ℕ` 用 `congrArg (fun x : Fin (t+1) => (x : ℕ))`。
-- `ext` 处理 `Finset (ℕ × ℕ)` 时**先 `rcases` 拆配对**，否则 `rfl` 作用在 `ac.1` 上失败。
-- **`simp` 不展开 `Fin n` 上的全称量词** → 显式 `Fin.forall_fin_succ` 剥到地面实例
-  再 `norm_num`。（`Fin.forall_fin_three` 不存在。）
-- 具体成员资格（如 `(2,4) ∈ paramSet 5`）用 `norm_num [paramSet, IsParam3]`；
-  `simp` 只展开到 range/product/filter 就停住。
-- **平台禁止 `native_decide`**（"trusts compiled native code"）→ 用 `norm_num [...]`/`decide`。
-- **心跳上限 200000**：solution 顶部加 `set_option maxHeartbeats 0`；别用
-  `dsimp [x] at h` 展开 let（很贵），改 `have hx_def : x = ... := rfl` 再交给 omega。
-- **solution 文件的 `theorem solution` 必须在 namespace 之外**（顶层）：
-  `namespace X` 放辅助 → `end X` → `open X` → `theorem solution`。放里面平台报
-  `Unknown identifier solution`。移动时前面的 `/-- -/` doc comment 必须一起搬走，
-  否则 `end` 报 "expected 'lemma'"。
-- 平台对 tactic 冗余敏感：本地能过的 `rw ...; ring` 可能报 "No goals to be solved"
-  → 用 `simpa [...]`。偶发 `Import parser timed out after 5s`，重提即可。
-- 🔴 **Lake library target 必须有「根模块文件」**：写 `lean_lib «Solutions» where`
-  时 Lake 会把名字当成一个**模块**去找 `Solutions.lean`。我们没有这个文件，
-  于是 `lake build`（以及 `lake build Solutions`，三个 lib 全一样）在 job
-  computation 阶段就报 `Solutions: some modules have bad imports`，**一个任务都
-  不会跑**。而 `lake build Solutions.Sol_X`（指定到模块）一直能过 —— 所以这个坑
-  长期没人发现，因为大家只跑模块级/单文件级命令。
-  **修法**（已改）：显式给每个 lib 写
-  `roots := #[]` + `globs := #[.submodules \`Solutions]`。
-  另一种可行修法是补一个空的 `Solutions.lean`，但那样会让 `import Solutions`
-  意外合法，不如前者干净。
-- `import examples.…`（带连字符目录要用 `examples.«five-primes».X`）在未被声明为
-  lib 时，`lake build <源文件路径>` 会报 unknown module source path；单个模块能
-  编译不代表它是注册过的 Lake 模块。真要用就把那个模块声明成 lib（已在 lakefile
-  里为 `RosserLcmBlocks` 做了）。
-- **`lake script`/lake 诊断时别用 `timeout` 掐它**：超时会 SIGTERM 掉正在编译的
-  lean 子进程，报 "Lean exited with code 143"，看起来像编译错。
+  PowerShell 工具取不到输出，别用。**同一消息里别并行发两个 Bash 调用**（其中一个会被
+  SIGTERM 且无输出，2026-09-17 复现三次）；长命令用 `run_in_background`，后台跑时也别再发第二条。
+- 🔴 **别用 Bash 删 `Solutions/` 里的文件**（2026-09-17：三次尝试导致整个目录消失）→
+  改用资源管理器；恢复 `rm -f .git/index.lock && git checkout HEAD -- .`。
+- Lean `v4.33.1`（elan），Mathlib `0df444a360eaa60ab8c11dca51a86af692955474`，
+  已构建在 `.lake/`（8.4 GB，**绝不删**）。Python：
+  `C:/Users/anche/.workbuddy/binaries/python/versions/3.13.12/python.exe`。
+- 单文件 `lake env lean <file>`；模块 `lake build <Module.Name>`。
+  ⚠️ **全量 `lake build` 会随机失败 20–35 个模块**（`failed to read file '...olean'`，
+  并发 IO 竞争未定位）→ 只 build 目标模块。
+- `lakefile.lean` 给 `Definitions`/`Theorems`/`Solutions` 开了 `autoImplicit false`，
+  `examples/` 不是 lean_lib（那里是 ON）⇒ **提交前必须挪进 `Solutions/` 再编一遍**。
+  **例外**：`examples/magic-squares/spencer/` **八**文件互相 `import`，2026-09-19 已加成 lean_lib
+  `SpencerRoute`（非 default target；roots 见 `lakefile.lean`）→ `lake build SpencerRoute`
+  （冷 ~2–3 min，热 30 s）。import 名带书名号：`import examples.«magic-squares».spencer.SupportSplit`。
+- `lakefile.lean`/`lean-toolchain`/`lake-manifest.json` **都是被跟踪的**（2026-09-19 复核：
+  `git ls-files` 三个都在，`git check-ignore` 无输出 ⇒ 当前**不匹配任何 ignore 规则**）。
+  ⇒ 常规 `git add` 即可，**不需要 `-f`**（旧记录说要 `-f`，已作废）。
 
 ## 各 mission 状态指针
 
 | mission | slug | 状态 |
 |---|---|---|
 | Magic Squares I（$M_3$ 计数） | `magic-squares` | goal Proved，proposal Reviewed |
-| Magic Squares II（$H_3$ 半幻方） | `semi-magic` | goal Proved，proposal Reviewed |
-| Magic Squares III（洛书唯一性） | `normal3` | goal Proved，proposal In review |
-| Every Odd Number … Five Primes | `five-primes` | Open；50 节点 / 28 Open（含 2 个 Disproved），2026-09-17 实测 |
+| Magic Squares II（$H_3$） | `semi-magic` | goal Proved（`semi_magic_count_three` 2026-09-19 复核 Proved），proposal Reviewed |
+| Magic Squares III（洛书唯一性） | `normal3` | goal Proved，proposal Reviewed（`98d3dea7`） |
+| **Magic Squares IV（泛魔/对称三阶计数）** | `magic-squares-iv` | goal + 6 定理 + 1 定义全 Proved（2026-09-18，5 份一次 ACCEPTED）；proposal `7af96e14` `In review` |
+| **Magic Squares V（一般 n 的计数多项式）** | `magic-squares-v` | ✅ **V 已 live**：`mission_id = e06131f8-1bf5-47c4-b8f4-507f107269e0`（提案 `3a8476fd` → `Reviewed`；别和 mission IV `df1cb8cc` 搞混）。**8 条 milestone**，goal = `semi_magic_polynomial_exists`（`72482ba2`，仍 `Open`）。✅ **2026-09-20：Spencer 路线的本地终点已上平台** —— 节点 `4394b225-cc88-46d4-a57e-0765707d3246`（`semi_magic_polynomial_exists_degree_eq`，**Proved**，提交 `448ec295` ACCEPTED），milestone `4995687d` 挂在 sort_order 5；`vol(B_4)` 里程碑文字已更正（新 id `c791e322`，旧的 `9e912298` 被误删过）+ 讨论区更正评论 `f4035c14`。**只剩 S5**（倒易律 `q(−1)=1`） |
+| 孤儿挂回（一次性） | `magic-squares-reattach` | 2026-09-19：18 条定理经 milestone 挂回，22 → 4 孤儿（余 4 个是定义；V 已于 21:1x 转 live ⇒ 挂回条件已满足，尚未执行） |
+| Every Odd Number … Five Primes | `five-primes` | Open；真 frontier 18 条叶（2026-09-18）。已约简 `rosser_schoenfeld_theta_lower_analytic`（SKETCH_ACCEPTED）；`theorem51_typeII_dyadic_representation` ACCEPTED；`vaughan_split` **数值证伪** |
 | Weak Goldbach | `weak-goldbach` | 目标 Open，已归约到一个筛覆盖孩子 |
 | Bunkbed is False | `bunkbed` | 全部封版归档 |
 | Irrationality of Euler's γ | `euler-gamma` | 部分 Proved，见 `sondow/INTEGRAL-IDENTITY-COMPLETE.md` |
 
-## 仓库卫生（两轮瘦身，2026-09-17）
+**五素数三条硬约束**（细节在 `missions/five-primes/status.md`）：
+① frontier 的 18 条叶大多是硬外部结果（R&S、Schoenfeld、Liu–Wang、Siebert、Helfgott–Platt、
+4·10^14 Goldbach 计算）；② `theorem51_vaughan_split` **是假的**（评论 `1c0c941b`，
+反例 `vaughan-step-counterexample.lean`）——别再当 LOCAL_BRIDGE；③
+`theorem51_typeII_dyadic_block_bound` **不是短约简**（三个「已证成分」都以 Open 的
+`large_sieve_inequality` 为假设）。**完整数值证伪不可行**：需 ~1400 条 7–8 位精度
+`Real.log` 界、~10⁵ 行。动手前先读 `GET /missions/<mid>/comments`。
 
-- **第一轮 `c2bbb0e`**：只做 `git rm --cached`，当前树脱管了 5 个大证书；
-  blob 仍在历史里，`.git` 一点没变小。
-- **第二轮（同一天）**：又脱管 59 个文件（13 个 `SondowRosserMiddle*.{lean,json}`、
-  3 个 `balanced-largest-block-*.lean`、43 个 `.log`），**磁盘文件全部保留**。
-  现在 **974 个跟踪文件 / 索引树 18.1 MB**（第一轮后是 1033 / 21.5 MB）。
-- 5 个大生成证书已于 2026-09-17 19:10 **从磁盘物理删除**（释放 199.7 MB）。
-  因为文件当时已 untrack，物理删除**不产生 commit**，git log 里看不到；
-  来源信息留档在 `missions/euler-gamma/sondow/ROSSER-FINITE-CERTIFICATES.md`。
-- `.gitignore` 覆盖已放宽为 `missions/**/*.log`、`missions/**/item-tmp.json`、
-  `missions/**/milestone-tmp.json`，并新增
-  `Solutions/SondowRosserMiddle*.json`、`balanced-largest-block-*.lean`。
-  **新生成的证书产物一律写进 `tmp/`。**
-- `.gitignore` 已加：
-  `Solutions/SondowRosserMiddle*.lean`、
-  `missions/euler-gamma/sondow/continuation/failed-recursion-*.lean`、
-  `missions/*/item-tmp.json`、`missions/*/milestone-tmp.json`、`tmp/`、
-  `missions/*/verification/*.log`。**新生成的证书产物一律写进 `tmp/`。**
-- 剩余最大单文件 3.3 MB（`missions/euler-gamma/research/variable-order-results.json`），
-  健康，不用再管。
-- ⚠️ `.git` 仍是 146 MB —— 那 196 MB 还在历史里。彻底瘦身必须
-  `git filter-repo` + force push（**不可逆，须宇轩明确点头**）。
-- ⚠️ **别用 Bash 删 `Solutions/` 里的文件！** 2026-09-17 实测：连续三次尝试
-  （`git rm`、`rm -f`、关沙箱都试过）都导致**整个 `Solutions/` 目录从磁盘消失**，
-  命令拿 SIGTERM、无输出。根因未定，不是沙箱问题。
-  恢复：`rm -f .git/index.lock && git checkout HEAD -- .`（多跑一遍直到 status 干净）。
-  要删文件请用资源管理器或 PowerShell。
-- ⚠️ **同一条消息里并行发两个 Bash 调用，其中一个会被 SIGTERM 干掉、且无输出**
-  （2026-09-17 复现三次，串行就正常）。上面的「Solutions 消失」很可能同源于此。
-  要跑长命令就用 `run_in_background`，但**后台跑的时候也别再发第二条 Bash**。
+## 幻方领域红线
 
-## 工作习惯（已确立）
+细节全在 `memory/MAGIC-SQUARES-REF.md`。留在本文件的三条：
+
+- **`IsPanMagic` ≠ BCCG 的 $P_n$**：我方要**两个方向**的断对角，BCCG 只要**一个方向**
+  （含主对角、绕回、**不要求副对角**）。$n=3$ 实测：单向 $=\binom{t+2}{2}$，
+  双向 $=\mathbf 1_{3\mid t}$。**引用时不可互相对照。**
+- **Mathlib 无 Ehrhart / 拟多项式 / 有理生成函数**（grep 过）。格点计数机制要自建。
+- 一句话现状：**$n=3$ 完全闭环、$n=2$ 补齐、一般 $n$ 只有 1 条、$n\ge4$ 零**。
+  方向已定：**BCCG Theorem 1（Ehrhart–Stanley）**，走 Spencer 1980 初等路线。
+- 🔴 **动 M5 前先读 `missions/magic-squares-v/SPENCER-ROUTE.md`**（§4.2 上下界、§7 实现坑、**§8 构建与剩余步骤**）：
+  Spencer 是**纯初等**路线（生成函数 + Hall + 支撑集偏序，**不用 Ehrhart**），Mathlib 零件齐
+  （Faulhaber 伯努利形式 `Polynomial.sum_range_pow_eq_bernoulli_sub`、
+  `Finset.all_card_le_biUnion_card_iff_exists_injective`）。
+  **2026-09-19 状态：S1/S2/S3/S4 全完，只剩 S5。** 八文件、无 sorry/axiom，`#print axioms` 只有
+  三条标准公理；`lake build SpencerRoute`。
+  1. 粗版（`Aggregate.lean`）：`exists_polynomial_semiMagicCount_pos`，次数 `≤ n*n`，`t ≥ 1`；
+  2. 锐上界（`Rank.lean`+`Sharp.lean`）：`exists_polynomial_semiMagicCount_sharp`，次数 `≤ (n−1)²`；
+     `rankB B := dim(零线和空间)`（= 面秩 ρ，无图论）；严格单调靠**逃逸引理**
+     （对偶 `range_dualMap_eq_dualAnnihilator_ker` + σ/τ 两组求和矛盾；**裸「φ(τ)⊆C⊆B ⇒ 严格」是假的**，
+     必须用 candidate 约束 `B\φ(σ) ⊆ C`）；
+  3. **精确次数（`Degree.lean`，Brick 11）**：下界用**显式线性族**——阶 `n+1`、线和 `(n+1)s` 时取自由块
+     `c : Fin n → Fin n → Fin (s/n+1)` 铺左上 `n×n`，末行/列/角由线和补出 ⇒ 单射 ⇒
+     `semiMagicCount (n+1) ((n+1)s) ≥ (s/n+1)^(n*n)`（`semiMagicCount_ge_family`）；再用纯初等
+     `le_natDegree_of_lowerBound`（`eval_le_mul_pow` + `exists_nat_gt`，无渐近）逼出下界。终点：
+     ```
+     theorem MagicSquaresSpencer.exists_polynomial_semiMagicCount_degree_eq (n : ℕ) (hn : 1 ≤ n) :
+         ∃ p : Polynomial ℚ, p.natDegree = (n - 1) ^ 2 ∧
+           ∀ t : ℕ, 1 ≤ t → p.eval (t : ℚ) = (semiMagicCount n t : ℚ)
+     ```
+     ⚠️ 签名与平台 goal **只差 `1 ≤ t`**，别拿它冒充 goal。
+  **剩余**：**只有 S5** —— 线和 = 0 处的值 `q(-1) = 1`（= Ehrhart–Macdonald 倒易律在 −1 处，
+  等价于 `B_n` 无内格点；最硬，需另立课题）。**degree_eq 已于 2026-09-20 作为 sibling 节点
+  发布**（节点 `4394b225`，milestone `4995687d`，ACCEPTED）——注意它只是 goal 的弱化版，
+  **goal 仍然 Open**。
+
+## 仓库卫生
+
+- 两轮瘦身（2026-09-17）只做 `git rm --cached`，**磁盘文件全保留**；974 跟踪文件 /
+  索引树 18.1 MB；5 个大证书物理删除释放 199.7 MB。新生成的证书产物一律写 `tmp/`。
+- ⚠️ `.git` 仍 146 MB（历史里还在），彻底瘦身要 `git filter-repo` + force push
+  —— **不可逆，必须宇轩明确点头**。
 
 ## 用户偏好
 
-- 数学/Lean/文档写英文，给他的汇报写中文。Lean 教学不要拆太碎，给完整证明任务。
-- **严格区分「我确认了」和「我推测」**——数值验证了不等于形式化证明了。
-- 不可逆操作（rewrite history / force push / 删历史产物）**必须先问**，默认只做
-  可逆的那一版。他说「先瘦身」时，安全版（只 `--cached`）就是他想要的那一步。
+- 数学/Lean/文档写**英文**，给他的汇报写**中文**。Lean 教学别拆太碎，给完整证明任务。
+- **严格区分「我确认了」和「我推测」**——数值验证 ≠ 形式化证明。
+- 不可逆操作（rewrite history / force push / 删历史产物）**必须先问**。
+- 要可运行的交付物，不要「看起来完成了」。
+- **他是这几个幻方 mission 的 captain**（2026-09-18 本人确认）⇒ 挂节点、批 proposal
+  这类 captain 动作他自己能做，别默认要走外部评审。
