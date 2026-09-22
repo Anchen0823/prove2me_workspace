@@ -1,0 +1,13 @@
+⚠ [8710/8714] Replayed examples.«magic-squares».spencer.SemiMagicCone
+warning: examples/magic-squares/spencer/SemiMagicCone.lean:40:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [8714/8714] Built examples.«magic-squares».spencer.SemiMagicFaceSupport (19s)
+warning: examples/magic-squares/spencer/SemiMagicFaceSupport.lean:26:6: Try `simp at hne` instead of `simpa using hne`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+Build completed successfully (8714 jobs).

@@ -1,0 +1,11 @@
+missions/magic-squares-v/verification/real-cone-face-support-axioms.lean:503:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+missions/magic-squares-v/verification/real-cone-face-support-axioms.lean:565:6: warning: Try `simp at hne` instead of `simpa using hne`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+'solution' depends on axioms: [propext, Classical.choice, Quot.sound]

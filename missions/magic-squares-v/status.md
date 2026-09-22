@@ -2,6 +2,22 @@
 
 ## 2026-09-22 live update
 
+**Geometric dictionary accepted by the platform:**
+`MagicSquares.real_cone_face_support_order_iso`, theorem
+`db8ce110-88d2-4a2d-982d-6a9731e337bb`, submission
+`fe97f4d1-8496-443b-9f74-ead04788dc58`, received **ACCEPTED**.
+Its complete proof uses only Mathlib and two public definitions, with no Open
+theorem dependency. Exact hashes and receipts: `verification/face-support-record.json`.
+
+The face order of the real
+nonnegative semi-magic cone is now order-isomorphic to matching-covered boards
+with the empty board adjoined. This includes both realization directions,
+normalization, support containment versus face containment, and finiteness of
+the face set. The integrated module builds successfully (8714 jobs), and the
+three key declarations have only standard axioms. See
+[FACE-SUPPORT-CORRESPONDENCE.md](FACE-SUPPORT-CORRESPONDENCE.md) and
+`verification/semi-magic-face-axioms.log`. The general Euler relation remains open.
+
 **Two further complete platform proofs accepted:**
 
 - `Finset.interval_inclusion_exclusion`, theorem

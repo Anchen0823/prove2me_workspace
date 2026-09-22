@@ -1,0 +1,11 @@
+⚠ [8711/8713] Built examples.«magic-squares».spencer.SemiMagicCone (24s)
+warning: examples/magic-squares/spencer/SemiMagicCone.lean:40:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+✔ [8712/8713] Built examples.«magic-squares».spencer.OrthantFaceOrder (24s)
+✔ [8713/8713] Built examples.«magic-squares».spencer.DoublyStochasticSupport (25s)
+Build completed successfully (8713 jobs).

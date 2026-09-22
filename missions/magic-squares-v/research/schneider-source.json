@@ -1,0 +1,10 @@
+{
+  "title": "Combinatorial identities for polyhedral cones",
+  "author": "Rolf Schneider",
+  "url": "https://home.mathematik.uni-freiburg.de/rschnei/Comb.Ident.rev.pdf",
+  "local_path": "tmp\\research\\schneider-combinatorial-identities.pdf",
+  "sha256": "60eabfb946ebb0996efc5deff15a0395b496e37f3a1384e7dfafb4939b1e047c",
+  "bytes": 274675,
+  "relevant_sections": "Theorem 2.3 and equations (19)-(22), manuscript pp. 6-8",
+  "role": "Source evidence for Euler valuation and local interval Euler relation, not a Lean proof."
+}

@@ -1,0 +1,30 @@
+{
+  "lean": "4.33.1",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "build": {
+    "exit_code": 0,
+    "jobs": 8714,
+    "log": "verification/semi-magic-face-build.log"
+  },
+  "axiom_audit": {
+    "exit_code": 0,
+    "sorryAx": false,
+    "log": "verification/semi-magic-face-axioms.log",
+    "standalone_log": "verification/real-cone-face-support-compile.log"
+  },
+  "source_sha256": {
+    "examples/magic-squares/spencer/OrthantFaceOrder.lean": "d148a6a6a2468ee697615ba19aedad82a73433519485cf1851694c4bda4cb8f6",
+    "examples/magic-squares/spencer/SemiMagicCone.lean": "7815296337e2808734a2b7832edf6e7583a547992e0095f97b216200d7691266",
+    "examples/magic-squares/spencer/DoublyStochasticSupport.lean": "5355e5ee530763660de03499febb464d7694a76616bb130ad72842b1c1b74644",
+    "examples/magic-squares/spencer/SemiMagicFaceSupport.lean": "048554a02432a258a75b7a4e0ba70f66f33f18815a447da8258a528d437e0516",
+    "Definitions/Def_MagicSquaresRealCone.lean": "f09566b2be5abfba21cd8b3910b531c239d47482e07b03f061d64b9c88570db3",
+    "Solutions/Sol_MagicSquares_real_cone_face_support_order_iso.lean": "dacf61e6ece5ffbbfb9688969a5da74c6164a504792b5aa2eac78bf109a22372"
+  },
+  "submission": {
+    "id": "fe97f4d1-8496-443b-9f74-ead04788dc58",
+    "theorem_id": "db8ce110-88d2-4a2d-982d-6a9731e337bb",
+    "status": "ACCEPTED",
+    "updated_at": "2026-09-22T15:36:36.453138+00:00"
+  },
+  "remaining": "General face-interval Euler relation and coefficient identification remain unproved; mission root is Open."
+}

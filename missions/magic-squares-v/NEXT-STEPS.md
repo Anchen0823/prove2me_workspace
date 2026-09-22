@@ -2,6 +2,15 @@
 
 ## September 22 correction: use the live frontier
 
+The face-support correspondence, including normalization and realization of
+every matching-covered board, is now fully proved in
+`SemiMagicFaceSupport.lean`. See
+[FACE-SUPPORT-CORRESPONDENCE.md](FACE-SUPPORT-CORRESPONDENCE.md).
+Focus next on the Euler relation itself and coefficient identification; the
+geometric dictionary is no longer a missing theorem on the conic route.
+Schneider's author manuscript (source manifest `research/schneider-source.json`)
+provides an explicit Euler-valuation construction and local interval identity.
+
 Latest completed foundations: [DELETION-AND-FACES.md](DELETION-AND-FACES.md).
 The Boolean interval/deletion transform, complementary-matching cancellation,
 and the coordinate-face classification of orthant sections are now proved.
