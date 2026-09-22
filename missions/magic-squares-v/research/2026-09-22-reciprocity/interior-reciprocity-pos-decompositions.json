@@ -1,0 +1,90 @@
+{
+  "decompositions": [
+    {
+      "submission_id": null,
+      "created_by": null,
+      "created_at": null,
+      "deprecated_at": null,
+      "deprecated_by": null,
+      "children": [
+        {
+          "definition_id": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+          "definition_name": "MagicSquares",
+          "theorem_title": "Magic squares: core definitions and counting functions",
+          "ordinal": 0,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        },
+        {
+          "definition_id": "f59f75e2-2a90-4fd2-8d09-f787ccdc5fce",
+          "definition_name": "MagicSquares_positiveInteriorCount",
+          "theorem_title": "Interior (positive) semi-magic counting function",
+          "ordinal": 1,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        }
+      ]
+    },
+    {
+      "submission_id": "efca7551-ad8b-4f85-b976-415cea725b2f",
+      "created_by": "d1f0c25d-156e-4ff2-8246-1bd7cf2cce70",
+      "created_at": "2026-09-21T21:03:23.152868+00:00",
+      "deprecated_at": null,
+      "deprecated_by": null,
+      "children": [
+        {
+          "definition_id": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+          "definition_name": "MagicSquares",
+          "theorem_title": "Magic squares: core definitions and counting functions",
+          "ordinal": 0,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        },
+        {
+          "definition_id": "f59f75e2-2a90-4fd2-8d09-f787ccdc5fce",
+          "definition_name": "MagicSquares_positiveInteriorCount",
+          "theorem_title": "Interior (positive) semi-magic counting function",
+          "ordinal": 1,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        },
+        {
+          "theorem_id": "fbe7af10-42ac-48a5-ae22-a565eb27792c",
+          "theorem_name": "MagicSquares.positive_interior_small_zero",
+          "theorem_title": "Positive semi-magic squares vanish below the order",
+          "status": "Proved",
+          "ordinal": 2,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        },
+        {
+          "theorem_id": "7a04de6e-94da-4423-add4-d1a79f131d05",
+          "theorem_name": "MagicSquares.interior_functional_eq_nat",
+          "theorem_title": "Functional equation for semi-magic counts at natural shifts",
+          "status": "Open",
+          "ordinal": 3,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        },
+        {
+          "theorem_id": "2b98befc-35ff-4cd0-be18-2536bf8adae8",
+          "theorem_name": "MagicSquares.semi_magic_vanishing",
+          "theorem_title": "The vanishing list of the semi-magic counting polynomial",
+          "status": "Proved",
+          "ordinal": 4,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        },
+        {
+          "theorem_id": "c193b4f1-946c-440d-ae6f-76fdf8a54d6f",
+          "theorem_name": "MagicSquares.positive_shift_count",
+          "theorem_title": "Positive semi-magic squares shift to line sum t - n",
+          "status": "Proved",
+          "ordinal": 5,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        }
+      ]
+    }
+  ]
+}

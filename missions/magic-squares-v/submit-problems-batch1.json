@@ -1,0 +1,82 @@
+{
+ "problems": [
+  {
+   "theorem_name": "MagicSquares.semi_magic_count_two",
+   "theorem_title": "The semi-magic squares of order two",
+   "formal_statement": "namespace MagicSquares\n\ntheorem semi_magic_count_two (t : ℕ) : semiMagicCount 2 t = t + 1 := by sorry\n\nend MagicSquares",
+   "natural_language_statement": "**The order-two semi-magic count.** Writing $H_{n}(t)$ for the number of $n\\times n$ arrays of nonnegative integers whose rows and columns all sum to $t$, the theorem states\n\n$$H_{2}(t)=t+1 .$$\n\n**Proof.** A $2\\times2$ semi-magic square of line sum $t$ reads $\\begin{pmatrix} a & t-a\\\\ t-a & a\\end{pmatrix}$, so it is determined by its top-left corner $a$, and $a$ may be any of $0,1,\\dots,t$. This is the first value in the structural statement that $H_{n}(t)$ is a polynomial of degree $(n-1)^{2}$ — for $n=2$ that is degree one, matching $t+1$.",
+   "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nimport Definitions.Def_MagicSquaresPandiagonal\nopen MagicSquares",
+   "source": "M. Beck, M. Cohen, J. Cuomo and P. Gribelyuk, The number of \"magic\" squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707--717 (arXiv:math/0201013).",
+   "tags": [
+    "combinatorics",
+    "magic-squares",
+    "enumerative-combinatorics"
+   ]
+  },
+  {
+   "theorem_name": "MagicSquares.magic_count_two",
+   "theorem_title": "The magic squares of order two",
+   "formal_statement": "namespace MagicSquares\n\ntheorem magic_count_two (t : ℕ) : magicCount 2 t = if 2 ∣ t then 1 else 0 := by sorry\n\nend MagicSquares",
+   "natural_language_statement": "**The order-two magic count.** Writing $M_{n}(t)$ for the number of $n\\times n$ arrays of nonnegative integers whose rows, columns and two main diagonals all sum to $t$, the theorem states\n\n$$M_{2}(t)=\\begin{cases}1,&2\\mid t,\\\\ 0,&2\\nmid t.\\end{cases}$$\n\nThe single square is the constant array with every entry $t/2$. **Proof.** In the $\\begin{pmatrix} a & t-a\\\\ t-a & a\\end{pmatrix}$ family the two diagonals read $2a$ and $2(t-a)$; requiring both to equal $t$ forces $2a=t$. This is the first instance of the divisibility obstruction that governs every magic-square count: the diagonal conditions are not automatic, and they vanish off a sublattice of line sums.",
+   "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nimport Definitions.Def_MagicSquaresPandiagonal\nopen MagicSquares",
+   "source": "M. Beck, M. Cohen, J. Cuomo and P. Gribelyuk, The number of \"magic\" squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707--717 (arXiv:math/0201013).",
+   "tags": [
+    "combinatorics",
+    "magic-squares",
+    "enumerative-combinatorics"
+   ]
+  },
+  {
+   "theorem_name": "MagicSquares.symmetric_magic_count_two",
+   "theorem_title": "The symmetric magic squares of order two",
+   "formal_statement": "namespace MagicSquares\n\ntheorem symmetric_magic_count_two (t : ℕ) : symmetricMagicCount 2 t = if 2 ∣ t then 1 else 0 := by sorry\n\nend MagicSquares",
+   "natural_language_statement": "**The order-two symmetric count.** Writing $S_{n}(t)$ for the number of $n\\times n$ arrays of nonnegative integers which are magic of line sum $t$ and equal to their own transpose, the theorem states\n\n$$S_{2}(t)=\\begin{cases}1,&2\\mid t,\\\\ 0,&2\\nmid t.\\end{cases}$$\n\n**Proof.** For order two the transpose condition is $M_{01}=M_{10}$, which already holds for every semi-magic square: the first row and first column both read $M_{00}+M_{01}=t$ and $M_{00}+M_{10}=t$. So symmetry adds no condition at order two, $S_{2}=M_{2}$, and the order-two magic count applies. Symmetry only starts to bite at order three, where it cuts the two-parameter MacMahon family down to a one-parameter one.",
+   "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nimport Definitions.Def_MagicSquaresPandiagonal\nopen MagicSquares",
+   "source": "M. Beck, M. Cohen, J. Cuomo and P. Gribelyuk, The number of \"magic\" squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707--717 (arXiv:math/0201013).",
+   "tags": [
+    "combinatorics",
+    "magic-squares",
+    "enumerative-combinatorics"
+   ]
+  },
+  {
+   "theorem_name": "MagicSquares.pandiagonal_count_two",
+   "theorem_title": "The pandiagonal squares of order two",
+   "formal_statement": "namespace MagicSquares\n\ntheorem pandiagonal_count_two (t : ℕ) : pandiagonalCount 2 t = if 2 ∣ t then 1 else 0 := by sorry\n\nend MagicSquares",
+   "natural_language_statement": "**The order-two pandiagonal count.** With $P_{n}(t)$ the number of pandiagonal squares of order $n$ and line sum $t$ in the counting-theory sense of `IsPandiagonal` (semi-magic plus the wrapped diagonals parallel to the main diagonal), the theorem states\n\n$$P_{2}(t)=\\begin{cases}1,&2\\mid t,\\\\ 0,&2\\nmid t.\\end{cases}$$\n\n**Proof.** At order two the two wrapped diagonals of a semi-magic square are exactly its main and anti-diagonal, so `IsPandiagonal` coincides with `IsMagic` and $P_{2}=M_{2}$. This is the last order at which the two notions agree: from order three on they diverge.",
+   "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nimport Definitions.Def_MagicSquaresPandiagonal\nopen MagicSquares",
+   "source": "M. Beck, M. Cohen, J. Cuomo and P. Gribelyuk, The number of \"magic\" squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707--717 (arXiv:math/0201013).",
+   "tags": [
+    "combinatorics",
+    "magic-squares",
+    "enumerative-combinatorics"
+   ]
+  },
+  {
+   "theorem_name": "MagicSquares.pandiagonal_count_three",
+   "theorem_title": "The pandiagonal squares of order three: BCCG's P_3",
+   "formal_statement": "namespace MagicSquares\n\ntheorem pandiagonal_count_three (t : ℕ) : pandiagonalCount 3 t = (t + 2).choose 2 := by sorry\n\nend MagicSquares",
+   "natural_language_statement": "**The order-three pandiagonal count.** With $P_{n}(t)$ as above, the theorem determines\n\n$$P_{3}(t)=\\binom{t+2}{2}=\\frac{t^{2}+3t+2}{2},$$\n\na degree-two polynomial that **never vanishes**: $1,3,6,10,15,21,\\dots$ for $t=0,1,2,\\dots$. This is Beck--Cohen--Cuomo--Gribelyuk's $P_{3}$, and it sits inside their structural theorem that $P_{n}$ is a quasi-polynomial of degree $n^{2}-3n+2$ (which is $2$ at $n=3$). **Proof.** Every pandiagonal $3\\times3$ square of line sum $t$ has the form $M_{ij}=g(i+j)$ for a single $g$ defined on $\\mathbb{Z}/3$: the broken-diagonal conditions run the three entries of each wrapped diagonal through the same cyclic pattern, and the line sum is then $g(0)+g(1)+g(2)=t$. So the count is the number of triples of naturals summing to $t$, equivalently the number of pairs $(a,b)$ with $a+b\\le t$, which is $\\binom{t+2}{2}$.\n\n**Contrast.** This is *not* `panMagicCount 3`, which asks in addition that the ascending broken diagonals sum to the line sum; that stronger condition leaves only the constant square and gives a count vanishing off multiples of three, $1,0,0,1,0,0,1,\\dots$",
+   "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nimport Definitions.Def_MagicSquaresPandiagonal\nopen MagicSquares",
+   "source": "M. Beck, M. Cohen, J. Cuomo and P. Gribelyuk, The number of \"magic\" squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707--717 (arXiv:math/0201013).",
+   "tags": [
+    "combinatorics",
+    "magic-squares",
+    "enumerative-combinatorics"
+   ]
+  },
+  {
+   "theorem_name": "MagicSquares.panmagic_count_three",
+   "theorem_title": "The two-direction panmagic squares of order three",
+   "formal_statement": "namespace MagicSquares\n\ntheorem panmagic_count_three (t : ℕ) : panMagicCount 3 t = if 3 ∣ t then 1 else 0 := by sorry\n\nend MagicSquares",
+   "natural_language_statement": "**The order-three two-direction panmagic count.** This statement is about the stronger predicate `IsPanMagic`, which requires *both* families of broken diagonals (descending and ascending) to sum to the line sum, and it determines\n\n$$P^{\\mathrm{both}}_{3}(t)=\\begin{cases}1,&3\\mid t,\\\\ 0,&3\\nmid t.\\end{cases}$$\n\nThe single square at line sum $3e$ is the constant array with every entry $e$. **Context.** The purpose of this node is to sit next to `pandiagonal_count_three` so that the two readings of \"pandiagonal\" are both present on the platform and cannot be confused: the one-direction reading used by the counting literature gives a degree-two polynomial that never vanishes, whereas the two-direction reading collapses to the constant square and vanishes off multiples of three. Citing one in place of the other is the most likely faithfulness error in this area.",
+   "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nimport Definitions.Def_MagicSquaresPandiagonal\nopen MagicSquares",
+   "source": "M. Beck, M. Cohen, J. Cuomo and P. Gribelyuk, The number of \"magic\" squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707--717 (arXiv:math/0201013).",
+   "tags": [
+    "combinatorics",
+    "magic-squares",
+    "enumerative-combinatorics"
+   ]
+  }
+ ]
+}

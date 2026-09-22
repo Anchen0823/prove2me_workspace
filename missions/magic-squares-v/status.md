@@ -1,5 +1,112 @@
 # Magic Squares V — proposal status
 
+## 2026-09-22 live update
+
+**Further formal refinement:** `MatchingIntervalReduction.lean` now proves that
+the coefficient sum vanishing on every nondegenerate matching-covered interval
+suffices for the published boundary criterion. The supporting matching-core,
+coefficient-support and weighted-Weisner lemmas compile together (8742 jobs);
+four representative declarations have only the standard axioms, with no
+`sorryAx`. The interval identity itself is still unproved. See
+[INTERVAL-EULER.md](INTERVAL-EULER.md) and `verification/interval-reduction-axioms.log`.
+The reusable `FiniteLattice.weighted_weisner_cancellation` is now **Proved** on
+the platform: theorem `7aaef4ef-b6d4-43f6-82ae-d8ea5f8a4dc1`, submission
+`a7359247-9de6-4400-ab48-0d578b4af9be`, verdict **ACCEPTED** at 22:43.
+Its complete proof imports only Mathlib, with no Open child dependency.
+
+**Platform submission completed:** the finite-boundary reciprocity reduction
+was accepted as **SKETCH_ACCEPTED** on 2026-09-22 at 22:08 (Asia/Shanghai).
+Submission: `e7b0fc82-a39c-4c92-b7c8-b53c79c7e3a5`.
+The server decomposition confirms its only theorem child is
+`MagicSquares.matching_boundary_euler`
+(`c44cf304-6efb-4853-bedd-7a2a604fb3f2`), still **Open**.
+The original root already depends on reciprocity, so this new route is linked
+to the root without another duplicate root submission. The full mission remains Open.
+
+The public finite definitions are published as `MagicSquaresMatchingBoundary`
+(`027fccf6-cca0-433e-8801-55c88c84db26`). The final standalone proof compiles
+locally with the pinned toolchain and contains no `sorry` or extra assumptions;
+its unproved input is the explicitly imported platform child. Receipts and
+source hashes: `verification/boundary-platform-record.json`.
+
+An audited mathematical derivation via Eulerian face lattices and dual Weisner
+is in [MATCHING-BOUNDARY-SOURCE.md](MATCHING-BOUNDARY-SOURCE.md). The branch
+where the permutation support is contained in D is now proved in
+`MatchingBoundaryEasyCase.lean`; formalizing the opposite zero-sum branch
+remains the next substantive task.
+
+### Earlier local verification and original route
+
+Latest local advance: the entire root has been reduced to one explicit finite
+permutation-boundary Euler identity. The propagation to all arguments and the
+leading-coefficient sign step are now implemented, so these are no longer
+separate gaps on the new route. See
+[FINITE-BOUNDARY-REDUCTION.md](FINITE-BOUNDARY-REDUCTION.md).
+The finite identity itself is unproved: this is conditional progress, not a
+completed proof or an additional accepted platform milestone.
+The full chain and explicit finite reformulation now compile (8736 jobs).
+Eleven new declarations pass the standard-axiom check with no `sorryAx`;
+see `verification/boundary-reduction-record.json`. Their finite hypothesis
+remains an explicit argument and has not been discharged.
+
+Seven of eight milestones are now Proved, including the order-four count.
+The remaining milestone is `semi_magic_reciprocity`; its accepted reductions
+leave exactly one Open root leaf:
+`MagicSquares.ehrhart_macdonald_birkhoff_pos`
+(`985f7b0a-962f-4039-804c-794f2ce86533`). The root is still Open.
+The saved dependency graph is acyclic (43 nodes, 103 edges).
+
+This continuation develops a new local interface: exact-support constants are
+the Boolean Möbius transform of the perfect-matching indicator. Combining it
+with the all-ones translation also gives an exact finite alternating-sum formula
+for `P(-n)`; its general sign is not yet proved. See
+[SUPPORT-EULER.md](SUPPORT-EULER.md) for the identities, finite experiment, and
+remaining proof gap, and [the live audit](research/2026-09-22-reciprocity/audit.md)
+for the already-published bridges that should not be duplicated.
+The support/perfect-matching-coverage equivalence is also proved. All new modules
+compile in the pinned environment; 18 declarations have only the standard
+`propext`, `Classical.choice`, and `Quot.sound` axioms. Validation and hashes are
+in `verification/support-constants-record.json`.
+These earlier helper results were initially local only. The new platform
+submission recorded above now includes them in the accepted conditional reduction.
+
+The dated September 20 snapshot below is historical.
+
+<!-- closed-support-continuation:start -->
+## 2026-09-20 continuation: two milestones accepted; one root leaf remains
+
+| Result | Server verdict | Submission |
+| --- | --- | --- |
+| All-natural-line-sum polynomial, exact degree `(n-1)^2` | **ACCEPTED** | `36575948-2773-4c3f-b3c4-6e899aa4271f` |
+| Full vanishing list `-1,...,-(n-1)` | **ACCEPTED** | `b6903bee-18e6-40d0-a49e-4ca1e631ff02` |
+| Root reduction to the three existing milestones | **SKETCH_ACCEPTED** | `b67b135f-bf4e-46d1-b4a9-14dd91d176dd` |
+
+**Live root frontier: exactly one Open leaf, reciprocity**
+(`32ea160a-bf6c-4a8f-90f7-31289a3d3ba3`). The root itself remains Open.
+The separate order-four explicit counting milestone also remains Open; it is not
+an input to the root reduction. Six of eight listed milestones are now Proved.
+
+The new proof counts support **contained in** a board, retains the zero matrix,
+uses permutation subtraction and boundary inclusion-exclusion, and inducts over
+strictly smaller boards. It proves polynomiality including line sum zero without
+Euler/reciprocity. The same polynomial recurrence and disjoint cyclic permutations
+give the entire negative-root list. See [the mathematical argument](CLOSED-SUPPORT.md)
+and [the next target](NEXT-STEPS.md).
+
+Both standalone proofs compile in the pinned Lean 4.33.1 environment and have
+axioms exactly `propext, Classical.choice, Quot.sound`, with no `sorryAx`.
+The conditional root reduction's local `sorryAx` comes from platform theorem
+mirrors; the server has accepted the dependency-tracked sketch, not a full proof.
+
+Source: `examples/magic-squares/spencer/ClosedPolynomial.lean` and
+`ClosedVanishing.lean`. Reproducible bundle generators are in this mission's
+`scripts/`. All submitted hashes, IDs, final verdicts and the remaining leaf are
+in [continuation-record.json](verification/continuation-record.json).
+The independent review and initial live audit are in `research/2026-09-20-continuation/`.
+Earlier S5 assessments below are historical and have been superseded.
+<!-- closed-support-continuation:end -->
+
+
 Last updated: 2026-09-19 21:20 (Asia/Shanghai).
 
 ✅ **Mission V is LIVE.**  Proposal id `3a8476fd-e093-414d-a8d8-e020d2466a57` flipped from
@@ -431,3 +538,73 @@ so that the tree actually builds from `HEAD`): `spencer/Spencer.lean`, `spencer/
 `spencer/SupportSplit.lean`, `spencer/Recursion.lean`, `spencer/Aggregate.lean`,
 `spencer/Degree.lean` + the `lakefile.lean` `SpencerRoute` roots.  (`Rank.lean`/`Sharp.lean` were
 already in `d880dd8`, but their five dependencies were not — the committed tree did not build.)
+
+---
+
+## 🔬 S5 reconnaissance (2026-09-20 ~11:1x–11:4x): the gap is now *exactly* two statements
+
+S5 = the value at line sum `0`, i.e. `q(-1) = 1` for the degree-`(n-1)²` polynomial agreeing with
+`t ↦ H_n(t+1)` on `ℕ`.  Full derivation in **`S5-NOTES.md`** (same directory).  The outcome:
+
+* S5 ⟺ `Σ_{B ≠ ∅} s_B = 1`, where `s_B := q_B(-1)` and the recursion `s_B = a_B − Σ_{C ∈ nb(B)}s_C`
+  (`a_B = 1` iff `B` is a permutation support) is what the polynomial identity
+  `q_B(X+1) − q_B(X) = Σ_C q_C(X)` turns into at `X = −1`;
+* that splits into **(A)** `q_B(−1) = (−1)^rankB B` for every support `B` (= Ehrhart–Macdonald
+  reciprocity at `−1`, so it carries the same content as the two other open rungs
+  `semi_magic_reciprocity` / `semi_magic_vanishing`), and **(B)**
+  `Σ_{∅≠B support}(−1)^rankB B = 1` (= Euler's formula `Σ_F(−1)^dim F = 1` for the face lattice of
+  the Birkhoff polytope — true for every polytope, no Ehrhart theory involved);
+* **both (A) and (B) were verified numerically, exactly, for `n = 2, 3, 4`** — 3 / 49 / 7443
+  supports respectively, all clean, and `Σ_B q_B(−1) = 1` in all three cases.  The `n = 4` run also
+  reproduces `H_4(s)` for `s = 1…11` (matching Beck–Pixton), which validates the enumerator.
+  Scripts: `tmp/s5_probe.py` (n=2,3), `tmp/s5_probe4.py` (n=4), both exact-rational, no floats.
+
+⚠️ Numerical evidence only — not a proof, and no finite check can settle a statement uniform in `n`.
+**The goal stays `Open`.**  What changed: S5 is no longer "a hard research problem, vaguely =
+reciprocity"; it is (A)+(B), both named and both verified, with (B) being polytope-general.
+
+**Next actions, in the order `S5-NOTES.md` §6 recommends:** (1) leave the goal `Open` and rely on the
+three published siblings; (2) do the §3 recursion in Lean (small — it eliminates all polynomials from
+S5 and leaves only the combinatorial `Σ_B s_B = 1`); (3) attack (B) first (no reciprocity in it);
+(4) attack (A) last, since it closes three rungs at once and is therefore a project, not a detour.
+
+## ✅ Brick 12: the S5 reduction, machine-checked (2026-09-20 ~12:0x–12:15)
+
+Option (2) above is **done**.  New file `examples/magic-squares/spencer/S5.lean`, ninth root of the
+`SpencerRoute` lib (`lakefile.lean` updated), `lake build SpencerRoute` green
+(`Built …S5 (23s)`), no `sorry`/`axiom` (all new theorems report
+`[propext, Classical.choice, Quot.sound]`, `tmp/axiom_check_s5.lean`).
+
+§3 of `S5-NOTES.md` is now a theorem chain:
+
+| where | what |
+|---|---|
+| `qB n B`, `qB_eval` | the support polynomial: `(qB n B).eval r = #(line-sum-(r+1) fibre at B)` |
+| `nbOf n B` | the split's neighbour set — `∅` when no permutation fits inside `B` |
+| `gB_succ` | `gB n B (r+1) = gB n B r + Σ_{C ∈ nbOf n B} gB n C r`, at **every** `B` |
+| `qB_rec` | `qB (X+1) − qB = Σ_{C ∈ nbOf n B} qB C` in `ℚ[X]` |
+| `sB`, `sB_rec` | `sB n B = #(level-1 fibre at B) − Σ_C sB n C` — polynomials eliminated |
+| `IsSupport`, `supportSet`, `sB_eq_zero_of_not_isSupport` | supports, and non-supports contribute `0` |
+| `ReciprocityAtNegOne`, `FaceLatticeEuler` | **(A)** and **(B)** from above, as `Prop`s |
+| `sum_sB_eq_one_of` | (A) + (B) ⟹ `Σ_B sB n B = 1` |
+| `exists_polynomial_semiMagicCount_of_sum_sB`, `…_degLe_of_sum_sB` | `Σ_B sB n B = 1` ⟹ the count is polynomial on **all** of `ℕ` (the second keeps `natDegree ≤ (n−1)²`) |
+
+Combined with `exists_polynomial_semiMagicCount_degree_eq`, this says: assuming `Σ_B sB n B = 1`,
+the mission's **goal** follows.  So the remaining mathematical content is now exactly (A) and/or
+(B) — the reduction itself is no longer a source of doubt.  **The goal is still `Open`**; nothing
+here proves (A) or (B).
+
+**Strategic note added while formalising (`S5-NOTES.md` §7.1).**  `H_n(t)` counts the lattice
+points of `t·B_n`, so S5 *is* Ehrhart's theorem for the Birkhoff polytope.  (A) is stronger than
+needed and (B) alone is not enough; but a third route closes the goal without either: triangulate
+into lattice simplices and use the simplex count
+`L_Δ(t) = Σ_{y ∈ Π ∩ ℤ^{d+1}} binom(t − deg y + d, d)` (a polynomial for all `t ≥ 0`, with
+`L_Δ(0) = 1` for free since `0 ≤ deg y ≤ d`), then inclusion–exclusion over the triangulation.
+That route is a *Mathlib project* (simplex count + lattice triangulations), self-contained, with no
+reciprocity and no face-lattice Euler formula.  Which of the two to fund is a captain's call;
+recommendation stands as §6: (3) before (4) if going the (A)/(B) way.
+
+Implementation pitfalls (the ones worth keeping) are recorded in `SPENCER-ROUTE.md` §8.5 — most
+importantly that `(0 : ℚ)` and `((0 : ℕ) : ℚ)` are not interchangeable for `rw`, and that
+"a polynomial over `ℚ` vanishing on all of `ℕ` is zero" is the single `ℚ[X]`-specific input of the
+whole brick.

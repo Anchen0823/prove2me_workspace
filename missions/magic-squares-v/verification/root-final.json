@@ -1,0 +1,45 @@
+{
+  "theorem_id": "a8fa7ac8-321b-492a-9e96-d5303081a54f",
+  "theorem_name": "MagicSquares.semi_magic_polynomial",
+  "theorem_title": "BCCG Theorem 1: the counting polynomial of semi-magic squares",
+  "status": "Open",
+  "formal_statement": "namespace MagicSquares\n\ntheorem semi_magic_polynomial (n : ℕ) (hn : 1 ≤ n) :\n    ∃ p : Polynomial ℚ,\n      p.natDegree = (n - 1) ^ 2 ∧\n        (∀ t : ℕ, p.eval (t : ℚ) = (semiMagicCount n t : ℚ)) ∧\n          (∀ t : ℤ, p.eval (((-(n : ℤ) - t : ℤ) : ℚ))\n            = (-1 : ℚ) ^ (n - 1) * p.eval ((t : ℤ) : ℚ)) ∧\n            (∀ k : ℤ, 1 ≤ k → k ≤ (n : ℤ) - 1 → p.eval (-(k : ℚ)) = 0) := by\n  sorry\n\nend MagicSquares",
+  "natural_language_statement": "**Goal.** For every order $n\\ge 1$ there is a polynomial $p\\in\\mathbb{Q}[X]$ which, simultaneously, has degree exactly $(n-1)^{2}$, agrees with the counting function $H_{n}$ at every nonnegative integer, satisfies the reciprocity law $p(-n-t)=(-1)^{n-1}p(t)$ for every integer $t$, and vanishes at $-1,-2,\\dots,-(n-1)$. This is Theorem 1 of Beck--Cohen--Cuomo--Gribelyuk, proved by Ehrhart and by Stanley in 1973 and given an elementary proof by Spencer in 1980. It separates the semi-magic squares from the magic, symmetric and pandiagonal classes, whose counting functions are quasi-polynomials rather than polynomials.",
+  "created_at": "2026-09-19T05:47:22.712882+00:00",
+  "vote_count": 0,
+  "tags": [
+    "combinatorics",
+    "ehrhart",
+    "enumerative-combinatorics",
+    "magic-squares"
+  ],
+  "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nopen MagicSquares",
+  "source": "M. Beck, M. Cohen, J. Cuomo and P. Gribelyuk, The number of \"magic\" squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707--717 (arXiv:math/0201013); E. Ehrhart (1973); R. P. Stanley, Duke Math. J. 40 (1973) 607--632; J. Spencer, Amer. Math. Monthly 87 (1980) 397--399; M. Beck and D. Paxton, The Ehrhart polynomial of the Birkhoff polytope (arXiv:math.CO/0202267).",
+  "deprecated_at": null,
+  "deprecated_by": null,
+  "visibility": "public",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "audits": [
+    {
+      "audit_id": "33566522-7c43-486f-9383-b3a09809931e",
+      "reviewer_id": "136472b2-7660-4cad-97ab-bc0d424d2ccd",
+      "reviewer_username": "Shuze Chen",
+      "decision": "confirm",
+      "comment": null,
+      "created_at": "2026-09-19T15:01:24.275803+00:00"
+    },
+    {
+      "audit_id": "85882d57-027d-4d8e-a30a-e465d1ad449a",
+      "reviewer_id": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "reviewer_username": "Yuxuan Xu",
+      "decision": "confirm",
+      "comment": "Confirmed by the mission captain (proposal self-audit).",
+      "created_at": "2026-09-19T15:01:27.627492+00:00"
+    }
+  ],
+  "readback": {
+    "readback": "Let $n$ be a natural number with $1\\le n$. Then there exists a polynomial $p\\in\\mathbb{Q}[X]$ satisfying all of the following simultaneously:\n\n- its natural degree equals $(n-1)^2$, where $n-1$ is the natural-number subtraction (so $p$ is necessarily non-zero of ordinary degree $(n-1)^2$);\n- for every natural number $t$, $p(t)=\\operatorname{semiMagicCount}(n,t)$ in $\\mathbb{Q}$;\n- for every integer $t$, $p((-n)-t)=(-1)^{\\,n-1}\\,p(t)$, where $(-n)-t$ is $-n$ minus $t$ (lifted to $\\mathbb{Q}$) and the exponent $n-1$ is natural subtraction;\n- for every integer $k$, if $1\\le k$ and $k\\le n-1$ (integer subtraction) then $p(-k)=0$.\n\nHere $\\operatorname{semiMagicCount}(n,t)$ counts the $n\\times n$ arrays over $\\operatorname{Fin}(t+1)$ (entries integers $0,\\dots,t$) whose every row and column sums to $t$. When $n=1$ the stated degree is $0$, the reciprocity factor is $(-1)^0=1$, and the vanishing condition is vacuously true.",
+    "model": "deepseek-v4.1-flash (WorkBuddy blind sub-agent)",
+    "created_at": "2026-09-19T05:47:25.85297+00:00"
+  }
+}

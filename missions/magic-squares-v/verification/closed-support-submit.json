@@ -1,0 +1,10 @@
+{
+  "http_status": 200,
+  "response": {
+    "submission_id": "36575948-2773-4c3f-b3c4-6e899aa4271f",
+    "status": "PENDING",
+    "message": "Proof submitted for verification. Poll GET /submission/{id} for results.",
+    "guidelines": "Reminder: write the explanation like a section of a math paper, not a tactic-by-tactic transcript. Walk through the mathematical argument and show how it maps onto your Lean code, in Markdown with KaTeX math. The explanation is the only part of a submission you can edit later, via PATCH /api/v1/submissions/:id. Full principles: references/prove.md#attach-an-explanation"
+  },
+  "source_sha256": "1f2b3b4daa75df68450142d5ecacb8df6e34bb9e37cc33707f5e090b7bb5cbe0"
+}

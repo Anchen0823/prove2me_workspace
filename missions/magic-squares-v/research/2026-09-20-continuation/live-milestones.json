@@ -1,0 +1,123 @@
+version=0.10.6
+{
+  "mission_id": "e06131f8-1bf5-47c4-b8f4-507f107269e0",
+  "pagination": {
+    "limit": 20,
+    "offset": 0,
+    "total": 8
+  },
+  "milestones": [
+    {
+      "id": "75d1ded5-7405-40c6-b0fc-d7981a085145",
+      "title": "BCCG (2003) section 1 - the order-two count, already proved",
+      "milestone_description": "For every natural number $t$ the number of $2\\times2$ semi-magic squares of line sum $t$ is $H_{2}(t)=t+1$: such an array is determined by its top-left entry, which may be any of $0,1,\\dots,t$. This node is already published and proved on the platform, so it is a reference rather than a target; it is listed first because the ladder starts there.",
+      "sort_order": 0,
+      "completed": true,
+      "theorem": {
+        "id": "86515ed9-6bd4-4484-a3d2-a1be23ce7ac9",
+        "theorem_name": "MagicSquares.semi_magic_count_two",
+        "status": "Proved"
+      },
+      "created_by": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "created_at": "2026-09-19T15:01:27.516988+00:00"
+    },
+    {
+      "id": "c0b981fa-403b-495e-8b80-195a47d06452",
+      "title": "MacMahon (1915) - the order-three count, already proved",
+      "milestone_description": "For every natural number $t$ the number of $3\\times3$ semi-magic squares of line sum $t$ is $H_{3}(t)=3\\binom{t+3}{4}+\\binom{t+2}{2}$, a polynomial of degree $4=(3-1)^{2}$. Already published and proved on the platform; also a reference rather than a target.",
+      "sort_order": 1,
+      "completed": true,
+      "theorem": {
+        "id": "55e2191d-be25-4e6d-af7a-4635a34e5c63",
+        "theorem_name": "MagicSquares.semi_magic_count_three",
+        "status": "Proved"
+      },
+      "created_by": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "created_at": "2026-09-19T15:01:27.516988+00:00"
+    },
+    {
+      "id": "3e3c2d2d-4865-41dc-9389-c344b7cdd8ab",
+      "title": "Order n = 1 - the base rung",
+      "milestone_description": "For every natural number $t$ there is exactly one $1\\times1$ array of nonnegative integers whose row and column sum to $t$, namely the array $[t]$; consequently $H_{1}(t)=1$ for all $t$. Establishes the ladder at $n=1$, where the asserted degree $(n-1)^{2}$ is $0$.",
+      "sort_order": 2,
+      "completed": true,
+      "theorem": {
+        "id": "611ea9c5-4346-49e1-800c-aa23be9f7303",
+        "theorem_name": "MagicSquares.semi_magic_count_one",
+        "status": "Proved"
+      },
+      "created_by": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "created_at": "2026-09-19T15:01:27.516988+00:00"
+    },
+    {
+      "id": "c791e322-27f8-49d9-bdcd-cd9120a5fe8c",
+      "title": "Beck-Pixton (2002) - the Ehrhart polynomial of the four-dimensional Birkhoff polytope",
+      "milestone_description": "For every natural number $t$, $11340\\cdot H_{4}(t)$ equals $11t^{9}+198t^{8}+1596t^{7}+7560t^{6}+23289t^{5}+48762t^{4}+70234t^{3}+68220t^{2}+40950t+11340$, an identity between natural numbers. This is the Ehrhart polynomial of the Birkhoff polytope $B_{4}$ with the denominators cleared, and its leading coefficient is $11/11340$. That leading coefficient is **not** the Euclidean volume: $\\operatorname{vol}(B_{4}) = n^{n-1}\\cdot 11/11340 = 4^{3}\\cdot 11/11340 = 176/2835$, larger by the factor $n^{n-1} = 64$ of the counting lattice (compare $\\operatorname{vol}(B_{3}) = 9/8$, whose leading coefficient is $1/8$). The normalised volume is $9!\\cdot 11/11340 = 352$. The rung is the concrete order at which the general statement can be approached without building lattice-point machinery, and it is the only rung whose statement is a finite-looking numerical identity - it must not be mistaken for a route to the goal.",
+      "sort_order": 3,
+      "completed": false,
+      "theorem": {
+        "id": "f85e8a07-5809-4c91-84a4-cea1cb2a7939",
+        "theorem_name": "MagicSquares.semi_magic_count_four",
+        "status": "Open"
+      },
+      "created_by": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "created_at": "2026-09-20T02:23:39.886981+00:00"
+    },
+    {
+      "id": "72482ba2-7bc1-4eff-85bd-d8e380234b47",
+      "title": "Theorem 1 (i) - polynomiality and the degree (n - 1)^2",
+      "milestone_description": "For every order $n\\ge 1$ there exists a polynomial $p$ with rational coefficients whose degree is exactly $(n-1)^{2}$ and whose value at every natural number $t$ is the number $H_{n}(t)$ of $n\\times n$ semi-magic squares of line sum $t$. This is the first half of the goal, isolated so that it can be attacked on its own: it asserts existence and the exact degree, but says nothing about the behaviour of $p$ outside the nonnegative integers. The degree $(n-1)^{2}$ is the dimension of the Birkhoff polytope, and the integrality of the vertices of that polytope is what forces the period to be $1$.",
+      "sort_order": 4,
+      "completed": false,
+      "theorem": {
+        "id": "3dc34529-feed-4b21-bd4f-443097422b63",
+        "theorem_name": "MagicSquares.semi_magic_polynomial_exists",
+        "status": "Open"
+      },
+      "created_by": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "created_at": "2026-09-19T15:01:27.516988+00:00"
+    },
+    {
+      "id": "4995687d-e6eb-4803-8736-e0800f65925e",
+      "title": "Spencer's route, formalised: the degree is exactly (n - 1)^2 for t >= 1 (supports Theorem 1 (i))",
+      "milestone_description": "An elementary proof - generating functions, Hall's marriage theorem and the finite poset of supports, after J. Spencer, *Counting magic squares*, Amer. Math. Monthly **87** (1980) 397-399 - that for every order $n\\ge 1$ the number $H_{n}(t)$ of $n\\times n$ semi-magic squares of line sum $t$ agrees, for every $t\\ge 1$, with a rational polynomial of degree **exactly** $(n-1)^{2}$. No Ehrhart theory and no lattice-point machinery is used, which is what makes the general order reachable at all. The upper bound is measured by the rank $\\dim\\{M:\\text{line sums }0,\\ \\operatorname{supp}M\\subseteq B\\}$ of a support; the lower bound is an explicit linear family with $n^{2}$ free parameters. Supports milestone 4 (\\emph{Theorem 1 (i)}), but is **strictly weaker** than it and than the goal: the hypothesis $1\\le t$ is not removable by this route, because the support-set recursion has no term for the empty support. The missing value at $t=0$ is Ehrhart-Macdonald reciprocity at $-1$, i.e. the statement that $B_{n}$ has no interior lattice points for $n\\ge 2$, which is the separate rung \\emph{Theorem 1 (ii)}.",
+      "sort_order": 5,
+      "completed": true,
+      "theorem": {
+        "id": "4394b225-cc88-46d4-a57e-0765707d3246",
+        "theorem_name": "MagicSquares.semi_magic_polynomial_exists_degree_eq",
+        "status": "Proved"
+      },
+      "created_by": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "created_at": "2026-09-20T02:33:30.928887+00:00"
+    },
+    {
+      "id": "e980f5b0-9805-429d-bad3-01d05405b88d",
+      "title": "Theorem 1 (ii) - the reciprocity law",
+      "milestone_description": "Let $n\\ge 1$ and let $p$ be a rational polynomial agreeing with $H_{n}$ at every natural number. Then for every integer $t$, $p(-n-t)=(-1)^{n-1}p(t)$. This is the reflection $t\\mapsto -n-t$: the value of the counting polynomial at a negative integer is, up to sign, the number of interior lattice points of the corresponding dilate of the polytope. The statement cannot be read off from the definition of $H_{n}$, which is given only on the natural numbers, and it is the part of the goal that no finite computation can settle.",
+      "sort_order": 6,
+      "completed": false,
+      "theorem": {
+        "id": "32ea160a-bf6c-4a8f-90f7-31289a3d3ba3",
+        "theorem_name": "MagicSquares.semi_magic_reciprocity",
+        "status": "Open"
+      },
+      "created_by": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "created_at": "2026-09-19T15:01:27.516988+00:00"
+    },
+    {
+      "id": "d1f47653-3609-4bf7-b745-620afbfc195e",
+      "title": "Theorem 1 (iii) - the vanishing list",
+      "milestone_description": "Let $n\\ge 1$ and let $p$ be a rational polynomial agreeing with $H_{n}$ at every natural number. Then $p$ vanishes at the negative integers $-1,-2,\\dots,-(n-1)$: that is, $p(-k)=0$ for every integer $k$ with $1\\le k\\le n-1$. Together with the reciprocity law this is what pins the polynomial down once its degree is known. At $n=1$ the condition is vacuous, which is consistent with $H_{1}\\equiv 1$.",
+      "sort_order": 7,
+      "completed": false,
+      "theorem": {
+        "id": "2b98befc-35ff-4cd0-be18-2536bf8adae8",
+        "theorem_name": "MagicSquares.semi_magic_vanishing",
+        "status": "Open"
+      },
+      "created_by": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "created_at": "2026-09-19T15:01:27.516988+00:00"
+    }
+  ]
+}

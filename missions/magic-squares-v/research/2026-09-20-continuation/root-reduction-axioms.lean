@@ -1,0 +1,3 @@
+import Solutions.Sol_MagicSquares_semi_magic_polynomial
+
+#print axioms solution

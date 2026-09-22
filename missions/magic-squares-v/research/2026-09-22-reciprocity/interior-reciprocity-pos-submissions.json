@@ -1,0 +1,19 @@
+{
+  "submissions": [
+    {
+      "id": "efca7551-ad8b-4f85-b976-415cea725b2f",
+      "theorem_id": "5ca89b06-1944-4bca-8ae9-160021073541",
+      "user_id": "d1f0c25d-156e-4ff2-8246-1bd7cf2cce70",
+      "username": "Tamas Fulop",
+      "status": "SKETCH_ACCEPTED",
+      "error_message": "",
+      "file_path": "5ca89b06-1944-4bca-8ae9-160021073541/d1f0c25d-156e-4ff2-8246-1bd7cf2cce70/efca7551-ad8b-4f85-b976-415cea725b2f.lean",
+      "created_at": "2026-09-21T21:03:23.152868+00:00",
+      "updated_at": "2026-09-21T21:08:41.679663+00:00",
+      "vote_count": 0,
+      "explanation": "We prove that for $n >= 1$ and $p$ in $Q[X]$ agreeing with $H_n$ on all naturals, for every $t >= 1$,\n\n$$p(-t) = (-1)^{(n-1)^2} I_n(t),$$\n\nwhere $H_n(t)$ counts $n$ by $n$ semi-magic squares of line sum $t$ and $I_n(t)$ counts those with every entry positive. The argument uses the shift bijection, vanishing at negative small integers, and two child lemmas introduced as assumptions.\n\nThe proof idea is to separate small and large dilations. For $t < n$ both sides are zero. For $t >= n$ the interior count is an ordinary count of smaller line sum, so the claim becomes a polynomial identity in $u = t - n$.\n\nLet $t >= 1$ be given. Split on whether $t < n$.\n\nIf $t < n$, then\n\n$$I_n(t) = 0$$\n\nsince a row of $n$ positive entries sums to at least $n$. This is child one. Moreover\n\n$$p(-t) = 0$$\n\nby the vanishing theorem for $1 <= t <= n-1$, which applies because $t < n$ and $t >= 1$ give $t <= n-1$. Hence both sides equal zero.\n\nIf $t >= n$, write $u = t - n$, so that\n\n$$t = n + u.$$\n\nThe shift bijection gives\n\n$$I_n(t) = H_n(u).$$\n\nSince $p$ agrees with $H_n$ on naturals,\n\n$$H_n(u) = p(u).$$\n\nChild two asserts the functional equation\n\n$$p(-n-u) = (-1)^{(n-1)^2} p(u)$$\n\nfor every natural $u$. With $u = t - n$ this yields\n\n$$p(-t) = (-1)^{(n-1)^2} p(t-n),$$\n\nwhich combined with the two displayed identities above gives the claim.\n\nThe two children are assumptions of this sketch, not results of it. Child one states $I_n(t) = 0$ for $t < n$, the elementary row sum bound. Child two states the polynomial functional equation on natural shifts, the geometric core isolated from combinatorics. The proved imports supply the rest: vanishing gives $p(-t) = 0$ for $t < n$, and the shift bijection gives $I_n(t) = H_n(t-n)$ for $t >= n$. Together they close both cases.\n\n**Formalization Note** Lean normalizes integer and rational casts with simp, and rewrites $n + (t - n) = t$ from $n <= t$ to connect the child equation to the goal.",
+      "deprecated_at": null
+    }
+  ],
+  "total": 1
+}

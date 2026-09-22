@@ -1,0 +1,64 @@
+{
+  "date": "2026-09-22",
+  "lean": "leanprover/lean4:v4.33.1",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "result": "Conditional proof of complete mission root from one finite matching-boundary criterion",
+  "unproved_assumption": "MagicSquaresSpencer.MatchingBoundaryCriterion n (equivalently FiniteBoundaryEuler n for n >= 1)",
+  "full_mission_proved": false,
+  "build": {
+    "target": "examples.«magic-squares».spencer.MatchingBoundaryCriterion",
+    "exit_code": 0,
+    "jobs": 8736,
+    "log": "missions/magic-squares-v/verification/boundary-reduction-build.log"
+  },
+  "axiom_check": {
+    "exit_code": 0,
+    "checked_declarations": 11,
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "sorryAx": false,
+    "log": "missions/magic-squares-v/verification/boundary-reduction-axioms.log"
+  },
+  "sources": [
+    {
+      "path": "examples/magic-squares/spencer/PolynomialDifference.lean",
+      "sha256": "7742E1CDBC9184799BAF454A7FEB890433B569062449F049C53876D38BBE875E"
+    },
+    {
+      "path": "examples/magic-squares/spencer/ReciprocityPropagation.lean",
+      "sha256": "01FA8E19B044503091DB77C6C9FAE7B24757B058B806544FDDF3CFC0EE964D05"
+    },
+    {
+      "path": "examples/magic-squares/spencer/FiniteBoundaryBalance.lean",
+      "sha256": "A0D7EBC13EE964EF90C3E2A81910E3C9F8070521BB57FCF81F2D33948762C0E0"
+    },
+    {
+      "path": "examples/magic-squares/spencer/ReflectionSign.lean",
+      "sha256": "BDB562400E1ACA5D9149DAB0BD8296E9BDF9B34DCE0957EC619DB22A30057499"
+    },
+    {
+      "path": "examples/magic-squares/spencer/ReciprocityFromBoundary.lean",
+      "sha256": "D5108BCD9F09F4776E37A555244C242EE44A7FBCFF771607659B577B8840F4B8"
+    },
+    {
+      "path": "examples/magic-squares/spencer/MatchingBoundaryCriterion.lean",
+      "sha256": "CF8853D1A3E4D9F167E02459B1A147324C465832D1DC38C611E8F7BDB96332C4"
+    }
+  ],
+  "finite_experiment": {
+    "exhaustive_orders": [
+      1,
+      2,
+      3
+    ],
+    "exhaustive_cases": 1317,
+    "sampled_order": 4,
+    "sampled_cases": 600,
+    "failures": 0,
+    "is_general_proof": false
+  },
+  "platform_submission": null
+}

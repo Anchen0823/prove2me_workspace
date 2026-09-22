@@ -1,0 +1,45 @@
+{
+  "theorem_id": "f85e8a07-5809-4c91-84a4-cea1cb2a7939",
+  "theorem_name": "MagicSquares.semi_magic_count_four",
+  "theorem_title": "Order four: the Ehrhart polynomial of the Birkhoff polytope B_4",
+  "status": "Open",
+  "formal_statement": "namespace MagicSquares\n\ntheorem semi_magic_count_four (t : ℕ) :\n    11340 * semiMagicCount 4 t\n      = 11 * t ^ 9 + 198 * t ^ 8 + 1596 * t ^ 7 + 7560 * t ^ 6 + 23289 * t ^ 5\n        + 48762 * t ^ 4 + 70234 * t ^ 3 + 68220 * t ^ 2 + 40950 * t + 11340 := by\n  sorry\n\nend MagicSquares",
+  "natural_language_statement": "**Order four**, with the denominators cleared. The counting function $H_{4}(t)$, the number of $4\\times4$ arrays of nonnegative integers whose every row and every column sums to $t$, is the Ehrhart polynomial of the four-dimensional Birkhoff polytope $B_{4}$, whose degree is $(4-1)^{2}=9$. Multiplying by the common denominator $11340$ of its coefficients gives the displayed identity in the natural numbers. The leading coefficient is $11/11340$, which is $\\operatorname{vol}(B_{4})$; the normalised volume $9!\\cdot\\tfrac{11}{11340}$ equals $352$. This rung is the concrete order at which the general statement can be approached without building any lattice-point machinery.",
+  "created_at": "2026-09-19T05:46:03.298134+00:00",
+  "vote_count": 0,
+  "tags": [
+    "combinatorics",
+    "ehrhart",
+    "enumerative-combinatorics",
+    "magic-squares"
+  ],
+  "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nopen MagicSquares",
+  "source": "M. Beck, M. Cohen, J. Cuomo and P. Gribelyuk, The number of \"magic\" squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707--717 (arXiv:math/0201013); E. Ehrhart (1973); R. P. Stanley, Duke Math. J. 40 (1973) 607--632; J. Spencer, Amer. Math. Monthly 87 (1980) 397--399; M. Beck and D. Paxton, The Ehrhart polynomial of the Birkhoff polytope (arXiv:math.CO/0202267).",
+  "deprecated_at": null,
+  "deprecated_by": null,
+  "visibility": "public",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "audits": [
+    {
+      "audit_id": "ab42b7f5-3bae-4cb1-8b11-33401ee0728d",
+      "reviewer_id": "136472b2-7660-4cad-97ab-bc0d424d2ccd",
+      "reviewer_username": "Shuze Chen",
+      "decision": "confirm",
+      "comment": null,
+      "created_at": "2026-09-19T15:01:23.193783+00:00"
+    },
+    {
+      "audit_id": "76e86030-24ec-45a9-9b1b-36411113192c",
+      "reviewer_id": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "reviewer_username": "Yuxuan Xu",
+      "decision": "confirm",
+      "comment": "Confirmed by the mission captain (proposal self-audit).",
+      "created_at": "2026-09-19T15:01:27.627492+00:00"
+    }
+  ],
+  "readback": {
+    "readback": "For every natural number $t$,\n\n$$11340\\cdot \\operatorname{semiMagicCount}(4,t)=11\\,t^{9}+198\\,t^{8}+1596\\,t^{7}+7560\\,t^{6}+23289\\,t^{5}+48762\\,t^{4}+70234\\,t^{3}+68220\\,t^{2}+40950\\,t+11340.$$\n\nHere $\\operatorname{semiMagicCount}(4,t)$ is the number of $4\\times 4$ arrays with entries in $\\operatorname{Fin}(t+1)$ (each entry an integer $0,1,\\dots,t$) whose every row and every column sums to $t$. All arithmetic in the displayed identity is performed in the natural numbers $\\mathbb{N}$: the multiplication $11340\\cdot(\\cdot)$, the powers $t^k$, the products of coefficients with powers, and the additions on the right-hand side, and the equality is an equality of natural numbers. The theorem asserts only this numerical identity in $\\mathbb{N}$; it does not, as written, separately assert that the right-hand side is divisible by $11340$.",
+    "model": "deepseek-v4.1-flash (WorkBuddy blind sub-agent)",
+    "created_at": "2026-09-19T05:46:06.131858+00:00"
+  }
+}

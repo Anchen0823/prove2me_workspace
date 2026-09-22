@@ -1,0 +1,34 @@
+{
+ "proposal_id": "3a8476fd-e093-414d-a8d8-e020d2466a57",
+ "items": {
+  "MagicSquares": "3ca03906-9fb3-4a6a-a15a-9cb62a8c7dbf",
+  "MagicSquaresPandiagonal": "b28d6063-4dda-433d-beed-24c2f5944df5",
+  "MagicSquaresMostPerfect": "b266406e-90db-493b-ac53-ce114d905894",
+  "MagicSquaresTransforms": "624dbf11-ef90-424e-adc4-6864fbee1ffc",
+  "MagicSquaresNormal3": "4914b4ee-9138-4321-90c6-ffd69ec63a04",
+  "MagicSquares.semi_magic_count_two": "1f1197ce-f6a0-4f14-b971-732181056f35",
+  "MagicSquares.semi_magic_count_three": "983bf857-76b8-4154-be81-acc2b6eb6994",
+  "semi_magic_count_one": "570adb5c-97bf-4da4-b626-787cb322f6d6",
+  "semi_magic_count_four": "4de910d9-0161-40b3-a5de-d1b43aca77c8",
+  "semi_magic_polynomial_exists": "885cd5d9-3159-4f39-ada0-74d9d337f49b",
+  "semi_magic_reciprocity": "c631c4f9-700b-46e3-a99c-812fb4e1e809",
+  "semi_magic_vanishing": "fb434aa8-d5a4-42e6-84db-1bcdefd09517",
+  "semi_magic_polynomial": "e159ad1e-a56c-476a-8fb7-990958403910"
+ },
+ "item_order": [
+  "3ca03906-9fb3-4a6a-a15a-9cb62a8c7dbf",
+  "b28d6063-4dda-433d-beed-24c2f5944df5",
+  "b266406e-90db-493b-ac53-ce114d905894",
+  "624dbf11-ef90-424e-adc4-6864fbee1ffc",
+  "4914b4ee-9138-4321-90c6-ffd69ec63a04",
+  "1f1197ce-f6a0-4f14-b971-732181056f35",
+  "983bf857-76b8-4154-be81-acc2b6eb6994",
+  "570adb5c-97bf-4da4-b626-787cb322f6d6",
+  "4de910d9-0161-40b3-a5de-d1b43aca77c8",
+  "885cd5d9-3159-4f39-ada0-74d9d337f49b",
+  "c631c4f9-700b-46e3-a99c-812fb4e1e809",
+  "fb434aa8-d5a4-42e6-84db-1bcdefd09517",
+  "e159ad1e-a56c-476a-8fb7-990958403910"
+ ],
+ "main_item_id": "e159ad1e-a56c-476a-8fb7-990958403910"
+}

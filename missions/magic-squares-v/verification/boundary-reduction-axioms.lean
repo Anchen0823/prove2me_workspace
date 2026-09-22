@@ -1,0 +1,14 @@
+import examples.«magic-squares».spencer.ReciprocityFromBoundary
+import examples.«magic-squares».spencer.MatchingBoundaryCriterion
+
+#print axioms MagicSquaresSpencer.polynomial_eq_of_eq_difference
+#print axioms MagicSquaresSpencer.qB_rec_perm
+#print axioms MagicSquaresSpencer.qB_eq_zero_of_not_support
+#print axioms MagicSquaresSpencer.normalized_reciprocity_of_boundaryBalance
+#print axioms MagicSquaresSpencer.semiMagic_normalized_reflection_of_boundaryBalance
+#print axioms MagicSquaresSpencer.finiteBoundaryEuler_implies_boundaryBalance
+#print axioms reflection_sign
+#print axioms MagicSquaresSpencer.semiMagic_reciprocity_of_finiteBoundaryEuler
+#print axioms MagicSquaresSpencer.semiMagic_root_of_finiteBoundaryEuler
+#print axioms MagicSquaresSpencer.matchingBoundaryCriterion_iff_finiteBoundaryEuler
+#print axioms MagicSquaresSpencer.semiMagic_reciprocity_of_matchingBoundaryCriterion

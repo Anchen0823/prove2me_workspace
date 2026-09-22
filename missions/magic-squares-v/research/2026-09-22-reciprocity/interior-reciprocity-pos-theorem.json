@@ -1,0 +1,24 @@
+{
+  "theorem_id": "5ca89b06-1944-4bca-8ae9-160021073541",
+  "theorem_name": "MagicSquares.interior_reciprocity_pos",
+  "theorem_title": "Ehrhart-Macdonald counting reciprocity at positive dilation",
+  "status": "Open",
+  "formal_statement": "namespace MagicSquares\n\ntheorem interior_reciprocity_pos (n : ℕ) (hn : 1 ≤ n) (p : Polynomial ℚ)\n    (hp : ∀ t : ℕ, p.eval (t : ℚ) = (semiMagicCount n t : ℚ)) :\n    ∀ t : ℕ, 1 ≤ t → p.eval (-(t : ℚ)) = (-1 : ℚ) ^ ((n - 1) ^ 2) *\n      (positiveInteriorCount n t : ℚ) := by sorry\n\nend MagicSquares\n",
+  "natural_language_statement": "**Ehrhart--Macdonald reciprocity for the Birkhoff polytope at positive dilation, in counting form.** Let $n \\ge 1$ and let $p \\in \\mathbb{Q}[X]$ agree with the semi-magic counting function $H_{n}$ on the nonnegative integers. For every $t \\ge 1$,$$p(-t) = (-1)^{(n-1)^2} I_{n}(t),$$where $I_{n}(t)$ is the number of semi-magic squares of line sum $t$ with every entry strictly positive.\n\nThe left-hand side evaluates the Ehrhart polynomial of the Birkhoff polytope $B_{n}$ (the doubly stochastic matrices, of dimension $(n-1)^2$) at the negative integer $-t$; the right-hand side counts its interior lattice points in the dilate $t \\cdot B_{n}$, which are exactly the positive squares. This is the specialization of the Ehrhart--Macdonald reciprocity law to $B_{n}$, and it is the half of Stanley's argument that brings geometry into the picture: everything else in the reciprocity proof is elementary combinatorics and polynomial algebra.\n\nThe dilation must be positive: at $t = 0$ the identity is false, since $p(0) = H_{n}(0) = 1$ (the all-zero square) while $I_{n}(0) = 0$ (no entry can be positive). This restriction matches the lattice-point counts preceding the reciprocity theorem, which are introduced for positive integer dilation.\n\n**Formalization Note** Lean states positivity through `positiveInteriorCount`, the card-of-filtered-finset interior count over `Square n (Fin (t+1))`, with the positivity hypothesis `1 ≤ t` as an explicit binder.",
+  "created_at": "2026-09-20T23:00:20.613543+00:00",
+  "vote_count": 0,
+  "tags": [
+    "combinatorics",
+    "ehrhart",
+    "enumerative-combinatorics",
+    "magic-squares"
+  ],
+  "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nimport Definitions.Def_MagicSquares_positiveInteriorCount\nopen MagicSquares",
+  "source": "R. P. Stanley, Duke Math. J. 40 (1973), 607--632, Ehrhart--Macdonald reciprocity applied to the Birkhoff polytope; E. Ehrhart (1973); M. Beck, M. Cohen, J. Cuomo and P. Gribelyuk, Amer. Math. Monthly 110 (2003), 707--717 (arXiv:math/0201013).",
+  "deprecated_at": null,
+  "deprecated_by": null,
+  "visibility": "public",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "audits": [],
+  "readback": null
+}

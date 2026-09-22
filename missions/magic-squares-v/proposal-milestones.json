@@ -1,0 +1,54 @@
+{
+ "proposal_id": "3a8476fd-e093-414d-a8d8-e020d2466a57",
+ "milestones": [
+  {
+   "item_id": "1f1197ce-f6a0-4f14-b971-732181056f35",
+   "title": "BCCG (2003) section 1 - the order-two count, already proved",
+   "milestone_description": "For every natural number $t$ the number of $2\\times2$ semi-magic squares of line sum $t$ is $H_{2}(t)=t+1$: such an array is determined by its top-left entry, which may be any of $0,1,\\dots,t$. This node is already published and proved on the platform, so it is a reference rather than a target; it is listed first because the ladder starts there.",
+   "sort_order": 0,
+   "theorem_id": "86515ed9-6bd4-4484-a3d2-a1be23ce7ac9"
+  },
+  {
+   "item_id": "983bf857-76b8-4154-be81-acc2b6eb6994",
+   "title": "MacMahon (1915) - the order-three count, already proved",
+   "milestone_description": "For every natural number $t$ the number of $3\\times3$ semi-magic squares of line sum $t$ is $H_{3}(t)=3\\binom{t+3}{4}+\\binom{t+2}{2}$, a polynomial of degree $4=(3-1)^{2}$. Already published and proved on the platform; also a reference rather than a target.",
+   "sort_order": 1,
+   "theorem_id": "55e2191d-be25-4e6d-af7a-4635a34e5c63"
+  },
+  {
+   "item_id": "570adb5c-97bf-4da4-b626-787cb322f6d6",
+   "title": "Order n = 1 - the base rung",
+   "milestone_description": "For every natural number $t$ there is exactly one $1\\times1$ array of nonnegative integers whose row and column sum to $t$, namely the array $[t]$; consequently $H_{1}(t)=1$ for all $t$. Establishes the ladder at $n=1$, where the asserted degree $(n-1)^{2}$ is $0$.",
+   "sort_order": 2,
+   "theorem_id": null
+  },
+  {
+   "item_id": "4de910d9-0161-40b3-a5de-d1b43aca77c8",
+   "title": "Beck-Pixton (2002) - the Ehrhart polynomial of the four-dimensional Birkhoff polytope",
+   "milestone_description": "For every natural number $t$, $11340\\cdot H_{4}(t)$ equals $11t^{9}+198t^{8}+1596t^{7}+7560t^{6}+23289t^{5}+48762t^{4}+70234t^{3}+68220t^{2}+40950t+11340$, an identity between natural numbers. This is the Ehrhart polynomial of the Birkhoff polytope $B_{4}$ with the denominators cleared; its leading coefficient $11/11340$ is the volume of $B_{4}$ and its normalised volume is $352$. The rung is the concrete order at which the general statement can be approached without building lattice-point machinery, and it is the only rung whose statement is a finite-looking numerical identity - it must not be mistaken for a route to the goal.",
+   "sort_order": 3,
+   "theorem_id": null
+  },
+  {
+   "item_id": "885cd5d9-3159-4f39-ada0-74d9d337f49b",
+   "title": "Theorem 1 (i) - polynomiality and the degree (n - 1)^2",
+   "milestone_description": "For every order $n\\ge 1$ there exists a polynomial $p$ with rational coefficients whose degree is exactly $(n-1)^{2}$ and whose value at every natural number $t$ is the number $H_{n}(t)$ of $n\\times n$ semi-magic squares of line sum $t$. This is the first half of the goal, isolated so that it can be attacked on its own: it asserts existence and the exact degree, but says nothing about the behaviour of $p$ outside the nonnegative integers. The degree $(n-1)^{2}$ is the dimension of the Birkhoff polytope, and the integrality of the vertices of that polytope is what forces the period to be $1$.",
+   "sort_order": 4,
+   "theorem_id": null
+  },
+  {
+   "item_id": "c631c4f9-700b-46e3-a99c-812fb4e1e809",
+   "title": "Theorem 1 (ii) - the reciprocity law",
+   "milestone_description": "Let $n\\ge 1$ and let $p$ be a rational polynomial agreeing with $H_{n}$ at every natural number. Then for every integer $t$, $p(-n-t)=(-1)^{n-1}p(t)$. This is the reflection $t\\mapsto -n-t$: the value of the counting polynomial at a negative integer is, up to sign, the number of interior lattice points of the corresponding dilate of the polytope. The statement cannot be read off from the definition of $H_{n}$, which is given only on the natural numbers, and it is the part of the goal that no finite computation can settle.",
+   "sort_order": 5,
+   "theorem_id": null
+  },
+  {
+   "item_id": "fb434aa8-d5a4-42e6-84db-1bcdefd09517",
+   "title": "Theorem 1 (iii) - the vanishing list",
+   "milestone_description": "Let $n\\ge 1$ and let $p$ be a rational polynomial agreeing with $H_{n}$ at every natural number. Then $p$ vanishes at the negative integers $-1,-2,\\dots,-(n-1)$: that is, $p(-k)=0$ for every integer $k$ with $1\\le k\\le n-1$. Together with the reciprocity law this is what pins the polynomial down once its degree is known. At $n=1$ the condition is vacuous, which is consistent with $H_{1}\\equiv 1$.",
+   "sort_order": 6,
+   "theorem_id": null
+  }
+ ]
+}

@@ -1,0 +1,9 @@
+SHA256 source hashes for the locally compiled root reduction, 2026-09-20:
+
+9CE822A196E3413DB146411BA10E148A601B39B6108CB4F4C3E50DB06FD6237A  Theorems/Thm_MagicSquares_semi_magic_polynomial_exists.lean
+B4D828E93526250DF1B7BE36237EE98E8E589348E4E2E5A90E0D03CB084E60EE  Theorems/Thm_MagicSquares_semi_magic_reciprocity.lean
+98B8F52F9CFFB96D298F7DAC000391BA47E56AF8A7B12888447AD94F0D36A3FB  Theorems/Thm_MagicSquares_semi_magic_vanishing.lean
+8610193974F7CDC0F97C72E5CB16B55794EFA3357093E1698C8FA0CC735D481A  Solutions/Sol_MagicSquares_semi_magic_polynomial.lean
+
+Each mirror is an exact live Open-node statement with a local `sorry`; the
+solution file itself contains no `sorry` or `admit`.

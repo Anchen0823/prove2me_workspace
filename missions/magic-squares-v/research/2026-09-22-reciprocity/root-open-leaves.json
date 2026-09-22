@@ -1,0 +1,12 @@
+{
+  "root_id": "a8fa7ac8-321b-492a-9e96-d5303081a54f",
+  "open_leaves": [
+    {
+      "theorem_id": "985f7b0a-962f-4039-804c-794f2ce86533",
+      "theorem_name": "MagicSquares.ehrhart_macdonald_birkhoff_pos",
+      "status": "Open",
+      "closability": 0
+    }
+  ],
+  "total": 1
+}

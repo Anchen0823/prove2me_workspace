@@ -1,0 +1,8 @@
+'MagicSquaresSpencer.weighted_weisner' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MagicSquaresBoundary.sum_interval_eq_matchingCore' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MagicSquaresBoundary.matchingEulerCoefficient_eq_zero_of_not_matchingCovered' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MagicSquaresBoundary.matchingBoundaryCriterion_of_intervalEuler' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,93 @@
+{
+  "date": "2026-09-20",
+  "lean": "leanprover/lean4:v4.33.1",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "artifacts": {
+    "polynomial_exists": {
+      "file": "Solutions/Sol_MagicSquares_semi_magic_polynomial_exists.lean",
+      "source_sha256": "1f2b3b4daa75df68450142d5ecacb8df6e34bb9e37cc33707f5e090b7bb5cbe0",
+      "target_id": "3dc34529-feed-4b21-bd4f-443097422b63",
+      "submission_id": "36575948-2773-4c3f-b3c4-6e899aa4271f",
+      "status": "ACCEPTED",
+      "local_compilation": "passed",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "verified_at": "2026-09-20T14:48:37.722954+00:00"
+    },
+    "vanishing": {
+      "file": "Solutions/Sol_MagicSquares_semi_magic_vanishing.lean",
+      "source_sha256": "b7558e971044994aee4bafaa4d7d98366374e4d556b9e89049e452d5758c8688",
+      "target_id": "2b98befc-35ff-4cd0-be18-2536bf8adae8",
+      "submission_id": "b6903bee-18e6-40d0-a49e-4ca1e631ff02",
+      "status": "ACCEPTED",
+      "local_compilation": "passed",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "verified_at": "2026-09-20T14:57:46.421836+00:00"
+    },
+    "root_reduction": {
+      "file": "Solutions/Sol_MagicSquares_semi_magic_polynomial.lean",
+      "source_sha256": "8610193974f7cdc0f97c72e5cb16b55794efa3357093e1698c8fa0cc735d481a",
+      "target_id": "a8fa7ac8-321b-492a-9e96-d5303081a54f",
+      "submission_id": "b67b135f-bf4e-46d1-b4a9-14dd91d176dd",
+      "status": "SKETCH_ACCEPTED",
+      "local_compilation": "passed",
+      "axioms": [
+        "propext",
+        "sorryAx (local theorem mirrors)",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "verified_at": "2026-09-20T14:57:25.28397+00:00"
+    }
+  },
+  "root_open_leaves": [
+    {
+      "theorem_id": "32ea160a-bf6c-4a8f-90f7-31289a3d3ba3",
+      "theorem_name": "MagicSquares.semi_magic_reciprocity",
+      "status": "Open",
+      "closability": 0
+    }
+  ],
+  "root_status": "Open",
+  "milestones": [
+    {
+      "name": "MagicSquares.semi_magic_count_two",
+      "status": "Proved"
+    },
+    {
+      "name": "MagicSquares.semi_magic_count_three",
+      "status": "Proved"
+    },
+    {
+      "name": "MagicSquares.semi_magic_count_one",
+      "status": "Proved"
+    },
+    {
+      "name": "MagicSquares.semi_magic_count_four",
+      "status": "Open"
+    },
+    {
+      "name": "MagicSquares.semi_magic_polynomial_exists",
+      "status": "Proved"
+    },
+    {
+      "name": "MagicSquares.semi_magic_polynomial_exists_degree_eq",
+      "status": "Proved"
+    },
+    {
+      "name": "MagicSquares.semi_magic_reciprocity",
+      "status": "Open"
+    },
+    {
+      "name": "MagicSquares.semi_magic_vanishing",
+      "status": "Proved"
+    }
+  ]
+}

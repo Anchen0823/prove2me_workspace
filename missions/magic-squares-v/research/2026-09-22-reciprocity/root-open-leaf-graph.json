@@ -1,0 +1,1644 @@
+{
+  "root_id": "985f7b0a-962f-4039-804c-794f2ce86533",
+  "nodes": [
+    {
+      "node_type": "theorem",
+      "theorem_id": "2b98befc-35ff-4cd0-be18-2536bf8adae8",
+      "theorem_name": "MagicSquares.semi_magic_vanishing",
+      "theorem_title": "The vanishing list of the semi-magic counting polynomial",
+      "status": "Proved",
+      "formal_statement": "namespace MagicSquares\n\ntheorem semi_magic_vanishing (n : ℕ) (hn : 1 ≤ n) (p : Polynomial ℚ)\n    (hp : ∀ t : ℕ, p.eval (t : ℚ) = (semiMagicCount n t : ℚ)) :\n    ∀ k : ℤ, 1 ≤ k → k ≤ (n : ℤ) - 1 → p.eval (-(k : ℚ)) = 0 := by\n  sorry\n\nend MagicSquares",
+      "natural_language_statement": "**The vanishing list.** Let $n\\ge 1$ and let $p\\in\\mathbb{Q}[X]$ agree with $H_{n}$ on the nonnegative integers. Then $p$ vanishes at the negative integers $-1,-2,\\dots,-(n-1)$: for every integer $k$ with $1\\le k\\le n-1$ we have $p(-k)=0$. This is the statement that the polytope has no interior lattice points on the relevant dilates, and it is the second identity of the goal. At $n=1$ the condition is vacuous.",
+      "created_at": "2026-09-19T05:46:58.140694+00:00",
+      "vote_count": 0,
+      "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nopen MagicSquares",
+      "source": "M. Beck, M. Cohen, J. Cuomo and P. Gribelyuk, The number of \"magic\" squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707--717 (arXiv:math/0201013); E. Ehrhart (1973); R. P. Stanley, Duke Math. J. 40 (1973) 607--632; J. Spencer, Amer. Math. Monthly 87 (1980) 397--399; M. Beck and D. Paxton, The Ehrhart polynomial of the Birkhoff polytope (arXiv:math.CO/0202267).",
+      "tags": [
+        "combinatorics",
+        "ehrhart",
+        "enumerative-combinatorics",
+        "magic-squares"
+      ],
+      "audits": [
+        {
+          "audit_id": "a28fc770-11e2-4867-8aa6-9b183ac6ea8a",
+          "reviewer_id": "136472b2-7660-4cad-97ab-bc0d424d2ccd",
+          "reviewer_username": "Shuze Chen",
+          "decision": "confirm",
+          "comment": null,
+          "created_at": "2026-09-19T15:01:23.936462+00:00"
+        },
+        {
+          "audit_id": "df384437-e4c2-4065-8021-81762e934ba7",
+          "reviewer_id": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+          "reviewer_username": "Yuxuan Xu",
+          "decision": "confirm",
+          "comment": "Confirmed by the mission captain (proposal self-audit).",
+          "created_at": "2026-09-19T15:01:27.627492+00:00"
+        }
+      ],
+      "created_by": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "created_by_username": "Yuxuan Xu",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "32ea160a-bf6c-4a8f-90f7-31289a3d3ba3",
+      "theorem_name": "MagicSquares.semi_magic_reciprocity",
+      "theorem_title": "Ehrhart-Macdonald reciprocity for the semi-magic counting function",
+      "status": "Open",
+      "formal_statement": "namespace MagicSquares\n\ntheorem semi_magic_reciprocity (n : ℕ) (hn : 1 ≤ n) (p : Polynomial ℚ)\n    (hp : ∀ t : ℕ, p.eval (t : ℚ) = (semiMagicCount n t : ℚ)) :\n    ∀ t : ℤ, p.eval (((-(n : ℤ) - t : ℤ) : ℚ))\n      = (-1 : ℚ) ^ (n - 1) * p.eval ((t : ℤ) : ℚ) := by\n  sorry\n\nend MagicSquares",
+      "natural_language_statement": "**The reciprocity law.** Let $n\\ge 1$ and let $p\\in\\mathbb{Q}[X]$ agree with $H_{n}$ on the nonnegative integers. Then $p(-n-t)=(-1)^{n-1}p(t)$ for every integer $t$. This is the reflection $t\\mapsto -n-t$ of the lattice-point count, rescaled by the sign $(-1)^{n-1}$; its right-hand side counts the interior of the corresponding polytope, by the Ehrhart--Macdonald reciprocity law. The identity is not visible from the combinatorial definition of $H_{n}$, which is stated only for nonnegative $t$.",
+      "created_at": "2026-09-19T05:46:40.452229+00:00",
+      "vote_count": 0,
+      "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nopen MagicSquares",
+      "source": "M. Beck, M. Cohen, J. Cuomo and P. Gribelyuk, The number of \"magic\" squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707--717 (arXiv:math/0201013); E. Ehrhart (1973); R. P. Stanley, Duke Math. J. 40 (1973) 607--632; J. Spencer, Amer. Math. Monthly 87 (1980) 397--399; M. Beck and D. Paxton, The Ehrhart polynomial of the Birkhoff polytope (arXiv:math.CO/0202267).",
+      "tags": [
+        "combinatorics",
+        "ehrhart",
+        "enumerative-combinatorics",
+        "magic-squares"
+      ],
+      "audits": [
+        {
+          "audit_id": "00107d3f-e5f0-4879-a339-a013edf9639f",
+          "reviewer_id": "136472b2-7660-4cad-97ab-bc0d424d2ccd",
+          "reviewer_username": "Shuze Chen",
+          "decision": "confirm",
+          "comment": null,
+          "created_at": "2026-09-19T15:01:23.729116+00:00"
+        },
+        {
+          "audit_id": "eed68468-cc72-44d0-bca5-3406a37b51de",
+          "reviewer_id": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+          "reviewer_username": "Yuxuan Xu",
+          "decision": "confirm",
+          "comment": "Confirmed by the mission captain (proposal self-audit).",
+          "created_at": "2026-09-19T15:01:27.627492+00:00"
+        }
+      ],
+      "created_by": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "created_by_username": "Yuxuan Xu",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": true
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "3dc34529-feed-4b21-bd4f-443097422b63",
+      "theorem_name": "MagicSquares.semi_magic_polynomial_exists",
+      "theorem_title": "The counting function of semi-magic squares is a polynomial",
+      "status": "Proved",
+      "formal_statement": "namespace MagicSquares\n\ntheorem semi_magic_polynomial_exists (n : ℕ) (hn : 1 ≤ n) :\n    ∃ p : Polynomial ℚ,\n      p.natDegree = (n - 1) ^ 2 ∧\n        ∀ t : ℕ, p.eval (t : ℚ) = (semiMagicCount n t : ℚ) := by\n  sorry\n\nend MagicSquares",
+      "natural_language_statement": "**Existence and degree, uniformly in the order.** For every $n\\ge 1$ there is a polynomial $p\\in\\mathbb{Q}[X]$, of degree exactly $(n-1)^{2}$, whose value at each nonnegative integer $t$ is the number $H_{n}(t)$ of $n\\times n$ semi-magic squares of line sum $t$. The degree $(n-1)^{2}$ is the dimension of the Birkhoff polytope $B_{n}$, and the integrality of its vertices is what makes the period one, so that the counting function is a polynomial and not merely a quasi-polynomial. This is the first half of the goal, isolated so that it can be attacked on its own.",
+      "created_at": "2026-09-19T05:46:22.493778+00:00",
+      "vote_count": 0,
+      "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nopen MagicSquares",
+      "source": "M. Beck, M. Cohen, J. Cuomo and P. Gribelyuk, The number of \"magic\" squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707--717 (arXiv:math/0201013); E. Ehrhart (1973); R. P. Stanley, Duke Math. J. 40 (1973) 607--632; J. Spencer, Amer. Math. Monthly 87 (1980) 397--399; M. Beck and D. Paxton, The Ehrhart polynomial of the Birkhoff polytope (arXiv:math.CO/0202267).",
+      "tags": [
+        "combinatorics",
+        "ehrhart",
+        "enumerative-combinatorics",
+        "magic-squares"
+      ],
+      "audits": [
+        {
+          "audit_id": "4e534c70-8136-4f2f-88ac-9512428b2589",
+          "reviewer_id": "136472b2-7660-4cad-97ab-bc0d424d2ccd",
+          "reviewer_username": "Shuze Chen",
+          "decision": "confirm",
+          "comment": null,
+          "created_at": "2026-09-19T15:01:23.440273+00:00"
+        },
+        {
+          "audit_id": "adc0064c-b88a-4bfa-a48b-c3b46b33c446",
+          "reviewer_id": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+          "reviewer_username": "Yuxuan Xu",
+          "decision": "confirm",
+          "comment": "Confirmed by the mission captain (proposal self-audit).",
+          "created_at": "2026-09-19T15:01:27.627492+00:00"
+        }
+      ],
+      "created_by": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "created_by_username": "Yuxuan Xu",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "3efac8d0-c8f6-4eb8-8248-7c7252c23531",
+      "theorem_name": "MagicSquares.interior_reciprocity",
+      "theorem_title": "Ehrhart-Macdonald counting reciprocity for the Birkhoff polytope",
+      "status": "Disproved",
+      "formal_statement": "namespace MagicSquares\n\ntheorem interior_reciprocity (n : ℕ) (hn : 1 ≤ n) (p : Polynomial ℚ)\n    (hp : ∀ t : ℕ, p.eval (t : ℚ) = (semiMagicCount n t : ℚ)) :\n    ∀ t : ℕ, p.eval (-(t : ℚ)) = (-1 : ℚ) ^ ((n - 1) ^ 2) *\n      (positiveInteriorCount n t : ℚ) := by sorry\n\nend MagicSquares\n",
+      "natural_language_statement": "**Ehrhart--Macdonald reciprocity for the Birkhoff polytope, in counting form.** Let $n \\ge 1$ and let $p \\in \\mathbb{Q}[X]$ agree with the semi-magic counting function $H_{n}$ on the nonnegative integers. For every $t \\ge 0$,$$p(-t) = (-1)^{(n-1)^2} I_{n}(t),$$where $I_{n}(t)$ is the number of semi-magic squares of line sum $t$ with every entry strictly positive.\n\nThe left-hand side evaluates the Ehrhart polynomial of the Birkhoff polytope $B_{n}$ (the doubly stochastic matrices, of dimension $(n-1)^2$) at the negative integer $-t$; the right-hand side counts its interior lattice points in the dilate $t \\cdot B_{n}$, which are exactly the positive squares. This is the specialization of the Ehrhart--Macdonald reciprocity law to $B_{n}$, and it is the half of Stanley's argument that brings geometry into the picture: everything else in the reciprocity proof is elementary combinatorics and polynomial algebra.\n\n**Formalization Note** Lean states positivity through `positiveInteriorCount`, the card-of-filtered-finset interior count over `Square n (Fin (t+1))`.\n\n**Retired:** this statement is false at dilation zero ($p(0) = H_{n}(0) = 1$ while $I_{n}(0) = 0$), as shown by the accepted disproof on this node. Use the corrected node MagicSquares.interior_reciprocity_pos, which restricts the conclusion to positive $t$.",
+      "created_at": "2026-09-20T21:16:19.725203+00:00",
+      "vote_count": 0,
+      "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nimport Definitions.Def_MagicSquares_positiveInteriorCount\nopen MagicSquares",
+      "source": "R. P. Stanley, Duke Math. J. 40 (1973), 607--632, Ehrhart--Macdonald reciprocity applied to the Birkhoff polytope; E. Ehrhart (1973); M. Beck, M. Cohen, J. Cuomo and P. Gribelyuk, Amer. Math. Monthly 110 (2003), 707--717 (arXiv:math/0201013).",
+      "tags": [
+        "combinatorics",
+        "ehrhart",
+        "enumerative-combinatorics",
+        "magic-squares"
+      ],
+      "audits": [],
+      "created_by": "d1f0c25d-156e-4ff2-8246-1bd7cf2cce70",
+      "created_by_username": "Tamas Fulop",
+      "deprecated_at": "2026-09-20T23:00:47.912+00:00",
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "43ccc9fe-b78d-4f6f-b5e1-a86cd21af25f",
+      "theorem_name": "MagicSquares.interior_reciprocity_pos_ge_five",
+      "theorem_title": "Positive Ehrhart-Macdonald reciprocity for n at least five",
+      "status": "Open",
+      "formal_statement": "namespace MagicSquares\n\ntheorem interior_reciprocity_pos_ge_five (n : Nat) (hn : 5 <= n) (p : Polynomial Rat) (hp : forall t : Nat, p.eval (t : Rat) = (semiMagicCount n t : Rat)) : forall s : Nat, n <= s -> p.eval (-(s : Rat)) = (-1 : Rat) ^ ((n - 1) ^ 2) * (positiveInteriorCount n s : Rat) := by sorry\n\nend MagicSquares",
+      "natural_language_statement": "Let $n\\\\ge 5$ and let $p$ be a rational polynomial agreeing with the semi-magic counting function $H_n$ at every natural number. Then for every natural $s\\\\ge n$, the value of $p$ at $-s$ equals, up to the sign $(-1)^{(n-1)^2}$, the number $I_n(s)$ of positive semi-magic squares of line sum $s$.\n\n$$\np(-s)=(-1)^{(n-1)^2}I_n(s).\n$$\n\nHere $H_n(t)$ counts $n\\\\times n$ arrays of nonnegative integers with all row and column sums equal to $t$, and $I_n(s)$ counts those with every entry at least one. Geometrically, $I_n(s)$ is the number of interior lattice points of the $s$-fold dilation of the Birkhoff polytope $B_n$, so this is the Ehrhart-Macdonald reciprocity law for $B_n$ evaluated at positive dilations, specialized to orders $n\\\\ge 5$. Combined with the elementary shift bijection $I_n(n+u)=H_n(u)$ it yields the functional equation $p(-n-u)=(-1)^{(n-1)^2}p(u)$ for every natural $u$.\n\n**Formalization Note** Lean counts via `semiMagicCount` and `positiveInteriorCount` over arrays with entries in `Fin (t+1)`, and evaluates $p$ at rationals via casts; the hypothesis is $5\\\\le n$ rather than $1\\\\le n$.",
+      "created_at": "2026-09-22T01:08:34.349988+00:00",
+      "vote_count": 0,
+      "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nimport Definitions.Def_MagicSquares_positiveInteriorCount\nopen MagicSquares",
+      "source": "R. P. Stanley, Linear homogeneous Diophantine equations and magic labelings of graphs, Duke Math. J. 40 (1973), 607--632, Ehrhart-Macdonald reciprocity for the Birkhoff polytope; M. Beck, M. Cohen, J. Cuomo and P. Gribelyuk, The number of magic squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707--717 (arXiv:math/0201013), specialized to n >= 5 and positive dilations s >= n.",
+      "tags": [
+        "combinatorics",
+        "ehrhart",
+        "enumerative-combinatorics",
+        "magic-squares"
+      ],
+      "audits": [],
+      "created_by": "d1f0c25d-156e-4ff2-8246-1bd7cf2cce70",
+      "created_by_username": "Tamas Fulop",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "4e0a58cc-b956-402f-9382-07df8670d02d",
+      "theorem_name": "MagicSquares.interior_functional_eq_nat_one",
+      "theorem_title": "Functional equation for n equal one",
+      "status": "Proved",
+      "formal_statement": "namespace MagicSquares\n\ntheorem interior_functional_eq_nat_one (p : Polynomial Rat) (hp : forall t : Nat, p.eval (t : Rat) = (semiMagicCount 1 t : Rat)) (u : Nat) :\n    p.eval (-(((1 + u : Nat)) : Rat)) = (-1 : Rat) ^ ((1 - 1) ^ 2) * p.eval ((u : Rat)) := by sorry\n\nend MagicSquares",
+      "natural_language_statement": "Let p in Q[X] agree with H_1 on all naturals. Then for every natural u,p(-1-u) = (-1)^{0} p(u).Since (1-1)^2 is zero the sign is one. H_1 is constantly one, so p is constantly one and both sides equal one. This is the n equal one case of the natural-shift functional equation, used with the two, three, four and n at least five cases to imply the general statement by splitting on n.**Formalization Note** Lean writes rationals as Rat with explicit casts; n is fixed to one so no order hypothesis is needed.",
+      "created_at": "2026-09-21T22:18:18.078914+00:00",
+      "vote_count": 0,
+      "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nopen MagicSquares",
+      "source": "R. P. Stanley, Duke Math. J. 40 (1973), 607--632; M. Beck et al., Amer. Math. Monthly 110 (2003), 707--717 (arXiv:math/0201013), specialized to n equal one.",
+      "tags": [
+        "combinatorics",
+        "ehrhart",
+        "enumerative-combinatorics",
+        "magic-squares"
+      ],
+      "audits": [],
+      "created_by": "d1f0c25d-156e-4ff2-8246-1bd7cf2cce70",
+      "created_by_username": "Tamas Fulop",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "55e2191d-be25-4e6d-af7a-4635a34e5c63",
+      "theorem_name": "MagicSquares.semi_magic_count_three",
+      "theorem_title": "MacMahon's count of 3x3 semi-magic squares by line sum",
+      "status": "Proved",
+      "formal_statement": "namespace MagicSquares\n\ntheorem semi_magic_count_three (t : ℕ) :\n    semiMagicCount 3 t = 3 * ((t + 3).choose 4) + ((t + 2).choose 2) := by sorry\n\nend MagicSquares",
+      "natural_language_statement": "MacMahon's 1915 formula for the number of\n$3 \\times 3$ semi-magic squares of a given line sum.\n\nWrite $H_{3}(t)$ for the number of $3 \\times 3$ arrays of nonnegative integers whose three rows\nand three columns all sum to $t$ (the diagonals are unconstrained, and entries need not be\ndistinct). Then\n\n$$\nH_{3}(t) = 3\\binom{t+3}{4} + \\binom{t+2}{2}.\n$$\n\nUnlike the magic count $M_{3}(t)$, this is an honest polynomial in $t$ of degree\n$(3-1)^{2} = 4$: Ehrhart and Stanley proved that $H_{n}(t)$ is a polynomial of degree\n$(n-1)^{2}$ for every $n$, satisfying the reciprocity law $H_{n}(-n-t) = (-1)^{n-1}H_{n}(t)$.\n\n**Formalization Note** `semiMagicCount n t` counts arrays with entries in `Fin (t+1)` whose\nrow and column sums are $t$ after coercion to `ℕ`; the bound on entries makes the finite\nsearch space exact.",
+      "created_at": "2026-09-16T12:11:48.971843+00:00",
+      "vote_count": 0,
+      "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nopen MagicSquares",
+      "source": "Beck, Cohen, Cuomo & Gribelyuk, The number of ``magic'' squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707-717; arXiv:math/0201013v3, Section 2, Theorem 1 (MacMahon's formula for $H_{3}(t)$).",
+      "tags": [
+        "combinatorics",
+        "magic-squares"
+      ],
+      "audits": [
+        {
+          "audit_id": "aba3881d-7bf8-42fb-96c5-18252b65d559",
+          "reviewer_id": "136472b2-7660-4cad-97ab-bc0d424d2ccd",
+          "reviewer_username": "Shuze Chen",
+          "decision": "confirm",
+          "comment": null,
+          "created_at": "2026-09-17T02:48:16.841033+00:00"
+        },
+        {
+          "audit_id": "88b76b27-f4d3-4e8f-9a3f-62790ae781a3",
+          "reviewer_id": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+          "reviewer_username": "Yuxuan Xu",
+          "decision": "confirm",
+          "comment": "Confirmed by the mission captain (proposal self-audit).",
+          "created_at": "2026-09-17T02:48:18.042994+00:00"
+        }
+      ],
+      "created_by": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "created_by_username": "Yuxuan Xu",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "561721cd-6a18-422a-83f3-9ef47de790ff",
+      "theorem_name": "MagicSquares.interior_functional_eq_nat_ge_five",
+      "theorem_title": "Functional equation for n at least five",
+      "status": "Open",
+      "formal_statement": "namespace MagicSquares\n\ntheorem interior_functional_eq_nat_ge_five (n : Nat) (hn : 5 <= n) (p : Polynomial Rat) (hp : forall t : Nat, p.eval (t : Rat) = (semiMagicCount n t : Rat)) (u : Nat) :\n    p.eval (-(((n + u : Nat)) : Rat)) = (-1 : Rat) ^ ((n - 1) ^ 2) * p.eval ((u : Rat)) := by sorry\n\nend MagicSquares",
+      "natural_language_statement": "Let n >= 5 and p in Q[X] agree with H_n on all naturals. Then for every natural u,p(-n-u) = (-1)^{(n-1)^2} p(u).This is the remaining hard core after the n equal one through four cases, which are proved via explicit polynomials. Combined with those cases by splitting on n, it yields the general natural-shift functional equation.**Formalization Note** Lean writes rationals as Rat; hypothesis is 5 <= n, stronger than 1 <= n.",
+      "created_at": "2026-09-21T22:18:28.411762+00:00",
+      "vote_count": 0,
+      "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nopen MagicSquares",
+      "source": "R. P. Stanley, Duke Math. J. 40 (1973), 607--632; E. Ehrhart (1973); M. Beck et al., Amer. Math. Monthly 110 (2003), 707--717 (arXiv:math/0201013), remaining core n at least five.",
+      "tags": [
+        "combinatorics",
+        "ehrhart",
+        "enumerative-combinatorics",
+        "magic-squares"
+      ],
+      "audits": [],
+      "created_by": "d1f0c25d-156e-4ff2-8246-1bd7cf2cce70",
+      "created_by_username": "Tamas Fulop",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "5810474e-659e-44a1-b6de-f420c8917eb4",
+      "theorem_name": "MagicSquares.interior_functional_eq_nat_three",
+      "theorem_title": "Functional equation for n equal three",
+      "status": "Proved",
+      "formal_statement": "namespace MagicSquares\n\ntheorem interior_functional_eq_nat_three (p : Polynomial Rat) (hp : forall t : Nat, p.eval (t : Rat) = (semiMagicCount 3 t : Rat)) (u : Nat) :\n    p.eval (-(((3 + u : Nat)) : Rat)) = (-1 : Rat) ^ ((3 - 1) ^ 2) * p.eval ((u : Rat)) := by sorry\n\nend MagicSquares",
+      "natural_language_statement": "Let p in Q[X] agree with H_3 on all naturals. Then for every natural u,p(-3-u) = (-1)^{4} p(u).Since (3-1)^2 is four the sign is one. H_3 is MacMahon polynomial of degree four, so p equals that polynomial and both sides agree. This is the n equal three case.**Formalization Note** Lean writes rationals as Rat; n is fixed to three.",
+      "created_at": "2026-09-21T22:18:28.781625+00:00",
+      "vote_count": 0,
+      "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nopen MagicSquares",
+      "source": "P. A. MacMahon, Combinatory Analysis Vol II (1916); R. P. Stanley, Duke Math. J. 40 (1973), 607--632, specialized to n equal three.",
+      "tags": [
+        "combinatorics",
+        "ehrhart",
+        "enumerative-combinatorics",
+        "magic-squares"
+      ],
+      "audits": [],
+      "created_by": "d1f0c25d-156e-4ff2-8246-1bd7cf2cce70",
+      "created_by_username": "Tamas Fulop",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "58dd1ece-3454-49e7-9ba7-f65dc691aa63",
+      "theorem_name": "MagicSquares.birkhoff_interior_count_eq_positive",
+      "theorem_title": "Interior lattice points of Birkhoff dilates are positive squares",
+      "status": "Proved",
+      "formal_statement": "namespace MagicSquares\n\ntheorem birkhoff_interior_count_eq_positive (n : ℕ) (hn : 1 ≤ n) : ∀ t : ℕ, Set.ncard {M : Matrix (Fin n) (Fin n) ℚ | (∃ D, D ∈ doublyStochastic ℚ (Fin n) ∧ M = (t : ℚ) • D) ∧ ∀ i j, 0 < M i j ∧ ∃ k : ℕ, M i j = (k : ℚ)} = positiveInteriorCount n t := by sorry\n\nend MagicSquares",
+      "natural_language_statement": "Let $n\\ge 1$. For every natural $t$, the number of interior lattice points of the $t$-fold dilation of the Birkhoff polytope $B_n$ equals the number $I_n(t)$ of positive semi-magic squares of line sum $t$.\n\n$$\n|\\{M\\in t\\cdot B_n : M_{ij}>0\\text{ and }M_{ij}\\in\\mathbb{Z}\\ \\forall i,j\\}|=I_n(t).\n$$\n\nAn interior lattice point is a rational matrix in the scaled doubly stochastic set with strictly positive integer entries. Writing such a matrix as $t$ times a doubly stochastic matrix, every entry of the latter lies in $[0,1]$, so every entry of the former lies in $[0,t]$ and the $\\mathrm{Fin}\\, (t+1)$ bound used by the counting functions is lossless. The line sums are preserved by the scaling. This is the combinatorial bridge of Stanley's argument: it lets the Ehrhart output feed the elementary shift bijection $I_n(n+u)=H_n(u)$. Both sides vanish for $t<n$ (a row of $n$ positive entries sums to at least $n$), so no side condition on $t$ is needed.\n\n**Formalization Note** Lean counts the left side with `Set.ncard` over $\\mathbb{Q}$-matrices and the right side with `positiveInteriorCount` over `Square n (Fin (t+1))`; the hypothesis $1\\le n$ matches the shift and vanishing lemmas.",
+      "created_at": "2026-09-22T01:37:42.47765+00:00",
+      "vote_count": 0,
+      "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nimport Definitions.Def_MagicSquares_positiveInteriorCount\nopen MagicSquares",
+      "source": "R. P. Stanley, Duke Math. J. 40 (1973), 607--632 (interior lattice points of dilates of the Birkhoff polytope are positive magic labelings); Mathlib: le_one_of_mem_doublyStochastic, exists_mem_doublyStochastic_eq_smul_iff; platform precedent: positive_shift_count (bijection shifting by the all-ones matrix).",
+      "tags": [
+        "combinatorics",
+        "ehrhart",
+        "enumerative-combinatorics",
+        "magic-squares"
+      ],
+      "audits": [],
+      "created_by": "d1f0c25d-156e-4ff2-8246-1bd7cf2cce70",
+      "created_by_username": "Tamas Fulop",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "5ca89b06-1944-4bca-8ae9-160021073541",
+      "theorem_name": "MagicSquares.interior_reciprocity_pos",
+      "theorem_title": "Ehrhart-Macdonald counting reciprocity at positive dilation",
+      "status": "Open",
+      "formal_statement": "namespace MagicSquares\n\ntheorem interior_reciprocity_pos (n : ℕ) (hn : 1 ≤ n) (p : Polynomial ℚ)\n    (hp : ∀ t : ℕ, p.eval (t : ℚ) = (semiMagicCount n t : ℚ)) :\n    ∀ t : ℕ, 1 ≤ t → p.eval (-(t : ℚ)) = (-1 : ℚ) ^ ((n - 1) ^ 2) *\n      (positiveInteriorCount n t : ℚ) := by sorry\n\nend MagicSquares\n",
+      "natural_language_statement": "**Ehrhart--Macdonald reciprocity for the Birkhoff polytope at positive dilation, in counting form.** Let $n \\ge 1$ and let $p \\in \\mathbb{Q}[X]$ agree with the semi-magic counting function $H_{n}$ on the nonnegative integers. For every $t \\ge 1$,$$p(-t) = (-1)^{(n-1)^2} I_{n}(t),$$where $I_{n}(t)$ is the number of semi-magic squares of line sum $t$ with every entry strictly positive.\n\nThe left-hand side evaluates the Ehrhart polynomial of the Birkhoff polytope $B_{n}$ (the doubly stochastic matrices, of dimension $(n-1)^2$) at the negative integer $-t$; the right-hand side counts its interior lattice points in the dilate $t \\cdot B_{n}$, which are exactly the positive squares. This is the specialization of the Ehrhart--Macdonald reciprocity law to $B_{n}$, and it is the half of Stanley's argument that brings geometry into the picture: everything else in the reciprocity proof is elementary combinatorics and polynomial algebra.\n\nThe dilation must be positive: at $t = 0$ the identity is false, since $p(0) = H_{n}(0) = 1$ (the all-zero square) while $I_{n}(0) = 0$ (no entry can be positive). This restriction matches the lattice-point counts preceding the reciprocity theorem, which are introduced for positive integer dilation.\n\n**Formalization Note** Lean states positivity through `positiveInteriorCount`, the card-of-filtered-finset interior count over `Square n (Fin (t+1))`, with the positivity hypothesis `1 ≤ t` as an explicit binder.",
+      "created_at": "2026-09-20T23:00:20.613543+00:00",
+      "vote_count": 0,
+      "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nimport Definitions.Def_MagicSquares_positiveInteriorCount\nopen MagicSquares",
+      "source": "R. P. Stanley, Duke Math. J. 40 (1973), 607--632, Ehrhart--Macdonald reciprocity applied to the Birkhoff polytope; E. Ehrhart (1973); M. Beck, M. Cohen, J. Cuomo and P. Gribelyuk, Amer. Math. Monthly 110 (2003), 707--717 (arXiv:math/0201013).",
+      "tags": [
+        "combinatorics",
+        "ehrhart",
+        "enumerative-combinatorics",
+        "magic-squares"
+      ],
+      "audits": [],
+      "created_by": "d1f0c25d-156e-4ff2-8246-1bd7cf2cce70",
+      "created_by_username": "Tamas Fulop",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "611ea9c5-4346-49e1-800c-aa23be9f7303",
+      "theorem_name": "MagicSquares.semi_magic_count_one",
+      "theorem_title": "The semi-magic squares of order one",
+      "status": "Proved",
+      "formal_statement": "namespace MagicSquares\n\ntheorem semi_magic_count_one (t : ℕ) : semiMagicCount 1 t = 1 := by\n  sorry\n\nend MagicSquares",
+      "natural_language_statement": "**Order one.** For every natural number $t$ there is exactly one $1\\times1$ array of nonnegative integers whose row and column both sum to $t$, namely $[t]$; hence $H_{1}(t)=1$. This is the base case of the ladder, and it is the $n=1$ instance of the degree formula, whose asserted degree $(n-1)^{2}$ is $0$.",
+      "created_at": "2026-09-19T05:45:46.121572+00:00",
+      "vote_count": 0,
+      "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nopen MagicSquares",
+      "source": "M. Beck, M. Cohen, J. Cuomo and P. Gribelyuk, The number of \"magic\" squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707--717 (arXiv:math/0201013); E. Ehrhart (1973); R. P. Stanley, Duke Math. J. 40 (1973) 607--632; J. Spencer, Amer. Math. Monthly 87 (1980) 397--399; M. Beck and D. Paxton, The Ehrhart polynomial of the Birkhoff polytope (arXiv:math.CO/0202267).",
+      "tags": [
+        "combinatorics",
+        "ehrhart",
+        "enumerative-combinatorics",
+        "magic-squares"
+      ],
+      "audits": [
+        {
+          "audit_id": "deeaccb1-f1c4-4ad6-8ff0-5b192dc1203d",
+          "reviewer_id": "136472b2-7660-4cad-97ab-bc0d424d2ccd",
+          "reviewer_username": "Shuze Chen",
+          "decision": "confirm",
+          "comment": null,
+          "created_at": "2026-09-19T15:01:22.981198+00:00"
+        },
+        {
+          "audit_id": "8f567eb9-e32c-4390-8845-794397fab01d",
+          "reviewer_id": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+          "reviewer_username": "Yuxuan Xu",
+          "decision": "confirm",
+          "comment": "Confirmed by the mission captain (proposal self-audit).",
+          "created_at": "2026-09-19T15:01:27.627492+00:00"
+        }
+      ],
+      "created_by": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "created_by_username": "Yuxuan Xu",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "650b0511-bff1-4101-84b1-a49d5bef9849",
+      "theorem_name": "MagicSquares.sm3_canonical",
+      "theorem_title": "Canonical decomposition of a 3x3 semi-magic square",
+      "status": "Proved",
+      "formal_statement": "namespace MagicSquares\n\ntheorem sm3_canonical (M : Square 3 ℕ) (t : ℕ) (hM : IsSemiMagic M t) :\n    ∃ u v w x y z : ℕ,\n      M = sm3Of u v w x y z ∧\n        u + v + w + x + y + z = t ∧\n          min x (min y z) = 0 ∧\n            ∀ u' v' w' x' y' z' : ℕ,\n              M = sm3Of u' v' w' x' y' z' →\n                min x' (min y' z') = 0 →\n                  u' = u ∧ v' = v ∧ w' = w ∧ x' = x ∧ y' = y ∧ z' = z := by sorry\n\nend MagicSquares",
+      "natural_language_statement": "Every $3\\times3$ semi-magic square with\nnonnegative integer entries and line sum $t$ can be written **uniquely** as a\nnonnegative integer combination\n\n$$M=u\\,D+v\\,E+w\\,F+x\\,A+y\\,B+z\\,C$$\n\nof the six order-three permutation matrices, normalized by\n$\\min(x,y,z)=0$. Here $D,E,F$ are the three even transversals (the identity and\nthe two $3$-cycles) and $A,B,C$ the three odd ones (the transpositions).\n\n**Existence.** Put $u=\\min D$, $v=\\min E$, $w=\\min F$ and subtract\n$uD+vE+wF$; the residual $M'$ is again semi-magic and each of its three even\ntransversals has minimum $0$. Writing $M'$ in the four-parameter form\n$$\\begin{pmatrix} a & b & t'-a-b\\\\ c & d & t'-c-d\\\\\nt'-a-c & t'-b-d & a+b+c+d-t'\\end{pmatrix},$$\nthe three vanishing minima read\n$$\\min(a,d,a+b+c+d-t')=\\min(b,t'-c-d,t'-a-c)=\\min(t'-a-b,c,t'-b-d)=0.$$\nIf $b>c$ then each of the three ways for the middle minimum to vanish forces\nthe opposite inequality: $b=0$ is impossible, $t'-c-d=0$ gives $c+d=t'$ and\nhence $b\\le c$ from $b+d\\le t'$, and $t'-a-c=0$ gives $a+c=t'$ and hence\n$b\\le c$ from $a+b\\le t'$. So $b\\le c$, and symmetrically $c\\le b$; thus\n$b=c$, which is exactly the statement that $M'$ is a combination of $A,B,C$\nalone.\n\n**Uniqueness.** The normalization is essential: without it the single relation\n$D+E+F=A+B+C$ (both sides equal the all-ones matrix) would identify distinct\n$6$-tuples. With $\\min(x,y,z)=0$ the coefficients are recovered from $M$ by\n$u=\\min D$, $v=\\min E$, $w=\\min F$ and $x=M_{00}-u$, $y=M_{11}-u$, $z=M_{01}-v$.\n\n**Formalization Note** `sm3Of` is defined over $\\mathbb{N}$ with truncated\nsubtraction where necessary, so every recovery identity has to be stated with\nthe admissibility inequalities as explicit hypotheses.",
+      "created_at": "2026-09-16T18:23:46.645456+00:00",
+      "vote_count": 0,
+      "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nimport Definitions.Def_MagicSquaresSemiMagic3\nopen MagicSquares",
+      "source": "P. A. MacMahon, Combinatory Analysis (1915); M. Beck, T. Cohen, J. Cuomo, P. Gribelyuk, The number of \"magic\" squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707-717; arXiv:math/0201013v3, Section 2, Theorem 1.",
+      "tags": [
+        "combinatorics",
+        "enumerative-combinatorics",
+        "magic-squares"
+      ],
+      "audits": [
+        {
+          "audit_id": "5249f21a-1a19-4bca-81fd-0ee3e34b4f15",
+          "reviewer_id": "136472b2-7660-4cad-97ab-bc0d424d2ccd",
+          "reviewer_username": "Shuze Chen",
+          "decision": "confirm",
+          "comment": null,
+          "created_at": "2026-09-17T02:48:16.300387+00:00"
+        },
+        {
+          "audit_id": "aee7af72-68b9-4021-afc8-4afc09ca19f5",
+          "reviewer_id": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+          "reviewer_username": "Yuxuan Xu",
+          "decision": "confirm",
+          "comment": "Confirmed by the mission captain (proposal self-audit).",
+          "created_at": "2026-09-17T02:48:18.042994+00:00"
+        }
+      ],
+      "created_by": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "created_by_username": "Yuxuan Xu",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "7a04de6e-94da-4423-add4-d1a79f131d05",
+      "theorem_name": "MagicSquares.interior_functional_eq_nat",
+      "theorem_title": "Functional equation for semi-magic counts at natural shifts",
+      "status": "Open",
+      "formal_statement": "namespace MagicSquares\n\ntheorem interior_functional_eq_nat (n : Nat) (hn : 1 <= n) (p : Polynomial Rat) (hp : forall t : Nat, p.eval (t : Rat) = (semiMagicCount n t : Rat)) (u : Nat) :\n    p.eval (-(((n + u : Nat)) : Rat)) = (-1 : Rat) ^ ((n - 1) ^ 2) * p.eval ((u : Rat)) := by sorry\n\nend MagicSquares",
+      "natural_language_statement": "Let n >= 1 and let p in Q[X] agree with the semi-magic counting function H_{n} on all nonnegative integers. Then for every natural number u,\n\n$$p(-n-u) = (-1)^{(n-1)^2} p(u).$$\n\nThis is the restriction to natural shifts of the Ehrhart-Macdonald reciprocity law for the Birkhoff polytope. Combined with the shift bijection identifying positive squares of line sum t >= n with ordinary squares of line sum t-n, and with vanishing of both sides for t < n, it yields the full interior reciprocity at positive dilation.\n\n**Formalization Note** Lean writes rationals as Rat and casts naturals explicitly; the exponent uses truncated natural subtraction, harmless here since 1 <= n.",
+      "created_at": "2026-09-21T21:01:26.613506+00:00",
+      "vote_count": 0,
+      "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nopen MagicSquares",
+      "source": "R. P. Stanley, Duke Math. J. 40 (1973), 607--632, Ehrhart-Macdonald reciprocity applied to the Birkhoff polytope; E. Ehrhart (1973); M. Beck, M. Cohen, J. Cuomo and P. Gribelyuk, Amer. Math. Monthly 110 (2003), 707--717 (arXiv:math/0201013).",
+      "tags": [
+        "combinatorics",
+        "ehrhart",
+        "enumerative-combinatorics",
+        "magic-squares"
+      ],
+      "audits": [],
+      "created_by": "d1f0c25d-156e-4ff2-8246-1bd7cf2cce70",
+      "created_by_username": "Tamas Fulop",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "7d09e267-c923-49c2-91f3-76185a464ad4",
+      "theorem_name": "MagicSquares.sm3_params_card",
+      "theorem_title": "Counting the normalized coefficient vectors",
+      "status": "Proved",
+      "formal_statement": "namespace MagicSquares\n\ntheorem sm3_params_card (t : ℕ) :\n    sm3Count t = 3 * ((t + 3).choose 4) + ((t + 2).choose 2) := by sorry\n\nend MagicSquares",
+      "natural_language_statement": "The number of normalized coefficient vectors —\nsix nonnegative integers summing to $t$ whose odd part $(x,y,z)$ has minimum\n$0$ — is\n\n$$\\mathrm{sm3Count}(t)=3\\binom{t+3}{4}+\\binom{t+2}{2}.$$\n\n**Proof.** Partition the vectors according to the *first* zero among\n$(x,y,z)$. If $x=0$ the remaining five coordinates are arbitrary nonnegative\nintegers summing to $t$, giving $\\binom{t+4}{4}$ vectors. If $x>0$ and $y=0$,\nsubtract $1$ from $x$ and the remaining five coordinates sum to $t-1$, giving\n$\\binom{t+3}{4}$. If $x>0$, $y>0$ and $z=0$, subtract $1$ from each of $x$ and\n$y$ and the remaining five sum to $t-2$, giving $\\binom{t+2}{4}$. Hence\n\n$$\\mathrm{sm3Count}(t)=\\binom{t+4}{4}+\\binom{t+3}{4}+\\binom{t+2}{4}.$$\n\nTwo applications of Pascal's identity collapse this to MacMahon's form:\n$\\binom{t+4}{4}=\\binom{t+3}{4}+\\binom{t+3}{3}$ and\n$\\binom{t+3}{4}=\\binom{t+2}{4}+\\binom{t+2}{3}$, so the sum equals\n$3\\binom{t+3}{4}+\\bigl(\\binom{t+3}{3}-\\binom{t+2}{3}\\bigr)$, and one more\ninstance of Pascal gives $\\binom{t+3}{3}-\\binom{t+2}{3}=\\binom{t+2}{2}$.\n\n**Formalization Note** The three counts of five-part compositions come from\n`comps_card`. Because all arithmetic stays in $\\mathbb{N}$, the Pascal steps\nmust be arranged so that no subtraction is truncated.",
+      "created_at": "2026-09-16T18:23:57.413947+00:00",
+      "vote_count": 0,
+      "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nimport Definitions.Def_MagicSquaresSemiMagic3\nopen MagicSquares",
+      "source": "P. A. MacMahon, Combinatory Analysis (1915); M. Beck, T. Cohen, J. Cuomo, P. Gribelyuk, The number of \"magic\" squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707-717; arXiv:math/0201013v3, Section 2, Theorem 1.",
+      "tags": [
+        "combinatorics",
+        "enumerative-combinatorics",
+        "magic-squares"
+      ],
+      "audits": [
+        {
+          "audit_id": "2a2bde7a-ef4c-46d0-8df0-026bb22edf92",
+          "reviewer_id": "136472b2-7660-4cad-97ab-bc0d424d2ccd",
+          "reviewer_username": "Shuze Chen",
+          "decision": "confirm",
+          "comment": null,
+          "created_at": "2026-09-17T02:48:16.652264+00:00"
+        },
+        {
+          "audit_id": "1e4e382c-d7ab-404c-84e4-f52f020a9c24",
+          "reviewer_id": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+          "reviewer_username": "Yuxuan Xu",
+          "decision": "confirm",
+          "comment": "Confirmed by the mission captain (proposal self-audit).",
+          "created_at": "2026-09-17T02:48:18.042994+00:00"
+        }
+      ],
+      "created_by": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "created_by_username": "Yuxuan Xu",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "86515ed9-6bd4-4484-a3d2-a1be23ce7ac9",
+      "theorem_name": "MagicSquares.semi_magic_count_two",
+      "theorem_title": "The semi-magic squares of order two",
+      "status": "Proved",
+      "formal_statement": "namespace MagicSquares\n\ntheorem semi_magic_count_two (t : ℕ) : semiMagicCount 2 t = t + 1 := by sorry\n\nend MagicSquares",
+      "natural_language_statement": "**The order-two semi-magic count.** Writing $H_{n}(t)$ for the number of $n\\times n$ arrays of nonnegative integers whose rows and columns all sum to $t$, the theorem states\n\n$$H_{2}(t)=t+1 .$$\n\n**Proof.** A $2\\times2$ semi-magic square of line sum $t$ reads $\\begin{pmatrix} a & t-a\\\\ t-a & a\\end{pmatrix}$, so it is determined by its top-left corner $a$, and $a$ may be any of $0,1,\\dots,t$. This is the first value in the structural statement that $H_{n}(t)$ is a polynomial of degree $(n-1)^{2}$ — for $n=2$ that is degree one, matching $t+1$.",
+      "created_at": "2026-09-18T15:36:50.238006+00:00",
+      "vote_count": 0,
+      "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nimport Definitions.Def_MagicSquaresPandiagonal\nopen MagicSquares",
+      "source": "M. Beck, M. Cohen, J. Cuomo and P. Gribelyuk, The number of \"magic\" squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707--717 (arXiv:math/0201013).",
+      "tags": [
+        "combinatorics",
+        "enumerative-combinatorics",
+        "magic-squares"
+      ],
+      "audits": [
+        {
+          "audit_id": "55623c37-caf7-49e7-bc40-5abd29dbec1c",
+          "reviewer_id": "136472b2-7660-4cad-97ab-bc0d424d2ccd",
+          "reviewer_username": "Shuze Chen",
+          "decision": "confirm",
+          "comment": null,
+          "created_at": "2026-09-19T15:01:22.785879+00:00"
+        },
+        {
+          "audit_id": "77767294-c4bc-44e0-90d6-c07b611a84bc",
+          "reviewer_id": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+          "reviewer_username": "Yuxuan Xu",
+          "decision": "confirm",
+          "comment": "Confirmed by the mission captain (proposal self-audit).",
+          "created_at": "2026-09-19T15:01:27.627492+00:00"
+        }
+      ],
+      "created_by": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "created_by_username": "Yuxuan Xu",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "95bcf1fc-345e-4db9-ae0c-cc8d9dba9fb2",
+      "theorem_name": "MagicSquaresPandiagonal",
+      "theorem_title": "Pandiagonal squares: the counting-theory reading",
+      "status": "Definition",
+      "formal_statement": "",
+      "natural_language_statement": "**Pandiagonal squares: the counting-theory reading.**\n\nA $3\\times3$ array of nonnegative integers is *pandiagonal* of line sum $s$ when all\nthree rows, all three columns, and the three diagonals **parallel to the main\ndiagonal**, wrapped around (i.e. read cyclically), sum to $s$. Writing $P_{n}(t)$ for\nthe number of pandiagonal squares of order $n$ and line sum $t$, this is the counting\nfunction whose structural theory is established by Beck–Cohen–Cuomo–Gribelyuk.\n\n**This is a different, and weaker, condition than `MagicSquares.IsPanMagic`.** The\nlatter requires *both* families of broken diagonals — descending and ascending — to\nsum to the line sum, whereas the definition here asks only for the descending family\n(the one containing the main diagonal) and explicitly does *not* require the\nanti-diagonal. Consequently a pandiagonal square in this sense need not be magic, and\na magic square need not be pandiagonal: for order three the two counts are\n\n$$P_{3}(t):\\quad 1,3,6,10,15,21,28,36,45,55\\quad(t=0,\\dots,9),$$\n\nwhich is $\\binom{t+2}{2}=\\frac12t^2+\\frac32t+1$, against the two-direction count\n$1$ exactly when $3\\mid t$ and $0$ otherwise. Counting against the literature must use\nthis definition, not `panMagicCount`.\n\nThe two counting functions therefore behave quite differently: $P_{3}$ is a\ndegree-two polynomial that never vanishes, so it sits inside the structural statement\nthat $P_{n}$ is a quasi-polynomial of degree $n^{2}-3n+2$.\n\n**Formalization Note** `pandiagonalSquares` filters arrays over `Fin (t+1)`, which is\nlossless because every entry of a square of line sum $t$ is at most $t$. The\ndescending broken diagonal of offset $k$ is `brokenDiagSum`, the cells $(i, i+k)$ with\nthe column index read modulo $n$; the main diagonal is the case $k = 0$.",
+      "created_at": "2026-09-18T14:57:54.941239+00:00",
+      "vote_count": 0,
+      "definition": "import Mathlib\nimport Definitions.Def_MagicSquares\n\nset_option autoImplicit false\n\n/-!\n# Pandiagonal squares: the counting-theory reading\n\n⚠️ **This notion is weaker than `MagicSquares.IsPanMagic`, and the two are not\ncomparable.** Read this docstring before using either.\n\n* `IsPanMagic M s` requires **both** families of broken diagonals (descending *and*\n  ascending) to sum to `s`.\n* `IsPandiagonal M s`, defined here, is the reading used by the counting literature\n  (Beck, Cohen, Cuomo and Gribelyuk, *The number of \"magic\" squares, cubes and\n  hypercubes*, Amer. Math. Monthly **110** (2003), 707--717): a **semi-magic** square\n  whose diagonals *parallel to the main diagonal*, wrapped around, all sum to the line\n  sum. Only one family is asked for, and the anti-diagonal is not — so a pandiagonal\n  square in this sense need not be magic, and a magic square need not be pandiagonal.\n\nFor order three the difference is stark — the two counts are\n\n| `t` | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |\n|---|---|---|---|---|---|---|---|---|---|---|\n| `pandiagonalCount 3 t` (this reading) | 1 | 3 | 6 | 10 | 15 | 21 | 28 | 36 | 45 | 55 |\n| `panMagicCount 3 t` (both directions) | 1 | 0 | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 1 |\n\nThe first column is\n`(t+2).choose 2 = (t+1)(t+2)/2`, which is BCCG's `P_3(t)`: a degree-two polynomial,\nnever zero. The second is the constant square only, and vanishes off multiples of\nthree. Structure behind the first: for `n = 3` every such square is\n`M i j = f (i + j)` for a single `f : Fin 3 → ℕ`, and the line sum is\n`f 0 + f 1 + f 2` — whence the count is the number of triples of naturals summing\nto `t`.\n\nThe counting functions satisfying this weaker condition are exactly the ones for\nwhich BCCG's structural theorems (polynomial / quasi-polynomial degrees) are stated,\nso this module is what a comparison against that paper should be built on.\n-/\n\nnamespace MagicSquares\n\nvariable {n : ℕ} {α : Type*}\n\n/-- A **pandiagonal square** of line sum `s` in the counting-theory sense: semi-magic,\nand every descending broken diagonal sums to `s`.\n\nThe descending broken diagonal of offset `k` is the set of cells `(i, i + k)` with the\ncolumn index read modulo `n`; for `k = 0` it is the main diagonal, so the main diagonal\nis included. The ascending family (which contains the anti-diagonal) is **not**\nrequired — see the module docstring, and compare `IsPanMagic`. -/\ndef IsPandiagonal [AddCommMonoid α] (M : Square n α) (s : α) : Prop :=\n  IsSemiMagic M s ∧ ∀ k : Fin n, brokenDiagSum M k = s\n\nnoncomputable section\n\n/-- All pandiagonal squares of order `n` and line sum `t`, in the counting-theory\nsense of `IsPandiagonal`. -/\ndef pandiagonalSquares (n t : ℕ) : Finset (Square n (Fin (t + 1))) :=\n  by classical exact Finset.univ.filter fun M => IsPandiagonal (fun i j => (M i j : ℕ)) t\n\n/-- BCCG's `P_n(t)`: the number of pandiagonal squares of order `n` and line sum `t`.\n\nThis is *not* `panMagicCount`, which counts the stronger two-direction condition. -/\ndef pandiagonalCount (n t : ℕ) : ℕ := (pandiagonalSquares n t).card\n\nend\n\nend MagicSquares\n",
+      "source": "M. Beck, M. Cohen, J. Cuomo and P. Gribelyuk, The number of \"magic\" squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707--717 (arXiv:math/0201013).",
+      "tags": [
+        "combinatorics",
+        "enumerative-combinatorics",
+        "magic-squares"
+      ],
+      "audits": [
+        {
+          "audit_id": "a9bc3860-64dd-4d7d-bf7a-a99b45cb3f9b",
+          "reviewer_id": "136472b2-7660-4cad-97ab-bc0d424d2ccd",
+          "reviewer_username": "Shuze Chen",
+          "decision": "confirm",
+          "comment": null,
+          "created_at": "2026-09-19T15:01:21.882758+00:00"
+        },
+        {
+          "audit_id": "6753f08c-607e-4f70-b7cc-dd9b7bad7294",
+          "reviewer_id": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+          "reviewer_username": "Yuxuan Xu",
+          "decision": "confirm",
+          "comment": "Confirmed by the mission captain (proposal self-audit).",
+          "created_at": "2026-09-19T15:01:27.627492+00:00"
+        }
+      ],
+      "created_by": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "created_by_username": "Yuxuan Xu",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "983f535e-819e-4d18-baba-388fb3c39413",
+      "theorem_name": "MagicSquaresSemiMagic3",
+      "theorem_title": "Permutation-matrix parametrization of 3x3 semi-magic squares",
+      "status": "Definition",
+      "formal_statement": "",
+      "natural_language_statement": "The permutation-matrix parametrization of $3 \\times 3$ semi-magic squares.\n\nLet $H_3(t)$ count the $3\\times3$ arrays of nonnegative integers whose three rows\nand three columns all sum to $t$ (diagonals unconstrained, entries not required\nto be distinct). MacMahon (1915) proved\n\n$$H_{3}(t) = 3\\binom{t+3}{4} + \\binom{t+2}{2}.$$\n\nThe six order-three permutation matrices split into the three *even* ones\n(the identity and the two $3$-cycles), with supports\n\n$$D=\\{00,11,22\\},\\qquad E=\\{01,12,20\\},\\qquad F=\\{02,10,21\\},$$\n\nand the three *odd* ones (the transpositions), with supports\n\n$$A=\\{00,12,21\\},\\qquad B=\\{02,11,20\\},\\qquad C=\\{01,10,22\\}.$$\n\nAdding them with multiplicities $u,v,w$ (even) and $x,y,z$ (odd) gives\n\n$$M = u\\,D + v\\,E + w\\,F + x\\,A + y\\,B + z\\,C\n= \\begin{pmatrix} u+x & v+z & w+y \\\\ w+z & u+y & v+x \\\\ v+y & w+x & u+z\\end{pmatrix},$$\n\nwhose six line sums all equal $u+v+w+x+y+z$. Every $3\\times3$ semi-magic square\narises this way. The representation is *not* injective, because of the single\nrelation\n\n$$D + E + F = A + B + C \\quad(=J),$$\n\nbut it becomes unique after normalizing: subtract $u=\\min D$, $v=\\min E$,\n$w=\\min F$, after which the residual odd multiplicities satisfy\n$\\min(x,y,z)=0$. `sm3Params t` is the resulting finite set of normalized\ncoefficient vectors (coordinates bounded by $t$, which is lossless since they\nsum to $t$) and `sm3Count t` is its cardinality. The two substantive claims --\nthat `sm3Of` is a bijection from `sm3Params t` onto the semi-magic squares of\nline sum $t$, and the evaluation of `sm3Count` -- are submitted separately.",
+      "created_at": "2026-09-16T17:52:32.369729+00:00",
+      "vote_count": 0,
+      "definition": "import Mathlib\nimport Definitions.Def_MagicSquares\n\nset_option autoImplicit false\n\nopen scoped BigOperators\n\n/-!\n# Order-three semi-magic squares: the permutation-matrix parametrization\n\nLet $H_{3}(t)$ be the number of $3\\times3$ arrays of nonnegative integers whose\nthree rows and three columns all sum to $t$ (the diagonals are unconstrained and\nentries need not be distinct). MacMahon (1915) computed\n\n$$H_{3}(t) = 3\\binom{t+3}{4} + \\binom{t+2}{2},$$\n\nin contrast with the *magic* count $M_{3}(t)$, which is only a\nquasi-polynomial. This module sets up the parametrization behind that formula.\n\n## The six permutation matrices\n\nLabel the three \"even\" transversals (the identity and the two $3$-cycles)\n\n$$D=\\\\{00,11,22\\\\},\\qquad E=\\\\{01,12,20\\\\},\\qquad F=\\\\{02,10,21\\\\},$$\n\nand the three \"odd\" ones (the transpositions)\n\n$$A=\\\\{00,12,21\\\\},\\qquad B=\\\\{02,11,20\\\\},\\qquad C=\\\\{01,10,22\\\\}.$$\n\nEach of the six is the support of a $3\\times3$ permutation matrix. Writing\n$u,v,w$ for the multiplicities of the even ones and $x,y,z$ for the odd ones,\nthe array `sm3Of u v w x y z` is the corresponding linear combination; all six\nline sums equal $u+v+w+x+y+z$, so it is semi-magic (`sm3Of_semiMagic`).\n\n## The canonical form\n\nEvery $3\\times3$ semi-magic square arises this way, and — after subtracting\n$u=\\min D$, $v=\\min E$, $w=\\min F$ — the residual odd multiplicities\n$(x,y,z)$ satisfy $\\min(x,y,z)=0$. That normalization makes the\nrepresentation *unique*; without it the relation\n\n$$1\\cdot D + 1\\cdot E + 1\\cdot F = 1\\cdot A + 1\\cdot B + 1\\cdot C \\;(=J)$$\n\nwould identify distinct $6$-tuples. `sm3Params t` is the resulting finite\nparameter set and `sm3Count t` its cardinality. The two substantive statements\n— that `sm3Of` is a bijection onto the semi-magic squares, and the evaluation\n$\\mathrm{sm3Count}(t) = 3\\binom{t+3}{4}+\\binom{t+2}{2}$ — are submitted\nseparately as theorems.\n-/\n\nnamespace MagicSquares\n\n/-- The $3\\times3$ array obtained by adding the six order-three permutation\nmatrices with multiplicities `u v w` (the even transversals $D,E,F$) and\n`x y z` (the odd ones $A,B,C$), as in the module docstring:\n\n     ( u+x   v+z   w+y )\n     ( w+z   u+y   v+x )\n     ( v+y   w+x   u+z )\n\nEvery row and column sums to `u + v + w + x + y + z`. -/\ndef sm3Of (u v w x y z : ℕ) : Square 3 ℕ :=\n  ![![u + x, v + z, w + y],\n    ![w + z, u + y, v + x],\n    ![v + y, w + x, u + z]]\n\n/-- `sm3Of` read from a coefficient vector `p : Fin 6 → ℕ`, with `p 0 = u`,\n`p 1 = v`, `p 2 = w`, `p 3 = x`, `p 4 = y`, `p 5 = z`. -/\ndef sm3OfFun (p : Fin 6 → ℕ) : Square 3 ℕ :=\n  sm3Of (p 0) (p 1) (p 2) (p 3) (p 4) (p 5)\n\n/-- The coefficient vector of `sm3Of`. -/\ndef sm3Coeffs (u v w x y z : ℕ) : Fin 6 → ℕ :=\n  ![u, v, w, x, y, z]\n\n/-- `sm3Of` is a semi-magic square of line sum `u + v + w + x + y + z`. -/\ntheorem sm3Of_semiMagic (u v w x y z : ℕ) :\n    IsSemiMagic (sm3Of u v w x y z) (u + v + w + x + y + z) := by\n  constructor\n  · intro i\n    fin_cases i <;> simp [rowSum, sm3Of, Fin.sum_univ_three] <;> omega\n  · intro j\n    fin_cases j <;> simp [colSum, sm3Of, Fin.sum_univ_three] <;> omega\n\n/-- The three even transversals of a $3\\times3$ array, as the triple of minima\nthat the canonical decomposition subtracts. -/\ndef sm3EvenMin (M : Square 3 ℕ) : ℕ × ℕ × ℕ :=\n  (min (M 0 0) (min (M 1 1) (M 2 2)),\n    min (M 0 1) (min (M 1 2) (M 2 0)),\n    min (M 0 2) (min (M 1 0) (M 2 1)))\n\nnoncomputable section\n\n/-- The finite set of normalized coefficient vectors: six nonnegative integers\nbounded by `t`, summing to `t`, whose odd part `(x,y,z)` has minimum `0`. The\nbound is lossless because every coordinate of such a vector is at most `t`. -/\ndef sm3Params (t : ℕ) : Finset (Fin 6 → Fin (t + 1)) :=\n  by\n    classical\n    exact Finset.univ.filter fun p =>\n      (∑ i : Fin 6, (p i : ℕ)) = t ∧\n        min ((p 3 : ℕ)) (min ((p 4 : ℕ)) ((p 5 : ℕ))) = 0\n\n/-- The number of normalized coefficient vectors for line sum `t`. -/\ndef sm3Count (t : ℕ) : ℕ := (sm3Params t).card\n\nend\n\nend MagicSquares\n",
+      "source": "P. A. MacMahon, Combinatory Analysis (1915); M. Beck, T. Cohen, J. Cuomo, P. Gribelyuk, The number of \"magic\" squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707-717; arXiv:math/0201013v3, Section 2, Theorem 1.",
+      "tags": [
+        "combinatorics",
+        "enumerative-combinatorics",
+        "magic-squares"
+      ],
+      "audits": [
+        {
+          "audit_id": "94a3e438-e4ad-450d-bf91-c582e3ab2635",
+          "reviewer_id": "136472b2-7660-4cad-97ab-bc0d424d2ccd",
+          "reviewer_username": "Shuze Chen",
+          "decision": "confirm",
+          "comment": null,
+          "created_at": "2026-09-17T02:48:15.651744+00:00"
+        },
+        {
+          "audit_id": "e4eb161c-9115-4506-945b-c9a81b42391f",
+          "reviewer_id": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+          "reviewer_username": "Yuxuan Xu",
+          "decision": "confirm",
+          "comment": "Confirmed by the mission captain (proposal self-audit).",
+          "created_at": "2026-09-17T02:48:18.042994+00:00"
+        }
+      ],
+      "created_by": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "created_by_username": "Yuxuan Xu",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "985f7b0a-962f-4039-804c-794f2ce86533",
+      "theorem_name": "MagicSquares.ehrhart_macdonald_birkhoff_pos",
+      "theorem_title": "Ehrhart-Macdonald reciprocity for the Birkhoff polytope",
+      "status": "Open",
+      "formal_statement": "namespace MagicSquares\n\ntheorem ehrhart_macdonald_birkhoff_pos (n : ℕ) (hn : 1 ≤ n) (p : Polynomial ℚ) (hp : ∀ t : ℕ, p.eval (t : ℚ) = (semiMagicCount n t : ℚ)) : ∀ t : ℕ, 1 ≤ t → p.eval (-(t : ℚ)) = (-1 : ℚ) ^ ((n - 1) ^ 2) * (Set.ncard {M : Matrix (Fin n) (Fin n) ℚ | (∃ D, D ∈ doublyStochastic ℚ (Fin n) ∧ M = (t : ℚ) • D) ∧ ∀ i j, 0 < M i j ∧ ∃ k : ℕ, M i j = (k : ℚ)} : ℚ) := by sorry\n\nend MagicSquares",
+      "natural_language_statement": "Let $n\\ge 1$ and let $p$ be a rational polynomial with $p(t)=H_n(t)$ for every natural $t$. Then for every natural $t\\ge 1$, the value of $p$ at $-t$ equals, up to the sign $(-1)^{(n-1)^2}$, the number of interior lattice points of the $t$-fold dilation of the Birkhoff polytope $B_n$.\n\n$$\np(-t)=(-1)^{(n-1)^2}\\cdot |\\{M\\in t\\cdot B_n : M_{ij}>0\\text{ and }M_{ij}\\in\\mathbb{Z}\\ \\forall i,j\\}|.\n$$\n\nHere $B_n$ is the set of doubly stochastic matrices (nonnegative real matrices with all row and column sums equal to $1$), formalized as `doublyStochastic`; its vertices are the permutation matrices by the Birkhoff-von Neumann theorem, so it is an integral polytope of dimension $(n-1)^2$. Its interior lattice points in the $t$-fold dilation are exactly the strictly positive integer matrices with line sum $t$. This is the Ehrhart-Macdonald reciprocity law applied to $B_n$, due to Ehrhart and to Stanley (magic labelings of graphs). It is the geometric input of Stanley's proof: combined with the identification of the interior count with $I_n(t)$, it yields reciprocity at positive dilations.\n\n**Formalization Note** Lean works with $\\mathbb{Q}$-valued matrices and counts with `Set.ncard` (no finiteness instance needed to state it). The dilation is written with an explicit scaled witness. The hypothesis $1\\le t$ is essential: at $t=0$ the left side is $p(0)=H_n(0)=1$ while the interior is empty, so the unqualified statement is false.",
+      "created_at": "2026-09-22T01:37:51.294954+00:00",
+      "vote_count": 0,
+      "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nimport Definitions.Def_MagicSquares_positiveInteriorCount\nopen MagicSquares",
+      "source": "R. P. Stanley, Linear homogeneous Diophantine equations and magic labelings of graphs, Duke Math. J. 40 (1973), 607--632, Ehrhart-Macdonald reciprocity for the Birkhoff polytope; E. Ehrhart, Sur les carres magiques, C. R. Acad. Sci. Paris 277 (1973); M. Beck, M. Cohen, J. Cuomo and P. Gribelyuk, Amer. Math. Monthly 110 (2003), 707--717 (arXiv:math/0201013). Mathlib: doublyStochastic, doublyStochastic_eq_convexHull_permMatrix.",
+      "tags": [
+        "combinatorics",
+        "ehrhart",
+        "enumerative-combinatorics",
+        "magic-squares"
+      ],
+      "audits": [],
+      "created_by": "d1f0c25d-156e-4ff2-8246-1bd7cf2cce70",
+      "created_by_username": "Tamas Fulop",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+      "theorem_name": "MagicSquares",
+      "theorem_title": "Magic squares: core definitions and counting functions",
+      "status": "Definition",
+      "formal_statement": "",
+      "natural_language_statement": "Core vocabulary for the theory of magic squares: an $n \\times n$ array\n(`Square`), its row, column, main-diagonal, anti-diagonal and broken-diagonal sums, and the\nstandard predicates used in the literature.\n\nA **semi-magic square** of line sum $s$ has every row and every column summing to $s$; it is\n**magic** if both main diagonals also sum to $s$, and **panmagic** (pandiagonal) if every\nbroken diagonal in both directions does. A square is **associative** with constant $c$ when\ncentrally opposite cells sum to $c$, and **compact** with constant $c$ when every\n$2 \\times 2$ block -- including the ones that wrap around the edges -- sums to $c$.\n\nA square is **normal** of order $n$ when its entries are exactly the integers\n$1, \\dots, n^{2}$, each occurring once. Then `magicConstant n` $= n(n^{2}+1)/2$ is the common\nline sum, and `complement` is the involution $M \\mapsto n^{2}+1-M$.\n\nFinally the module fixes the four classical counting functions: $H_{n}(t)$ (semi-magic),\n$M_{n}(t)$ (magic), $P_{n}(t)$ (panmagic) and $S_{n}(t)$ (symmetric magic), each counting\nsquares of order $n$ with nonnegative integer entries and line sum $t$. Since every entry of\nsuch a square is at most $t$, searching over arrays with entries in $\\{0,\\dots,t\\}$ loses\nnothing.\n\n**Formalization Note** Entries are indexed by `Fin n`, so broken diagonals are obtained by\naddition modulo $n$ and the anti-diagonal by `Fin.rev`. The counting functions are\ncardinalities of finsets of arrays over `Fin (t+1)`.\n",
+      "created_at": "2026-09-16T12:09:43.984434+00:00",
+      "vote_count": 0,
+      "definition": "import Mathlib.Data.Matrix.Basic\nimport Mathlib.Data.Fin.Basic\nimport Mathlib.Algebra.Group.Fin.Basic\nimport Mathlib.Algebra.BigOperators.Group.Finset.Basic\nimport Mathlib.Data.Finset.Card\nimport Mathlib.Order.Interval.Finset.Nat\n\nset_option autoImplicit false\n\n/-!\n# Magic squares: core vocabulary\n\nThis module fixes the combinatorial vocabulary used throughout the magic-square\nformalization. It contains only definitions (plus their immediate `simp`\ncompanions); every substantive statement is submitted separately as a theorem.\n\nConventions follow Beck, Cohen, Cuomo and Gribelyuk, *The number of \"magic\"\nsquares, cubes and hypercubes*, Amer. Math. Monthly **110** (2003), 707--717\n(arXiv:math/0201013) for the weak (nonnegative-integer) reading, and the\nclassical literature for the *normal* reading where the entries are exactly\n`1, …, n²`.\n\nAn `n × n` array is `Square n α`, i.e. `Matrix (Fin n) (Fin n) α`. All sums are\ntaken over `Finset.univ`, and indices on broken diagonals are read modulo `n`.\n-/\n\nnamespace MagicSquares\n\n/-- An `n × n` array with entries in `α`. -/\nabbrev Square (n : ℕ) (α : Type*) := Matrix (Fin n) (Fin n) α\n\nvariable {n : ℕ} {α : Type*}\n\n/-! ## Line sums -/\n\n/-- The sum of the entries in row `i`. -/\ndef rowSum [AddCommMonoid α] (M : Square n α) (i : Fin n) : α :=\n  ∑ j, M i j\n\n/-- The sum of the entries in column `j`. -/\ndef colSum [AddCommMonoid α] (M : Square n α) (j : Fin n) : α :=\n  ∑ i, M i j\n\n/-- The sum of the entries on the main (descending) diagonal. -/\ndef diagSum [AddCommMonoid α] (M : Square n α) : α :=\n  ∑ i, M i i\n\n/-- The sum of the entries on the anti-diagonal, i.e. the cells `(i, n-1-i)`. -/\ndef antiDiagSum [AddCommMonoid α] (M : Square n α) : α :=\n  ∑ i, M i (Fin.rev i)\n\n/-- The sum of the entries on the broken descending diagonal of offset `k`,\ni.e. the cells `(i, i + k)` with the column index read modulo `n`.\nFor `k = 0` this is `diagSum`. -/\ndef brokenDiagSum [AddCommMonoid α] (M : Square n α) (k : Fin n) : α :=\n  ∑ i, M i (i + k)\n\n/-- The sum of the entries on the broken ascending diagonal of offset `k`,\ni.e. the cells `(i, n - 1 - i + k)`.\nFor `k = 0` this is `antiDiagSum`. -/\ndef brokenAntiDiagSum [AddCommMonoid α] (M : Square n α) (k : Fin n) : α :=\n  ∑ i, M i (Fin.rev i + k)\n\n/-- The sum of all entries of the array. -/\ndef totalSum [AddCommMonoid α] (M : Square n α) : α :=\n  ∑ i, ∑ j, M i j\n\n/-! ## The magic predicates -/\n\n/-- A **semi-magic square** of line sum `s`: every row and every column sums to\n`s`. Entries are not required to be distinct. -/\ndef IsSemiMagic [AddCommMonoid α] (M : Square n α) (s : α) : Prop :=\n  (∀ i, rowSum M i = s) ∧ (∀ j, colSum M j = s)\n\n/-- A **magic square** of line sum `s`: semi-magic, and both main diagonals sum\nto `s` as well. Entries are not required to be distinct. -/\ndef IsMagic [AddCommMonoid α] (M : Square n α) (s : α) : Prop :=\n  IsSemiMagic M s ∧ diagSum M = s ∧ antiDiagSum M = s\n\n/-- A **panmagic (pandiagonal) square** of line sum `s`: semi-magic, and *every*\nbroken diagonal in both directions sums to `s`. -/\ndef IsPanMagic [AddCommMonoid α] (M : Square n α) (s : α) : Prop :=\n  IsSemiMagic M s ∧\n    (∀ k, brokenDiagSum M k = s) ∧\n      (∀ k, brokenAntiDiagSum M k = s)\n\n/-- An **associative (regular) square** with complement constant `c`: every pair\nof cells centrally opposite each other sums to `c`. -/\ndef IsAssociative [Add α] (M : Square n α) (c : α) : Prop :=\n  ∀ i j, M i j + M (Fin.rev i) (Fin.rev j) = c\n\n/-- A **compact square** with block constant `c`: every `2 × 2` block, including\nthose that wrap around the edges, sums to `c`. -/\ndef IsCompact [NeZero n] [AddCommMonoid α] (M : Square n α) (c : α) : Prop :=\n  letI := Fin.instAddMonoidWithOne n\n  ∀ i j : Fin n, M i j + M i (j + 1) + M (i + 1) j + M (i + 1) (j + 1) = c\n\n/-- A **symmetric** square: `M` equals its transpose. -/\ndef IsSymmetric (M : Square n α) : Prop :=\n  ∀ i j, M i j = M j i\n\n/-- A **bimagic square**: `M` is magic with line sum `s`, and the array of\nsquared entries is magic with line sum `s₂`. -/\ndef IsBimagic (M : Square n ℕ) (s s₂ : ℕ) : Prop :=\n  IsMagic M s ∧ IsMagic (fun i j => (M i j) ^ 2) s₂\n\n/-! ## Normal squares -/\n\n/-- A **normal** square of order `n`: the entries are exactly the integers\n`1, 2, …, n²`, each occurring once.\n\nFormally this is stated as (i) every entry lies in `Icc 1 (n^2)` and (ii) the\nindex-to-entry map is injective. Together these say the entries are a\npermutation of `1, …, n²`. -/\ndef IsNormal (M : Square n ℕ) : Prop :=\n  (∀ p : Fin n × Fin n, 1 ≤ M p.1 p.2 ∧ M p.1 p.2 ≤ n ^ 2) ∧\n    Function.Injective (fun p : Fin n × Fin n => M p.1 p.2)\n\n/-- The magic constant of a normal magic square of order `n`, namely\n`n (n² + 1) / 2`. -/\ndef magicConstant (n : ℕ) : ℕ := n * (n ^ 2 + 1) / 2\n\n/-- The complementary square of a normal square: `M ↦ n² + 1 - M`. -/\ndef complement (M : Square n ℕ) : Square n ℕ :=\n  fun i j => n ^ 2 + 1 - M i j\n\n/-! ## Counting functions\n\nEvery entry of a (semi-)magic square with nonnegative entries and line sum `t`\nis at most `t`, so the finite search space `Square n (Fin (t+1))` is lossless. -/\n\nnoncomputable section\n\n/-- All semi-magic squares of order `n` and line sum `t`. -/\ndef semiMagicSquares (n t : ℕ) : Finset (Square n (Fin (t + 1))) :=\n  by classical exact Finset.univ.filter fun M => IsSemiMagic (fun i j => (M i j : ℕ)) t\n\n/-- All magic squares of order `n` and line sum `t`. -/\ndef magicSquares (n t : ℕ) : Finset (Square n (Fin (t + 1))) :=\n  by classical exact Finset.univ.filter fun M => IsMagic (fun i j => (M i j : ℕ)) t\n\n/-- All panmagic squares of order `n` and line sum `t`. -/\ndef panMagicSquares (n t : ℕ) : Finset (Square n (Fin (t + 1))) :=\n  by classical exact Finset.univ.filter fun M => IsPanMagic (fun i j => (M i j : ℕ)) t\n\n/-- All symmetric magic squares of order `n` and line sum `t`. -/\ndef symmetricMagicSquares (n t : ℕ) : Finset (Square n (Fin (t + 1))) :=\n  by classical exact (Finset.univ.filter (fun M : Square n (Fin (t + 1)) => IsMagic (fun i j => (M i j : ℕ)) t ∧ IsSymmetric (fun i j => (M i j : ℕ))))\n\n/-- `H_n(t)`: the number of semi-magic squares of order `n` and line sum `t`. -/\ndef semiMagicCount (n t : ℕ) : ℕ := (semiMagicSquares n t).card\n\n/-- `M_n(t)`: the number of magic squares of order `n` and line sum `t`. -/\ndef magicCount (n t : ℕ) : ℕ := (magicSquares n t).card\n\n/-- `P_n(t)`: the number of panmagic squares of order `n` and line sum `t`. -/\ndef panMagicCount (n t : ℕ) : ℕ := (panMagicSquares n t).card\n\n/-- `S_n(t)`: the number of symmetric magic squares of order `n` and line sum `t`. -/\ndef symmetricMagicCount (n t : ℕ) : ℕ := (symmetricMagicSquares n t).card\n\nend\n\nend MagicSquares\n",
+      "source": "Beck, Cohen, Cuomo & Gribelyuk, The number of ``magic'' squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707-717; arXiv:math/0201013v3, Section 1 (definitions) and Section 2 (Theorem 1).",
+      "tags": [
+        "combinatorics",
+        "enumerative-combinatorics",
+        "magic-squares"
+      ],
+      "audits": [
+        {
+          "audit_id": "18c2daff-ba99-4f6e-8afe-ce620bf362ce",
+          "reviewer_id": "136472b2-7660-4cad-97ab-bc0d424d2ccd",
+          "reviewer_username": "Shuze Chen",
+          "decision": "confirm",
+          "comment": null,
+          "created_at": "2026-09-16T18:46:54.362271+00:00"
+        },
+        {
+          "audit_id": "b02a5d43-6d2c-4d36-90cb-9d9b326e173f",
+          "reviewer_id": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+          "reviewer_username": "Yuxuan Xu",
+          "decision": "confirm",
+          "comment": "Confirmed by the mission captain (proposal self-audit).",
+          "created_at": "2026-09-16T18:47:00.252985+00:00"
+        }
+      ],
+      "created_by": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "created_by_username": "Yuxuan Xu",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "c193b4f1-946c-440d-ae6f-76fdf8a54d6f",
+      "theorem_name": "MagicSquares.positive_shift_count",
+      "theorem_title": "Positive semi-magic squares shift to line sum t - n",
+      "status": "Proved",
+      "formal_statement": "namespace MagicSquares\n\ntheorem positive_shift_count (n t : ℕ) (hn : 1 ≤ n) (hnt : n ≤ t) :\n    positiveInteriorCount n t = semiMagicCount n (t - n) := by sorry\n\nend MagicSquares\n",
+      "natural_language_statement": "**The shift bijection between positive and ordinary semi-magic squares.** Let $n \\ge 1$ and $t \\ge n$. Subtracting the all-ones matrix $J$ gives a bijection between the positive semi-magic squares of line sum $t$ (every entry at least one) and all semi-magic squares of line sum $t - n$, so that$$I_{n}(t) = H_{n}(t - n).$$\n\nThe map is its own inverse up to adding $J$ back: since $J$ itself has every line sum equal to $n$, subtracting it drops every line sum by exactly $n$ while preserving nonnegativity precisely for the positive squares. This is the elementary combinatorial half of Stanley's reciprocity argument: it converts the geometric interior count supplied by Ehrhart--Macdonald reciprocity into an ordinary value of the counting function, with no polyhedral machinery of its own.\n\n**Formalization Note** Lean states both sides as cardinals over `Square n (Fin (t+1))`-style finsets via `positiveInteriorCount` and `semiMagicCount`, with `t - n` the truncated natural subtraction (exact here since $t \\ge n$).",
+      "created_at": "2026-09-20T21:16:16.06684+00:00",
+      "vote_count": 0,
+      "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nimport Definitions.Def_MagicSquares_positiveInteriorCount\nopen MagicSquares",
+      "source": "R. P. Stanley, Duke Math. J. 40 (1973), 607--632, interior points of dilates of the Birkhoff polytope via the all-ones shift; M. Beck and D. Paxton, The Ehrhart polynomial of the Birkhoff polytope (arXiv:math.CO/0202267).",
+      "tags": [
+        "combinatorics",
+        "ehrhart",
+        "enumerative-combinatorics",
+        "magic-squares"
+      ],
+      "audits": [],
+      "created_by": "d1f0c25d-156e-4ff2-8246-1bd7cf2cce70",
+      "created_by_username": "Tamas Fulop",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "c4897555-460d-4fc5-8a01-732b5d8f39c9",
+      "theorem_name": "MagicSquares.sm3_bij",
+      "theorem_title": "Bijection between semi-magic squares and normalized parameters",
+      "status": "Proved",
+      "formal_statement": "namespace MagicSquares\n\ntheorem sm3_bij (t : ℕ) : semiMagicCount 3 t = sm3Count t := by sorry\n\nend MagicSquares",
+      "natural_language_statement": "The map\n\n$$(u,v,w,x,y,z)\\longmapsto uD+vE+wF+xA+yB+zC$$\n\nis a bijection from the normalized coefficient vectors — six nonnegative\nintegers summing to $t$ with $\\min(x,y,z)=0$ — onto the $3\\times3$ semi-magic\nsquares of line sum $t$. Consequently\n\n$$H_{3}(t)=\\mathrm{sm3Count}(t).$$\n\nSurjectivity and injectivity are exactly the two halves of `sm3_canonical`;\nwhat is left is the bookkeeping that turns a bijection of carriers into an\nequality of `Finset.card`s. Two coercions have to be handled explicitly. First,\n`semiMagicCount 3 t` counts arrays with entries in `Fin (t+1)`, so the forward\nmap must be read into that finite type — legitimate because every entry of a\nsemi-magic square of line sum $t$ is at most $t$. Second, `sm3Count t` counts\nfunctions `Fin 6 → Fin (t+1)`, and the bound is again lossless because the six\ncoefficients sum to $t$.\n\n**Formalization Note** Both directions therefore need a `Finset.card_bij`\nwith an explicit proof that the round trip is the identity on each side.",
+      "created_at": "2026-09-16T18:23:38.571607+00:00",
+      "vote_count": 0,
+      "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nimport Definitions.Def_MagicSquaresSemiMagic3\nopen MagicSquares",
+      "source": "P. A. MacMahon, Combinatory Analysis (1915); M. Beck, T. Cohen, J. Cuomo, P. Gribelyuk, The number of \"magic\" squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707-717; arXiv:math/0201013v3, Section 2, Theorem 1.",
+      "tags": [
+        "combinatorics",
+        "enumerative-combinatorics",
+        "magic-squares"
+      ],
+      "audits": [
+        {
+          "audit_id": "869abca2-2623-4c13-9a78-918064e6e08e",
+          "reviewer_id": "136472b2-7660-4cad-97ab-bc0d424d2ccd",
+          "reviewer_username": "Shuze Chen",
+          "decision": "confirm",
+          "comment": null,
+          "created_at": "2026-09-17T02:48:16.485642+00:00"
+        },
+        {
+          "audit_id": "47889b58-df34-428f-9be7-510a8d9661b6",
+          "reviewer_id": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+          "reviewer_username": "Yuxuan Xu",
+          "decision": "confirm",
+          "comment": "Confirmed by the mission captain (proposal self-audit).",
+          "created_at": "2026-09-17T02:48:18.042994+00:00"
+        }
+      ],
+      "created_by": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "created_by_username": "Yuxuan Xu",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "c6af9734-1fb9-48ea-b1e9-8a1bcd20a1dc",
+      "theorem_name": "MagicSquares.interior_functional_eq_nat_four",
+      "theorem_title": "Functional equation for n equal four",
+      "status": "Proved",
+      "formal_statement": "namespace MagicSquares\n\ntheorem interior_functional_eq_nat_four (p : Polynomial Rat) (hp : forall t : Nat, p.eval (t : Rat) = (semiMagicCount 4 t : Rat)) (u : Nat) :\n    p.eval (-(((4 + u : Nat)) : Rat)) = (-1 : Rat) ^ ((4 - 1) ^ 2) * p.eval ((u : Rat)) := by sorry\n\nend MagicSquares",
+      "natural_language_statement": "Let p in Q[X] agree with H_4 on all naturals. Then for every natural u,p(-4-u) = (-1)^{9} p(u).Since (4-1)^2 is nine the sign is minus one. H_4 is Beck-Pixton polynomial of degree nine, so p equals that polynomial and both sides agree. This is the n equal four case.**Formalization Note** Lean writes rationals as Rat; n is fixed to four.",
+      "created_at": "2026-09-21T22:18:24.365135+00:00",
+      "vote_count": 0,
+      "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nopen MagicSquares",
+      "source": "M. Beck and D. Pixton, The Ehrhart polynomial of the Birkhoff polytope (arXiv:math/0202267); R. P. Stanley, Duke Math. J. 40 (1973), specialized to n equal four.",
+      "tags": [
+        "combinatorics",
+        "ehrhart",
+        "enumerative-combinatorics",
+        "magic-squares"
+      ],
+      "audits": [],
+      "created_by": "d1f0c25d-156e-4ff2-8246-1bd7cf2cce70",
+      "created_by_username": "Tamas Fulop",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "d30aca52-f1ea-4659-aa48-e29c0e448cf4",
+      "theorem_name": "MagicSquares.interior_functional_eq_nat_two",
+      "theorem_title": "Functional equation for n equal two",
+      "status": "Proved",
+      "formal_statement": "namespace MagicSquares\n\ntheorem interior_functional_eq_nat_two (p : Polynomial Rat) (hp : forall t : Nat, p.eval (t : Rat) = (semiMagicCount 2 t : Rat)) (u : Nat) :\n    p.eval (-(((2 + u : Nat)) : Rat)) = (-1 : Rat) ^ ((2 - 1) ^ 2) * p.eval ((u : Rat)) := by sorry\n\nend MagicSquares",
+      "natural_language_statement": "Let p in Q[X] agree with H_2 on all naturals. Then for every natural u,p(-2-u) = (-1)^{1} p(u).Since (2-1)^2 is one the sign is minus one. H_2(t) is t plus one, so p is X plus one and both sides equal minus one minus u. This is the n equal two case, used with the one, three, four and n at least five cases.**Formalization Note** Lean writes rationals as Rat; n is fixed to two.",
+      "created_at": "2026-09-21T22:18:25.688523+00:00",
+      "vote_count": 0,
+      "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nopen MagicSquares",
+      "source": "R. P. Stanley, Duke Math. J. 40 (1973), 607--632; M. Beck et al., Amer. Math. Monthly 110 (2003), 707--717 (arXiv:math/0201013), specialized to n equal two.",
+      "tags": [
+        "combinatorics",
+        "ehrhart",
+        "enumerative-combinatorics",
+        "magic-squares"
+      ],
+      "audits": [],
+      "created_by": "d1f0c25d-156e-4ff2-8246-1bd7cf2cce70",
+      "created_by_username": "Tamas Fulop",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "f59f75e2-2a90-4fd2-8d09-f787ccdc5fce",
+      "theorem_name": "MagicSquares_positiveInteriorCount",
+      "theorem_title": "Interior (positive) semi-magic counting function",
+      "status": "Definition",
+      "formal_statement": "",
+      "natural_language_statement": "For order $n$ and line sum $t$, let $I_{n}(t)$ be the number of semi-magic squares with nonnegative integer entries, line sum $t$, and every entry strictly positive. In other words, $$I_{n}(t) = |\\{M : \\text{every row and column sums to } t,\\ M_{ij} \\ge 1\\ \\forall i,j\\}|,$$ counted, as with $H_{n}$, over arrays with entries in $\\{0,\\dots,t\\}$ (which loses nothing since every entry of a line-sum-$t$ square is at most $t$).\n\nThese are exactly the interior lattice points of the dilated Birkhoff polytope $t \\cdot B_{n}$: dilating the polytope of doubly stochastic matrices and counting interior integral points. The count is the bridge between the Ehrhart--Macdonald reciprocity law, which evaluates the Ehrhart polynomial at negative integers in terms of interior points, and the elementary shift bijection $M \\mapsto M - J$ that identifies positive squares of line sum $t$ with ordinary squares of line sum $t - n$.\n\n**Formalization Note** Lean counts over `Square n (Fin (t+1))` with positivity stated as `1 ≤ (M i j : ℕ)` for the `Fin`-valued entries coerced to naturals, mirroring `semiMagicCount`.",
+      "created_at": "2026-09-20T21:15:31.343662+00:00",
+      "vote_count": 0,
+      "definition": "import Definitions.Def_MagicSquares\n\nset_option autoImplicit false\n\nnamespace MagicSquares\n\n/-- The interior count: semi-magic squares of order `n` and line sum `t` with every entry positive. -/\nnoncomputable def positiveInteriorCount (n t : ℕ) : ℕ :=\n  by classical exact (Finset.univ.filter (fun M : Square n (Fin (t + 1)) =>\n    IsSemiMagic (fun i j => (M i j : ℕ)) t ∧ ∀ i j, 1 ≤ (M i j : ℕ))).card\n\nend MagicSquares\n",
+      "source": "R. P. Stanley, Duke Math. J. 40 (1973), 607--632 (interior lattice points of the Birkhoff polytope); M. Beck, M. Cohen, J. Cuomo and P. Gribelyuk, Amer. Math. Monthly 110 (2003), 707--717 (arXiv:math/0201013).",
+      "tags": [
+        "combinatorics",
+        "ehrhart",
+        "enumerative-combinatorics",
+        "magic-squares"
+      ],
+      "audits": [],
+      "created_by": "d1f0c25d-156e-4ff2-8246-1bd7cf2cce70",
+      "created_by_username": "Tamas Fulop",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "f85e8a07-5809-4c91-84a4-cea1cb2a7939",
+      "theorem_name": "MagicSquares.semi_magic_count_four",
+      "theorem_title": "Order four: the Ehrhart polynomial of the Birkhoff polytope B_4",
+      "status": "Proved",
+      "formal_statement": "namespace MagicSquares\n\ntheorem semi_magic_count_four (t : ℕ) :\n    11340 * semiMagicCount 4 t\n      = 11 * t ^ 9 + 198 * t ^ 8 + 1596 * t ^ 7 + 7560 * t ^ 6 + 23289 * t ^ 5\n        + 48762 * t ^ 4 + 70234 * t ^ 3 + 68220 * t ^ 2 + 40950 * t + 11340 := by\n  sorry\n\nend MagicSquares",
+      "natural_language_statement": "**Order four**, with the denominators cleared. The counting function $H_{4}(t)$, the number of $4\\times4$ arrays of nonnegative integers whose every row and every column sums to $t$, is the Ehrhart polynomial of the four-dimensional Birkhoff polytope $B_{4}$, whose degree is $(4-1)^{2}=9$. Multiplying by the common denominator $11340$ of its coefficients gives the displayed identity in the natural numbers. The leading coefficient is $11/11340$, which is $\\operatorname{vol}(B_{4})$; the normalised volume $9!\\cdot\\tfrac{11}{11340}$ equals $352$. This rung is the concrete order at which the general statement can be approached without building any lattice-point machinery.",
+      "created_at": "2026-09-19T05:46:03.298134+00:00",
+      "vote_count": 0,
+      "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nopen MagicSquares",
+      "source": "M. Beck, M. Cohen, J. Cuomo and P. Gribelyuk, The number of \"magic\" squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707--717 (arXiv:math/0201013); E. Ehrhart (1973); R. P. Stanley, Duke Math. J. 40 (1973) 607--632; J. Spencer, Amer. Math. Monthly 87 (1980) 397--399; M. Beck and D. Paxton, The Ehrhart polynomial of the Birkhoff polytope (arXiv:math.CO/0202267).",
+      "tags": [
+        "combinatorics",
+        "ehrhart",
+        "enumerative-combinatorics",
+        "magic-squares"
+      ],
+      "audits": [
+        {
+          "audit_id": "ab42b7f5-3bae-4cb1-8b11-33401ee0728d",
+          "reviewer_id": "136472b2-7660-4cad-97ab-bc0d424d2ccd",
+          "reviewer_username": "Shuze Chen",
+          "decision": "confirm",
+          "comment": null,
+          "created_at": "2026-09-19T15:01:23.193783+00:00"
+        },
+        {
+          "audit_id": "76e86030-24ec-45a9-9b1b-36411113192c",
+          "reviewer_id": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+          "reviewer_username": "Yuxuan Xu",
+          "decision": "confirm",
+          "comment": "Confirmed by the mission captain (proposal self-audit).",
+          "created_at": "2026-09-19T15:01:27.627492+00:00"
+        }
+      ],
+      "created_by": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "created_by_username": "Yuxuan Xu",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "theorem",
+      "theorem_id": "fbe7af10-42ac-48a5-ae22-a565eb27792c",
+      "theorem_name": "MagicSquares.positive_interior_small_zero",
+      "theorem_title": "Positive semi-magic squares vanish below the order",
+      "status": "Proved",
+      "formal_statement": "namespace MagicSquares\n\ntheorem positive_interior_small_zero (n t : Nat) (hn : 1 <= n) (htn : t < n) :\n    positiveInteriorCount n t = 0 := by sorry\n\nend MagicSquares",
+      "natural_language_statement": "Let n >= 1 and t < n. Then there are no semi-magic squares of order n and line sum t with every entry strictly positive.\n\nIn symbols,\n\n$$I_{n}(t) = 0.$$\n\nEach row contains n entries, each at least one, so any such square has line sum at least n. Hence the interior count vanishes below the order. These are exactly the interior lattice points of the dilate t * B_{n} of the Birkhoff polytope, so this says the dilate has no interior lattice points before the codegree.\n\n**Formalization Note** Lean counts via positiveInteriorCount, the card of the filtered finset over Square n (Fin (t+1)) with positivity 1 <= (M i j : Nat).",
+      "created_at": "2026-09-21T21:01:22.631565+00:00",
+      "vote_count": 0,
+      "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nimport Definitions.Def_MagicSquares_positiveInteriorCount\nopen MagicSquares",
+      "source": "R. P. Stanley, Duke Math. J. 40 (1973), 607--632, interior points of dilates of the Birkhoff polytope; M. Beck, M. Cohen, J. Cuomo and P. Gribelyuk, Amer. Math. Monthly 110 (2003), 707--717 (arXiv:math/0201013).",
+      "tags": [
+        "combinatorics",
+        "ehrhart",
+        "enumerative-combinatorics",
+        "magic-squares"
+      ],
+      "audits": [],
+      "created_by": "d1f0c25d-156e-4ff2-8246-1bd7cf2cce70",
+      "created_by_username": "Tamas Fulop",
+      "deprecated_at": null,
+      "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "env_display_name": "Mathlib 0df444a (Lean v4.33.1)",
+      "has_more_children": false,
+      "has_more_parents": false
+    },
+    {
+      "node_type": "sketch",
+      "node_id": "sketch-19798c8f-6002-4d8f-acec-f5c670555f86",
+      "submission_id": "19798c8f-6002-4d8f-acec-f5c670555f86",
+      "parent_theorem_id": "f85e8a07-5809-4c91-84a4-cea1cb2a7939",
+      "status": "ACCEPTED",
+      "username": "pmatos",
+      "explanation": "We prove the cleared-denominator identity for the order-four semi-magic counting function:\n\n$$11340 \\cdot H_{4}(t) = 11t^{9} + 198t^{8} + 1596t^{7} + 7560t^{6} + 23289t^{5} + 48762t^{4} + 70234t^{3} + 68220t^{2} + 40950t + 11340.$$\n\n**Idea.** The already-proved theorems `semi_magic_polynomial_exists` and `semi_magic_vanishing` give an interpolating polynomial $p$ of degree $9$ for $H_4$ that vanishes at $-1,-2,-3$. A degree-$9$ polynomial is determined by its values at any $10$ points, so it suffices to check $p$ against the explicit right-hand side at $10$ points: the three known zeros $-1,-2,-3$, and $t = 0,\\dots,6$. The values at $0,\\dots,6$ reduce to seven finite counting problems, each closed by direct computation over the (finite) space of arrays.\n\n**Step 1 — counting reformulation.** An order-$4$ semi-magic square of line sum $t$ is determined by its four rows, each summing to $t$, subject to every column summing to $t$. This gives a bijection between semi-magic squares and quadruples $(a,b,c,d)$ of length-$4$ natural-number vectors, each with entry-sum $t$, such that $a_j+b_j+c_j+d_j=t$ for every column $j$.\n\n**Step 2 — fiber decomposition.** Grouping these quadruples by the partial sum $s = a+b$ (itself ranging over vectors of entry-sum $2t$ with every coordinate $\\le t$), the number of quadruples with a given $s$ factors as $g(s)\\cdot g(t-s)$, where $g(s)$ counts length-$4$, entry-sum-$t$ vectors $a$ with $a\\le s$ pointwise. This expresses $H_4(t)$ as a finite sum over $s$ of products of two finite counts, each of which is decidable and small enough to evaluate by kernel computation for $t=0,\\dots,6$, giving $H_4(t) = 1, 24, 282, 2008, 10147, 40176, 132724$.\n\n**Step 3 — interpolation.** With these seven values, together with $p(-1)=p(-2)=p(-3)=0$ from `semi_magic_vanishing`, the polynomial $p$ agrees with $q := \\frac{1}{11340}\\big(11X^9+198X^8+\\dots+11340\\big)$ at $10$ distinct rational points. Since $\\deg p, \\deg q < 10$, this forces $p = q$ (`Polynomial.eq_of_degrees_lt_of_eval_finset_eq`). Evaluating $p=q$ at $t$ and clearing denominators gives the identity for every natural number $t$.\n",
+      "created_at": "2026-09-21T07:24:36.546486+00:00",
+      "child_count": 3,
+      "deprecated_at": null
+    },
+    {
+      "node_type": "sketch",
+      "node_id": "sketch-27b6a6d2-c551-41d7-aa20-41b55a8bd6a5",
+      "submission_id": "27b6a6d2-c551-41d7-aa20-41b55a8bd6a5",
+      "parent_theorem_id": "d30aca52-f1ea-4659-aa48-e29c0e448cf4",
+      "status": "ACCEPTED",
+      "username": "Tamas Fulop",
+      "explanation": "We prove that for $p$ in $Q[X]$ agreeing with $H_2$ on all naturals, for every natural $u$,\n\n$$p(-2-u) = (-1)^{1} p(u).$$\n\nSince $(2-1)^2$ is one the sign is minus one.\n\nThe proof idea is uniqueness. $H_2(t)$ is $t$ plus one, so $p$ agrees with $X$ plus one on all naturals, hence $p$ equals that linear polynomial. The functional equation then follows by direct evaluation.\n\nSince $H_2(t) = t+1$ by the order-two count, $p(t) = t+1$ for every natural $t$. The polynomial $X+1$ takes the same values, so $p - (X+1)$ vanishes on all naturals and is zero. Hence $p$ equals $X+1$.\n\nWith $p = X+1$, both $p(-2-u) = -2-u+1$ and $-p(u) = -(u+1)$ equal minus one minus $u$.\n\n**Formalization Note** Lean shows $p - (X + C 1)$ vanishes on $Nat.cast$ and applies $eq_zero_of_infinite_isRoot$.",
+      "created_at": "2026-09-21T22:25:10.952457+00:00",
+      "child_count": 2,
+      "deprecated_at": null
+    },
+    {
+      "node_type": "sketch",
+      "node_id": "sketch-29c27377-19f0-4071-9082-cd0d6c6394b2",
+      "submission_id": "29c27377-19f0-4071-9082-cd0d6c6394b2",
+      "parent_theorem_id": "58dd1ece-3454-49e7-9ba7-f65dc691aa63",
+      "status": "ACCEPTED",
+      "username": "Tamas Fulop",
+      "explanation": "We prove that the interior lattice points of dilated Birkhoff polytopes are counted by positive semi-magic squares. For $n\\\\ge 1$ and every natural $t$, the $\\\\mathrm{ncard}$ of rational matrices $M$ in $t\\\\cdot B_n$ with strictly positive integer entries equals $I_n(t)$.\n\nThe proof idea is a finite bijection, after Stanley, with no polyhedral machinery beyond entry bounds. At $t=0$ both sides vanish: the dilation is a point, contradicting positivity, and the interior count is zero. For $t\\\\ge 1$, coerce positive squares to rationals and take the finite image; injectivity follows from injectivity of the casts. Conversely, a point $N=tD$ with $D$ doubly stochastic has entries $N_{ij}=tD_{ij}$ with $D_{ij}\\\\le 1$, so each entry is a natural $k_{ij}\\\\le t$, and the row and column sums transfer from $\\\\mathbb{Q}$ to $\\\\mathbb{N}$ by injectivity of the cast, giving a positive semi-magic square. The forward direction uses $D=t^{-1}M$ with sums from the semi-magic hypothesis.\n\nIn Lean the carrier is a standalone copy of the `positiveInteriorCount` filter (connected by `show`), the maps are explicit entrywise coercions, and `Set.ncard_coe_finset` plus `Finset.card_image_of_injective` turn the set equality, via `ext`, into the count equality. The $t=0$ case uses the proved vanishing lemma.",
+      "created_at": "2026-09-22T02:00:01.13998+00:00",
+      "child_count": 3,
+      "deprecated_at": null
+    },
+    {
+      "node_type": "sketch",
+      "node_id": "sketch-667e88e8-a40e-4094-94fa-257b3085d06d",
+      "submission_id": "667e88e8-a40e-4094-94fa-257b3085d06d",
+      "parent_theorem_id": "55e2191d-be25-4e6d-af7a-4635a34e5c63",
+      "status": "ACCEPTED",
+      "username": "Yuxuan Xu",
+      "explanation": "## 目标\n\nMacMahon 的半幻方计数\n\n$$H_{3}(t)\\;=\\;3\\binom{t+3}{4}+\\binom{t+2}{2}\\qquad(t\\ge 0),$$\n\n即行、列和都为 $t$（对角线无约束、元素不必互异）的 $3\\times3$ 非负整数矩阵的个数。\n\n## 结构：一次两步归约\n\n本定理本身不做新的组合工作，只把两条已经证好的等式接起来：\n\n1. **`sm3_bij`：** $\\;\\mathrm{semiMagicCount}\\ 3\\ t=\\mathrm{sm3Count}\\ t$。\n   映射 $(u,v,w,x,y,z)\\mapsto uD+vE+wF+xA+yB+zC$ 是从规范化系数向量到半幻方的双射。规范化条件 $\\min(x,y,z)=0$ 是必要的：六个置换矩阵满足 $D+E+F=A+B+C=J$，不规范化则同一个方阵有无穷多种表示。\n\n2. **`sm3_params_card`：** $\\;\\mathrm{sm3Count}\\ t=3\\binom{t+3}{4}+\\binom{t+2}{2}$。\n   按 $(x,y,z)$ 中第一个零点把参数集划成三个互不相交的类，每类数出一个五元拆分数：\n   $$\\binom{t+4}{4}+\\binom{t+3}{4}+\\binom{t+2}{4},$$\n   再经三次 Pascal 收拢成 MacMahon 的形式。边界 $t=0,1$ 单独处理，因为后两类要做减法，$\\mathbb{N}$ 上的截断会把空类误算成 $1$。\n\n`rw [sm3_bij t, sm3_params_card t]` 即完成。\n\n## 为什么这个结果值得单独成一个 mission\n\n与 Mission I 的 $M_{3}(t)$ 对照最能说明问题：$M_{3}(t)$ 只在 $3\\mid t$ 时非零，是**拟多项式**；而 $H_{3}(t)$ 是 $t$ 的**真多项式**，次数 $4=(3-1)^{2}$。这正是 Stanley 定理 $H_n$ 为次数 $(n-1)^2$ 的 Ehrhart 多项式（并满足互反律 $H_n(-n-t)=(-1)^{n-1}H_n(t)$）在三阶时的具体形式。三阶是唯一小到能把每一步都显式写出来的非平凡情形，因此把它机器验证通过，等于把整条层级理论的底座钉住。\n",
+      "created_at": "2026-09-17T05:57:57.943212+00:00",
+      "child_count": 4,
+      "deprecated_at": null
+    },
+    {
+      "node_type": "sketch",
+      "node_id": "sketch-717005de-1b0e-4d2e-8ac9-1ab7288bdd9d",
+      "submission_id": "717005de-1b0e-4d2e-8ac9-1ab7288bdd9d",
+      "parent_theorem_id": "c6af9734-1fb9-48ea-b1e9-8a1bcd20a1dc",
+      "status": "ACCEPTED",
+      "username": "Tamas Fulop",
+      "explanation": "We prove that for $p$ in $Q[X]$ agreeing with $H_4$ on all naturals, for every natural $u$,\n\n$$p(-4-u) = (-1)^{9} p(u).$$\n\nSince $(4-1)^2$ is nine the sign is minus one.\n\nThe proof idea is uniqueness with the explicit Beck-Pixton polynomial. $H_4$ satisfies the cleared-denominator identity with coefficients $11$ through $11340$, so the rational polynomial with those coefficients divided by $11340$ agrees with $H_4$ on all naturals. Hence any $p$ agreeing with $H_4$ equals that explicit polynomial, and the functional equation follows by direct evaluation.\n\nThe cleared identity gives $11340$ times $H_4(t)$ as an explicit degree-nine polynomial in $t$. Dividing by $11340$ in $Q$ yields $Q_4$ with $Q_4(t) = H_4(t)$ for every natural $t$. Thus $p - Q_4$ vanishes on all naturals and is zero, so $p$ equals $Q_4$.\n\nWith $p = Q_4$, both $p(-4-u)$ and $-p(u)$ expand to the same degree-nine expression in $u$.\n\n**Formalization Note** Lean clears denominators with $field_simp$ using $11340$ nonzero in $Q$, then uses $ring$ for the degree-nine identity.",
+      "created_at": "2026-09-21T22:28:49.798816+00:00",
+      "child_count": 2,
+      "deprecated_at": null
+    },
+    {
+      "node_type": "sketch",
+      "node_id": "sketch-764f2e16-1796-4313-a5da-4858f288cc48",
+      "submission_id": "764f2e16-1796-4313-a5da-4858f288cc48",
+      "parent_theorem_id": "7a04de6e-94da-4423-add4-d1a79f131d05",
+      "status": "SKETCH_ACCEPTED",
+      "username": "cm_beta",
+      "explanation": "The functional equation for all $n \\ge 1$, from the four small cases and the general one.\n\n**What is assumed.** `MagicSquares.interior_functional_eq_nat_one`, `_two`, `_three`, `_four`\n(all already proved) and `_ge_five` (open). Together they cover $n \\ge 1$ with no gap.\n\n**The step.** `by_cases` on $5 \\le n$; in the complementary branch $1 \\le n < 5$ and\n`interval_cases` enumerates $n \\in \\{1,2,3,4\\}$, each handled by its own child with hypotheses\nmatching verbatim.\n\n**Why the small cases are separated at all.** The claim is the Ehrhart-style reciprocity\n$$p(-(n+u)) = (-1)^{(n-1)^2} p(u)$$\nfor the polynomial $p$ interpolating the semi-magic counting function $H_n$. For general $n$ the\nproof is the reciprocity theorem for the Birkhoff polytope, which needs the polytope to be of\nfull dimension $(n-1)^2$ — and that is exactly where small $n$ misbehave: at $n = 1$ the polytope\nis a point, at $n = 2$ a segment, and the interior/relative-interior distinction that drives the\nsign $(-1)^{(n-1)^2}$ degenerates. So the four small cases are verified directly rather than\nbeing instances of the general argument, and the open content is entirely $n \\ge 5$.\n\nThe exponent $(n-1)^2$ is the dimension of the Birkhoff polytope $B_n$, which is why the sign\nalternates with $n$ parity for $n \\ge 2$ and is $+1$ at $n = 1$.\n",
+      "created_at": "2026-09-22T07:46:23.745553+00:00",
+      "child_count": 6,
+      "deprecated_at": null
+    },
+    {
+      "node_type": "sketch",
+      "node_id": "sketch-7ef9cb6a-26a5-4854-99b0-d523ccb32fcf",
+      "submission_id": "7ef9cb6a-26a5-4854-99b0-d523ccb32fcf",
+      "parent_theorem_id": "7a04de6e-94da-4423-add4-d1a79f131d05",
+      "status": "SKETCH_ACCEPTED",
+      "username": "Tamas Fulop",
+      "explanation": "We prove that for $n >= 1$ and $p$ in $Q[X]$ agreeing with $H_n$ on all naturals, for every natural $u$,\n\n$$p(-n-u) = (-1)^{(n-1)^2} p(u).$$\n\nNo positivity hypothesis is needed here; the statement is a pure polynomial identity in $u$ with $n$ as parameter.\n\nThe proof idea is to split on $n$. For $n$ equal one through four the claim is an explicit polynomial identity verified from the known counts $H_1$, $H_2$, $H_3$, $H_4$. For $n$ at least five it is the remaining hard core, isolated as its own child.\n\nLet $n >= 1$, $p$, and $u$ be given with $p$ agreeing with $H_n$. Split on whether $n < 5$.\n\nIf $n < 5$, then with $1 <= n$ we have $n$ equal one, two, three or four by interval analysis. In each case the corresponding child supplies exactly the required equation, since after substituting the numeric value of $n$ both the hypothesis on $p$ and the conclusion match the child statement.\n\nIf $n >= 5$, then the $n$ at least five child applies directly with the same $n$, $p$ and $u$.\n\nThe five children are assumptions of this sketch, not results of it. Four state the functional equation for fixed $n$ equal one through four, each provable via its explicit counting polynomial. The fifth states it for all $n >= 5$, the hard core. Together by case split they imply the general statement for all $n >= 1$.\n\n**Formalization Note** Lean splits with $by_cases$ on $n < 5$ and closes the small case with $interval_cases$, then rewrites $5 <= n$ from the negation for the large case.",
+      "created_at": "2026-09-21T22:19:23.664126+00:00",
+      "child_count": 6,
+      "deprecated_at": null
+    },
+    {
+      "node_type": "sketch",
+      "node_id": "sketch-9319d160-7b3b-481e-9098-48046077aecc",
+      "submission_id": "9319d160-7b3b-481e-9098-48046077aecc",
+      "parent_theorem_id": "561721cd-6a18-422a-83f3-9ef47de790ff",
+      "status": "SKETCH_ACCEPTED",
+      "username": "Tamas Fulop",
+      "explanation": "We prove the functional equation for $n\\\\ge 5$ by reduction to its geometric core. Let $n\\\\ge 5$, let $p$ agree with $H_n$ on all naturals, and let $u$ be given; the claim is $p(-n-u)=(-1)^{(n-1)^2}p(u)$.\n\nThe proof idea separates geometry from combinatorics, after Stanley. The new child supplies the Ehrhart-Macdonald input at positive dilations: for $s\\\\ge n$, $p(-s)=(-1)^{(n-1)^2}I_n(s)$, where $I_n(s)$ counts positive semi-magic squares. The proved shift bijection identifies $I_n(n+u)=H_n(u)$. Putting $s=n+u$ gives $p(-n-u)=(-1)^{(n-1)^2}H_n(u)$, and the hypothesis $p(u)=H_n(u)$ closes the goal.\n\nIn Lean, with $s=n+u$ from $n\\\\le n+u$ by $\\\\mathrm{omega}$, the child yields $e_1$ and the shift yields $e_2$; rewriting $e_2$ in $e_1$, then $(n+u)-n=u$ by $\\\\mathrm{omega}$, then $\\\\leftarrow hp(u)$ gives exactly the goal. The imported child is an assumption of this sketch; the shift import is already proved.",
+      "created_at": "2026-09-22T01:20:29.368527+00:00",
+      "child_count": 4,
+      "deprecated_at": null
+    },
+    {
+      "node_type": "sketch",
+      "node_id": "sketch-b05315f3-86b7-4e43-ab96-fe189c95ee7b",
+      "submission_id": "b05315f3-86b7-4e43-ab96-fe189c95ee7b",
+      "parent_theorem_id": "c4897555-460d-4fc5-8a01-732b5d8f39c9",
+      "status": "ACCEPTED",
+      "username": "Yuxuan Xu",
+      "explanation": "## 目标\n\n把半幻方的个数与规范化系数向量的个数等同起来：\n\n$$H_{3}(t)=\\mathrm{semiMagicCount}\\ 3\\ t=\\mathrm{sm3Count}\\ t .$$\n\n一边是 $3\\times3$、元素落在 $\\mathrm{Fin}(t+1)$、行列和都为 $t$ 的方阵；另一边是六个非负整数 $(u,v,w,x,y,z)$、和为 $t$、且 $\\min(x,y,z)=0$。两者都是有限集，本定理给出它们之间的**双射**。\n\n## 结构：这是一次归约\n\n本证明不重做分解本身，而是 `import` 已经证好的子定理\n\n```\nimport Theorems.Thm_MagicSquares_sm3_canonical\n```\n\n`sm3_canonical` 提供两件事：每个半幻方都存在规范化表示，且该表示唯一。本定理只负责把这两件事翻译成一次 `Finset.card_bij`。\n\n## 正向映射\n\n给定规范化向量 $p$，映到方阵\n\n$$M_{ij}=\\bigl(\\mathrm{sm3Of}\\ p\\bigr)_{ij}.$$\n\n这里有两处需要显式处理：\n\n* **元素必须落在 $\\mathrm{Fin}(t+1)$.** $\\mathrm{sm3Of}$ 的每个元素是两个系数之和，例如 $M_{00}=u+x$；由六个系数总和为 $t$ 知它 $\\le t$，故可读作 $\\mathrm{Fin}(t+1)$ 中的元素。这就是 `sm3Of_le_sum`。\n* **像确实是半幻方.** `sm3Of` 的六条线和都等于系数和，而系数和正是 $t$。\n\n## 单射\n\n若两个规范化向量给出同一个方阵，把等式取到 $\\mathbb{N}$ 上得到两个 $\\mathrm{sm3Of}$ 表示相等。对其中一个调用 `sm3_canonical` 得到典范的 $(u,v,w,x,y,z)$；它的唯一性条款说：**任何**规范化表示都等于这个典范表示。于是两个向量都等于同一个典范向量，故相等。\n\n注意这里用的是\"唯一性\"而不是\"存在性\"——存在性只给出某个表示，唯一性才把任意表示钉死到典范表示上。\n\n## 满射\n\n给定半幻方 $M$（元素是 $\\mathrm{Fin}(t+1)$），先把它读作 $\\mathbb{N}$ 上的方阵再调用 `sm3_canonical`，得到 $(u,v,w,x,y,z)$。需要：\n\n* **系数落在 $\\mathrm{Fin}(t+1)$.** 由 $u+v+w+x+y+z=t$，每个系数都 $\\le t$。\n* **该向量属于 $\\mathrm{sm3Params}\\ t$.** 和为 $t$，且 $\\min(x,y,z)=0$ 正是 `sm3_canonical` 给出的规范化条件。\n* **正向映射回到原方阵.** $\\mathrm{Fin}(t+1)$ 两元素相等当且仅当它们的自然数值相等，而后者正是 `sm3_canonical` 给的分量等式。\n\n## 形式化要点\n\n* 用 `Finset.card_bij` 而不是 `card_bij'`：满射方向由 `sm3_canonical` 的存在性直接给出原像，不必先定义一个反向函数再验证左右逆。\n* 方阵类型在两边不同——一边是 `Square 3 (Fin (t+1))`，另一边取到 $\\mathbb{N}$ 后才是 `Square 3 ℕ`。所有跨越都显式用 `congrArg (fun x : Fin (t+1) => (x : ℕ))` 取自然数值，再由 `omega` 完成算术。\n* `ext i j` 对 `Square` 会一路展开到自然数值相等，因此其后**不需要**再 `apply Fin.ext`（加上会报类型不匹配）。\n",
+      "created_at": "2026-09-17T05:54:12.449392+00:00",
+      "child_count": 3,
+      "deprecated_at": null
+    },
+    {
+      "node_type": "sketch",
+      "node_id": "sketch-b8a5089c-c1a2-477c-a3f3-39519d516f6d",
+      "submission_id": "b8a5089c-c1a2-477c-a3f3-39519d516f6d",
+      "parent_theorem_id": "32ea160a-bf6c-4a8f-90f7-31289a3d3ba3",
+      "status": "SKETCH_ACCEPTED",
+      "username": "Tamas Fulop",
+      "explanation": "We prove the Ehrhart--Macdonald reciprocity law for the semi-magic counting function by reduction to two lemmas that mirror Stanley's proof. Let $n \\ge 1$ and let $p \\in \\mathbb{Q}[X]$ agree with $H_{n}$ on the nonnegative integers. The claim is\n$$\np(-n-t) = (-1)^{n-1} p(t) \\qquad \\text{for every integer } t.\n$$\nThe proof idea is to separate the geometry from the algebra: Ehrhart--Macdonald reciprocity for the Birkhoff polytope evaluates $p$ at negative integers in terms of interior lattice points, the all-ones shift identifies those interior points with ordinary squares of smaller line sum, and a polynomial-identity argument extends the resulting agreement on the naturals to all integers. The two geometric-combinatorial inputs are imported child lemmas (assumptions of this sketch, not results of it); everything else is proved inline.\nFirst, $(n-1)^2$ and $n-1$ have the same parity, so $(-1)^{(n-1)^2} = (-1)^{n-1}$ in $\\mathbb{Q}$; in Lean this is a case split on the parity of $n-1$ via `Nat.even_or_odd`, exhibiting the square's parity witness explicitly and closing with `Even.neg_one_pow` and `Odd.neg_one_pow`.\nSecond, for $s \\ge n$ (hence $s \\ge 1$), combining the children gives\n$$\np(-s) = (-1)^{(n-1)^2} H_{n}(s-n):\n$$\nchild one ([interior reciprocity at positive dilation](p2m:theorem/5ca89b06-1944-4bca-8ae9-160021073541)) writes $p(-s)$ as $(-1)^{(n-1)^2}$ times the interior count $I_{n}(s)$, and child two ([positive shift](p2m:theorem/c193b4f1-946c-440d-ae6f-76fdf8a54d6f), proved) rewrites that count as $H_{n}(s-n)$. In Lean this is `rw [e2] at e1`. The positivity side condition $1 \\le s$ follows from $1 \\le n \\le s$ by `omega`.\nThird, for each natural $u$, putting $s = n+u$ yields agreement on the naturals,\n$$\np(-n-u) = (-1)^{n-1} p(u),\n$$\nusing $n+u-n = u$, the parity fact, and the hypothesis $p(u) = H_{n}(u)$; the integer/rational casts are normalized by `push_cast` and `ring`.\nFinally, both sides are values of one polynomial: with $e = (-1)^{n-1}$ and $Q = p \\circ (-n - X) - eX\\,p$, the difference $Q$ vanishes at every natural number, hence $Q = 0$ since $\\mathbb{Q}$ is an infinite integral domain (`Polynomial.eq_of_infinite_eval_eq` applied to the infinite range of the naturals). Evaluating $Q = 0$ at an arbitrary integer $t$ gives exactly $p(-n-t) = (-1)^{n-1} p(t)$.\nAn earlier version of this sketch imported the same reciprocity claim stated for all $t \\ge 0$; that form is false at $t = 0$ (where $p(0) = H_{n}(0) = 1$ but $I_{n}(0) = 0$), as established by the disproof on that node, which has since been retired. The present version imports the corrected positive-dilation form, which is exactly what the argument above uses.\n**Formalization Note** Lean works with `p.eval`, `Polynomial.comp`, and explicit `Int`/`Nat` casts throughout; the interior count is the shared definition `positiveInteriorCount`, so the rewrite connecting the two children is syntactic.\n",
+      "created_at": "2026-09-20T23:01:51.307128+00:00",
+      "child_count": 2,
+      "deprecated_at": null
+    },
+    {
+      "node_type": "sketch",
+      "node_id": "sketch-bdc4ea2a-b09c-4f1c-8dee-d8f3d7fab847",
+      "submission_id": "bdc4ea2a-b09c-4f1c-8dee-d8f3d7fab847",
+      "parent_theorem_id": "5810474e-659e-44a1-b6de-f420c8917eb4",
+      "status": "ACCEPTED",
+      "username": "Tamas Fulop",
+      "explanation": "We prove that any rational polynomial agreeing with $H_3$ on all naturals satisfies $p(-3-u)=(-1)^{(3-1)^2}p(u)$ for every natural $u$. Since $(3-1)^2$ is four, the sign is one, so this asserts $p(-3-u)=p(u)$.\n\nThe proof idea is that $H_3$ is given by an explicit polynomial. MacMahon's formula gives\n\n$$\nH_3(t)=3\\\\binom{t+3}{4}+\\\\binom{t+2}{2}=\\\\frac{(t+3)(t+2)(t+1)t}{8}+\\\\frac{(t+2)(t+1)}{2}\n$$\n\nfor every natural $t$, so with $Q_3(X)=\\\\frac{(X+3)(X+2)(X+1)X}{8}+\\\\frac{(X+2)(X+1)}{2}$ we have $Q_3(t)=H_3(t)$ on all naturals. Two rational polynomials agreeing on infinitely many points are equal, hence any $p$ as in the hypothesis equals $Q_3$, and the functional equation follows by a direct polynomial identity.\n\nIn Lean, $Q_3$ is defined with $\\\\mathrm{C}\\\\(1/8)$ and $\\\\mathrm{C}\\\\(1/2)$. For $t=0$ both sides equal $1$ by deciding the two binomial values. For $t=k+1$, write the binomial coefficients via $\\\\binom{n}{k}k!(n-k)!=n!$ and the factorial expansions $(k+4)!=(k+4)(k+3)(k+2)(k+1)k!$ and $(k+3)!=(k+3)(k+2)(k+1)k!$. Cancelling the nonzero factorials gives $24\\\\binom{k+4}{4}=(k+4)(k+3)(k+2)(k+1)$ and $2\\\\binom{k+3}{2}=(k+3)(k+2)$ in naturals. Cast to rationals, these yield the two linear relations used by $\\\\mathrm{linear\\\\_combination}$ with coefficients $1/8$ and $1/2$ to show the cast of $3\\\\binom{k+4}{4}+\\\\binom{k+3}{2}$ equals $Q_3(k+1)$. Hence $p$ and $Q_3$ agree on every natural, so $p-Q_3$ vanishes on the infinite range of naturals in $\\\\mathbb{Q}$ and $p=Q_3$ by $\\\\mathrm{Polynomial.eq\\\\_zero\\\\_of\\\\_infinite\\\\_isRoot}$. Rewriting $p$ as $Q_3$, both sides of the goal become explicit polynomial evaluations in $u$, which agree by $\\\\mathrm{ring}$ since $Q_3(-3-u)=Q_3(u)$.",
+      "created_at": "2026-09-22T01:02:40.175386+00:00",
+      "child_count": 2,
+      "deprecated_at": null
+    },
+    {
+      "node_type": "sketch",
+      "node_id": "sketch-be4021e6-50c9-43b1-bbea-3ab6f6cc961a",
+      "submission_id": "be4021e6-50c9-43b1-bbea-3ab6f6cc961a",
+      "parent_theorem_id": "43ccc9fe-b78d-4f6f-b5e1-a86cd21af25f",
+      "status": "SKETCH_ACCEPTED",
+      "username": "Tamas Fulop",
+      "explanation": "We reduce positive reciprocity for $n\\\\ge 5$ to its two Stanley halves. Let $n\\\\ge 5$, let $p$ agree with $H_n$ on all naturals, and let $s\\\\ge n$; the claim is $p(-s)=(-1)^{(n-1)^2}I_n(s)$.\n\nThe proof idea separates geometry from combinatorics. The first child is Ehrhart-Macdonald reciprocity for the Birkhoff polytope $B_n$ (doubly stochastic matrices): for $s\\\\ge 1$, $p(-s)$ equals $(-1)^{(n-1)^2}$ times the number of interior lattice points of $s\\\\cdot B_n$, counted as strictly positive integer matrices in the dilation. The second child identifies that interior count with $I_n(s)$: writing a point as $s$ times a doubly stochastic matrix forces every entry into $[0,s]$ (entries of a doubly stochastic matrix lie in $[0,1]$), so the $\\\\mathrm{Fin}\\\\, (s+1)$ bound is lossless. With $1\\\\le s$ from $n\\\\le s$, the first child yields $e_1$ and the second yields $e_2$; rewriting $e_2$ in $e_1$ gives exactly the goal.\n\nIn Lean the children share one set expression over $\\\\mathbb{Q}$-matrices (scaled witness in `doublyStochastic`, strict positivity, integrality, counted with `Set.ncard`), so the rewrite is syntactic. Both children are assumptions of this sketch; the split mirrors Stanley's proof and the platform's own reciprocity reduction, keeps the dependency graph acyclic, and leaves the elementary identification as a provable next target.",
+      "created_at": "2026-09-22T01:39:01.168081+00:00",
+      "child_count": 4,
+      "deprecated_at": null
+    },
+    {
+      "node_type": "sketch",
+      "node_id": "sketch-c4e9e809-e8b4-4c46-9a72-c35c868c128e",
+      "submission_id": "c4e9e809-e8b4-4c46-9a72-c35c868c128e",
+      "parent_theorem_id": "4e0a58cc-b956-402f-9382-07df8670d02d",
+      "status": "ACCEPTED",
+      "username": "Tamas Fulop",
+      "explanation": "We prove that for $p$ in $Q[X]$ agreeing with $H_1$ on all naturals, for every natural $u$,\n\n$$p(-1-u) = (-1)^{0} p(u).$$\n\nSince $(1-1)^2$ is zero the sign is one, so both sides equal one.\n\nThe proof idea is uniqueness. $H_1$ is constantly one, so $p$ agrees with the constant polynomial one on all naturals, hence $p$ equals that constant. The functional equation then holds trivially.\n\nSince $H_1(t) = 1$ for every $t$ by the order-one count, $p(t) = 1$ for every natural $t$. Thus $p - 1$ vanishes on all naturals, so $p - 1$ is zero as a polynomial over the infinite integral domain $Q$. Hence $p$ equals the constant one.\n\nWith $p$ constant one, both $p(-1-u)$ and $p(u)$ equal one, and $(-1)^0$ equals one, so the claimed equation holds.\n\n**Formalization Note** Lean shows $p - C 1$ vanishes on $Nat.cast$ and applies $eq_zero_of_infinite_isRoot$ with infinitude of the range.",
+      "created_at": "2026-09-21T22:23:00.891233+00:00",
+      "child_count": 2,
+      "deprecated_at": null
+    },
+    {
+      "node_type": "sketch",
+      "node_id": "sketch-efca7551-ad8b-4f85-b976-415cea725b2f",
+      "submission_id": "efca7551-ad8b-4f85-b976-415cea725b2f",
+      "parent_theorem_id": "5ca89b06-1944-4bca-8ae9-160021073541",
+      "status": "SKETCH_ACCEPTED",
+      "username": "Tamas Fulop",
+      "explanation": "We prove that for $n >= 1$ and $p$ in $Q[X]$ agreeing with $H_n$ on all naturals, for every $t >= 1$,\n\n$$p(-t) = (-1)^{(n-1)^2} I_n(t),$$\n\nwhere $H_n(t)$ counts $n$ by $n$ semi-magic squares of line sum $t$ and $I_n(t)$ counts those with every entry positive. The argument uses the shift bijection, vanishing at negative small integers, and two child lemmas introduced as assumptions.\n\nThe proof idea is to separate small and large dilations. For $t < n$ both sides are zero. For $t >= n$ the interior count is an ordinary count of smaller line sum, so the claim becomes a polynomial identity in $u = t - n$.\n\nLet $t >= 1$ be given. Split on whether $t < n$.\n\nIf $t < n$, then\n\n$$I_n(t) = 0$$\n\nsince a row of $n$ positive entries sums to at least $n$. This is child one. Moreover\n\n$$p(-t) = 0$$\n\nby the vanishing theorem for $1 <= t <= n-1$, which applies because $t < n$ and $t >= 1$ give $t <= n-1$. Hence both sides equal zero.\n\nIf $t >= n$, write $u = t - n$, so that\n\n$$t = n + u.$$\n\nThe shift bijection gives\n\n$$I_n(t) = H_n(u).$$\n\nSince $p$ agrees with $H_n$ on naturals,\n\n$$H_n(u) = p(u).$$\n\nChild two asserts the functional equation\n\n$$p(-n-u) = (-1)^{(n-1)^2} p(u)$$\n\nfor every natural $u$. With $u = t - n$ this yields\n\n$$p(-t) = (-1)^{(n-1)^2} p(t-n),$$\n\nwhich combined with the two displayed identities above gives the claim.\n\nThe two children are assumptions of this sketch, not results of it. Child one states $I_n(t) = 0$ for $t < n$, the elementary row sum bound. Child two states the polynomial functional equation on natural shifts, the geometric core isolated from combinatorics. The proved imports supply the rest: vanishing gives $p(-t) = 0$ for $t < n$, and the shift bijection gives $I_n(t) = H_n(t-n)$ for $t >= n$. Together they close both cases.\n\n**Formalization Note** Lean normalizes integer and rational casts with simp, and rewrites $n + (t - n) = t$ from $n <= t$ to connect the child equation to the goal.",
+      "created_at": "2026-09-21T21:03:23.152868+00:00",
+      "child_count": 6,
+      "deprecated_at": null
+    },
+    {
+      "node_type": "sketch",
+      "node_id": "sketch-f7915b26-99d3-4f98-a646-72fb46d144c4",
+      "submission_id": "f7915b26-99d3-4f98-a646-72fb46d144c4",
+      "parent_theorem_id": "32ea160a-bf6c-4a8f-90f7-31289a3d3ba3",
+      "status": "SKETCH_ACCEPTED",
+      "username": "Tamas Fulop",
+      "explanation": "We prove the Ehrhart--Macdonald reciprocity law for the semi-magic counting function by reduction to two lemmas that mirror Stanley's proof. Let $n \\ge 1$ and let $p \\in \\mathbb{Q}[X]$ agree with $H_{n}$ on the nonnegative integers. The claim is\n$$\np(-n-t) = (-1)^{n-1} p(t) \\qquad \\text{for every integer } t.\n$$\nThe proof idea is to separate the geometry from the algebra: Ehrhart--Macdonald reciprocity for the Birkhoff polytope evaluates $p$ at negative integers in terms of interior lattice points, the all-ones shift identifies those interior points with ordinary squares of smaller line sum, and a polynomial-identity argument extends the resulting agreement on the naturals to all integers. The two geometric-combinatorial inputs are imported child lemmas (assumptions of this sketch, not results of it); everything else is proved inline.\nFirst, $(n-1)^2$ and $n-1$ have the same parity, so $(-1)^{(n-1)^2} = (-1)^{n-1}$ in $\\mathbb{Q}$; in Lean this is a case split on the parity of $n-1$ via `Nat.even_or_odd`, exhibiting the square's parity witness explicitly and closing with `Even.neg_one_pow` and `Odd.neg_one_pow$.\nSecond, for $s \\ge n$, combining the children gives\n$$\np(-s) = (-1)^{(n-1)^2} H_{n}(s-n):\n$$\nchild one ([interior reciprocity](p2m:theorem/3efac8d0-c8f6-4eb8-8248-7c7252c23531)) writes $p(-s)$ as $(-1)^{(n-1)^2}$ times the interior count $I_{n}(s)$, and child two ([positive shift](p2m:theorem/c193b4f1-946c-440d-ae6f-76fdf8a54d6f)) rewrites that count as $H_{n}(s-n)$. In Lean this is `rw [e2] at e1`.\nThird, for each natural $u$, putting $s = n+u$ yields agreement on the naturals,\n$$\np(-n-u) = (-1)^{n-1} p(u),\n$$\nusing $n+u-n = u$, the parity fact, and the hypothesis $p(u) = H_{n}(u)$; the integer/rational casts are normalized by `push_cast` and `ring`.\nFinally, both sides are values of one polynomial: with $e = (-1)^{n-1}$ and $Q = p \\circ (-n - X) - eX\\,p$, the difference $Q$ vanishes at every natural number, hence $Q = 0$ since $\\mathbb{Q}$ is an infinite integral domain (`Polynomial.eq_of_infinite_eval_eq` applied to the infinite range of the naturals). Evaluating $Q = 0$ at an arbitrary integer $t$ gives exactly $p(-n-t) = (-1)^{n-1} p(t)$.\n**Formalization Note** Lean works with `p.eval`, `Polynomial.comp`, and explicit `Int`/`Nat` casts throughout; the interior count is the shared definition `positiveInteriorCount`, so the rewrite connecting the two children is syntactic.\n",
+      "created_at": "2026-09-20T21:33:18.293837+00:00",
+      "child_count": 2,
+      "deprecated_at": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "3efac8d0-c8f6-4eb8-8248-7c7252c23531",
+      "target": "sketch-f7915b26-99d3-4f98-a646-72fb46d144c4",
+      "kind": "sketch"
+    },
+    {
+      "source": "c193b4f1-946c-440d-ae6f-76fdf8a54d6f",
+      "target": "sketch-f7915b26-99d3-4f98-a646-72fb46d144c4",
+      "kind": "sketch"
+    },
+    {
+      "source": "sketch-f7915b26-99d3-4f98-a646-72fb46d144c4",
+      "target": "32ea160a-bf6c-4a8f-90f7-31289a3d3ba3",
+      "kind": "sketch"
+    },
+    {
+      "source": "5ca89b06-1944-4bca-8ae9-160021073541",
+      "target": "sketch-b8a5089c-c1a2-477c-a3f3-39519d516f6d",
+      "kind": "sketch"
+    },
+    {
+      "source": "c193b4f1-946c-440d-ae6f-76fdf8a54d6f",
+      "target": "sketch-b8a5089c-c1a2-477c-a3f3-39519d516f6d",
+      "kind": "sketch"
+    },
+    {
+      "source": "sketch-b8a5089c-c1a2-477c-a3f3-39519d516f6d",
+      "target": "32ea160a-bf6c-4a8f-90f7-31289a3d3ba3",
+      "kind": "sketch"
+    },
+    {
+      "source": "58dd1ece-3454-49e7-9ba7-f65dc691aa63",
+      "target": "sketch-be4021e6-50c9-43b1-bbea-3ab6f6cc961a",
+      "kind": "sketch"
+    },
+    {
+      "source": "985f7b0a-962f-4039-804c-794f2ce86533",
+      "target": "sketch-be4021e6-50c9-43b1-bbea-3ab6f6cc961a",
+      "kind": "sketch"
+    },
+    {
+      "source": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+      "target": "sketch-be4021e6-50c9-43b1-bbea-3ab6f6cc961a",
+      "kind": "sketch"
+    },
+    {
+      "source": "f59f75e2-2a90-4fd2-8d09-f787ccdc5fce",
+      "target": "sketch-be4021e6-50c9-43b1-bbea-3ab6f6cc961a",
+      "kind": "sketch"
+    },
+    {
+      "source": "sketch-be4021e6-50c9-43b1-bbea-3ab6f6cc961a",
+      "target": "43ccc9fe-b78d-4f6f-b5e1-a86cd21af25f",
+      "kind": "sketch"
+    },
+    {
+      "source": "43ccc9fe-b78d-4f6f-b5e1-a86cd21af25f",
+      "target": "sketch-9319d160-7b3b-481e-9098-48046077aecc",
+      "kind": "sketch"
+    },
+    {
+      "source": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+      "target": "sketch-9319d160-7b3b-481e-9098-48046077aecc",
+      "kind": "sketch"
+    },
+    {
+      "source": "c193b4f1-946c-440d-ae6f-76fdf8a54d6f",
+      "target": "sketch-9319d160-7b3b-481e-9098-48046077aecc",
+      "kind": "sketch"
+    },
+    {
+      "source": "f59f75e2-2a90-4fd2-8d09-f787ccdc5fce",
+      "target": "sketch-9319d160-7b3b-481e-9098-48046077aecc",
+      "kind": "sketch"
+    },
+    {
+      "source": "sketch-9319d160-7b3b-481e-9098-48046077aecc",
+      "target": "561721cd-6a18-422a-83f3-9ef47de790ff",
+      "kind": "sketch"
+    },
+    {
+      "source": "2b98befc-35ff-4cd0-be18-2536bf8adae8",
+      "target": "sketch-efca7551-ad8b-4f85-b976-415cea725b2f",
+      "kind": "sketch"
+    },
+    {
+      "source": "7a04de6e-94da-4423-add4-d1a79f131d05",
+      "target": "sketch-efca7551-ad8b-4f85-b976-415cea725b2f",
+      "kind": "sketch"
+    },
+    {
+      "source": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+      "target": "sketch-efca7551-ad8b-4f85-b976-415cea725b2f",
+      "kind": "sketch"
+    },
+    {
+      "source": "c193b4f1-946c-440d-ae6f-76fdf8a54d6f",
+      "target": "sketch-efca7551-ad8b-4f85-b976-415cea725b2f",
+      "kind": "sketch"
+    },
+    {
+      "source": "f59f75e2-2a90-4fd2-8d09-f787ccdc5fce",
+      "target": "sketch-efca7551-ad8b-4f85-b976-415cea725b2f",
+      "kind": "sketch"
+    },
+    {
+      "source": "fbe7af10-42ac-48a5-ae22-a565eb27792c",
+      "target": "sketch-efca7551-ad8b-4f85-b976-415cea725b2f",
+      "kind": "sketch"
+    },
+    {
+      "source": "sketch-efca7551-ad8b-4f85-b976-415cea725b2f",
+      "target": "5ca89b06-1944-4bca-8ae9-160021073541",
+      "kind": "sketch"
+    },
+    {
+      "source": "4e0a58cc-b956-402f-9382-07df8670d02d",
+      "target": "sketch-764f2e16-1796-4313-a5da-4858f288cc48",
+      "kind": "sketch"
+    },
+    {
+      "source": "561721cd-6a18-422a-83f3-9ef47de790ff",
+      "target": "sketch-764f2e16-1796-4313-a5da-4858f288cc48",
+      "kind": "sketch"
+    },
+    {
+      "source": "5810474e-659e-44a1-b6de-f420c8917eb4",
+      "target": "sketch-764f2e16-1796-4313-a5da-4858f288cc48",
+      "kind": "sketch"
+    },
+    {
+      "source": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+      "target": "sketch-764f2e16-1796-4313-a5da-4858f288cc48",
+      "kind": "sketch"
+    },
+    {
+      "source": "c6af9734-1fb9-48ea-b1e9-8a1bcd20a1dc",
+      "target": "sketch-764f2e16-1796-4313-a5da-4858f288cc48",
+      "kind": "sketch"
+    },
+    {
+      "source": "d30aca52-f1ea-4659-aa48-e29c0e448cf4",
+      "target": "sketch-764f2e16-1796-4313-a5da-4858f288cc48",
+      "kind": "sketch"
+    },
+    {
+      "source": "sketch-764f2e16-1796-4313-a5da-4858f288cc48",
+      "target": "7a04de6e-94da-4423-add4-d1a79f131d05",
+      "kind": "sketch"
+    },
+    {
+      "source": "4e0a58cc-b956-402f-9382-07df8670d02d",
+      "target": "sketch-7ef9cb6a-26a5-4854-99b0-d523ccb32fcf",
+      "kind": "sketch"
+    },
+    {
+      "source": "561721cd-6a18-422a-83f3-9ef47de790ff",
+      "target": "sketch-7ef9cb6a-26a5-4854-99b0-d523ccb32fcf",
+      "kind": "sketch"
+    },
+    {
+      "source": "5810474e-659e-44a1-b6de-f420c8917eb4",
+      "target": "sketch-7ef9cb6a-26a5-4854-99b0-d523ccb32fcf",
+      "kind": "sketch"
+    },
+    {
+      "source": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+      "target": "sketch-7ef9cb6a-26a5-4854-99b0-d523ccb32fcf",
+      "kind": "sketch"
+    },
+    {
+      "source": "c6af9734-1fb9-48ea-b1e9-8a1bcd20a1dc",
+      "target": "sketch-7ef9cb6a-26a5-4854-99b0-d523ccb32fcf",
+      "kind": "sketch"
+    },
+    {
+      "source": "d30aca52-f1ea-4659-aa48-e29c0e448cf4",
+      "target": "sketch-7ef9cb6a-26a5-4854-99b0-d523ccb32fcf",
+      "kind": "sketch"
+    },
+    {
+      "source": "sketch-7ef9cb6a-26a5-4854-99b0-d523ccb32fcf",
+      "target": "7a04de6e-94da-4423-add4-d1a79f131d05",
+      "kind": "sketch"
+    },
+    {
+      "source": "611ea9c5-4346-49e1-800c-aa23be9f7303",
+      "target": "sketch-c4e9e809-e8b4-4c46-9a72-c35c868c128e",
+      "kind": "sketch"
+    },
+    {
+      "source": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+      "target": "sketch-c4e9e809-e8b4-4c46-9a72-c35c868c128e",
+      "kind": "sketch"
+    },
+    {
+      "source": "sketch-c4e9e809-e8b4-4c46-9a72-c35c868c128e",
+      "target": "4e0a58cc-b956-402f-9382-07df8670d02d",
+      "kind": "sketch"
+    },
+    {
+      "source": "55e2191d-be25-4e6d-af7a-4635a34e5c63",
+      "target": "sketch-bdc4ea2a-b09c-4f1c-8dee-d8f3d7fab847",
+      "kind": "sketch"
+    },
+    {
+      "source": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+      "target": "sketch-bdc4ea2a-b09c-4f1c-8dee-d8f3d7fab847",
+      "kind": "sketch"
+    },
+    {
+      "source": "sketch-bdc4ea2a-b09c-4f1c-8dee-d8f3d7fab847",
+      "target": "5810474e-659e-44a1-b6de-f420c8917eb4",
+      "kind": "sketch"
+    },
+    {
+      "source": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+      "target": "sketch-29c27377-19f0-4071-9082-cd0d6c6394b2",
+      "kind": "sketch"
+    },
+    {
+      "source": "f59f75e2-2a90-4fd2-8d09-f787ccdc5fce",
+      "target": "sketch-29c27377-19f0-4071-9082-cd0d6c6394b2",
+      "kind": "sketch"
+    },
+    {
+      "source": "fbe7af10-42ac-48a5-ae22-a565eb27792c",
+      "target": "sketch-29c27377-19f0-4071-9082-cd0d6c6394b2",
+      "kind": "sketch"
+    },
+    {
+      "source": "sketch-29c27377-19f0-4071-9082-cd0d6c6394b2",
+      "target": "58dd1ece-3454-49e7-9ba7-f65dc691aa63",
+      "kind": "sketch"
+    },
+    {
+      "source": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+      "target": "sketch-717005de-1b0e-4d2e-8ac9-1ab7288bdd9d",
+      "kind": "sketch"
+    },
+    {
+      "source": "f85e8a07-5809-4c91-84a4-cea1cb2a7939",
+      "target": "sketch-717005de-1b0e-4d2e-8ac9-1ab7288bdd9d",
+      "kind": "sketch"
+    },
+    {
+      "source": "sketch-717005de-1b0e-4d2e-8ac9-1ab7288bdd9d",
+      "target": "c6af9734-1fb9-48ea-b1e9-8a1bcd20a1dc",
+      "kind": "sketch"
+    },
+    {
+      "source": "86515ed9-6bd4-4484-a3d2-a1be23ce7ac9",
+      "target": "sketch-27b6a6d2-c551-41d7-aa20-41b55a8bd6a5",
+      "kind": "sketch"
+    },
+    {
+      "source": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+      "target": "sketch-27b6a6d2-c551-41d7-aa20-41b55a8bd6a5",
+      "kind": "sketch"
+    },
+    {
+      "source": "sketch-27b6a6d2-c551-41d7-aa20-41b55a8bd6a5",
+      "target": "d30aca52-f1ea-4659-aa48-e29c0e448cf4",
+      "kind": "sketch"
+    },
+    {
+      "source": "7d09e267-c923-49c2-91f3-76185a464ad4",
+      "target": "sketch-667e88e8-a40e-4094-94fa-257b3085d06d",
+      "kind": "sketch"
+    },
+    {
+      "source": "983f535e-819e-4d18-baba-388fb3c39413",
+      "target": "sketch-667e88e8-a40e-4094-94fa-257b3085d06d",
+      "kind": "sketch"
+    },
+    {
+      "source": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+      "target": "sketch-667e88e8-a40e-4094-94fa-257b3085d06d",
+      "kind": "sketch"
+    },
+    {
+      "source": "c4897555-460d-4fc5-8a01-732b5d8f39c9",
+      "target": "sketch-667e88e8-a40e-4094-94fa-257b3085d06d",
+      "kind": "sketch"
+    },
+    {
+      "source": "sketch-667e88e8-a40e-4094-94fa-257b3085d06d",
+      "target": "55e2191d-be25-4e6d-af7a-4635a34e5c63",
+      "kind": "sketch"
+    },
+    {
+      "source": "2b98befc-35ff-4cd0-be18-2536bf8adae8",
+      "target": "sketch-19798c8f-6002-4d8f-acec-f5c670555f86",
+      "kind": "sketch"
+    },
+    {
+      "source": "3dc34529-feed-4b21-bd4f-443097422b63",
+      "target": "sketch-19798c8f-6002-4d8f-acec-f5c670555f86",
+      "kind": "sketch"
+    },
+    {
+      "source": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+      "target": "sketch-19798c8f-6002-4d8f-acec-f5c670555f86",
+      "kind": "sketch"
+    },
+    {
+      "source": "sketch-19798c8f-6002-4d8f-acec-f5c670555f86",
+      "target": "f85e8a07-5809-4c91-84a4-cea1cb2a7939",
+      "kind": "sketch"
+    },
+    {
+      "source": "650b0511-bff1-4101-84b1-a49d5bef9849",
+      "target": "sketch-b05315f3-86b7-4e43-ab96-fe189c95ee7b",
+      "kind": "sketch"
+    },
+    {
+      "source": "983f535e-819e-4d18-baba-388fb3c39413",
+      "target": "sketch-b05315f3-86b7-4e43-ab96-fe189c95ee7b",
+      "kind": "sketch"
+    },
+    {
+      "source": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+      "target": "sketch-b05315f3-86b7-4e43-ab96-fe189c95ee7b",
+      "kind": "sketch"
+    },
+    {
+      "source": "sketch-b05315f3-86b7-4e43-ab96-fe189c95ee7b",
+      "target": "c4897555-460d-4fc5-8a01-732b5d8f39c9",
+      "kind": "sketch"
+    },
+    {
+      "source": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+      "target": "32ea160a-bf6c-4a8f-90f7-31289a3d3ba3",
+      "kind": "structural"
+    },
+    {
+      "source": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+      "target": "43ccc9fe-b78d-4f6f-b5e1-a86cd21af25f",
+      "kind": "structural"
+    },
+    {
+      "source": "f59f75e2-2a90-4fd2-8d09-f787ccdc5fce",
+      "target": "43ccc9fe-b78d-4f6f-b5e1-a86cd21af25f",
+      "kind": "structural"
+    },
+    {
+      "source": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+      "target": "561721cd-6a18-422a-83f3-9ef47de790ff",
+      "kind": "structural"
+    },
+    {
+      "source": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+      "target": "5ca89b06-1944-4bca-8ae9-160021073541",
+      "kind": "structural"
+    },
+    {
+      "source": "f59f75e2-2a90-4fd2-8d09-f787ccdc5fce",
+      "target": "5ca89b06-1944-4bca-8ae9-160021073541",
+      "kind": "structural"
+    },
+    {
+      "source": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+      "target": "7a04de6e-94da-4423-add4-d1a79f131d05",
+      "kind": "structural"
+    },
+    {
+      "source": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+      "target": "985f7b0a-962f-4039-804c-794f2ce86533",
+      "kind": "structural"
+    },
+    {
+      "source": "f59f75e2-2a90-4fd2-8d09-f787ccdc5fce",
+      "target": "985f7b0a-962f-4039-804c-794f2ce86533",
+      "kind": "structural"
+    },
+    {
+      "source": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+      "target": "2b98befc-35ff-4cd0-be18-2536bf8adae8",
+      "kind": "structural"
+    },
+    {
+      "source": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+      "target": "3efac8d0-c8f6-4eb8-8248-7c7252c23531",
+      "kind": "structural"
+    },
+    {
+      "source": "f59f75e2-2a90-4fd2-8d09-f787ccdc5fce",
+      "target": "3efac8d0-c8f6-4eb8-8248-7c7252c23531",
+      "kind": "structural"
+    },
+    {
+      "source": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+      "target": "4e0a58cc-b956-402f-9382-07df8670d02d",
+      "kind": "structural"
+    },
+    {
+      "source": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+      "target": "5810474e-659e-44a1-b6de-f420c8917eb4",
+      "kind": "structural"
+    },
+    {
+      "source": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+      "target": "58dd1ece-3454-49e7-9ba7-f65dc691aa63",
+      "kind": "structural"
+    },
+    {
+      "source": "f59f75e2-2a90-4fd2-8d09-f787ccdc5fce",
+      "target": "58dd1ece-3454-49e7-9ba7-f65dc691aa63",
+      "kind": "structural"
+    },
+    {
+      "source": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+      "target": "c193b4f1-946c-440d-ae6f-76fdf8a54d6f",
+      "kind": "structural"
+    },
+    {
+      "source": "f59f75e2-2a90-4fd2-8d09-f787ccdc5fce",
+      "target": "c193b4f1-946c-440d-ae6f-76fdf8a54d6f",
+      "kind": "structural"
+    },
+    {
+      "source": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+      "target": "c6af9734-1fb9-48ea-b1e9-8a1bcd20a1dc",
+      "kind": "structural"
+    },
+    {
+      "source": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+      "target": "d30aca52-f1ea-4659-aa48-e29c0e448cf4",
+      "kind": "structural"
+    },
+    {
+      "source": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+      "target": "f59f75e2-2a90-4fd2-8d09-f787ccdc5fce",
+      "kind": "structural"
+    },
+    {
+      "source": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+      "target": "fbe7af10-42ac-48a5-ae22-a565eb27792c",
+      "kind": "structural"
+    },
+    {
+      "source": "f59f75e2-2a90-4fd2-8d09-f787ccdc5fce",
+      "target": "fbe7af10-42ac-48a5-ae22-a565eb27792c",
+      "kind": "structural"
+    },
+    {
+      "source": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+      "target": "55e2191d-be25-4e6d-af7a-4635a34e5c63",
+      "kind": "structural"
+    },
+    {
+      "source": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+      "target": "611ea9c5-4346-49e1-800c-aa23be9f7303",
+      "kind": "structural"
+    },
+    {
+      "source": "95bcf1fc-345e-4db9-ae0c-cc8d9dba9fb2",
+      "target": "86515ed9-6bd4-4484-a3d2-a1be23ce7ac9",
+      "kind": "structural"
+    },
+    {
+      "source": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+      "target": "86515ed9-6bd4-4484-a3d2-a1be23ce7ac9",
+      "kind": "structural"
+    },
+    {
+      "source": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+      "target": "f85e8a07-5809-4c91-84a4-cea1cb2a7939",
+      "kind": "structural"
+    },
+    {
+      "source": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+      "target": "3dc34529-feed-4b21-bd4f-443097422b63",
+      "kind": "structural"
+    },
+    {
+      "source": "983f535e-819e-4d18-baba-388fb3c39413",
+      "target": "7d09e267-c923-49c2-91f3-76185a464ad4",
+      "kind": "structural"
+    },
+    {
+      "source": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+      "target": "7d09e267-c923-49c2-91f3-76185a464ad4",
+      "kind": "structural"
+    },
+    {
+      "source": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+      "target": "95bcf1fc-345e-4db9-ae0c-cc8d9dba9fb2",
+      "kind": "structural"
+    },
+    {
+      "source": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+      "target": "983f535e-819e-4d18-baba-388fb3c39413",
+      "kind": "structural"
+    },
+    {
+      "source": "983f535e-819e-4d18-baba-388fb3c39413",
+      "target": "c4897555-460d-4fc5-8a01-732b5d8f39c9",
+      "kind": "structural"
+    },
+    {
+      "source": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+      "target": "c4897555-460d-4fc5-8a01-732b5d8f39c9",
+      "kind": "structural"
+    },
+    {
+      "source": "983f535e-819e-4d18-baba-388fb3c39413",
+      "target": "650b0511-bff1-4101-84b1-a49d5bef9849",
+      "kind": "structural"
+    },
+    {
+      "source": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+      "target": "650b0511-bff1-4101-84b1-a49d5bef9849",
+      "kind": "structural"
+    }
+  ],
+  "has_hidden_deprecated_sketches": false
+}

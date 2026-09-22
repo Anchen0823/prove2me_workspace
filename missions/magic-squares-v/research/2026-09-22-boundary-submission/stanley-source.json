@@ -1,0 +1,14 @@
+{
+  "title": "Enumerative Combinatorics, Volume 1",
+  "author": "Richard P. Stanley",
+  "url": "https://math.mit.edu/~rstan/ec/ec1.pdf",
+  "retrieved_date": "2026-09-22",
+  "local_ignored_path": "tmp/research/stanley-ec1.pdf",
+  "bytes": 4628311,
+  "sha256": "f669d7b0d78730b7c812794a437fb6a78e0c182c10dfd520bc26d627cf45a1d5",
+  "references": [
+    {"result": "Proposition 3.8.9", "printed_page": 309, "role": "Eulerian face-lattice property"},
+    {"result": "Corollary 3.9.3", "printed_page": 313, "role": "Weisner theorem, applied to the order dual"}
+  ],
+  "provenance_note": "Author-hosted manuscript. The PDF is kept locally in a Git-ignored directory; only this source record and our derived notes are committed. The matching-board specialization is our derivation, not a statement quoted from the book."
+}

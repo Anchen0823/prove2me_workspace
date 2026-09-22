@@ -1,0 +1,23 @@
+import examples.«magic-squares».spencer.SupportConstants
+import examples.«magic-squares».spencer.PositiveTranslation
+import examples.«magic-squares».spencer.FirstNegativeValue
+import examples.«magic-squares».spencer.ReflectionExtension
+
+#print axioms MagicSquaresSpencer.closedPoly_eq_sum_qB
+#print axioms MagicSquaresSpencer.sum_sB_powerset_eq_indicator
+#print axioms MagicSquaresSpencer.qB_comp_eq_alternating_closedPoly
+#print axioms MagicSquaresSpencer.sB_eq_alternating_hasPerm
+#print axioms MagicSquaresSpencer.reciprocityAtNegOne_iff_matching_euler
+#print axioms MagicSquaresSpencer.alternating_hasPerm_eq_zero_of_not_isSupport
+#print axioms MagicSquaresSpencer.card_fullSupport_fiber_shift
+#print axioms MagicSquaresSpencer.fullSupport_fiber_eq_empty_of_lt
+#print axioms MagicSquaresSpencer.fullSupport_poly_shift
+#print axioms MagicSquaresSpencer.sB_univ_eq_eval_neg_n
+#print axioms MagicSquaresSpencer.eval_neg_n_eq_alternating_hasPerm
+#print axioms MagicSquaresSpencer.polynomial_reflection_extension
+#print axioms MagicSquaresSpencer.neg_one_pow_sub_sq
+#print axioms MagicSquaresSpencer.exists_perm_support_covering_cell_of_lineSums
+#print axioms MagicSquaresSpencer.exists_perm_support_covering_cell
+#print axioms MagicSquaresSpencer.alternating_hasPerm_eq_zero_of_uncovered_cell
+#print axioms MagicSquaresSpencer.isSupport_of_perm_coverage
+#print axioms MagicSquaresSpencer.isSupport_iff_perm_coverage

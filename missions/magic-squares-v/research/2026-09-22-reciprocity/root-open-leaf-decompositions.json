@@ -1,0 +1,29 @@
+{
+  "decompositions": [
+    {
+      "submission_id": null,
+      "created_by": null,
+      "created_at": null,
+      "deprecated_at": null,
+      "deprecated_by": null,
+      "children": [
+        {
+          "definition_id": "be2f2b6a-a540-47ae-b487-ac22532a2745",
+          "definition_name": "MagicSquares",
+          "theorem_title": "Magic squares: core definitions and counting functions",
+          "ordinal": 0,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        },
+        {
+          "definition_id": "f59f75e2-2a90-4fd2-8d09-f787ccdc5fce",
+          "definition_name": "MagicSquares_positiveInteriorCount",
+          "theorem_title": "Interior (positive) semi-magic counting function",
+          "ordinal": 1,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        }
+      ]
+    }
+  ]
+}

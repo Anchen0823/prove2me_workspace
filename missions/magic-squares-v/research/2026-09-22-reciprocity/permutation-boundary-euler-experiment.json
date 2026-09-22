@@ -1,0 +1,5450 @@
+{
+  "purpose": "Finite test of a proposed permutation-boundary Euler identity; not a general proof.",
+  "coefficient": "a(C) = sum_{E subseteq C} (-1)^(|C|-|E|) HasPerm(E), using the Boolean Mobius transform from check_support_euler.py.",
+  "identity": "sum_{C: B\\phi subseteq C subseteq B, D subseteq C} a(C) = a(B) if phi subseteq D, and 0 otherwise.",
+  "scope": "B and D range over nonempty matching-covered boards, used here as the finite model of positive realizable exact supports; phi ranges over permutation supports contained in B. The empty support is deliberately excluded because the exact-support split is a positive-line-sum recurrence.",
+  "orders": [
+    {
+      "n": 1,
+      "mode": "exhaustive",
+      "positive_realizable_support_count": 1,
+      "board_permutation_pair_count": 1,
+      "case_count": 1,
+      "failure_count": 0,
+      "counterexamples": []
+    },
+    {
+      "n": 2,
+      "mode": "exhaustive",
+      "positive_realizable_support_count": 3,
+      "board_permutation_pair_count": 4,
+      "case_count": 8,
+      "failure_count": 0,
+      "counterexamples": []
+    },
+    {
+      "n": 3,
+      "mode": "exhaustive",
+      "positive_realizable_support_count": 49,
+      "board_permutation_pair_count": 132,
+      "case_count": 1308,
+      "failure_count": 0,
+      "counterexamples": []
+    },
+    {
+      "n": 4,
+      "mode": "deterministic_sample",
+      "seed": 20260922,
+      "positive_realizable_support_count": 7443,
+      "sample_target": 600,
+      "case_count": 600,
+      "failure_count": 0,
+      "counterexamples": [],
+      "samples": [
+        {
+          "B": "0xffcb",
+          "phi": "0x1842",
+          "D": "0x5ac3",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xbdde",
+          "phi": "0x8412",
+          "D": "0xa55a",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x3ffd",
+          "phi": "0x2148",
+          "D": "0x3fe5",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x3b6f",
+          "phi": "0x2841",
+          "D": "0x3b6f",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xe9df",
+          "phi": "0x2184",
+          "D": "0xe9de",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xb6d9",
+          "phi": "0x1248",
+          "D": "0xb6c9",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xfe9b",
+          "phi": "0x4218",
+          "D": "0x4218",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xbebd",
+          "phi": "0x2814",
+          "D": "0x369d",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xfc6b",
+          "phi": "0x1428",
+          "D": "0x9429",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xfed6",
+          "phi": "0x8412",
+          "D": "0xee16",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xde53",
+          "phi": "0x8412",
+          "D": "0x9a43",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x6adb",
+          "phi": "0x4812",
+          "D": "0x4812",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x92d5",
+          "phi": "0x8241",
+          "D": "0x8255",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xd97a",
+          "phi": "0x1842",
+          "D": "0xd97a",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xf75e",
+          "phi": "0x8412",
+          "D": "0x7758",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x5c7f",
+          "phi": "0x1824",
+          "D": "0x4833",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xbcf6",
+          "phi": "0x1842",
+          "D": "0x2814",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x3fa6",
+          "phi": "0x2184",
+          "D": "0x1aa4",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xda3f",
+          "phi": "0x4821",
+          "D": "0x4a1a",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x6758",
+          "phi": "0x2148",
+          "D": "0x6358",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xeefb",
+          "phi": "0x4218",
+          "D": "0x4812",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x6be7",
+          "phi": "0x2841",
+          "D": "0x2841",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xd7bc",
+          "phi": "0x8124",
+          "D": "0x5528",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x6e1c",
+          "phi": "0x2418",
+          "D": "0x6a1c",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xfa5f",
+          "phi": "0x1842",
+          "D": "0x1a4a",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xe79d",
+          "phi": "0x2418",
+          "D": "0x6785",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x5837",
+          "phi": "0x1824",
+          "D": "0x4833",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x9d37",
+          "phi": "0x8124",
+          "D": "0x8124",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x3d7f",
+          "phi": "0x2814",
+          "D": "0x3d6b",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x9af6",
+          "phi": "0x1824",
+          "D": "0x9ad6",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x5caf",
+          "phi": "0x1482",
+          "D": "0x5ca7",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xcfe9",
+          "phi": "0x4128",
+          "D": "0xcb69",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x975f",
+          "phi": "0x8241",
+          "D": "0x975f",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xebbc",
+          "phi": "0x2814",
+          "D": "0xeb9c",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xef3a",
+          "phi": "0x4128",
+          "D": "0xef3a",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xd56e",
+          "phi": "0x8124",
+          "D": "0x4128",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x9efe",
+          "phi": "0x1482",
+          "D": "0x96be",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x7be6",
+          "phi": "0x4182",
+          "D": "0x3ba4",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x39f7",
+          "phi": "0x2184",
+          "D": "0x39f7",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x5a96",
+          "phi": "0x4812",
+          "D": "0x5a96",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xb7ff",
+          "phi": "0x1284",
+          "D": "0xa63d",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xe739",
+          "phi": "0x8421",
+          "D": "0x6618",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xcb7d",
+          "phi": "0x4821",
+          "D": "0x8124",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xebeb",
+          "phi": "0x2841",
+          "D": "0x6bc9",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xdfef",
+          "phi": "0x1842",
+          "D": "0x97ae",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x975a",
+          "phi": "0x8412",
+          "D": "0x975a",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xafd6",
+          "phi": "0x2184",
+          "D": "0xab94",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x59af",
+          "phi": "0x4821",
+          "D": "0x5825",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xf7ed",
+          "phi": "0x4281",
+          "D": "0x36e9",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x7ca3",
+          "phi": "0x4821",
+          "D": "0x4821",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x4b3a",
+          "phi": "0x4812",
+          "D": "0x4a1a",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x5a6d",
+          "phi": "0x1824",
+          "D": "0x5a6d",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xdba5",
+          "phi": "0x1824",
+          "D": "0x9ba4",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x5dfb",
+          "phi": "0x4128",
+          "D": "0x493a",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xf9de",
+          "phi": "0x2148",
+          "D": "0xa14a",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x9c76",
+          "phi": "0x8412",
+          "D": "0x9c76",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xdbad",
+          "phi": "0x1824",
+          "D": "0xd92d",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xfaff",
+          "phi": "0x2814",
+          "D": "0xda9f",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xf6dd",
+          "phi": "0x1248",
+          "D": "0xa69d",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x79ae",
+          "phi": "0x4128",
+          "D": "0x59ae",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xfc76",
+          "phi": "0x1842",
+          "D": "0x5836",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x369f",
+          "phi": "0x1284",
+          "D": "0x349a",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xe5af",
+          "phi": "0x8421",
+          "D": "0x4128",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x77b9",
+          "phi": "0x4281",
+          "D": "0x4338",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x5d2c",
+          "phi": "0x1428",
+          "D": "0x592c",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x93a4",
+          "phi": "0x8124",
+          "D": "0x8124",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xecf9",
+          "phi": "0x4821",
+          "D": "0xa4b9",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xbdc3",
+          "phi": "0x2841",
+          "D": "0x9dc2",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x7c93",
+          "phi": "0x2481",
+          "D": "0x3483",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x5b97",
+          "phi": "0x1284",
+          "D": "0x5a97",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xe53b",
+          "phi": "0x2418",
+          "D": "0xe53b",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xa59f",
+          "phi": "0x8412",
+          "D": "0x2481",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xbd7b",
+          "phi": "0x2148",
+          "D": "0x943a",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xedbb",
+          "phi": "0x4812",
+          "D": "0xcc12",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xb6eb",
+          "phi": "0x1248",
+          "D": "0xb4ab",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xb3fc",
+          "phi": "0x1284",
+          "D": "0x937c",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x695b",
+          "phi": "0x2148",
+          "D": "0x4812",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xda6d",
+          "phi": "0x4821",
+          "D": "0x5a6d",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x69bd",
+          "phi": "0x2184",
+          "D": "0x4821",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xe63f",
+          "phi": "0x8214",
+          "D": "0x8433",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xc6bb",
+          "phi": "0x4281",
+          "D": "0xc69b",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xbd77",
+          "phi": "0x1842",
+          "D": "0xad75",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xeff7",
+          "phi": "0x8412",
+          "D": "0xe6d3",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xb67f",
+          "phi": "0x8412",
+          "D": "0xb67d",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xd53f",
+          "phi": "0x1428",
+          "D": "0x953f",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x7cbf",
+          "phi": "0x2814",
+          "D": "0x5c3a",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xebf6",
+          "phi": "0x8214",
+          "D": "0xabb4",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xfff5",
+          "phi": "0x2184",
+          "D": "0xad65",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x9fca",
+          "phi": "0x1482",
+          "D": "0x9b4a",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xc3fb",
+          "phi": "0x4218",
+          "D": "0xc3e9",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x6bd5",
+          "phi": "0x2184",
+          "D": "0x2841",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xbee5",
+          "phi": "0x1284",
+          "D": "0x8241",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xa7c3",
+          "phi": "0x8241",
+          "D": "0x8343",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x6f59",
+          "phi": "0x4218",
+          "D": "0x6358",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x79bc",
+          "phi": "0x4128",
+          "D": "0x69bc",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x7e6d",
+          "phi": "0x2841",
+          "D": "0x3865",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xbb7c",
+          "phi": "0x8214",
+          "D": "0xbb7c",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xafdc",
+          "phi": "0x8214",
+          "D": "0xaf5c",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xb79f",
+          "phi": "0x8214",
+          "D": "0xb79c",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xf973",
+          "phi": "0x2841",
+          "D": "0x6853",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x7ed3",
+          "phi": "0x2481",
+          "D": "0x5ad3",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x97ef",
+          "phi": "0x1482",
+          "D": "0x1428",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xf53c",
+          "phi": "0x8124",
+          "D": "0x8124",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x9f6a",
+          "phi": "0x1842",
+          "D": "0x1668",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x3768",
+          "phi": "0x1248",
+          "D": "0x1428",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x7f9d",
+          "phi": "0x4281",
+          "D": "0x529d",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xbb7c",
+          "phi": "0x8124",
+          "D": "0x1a6c",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xe7c5",
+          "phi": "0x4281",
+          "D": "0x8241",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xfa9e",
+          "phi": "0x8214",
+          "D": "0x5a96",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xb7ac",
+          "phi": "0x2184",
+          "D": "0xa1a4",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xfc9e",
+          "phi": "0x1482",
+          "D": "0xec1e",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x77ff",
+          "phi": "0x4218",
+          "D": "0x73c9",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xb5e3",
+          "phi": "0x2481",
+          "D": "0xb5c3",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x7fe5",
+          "phi": "0x2481",
+          "D": "0x3de5",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xf6fb",
+          "phi": "0x2418",
+          "D": "0xf6a9",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xd97b",
+          "phi": "0x1842",
+          "D": "0x5863",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xce5f",
+          "phi": "0x8241",
+          "D": "0x8653",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xcfd3",
+          "phi": "0x4182",
+          "D": "0xcfd3",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xcaf3",
+          "phi": "0x8241",
+          "D": "0x4833",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x1824",
+          "phi": "0x1824",
+          "D": "0x1824",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x7e9a",
+          "phi": "0x4218",
+          "D": "0x6e1a",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x63da",
+          "phi": "0x2148",
+          "D": "0x4182",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x5ad7",
+          "phi": "0x1284",
+          "D": "0x5a96",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xcfdb",
+          "phi": "0x4218",
+          "D": "0xc952",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xcdf3",
+          "phi": "0x8142",
+          "D": "0xcd92",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xde97",
+          "phi": "0x4281",
+          "D": "0x5a96",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xe6f7",
+          "phi": "0x4281",
+          "D": "0xc6d3",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xa77f",
+          "phi": "0x8214",
+          "D": "0x2148",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x12cc",
+          "phi": "0x1248",
+          "D": "0x1284",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xfb56",
+          "phi": "0x1842",
+          "D": "0xab56",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xf63e",
+          "phi": "0x1428",
+          "D": "0x7638",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xdf65",
+          "phi": "0x8421",
+          "D": "0x8241",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x57cf",
+          "phi": "0x1284",
+          "D": "0x57ce",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xda65",
+          "phi": "0x4821",
+          "D": "0xca61",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x9def",
+          "phi": "0x8421",
+          "D": "0x9def",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x37ff",
+          "phi": "0x1428",
+          "D": "0x37d9",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xb6b7",
+          "phi": "0x1284",
+          "D": "0x1482",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xdbc3",
+          "phi": "0x4281",
+          "D": "0x1842",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xddd2",
+          "phi": "0x1482",
+          "D": "0x9c52",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xadfc",
+          "phi": "0x2184",
+          "D": "0xadbc",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x95a7",
+          "phi": "0x1482",
+          "D": "0x8421",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xbad5",
+          "phi": "0x2841",
+          "D": "0xaa14",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x7ecb",
+          "phi": "0x2481",
+          "D": "0x6681",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xd5bf",
+          "phi": "0x4182",
+          "D": "0xc5ba",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x6dd7",
+          "phi": "0x2184",
+          "D": "0x6857",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x3da5",
+          "phi": "0x1824",
+          "D": "0x2481",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x9db7",
+          "phi": "0x1824",
+          "D": "0x9c25",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xeda7",
+          "phi": "0x2184",
+          "D": "0xeda5",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x6b9e",
+          "phi": "0x4182",
+          "D": "0x4812",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x8124",
+          "phi": "0x8124",
+          "D": "0x8124",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x69af",
+          "phi": "0x4821",
+          "D": "0x69a5",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xd52d",
+          "phi": "0x1428",
+          "D": "0x952c",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xfdfd",
+          "phi": "0x2814",
+          "D": "0x6ce1",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x7d5f",
+          "phi": "0x2148",
+          "D": "0x2d5d",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x6618",
+          "phi": "0x2418",
+          "D": "0x4218",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xe39f",
+          "phi": "0x8214",
+          "D": "0x4218",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xef9c",
+          "phi": "0x4218",
+          "D": "0xa394",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xdd3e",
+          "phi": "0x8124",
+          "D": "0xdd36",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xbefe",
+          "phi": "0x1842",
+          "D": "0x9c7e",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xb6fe",
+          "phi": "0x1248",
+          "D": "0x36da",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x37da",
+          "phi": "0x1248",
+          "D": "0x2418",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x5d7e",
+          "phi": "0x4812",
+          "D": "0x4128",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x9ffd",
+          "phi": "0x8214",
+          "D": "0x977c",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xe5db",
+          "phi": "0x8412",
+          "D": "0xa493",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xcabd",
+          "phi": "0x4821",
+          "D": "0x4281",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x9c2d",
+          "phi": "0x1428",
+          "D": "0x1c2c",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xbf63",
+          "phi": "0x1842",
+          "D": "0x8142",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xcde3",
+          "phi": "0x8421",
+          "D": "0x8421",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x967d",
+          "phi": "0x8241",
+          "D": "0x8421",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xf5b3",
+          "phi": "0x2481",
+          "D": "0x8421",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xdf9a",
+          "phi": "0x4218",
+          "D": "0xdc92",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xef57",
+          "phi": "0x8412",
+          "D": "0x8657",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x9dee",
+          "phi": "0x8124",
+          "D": "0x1c2c",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xdf7a",
+          "phi": "0x4218",
+          "D": "0x5368",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xecf5",
+          "phi": "0x2481",
+          "D": "0x2cd5",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xc7bb",
+          "phi": "0x8421",
+          "D": "0xc7b3",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x6cd3",
+          "phi": "0x2481",
+          "D": "0x4812",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xb7f7",
+          "phi": "0x8214",
+          "D": "0x8367",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xafd3",
+          "phi": "0x8241",
+          "D": "0x8142",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xd7b9",
+          "phi": "0x8421",
+          "D": "0x4299",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x7685",
+          "phi": "0x1284",
+          "D": "0x6681",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xed9f",
+          "phi": "0x2184",
+          "D": "0xe59a",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xe39e",
+          "phi": "0x2184",
+          "D": "0xe39e",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xb56b",
+          "phi": "0x1428",
+          "D": "0xb56b",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x439a",
+          "phi": "0x4218",
+          "D": "0x439a",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xfe67",
+          "phi": "0x8241",
+          "D": "0x5863",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x9db7",
+          "phi": "0x8412",
+          "D": "0x8525",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x935f",
+          "phi": "0x1248",
+          "D": "0x8343",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xe3b7",
+          "phi": "0x4182",
+          "D": "0x8214",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xb6bc",
+          "phi": "0x2418",
+          "D": "0x8214",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xfe5b",
+          "phi": "0x2418",
+          "D": "0xe61a",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x9b56",
+          "phi": "0x1842",
+          "D": "0x8142",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xb37c",
+          "phi": "0x2148",
+          "D": "0x8334",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xbce7",
+          "phi": "0x2481",
+          "D": "0xbc63",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x7bf7",
+          "phi": "0x1842",
+          "D": "0x39f7",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x97db",
+          "phi": "0x1482",
+          "D": "0x9492",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xcfbe",
+          "phi": "0x8214",
+          "D": "0xc7b6",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x35ae",
+          "phi": "0x2184",
+          "D": "0x1482",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xba43",
+          "phi": "0x8241",
+          "D": "0x3843",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xcebf",
+          "phi": "0x4812",
+          "D": "0xcebd",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xcd52",
+          "phi": "0x4812",
+          "D": "0x8142",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xdc7a",
+          "phi": "0x4812",
+          "D": "0x8412",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xbdcf",
+          "phi": "0x2481",
+          "D": "0x8142",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x3dfc",
+          "phi": "0x2418",
+          "D": "0x2814",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xf7f7",
+          "phi": "0x2184",
+          "D": "0xd7e6",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x5ecf",
+          "phi": "0x1284",
+          "D": "0x5ac3",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xc7e7",
+          "phi": "0x8124",
+          "D": "0x8241",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xfcf5",
+          "phi": "0x2841",
+          "D": "0x7875",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x56ed",
+          "phi": "0x4281",
+          "D": "0x52c9",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x797c",
+          "phi": "0x1824",
+          "D": "0x697c",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xbde7",
+          "phi": "0x8124",
+          "D": "0x95e3",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xedb9",
+          "phi": "0x2418",
+          "D": "0x4821",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x37ec",
+          "phi": "0x2148",
+          "D": "0x1248",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x5c6f",
+          "phi": "0x1824",
+          "D": "0x1842",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xbc97",
+          "phi": "0x2481",
+          "D": "0x3483",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x1ace",
+          "phi": "0x1284",
+          "D": "0x12cc",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xc5b7",
+          "phi": "0x8421",
+          "D": "0xc5a3",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xb59e",
+          "phi": "0x1482",
+          "D": "0xb49a",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xf65c",
+          "phi": "0x2418",
+          "D": "0xb65c",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xbcda",
+          "phi": "0x8412",
+          "D": "0x1842",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x6dbf",
+          "phi": "0x2184",
+          "D": "0x6daf",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x9d6a",
+          "phi": "0x1842",
+          "D": "0x8142",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xfa63",
+          "phi": "0x1842",
+          "D": "0x7863",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xb56f",
+          "phi": "0x1428",
+          "D": "0x956a",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xdc6f",
+          "phi": "0x4821",
+          "D": "0x1824",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x5678",
+          "phi": "0x1248",
+          "D": "0x1428",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xf5d7",
+          "phi": "0x8412",
+          "D": "0x2184",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x3e7c",
+          "phi": "0x2418",
+          "D": "0x2814",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xd396",
+          "phi": "0x1284",
+          "D": "0x4182",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x9e6b",
+          "phi": "0x8421",
+          "D": "0x1e6a",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xfbfa",
+          "phi": "0x4182",
+          "D": "0xdbda",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x5687",
+          "phi": "0x1482",
+          "D": "0x1482",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x6cbf",
+          "phi": "0x4821",
+          "D": "0x2c9d",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xebda",
+          "phi": "0x4182",
+          "D": "0x4218",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xf65d",
+          "phi": "0x2418",
+          "D": "0xa659",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x9f6e",
+          "phi": "0x8142",
+          "D": "0x956e",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xfe69",
+          "phi": "0x8241",
+          "D": "0x4821",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xf57e",
+          "phi": "0x1428",
+          "D": "0xc16a",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x7a7f",
+          "phi": "0x1248",
+          "D": "0x3a5e",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xffdc",
+          "phi": "0x2814",
+          "D": "0xe7dc",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xf5bf",
+          "phi": "0x1482",
+          "D": "0xd5b6",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xd25d",
+          "phi": "0x4218",
+          "D": "0x925d",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xa5eb",
+          "phi": "0x8142",
+          "D": "0x8421",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xdafe",
+          "phi": "0x4218",
+          "D": "0x5a5a",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xcfe7",
+          "phi": "0x8241",
+          "D": "0xc7e7",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xa37f",
+          "phi": "0x8142",
+          "D": "0x8124",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xff59",
+          "phi": "0x2148",
+          "D": "0xeb59",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x6dc3",
+          "phi": "0x2841",
+          "D": "0x69c3",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xe6bb",
+          "phi": "0x2418",
+          "D": "0xa439",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x96a7",
+          "phi": "0x1482",
+          "D": "0x96a5",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xe7f9",
+          "phi": "0x2418",
+          "D": "0xa659",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xdd7e",
+          "phi": "0x1824",
+          "D": "0xc57e",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xbcde",
+          "phi": "0x2814",
+          "D": "0x9cd2",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xffdf",
+          "phi": "0x4812",
+          "D": "0x39d7",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x9ead",
+          "phi": "0x8421",
+          "D": "0x1c2c",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xcdf6",
+          "phi": "0x4812",
+          "D": "0xc592",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xdba6",
+          "phi": "0x1824",
+          "D": "0x8124",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xd3fb",
+          "phi": "0x4218",
+          "D": "0xc3fa",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x5bce",
+          "phi": "0x1284",
+          "D": "0x1a4a",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xbeef",
+          "phi": "0x1824",
+          "D": "0xbec9",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x7bff",
+          "phi": "0x1824",
+          "D": "0x5ae7",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x3658",
+          "phi": "0x1248",
+          "D": "0x3658",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xb6dd",
+          "phi": "0x1284",
+          "D": "0x1284",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xe6ff",
+          "phi": "0x4218",
+          "D": "0xc6bb",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x57cb",
+          "phi": "0x1482",
+          "D": "0x16ca",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xc3df",
+          "phi": "0x8241",
+          "D": "0xc2d5",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x76eb",
+          "phi": "0x1482",
+          "D": "0x1248",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xf37a",
+          "phi": "0x8142",
+          "D": "0x4218",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xfcaf",
+          "phi": "0x1824",
+          "D": "0x7ca3",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x6fb3",
+          "phi": "0x4281",
+          "D": "0x6ea1",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xf5ad",
+          "phi": "0x1428",
+          "D": "0xe5a9",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xf35b",
+          "phi": "0x8241",
+          "D": "0xd35b",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x3fd9",
+          "phi": "0x2418",
+          "D": "0x2dd9",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x5baf",
+          "phi": "0x4281",
+          "D": "0x5387",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xf3d9",
+          "phi": "0x8241",
+          "D": "0xb349",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x9fcf",
+          "phi": "0x8241",
+          "D": "0x9b43",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xff6c",
+          "phi": "0x1824",
+          "D": "0xe16c",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xcdbf",
+          "phi": "0x8421",
+          "D": "0xcc33",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xcb7b",
+          "phi": "0x8142",
+          "D": "0xc963",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xeb59",
+          "phi": "0x4218",
+          "D": "0x6b59",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xdefe",
+          "phi": "0x1842",
+          "D": "0x9ab4",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xad65",
+          "phi": "0x8421",
+          "D": "0x8525",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x57ac",
+          "phi": "0x4128",
+          "D": "0x16ac",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xd3a5",
+          "phi": "0x1284",
+          "D": "0xd3a5",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xe9ef",
+          "phi": "0x8124",
+          "D": "0xe9a5",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x9f63",
+          "phi": "0x8241",
+          "D": "0x9a43",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x977c",
+          "phi": "0x1248",
+          "D": "0x925c",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xe37d",
+          "phi": "0x4128",
+          "D": "0xc37d",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x3de6",
+          "phi": "0x1482",
+          "D": "0x2184",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xa75b",
+          "phi": "0x8241",
+          "D": "0xa55a",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xf7f6",
+          "phi": "0x1284",
+          "D": "0xc5f6",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x7f3e",
+          "phi": "0x4128",
+          "D": "0x6e1c",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x7f59",
+          "phi": "0x2148",
+          "D": "0x4218",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xb9e6",
+          "phi": "0x8142",
+          "D": "0x39c6",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xb49a",
+          "phi": "0x1482",
+          "D": "0x349a",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x7bde",
+          "phi": "0x4182",
+          "D": "0x79ca",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xf6b7",
+          "phi": "0x8214",
+          "D": "0xe693",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xefcb",
+          "phi": "0x2481",
+          "D": "0x6dcb",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x8377",
+          "phi": "0x8241",
+          "D": "0x8356",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x7cd3",
+          "phi": "0x2481",
+          "D": "0x2841",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x79da",
+          "phi": "0x4182",
+          "D": "0x61ca",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xdbfe",
+          "phi": "0x1842",
+          "D": "0x5bae",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xce3f",
+          "phi": "0x4218",
+          "D": "0xca16",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x9fbf",
+          "phi": "0x8214",
+          "D": "0x16ae",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xc7bf",
+          "phi": "0x8214",
+          "D": "0x43bb",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xd93e",
+          "phi": "0x1824",
+          "D": "0xd93e",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xfd36",
+          "phi": "0x1824",
+          "D": "0xf936",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xcb67",
+          "phi": "0x8142",
+          "D": "0x8124",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xea35",
+          "phi": "0x4821",
+          "D": "0xaa14",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xb7de",
+          "phi": "0x1248",
+          "D": "0xb35c",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xb97e",
+          "phi": "0x8124",
+          "D": "0x9966",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xed76",
+          "phi": "0x4812",
+          "D": "0x6816",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xd5bb",
+          "phi": "0x1482",
+          "D": "0xc529",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xeb97",
+          "phi": "0x8214",
+          "D": "0x6a97",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x76ab",
+          "phi": "0x4281",
+          "D": "0x5683",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x7fc6",
+          "phi": "0x1284",
+          "D": "0x7fc6",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xbe9c",
+          "phi": "0x1284",
+          "D": "0xba94",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xfef9",
+          "phi": "0x4218",
+          "D": "0x2499",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x9fda",
+          "phi": "0x1482",
+          "D": "0x9dd2",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xdd6e",
+          "phi": "0x1824",
+          "D": "0xc16e",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xf6b9",
+          "phi": "0x4281",
+          "D": "0xf6a9",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xb9fc",
+          "phi": "0x2814",
+          "D": "0xb9a4",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xffac",
+          "phi": "0x4128",
+          "D": "0x952c",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xfc5f",
+          "phi": "0x8412",
+          "D": "0xcc12",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x65ad",
+          "phi": "0x2184",
+          "D": "0x2184",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xc21c",
+          "phi": "0x4218",
+          "D": "0x8214",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xcbeb",
+          "phi": "0x4821",
+          "D": "0xc36b",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xb3df",
+          "phi": "0x2148",
+          "D": "0x935e",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x34ab",
+          "phi": "0x2481",
+          "D": "0x3483",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x6db3",
+          "phi": "0x4821",
+          "D": "0x4812",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x67e9",
+          "phi": "0x4281",
+          "D": "0x67a9",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xe539",
+          "phi": "0x2418",
+          "D": "0x2418",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x6b9e",
+          "phi": "0x2814",
+          "D": "0x4182",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xefe7",
+          "phi": "0x4182",
+          "D": "0x6ac1",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xf759",
+          "phi": "0x8241",
+          "D": "0xe359",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x7fc6",
+          "phi": "0x4182",
+          "D": "0x3dc6",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xdb7e",
+          "phi": "0x1824",
+          "D": "0x9b56",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x7d6f",
+          "phi": "0x1824",
+          "D": "0x3c6b",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x7ef7",
+          "phi": "0x1824",
+          "D": "0x3ef7",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x7bf9",
+          "phi": "0x4218",
+          "D": "0x63c9",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xfd6a",
+          "phi": "0x8142",
+          "D": "0x1842",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xfb53",
+          "phi": "0x8241",
+          "D": "0xcb53",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x3fd6",
+          "phi": "0x2814",
+          "D": "0x3cd6",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x693d",
+          "phi": "0x4821",
+          "D": "0x693d",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x9e53",
+          "phi": "0x1842",
+          "D": "0x8653",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xdf7c",
+          "phi": "0x1824",
+          "D": "0x9b34",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x53ff",
+          "phi": "0x4182",
+          "D": "0x53bf",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x5ef7",
+          "phi": "0x4281",
+          "D": "0x5ec7",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x79fd",
+          "phi": "0x4128",
+          "D": "0x69fd",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x9eb7",
+          "phi": "0x8214",
+          "D": "0x94a3",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xadfb",
+          "phi": "0x2418",
+          "D": "0x2c59",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x6b7f",
+          "phi": "0x4218",
+          "D": "0x6835",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x69f3",
+          "phi": "0x4821",
+          "D": "0x6861",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xc369",
+          "phi": "0x8241",
+          "D": "0xc369",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x9d73",
+          "phi": "0x8412",
+          "D": "0x9d63",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xec93",
+          "phi": "0x4812",
+          "D": "0x2481",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xe9fd",
+          "phi": "0x4821",
+          "D": "0xa97d",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x7c97",
+          "phi": "0x1482",
+          "D": "0x3c97",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xdea3",
+          "phi": "0x4281",
+          "D": "0x8421",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x9d6f",
+          "phi": "0x1428",
+          "D": "0x9c67",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xb7ff",
+          "phi": "0x8241",
+          "D": "0xb76a",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xf5ae",
+          "phi": "0x4182",
+          "D": "0x1428",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xdd7e",
+          "phi": "0x8142",
+          "D": "0x493a",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xd5fa",
+          "phi": "0x4182",
+          "D": "0xd5d2",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x5e7b",
+          "phi": "0x1428",
+          "D": "0x1842",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xfafb",
+          "phi": "0x4281",
+          "D": "0x4218",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xcedf",
+          "phi": "0x8214",
+          "D": "0xcad7",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x3de9",
+          "phi": "0x1428",
+          "D": "0x2cc1",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xe9a5",
+          "phi": "0x2184",
+          "D": "0xe9a5",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xcdf7",
+          "phi": "0x4812",
+          "D": "0x49b3",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x3c5a",
+          "phi": "0x1842",
+          "D": "0x3c5a",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x96bf",
+          "phi": "0x1284",
+          "D": "0x9492",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xf3be",
+          "phi": "0x1284",
+          "D": "0x9294",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xf9fb",
+          "phi": "0x2148",
+          "D": "0x796a",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xa7d7",
+          "phi": "0x2481",
+          "D": "0x2184",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xdba7",
+          "phi": "0x1284",
+          "D": "0x49a3",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x3dd7",
+          "phi": "0x2481",
+          "D": "0x3d97",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xb795",
+          "phi": "0x8214",
+          "D": "0x9294",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xaef9",
+          "phi": "0x8241",
+          "D": "0xaed9",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xead3",
+          "phi": "0x4812",
+          "D": "0x2841",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x9af5",
+          "phi": "0x8214",
+          "D": "0x9ab4",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xdabf",
+          "phi": "0x4821",
+          "D": "0x4299",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x6ffc",
+          "phi": "0x2184",
+          "D": "0x6fdc",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xd967",
+          "phi": "0x4821",
+          "D": "0xd967",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x6f9a",
+          "phi": "0x2418",
+          "D": "0x6e1a",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x795b",
+          "phi": "0x1842",
+          "D": "0x394a",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xe59f",
+          "phi": "0x2184",
+          "D": "0x659a",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xd79a",
+          "phi": "0x4182",
+          "D": "0xd592",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x9ee5",
+          "phi": "0x8421",
+          "D": "0x9ea5",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xdfa3",
+          "phi": "0x4281",
+          "D": "0x1482",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x9fec",
+          "phi": "0x1428",
+          "D": "0x9bec",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x9e7e",
+          "phi": "0x1842",
+          "D": "0x9a76",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xf936",
+          "phi": "0x8124",
+          "D": "0x8124",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xcb5f",
+          "phi": "0x8214",
+          "D": "0x8241",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x7dbf",
+          "phi": "0x4128",
+          "D": "0x34ba",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x5edb",
+          "phi": "0x4281",
+          "D": "0x56db",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xf359",
+          "phi": "0x4218",
+          "D": "0x5258",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xcb6b",
+          "phi": "0x8142",
+          "D": "0xc36b",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x39ee",
+          "phi": "0x1842",
+          "D": "0x2184",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xe95a",
+          "phi": "0x2148",
+          "D": "0xe95a",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xae61",
+          "phi": "0x8241",
+          "D": "0xaa41",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x8334",
+          "phi": "0x8214",
+          "D": "0x8334",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xa1a4",
+          "phi": "0x8124",
+          "D": "0x2184",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xfb6d",
+          "phi": "0x8241",
+          "D": "0x6969",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xb65f",
+          "phi": "0x8214",
+          "D": "0x3658",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xb6d9",
+          "phi": "0x8241",
+          "D": "0x36c9",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x93e5",
+          "phi": "0x8241",
+          "D": "0x1284",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x5876",
+          "phi": "0x1824",
+          "D": "0x4812",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xfed7",
+          "phi": "0x8241",
+          "D": "0x8616",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x3ea5",
+          "phi": "0x2481",
+          "D": "0x1aa4",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xf3fc",
+          "phi": "0x8124",
+          "D": "0x7378",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x53f9",
+          "phi": "0x4128",
+          "D": "0x4128",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x7ce3",
+          "phi": "0x2481",
+          "D": "0x5ca3",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xfa3e",
+          "phi": "0x4218",
+          "D": "0x3834",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xf3ce",
+          "phi": "0x1284",
+          "D": "0x21cc",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xc77a",
+          "phi": "0x8142",
+          "D": "0x8552",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xda9f",
+          "phi": "0x4281",
+          "D": "0xca16",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x5eab",
+          "phi": "0x1482",
+          "D": "0x5ea3",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xa7bc",
+          "phi": "0x2418",
+          "D": "0xa53c",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xac57",
+          "phi": "0x2841",
+          "D": "0x2841",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x3caf",
+          "phi": "0x1428",
+          "D": "0x1482",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xaebf",
+          "phi": "0x2418",
+          "D": "0xac16",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xd67a",
+          "phi": "0x8412",
+          "D": "0x1668",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x75ba",
+          "phi": "0x1482",
+          "D": "0x5582",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x3bc5",
+          "phi": "0x2184",
+          "D": "0x2184",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x3ded",
+          "phi": "0x1428",
+          "D": "0x3dad",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xd7b3",
+          "phi": "0x4281",
+          "D": "0x94b3",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xfe5b",
+          "phi": "0x4218",
+          "D": "0xfc5a",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xff9b",
+          "phi": "0x4218",
+          "D": "0x659b",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xe79e",
+          "phi": "0x8412",
+          "D": "0x4218",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xfef3",
+          "phi": "0x4281",
+          "D": "0x5c92",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xa5e3",
+          "phi": "0x8421",
+          "D": "0xa5c3",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x5368",
+          "phi": "0x4128",
+          "D": "0x1248",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x7a3d",
+          "phi": "0x4821",
+          "D": "0x1824",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xc73e",
+          "phi": "0x8124",
+          "D": "0xc53a",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x7568",
+          "phi": "0x1428",
+          "D": "0x1428",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x7a7b",
+          "phi": "0x4812",
+          "D": "0x6861",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xede3",
+          "phi": "0x8421",
+          "D": "0x6da3",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xbf37",
+          "phi": "0x8214",
+          "D": "0xae35",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x5fd6",
+          "phi": "0x4812",
+          "D": "0x5bc6",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xb73d",
+          "phi": "0x8421",
+          "D": "0xb73d",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xb7c3",
+          "phi": "0x1482",
+          "D": "0x8142",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x9de7",
+          "phi": "0x1482",
+          "D": "0x94a3",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x5eeb",
+          "phi": "0x4281",
+          "D": "0x5aeb",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x3da5",
+          "phi": "0x2184",
+          "D": "0x3da5",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x7ba5",
+          "phi": "0x2184",
+          "D": "0x79a5",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x7cfe",
+          "phi": "0x1428",
+          "D": "0x2418",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xa7f7",
+          "phi": "0x8214",
+          "D": "0x8563",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xc5d2",
+          "phi": "0x8412",
+          "D": "0xc1c2",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xf7c6",
+          "phi": "0x1284",
+          "D": "0x8142",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xae61",
+          "phi": "0x8241",
+          "D": "0x8421",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xc5a7",
+          "phi": "0x8421",
+          "D": "0xc5a3",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xddbb",
+          "phi": "0x8421",
+          "D": "0x14aa",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xb7ed",
+          "phi": "0x8124",
+          "D": "0x3348",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xbded",
+          "phi": "0x1824",
+          "D": "0xad6d",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xd973",
+          "phi": "0x4821",
+          "D": "0x4833",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x359e",
+          "phi": "0x1482",
+          "D": "0x349a",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xfdaf",
+          "phi": "0x1428",
+          "D": "0xbdae",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x6dfd",
+          "phi": "0x2841",
+          "D": "0x2841",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x7b97",
+          "phi": "0x4281",
+          "D": "0x2994",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xabb4",
+          "phi": "0x2814",
+          "D": "0xab94",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xa9f7",
+          "phi": "0x2814",
+          "D": "0x29c5",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x37ce",
+          "phi": "0x1482",
+          "D": "0x35ca",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x93d6",
+          "phi": "0x8214",
+          "D": "0x8214",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x9e3f",
+          "phi": "0x8412",
+          "D": "0x963f",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x9feb",
+          "phi": "0x1842",
+          "D": "0x9f63",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xfcf7",
+          "phi": "0x8412",
+          "D": "0xfcd6",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xd75f",
+          "phi": "0x1248",
+          "D": "0xc35e",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xdd3b",
+          "phi": "0x8412",
+          "D": "0x8412",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xec9b",
+          "phi": "0x2481",
+          "D": "0x4812",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xee57",
+          "phi": "0x4812",
+          "D": "0x8214",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x7cb7",
+          "phi": "0x2481",
+          "D": "0x5836",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xae3d",
+          "phi": "0x8214",
+          "D": "0x2814",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xf69b",
+          "phi": "0x2481",
+          "D": "0x2481",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xfdea",
+          "phi": "0x2148",
+          "D": "0xddea",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xc7af",
+          "phi": "0x4281",
+          "D": "0xc529",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x3f5d",
+          "phi": "0x2148",
+          "D": "0x3e59",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xb5ce",
+          "phi": "0x2184",
+          "D": "0xb5ca",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x6758",
+          "phi": "0x2418",
+          "D": "0x6758",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xe5a7",
+          "phi": "0x4182",
+          "D": "0xa1a4",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xdbae",
+          "phi": "0x8124",
+          "D": "0x1284",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x5f9e",
+          "phi": "0x4812",
+          "D": "0x5e9a",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xaee1",
+          "phi": "0x8421",
+          "D": "0x2841",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xf9de",
+          "phi": "0x1842",
+          "D": "0x39de",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xc3df",
+          "phi": "0x4218",
+          "D": "0xc35b",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xe796",
+          "phi": "0x4182",
+          "D": "0x6186",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xb7c3",
+          "phi": "0x8142",
+          "D": "0xb5c3",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xef6b",
+          "phi": "0x4821",
+          "D": "0x2841",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xe9c7",
+          "phi": "0x2184",
+          "D": "0xa943",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xe3fd",
+          "phi": "0x8241",
+          "D": "0xc21c",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x76ed",
+          "phi": "0x4281",
+          "D": "0x56ad",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xd9b7",
+          "phi": "0x1824",
+          "D": "0xc925",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x5a97",
+          "phi": "0x1284",
+          "D": "0x4281",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xdc6f",
+          "phi": "0x1428",
+          "D": "0x1824",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x395e",
+          "phi": "0x2814",
+          "D": "0x1842",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xbcb7",
+          "phi": "0x2481",
+          "D": "0x3c97",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xdbeb",
+          "phi": "0x8142",
+          "D": "0xd3ea",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xb7ac",
+          "phi": "0x2184",
+          "D": "0x1284",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x6ef5",
+          "phi": "0x4821",
+          "D": "0x6eb5",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xc37a",
+          "phi": "0x4128",
+          "D": "0x4218",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x35da",
+          "phi": "0x2418",
+          "D": "0x349a",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xe5e9",
+          "phi": "0x4128",
+          "D": "0x2481",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x3e7b",
+          "phi": "0x1428",
+          "D": "0x1842",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xdecf",
+          "phi": "0x1482",
+          "D": "0xc2c1",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x6bdf",
+          "phi": "0x4218",
+          "D": "0x4a93",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xabdf",
+          "phi": "0x8214",
+          "D": "0x21cc",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x4ba3",
+          "phi": "0x4281",
+          "D": "0x4281",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x3ffc",
+          "phi": "0x2184",
+          "D": "0x3efc",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xdb56",
+          "phi": "0x8142",
+          "D": "0xc952",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xef6d",
+          "phi": "0x2841",
+          "D": "0xcc21",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xfff7",
+          "phi": "0x8241",
+          "D": "0xf9c6",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x6d5b",
+          "phi": "0x2841",
+          "D": "0x6c5b",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xfd9f",
+          "phi": "0x8412",
+          "D": "0x7d9e",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x6beb",
+          "phi": "0x4182",
+          "D": "0x2148",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x97a5",
+          "phi": "0x8421",
+          "D": "0x8421",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xdba5",
+          "phi": "0x8124",
+          "D": "0xdba5",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xacdf",
+          "phi": "0x2481",
+          "D": "0x2c95",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xd6d7",
+          "phi": "0x8214",
+          "D": "0xd2c5",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xdd63",
+          "phi": "0x1842",
+          "D": "0x4821",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xbd73",
+          "phi": "0x1842",
+          "D": "0x8421",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x396d",
+          "phi": "0x1824",
+          "D": "0x396c",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xa6d9",
+          "phi": "0x2418",
+          "D": "0x2499",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x7f3f",
+          "phi": "0x1824",
+          "D": "0x5738",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x67da",
+          "phi": "0x2418",
+          "D": "0x439a",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x5d6a",
+          "phi": "0x1428",
+          "D": "0x4128",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x493b",
+          "phi": "0x4128",
+          "D": "0x4929",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xe739",
+          "phi": "0x8421",
+          "D": "0xa439",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xcfe9",
+          "phi": "0x4128",
+          "D": "0x8421",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xf3ac",
+          "phi": "0x4128",
+          "D": "0xd3ac",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x63ad",
+          "phi": "0x4128",
+          "D": "0x4128",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xfdce",
+          "phi": "0x2148",
+          "D": "0x8142",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xbf6c",
+          "phi": "0x1824",
+          "D": "0x976c",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xdfaf",
+          "phi": "0x8124",
+          "D": "0x5ca3",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x9d77",
+          "phi": "0x8412",
+          "D": "0x1824",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xda37",
+          "phi": "0x4821",
+          "D": "0x4821",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xc3b6",
+          "phi": "0x8124",
+          "D": "0xc3b6",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xddf7",
+          "phi": "0x4182",
+          "D": "0xdd67",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xedfd",
+          "phi": "0x2814",
+          "D": "0xe9ed",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x9fbd",
+          "phi": "0x1428",
+          "D": "0x9ba4",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x79a5",
+          "phi": "0x4821",
+          "D": "0x2184",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xda5e",
+          "phi": "0x4812",
+          "D": "0x4a1a",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xee95",
+          "phi": "0x2481",
+          "D": "0x2481",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xdb79",
+          "phi": "0x4128",
+          "D": "0x4218",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xe3ed",
+          "phi": "0x2184",
+          "D": "0xa3e5",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xfe6f",
+          "phi": "0x8421",
+          "D": "0x3a6d",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x79f6",
+          "phi": "0x1842",
+          "D": "0x39a4",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xb976",
+          "phi": "0x1824",
+          "D": "0x1824",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xfc69",
+          "phi": "0x4821",
+          "D": "0xec61",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xf3cf",
+          "phi": "0x2148",
+          "D": "0x93c7",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xfacd",
+          "phi": "0x1248",
+          "D": "0xbac5",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x9e3d",
+          "phi": "0x1824",
+          "D": "0x8421",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xdbcb",
+          "phi": "0x4281",
+          "D": "0xc2c1",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xa7cf",
+          "phi": "0x2481",
+          "D": "0xa7c9",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xfb7b",
+          "phi": "0x4821",
+          "D": "0xd35b",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x8377",
+          "phi": "0x8241",
+          "D": "0x8334",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x796f",
+          "phi": "0x4128",
+          "D": "0x394a",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x7ba7",
+          "phi": "0x4281",
+          "D": "0x5387",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x7e96",
+          "phi": "0x2814",
+          "D": "0x3a94",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xcb6d",
+          "phi": "0x4128",
+          "D": "0x8365",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xf5c6",
+          "phi": "0x4182",
+          "D": "0x6186",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xbd3c",
+          "phi": "0x1824",
+          "D": "0x8124",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xf65f",
+          "phi": "0x1248",
+          "D": "0xe61a",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xee95",
+          "phi": "0x2814",
+          "D": "0xea95",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x3678",
+          "phi": "0x2418",
+          "D": "0x3678",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x75ea",
+          "phi": "0x4128",
+          "D": "0x7568",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xcfd3",
+          "phi": "0x4281",
+          "D": "0xc7d3",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x5dab",
+          "phi": "0x1482",
+          "D": "0x1482",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x3df6",
+          "phi": "0x2184",
+          "D": "0x39e6",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xbf79",
+          "phi": "0x2148",
+          "D": "0x3d79",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xd36c",
+          "phi": "0x1248",
+          "D": "0x936c",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xcadb",
+          "phi": "0x4812",
+          "D": "0xca53",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xa6b5",
+          "phi": "0x8214",
+          "D": "0x2481",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xfdb7",
+          "phi": "0x4812",
+          "D": "0xfcb5",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xd73f",
+          "phi": "0x1428",
+          "D": "0xd63f",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x3787",
+          "phi": "0x2481",
+          "D": "0x3785",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xd592",
+          "phi": "0x8412",
+          "D": "0xc592",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x9ecb",
+          "phi": "0x8241",
+          "D": "0x9ec3",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xbefc",
+          "phi": "0x1824",
+          "D": "0xbe5c",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xec7d",
+          "phi": "0x8421",
+          "D": "0x2c59",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x7dac",
+          "phi": "0x4128",
+          "D": "0x75ac",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x359f",
+          "phi": "0x2481",
+          "D": "0x3587",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xcedb",
+          "phi": "0x4281",
+          "D": "0xce9b",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x9f75",
+          "phi": "0x8214",
+          "D": "0x8675",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xe1ca",
+          "phi": "0x8142",
+          "D": "0x61ca",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xbd3f",
+          "phi": "0x2418",
+          "D": "0x9c3e",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xff3d",
+          "phi": "0x4128",
+          "D": "0x8214",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xc9b6",
+          "phi": "0x4812",
+          "D": "0xc9b6",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xc1ea",
+          "phi": "0x8142",
+          "D": "0xc1ea",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xa976",
+          "phi": "0x8142",
+          "D": "0x8166",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x6877",
+          "phi": "0x2841",
+          "D": "0x2841",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xf35a",
+          "phi": "0x1248",
+          "D": "0x3348",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xf7b5",
+          "phi": "0x4281",
+          "D": "0xa4a1",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x69c7",
+          "phi": "0x2184",
+          "D": "0x69c7",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x3efd",
+          "phi": "0x2481",
+          "D": "0x369c",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xdb97",
+          "phi": "0x8214",
+          "D": "0xc295",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0xc75a",
+          "phi": "0x8142",
+          "D": "0x8552",
+          "actual": 1,
+          "expected": 1,
+          "phi_subset_D": true,
+          "passes": true
+        },
+        {
+          "B": "0x97e3",
+          "phi": "0x8142",
+          "D": "0x94a3",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0xbbed",
+          "phi": "0x2841",
+          "D": "0x1a6c",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x9d67",
+          "phi": "0x1824",
+          "D": "0x8142",
+          "actual": 0,
+          "expected": 0,
+          "phi_subset_D": false,
+          "passes": true
+        },
+        {
+          "B": "0x5f6a",
+          "phi": "0x1428",
+          "D": "0x5d6a",
+          "actual": -1,
+          "expected": -1,
+          "phi_subset_D": true,
+          "passes": true
+        }
+      ]
+    }
+  ],
+  "total_cases": 1917,
+  "total_failures": 0,
+  "all_checked_cases_pass": true
+}

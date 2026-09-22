@@ -1,0 +1,12 @@
+{
+  "root_id": "a8fa7ac8-321b-492a-9e96-d5303081a54f",
+  "open_leaves": [
+    {
+      "theorem_id": "32ea160a-bf6c-4a8f-90f7-31289a3d3ba3",
+      "theorem_name": "MagicSquares.semi_magic_reciprocity",
+      "status": "Open",
+      "closability": 0
+    }
+  ],
+  "total": 1
+}

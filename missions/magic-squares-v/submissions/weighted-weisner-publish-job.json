@@ -1,0 +1,21 @@
+{
+  "id": "cbdfd39e-7047-4826-a741-2b134999cc4e",
+  "kind": "problem",
+  "theorem_name": "FiniteLattice.weighted_weisner_cancellation",
+  "theorem_title": "Weighted Weisner cancellation in a finite lattice",
+  "formal_statement": "namespace FiniteLattice\n\ntheorem weighted_weisner_cancellation {L : Type*} [Lattice L] [Fintype L] [DecidableEq L]\n    (d a b : L) (w : L → ℚ) (hab : a ≤ b)\n    (hzero : ∀ x : L, a ≤ x → x ≤ b →\n      (∑ c ∈ (Finset.univ : Finset L).filter (fun c => d ≤ c ∧ c ≤ x), w c) = 0) :\n    (∑ c ∈ (Finset.univ : Finset L).filter\n      (fun c => d ≤ c ∧ c ≤ b ∧ c ⊔ a = b), w c) = 0 := by\n  sorry\n\nend FiniteLattice",
+  "natural_language_statement": "Let $L$ be a finite lattice, let $d,a,b\\in L$ with $a\\le b$, and let $w:L\\to\\mathbb Q$. Suppose that for every $x$ in the interval $[a,b]$, the weighted prefix sum\n$$\\sum_{d\\le c\\le x} w(c)=0.$$\nThen the weighted join fibre at $b$ vanishes:\n$$\\sum_{\\substack{d\\le c\\le b\\\\c\\vee a=b}}w(c)=0.$$\nNo relation between $d$ and $a$ is assumed. This is a complete finite-lattice statement, not a conditional reduction.",
+  "definitions": "import Mathlib\nopen Finset\nattribute [local instance] Classical.propDecidable",
+  "source": "A proved weighted prefix-cancellation form whose mechanism is the order-dual of Weisner's theorem. It is our weighted generalization, not a verbatim formula in the source. See Richard P. Stanley, Enumerative Combinatorics, Volume 1, author manuscript, Corollary 3.9.3 (p. 313), applied in the order dual: https://math.mit.edu/~rstan/ec/ec1.pdf.",
+  "tags": [
+    "combinatorics",
+    "lattice-theory",
+    "mobius-inversion"
+  ],
+  "visibility": "public",
+  "status": "PUBLISHED",
+  "error_message": "",
+  "theorem_id": "7aaef4ef-b6d4-43f6-82ae-d8ea5f8a4dc1",
+  "created_at": "2026-09-22T14:40:57.368617+00:00",
+  "updated_at": "2026-09-22T14:41:09.767294+00:00"
+}

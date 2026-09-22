@@ -1,0 +1,73 @@
+{
+  "purpose": "Finite n<=4 check of a proposed Boolean Mobius support identity; not a proof.",
+  "definition": "a(B) = sum_{C subseteq B} (-1)^(|B|-|C|) f(C), where f(B) means B contains a perfect matching.",
+  "matching_covered": "nonempty B whose every edge belongs to at least one perfect matching contained in B",
+  "claimed_pattern": "a(B)=0 for non-matching-covered B; for matching-covered B, a(B)=(-1)^(|B|-2n+c(B)).",
+  "orders": [
+    {
+      "n": 1,
+      "edge_count": 1,
+      "board_count": 2,
+      "perfect_matching_count": 1,
+      "boards_containing_perfect_matching": 1,
+      "matching_covered_nonempty_boards": 1,
+      "full_board": {
+        "board": "0x1",
+        "coefficient": 1,
+        "components": 1,
+        "expected": 1
+      },
+      "nonmatching_boards_with_nonzero_coefficient": [],
+      "matching_covered_formula_counterexamples": []
+    },
+    {
+      "n": 2,
+      "edge_count": 4,
+      "board_count": 16,
+      "perfect_matching_count": 2,
+      "boards_containing_perfect_matching": 7,
+      "matching_covered_nonempty_boards": 3,
+      "full_board": {
+        "board": "0xf",
+        "coefficient": -1,
+        "components": 1,
+        "expected": -1
+      },
+      "nonmatching_boards_with_nonzero_coefficient": [],
+      "matching_covered_formula_counterexamples": []
+    },
+    {
+      "n": 3,
+      "edge_count": 9,
+      "board_count": 512,
+      "perfect_matching_count": 6,
+      "boards_containing_perfect_matching": 247,
+      "matching_covered_nonempty_boards": 49,
+      "full_board": {
+        "board": "0x1ff",
+        "coefficient": 1,
+        "components": 1,
+        "expected": 1
+      },
+      "nonmatching_boards_with_nonzero_coefficient": [],
+      "matching_covered_formula_counterexamples": []
+    },
+    {
+      "n": 4,
+      "edge_count": 16,
+      "board_count": 65536,
+      "perfect_matching_count": 24,
+      "boards_containing_perfect_matching": 37823,
+      "matching_covered_nonempty_boards": 7443,
+      "full_board": {
+        "board": "0xffff",
+        "coefficient": -1,
+        "components": 1,
+        "expected": -1
+      },
+      "nonmatching_boards_with_nonzero_coefficient": [],
+      "matching_covered_formula_counterexamples": []
+    }
+  ],
+  "all_checks_pass": true
+}

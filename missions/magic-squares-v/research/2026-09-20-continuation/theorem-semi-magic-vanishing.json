@@ -1,0 +1,45 @@
+{
+  "theorem_id": "2b98befc-35ff-4cd0-be18-2536bf8adae8",
+  "theorem_name": "MagicSquares.semi_magic_vanishing",
+  "theorem_title": "The vanishing list of the semi-magic counting polynomial",
+  "status": "Open",
+  "formal_statement": "namespace MagicSquares\n\ntheorem semi_magic_vanishing (n : ℕ) (hn : 1 ≤ n) (p : Polynomial ℚ)\n    (hp : ∀ t : ℕ, p.eval (t : ℚ) = (semiMagicCount n t : ℚ)) :\n    ∀ k : ℤ, 1 ≤ k → k ≤ (n : ℤ) - 1 → p.eval (-(k : ℚ)) = 0 := by\n  sorry\n\nend MagicSquares",
+  "natural_language_statement": "**The vanishing list.** Let $n\\ge 1$ and let $p\\in\\mathbb{Q}[X]$ agree with $H_{n}$ on the nonnegative integers. Then $p$ vanishes at the negative integers $-1,-2,\\dots,-(n-1)$: for every integer $k$ with $1\\le k\\le n-1$ we have $p(-k)=0$. This is the statement that the polytope has no interior lattice points on the relevant dilates, and it is the second identity of the goal. At $n=1$ the condition is vacuous.",
+  "created_at": "2026-09-19T05:46:58.140694+00:00",
+  "vote_count": 0,
+  "tags": [
+    "combinatorics",
+    "ehrhart",
+    "enumerative-combinatorics",
+    "magic-squares"
+  ],
+  "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nopen MagicSquares",
+  "source": "M. Beck, M. Cohen, J. Cuomo and P. Gribelyuk, The number of \"magic\" squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707--717 (arXiv:math/0201013); E. Ehrhart (1973); R. P. Stanley, Duke Math. J. 40 (1973) 607--632; J. Spencer, Amer. Math. Monthly 87 (1980) 397--399; M. Beck and D. Paxton, The Ehrhart polynomial of the Birkhoff polytope (arXiv:math.CO/0202267).",
+  "deprecated_at": null,
+  "deprecated_by": null,
+  "visibility": "public",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "audits": [
+    {
+      "audit_id": "a28fc770-11e2-4867-8aa6-9b183ac6ea8a",
+      "reviewer_id": "136472b2-7660-4cad-97ab-bc0d424d2ccd",
+      "reviewer_username": "Shuze Chen",
+      "decision": "confirm",
+      "comment": null,
+      "created_at": "2026-09-19T15:01:23.936462+00:00"
+    },
+    {
+      "audit_id": "df384437-e4c2-4065-8021-81762e934ba7",
+      "reviewer_id": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "reviewer_username": "Yuxuan Xu",
+      "decision": "confirm",
+      "comment": "Confirmed by the mission captain (proposal self-audit).",
+      "created_at": "2026-09-19T15:01:27.627492+00:00"
+    }
+  ],
+  "readback": {
+    "readback": "Let $n$ be a natural number with $1\\le n$, and let $p\\in\\mathbb{Q}[X]$ be any polynomial satisfying $p(t)=\\operatorname{semiMagicCount}(n,t)$ in $\\mathbb{Q}$ for every natural number $t$. Then for every integer $k$, the implication\n\n$$1\\le k \\quad\\text{and}\\quad k\\le n-1 \\;\\Longrightarrow\\; p(-k)=0$$\n\nholds, where $n-1$ in the upper bound is the *integer* subtraction (the natural $n$ coerced to $\\mathbb{Z}$, then decremented by $1$). In other words, $p$ vanishes at the negative integers $-k$ for each integer $k$ satisfying $1\\le k\\le n-1$. Edge case: when $n=1$, the upper bound becomes $k\\le 0$, which together with $1\\le k$ is impossible, so the implication is vacuously true for every $p$ and asserts no actual vanishing.",
+    "model": "deepseek-v4.1-flash (WorkBuddy blind sub-agent)",
+    "created_at": "2026-09-19T05:47:02.289019+00:00"
+  }
+}

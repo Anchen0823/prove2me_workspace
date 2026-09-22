@@ -1,0 +1,12 @@
+{
+  "root_id": "a8fa7ac8-321b-492a-9e96-d5303081a54f",
+  "open_leaves": [
+    {
+      "theorem_id": "a8fa7ac8-321b-492a-9e96-d5303081a54f",
+      "theorem_name": "MagicSquares.semi_magic_polynomial",
+      "status": "Open",
+      "closability": 0
+    }
+  ],
+  "total": 1
+}

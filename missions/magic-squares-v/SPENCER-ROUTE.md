@@ -1,5 +1,8 @@
 # The Spencer route to `semi_magic_polynomial_exists`
 
+> **Continuation, 2026-09-20:** the positive-line-sum restriction has been removed by closed-support induction; negative-integer vanishing is also proved locally. See [CLOSED-SUPPORT.md](CLOSED-SUPPORT.md), `ClosedPolynomial.lean`, and `ClosedVanishing.lean`. Earlier descriptions of S5 as still open below are historical; consult [status.md](status.md) for current verification and platform state.
+
+
 Working notes for Mission V, rung `M5`.  Written 2026-09-19 after reading the source and
 scouting Mathlib.  **Read this before writing any code for `semi_magic_polynomial_exists`,
 `semi_magic_reciprocity` or `semi_magic_vanishing`.**
@@ -308,7 +311,8 @@ squares, but that is not costed yet.
 | S3 | degree bound via `ρ` (step 4, sharp version) **and** the matching lower bound | **done, both directions** 2026-09-19 — upper bound `spencer/Rank.lean` + `spencer/Sharp.lean`; lower bound `spencer/Degree.lean`, giving the **exact** degree `(n-1)²` for `t ≥ 1` (`exists_polynomial_semiMagicCount_degree_eq`) |
 | S4a | the cardinality bridge: `semiMagicCount n t = Σ_{B ⊆ univ} #(matFiber n t t B)`, i.e. `matBox n t` is `univ` transported along `↑` | **done**, `spencer/Aggregate.lean` (`semiMagicCount_eq_sum_matFiber`) |
 | S4b | `IsPolyDegLe` is closed under the shift `r ↦ r + 1` and under sums over a finite set, so `t ↦ semiMagicCount n t` agrees with a polynomial for `t ≥ 1` | **done**, `spencer/Aggregate.lean` (`exists_polynomial_semiMagicCount_pos`, degree `≤ n * n`) |
-| S5 | `q(-1) = 1` (= reciprocity at −1) | the hard one; see §4.1 |
+| S5 | `q(-1) = 1` (= reciprocity at −1) | the hard one; see §4.1 and **`S5-NOTES.md`** — 2026-09-20: reduced to exactly (A) `q_B(−1) = (−1)^rankB B` on supports + (B) `Σ_B(−1)^rankB B = 1`, both verified numerically for `n ≤ 4`; the reduction itself is now machine-checked in
+`spencer/S5.lean` (§8.5) |
 
 Suggested ordering given §4.1: **S2 → S3 → S4, then publish the `t ≥ 1` statement as a new
 node**, and treat S5 as its own research problem.  `semi_magic_count_four` (`n = 4`) has the
@@ -455,11 +459,11 @@ never has to be materialised.
 ### 8.1 Building
 
 The files import each other, so they are a real Lake library (2026-09-19, added alongside
-`RosserLcmBlocks` in `lakefile.lean`); since S3 and Brick 11 landed the lib has **eight** roots
-(`Spencer, HallSupport, SupportSplit, Recursion, Aggregate, Rank, Sharp, Degree`):
+`RosserLcmBlocks` in `lakefile.lean`); since Brick 12 landed the lib has **nine** roots
+(`Spencer, HallSupport, SupportSplit, Recursion, Aggregate, Rank, Sharp, Degree, S5`):
 
 ```
-lake build SpencerRoute          # builds all eight, ~2-3 min cold, one module ~30 s warm
+lake build SpencerRoute          # builds all nine, ~2-3 min cold, one module ~30 s warm
 ```
 
 The library is **not** a default target, so a plain `lake build` is unaffected.  Module names inside
@@ -558,3 +562,50 @@ all of them `simp`/`rw` friction rather than mathematics:
 * `push_neg` is deprecated in this pin alongside `autoImplicit false`; use `push Not`.
 * `le_or_lt` / `lt_or_le` are not in scope as bare names in this file — `by_cases hn2 : 1 < n`
   with an explicit `n ≤ 1` branch is the rewrite that compiles.
+
+### 8.5 Brick 12 (`S5.lean`) — the S5 reduction, machine-checked — **done** 2026-09-20
+
+`spencer/S5.lean` turns `S5-NOTES.md` §3 into Lean.  New declarations:
+
+| declaration | what it says |
+|---|---|
+| `qB n B`, `qB_natDegree`, `qB_eval` | the polynomial with `qB n B r = #(line-sum-`(r+1)` fibre at `B`)`, degree `≤ #B` |
+| `sB`, `sB_eq` | `sB n B := qB n B (-1)` — the number S5 is about |
+| `nbOf n B` | the split's neighbour set, `∅` when no permutation fits inside `B` |
+| `gB_succ` | `gB n B (r+1) = gB n B r + Σ_{C ∈ nbOf n B} gB n C r`, at **every** `B` |
+| `qB_rec` | `qB (X+1) - qB = Σ_{C ∈ nbOf n B} qB C`, an identity in `ℚ[X]` |
+| `sB_rec` | `sB n B = #(level-1 fibre at B) - Σ_{C ∈ nbOf n B} sB n C` — no polynomial left |
+| `IsSupport`, `supportSet` | "support of a square of positive line sum", as a finset |
+| `sB_eq_zero_of_not_isSupport` | non-supports contribute `0` |
+| `ReciprocityAtNegOne`, `FaceLatticeEuler` | (A) and (B) of `S5-NOTES.md` §3, as `Prop`s |
+| `sum_sB_eq_one_of` | (A) + (B) ⟹ `Σ_B sB n B = 1` |
+| `exists_polynomial_semiMagicCount_of_sum_sB` | `Σ_B sB n B = 1` ⟹ the count is polynomial on **all** of `ℕ` |
+| `exists_polynomial_semiMagicCount_degLe_of_sum_sB` | the same, with `natDegree ≤ (n-1)^2` kept |
+
+The last two are the machine-checked form of "the only missing inputs are (A) and (B)": the
+polynomial is `qAll n := (Σ_B qB n B).comp (X - 1)`, `qAll_eval_pos` gives agreement for `t ≥ 1`
+without any new input, and `qAll_eval_zero` identifies the value at `t = 0` with `Σ_B sB n B`.
+Together with `degree_eq` this says: **`Σ_B sB n B = 1` ⟹ the mission's goal.**
+
+No `sorry`, no `axiom`: all new theorems report `[propext, Classical.choice, Quot.sound]`
+(`tmp/axiom_check_s5.lean`); `lake build SpencerRoute` is green (`Built …S5 (23s)`).
+
+Implementation notes (all `simp`/`rw` friction; they will recur):
+
+* **A polynomial vanishing on `ℕ` is zero** (`poly_eq_zero_of_nat_eval_eq_zero`, via
+  `Polynomial.eq_zero_of_infinite_isRoot` + `Set.infinite_range_of_injective Nat.cast_injective`);
+  the positive-integer version multiplies by `X` and uses `Polynomial.X_ne_zero`.  This is the only
+  `ℚ[X]`-specific input of the brick, and it is what turns a recurrence in `t : ℕ` into a
+  polynomial identity — i.e. what makes evaluating at `-1` legitimate at all.
+* `(0 : ℚ)` and `((0 : ℕ) : ℚ)` are **not** interchangeable for `rw`.  Three rewrites failed on
+  this; either state the lemma with the same cast shape as the call site (`qAll_eval_zero` is
+  stated at `((0 : ℕ) : ℚ)` for exactly this reason) or insert
+  `have hc : (0 : ℚ) = ((0 : ℕ) : ℚ) := by norm_num` first.
+* `Sharp.lean` **already had** `gB_eq_zero_of_no_perm`, in the shape `(∀ σ, ¬ φ ⊆ B)` rather than
+  `¬ ∃ σ, φ ⊆ B`.  Same statement, different term: reuse it and pass `fun σ hσ => h ⟨σ, hσ⟩`.
+* `semiMagicCount` lives in the `MagicSquares` namespace — `open MagicSquares` is required (every
+  other brick that mentions it has it).
+* unfolding a `by classical exact …` definition (`supportSet`) needs `classical` **in the proof
+  that unfolds it**, or `DecidablePred (IsSupport n)` cannot be synthesised.
+* `(A - B - C).eval x` needs `eval_sub` twice (left-associated `-`); `simp only [Polynomial.eval_sub,
+  …]` handles both matches in one pass, a `rw` list may not.

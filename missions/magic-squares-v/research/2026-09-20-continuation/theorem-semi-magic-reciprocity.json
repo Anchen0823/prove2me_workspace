@@ -1,0 +1,45 @@
+{
+  "theorem_id": "32ea160a-bf6c-4a8f-90f7-31289a3d3ba3",
+  "theorem_name": "MagicSquares.semi_magic_reciprocity",
+  "theorem_title": "Ehrhart-Macdonald reciprocity for the semi-magic counting function",
+  "status": "Open",
+  "formal_statement": "namespace MagicSquares\n\ntheorem semi_magic_reciprocity (n : ℕ) (hn : 1 ≤ n) (p : Polynomial ℚ)\n    (hp : ∀ t : ℕ, p.eval (t : ℚ) = (semiMagicCount n t : ℚ)) :\n    ∀ t : ℤ, p.eval (((-(n : ℤ) - t : ℤ) : ℚ))\n      = (-1 : ℚ) ^ (n - 1) * p.eval ((t : ℤ) : ℚ) := by\n  sorry\n\nend MagicSquares",
+  "natural_language_statement": "**The reciprocity law.** Let $n\\ge 1$ and let $p\\in\\mathbb{Q}[X]$ agree with $H_{n}$ on the nonnegative integers. Then $p(-n-t)=(-1)^{n-1}p(t)$ for every integer $t$. This is the reflection $t\\mapsto -n-t$ of the lattice-point count, rescaled by the sign $(-1)^{n-1}$; its right-hand side counts the interior of the corresponding polytope, by the Ehrhart--Macdonald reciprocity law. The identity is not visible from the combinatorial definition of $H_{n}$, which is stated only for nonnegative $t$.",
+  "created_at": "2026-09-19T05:46:40.452229+00:00",
+  "vote_count": 0,
+  "tags": [
+    "combinatorics",
+    "ehrhart",
+    "enumerative-combinatorics",
+    "magic-squares"
+  ],
+  "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nopen MagicSquares",
+  "source": "M. Beck, M. Cohen, J. Cuomo and P. Gribelyuk, The number of \"magic\" squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707--717 (arXiv:math/0201013); E. Ehrhart (1973); R. P. Stanley, Duke Math. J. 40 (1973) 607--632; J. Spencer, Amer. Math. Monthly 87 (1980) 397--399; M. Beck and D. Paxton, The Ehrhart polynomial of the Birkhoff polytope (arXiv:math.CO/0202267).",
+  "deprecated_at": null,
+  "deprecated_by": null,
+  "visibility": "public",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "audits": [
+    {
+      "audit_id": "00107d3f-e5f0-4879-a339-a013edf9639f",
+      "reviewer_id": "136472b2-7660-4cad-97ab-bc0d424d2ccd",
+      "reviewer_username": "Shuze Chen",
+      "decision": "confirm",
+      "comment": null,
+      "created_at": "2026-09-19T15:01:23.729116+00:00"
+    },
+    {
+      "audit_id": "eed68468-cc72-44d0-bca5-3406a37b51de",
+      "reviewer_id": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "reviewer_username": "Yuxuan Xu",
+      "decision": "confirm",
+      "comment": "Confirmed by the mission captain (proposal self-audit).",
+      "created_at": "2026-09-19T15:01:27.627492+00:00"
+    }
+  ],
+  "readback": {
+    "readback": "Let $n$ be a natural number with $1\\le n$, and let $p\\in\\mathbb{Q}[X]$ be any polynomial satisfying that for every natural number $t$, $p(t)=\\operatorname{semiMagicCount}(n,t)$ (both sides viewed in $\\mathbb{Q}$). Then for every integer $t$,\n\n$$p((-n)-t)=(-1)^{\\,n-1}\\cdot p(t),$$\n\nwhere $(-n)-t$ denotes $-n$ minus $t$ (i.e. the integer $-(n+t)$, with $n$ first coerced to $\\mathbb{Z}$ and negated, then subtracting $t$, and finally lifted to $\\mathbb{Q}$), and the exponent $n-1$ is the natural-number subtraction (safe because $1\\le n$). The base $(-1)$ is the rational number $-1$ raised to the natural power $n-1$. Thus the theorem asserts a symmetry of $p$ under the reflection $t\\mapsto -n-t$, rescaled by the factor $(-1)^{n-1}$.",
+    "model": "deepseek-v4.1-flash (WorkBuddy blind sub-agent)",
+    "created_at": "2026-09-19T05:46:45.460549+00:00"
+  }
+}

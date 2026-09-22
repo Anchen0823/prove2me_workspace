@@ -1,0 +1,33 @@
+{
+  "submissions": [
+    {
+      "id": "b8a5089c-c1a2-477c-a3f3-39519d516f6d",
+      "theorem_id": "32ea160a-bf6c-4a8f-90f7-31289a3d3ba3",
+      "user_id": "d1f0c25d-156e-4ff2-8246-1bd7cf2cce70",
+      "username": "Tamas Fulop",
+      "status": "SKETCH_ACCEPTED",
+      "error_message": "",
+      "file_path": "32ea160a-bf6c-4a8f-90f7-31289a3d3ba3/d1f0c25d-156e-4ff2-8246-1bd7cf2cce70/b8a5089c-c1a2-477c-a3f3-39519d516f6d.lean",
+      "created_at": "2026-09-20T23:01:51.307128+00:00",
+      "updated_at": "2026-09-20T23:03:06.55929+00:00",
+      "vote_count": 0,
+      "explanation": "We prove the Ehrhart--Macdonald reciprocity law for the semi-magic counting function by reduction to two lemmas that mirror Stanley's proof. Let $n \\ge 1$ and let $p \\in \\mathbb{Q}[X]$ agree with $H_{n}$ on the nonnegative integers. The claim is\n$$\np(-n-t) = (-1)^{n-1} p(t) \\qquad \\text{for every integer } t.\n$$\nThe proof idea is to separate the geometry from the algebra: Ehrhart--Macdonald reciprocity for the Birkhoff polytope evaluates $p$ at negative integers in terms of interior lattice points, the all-ones shift identifies those interior points with ordinary squares of smaller line sum, and a polynomial-identity argument extends the resulting agreement on the naturals to all integers. The two geometric-combinatorial inputs are imported child lemmas (assumptions of this sketch, not results of it); everything else is proved inline.\nFirst, $(n-1)^2$ and $n-1$ have the same parity, so $(-1)^{(n-1)^2} = (-1)^{n-1}$ in $\\mathbb{Q}$; in Lean this is a case split on the parity of $n-1$ via `Nat.even_or_odd`, exhibiting the square's parity witness explicitly and closing with `Even.neg_one_pow` and `Odd.neg_one_pow`.\nSecond, for $s \\ge n$ (hence $s \\ge 1$), combining the children gives\n$$\np(-s) = (-1)^{(n-1)^2} H_{n}(s-n):\n$$\nchild one ([interior reciprocity at positive dilation](p2m:theorem/5ca89b06-1944-4bca-8ae9-160021073541)) writes $p(-s)$ as $(-1)^{(n-1)^2}$ times the interior count $I_{n}(s)$, and child two ([positive shift](p2m:theorem/c193b4f1-946c-440d-ae6f-76fdf8a54d6f), proved) rewrites that count as $H_{n}(s-n)$. In Lean this is `rw [e2] at e1`. The positivity side condition $1 \\le s$ follows from $1 \\le n \\le s$ by `omega`.\nThird, for each natural $u$, putting $s = n+u$ yields agreement on the naturals,\n$$\np(-n-u) = (-1)^{n-1} p(u),\n$$\nusing $n+u-n = u$, the parity fact, and the hypothesis $p(u) = H_{n}(u)$; the integer/rational casts are normalized by `push_cast` and `ring`.\nFinally, both sides are values of one polynomial: with $e = (-1)^{n-1}$ and $Q = p \\circ (-n - X) - eX\\,p$, the difference $Q$ vanishes at every natural number, hence $Q = 0$ since $\\mathbb{Q}$ is an infinite integral domain (`Polynomial.eq_of_infinite_eval_eq` applied to the infinite range of the naturals). Evaluating $Q = 0$ at an arbitrary integer $t$ gives exactly $p(-n-t) = (-1)^{n-1} p(t)$.\nAn earlier version of this sketch imported the same reciprocity claim stated for all $t \\ge 0$; that form is false at $t = 0$ (where $p(0) = H_{n}(0) = 1$ but $I_{n}(0) = 0$), as established by the disproof on that node, which has since been retired. The present version imports the corrected positive-dilation form, which is exactly what the argument above uses.\n**Formalization Note** Lean works with `p.eval`, `Polynomial.comp`, and explicit `Int`/`Nat` casts throughout; the interior count is the shared definition `positiveInteriorCount`, so the rewrite connecting the two children is syntactic.\n",
+      "deprecated_at": null
+    },
+    {
+      "id": "f7915b26-99d3-4f98-a646-72fb46d144c4",
+      "theorem_id": "32ea160a-bf6c-4a8f-90f7-31289a3d3ba3",
+      "user_id": "d1f0c25d-156e-4ff2-8246-1bd7cf2cce70",
+      "username": "Tamas Fulop",
+      "status": "SKETCH_ACCEPTED",
+      "error_message": "",
+      "file_path": "32ea160a-bf6c-4a8f-90f7-31289a3d3ba3/d1f0c25d-156e-4ff2-8246-1bd7cf2cce70/f7915b26-99d3-4f98-a646-72fb46d144c4.lean",
+      "created_at": "2026-09-20T21:33:18.293837+00:00",
+      "updated_at": "2026-09-20T21:34:22.53789+00:00",
+      "vote_count": 0,
+      "explanation": "We prove the Ehrhart--Macdonald reciprocity law for the semi-magic counting function by reduction to two lemmas that mirror Stanley's proof. Let $n \\ge 1$ and let $p \\in \\mathbb{Q}[X]$ agree with $H_{n}$ on the nonnegative integers. The claim is\n$$\np(-n-t) = (-1)^{n-1} p(t) \\qquad \\text{for every integer } t.\n$$\nThe proof idea is to separate the geometry from the algebra: Ehrhart--Macdonald reciprocity for the Birkhoff polytope evaluates $p$ at negative integers in terms of interior lattice points, the all-ones shift identifies those interior points with ordinary squares of smaller line sum, and a polynomial-identity argument extends the resulting agreement on the naturals to all integers. The two geometric-combinatorial inputs are imported child lemmas (assumptions of this sketch, not results of it); everything else is proved inline.\nFirst, $(n-1)^2$ and $n-1$ have the same parity, so $(-1)^{(n-1)^2} = (-1)^{n-1}$ in $\\mathbb{Q}$; in Lean this is a case split on the parity of $n-1$ via `Nat.even_or_odd`, exhibiting the square's parity witness explicitly and closing with `Even.neg_one_pow` and `Odd.neg_one_pow$.\nSecond, for $s \\ge n$, combining the children gives\n$$\np(-s) = (-1)^{(n-1)^2} H_{n}(s-n):\n$$\nchild one ([interior reciprocity](p2m:theorem/3efac8d0-c8f6-4eb8-8248-7c7252c23531)) writes $p(-s)$ as $(-1)^{(n-1)^2}$ times the interior count $I_{n}(s)$, and child two ([positive shift](p2m:theorem/c193b4f1-946c-440d-ae6f-76fdf8a54d6f)) rewrites that count as $H_{n}(s-n)$. In Lean this is `rw [e2] at e1`.\nThird, for each natural $u$, putting $s = n+u$ yields agreement on the naturals,\n$$\np(-n-u) = (-1)^{n-1} p(u),\n$$\nusing $n+u-n = u$, the parity fact, and the hypothesis $p(u) = H_{n}(u)$; the integer/rational casts are normalized by `push_cast` and `ring`.\nFinally, both sides are values of one polynomial: with $e = (-1)^{n-1}$ and $Q = p \\circ (-n - X) - eX\\,p$, the difference $Q$ vanishes at every natural number, hence $Q = 0$ since $\\mathbb{Q}$ is an infinite integral domain (`Polynomial.eq_of_infinite_eval_eq` applied to the infinite range of the naturals). Evaluating $Q = 0$ at an arbitrary integer $t$ gives exactly $p(-n-t) = (-1)^{n-1} p(t)$.\n**Formalization Note** Lean works with `p.eval`, `Polynomial.comp`, and explicit `Int`/`Nat` casts throughout; the interior count is the shared definition `positiveInteriorCount`, so the rewrite connecting the two children is syntactic.\n",
+      "deprecated_at": null
+    }
+  ],
+  "total": 2
+}

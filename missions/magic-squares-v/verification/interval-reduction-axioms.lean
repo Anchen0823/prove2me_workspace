@@ -1,0 +1,6 @@
+import examples.«magic-squares».spencer.MatchingIntervalReduction
+
+#print axioms MagicSquaresSpencer.weighted_weisner
+#print axioms MagicSquaresBoundary.sum_interval_eq_matchingCore
+#print axioms MagicSquaresBoundary.matchingEulerCoefficient_eq_zero_of_not_matchingCovered
+#print axioms MagicSquaresBoundary.matchingBoundaryCriterion_of_intervalEuler

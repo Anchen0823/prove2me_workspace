@@ -1,0 +1,45 @@
+{
+  "theorem_id": "3dc34529-feed-4b21-bd4f-443097422b63",
+  "theorem_name": "MagicSquares.semi_magic_polynomial_exists",
+  "theorem_title": "The counting function of semi-magic squares is a polynomial",
+  "status": "Open",
+  "formal_statement": "namespace MagicSquares\n\ntheorem semi_magic_polynomial_exists (n : ℕ) (hn : 1 ≤ n) :\n    ∃ p : Polynomial ℚ,\n      p.natDegree = (n - 1) ^ 2 ∧\n        ∀ t : ℕ, p.eval (t : ℚ) = (semiMagicCount n t : ℚ) := by\n  sorry\n\nend MagicSquares",
+  "natural_language_statement": "**Existence and degree, uniformly in the order.** For every $n\\ge 1$ there is a polynomial $p\\in\\mathbb{Q}[X]$, of degree exactly $(n-1)^{2}$, whose value at each nonnegative integer $t$ is the number $H_{n}(t)$ of $n\\times n$ semi-magic squares of line sum $t$. The degree $(n-1)^{2}$ is the dimension of the Birkhoff polytope $B_{n}$, and the integrality of its vertices is what makes the period one, so that the counting function is a polynomial and not merely a quasi-polynomial. This is the first half of the goal, isolated so that it can be attacked on its own.",
+  "created_at": "2026-09-19T05:46:22.493778+00:00",
+  "vote_count": 0,
+  "tags": [
+    "combinatorics",
+    "ehrhart",
+    "enumerative-combinatorics",
+    "magic-squares"
+  ],
+  "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nopen MagicSquares",
+  "source": "M. Beck, M. Cohen, J. Cuomo and P. Gribelyuk, The number of \"magic\" squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707--717 (arXiv:math/0201013); E. Ehrhart (1973); R. P. Stanley, Duke Math. J. 40 (1973) 607--632; J. Spencer, Amer. Math. Monthly 87 (1980) 397--399; M. Beck and D. Paxton, The Ehrhart polynomial of the Birkhoff polytope (arXiv:math.CO/0202267).",
+  "deprecated_at": null,
+  "deprecated_by": null,
+  "visibility": "public",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "audits": [
+    {
+      "audit_id": "4e534c70-8136-4f2f-88ac-9512428b2589",
+      "reviewer_id": "136472b2-7660-4cad-97ab-bc0d424d2ccd",
+      "reviewer_username": "Shuze Chen",
+      "decision": "confirm",
+      "comment": null,
+      "created_at": "2026-09-19T15:01:23.440273+00:00"
+    },
+    {
+      "audit_id": "adc0064c-b88a-4bfa-a48b-c3b46b33c446",
+      "reviewer_id": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "reviewer_username": "Yuxuan Xu",
+      "decision": "confirm",
+      "comment": "Confirmed by the mission captain (proposal self-audit).",
+      "created_at": "2026-09-19T15:01:27.627492+00:00"
+    }
+  ],
+  "readback": {
+    "readback": "Let $n$ be a natural number and assume the hypothesis $1\\le n$. Then there exists a polynomial $p\\in\\mathbb{Q}[X]$ such that two conditions hold. First, the **natural degree** of $p$ equals $(n-1)^2$, where the subtraction $n-1$ is the natural-number subtraction (guaranteed non-negative by the assumption $1\\le n$). The natural degree $\\operatorname{natDegree}(p)$ is defined to be $0$ when $p$ is the zero polynomial and otherwise equals the ordinary degree; consequently this condition forces $p$ to be non-zero with ordinary degree exactly $(n-1)^2$. Second, for every natural number $t$, evaluating $p$ at the rational number obtained by lifting $t$ to $\\mathbb{Q}$ equals $\\operatorname{semiMagicCount}(n,t)$ also coerced to $\\mathbb{Q}$. (As above, $\\operatorname{semiMagicCount}(n,t)$ counts the $n\\times n$ arrays over $\\operatorname{Fin}(t+1)$ whose every row and column sums to $t$.)",
+    "model": "deepseek-v4.1-flash (WorkBuddy blind sub-agent)",
+    "created_at": "2026-09-19T05:46:24.531974+00:00"
+  }
+}

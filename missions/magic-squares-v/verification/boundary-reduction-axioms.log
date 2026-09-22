@@ -1,0 +1,23 @@
+'MagicSquaresSpencer.polynomial_eq_of_eq_difference' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MagicSquaresSpencer.qB_rec_perm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MagicSquaresSpencer.qB_eq_zero_of_not_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MagicSquaresSpencer.normalized_reciprocity_of_boundaryBalance' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MagicSquaresSpencer.semiMagic_normalized_reflection_of_boundaryBalance' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MagicSquaresSpencer.finiteBoundaryEuler_implies_boundaryBalance' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'reflection_sign' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MagicSquaresSpencer.semiMagic_reciprocity_of_finiteBoundaryEuler' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MagicSquaresSpencer.semiMagic_root_of_finiteBoundaryEuler' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MagicSquaresSpencer.matchingBoundaryCriterion_iff_finiteBoundaryEuler' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MagicSquaresSpencer.semiMagic_reciprocity_of_matchingBoundaryCriterion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

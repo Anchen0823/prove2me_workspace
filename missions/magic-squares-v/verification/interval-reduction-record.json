@@ -1,0 +1,49 @@
+{
+  "date": "2026-09-22",
+  "lean": "4.33.1",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "build_exit_code": 0,
+  "build_jobs": 8742,
+  "axiom_check_exit_code": 0,
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "unproved_hypothesis": "MagicSquaresBoundary.MatchingIntervalEuler n",
+  "full_mission_proved": false,
+  "weighted_weisner_platform": {
+    "id": "a7359247-9de6-4400-ab48-0d578b4af9be",
+    "theorem_id": "7aaef4ef-b6d4-43f6-82ae-d8ea5f8a4dc1",
+    "user_id": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+    "status": "ACCEPTED",
+    "error_message": "",
+    "file_path": "7aaef4ef-b6d4-43f6-82ae-d8ea5f8a4dc1/418b0711-62a5-416a-ba5d-876ae8758fe3/a7359247-9de6-4400-ab48-0d578b4af9be.lean",
+    "created_at": "2026-09-22T14:42:27.459038+00:00",
+    "updated_at": "2026-09-22T14:43:27.959488+00:00"
+  },
+  "corrected_prior_validation": "MatchingBoundaryEasyCase membership composition fixed; actual full dependency build passed after correction.",
+  "sources": [
+    {
+      "path": "examples/magic-squares/spencer/MatchingCore.lean",
+      "sha256": "e05dd916443a11dc72f9bcb070cdf4b5d3ed7d886da65a2e6d94b268f973b86c"
+    },
+    {
+      "path": "examples/magic-squares/spencer/MatchingCoefficientSupport.lean",
+      "sha256": "b2b308a5b185834584b55b1edb8831ee95a2210b702f73711429c4a521fcae2d"
+    },
+    {
+      "path": "examples/magic-squares/spencer/WeightedWeisner.lean",
+      "sha256": "fadba3e25e5dd4899d33f821df2cc9fe26c7838a5605e2d6196d4aaea5087209"
+    },
+    {
+      "path": "examples/magic-squares/spencer/MatchingIntervalReduction.lean",
+      "sha256": "24214875e36b90625190c6991ff0b39526d986d0e398f89463f7267980c7b852"
+    },
+    {
+      "path": "examples/magic-squares/spencer/MatchingBoundaryEasyCase.lean",
+      "sha256": "bf22f86033b044f7bad6d95bf1597cd0daafb727098331f893466f2e42e794a7"
+    }
+  ],
+  "solution_sha256": "597b5c37a6ca7c9449692121674f66e4c3f883cdc7fc9433be25820aaefc2d4d"
+}

@@ -1,0 +1,58 @@
+{
+  "date": "2026-09-22",
+  "mission": "magic-squares-v",
+  "lean": "leanprover/lean4:v4.33.1",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "build": {
+    "targets": [
+      "examples.«magic-squares».spencer.FirstNegativeValue"
+    ],
+    "exit_code": 0,
+    "jobs": 8727
+  },
+  "axiom_check": {
+    "file": "missions/magic-squares-v/verification/support-constants-axioms.lean",
+    "log": "missions/magic-squares-v/verification/support-constants-axioms.log",
+    "exit_code": 0,
+    "checked_declarations": 18,
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "sorryAx": false
+  },
+  "files": [
+    {
+      "path": "examples/magic-squares/spencer/SupportPartition.lean",
+      "sha256": "0D6EC643217FEF11FF019C08C8F5E855C62A182834687F219F607810DAE03E65"
+    },
+    {
+      "path": "examples/magic-squares/spencer/SupportExactIE.lean",
+      "sha256": "8357DE90FE1DE49D10BD60203B4BC9B8030D4147551D249D30A27BEAE743F281"
+    },
+    {
+      "path": "examples/magic-squares/spencer/SupportConstants.lean",
+      "sha256": "B0EEE3F453EF1526396C79BF88AB615EA39A57E055C3908BA811444DBAED9124"
+    },
+    {
+      "path": "examples/magic-squares/spencer/PositiveTranslation.lean",
+      "sha256": "A57EFB4B018495F208CBC605A0CCE85B712D9DFEE2EE5E24A8A971D78FF09205"
+    },
+    {
+      "path": "examples/magic-squares/spencer/ReflectionExtension.lean",
+      "sha256": "99A1D2670CB197BC752DD62A6A6BDFEDA682703BA35C43E0A7516105D2F3460F"
+    },
+    {
+      "path": "examples/magic-squares/spencer/FirstNegativeValue.lean",
+      "sha256": "CD7A691E3BBAF53984FD425AC76313F8E912CA1D316F579D98CDBF48D809CFA9"
+    },
+    {
+      "path": "examples/magic-squares/spencer/SupportCoverage.lean",
+      "sha256": "4F7FA6E75C71320938B633113B4CD5180EC73EC9E1666C1903B4E1C1102C1B88"
+    }
+  ],
+  "platform_submission": null,
+  "remaining_open_leaf": "985f7b0a-962f-4039-804c-794f2ce86533",
+  "full_reciprocity_proved": false
+}
