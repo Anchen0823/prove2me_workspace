@@ -1,0 +1,38 @@
+{
+  "lean": "4.33.1",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "local_build": {
+    "exit_code": 0,
+    "jobs": 8743,
+    "log": "verification/deletion-face-build.log"
+  },
+  "axioms": {
+    "exit_code": 0,
+    "sorryAx": false,
+    "log": "verification/deletion-face-axioms.log"
+  },
+  "sources": {
+    "examples/magic-squares/spencer/MatchingDeletion.lean": "eba4566dcb48c97e4400c458bbbc3ae63eaab8b2308a57587211d4de7c5173cf",
+    "examples/magic-squares/spencer/SupportIntervalIE.lean": "5a25bc318d4e85745a832736f6f4cbae19a5583c9463bf31543eafe9408411a7",
+    "examples/magic-squares/spencer/OrthantFace.lean": "9a2782dd7a2efbacf982e49ba3ed837e0085e91cf19be1687aab9a15eab1a05b",
+    "examples/magic-squares/spencer/OrthantFaceSupport.lean": "7d37266c5294fcc0531201ca2e16821938227074af52493de383d9a6573fc9cc",
+    "examples/magic-squares/spencer/OrthantCoordinateFace.lean": "0f33150f5c12ce23889cf3e7b84ec5c04373c0da6e1f9a335985c197c2092fef",
+    "Solutions/Sol_Finset_interval_inclusion_exclusion.lean": "478ae6a144d540051c4a1ddb4b4233ccdf927c411a1d348257d1451129053bcf",
+    "Solutions/Sol_Orthant_coordinate_face.lean": "ad4116acf1e3d8de5ed20091abfb37e5e1d872412df2a80accf6b3ab569f4c65"
+  },
+  "platform_proofs": [
+    {
+      "id": "d1975d27-54ac-44dc-96bf-4e816bc201b4",
+      "theorem_id": "f6be11fe-a4bf-440c-96fc-7aa711ca505b",
+      "status": "ACCEPTED",
+      "updated_at": "2026-09-22T15:14:55.096067+00:00"
+    },
+    {
+      "id": "ee7a0ae9-a758-47e2-91b0-6555aed36389",
+      "theorem_id": "053dd816-08cd-4700-a729-3623df792e52",
+      "status": "ACCEPTED",
+      "updated_at": "2026-09-22T15:12:50.670185+00:00"
+    }
+  ],
+  "remaining": "General matching-covered interval Euler relation is unproved; mission root remains Open."
+}

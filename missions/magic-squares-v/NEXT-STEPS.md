@@ -2,6 +2,13 @@
 
 ## September 22 correction: use the live frontier
 
+Latest completed foundations: [DELETION-AND-FACES.md](DELETION-AND-FACES.md).
+The Boolean interval/deletion transform, complementary-matching cancellation,
+and the coordinate-face classification of orthant sections are now proved.
+Next use Mathlib's existing Birkhoff decomposition to connect this face
+classification to matching-covered boards. The general face-interval Euler
+relation remains the major missing theorem; these new results do not discharge it.
+
 Latest formal refinement: [INTERVAL-EULER.md](INTERVAL-EULER.md). The weighted
 Weisner cancellation and matching-core transfer are implemented, so the next
 substantive target is `MatchingIntervalEuler`: the coefficient sum on each

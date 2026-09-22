@@ -1,0 +1,10 @@
+Solutions\Sol_Finset_interval_inclusion_exclusion.lean:1:0: error: unknown module prefix 'Batteries'
+
+No directory 'Batteries' or file 'Batteries.olean' in the search path entries:
+D:\users\self_projects\prove2me_workspace\.lake\build\lib\lean
+D:\users\self_projects\prove2me_workspace\.lake\packages\mathlib\.lake\build\lib\lean
+
+c:\Users\anche\.elan\toolchains\leanprover--lean4---v4.33.1\lib\lean
+SOLUTION_LEAN_EXIT_CODE=1
+RETRY_WITH_COMPLETE_LOCAL_LAKE_PATH
+SOLUTION_RETRY_LEAN_EXIT_CODE=0

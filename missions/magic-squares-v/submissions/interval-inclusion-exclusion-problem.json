@@ -1,0 +1,10 @@
+{
+  "theorem_name": "Finset.interval_inclusion_exclusion",
+  "theorem_title": "Finite-set interval inclusion-exclusion",
+  "formal_statement": "namespace Finset\n\nopen Finset\n\ntheorem interval_inclusion_exclusion {α : Type*} [DecidableEq α]\n    (D B : Finset α) (g f : Finset α → ℚ)\n    (hf : ∀ A : Finset α, f A = ∑ C ∈ A.powerset, g C) :\n    (∑ C ∈ B.powerset.filter (fun C => D ⊆ C), g C) =\n      ∑ S ∈ D.powerset, (-1 : ℚ) ^ S.card * f (B \\ S) := by\n  sorry\n\nend Finset",
+  "preamble": "import Mathlib\nopen Finset\nattribute [local instance] Classical.propDecidable",
+  "natural_language_statement": "Let $D,B$ be finite subsets of a type with decidable equality. Let $g$ and $f$ be rational-valued functions on finite subsets, and suppose that for every finite set $A$,\n$$f(A)=\\sum_{C\\subseteq A}g(C).$$\nThen the sum of $g(C)$ over the Boolean interval $D\\subseteq C\\subseteq B$ is\n$$\\sum_{S\\subseteq D}(-1)^{|S|}f(B\\setminus S).$$\nThe formula is valid even when $D$ is not a subset of $B$; both sides then give the corresponding inclusion-exclusion value.",
+  "source": "A proved finite-sum inclusion-exclusion derivation developed in this project. It is presented as an independent specialization of Boolean-lattice inclusion-exclusion, not as a verbatim theorem from an external source.",
+  "env": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "tags": ["combinatorics", "inclusion-exclusion", "finite-sets"]
+}

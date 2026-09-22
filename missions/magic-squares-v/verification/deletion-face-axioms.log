@@ -1,0 +1,5 @@
+'MagicSquaresSpencer.sum_interval_of_powerset_sums' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MagicSquaresBoundary.matching_interval_sum_eq_zero_of_complement_matching' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MagicSquaresGeometry.isFaceOf_iff_coordinateFace' depends on axioms: [propext, Classical.choice, Quot.sound]

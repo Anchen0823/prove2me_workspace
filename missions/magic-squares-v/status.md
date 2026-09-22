@@ -2,6 +2,28 @@
 
 ## 2026-09-22 live update
 
+**Two further complete platform proofs accepted:**
+
+- `Finset.interval_inclusion_exclusion`, theorem
+  `f6be11fe-a4bf-440c-96fc-7aa711ca505b`, submission
+  `d1975d27-54ac-44dc-96bf-4e816bc201b4`: **ACCEPTED**.
+- `ConvexGeometry.orthant_section_faces_are_coordinate_faces`, theorem
+  `053dd816-08cd-4700-a729-3623df792e52`, submission
+  `ee7a0ae9-a758-47e2-91b0-6555aed36389`: **ACCEPTED**.
+
+Both complete solutions import only Mathlib. These reusable foundations do not
+yet close the mission's matching-boundary child. Saved verdicts and exact source
+hashes: `verification/deletion-face-record.json`.
+
+**New unconditional local proofs:** Boolean-interval inclusion-exclusion now
+proves the matching interval vanishes whenever the nonempty lower board has a
+perfect matching in its complement inside the upper board. Separately, every
+face of a finite-dimensional subspace intersected with the nonnegative orthant
+is now proved to be a coordinate-zero section, over any ordered field. All five
+new modules compile (8743 jobs), and three representative declarations have
+only standard axioms. See [DELETION-AND-FACES.md](DELETION-AND-FACES.md).
+The general interval Euler relation and the mission root remain Open.
+
 **Further formal refinement:** `MatchingIntervalReduction.lean` now proves that
 the coefficient sum vanishing on every nondegenerate matching-covered interval
 suffices for the published boundary criterion. The supporting matching-core,

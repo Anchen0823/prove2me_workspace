@@ -48,6 +48,11 @@ lean_lib «SpencerRoute» where
              `examples.«magic-squares».spencer.MatchingCoefficientSupport,
              `examples.«magic-squares».spencer.WeightedWeisner,
              `examples.«magic-squares».spencer.MatchingIntervalReduction,
+             `examples.«magic-squares».spencer.MatchingDeletion,
+             `examples.«magic-squares».spencer.SupportIntervalIE,
+             `examples.«magic-squares».spencer.OrthantFace,
+             `examples.«magic-squares».spencer.OrthantFaceSupport,
+             `examples.«magic-squares».spencer.OrthantCoordinateFace,
              `examples.«magic-squares».spencer.SupportConstants]
 -- Every library declares an empty `roots` plus explicit globs. Without this,
 -- Lake treats the library name as a *module* and looks for a root file

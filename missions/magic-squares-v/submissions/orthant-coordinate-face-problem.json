@@ -1,0 +1,14 @@
+{
+  "theorem_name": "ConvexGeometry.orthant_section_faces_are_coordinate_faces",
+  "theorem_title": "Faces of nonnegative subspace sections are coordinate faces",
+  "formal_statement": "namespace ConvexGeometry\n\ntheorem orthant_section_faces_are_coordinate_faces {𝕜 ι : Type*}\n    [Field 𝕜] [LinearOrder 𝕜] [IsStrictOrderedRing 𝕜] [Fintype ι]\n    (L : Submodule 𝕜 (ι → 𝕜)) (F : PointedCone 𝕜 (ι → 𝕜)) :\n    F.IsFaceOf (PointedCone.ofSubmodule L ⊓ PointedCone.positive 𝕜 (ι → 𝕜)) ↔\n      ∃ B : Set ι, ∀ x : ι → 𝕜,\n        (x ∈ F ↔\n          x ∈ (PointedCone.ofSubmodule L ⊓ PointedCone.positive 𝕜 (ι → 𝕜)) ∧\n            ∀ i, i ∉ B → x i = 0) := by\n  sorry\n\nend ConvexGeometry",
+  "natural_language_statement": "Let K be an ordered field, I a finite coordinate set, and L a linear subspace of K^I. Intersect L with the nonnegative orthant. Every face of this pointed cone is obtained by requiring a set of coordinates to vanish, and every such coordinate-zero section is a face. The statement also applies when the section has lower dimension or redundant coordinate constraints.",
+  "source": "A self-contained finite-dimensional proof using the face property of a pointed cone. A point of maximal coordinate support is formed by summing one witness for each coordinate used by the face; coordinatewise nonnegativity prevents cancellation. A small positive multiple then establishes the reverse inclusion.",
+  "env": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "tags": [
+    "convex-geometry",
+    "polyhedral-cones",
+    "linear-algebra"
+  ],
+  "preamble": "import Mathlib"
+}

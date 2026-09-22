@@ -1,0 +1,3 @@
+'MagicSquaresSpencer.sum_interval_of_powerset_sums' depends on axioms: [propext, Classical.choice, Quot.sound]
+'solution' depends on axioms: [propext, Classical.choice, Quot.sound]
+AXIOMS_LEAN_EXIT_CODE=0
