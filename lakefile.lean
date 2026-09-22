@@ -53,6 +53,7 @@ lean_lib «SpencerRoute» where
              `examples.«magic-squares».spencer.OrthantFace,
              `examples.«magic-squares».spencer.OrthantFaceSupport,
              `examples.«magic-squares».spencer.OrthantCoordinateFace,
+             `examples.«magic-squares».spencer.BirkhoffSupport,
              `examples.«magic-squares».spencer.SupportConstants]
 -- Every library declares an empty `roots` plus explicit globs. Without this,
 -- Lake treats the library name as a *module* and looks for a root file

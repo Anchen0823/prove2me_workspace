@@ -38,6 +38,13 @@ contains `exists_eq_sum_perm_of_mem_doublyStochastic` in
 `Analysis/Convex/Birkhoff.lean`; reuse its Birkhoff decomposition for this bridge.
 The remaining major obligation is the interval Euler relation itself.
 
+`BirkhoffSupport.lean` now establishes the first part of this connection: every
+positive entry of a real doubly stochastic matrix belongs to a permutation all
+of whose selected entries are positive. The proof extracts a positive-weight
+permutation from Mathlib's convex decomposition, then uses nonnegativity of all
+other terms. Normalization of the full cone and the face-lattice correspondence
+are still to be integrated.
+
 ## Verification
 
 The five new modules compiled successfully in the pinned Lean 4.33.1 environment

@@ -24,6 +24,12 @@ new modules compile (8743 jobs), and three representative declarations have
 only standard axioms. See [DELETION-AND-FACES.md](DELETION-AND-FACES.md).
 The general interval Euler relation and the mission root remain Open.
 
+The next geometric bridge has also been checked locally in
+`BirkhoffSupport.lean`: every positive entry of a real doubly stochastic matrix
+lies on a permutation entirely in its positive support. This reuses Mathlib's
+Birkhoff decomposition. It has not been separately submitted to the platform;
+normalization of the full cone and the face-lattice correspondence are next.
+
 **Further formal refinement:** `MatchingIntervalReduction.lean` now proves that
 the coefficient sum vanishing on every nondegenerate matching-covered interval
 suffices for the published boundary criterion. The supporting matching-core,

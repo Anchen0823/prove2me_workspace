@@ -1,0 +1,3 @@
+'MagicSquaresGeometry.exists_positive_permutation_through_entry' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
