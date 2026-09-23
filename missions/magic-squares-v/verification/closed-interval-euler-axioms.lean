@@ -1,0 +1,3 @@
+import examples.«magic-squares».spencer.ClosedIntervalEuler
+#print axioms MagicSquaresEuler.openInterval_indicator_eq_closed_sub_endpoints
+#print axioms MagicSquaresEuler.closedInterval_singleton_total_coeff_eq

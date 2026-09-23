@@ -1,0 +1,28 @@
+{
+  "lean": "4.33.1",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "build_exit_code": 0,
+  "build_log": "compact-real-valuation-build.log",
+  "axiom_checks": {
+    "closedInterval_indicator_relation": "closed-interval-axioms.log",
+    "compactReal_indicator_relation": "compact-real-axioms.log",
+    "openInterval_indicator_eq_closed_sub_endpoints": "closed-interval-euler-axioms.log",
+    "closedInterval_singleton_total_coeff_eq": "closed-interval-euler-axioms.log"
+  },
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "source_sha256": {
+    "examples/magic-squares/spencer/ClosedIntervalIndicator.lean": "fc9b64bf88eda670c9c4605ba00ac90f9a405cd560f875a10856514fba82cfd9",
+    "examples/magic-squares/spencer/ClosedIntervalValuation.lean": "93a03f4b53960c1344dce7494ff92a585758b06a0b2fca6063c6c9bfc7e8c9ae",
+    "examples/magic-squares/spencer/CompactRealValuation.lean": "cb0bd067a28138aa61892f00cf79adb694d381df94c0b20237268d412ac31a1e",
+    "examples/magic-squares/spencer/ClosedIntervalEuler.lean": "23aa134c7604478abdede3252cf01524796618047971601f3bd4192174e03c82"
+  },
+  "remaining": "Higher-dimensional compact-convex slicing induction, relative-interior signs and the local face Euler relation.",
+  "interval_euler_build": {
+    "exit_code": 0,
+    "log": "closed-interval-euler-lake-build.log"
+  }
+}

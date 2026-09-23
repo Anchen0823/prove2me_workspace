@@ -1,0 +1,12 @@
+⚠ [8722/8723] Built examples.«magic-squares».spencer.PerspectiveCancellation (30s)
+warning: examples/magic-squares/spencer/PerspectiveCancellation.lean:36:15: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+warning: examples/magic-squares/spencer/PerspectiveCancellation.lean:79:35: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+⚠ [8723/8723] Built examples.«magic-squares».spencer.SupportExtensionCancellation (23s)
+warning: examples/magic-squares/spencer/SupportExtensionCancellation.lean:26:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+Build completed successfully (8723 jobs).

@@ -1,0 +1,42 @@
+{
+  "theorem": "MagicSquaresEuler.compactConvex_indicator_relation",
+  "lean": "4.33.1",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "build": {
+    "exit_code": 0,
+    "jobs": 8711,
+    "log": "compact-convex-valuation-build.log"
+  },
+  "axioms": {
+    "exit_code": 0,
+    "log": "compact-convex-valuation-axioms.log",
+    "dependencies": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "source_sha256": {
+    "examples/magic-squares/spencer/ClosedIntervalIndicator.lean": "fc9b64bf88eda670c9c4605ba00ac90f9a405cd560f875a10856514fba82cfd9",
+    "examples/magic-squares/spencer/ClosedIntervalValuation.lean": "93a03f4b53960c1344dce7494ff92a585758b06a0b2fca6063c6c9bfc7e8c9ae",
+    "examples/magic-squares/spencer/CompactRealValuation.lean": "cb0bd067a28138aa61892f00cf79adb694d381df94c0b20237268d412ac31a1e",
+    "examples/magic-squares/spencer/CompactConvexProjection.lean": "39fafe83b55139191f805a37c9799dde6dcb4ed34da96cf87c75c65c6d89ba6e",
+    "examples/magic-squares/spencer/CompactConvexSlices.lean": "b5d3968133afe5b057e3f32b4e46f34097bd72abdbda927d0895f5729f7c3f20",
+    "examples/magic-squares/spencer/CompactConvexValuation.lean": "ed34b318b676f7b13ad6a5c2f76806ed772f296321b9dad9bdb36aad13b55bc1"
+  },
+  "platform_status": "Ready locally, NOT submitted. Automatic approval review service reported usage-limit failure on the last escalated operation; no attempt to bypass it was made.",
+  "git_status": "No new commit; final staging blocked because automatic approval review exceeded its usage limit. Do not bypass.",
+  "remaining": "Relative-interior Euler signs and local face Euler relation remain unproved; Mission V root is Open.",
+  "standalone": {
+    "compile_exit_code": 0,
+    "compile_log": "compact-convex-valuation-bundle-compile.log",
+    "axioms_log": "compact-convex-valuation-bundle-axioms-retry.log",
+    "audit_source_matches_bundle": true,
+    "source_sha256": {
+      "Solutions/Sol_ConvexGeometry_compact_convex_indicator_relation.lean": "47e4bd1d0ac651b76e4eb412d80a82c125ef062714a57260f3d6551b105d378e",
+      "missions/magic-squares-v/scripts/assemble_compact_convex_valuation.py": "bb7d37b514dc8e2218031754e32325373f5d87740ca492c83080e3d20f8c842f",
+      "missions/magic-squares-v/submissions/compact-convex-valuation-problem.json": "25ef5844d396906dfd1157c0d56a07b1b5f3f6aa83a645ae5b5932e653e21952",
+      "missions/magic-squares-v/submissions/compact-convex-valuation-explanation.md": "ef5eb504bf35a8fbd45e75ec423f53829733a80d4c955537e0593d6982b653c4"
+    }
+  }
+}

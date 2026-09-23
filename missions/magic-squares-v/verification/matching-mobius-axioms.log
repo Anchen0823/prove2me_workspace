@@ -1,0 +1,4 @@
+'MagicSquaresBoundary.matchingEulerCoefficient_eq_neg_mu' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MagicSquaresBoundary.matching_interval_sum_eq_neg_mu_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MagicSquaresGeometry.mobius_from_bottom_orderIso' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MagicSquaresGeometry.matchingCoefficient_face_eq_neg_mu' depends on axioms: [propext, Classical.choice, Quot.sound]

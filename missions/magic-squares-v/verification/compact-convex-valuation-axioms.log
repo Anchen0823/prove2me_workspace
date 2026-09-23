@@ -1,0 +1,3 @@
+'MagicSquaresEuler.compactConvex_indicator_relation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MagicSquaresEuler.compact_coordinateSlice' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MagicSquaresEuler.convex_coordinateSlice' depends on axioms: [propext, Classical.choice, Quot.sound]

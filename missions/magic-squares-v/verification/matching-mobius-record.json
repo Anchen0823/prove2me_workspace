@@ -1,0 +1,22 @@
+{
+  "lean": "4.33.1",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "build": {
+    "completed": true,
+    "jobs": 8752,
+    "log": "verification/face-mobius-build.log"
+  },
+  "axioms": {
+    "exit_code": 0,
+    "sorryAx": false,
+    "log": "verification/matching-mobius-axioms.log"
+  },
+  "source_sha256": {
+    "examples/magic-squares/spencer/FiniteMobiusWeights.lean": "67f3ce5eaf998ca933cff17b513d005abbc7e202be1a1724603249bebd346aef",
+    "examples/magic-squares/spencer/FiniteMobiusTransport.lean": "0f1550840958edf2f3341b22c4e17e5fe09cdd53f9cccc4774fa069fa2c4bf51",
+    "examples/magic-squares/spencer/SupportedSubtypeSum.lean": "9921e01f178ffb1fa3fafc4f6ea534eaad88e3e7e49ee0dc4c00f5684d48a91f",
+    "examples/magic-squares/spencer/MatchingMobius.lean": "06671b8acfe4bbfda208ec0cb18d53455fa2d38ebadc3ee29d9433afb1553d33",
+    "examples/magic-squares/spencer/SemiMagicFaceMobius.lean": "c4eff1a318ee458f1e751f70d1506e875f6a214932f98b54f3eca41708eab346"
+  },
+  "remaining": "General local Euler relation for the geometric face poset remains unproved."
+}

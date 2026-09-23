@@ -1,0 +1,22 @@
+{
+  "theorem_id": "2436e4cb-003b-423c-bd3a-318933165075",
+  "submission_id": "a3ef28e8-7f34-45b9-bafe-469d3037038d",
+  "status": "ACCEPTED",
+  "accepted_at": "2026-09-23T01:46:19.436539+00:00",
+  "lean": "4.33.1",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "solution_entry": "global theorem solution",
+  "compile_exit_code": 0,
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "previous_submission": "d8abeaf3-a918-40c3-a15d-fdc94154551a",
+  "previous_failure": "WA: missing global solution entry point",
+  "source_sha256": {
+    "Solutions/Sol_MagicSquares_matching_coefficient_eq_neg_mobius.lean": "343662e9417d609a7a9f61f8a4656ba14f57d4bb2a69a45a6b21fb8364255042",
+    "missions/magic-squares-v/scripts/assemble_matching_coefficient_mobius.py": "00978cb123366a054f2bee2272963b6fa681af0774e44229f0636bbabb226cc9",
+    "missions/magic-squares-v/submissions/matching-coefficient-mobius-problem.json": "46e80bf9630b647fca635f139658fc403a6f5124dc3a75a4ca34019426c65c37"
+  }
+}

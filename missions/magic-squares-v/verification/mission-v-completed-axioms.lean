@@ -1,0 +1,4 @@
+import examples.«magic-squares».spencer.MissionVCompleted
+#print axioms MagicSquares.semi_magic_polynomial_completed
+#print axioms MagicSquaresBoundary.matchingIntervalEuler_proved
+#print axioms MagicSquaresBoundary.matchingBoundaryCriterion_proved

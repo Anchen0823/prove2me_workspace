@@ -1,0 +1,10 @@
+{
+  "id": "d8abeaf3-a918-40c3-a15d-fdc94154551a",
+  "theorem_id": "2436e4cb-003b-423c-bd3a-318933165075",
+  "user_id": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+  "status": "WA",
+  "error_message": "Your proof does not match the target type:\nUnknown identifier `solution`\n\nNote: It is not possible to treat `solution` as an implicitly bound variable here because the `autoImplicit` option is set to `false`.",
+  "file_path": "2436e4cb-003b-423c-bd3a-318933165075/418b0711-62a5-416a-ba5d-876ae8758fe3/d8abeaf3-a918-40c3-a15d-fdc94154551a.lean",
+  "created_at": "2026-09-23T01:37:32.229332+00:00",
+  "updated_at": "2026-09-23T01:40:33.144709+00:00"
+}

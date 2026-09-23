@@ -1,0 +1,143 @@
+Solutions/Sol_MagicSquares_matching_boundary_euler.lean:740:15: warning: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+Solutions/Sol_MagicSquares_matching_boundary_euler.lean:783:35: warning: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+Solutions/Sol_MagicSquares_matching_boundary_euler.lean:873:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+Solutions/Sol_MagicSquares_matching_boundary_euler.lean:1108:15: warning: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+Solutions/Sol_MagicSquares_matching_boundary_euler.lean:2523:6: warning: Unused tactic linter: `push_cast` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+Solutions/Sol_MagicSquares_matching_boundary_euler.lean:2669:28: warning: Variable name `M` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _M
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+Solutions/Sol_MagicSquares_matching_boundary_euler.lean:2701:50: warning: This simp argument is unused:
+  RingHom.id_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [lsumQ_smul, Pi.smul_apply, smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Solutions/Sol_MagicSquares_matching_boundary_euler.lean:2720:8: warning: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+Solutions/Sol_MagicSquares_matching_boundary_euler.lean:2720:8: warning: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+Solutions/Sol_MagicSquares_matching_boundary_euler.lean:2720:8: warning: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+Solutions/Sol_MagicSquares_matching_boundary_euler.lean:2723:22: warning: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+Solutions/Sol_MagicSquares_matching_boundary_euler.lean:2726:8: warning: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+Solutions/Sol_MagicSquares_matching_boundary_euler.lean:2726:8: warning: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+Solutions/Sol_MagicSquares_matching_boundary_euler.lean:2886:6: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+Solutions/Sol_MagicSquares_matching_boundary_euler.lean:2926:12: warning: This simp argument is unused:
+  hint
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Solutions/Sol_MagicSquares_matching_boundary_euler.lean:3140:10: warning: This simp argument is unused:
+  mul_ite
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [mul_one, mul_zero, Finset.sum_ite_eq']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Solutions/Sol_MagicSquares_matching_boundary_euler.lean:3140:19: warning: This simp argument is unused:
+  mul_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [mul_ite, mul_zero, Finset.sum_ite_eq']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Solutions/Sol_MagicSquares_matching_boundary_euler.lean:3140:28: warning: This simp argument is unused:
+  mul_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [mul_ite, mul_one, Finset.sum_ite_eq']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Solutions/Sol_MagicSquares_matching_boundary_euler.lean:3143:10: warning: This simp argument is unused:
+  mul_ite
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [mul_one, mul_zero, Finset.sum_ite_eq']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Solutions/Sol_MagicSquares_matching_boundary_euler.lean:3143:19: warning: This simp argument is unused:
+  mul_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [mul_ite, mul_zero, Finset.sum_ite_eq']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Solutions/Sol_MagicSquares_matching_boundary_euler.lean:3143:28: warning: This simp argument is unused:
+  mul_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [mul_ite, mul_one, Finset.sum_ite_eq']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Solutions/Sol_MagicSquares_matching_boundary_euler.lean:3166:2: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+Solutions/Sol_MagicSquares_matching_boundary_euler.lean:3218:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+Solutions/Sol_MagicSquares_matching_boundary_euler.lean:4500:10: warning: This simp argument is unused:
+  Finset.disjoint_left
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Solutions/Sol_MagicSquares_matching_boundary_euler.lean:4945:14: warning: This simp argument is unused:
+  sB
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_comp, Polynomial.eval_add, Polynomial.eval_X, Polynomial.eval_C, neg_add_cancel,
+    Polynomial.eval_sub, Polynomial.eval_one, zero_sub] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Solutions/Sol_MagicSquares_matching_boundary_euler.lean:5015:2: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+Solutions/Sol_MagicSquares_matching_boundary_euler.lean:5051:31: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Solutions/Sol_MagicSquares_matching_boundary_euler.lean:5051:43: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Solutions/Sol_MagicSquares_matching_boundary_euler.lean:5351:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+Solutions/Sol_MagicSquares_matching_boundary_euler.lean:5456:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+exit_code=0

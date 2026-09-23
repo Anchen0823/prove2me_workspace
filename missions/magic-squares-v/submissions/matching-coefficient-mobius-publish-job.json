@@ -1,0 +1,21 @@
+{
+  "id": "ee676f04-b88b-4672-a8cf-a3e36a4eb027",
+  "kind": "problem",
+  "theorem_name": "MagicSquares.matching_coefficient_eq_neg_mobius",
+  "theorem_title": "Matching coefficient equals a support-poset Möbius number",
+  "formal_statement": "namespace MagicSquares\n\ntheorem matching_coefficient_eq_neg_mobius (n : ℕ) (hn : 1 ≤ n)\n    (B : Finset (Fin n × Fin n))\n    (hB : MagicSquaresBoundary.MatchingCoveredBoard n B) :\n    MagicSquaresBoundary.matchingEulerCoefficient n B =\n      -IncidenceAlgebra.mu ℚ\n        (⟨∅, Or.inl rfl⟩ :\n          {C : Finset (Fin n × Fin n) //\n            C = ∅ ∨ MagicSquaresBoundary.MatchingCoveredBoard n C})\n        ⟨B, Or.inr hB⟩ := by\n  sorry\n\nend MagicSquares",
+  "natural_language_statement": "Let n be positive and let B be a matching-covered bipartite board. The finite alternating matching coefficient a(B) is the negative Möbius function from the empty board to B in the finite poset consisting of the empty board and all matching-covered boards, ordered by inclusion.",
+  "definitions": "import Mathlib\nimport Definitions.Def_MagicSquaresMatchingBoundary\nattribute [local instance] Classical.propDecidable",
+  "source": "A self-contained finite Möbius inversion argument for matching-covered boards. It uses the defining principal-ideal prefix identity of the public coefficient and uniqueness of Möbius weights. The matching-covered support poset is related to the Birkhoff-polytope face lattice in Beniamini and Nisan, Bipartite Perfect Matching as a Real Polynomial, arXiv:2001.07642v2, Section 3.2.2, Theorem 3.11; this coefficient identity is proved directly here and is not quoted verbatim from that source. https://arxiv.org/pdf/2001.07642v2",
+  "tags": [
+    "magic-squares",
+    "mobius-inversion",
+    "combinatorics"
+  ],
+  "visibility": "public",
+  "status": "PUBLISHED",
+  "error_message": "",
+  "theorem_id": "2436e4cb-003b-423c-bd3a-318933165075",
+  "created_at": "2026-09-23T01:32:33.139231+00:00",
+  "updated_at": "2026-09-23T01:32:55.654193+00:00"
+}

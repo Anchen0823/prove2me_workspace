@@ -1,0 +1,4 @@
+'MagicSquaresEuler.openInterval_indicator_eq_closed_sub_endpoints' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'MagicSquaresEuler.closedInterval_singleton_total_coeff_eq' depends on axioms: [propext, Classical.choice, Quot.sound]

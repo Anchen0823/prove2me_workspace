@@ -1,0 +1,154 @@
+⚠ [8706/8767] Replayed examples.«magic-squares».spencer.ClosedSupportIE
+warning: examples/magic-squares/spencer/ClosedSupportIE.lean:42:6: Unused tactic linter: `push_cast` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8707/8767] Replayed examples.«magic-squares».spencer.SupportExactIE
+warning: examples/magic-squares/spencer/SupportExactIE.lean:70:10: This simp argument is unused:
+  Finset.disjoint_left
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [8724/8767] Replayed examples.«magic-squares».spencer.PerspectiveCancellation
+warning: examples/magic-squares/spencer/PerspectiveCancellation.lean:36:15: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+warning: examples/magic-squares/spencer/PerspectiveCancellation.lean:79:35: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+⚠ [8726/8767] Replayed examples.«magic-squares».spencer.SupportExtensionCancellation
+warning: examples/magic-squares/spencer/SupportExtensionCancellation.lean:26:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [8730/8767] Replayed examples.«magic-squares».spencer.SupportedStochasticPolytope
+warning: examples/magic-squares/spencer/SupportedStochasticPolytope.lean:71:15: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+⚠ [8740/8767] Replayed examples.«magic-squares».spencer.Rank
+warning: examples/magic-squares/spencer/Rank.lean:63:28: Variable name `M` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _M
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: examples/magic-squares/spencer/Rank.lean:95:50: This simp argument is unused:
+  RingHom.id_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [lsumQ_smul, Pi.smul_apply, smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: examples/magic-squares/spencer/Rank.lean:114:8: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: examples/magic-squares/spencer/Rank.lean:114:8: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: examples/magic-squares/spencer/Rank.lean:114:8: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: examples/magic-squares/spencer/Rank.lean:117:22: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: examples/magic-squares/spencer/Rank.lean:120:8: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: examples/magic-squares/spencer/Rank.lean:120:8: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: examples/magic-squares/spencer/Rank.lean:280:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: examples/magic-squares/spencer/Rank.lean:320:12: This simp argument is unused:
+  hint
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: examples/magic-squares/spencer/Rank.lean:534:10: This simp argument is unused:
+  mul_ite
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [mul_one, mul_zero, Finset.sum_ite_eq']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: examples/magic-squares/spencer/Rank.lean:534:19: This simp argument is unused:
+  mul_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [mul_ite, mul_zero, Finset.sum_ite_eq']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: examples/magic-squares/spencer/Rank.lean:534:28: This simp argument is unused:
+  mul_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [mul_ite, mul_one, Finset.sum_ite_eq']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: examples/magic-squares/spencer/Rank.lean:537:10: This simp argument is unused:
+  mul_ite
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [mul_one, mul_zero, Finset.sum_ite_eq']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: examples/magic-squares/spencer/Rank.lean:537:19: This simp argument is unused:
+  mul_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [mul_ite, mul_zero, Finset.sum_ite_eq']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: examples/magic-squares/spencer/Rank.lean:537:28: This simp argument is unused:
+  mul_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [mul_ite, mul_one, Finset.sum_ite_eq']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: examples/magic-squares/spencer/Rank.lean:560:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: examples/magic-squares/spencer/Rank.lean:612:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [8752/8767] Replayed examples.«magic-squares».spencer.FirstNegativeValue
+warning: examples/magic-squares/spencer/FirstNegativeValue.lean:41:14: This simp argument is unused:
+  sB
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_comp, Polynomial.eval_add, Polynomial.eval_X, Polynomial.eval_C, neg_add_cancel,
+    Polynomial.eval_sub, Polynomial.eval_one, zero_sub] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [8753/8767] Replayed examples.«magic-squares».spencer.ReciprocityPropagation
+warning: examples/magic-squares/spencer/ReciprocityPropagation.lean:57:2: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: examples/magic-squares/spencer/ReciprocityPropagation.lean:93:31: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: examples/magic-squares/spencer/ReciprocityPropagation.lean:93:43: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [8756/8767] Replayed examples.«magic-squares».spencer.CyclicPermutations
+warning: examples/magic-squares/spencer/CyclicPermutations.lean:65:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [8757/8767] Replayed examples.«magic-squares».spencer.ClosedVanishing
+warning: examples/magic-squares/spencer/ClosedVanishing.lean:103:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [8767/8767] Built examples.«magic-squares».spencer.MatchingIntervalEuler (26s)
+Build completed successfully (8767 jobs).

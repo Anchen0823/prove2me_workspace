@@ -1,0 +1,14 @@
+{
+  "theorem_name": "ConvexGeometry.compact_convex_indicator_relation",
+  "theorem_title": "Euler valuation of finite relations among compact convex indicators",
+  "formal_statement": "namespace ConvexGeometry\n\ntheorem compact_convex_indicator_relation (n : ℕ)\n    {ι : Type*} [Fintype ι] (K : ι → Set (Fin n → ℝ)) (w : ι → ℚ)\n    (hc : ∀ i, IsCompact (K i)) (hv : ∀ i, Convex ℝ (K i))\n    (h : ∀ x, (∑ i, if x ∈ K i then w i else 0) = 0) :\n    (∑ i, if (K i).Nonempty then w i else 0) = 0 := by\n  sorry\n\nend ConvexGeometry",
+  "natural_language_statement": "Let finitely many compact convex subsets of a finite-dimensional real coordinate space carry rational weights. If the corresponding weighted sum of indicator functions vanishes at every point, then the sum of the weights of the nonempty sets is zero.",
+  "preamble": "import Mathlib\n\nset_option autoImplicit false\nattribute [local instance] Classical.propDecidable",
+  "source": "The proof is an original Lean formalization using induction by coordinate slices. Its valuation and slicing strategy is inspired by Rolf Schneider, Combinatorial identities for polyhedral cones, Theorem 2.3 and equations (19)-(22), manuscript pages 6-8: https://home.mathematik.uni-freiburg.de/rschnei/Comb.Ident.rev.pdf. The submitted result is only the stated indicator-function relation; it is not a formalization of the paper's complete Euler or local-face theory.",
+  "env": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "tags": [
+    "convex-geometry",
+    "euler-characteristic",
+    "indicator-functions"
+  ]
+}

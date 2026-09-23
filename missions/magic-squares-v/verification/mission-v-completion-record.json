@@ -1,0 +1,78 @@
+{
+  "root_theorem": "MagicSquares.semi_magic_polynomial_completed",
+  "lean": "4.33.1",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "root_build": {
+    "exit_code": 0,
+    "jobs": 8768,
+    "log": "verification/mission-v-completed-build.log"
+  },
+  "root_axioms": {
+    "exit_code": 0,
+    "dependencies": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "log": "verification/mission-v-completed-axioms.log"
+  },
+  "standalone": {
+    "file": "Solutions/Sol_MagicSquares_matching_boundary_euler.lean",
+    "sha256": "3d7cfeda9ef1d1a417f308e1e5165daae7e0e40ee9352e0bfa6743fe3bbc63e6",
+    "compile_exit_code": 0,
+    "audit_source_identical": true,
+    "compile_log": "verification/matching-boundary-solution-bundle-compile.log",
+    "axioms_log": "verification/matching-boundary-solution-bundle-axioms.log"
+  },
+  "platform": {
+    "child_id": "c44cf304-6efb-4853-bedd-7a2a604fb3f2",
+    "submission_id": "b6362b1e-e4ba-46ae-b278-8b4ca0bf615e",
+    "status": "ACCEPTED",
+    "root_id": "a8fa7ac8-321b-492a-9e96-d5303081a54f",
+    "accepted_at": "2026-09-23T09:18:29.51008+00:00",
+    "theorem_statuses": {
+      "child": "Proved",
+      "reciprocity": "Proved",
+      "root": "Proved"
+    },
+    "milestones_completed": 8,
+    "milestones_total": 8
+  },
+  "source_sha256": {
+    "examples/magic-squares/spencer/FiniteMobiusWeights.lean": "67f3ce5eaf998ca933cff17b513d005abbc7e202be1a1724603249bebd346aef",
+    "examples/magic-squares/spencer/FiniteMobiusTransport.lean": "0f1550840958edf2f3341b22c4e17e5fe09cdd53f9cccc4774fa069fa2c4bf51",
+    "examples/magic-squares/spencer/SupportedSubtypeSum.lean": "9921e01f178ffb1fa3fafc4f6ea534eaad88e3e7e49ee0dc4c00f5684d48a91f",
+    "examples/magic-squares/spencer/MatchingMobius.lean": "06671b8acfe4bbfda208ec0cb18d53455fa2d38ebadc3ee29d9433afb1553d33",
+    "examples/magic-squares/spencer/SemiMagicFaceMobius.lean": "c4eff1a318ee458f1e751f70d1506e875f6a214932f98b54f3eca41708eab346",
+    "examples/magic-squares/spencer/ClosedIntervalIndicator.lean": "fc9b64bf88eda670c9c4605ba00ac90f9a405cd560f875a10856514fba82cfd9",
+    "examples/magic-squares/spencer/ClosedIntervalValuation.lean": "93a03f4b53960c1344dce7494ff92a585758b06a0b2fca6063c6c9bfc7e8c9ae",
+    "examples/magic-squares/spencer/ClosedIntervalEuler.lean": "23aa134c7604478abdede3252cf01524796618047971601f3bd4192174e03c82",
+    "examples/magic-squares/spencer/CompactRealValuation.lean": "cb0bd067a28138aa61892f00cf79adb694d381df94c0b20237268d412ac31a1e",
+    "examples/magic-squares/spencer/CompactConvexProjection.lean": "39fafe83b55139191f805a37c9799dde6dcb4ed34da96cf87c75c65c6d89ba6e",
+    "examples/magic-squares/spencer/CompactConvexSlices.lean": "b5d3968133afe5b057e3f32b4e46f34097bd72abdbda927d0895f5729f7c3f20",
+    "examples/magic-squares/spencer/CompactConvexValuation.lean": "ed34b318b676f7b13ad6a5c2f76806ed772f296321b9dad9bdb36aad13b55bc1",
+    "examples/magic-squares/spencer/CompactConvexRepresentation.lean": "cfda27312f9949a8e04f8d3b89858d47db3b72337291b13db563d70a04863fe8",
+    "examples/magic-squares/spencer/FiniteCoordinateValuation.lean": "0051cead47192d188c6e531f53eda68c99c64d5ef881fd99cfda043447744dd4",
+    "examples/magic-squares/spencer/FiniteCoverIndicator.lean": "9d8d14aa2a34321254c1c383fb5d760279bc64194b654b724b2373e63496191e",
+    "examples/magic-squares/spencer/PerspectiveBoundary.lean": "248f49bbc95069a0a7bce01bdc212e8a398fa8a390f79a5fa990fdfd41d3e965",
+    "examples/magic-squares/spencer/PerspectiveCoverage.lean": "2531b5ea9cfe4a60762860b3f913626b5e5b9a15f65ea3065b7cf24bd4ca21ed",
+    "examples/magic-squares/spencer/PerspectiveCompact.lean": "faf605e591b07337eb70e061977338ff94a96ed5bdab5c07aa33a475d47c57ae",
+    "examples/magic-squares/spencer/PerspectiveConvex.lean": "b0cb54851f5b2e948a5961b8341064677de98c27f8fef0fecd388c7088f6b398",
+    "examples/magic-squares/spencer/PerspectiveShadow.lean": "7fc7639e06f3fd82b92d7fa0887566fc53092be86963b430964be123e1ca38c3",
+    "examples/magic-squares/spencer/PerspectiveIntersections.lean": "0ae1d6e903b0c6af527bd9ef777e45faebe387818bff67888e4c00e7de36dff2",
+    "examples/magic-squares/spencer/PerspectiveCancellation.lean": "a653f4ca95b23d032b856418051aee83ece234428be59d4a455603879b5a0d63",
+    "examples/magic-squares/spencer/PerspectiveExternalPoint.lean": "9b5cf5ad68c5d1ab76aa3b7a02799a36f08d57465fa3e0d8202bca671def78b8",
+    "examples/magic-squares/spencer/SupportExtensionCancellation.lean": "37df95ee99c23a9b34994c04559d9b30f9d93b90732e1fab040581f94c89cfe4",
+    "examples/magic-squares/spencer/SupportedStochasticPolytope.lean": "32b27be895bee8bef0ec73725d23282f82b99453654e479914aefe9b5193bf00",
+    "examples/magic-squares/spencer/SupportedStochasticExistence.lean": "2df98ed3fb9db4eef60c565118caeb28db34bfb1fdcc49151ad07d052dabc001",
+    "examples/magic-squares/spencer/MatchingIntervalEuler.lean": "172157846e66cd2feace0b7e1b76b89d4643dbcb8bf5d1f88cca520c256483b5",
+    "examples/magic-squares/spencer/MissionVCompleted.lean": "1b4ac9bd2bb8f4fc3043e5fdcbdec0f1295710b30e95ae4713d1e5d9c3f38829"
+  },
+  "proof_method": "Compact-convex indicator relation; perspective projection of coordinate faces; interval cancellation; weighted Weisner boundary; reflection and polynomial reductions. No general relative-interior Euler sign is assumed.",
+  "exact_target_check": {
+    "exit_code": 0,
+    "source": "verification/mission-v-exact-target.lean",
+    "log": "verification/mission-v-exact-target.log",
+    "statement_source": "submissions/completion-root-theorem.json"
+  }
+}

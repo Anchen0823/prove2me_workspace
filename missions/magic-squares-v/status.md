@@ -1,5 +1,72 @@
 # Magic Squares V — proposal status
 
+## Complete: platform root Proved and all 8 milestones completed
+
+`MagicSquares.semi_magic_polynomial_completed` now proves the exact mission
+root without any unproved Euler hypothesis. The complete build passed
+(8768 jobs), and the root, interval cancellation and matching-boundary
+criterion depend only on `propext`, `Classical.choice`, and `Quot.sound`.
+The proof uses the direct perspective-shadow argument described in
+[PERSPECTIVE-CANCELLATION-PLAN.md](PERSPECTIVE-CANCELLATION-PLAN.md), followed by
+the existing finite boundary, reflection and polynomial reductions.
+
+The complete proof of the existing child `MagicSquares.matching_boundary_euler`
+was accepted as `b6362b1e-e4ba-46ae-b278-8b4ca0bf615e` at
+`2026-09-23T09:18:29Z`. Fresh platform queries confirm the child, reciprocity
+milestone and root `a8fa7ac8-321b-492a-9e96-d5303081a54f` are all **Proved**;
+all **8/8** mission milestones are completed. The standalone source was independently compiled and its
+global `solution` has only standard axioms. No `Theorems.*` import occurs.
+
+Approval service access has recovered: a fresh usage check allowed normal
+use, then an approved platform read and the submission both succeeded.
+The older usage-limit notes below describe historical interruptions.
+The exact original platform root statement also compiles using the completed
+local theorem. Completion receipts and hashes are recorded in
+`verification/mission-v-completion-record.json`. No further proof work is
+required for Mission V. The general relative-interior Euler route is not a
+remaining mission requirement.
+
+## 2026-09-23 finite-dimensional Euler foundation
+
+`MagicSquaresEuler.compactConvex_indicator_relation` is proved for every
+dimension and arbitrary finite rational-weighted families of compact convex
+sets, including empty members. If their indicator combination is pointwise
+zero, the total weight of nonempty members is zero. The integrated Lake build
+passed (8711 jobs). See [EULER-SLICING-PLAN.md](EULER-SLICING-PLAN.md).
+The standalone `ConvexGeometry.compact_convex_indicator_relation` submission
+package also compiled independently (exit 0), and its `solution` uses only
+standard axioms. Exact hashes are in
+`verification/compact-convex-valuation-record.json`. It has **not** been uploaded;
+automatic approval review is unavailable due to its usage limit.
+This is a local result; the relative-interior signs and local face Euler
+relation remain unproved. The mission root is still Open.
+
+The latest Git staging operation was not executed: automatic approval review
+could not run because its usage limit was reached. Earlier staging succeeded,
+but no new commit was created. Source and verification records remain in the
+worktree; do not bypass approval to finish the checkpoint.
+
+## 2026-09-23 coefficient identification
+
+**Platform ACCEPTED:** `MagicSquares.matching_coefficient_eq_neg_mobius`,
+theorem `2436e4cb-003b-423c-bd3a-318933165075`, submission
+`a3ef28e8-7f34-45b9-bafe-469d3037038d`, accepted at
+`2026-09-23T01:46:19Z`. The first submission was rejected because its global
+`solution` entry point was missing; the corrected bundle was independently
+recompiled and its axioms checked before resubmission. Both receipts are kept.
+
+The one-dimensional closed-interval indicator relation is also proved locally,
+including degenerate intervals; build and axiom checks passed. This is the
+first step of the Euler slicing proof, not the general local Euler theorem.
+
+The matching coefficient is now formally identified with the negative bottom
+Mobius number on every nonempty support, with the empty-board exception handled
+explicitly. Both the coefficient interval sum and the geometric-face version
+are proved. The integrated build completed (8752 jobs); four core declarations
+have only standard axioms and no `sorryAx`. See [MOBIUS-BRIDGE.md](MOBIUS-BRIDGE.md).
+The remaining mathematical gap is the general local Euler relation, not the
+coefficient identification or face-support dictionary.
+
 ## 2026-09-22 live update
 
 **Geometric dictionary accepted by the platform:**

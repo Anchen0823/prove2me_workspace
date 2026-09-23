@@ -1,5 +1,37 @@
 # Next work after closed-support polynomiality
 
+## Complete: no remaining Mission V proof work
+
+`MissionVCompleted.lean` builds and proves the exact mission root with standard
+axioms only. `MatchingIntervalEuler.lean` closes the finite boundary child
+through the perspective-shadow route. Submission
+`b6362b1e-e4ba-46ae-b278-8b4ca0bf615e` was **ACCEPTED**. Fresh platform queries
+confirm child, reciprocity and root are **Proved**, and all **8/8** milestones
+are completed. The mathematical tasks in the historical sections below have been
+superseded by this complete proof; do not keep developing alternative Euler
+theory to finish this mission.
+
+## September 23: finite-dimensional slicing completed
+
+`CompactConvexValuation.lean` now proves the compact-convex indicator relation
+in every finite dimension, by slicing. Its integrated Lake build passed.
+Do not repeat this dimension induction. Next prove relative-interior Euler
+signs and the local face Euler relation; see [EULER-SLICING-PLAN.md](EULER-SLICING-PLAN.md).
+
+## September 23: coefficient bridge completed
+
+`MatchingMobius.lean` proves the coefficient is minus the bottom Mobius number
+and transfers the entire interval sum. `SemiMagicFaceMobius.lean` transports the
+identity to the geometric face poset. Both compile without extra axioms. See
+[MOBIUS-BRIDGE.md](MOBIUS-BRIDGE.md). Focus on the geometric local Euler relation;
+do not repeat coefficient identification or the face-support correspondence.
+
+The coefficient formula is now platform **Proved** (submission
+`a3ef28e8-7f34-45b9-bafe-469d3037038d`). The real-line Euler relation is locally
+proved for closed intervals and for compact convex sets allowing empty sets.
+Continue with compact convex slices in finite-dimensional real coordinate
+spaces; see [EULER-SLICING-PLAN.md](EULER-SLICING-PLAN.md).
+
 ## September 22 correction: use the live frontier
 
 The face-support correspondence, including normalization and realization of

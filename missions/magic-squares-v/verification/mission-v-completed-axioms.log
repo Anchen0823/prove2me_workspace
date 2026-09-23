@@ -1,0 +1,3 @@
+'MagicSquares.semi_magic_polynomial_completed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MagicSquaresBoundary.matchingIntervalEuler_proved' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MagicSquaresBoundary.matchingBoundaryCriterion_proved' depends on axioms: [propext, Classical.choice, Quot.sound]

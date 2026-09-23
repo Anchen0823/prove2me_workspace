@@ -1,0 +1,12 @@
+{
+  "mission_id": "e06131f8-1bf5-47c4-b8f4-507f107269e0",
+  "root_theorem_id": "a8fa7ac8-321b-492a-9e96-d5303081a54f",
+  "root_status": "Proved",
+  "milestones_completed": 8,
+  "milestones_total": 8,
+  "derived_from": [
+    "completion-root-theorem.json",
+    "completion-milestones.json"
+  ],
+  "note": "Local completion summary derived from platform responses; the mission-specific GET endpoint is not supported."
+}

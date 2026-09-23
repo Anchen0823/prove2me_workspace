@@ -1,0 +1,4 @@
+import examples.«magic-squares».spencer.CompactConvexValuation
+#print axioms MagicSquaresEuler.compactConvex_indicator_relation
+#print axioms MagicSquaresEuler.compact_coordinateSlice
+#print axioms MagicSquaresEuler.convex_coordinateSlice
