@@ -2,7 +2,7 @@
   "proposal_id": "00d787d8-91c8-45bf-87f0-6a5e9e8bc472",
   "mission_id": null,
   "name": "Formalize the abstract layer of \"Research Notes on ζ(9)\" (v0.1)",
-  "status": "Draft",
+  "status": "In review",
   "visibility": "public",
   "main_item_id": "105ed7ae-7387-4804-be50-904081b90d05",
   "item_order": [
@@ -26,14 +26,14 @@
     "Z9N.ONE": "105ed7ae-7387-4804-be50-904081b90d05"
   },
   "local_theorem_ids": {
-    "Z9N.QUAD": null,
-    "Z9N.AVG": null,
-    "Z9N.MED": null,
-    "Z9N.CONE": null,
-    "Z9N.TSUM": null,
-    "Z9N.SIGN": null,
-    "Z9N.TWO": null,
-    "Z9N.ONE": null
+    "Z9N.QUAD": "d9acd743-1fce-4a14-a964-3640f1032366",
+    "Z9N.AVG": "0014e3ef-7b09-4288-8256-09c7b53db866",
+    "Z9N.MED": "342c6ec7-23cc-49d5-bacb-eb9b427eb57c",
+    "Z9N.CONE": "1aea0d88-d250-4dd6-875b-679c2aefdc90",
+    "Z9N.TSUM": "6b04ab7c-c253-4c74-ae6d-9f7298bdd7c2",
+    "Z9N.SIGN": "d03e669d-3a34-4984-a4eb-25d7e9dafe80",
+    "Z9N.TWO": "54dc4f8a-a493-49cc-9f58-090c2d723046",
+    "Z9N.ONE": "1c49008f-d9a4-4eb9-b34e-e88d1fae3378"
   },
   "milestones": [
     {
@@ -66,5 +66,5 @@
     }
   ],
   "reviewed_docs_version": "0.11.1",
-  "submitted_by_human": false
+  "submitted_by_human": true
 }
