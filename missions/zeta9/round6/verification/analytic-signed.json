@@ -1,0 +1,309 @@
+{
+  "status": "exact_rational_signed_intervals",
+  "no_zeta9_numerical_input": true,
+  "cases": 4,
+  "directions": 8,
+  "all_eight_strictly_nonzero": true,
+  "rows": [
+    {
+      "n": 12,
+      "source": "analytic-triangle-exact-n12.json.gz",
+      "det_abs": 1,
+      "rows": [
+        {
+          "n": 12,
+          "direction": "g1",
+          "output_B_A9": [
+            -69804309706384605394961267,
+            69664396232757386615702441
+          ],
+          "strict_nonzero": true,
+          "raw_L_sign": -1,
+          "center": {
+            "sign": -1,
+            "numerator_digits": 996,
+            "denominator_digits": 1022,
+            "sha256": "c8b881c2e4c621801e857c9879110a4a8e1e08555a72d081b2dc2497725bc137"
+          },
+          "tail_radius": {
+            "sign": 1,
+            "numerator_digits": 131,
+            "denominator_digits": 249,
+            "sha256": "c0462f37c37e72853ed75d441ed9b69f9af41ba36d2d4ca2678341fecd06ddd6"
+          },
+          "lower": {
+            "sign": -1,
+            "numerator_digits": 1215,
+            "denominator_digits": 1242,
+            "sha256": "21219d097d79e95b0e246e80d0d350e13318936eb9631ea48cb8493222262c6c"
+          },
+          "upper": {
+            "sign": -1,
+            "numerator_digits": 1215,
+            "denominator_digits": 1242,
+            "sha256": "75e65986c8327acbb059482c571e140f4eb1714c6625f62d4c9fcf2b2fa4e775"
+          }
+        },
+        {
+          "n": 12,
+          "direction": "g2",
+          "output_B_A9": [
+            -52167791577971380920371743,
+            52063228164024073471924392
+          ],
+          "strict_nonzero": true,
+          "raw_L_sign": 1,
+          "center": {
+            "sign": 1,
+            "numerator_digits": 998,
+            "denominator_digits": 1024,
+            "sha256": "d5c93674f114dbd8e5daa20a4ac86126bb886ec1779a89aa20c29c03960528b2"
+          },
+          "tail_radius": {
+            "sign": 1,
+            "numerator_digits": 131,
+            "denominator_digits": 248,
+            "sha256": "df287b63c1791699f429b596b39094ba002fc893034db3b0b3cd45e822fc501b"
+          },
+          "lower": {
+            "sign": 1,
+            "numerator_digits": 1217,
+            "denominator_digits": 1243,
+            "sha256": "44a02bc399bc13aa58b7564b78c77b6a8119fd841f2920c1596a58b836b87de5"
+          },
+          "upper": {
+            "sign": 1,
+            "numerator_digits": 1217,
+            "denominator_digits": 1243,
+            "sha256": "3c01bdaf2a1dadba22ebf47dd51e968e0360b98eade7484fe74d735e13d78f84"
+          }
+        }
+      ]
+    },
+    {
+      "n": 24,
+      "source": "analytic-triangle-exact-n24.json.gz",
+      "det_abs": 1,
+      "rows": [
+        {
+          "n": 24,
+          "direction": "g1",
+          "output_B_A9": [
+            -3921172106123799613665377636082983526183040250039254,
+            3913312637097236651389966929076917309571480452382559
+          ],
+          "strict_nonzero": true,
+          "raw_L_sign": -1,
+          "center": {
+            "sign": -1,
+            "numerator_digits": 1036,
+            "denominator_digits": 1089,
+            "sha256": "05f14bff2826028a5913c12fe7b8b09700377240ade20c6eaddfd39f7573fd5d"
+          },
+          "tail_radius": {
+            "sign": 1,
+            "numerator_digits": 271,
+            "denominator_digits": 455,
+            "sha256": "8069cf88e532c6a1d2238f8b756c30c80bda40486340622261729e110f1eb05f"
+          },
+          "lower": {
+            "sign": -1,
+            "numerator_digits": 1454,
+            "denominator_digits": 1508,
+            "sha256": "ba730e05299e0a770bf419598fd0f020074fb1566cf7570612ab343d77860b8b"
+          },
+          "upper": {
+            "sign": -1,
+            "numerator_digits": 1454,
+            "denominator_digits": 1508,
+            "sha256": "d03f119e8612772535cc2ff71b4824780cfc946f744da58ace59f5a2bc142311"
+          }
+        },
+        {
+          "n": 24,
+          "direction": "g2",
+          "output_B_A9": [
+            71517030920984044880837811113767670421745601810526297,
+            -71373684525012953701144131947100313327492679479807756
+          ],
+          "strict_nonzero": true,
+          "raw_L_sign": -1,
+          "center": {
+            "sign": -1,
+            "numerator_digits": 1038,
+            "denominator_digits": 1090,
+            "sha256": "99bf788f83dafada959b5f6e22122ff0eda48ae35d9321019bd3dd5062217ab9"
+          },
+          "tail_radius": {
+            "sign": 1,
+            "numerator_digits": 275,
+            "denominator_digits": 457,
+            "sha256": "516bd7740d48363c236a3ac8d2ad05d84377620f90ad7b31cab7091a4b188bd2"
+          },
+          "lower": {
+            "sign": -1,
+            "numerator_digits": 1457,
+            "denominator_digits": 1508,
+            "sha256": "278cbe8c2066041849d077d5d13ddc844834fc8358ad464df504c0e01fc956ee"
+          },
+          "upper": {
+            "sign": -1,
+            "numerator_digits": 1457,
+            "denominator_digits": 1508,
+            "sha256": "0b23611128205a4415b202ac84c26f01d24fe13ef3feeb0247cab8d8b8af7a3a"
+          }
+        }
+      ]
+    },
+    {
+      "n": 48,
+      "source": "analytic-triangle-exact-n48.json.gz",
+      "det_abs": 1,
+      "rows": [
+        {
+          "n": 48,
+          "direction": "g1",
+          "output_B_A9": [
+            532553233626044304979684351769666870232692154373030486312778621455812092339979134604042863228318844372286,
+            -531485801355437487458026736055186346671266515962194917224383375984167919601713890697888473822488693034257
+          ],
+          "strict_nonzero": true,
+          "raw_L_sign": 1,
+          "center": {
+            "sign": 1,
+            "numerator_digits": 1591,
+            "denominator_digits": 1696,
+            "sha256": "5a41e10f03681027ed0904e19eea5235df9fd87c19adf4d916e918ef157be6f1"
+          },
+          "tail_radius": {
+            "sign": 1,
+            "numerator_digits": 495,
+            "denominator_digits": 819,
+            "sha256": "78756ddc415e1e68ae087ffdf937f0321b5145dd3e6ae694b9fc98b1cf2ac141"
+          },
+          "lower": {
+            "sign": 1,
+            "numerator_digits": 2334,
+            "denominator_digits": 2439,
+            "sha256": "319377e2f3a6d2bb1e7e9eb7b7dea300a81f0a48f7a98fb0eb4255cb7d9664c4"
+          },
+          "upper": {
+            "sign": 1,
+            "numerator_digits": 2334,
+            "denominator_digits": 2439,
+            "sha256": "d04bc384e3e8f1b3e8806607ccdef4600a66df6ca5fb0d3b31c6abb9b171e444"
+          }
+        },
+        {
+          "n": 48,
+          "direction": "g2",
+          "output_B_A9": [
+            1165516273980898559093253171244172677228493207851330183938202653933492337110202458638006287424243458456809,
+            -1163180151309567199645322783123462793868528784376235302151798808932788227752708375901843918017192195873699
+          ],
+          "strict_nonzero": true,
+          "raw_L_sign": -1,
+          "center": {
+            "sign": -1,
+            "numerator_digits": 1590,
+            "denominator_digits": 1696,
+            "sha256": "b03423d4641285f6c7b1b6a434e5de523434db373170c25ac14b02106ea7c410"
+          },
+          "tail_radius": {
+            "sign": 1,
+            "numerator_digits": 499,
+            "denominator_digits": 823,
+            "sha256": "607aa077d30c83b23d4e4c16ab51cf202fbc8783ce985f1999ada880e948af29"
+          },
+          "lower": {
+            "sign": -1,
+            "numerator_digits": 2334,
+            "denominator_digits": 2439,
+            "sha256": "368b12304af9c5e1338ea855e61bda7d2098e7bfe2bb3ceefc0066527ef2ca53"
+          },
+          "upper": {
+            "sign": -1,
+            "numerator_digits": 2334,
+            "denominator_digits": 2439,
+            "sha256": "469179a2a7dd52e8caa72455dead8916e88e0d9790f158eedf7e342df2c41143"
+          }
+        }
+      ]
+    },
+    {
+      "n": 96,
+      "source": "analytic-triangle-exact-n96.json.gz",
+      "det_abs": 1,
+      "rows": [
+        {
+          "n": 96,
+          "direction": "g1",
+          "output_B_A9": [
+            -1350649430355045817923619869247236457257066460452322717343305821953359776451185771675532183987105856409554381499760402857649330460768225218541515847569531985888033469087758366912074685752982175176814202297253833,
+            1347942232844627426341939391791158666075425057483017860506394894006764831673396370969864203182945905635743444423745596364065650653018782882797661978761621733537210854886673241351209668200541748716863602931278367
+          ],
+          "strict_nonzero": true,
+          "raw_L_sign": -1,
+          "center": {
+            "sign": -1,
+            "numerator_digits": 3292,
+            "denominator_digits": 3503,
+            "sha256": "c378b44455ca176d47ac856c66b1f5a91dee83acab1dbbfe2938c3a0d4cfba3f"
+          },
+          "tail_radius": {
+            "sign": 1,
+            "numerator_digits": 1160,
+            "denominator_digits": 1810,
+            "sha256": "f46c1ae87ef12e2c35a85e0a73065337a54a6659e939d7ee4ac36bc697bfd296"
+          },
+          "lower": {
+            "sign": -1,
+            "numerator_digits": 4986,
+            "denominator_digits": 5197,
+            "sha256": "6b9ef58dbfb38cdf2d7b355de9460a0de11f87c71b2e4d7edcc668966733d192"
+          },
+          "upper": {
+            "sign": -1,
+            "numerator_digits": 4986,
+            "denominator_digits": 5197,
+            "sha256": "e49c2ed26a6afbf440621cca35a2164d442553ee890d9b350ba9ed6dd1d83d4e"
+          }
+        },
+        {
+          "n": 96,
+          "direction": "g2",
+          "output_B_A9": [
+            -2581923720670683160942947182594433214734289021633970448262630050083802309548764914252194638228717403690107736406824988861815528987281579054398569782352243482056052697891623645206892950792036664557180148202114023,
+            2576748597273302052054392298299448786912494504312802580711895970571082508728858447927958995163341740970736249202193866644342836770018446952430357101645473632628547140452920518146979267865127970436512261769029674
+          ],
+          "strict_nonzero": true,
+          "raw_L_sign": 1,
+          "center": {
+            "sign": 1,
+            "numerator_digits": 3289,
+            "denominator_digits": 3500,
+            "sha256": "2b1e940a4ba5006bffb61ef78144ed069d5ca18ed77d75855de65c99eff3a277"
+          },
+          "tail_radius": {
+            "sign": 1,
+            "numerator_digits": 1163,
+            "denominator_digits": 1811,
+            "sha256": "cce1242acf66873d2ebb2eccf03cbe68881b4b80021079a4f7658de77d6b68f6"
+          },
+          "lower": {
+            "sign": 1,
+            "numerator_digits": 4983,
+            "denominator_digits": 5194,
+            "sha256": "4d190a3ae294e4a446cca39c65523d5b0953bfba52897d79cbe7fabc785ee5f8"
+          },
+          "upper": {
+            "sign": 1,
+            "numerator_digits": 4983,
+            "denominator_digits": 5194,
+            "sha256": "e271e0dcd6136981a637c0e9ec5d45490755ff935d4754a38da15f2463dcd408"
+          }
+        }
+      ]
+    }
+  ]
+}

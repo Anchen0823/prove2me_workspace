@@ -1,0 +1,27 @@
+{
+  "divisors": [
+    1,
+    2,
+    3,
+    6
+  ],
+  "weights": [
+    -7776,
+    1701,
+    -224,
+    1
+  ],
+  "power_sums": {
+    "1": -5040,
+    "3": 0,
+    "5": 0,
+    "7": 0,
+    "9": 6531840
+  },
+  "conditional_input": "S_d=B_d+sum(rho_s*d^s*zeta(s), s=3,5,7,9)",
+  "conditional_output": "sum(weights[d]*B_d)+power_sum[9]*rho_9*zeta(9)",
+  "independent_of_n": true,
+  "literature_url": "https://arxiv.org/html/1803.08905",
+  "literature_hypothesis": "s>=3D; s=9,D=6 fails this hypothesis",
+  "proved_scope": "algebraic weights only; construction and estimates remain unproved"
+}

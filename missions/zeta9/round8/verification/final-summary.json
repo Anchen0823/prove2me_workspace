@@ -1,0 +1,13 @@
+{
+  "status": "bounded_round_complete_no_target_breakthrough",
+  "agents_used": 1,
+  "new_search_scales": 0,
+  "rigorous_results": [
+    "all fixed powers of the limiting matrix have irreducible characteristic polynomial over Q",
+    "no nonzero fixed rational projection annihilates its dominant eigenmode",
+    "degree-at-most-4 polynomial filters of subexponential coefficient height cannot suppress that eigenmode exponentially"
+  ],
+  "limitation": "Statements concern the constant limiting model, not a no-go theorem for the actual nonautonomous congruence lattice.",
+  "target_short_vector_bound": "unproved",
+  "previous_files_unchanged": 529
+}

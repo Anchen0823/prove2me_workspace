@@ -1,0 +1,108 @@
+[
+  {
+    "case_id": "s5-uniform",
+    "s": 5,
+    "K": 7,
+    "h": 3,
+    "zeros": {
+      "1": 2
+    },
+    "exponents": [
+      0,
+      1,
+      2
+    ],
+    "degree": 3,
+    "B_rank": 3,
+    "prime_limit": 14,
+    "certified_multiplier_numerator": 51426482688000000000000000000000,
+    "certified_multiplier_denominator": 1,
+    "primitive_scale_numerator": 169305292800000000000,
+    "primitive_scale_denominator": 1,
+    "exact_integer_gap": 303750000000,
+    "gap_log_per_K2": 0.5395810373796157,
+    "direct_coefficient_identity": true,
+    "all_primes_integral": true,
+    "local_bounds_checked": 6
+  },
+  {
+    "case_id": "s7-layered",
+    "s": 7,
+    "K": 8,
+    "h": 4,
+    "zeros": {
+      "1": 2,
+      "2": 1
+    },
+    "exponents": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "degree": 4,
+    "B_rank": 4,
+    "prime_limit": 16,
+    "certified_multiplier_numerator": 147689916237106875201047157021081600000000000000000000000000000000,
+    "certified_multiplier_denominator": 1,
+    "primitive_scale_numerator": 300112810603200000000000000000000,
+    "primitive_scale_denominator": 1,
+    "exact_integer_gap": 492114668281781465088000000000000,
+    "gap_log_per_K2": 1.1761916335120544,
+    "direct_coefficient_identity": true,
+    "all_primes_integral": true,
+    "local_bounds_checked": 6
+  },
+  {
+    "case_id": "s7-shift",
+    "s": 7,
+    "K": 8,
+    "h": 3,
+    "zeros": {
+      "1": 2
+    },
+    "exponents": [
+      1,
+      2,
+      3
+    ],
+    "degree": 3,
+    "B_rank": 3,
+    "prime_limit": 16,
+    "certified_multiplier_numerator": 1883445864181448112258048000000000000000000000000000,
+    "certified_multiplier_denominator": 1,
+    "primitive_scale_numerator": 325568807931150000000000000000000000,
+    "primitive_scale_denominator": 1,
+    "exact_integer_gap": 5785093099520000,
+    "gap_log_per_K2": 0.5670947007607612,
+    "direct_coefficient_identity": true,
+    "all_primes_integral": true,
+    "local_bounds_checked": 6
+  },
+  {
+    "case_id": "s9-uniform",
+    "s": 9,
+    "K": 7,
+    "h": 3,
+    "zeros": {
+      "1": 1
+    },
+    "exponents": [
+      0,
+      1,
+      2
+    ],
+    "degree": 3,
+    "B_rank": 3,
+    "prime_limit": 14,
+    "certified_multiplier_numerator": 12380139504361068042387456000000000000000000000000000000000,
+    "certified_multiplier_denominator": 1,
+    "primitive_scale_numerator": 25473538074817012432896000000000000000000000,
+    "primitive_scale_denominator": 1,
+    "exact_integer_gap": 486000000000000,
+    "gap_log_per_K2": 0.6901475457107967,
+    "direct_coefficient_identity": true,
+    "all_primes_integral": true,
+    "local_bounds_checked": 6
+  }
+]

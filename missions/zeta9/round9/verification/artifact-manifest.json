@@ -1,0 +1,22 @@
+[
+  {
+    "path": "report.md",
+    "bytes": 1088,
+    "sha256": "3602f0ce73b0ac65feed222c378611f394e71c1ceed6da2ba84c1786dd7b258d"
+  },
+  {
+    "path": "research/growing-filter.md",
+    "bytes": 2567,
+    "sha256": "cd27573e113c32d334d8860632fe23001060f00f847d33cc04bfd7d032c65ab6"
+  },
+  {
+    "path": "scripts/growing_filter.py",
+    "bytes": 2113,
+    "sha256": "dcf595dea2e1234839e1706ef96cb037eb3c3bb7616f268b93e88790db48adac"
+  },
+  {
+    "path": "verification/growing-filter.json",
+    "bytes": 690,
+    "sha256": "d23544704bd5e22113f73b00ddc7c27e27a29223bff1bf79fc5b794410925984"
+  }
+]

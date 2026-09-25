@@ -1,0 +1,42 @@
+{
+  "proposal_id": "06faf23f-00c2-4edf-92ab-1212cdb7d7d6",
+  "mission_id": "8195d8fe-059f-4515-92b4-57b585e2bac6",
+  "name": "Irrationality of ζ(9): weighted lattice route",
+  "status": "Private",
+  "visibility": "private",
+  "main_item_id": "bab38ed1-b709-49ec-a9ee-65ef8bf7328b",
+  "item_order": [
+    "2940287c-9b87-4008-be28-040556a9337b",
+    "9cf89aeb-8204-4fdb-8665-ce9c8951b1d0",
+    "e32abe9a-7bcd-488c-994a-97dcf2ba42b8",
+    "bab38ed1-b709-49ec-a9ee-65ef8bf7328b"
+  ],
+  "local_item_ids": {
+    "Z9.LIT.ZUDILIN": "2940287c-9b87-4008-be28-040556a9337b",
+    "Z9.P.FORMAL": "9cf89aeb-8204-4fdb-8665-ce9c8951b1d0",
+    "Z9.RED.J.FORMAL": "e32abe9a-7bcd-488c-994a-97dcf2ba42b8",
+    "Z9.R": "bab38ed1-b709-49ec-a9ee-65ef8bf7328b"
+  },
+  "local_theorem_ids": {
+    "Z9.LIT.ZUDILIN": "a925cba9-6bcf-4296-940d-3886687da227",
+    "Z9.P.FORMAL": "207cc87c-ecbb-4be0-ab87-a1c3c0c0293f",
+    "Z9.RED.J.FORMAL": "cbb9cc51-c34d-4c25-9c61-dd4bc0e969e1",
+    "Z9.R": "523f37b8-ae98-406c-a3f7-43aa8e002dd7"
+  },
+  "milestones": [
+    {
+      "item_id": "2940287c-9b87-4008-be28-040556a9337b",
+      "milestone_title": "Zudilin's four-value disjunction"
+    },
+    {
+      "item_id": "9cf89aeb-8204-4fdb-8665-ce9c8951b1d0",
+      "milestone_title": "Two-form irrationality criterion"
+    },
+    {
+      "item_id": "e32abe9a-7bcd-488c-994a-97dcf2ba42b8",
+      "milestone_title": "Abstract volume and shape margin bridge"
+    }
+  ],
+  "reviewed_docs_version": "0.10.9",
+  "is_live_private_mission": true
+}

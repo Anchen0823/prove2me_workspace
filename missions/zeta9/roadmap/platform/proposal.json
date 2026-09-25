@@ -1,0 +1,70 @@
+{
+  "name": "Irrationality of ζ(9): weighted lattice route",
+  "mission_type": "OpenProblem",
+  "visibility": "private",
+  "env": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "field_ids": ["e76e77ab-38dd-426d-a533-0b37fb6dbabc"],
+  "description_path": "mission-description.md",
+  "draft_items": [
+    {
+      "local_id": "Z9.P.FORMAL",
+      "kind": "theorem",
+      "theorem_name": "ZetaNine.irrational_of_two_small_integer_forms",
+      "theorem_title": "Two independent small integer forms imply irrationality",
+      "code_path": "TwoFormsCriterion.lean",
+      "readback_path": "readbacks/TwoFormsCriterion.md",
+      "natural_language_statement": "Let x be real. If, for every positive tolerance, there are two integer coefficient pairs with nonzero determinant and both corresponding forms b+a x have absolute value below that tolerance, then x is irrational. This is the general mathematical criterion used at node P; it does not construct the pairs for ζ(9).",
+      "source": "Local ζ(9) research, round6/research/analytic.md §5 and roadmap/DAG.md §J to root; mathematical proof in notes, Lean statement only in this draft.",
+      "tags": ["number-theory", "irrationality", "linear-forms"]
+    },
+    {
+      "local_id": "Z9.RED.J.FORMAL",
+      "kind": "theorem",
+      "theorem_name": "ZetaNine.exponential_margin_of_volume_and_shape",
+      "theorem_title": "Eventual volume bound and vanishing shape imply an exponential margin",
+      "code_path": "ExponentMarginBridge.lean",
+      "readback_path": "readbacks/ExponentMarginBridge.md",
+      "natural_language_statement": "For arbitrary real sequences B and σ, suppose B(2k+2) is eventually at most some β<2641/250 and σ(2k+2) tends to zero. Then some positive ε gives B(2k+2)+σ(2k+2)≤2641/250−ε for all sufficiently large k. This is the abstract V+S⇒J bridge; it does not establish those hypotheses for the concrete ζ(9) sequences.",
+      "source": "Local ζ(9) roadmap/DAG.md §V and S to J; mathematical proof in notes, Lean statement only in this draft.",
+      "tags": ["number-theory", "asymptotics", "lattices"]
+    },
+    {
+      "local_id": "Z9.R",
+      "kind": "theorem",
+      "theorem_name": "ZetaNine.irrational_zeta_nine",
+      "theorem_title": "Irrationality of ζ(9)",
+      "code_path": "ZetaNineRoot.lean",
+      "readback_path": "readbacks/ZetaNineRoot.md",
+      "natural_language_statement": "The real part of the Riemann zeta function at the complex number 9 is irrational. At this positive integer it is the classical real value ζ(9)=∑_{k≥1}k^(−9). This is the open mission goal.",
+      "source": "Classical open single-value irrationality problem; see W. Zudilin, Arithmetic of linear forms involving odd zeta values, arXiv:math/0206176, and local ζ(9) roadmap/DAG.md §J to root.",
+      "tags": ["number-theory", "zeta-values", "irrationality"]
+    }
+  ],
+  "reference_items": [
+    {
+      "local_id": "Z9.LIT.ZUDILIN",
+      "kind": "reference",
+      "theorem_id": "a925cba9-6bcf-4296-940d-3886687da227",
+      "theorem_name": "FCP.Zeta.zudilin_five_seven_nine_eleven"
+    }
+  ],
+  "item_order": ["Z9.LIT.ZUDILIN", "Z9.P.FORMAL", "Z9.RED.J.FORMAL", "Z9.R"],
+  "main_local_id": "Z9.R",
+  "milestones": [
+    {
+      "local_id": "Z9.LIT.ZUDILIN",
+      "milestone_title": "Zudilin's four-value disjunction",
+      "milestone_description": "Formalize the established result that at least one of ζ(5), ζ(7), ζ(9), ζ(11) is irrational. It is a historical lower bound on what the current methods identify and does not imply the single-value mission goal. This item reuses the platform's existing open theorem."
+    },
+    {
+      "local_id": "Z9.P.FORMAL",
+      "milestone_title": "Two-form irrationality criterion",
+      "milestone_description": "Formalize the note-proved criterion converting arbitrarily small values of two independent integer forms into irrationality. In the proposed ζ(9) route, this criterion is applied only after the second-minimum and analytic estimates produce those two forms."
+    },
+    {
+      "local_id": "Z9.RED.J.FORMAL",
+      "milestone_title": "Abstract volume and shape margin bridge",
+      "milestone_description": "Formalize the checked logical step from an eventual volume rate strictly below 10.564 and vanishing shape defect to a uniform positive margin. The concrete V and S estimates remain open mathematical research targets, not hypotheses established by this milestone."
+    }
+  ]
+}

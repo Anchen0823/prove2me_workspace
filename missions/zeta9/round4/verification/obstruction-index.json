@@ -1,0 +1,112 @@
+[
+  {
+    "D": 6,
+    "n": 24,
+    "status": "finite_primitive_abs_greater_than_one_certified",
+    "forced": 27,
+    "available": 27,
+    "log_lower_per_n": 35.4307151919382,
+    "seconds": 0.0,
+    "artifact": "missions\\zeta9\\round4\\verification\\obstruction-D6-n24.json",
+    "sha256": "5acf34d67156cde0faab49bd9d4ce896917ac31c828dcd6c0e4ff7d847b89505"
+  },
+  {
+    "D": 8,
+    "n": 24,
+    "status": "finite_primitive_abs_greater_than_one_certified",
+    "forced": 33,
+    "available": 33,
+    "log_lower_per_n": 50.89616471279207,
+    "seconds": 0.0,
+    "artifact": "missions\\zeta9\\round4\\verification\\obstruction-D8-n24.json",
+    "sha256": "937c570c62f2c052f5c6cca458b079cc220c9510eae1c0eebba67c8258300c0b"
+  },
+  {
+    "D": 6,
+    "n": 48,
+    "status": "finite_primitive_abs_greater_than_one_certified",
+    "forced": 44,
+    "available": 44,
+    "log_lower_per_n": 31.195416220871916,
+    "seconds": 0.0,
+    "artifact": "missions\\zeta9\\round4\\verification\\obstruction-D6-n48.json",
+    "sha256": "bd58966e028220a373aca25f6f6060c9d9c399603c5f9a85fafa43ae9f82fe10"
+  },
+  {
+    "D": 8,
+    "n": 48,
+    "status": "finite_primitive_abs_greater_than_one_certified",
+    "forced": 59,
+    "available": 59,
+    "log_lower_per_n": 51.33624756319259,
+    "seconds": 0.01600000000325963,
+    "artifact": "missions\\zeta9\\round4\\verification\\obstruction-D8-n48.json",
+    "sha256": "25fc66c0fa13c95542c6cff42564563a4000dd3397f9ed4754e1d9356b2a392a"
+  },
+  {
+    "D": 6,
+    "n": 96,
+    "status": "finite_primitive_abs_greater_than_one_certified",
+    "forced": 85,
+    "available": 85,
+    "log_lower_per_n": 35.00542020389407,
+    "seconds": 0.0,
+    "artifact": "missions\\zeta9\\round4\\verification\\obstruction-D6-n96.json",
+    "sha256": "8d8c86e713d5aa0af05f02b98f78d2b8636a2a0c9f68f5a9d065ea2e8ab1bd4e"
+  },
+  {
+    "D": 8,
+    "n": 96,
+    "status": "finite_primitive_abs_greater_than_one_certified",
+    "forced": 107,
+    "available": 107,
+    "log_lower_per_n": 51.81577474726069,
+    "seconds": 0.015000000013969839,
+    "artifact": "missions\\zeta9\\round4\\verification\\obstruction-D8-n96.json",
+    "sha256": "099d9861beabb89c5550143c5f9066e380db197519f32f4e173696680ec25282"
+  },
+  {
+    "D": 6,
+    "n": 192,
+    "status": "finite_primitive_abs_greater_than_one_certified",
+    "forced": 152,
+    "available": 152,
+    "log_lower_per_n": 34.32776463611006,
+    "seconds": 0.0159999999741558,
+    "artifact": "missions\\zeta9\\round4\\verification\\obstruction-D6-n192.json",
+    "sha256": "8ebb6e68a2f17f61d8f3e554aa3d4561b536a1e2ebaba45b314fcc12ea65f7d7"
+  },
+  {
+    "D": 8,
+    "n": 192,
+    "status": "finite_primitive_abs_greater_than_one_certified",
+    "forced": 197,
+    "available": 197,
+    "log_lower_per_n": 52.650048705342115,
+    "seconds": 0.01600000000325963,
+    "artifact": "missions\\zeta9\\round4\\verification\\obstruction-D8-n192.json",
+    "sha256": "3fb4df58f436acfc3232712b0fac7d4a587202fc3bcf772b1d8e2b203dbd5bfe"
+  },
+  {
+    "D": 6,
+    "n": 384,
+    "status": "finite_primitive_abs_greater_than_one_certified",
+    "forced": 280,
+    "available": 281,
+    "log_lower_per_n": 34.70725119777321,
+    "seconds": 0.046999999991385266,
+    "artifact": "missions\\zeta9\\round4\\verification\\obstruction-D6-n384.json",
+    "sha256": "665e88fc6de8c7a17604ce3d0a8263799132ff020e37383176143609d68c2706"
+  },
+  {
+    "D": 8,
+    "n": 384,
+    "status": "finite_primitive_abs_greater_than_one_certified",
+    "forced": 361,
+    "available": 362,
+    "log_lower_per_n": 52.57813255239211,
+    "seconds": 0.0779999999795109,
+    "artifact": "missions\\zeta9\\round4\\verification\\obstruction-D8-n384.json",
+    "sha256": "b87a484489991d6736090c10d2463acffd37da74e9b876bec82e2d9e00f07605"
+  }
+]

@@ -92,3 +92,41 @@ and every mode read-back-verifies its result.
    called).
 4. `--poll-jobs` must persist the receipt; the first version printed the correct
    statuses without saving them, which made `--prove` see `PENDING`.
+
+## Notes-layer batch (same day)
+
+A second batch, driven by `publish_notes_layer.py` (receipt
+[notes-layer-receipt.json](notes-layer-receipt.json)), put four more note-proved nodes
+on the platform — milestone links 40 → 44 total, of which 15 are linked to theorem
+items:
+
+| node | status | milestone | child edge |
+|---|---|---|---|
+| `ZetaNine.five_sample_sign_forces_nonzero` | Proved | TP3 | ← `quadrature_exact_of_moments` |
+| `ZetaNine.min_lt_weighted_average_lt_max` | Proved | FI1 | — |
+| `ZetaNine.mediant_strictly_between_min_and_max` | Proved | FI2 | ← `min_lt_weighted_average_lt_max` |
+| `ZetaNine.positive_matrix_maps_nonneg_to_pos` | Proved | TA1 | — |
+
+Two of the four are genuine reductions, so the graph gained two more edges: the
+five-sample non-vanishing certificate now hangs under the quadrature core, and the
+invariant mediant under the sandwich lemma. Files: `FiveSampleNonvanishing.lean`,
+`PositiveWeightSandwich.lean`, `RatioInterval.lean`, `PositiveCone.lean`, the matching
+`*-statement.md`, the four `solutions/Sol_*.lean` (all four compile with
+`lake env lean`) and the four `solutions/*-explanation.md`. Blind report:
+[readback-notes-layer-2026-09-25.md](readback-notes-layer-2026-09-25.md).
+Mission comment: `412f3b6b`.
+
+### Two failure/learning notes from this batch
+
+- **The mediant first came back `CE`.** Two causes, both recorded in
+  `memory/LEAN-PITFALLS.md`: in this environment `rw` does not rewrite inside a `∑`
+  binder (so `rw [div_eq_mul_inv, ← Finset.sum_mul]` silently changed only one of the
+  two sides), and `set x := … with hx` already folds the target, so a following
+  `rw [← hx]` fails with "pattern not found". Both were fixed by using
+  `simp only [hv, div_eq_mul_inv, ← Finset.sum_mul, ← hB]`, which does traverse
+  binders and honours `←` lemmas. The retry was accepted; `publish_notes_layer.py`
+  now keeps a `history` of rejected attempts and retries instead of skipping.
+- **Skipping the local compile is what cost the round.** The first mediant attempt was
+  submitted while its local `lake env lean` run was still in flight; the platform
+  caught the same errors the compiler would have. Compile first, then submit.
+

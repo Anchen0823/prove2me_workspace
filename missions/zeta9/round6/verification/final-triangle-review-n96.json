@@ -1,0 +1,52 @@
+{
+  "status": "passed",
+  "n": 96,
+  "source_sha256": "f5c801314512217b5974353c3d912e7378276b5808c4b599e5089aca1aed1bee",
+  "factorial_product_moments": 5,
+  "independent_rectangle_minima": [
+    {
+      "weights": "lower",
+      "exclude_pure_constant": false,
+      "rectangle": [
+        1,
+        1
+      ],
+      "minimum_sha256": "864f650bbd5cc615f946a5e3e2d88b142f6f6aa7864287501b2b39a8072b78c6"
+    },
+    {
+      "weights": "lower",
+      "exclude_pure_constant": true,
+      "rectangle": [
+        1,
+        1
+      ],
+      "minimum_sha256": "864f650bbd5cc615f946a5e3e2d88b142f6f6aa7864287501b2b39a8072b78c6"
+    },
+    {
+      "weights": "upper",
+      "exclude_pure_constant": false,
+      "rectangle": [
+        1,
+        1
+      ],
+      "minimum_sha256": "11862d2b4020a29864f49e2d756dd0e2231ce23e9ce153bc5cd10d689ebd82e0"
+    },
+    {
+      "weights": "upper",
+      "exclude_pure_constant": true,
+      "rectangle": [
+        1,
+        1
+      ],
+      "minimum_sha256": "11862d2b4020a29864f49e2d756dd0e2231ce23e9ce153bc5cd10d689ebd82e0"
+    }
+  ],
+  "independent_short_forms": 2,
+  "signed_original_sum_signs": [
+    -1,
+    1
+  ],
+  "no_zeta_numerical_input": true,
+  "seconds": 1.4219999999913853,
+  "script_sha256": "53e5fcb978323e79ab084b87c0c1694273aed5e9c68f353b7628d58802f2be5f"
+}

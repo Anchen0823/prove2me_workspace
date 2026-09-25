@@ -1,0 +1,358 @@
+{
+  "status": "exact_rational_all_direction_triangle_certificate",
+  "archive": "missions\\zeta9\\round6\\verification\\search-input-n12.json.gz",
+  "archive_sha256": "f048d3a183b315b6a1cd8d4cfdf6e3e92e310b306663580f099fdaa5bc8ca1be",
+  "n": 12,
+  "cutoff": 256,
+  "moment_bound_proof": "S_r=sum_{k>n} R_n(k)u(k)^r. Partial sum k<=T is exact rational. For k>T, R_n(k)<=n!^7(1+2n/T)^(2n)k^(-7n-9), u(k)^r<=2^r k^(2r), and integral comparison gives the saved tail.",
+  "moment_lower_upper": [
+    {
+      "r": 0,
+      "lower": {
+        "decimal_40_digits_noncertifying": "6.520334661629299820891796252707355879008E-62",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 958,
+        "denominator_digits": 1019,
+        "fraction_sha256": "c86f599bb8e37ba3dfc0c78186e704e2269ffd65b538844fc00fe6857791c358"
+      },
+      "upper": {
+        "decimal_40_digits_noncertifying": "6.520334661629299820891796252707355879008E-62",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 1174,
+        "denominator_digits": 1236,
+        "fraction_sha256": "6665b8074406625d41555b57cc0d46c39487d6401d538b42594d145ad7649be1"
+      },
+      "tail": {
+        "decimal_40_digits_noncertifying": "1.494609358524374246292083639710651160481E-162",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 77,
+        "denominator_digits": 239,
+        "fraction_sha256": "9b5cfac3ef8fea144c97531521201eef8f491a6e54ed73911f121065a6018625"
+      }
+    },
+    {
+      "r": 1,
+      "lower": {
+        "decimal_40_digits_noncertifying": "2.128730586199262403265006512890833363138E-59",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 957,
+        "denominator_digits": 1015,
+        "fraction_sha256": "d18031d71ee076fc756f07bedc7a66dee9f3d97c44c0696d5588f558f24dbfe0"
+      },
+      "upper": {
+        "decimal_40_digits_noncertifying": "2.128730586199262403265006512890833363138E-59",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 1170,
+        "denominator_digits": 1228,
+        "fraction_sha256": "8acd81ec3bd190a3e28f36af0475ff56f4863f7230deb3911f0a0e2ff20cd448"
+      },
+      "tail": {
+        "decimal_40_digits_noncertifying": "2.002548031258513763479958976424690126601E-157",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 76,
+        "denominator_digits": 232,
+        "fraction_sha256": "acf0c6adb5b98855992cbc5296d4a5a82cd5eabf676c3bc29193bfc9f5f08f53"
+      }
+    },
+    {
+      "r": 2,
+      "lower": {
+        "decimal_40_digits_noncertifying": "6.953625404005763481837525310110217622130E-57",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 956,
+        "denominator_digits": 1012,
+        "fraction_sha256": "a7daf6a69db614cf47430d8309d1b446ff5607bbc486849aa64b7c39c07ddba4"
+      },
+      "upper": {
+        "decimal_40_digits_noncertifying": "6.953625404005763481837525310110217622130E-57",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 1166,
+        "denominator_digits": 1222,
+        "fraction_sha256": "10892a67873c005cceab6175a896ea2e09c3cdcd0582e2f3ad9d18f145f06efe"
+      },
+      "tail": {
+        "decimal_40_digits_noncertifying": "2.684433840884140050070007552978900975527E-152",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 76,
+        "denominator_digits": 228,
+        "fraction_sha256": "1f3a06165427cb27111e7fbaa54b0900cdc23814ca79b1ab9d1f26b0caa24b96"
+      }
+    },
+    {
+      "r": 3,
+      "lower": {
+        "decimal_40_digits_noncertifying": "2.272852613666584379376656851492779501025E-54",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 953,
+        "denominator_digits": 1007,
+        "fraction_sha256": "9de9412b7f71795f355ab34536d292b296d8654ac5c0fc61cbf7bcc9dda54aaf"
+      },
+      "upper": {
+        "decimal_40_digits_noncertifying": "2.272852613666584379376656851492779501025E-54",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 1158,
+        "denominator_digits": 1212,
+        "fraction_sha256": "4379da70182ba42bfe1c207d23101e55a794ea3f6d9f4ad97944ca9ac6490a58"
+      },
+      "tail": {
+        "decimal_40_digits_noncertifying": "3.600367661689326559135382632394935437495E-147",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 77,
+        "denominator_digits": 224,
+        "fraction_sha256": "db7078dd2e8f957905d2f37d49b705b28f928b37fd581b6790b33afa92cd88f8"
+      }
+    },
+    {
+      "r": 4,
+      "lower": {
+        "decimal_40_digits_noncertifying": "7.434196034284301710438529656632677701960E-52",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 954,
+        "denominator_digits": 1005,
+        "fraction_sha256": "93a81f0e6e37ed3ed324412f25c65bcd2afb5cc323695eb23c2b3e626f0dff52"
+      },
+      "upper": {
+        "decimal_40_digits_noncertifying": "7.434196034284301710438529656632677701960E-52",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 1155,
+        "denominator_digits": 1206,
+        "fraction_sha256": "6f75292dbce8386d25e46b702d20b47f9428b0213d4475c96e2e16c0e81a6f8d"
+      },
+      "tail": {
+        "decimal_40_digits_noncertifying": "4.831432803946801586342069884026325247506E-142",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 76,
+        "denominator_digits": 217,
+        "fraction_sha256": "3ee508566eb03fefd482375340072c21cc7652d3f4a9a2807bbbc38ace061c39"
+      }
+    }
+  ],
+  "T_inverse_output_coefficients_sha256": "eff410b8f7d9ea6dd2c47e63679b65fca4fac4279e30ad5b44b626a22b25bbeb",
+  "minima": [
+    {
+      "weights": "lower",
+      "exclude_pure_constant": false,
+      "min": {
+        "decimal_40_digits_noncertifying": "7.578997024002122873208057187348302920005E-27",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 1023,
+        "denominator_digits": 1049,
+        "fraction_sha256": "8a8398ae34b881a94180b8005b9f20ff1c679c1bd2c7f2bdf9394a33049a692c"
+      },
+      "gauss_g1_triangle_norm": {
+        "decimal_40_digits_noncertifying": "7.578997024002122873208057187348302920005E-27",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 1023,
+        "denominator_digits": 1049,
+        "fraction_sha256": "8a8398ae34b881a94180b8005b9f20ff1c679c1bd2c7f2bdf9394a33049a692c"
+      },
+      "gauss_g2_triangle_norm": {
+        "decimal_40_digits_noncertifying": "9.323385230096321034383021217431544754338E-27",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 998,
+        "denominator_digits": 1024,
+        "fraction_sha256": "d5c93674f114dbd8e5daa20a4ac86126bb886ec1779a89aa20c29c03960528b2"
+      },
+      "gauss_shape_ratio_N2_over_N1": "1.230160824785898419548776656401141169574",
+      "gram_covolume_squared": {
+        "decimal_40_digits_noncertifying": "9.168959732458771358438448703758256955394E-106",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 4006,
+        "denominator_digits": 4111,
+        "fraction_sha256": "4ac8d0945494c7feb6007008bb5fcbc00d4a23a916f8d6cfb6dc8baefa749415"
+      },
+      "output_B_A9": [
+        -69804309706384605394961267,
+        69664396232757386615702441
+      ],
+      "gauss_g1": [
+        -69804309706384605394961267,
+        69664396232757386615702441
+      ],
+      "gauss_g2": [
+        -52167791577971380920371743,
+        52063228164024073471924392
+      ],
+      "ymax": 1,
+      "y_slices_checked": 3,
+      "pure_constant": false
+    },
+    {
+      "weights": "lower",
+      "exclude_pure_constant": true,
+      "min": {
+        "decimal_40_digits_noncertifying": "7.578997024002122873208057187348302920005E-27",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 1023,
+        "denominator_digits": 1049,
+        "fraction_sha256": "8a8398ae34b881a94180b8005b9f20ff1c679c1bd2c7f2bdf9394a33049a692c"
+      },
+      "gauss_g1_triangle_norm": {
+        "decimal_40_digits_noncertifying": "7.578997024002122873208057187348302920005E-27",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 1023,
+        "denominator_digits": 1049,
+        "fraction_sha256": "8a8398ae34b881a94180b8005b9f20ff1c679c1bd2c7f2bdf9394a33049a692c"
+      },
+      "gauss_g2_triangle_norm": {
+        "decimal_40_digits_noncertifying": "9.323385230096321034383021217431544754338E-27",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 998,
+        "denominator_digits": 1024,
+        "fraction_sha256": "d5c93674f114dbd8e5daa20a4ac86126bb886ec1779a89aa20c29c03960528b2"
+      },
+      "gauss_shape_ratio_N2_over_N1": "1.230160824785898419548776656401141169574",
+      "gram_covolume_squared": {
+        "decimal_40_digits_noncertifying": "9.168959732458771358438448703758256955394E-106",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 4006,
+        "denominator_digits": 4111,
+        "fraction_sha256": "4ac8d0945494c7feb6007008bb5fcbc00d4a23a916f8d6cfb6dc8baefa749415"
+      },
+      "output_B_A9": [
+        -69804309706384605394961267,
+        69664396232757386615702441
+      ],
+      "gauss_g1": [
+        -69804309706384605394961267,
+        69664396232757386615702441
+      ],
+      "gauss_g2": [
+        -52167791577971380920371743,
+        52063228164024073471924392
+      ],
+      "ymax": 1,
+      "y_slices_checked": 3,
+      "pure_constant": false
+    },
+    {
+      "weights": "upper",
+      "exclude_pure_constant": false,
+      "min": {
+        "decimal_40_digits_noncertifying": "7.578997024002122873208057187348302920005E-27",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 1240,
+        "denominator_digits": 1266,
+        "fraction_sha256": "bdff95a4c20b07cc748ec817ae7ffd22b0d1657e6eb99f11503fc7a06dd8ef1b"
+      },
+      "gauss_g1_triangle_norm": {
+        "decimal_40_digits_noncertifying": "7.578997024002122873208057187348302920005E-27",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 1240,
+        "denominator_digits": 1266,
+        "fraction_sha256": "bdff95a4c20b07cc748ec817ae7ffd22b0d1657e6eb99f11503fc7a06dd8ef1b"
+      },
+      "gauss_g2_triangle_norm": {
+        "decimal_40_digits_noncertifying": "9.323385230096321034383021217431544754338E-27",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 1217,
+        "denominator_digits": 1243,
+        "fraction_sha256": "3c01bdaf2a1dadba22ebf47dd51e968e0360b98eade7484fe74d735e13d78f84"
+      },
+      "gauss_shape_ratio_N2_over_N1": "1.230160824785898419548776656401141169574",
+      "gram_covolume_squared": {
+        "decimal_40_digits_noncertifying": "9.168959732458771358438448703758256955394E-106",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 4866,
+        "denominator_digits": 4971,
+        "fraction_sha256": "f806d7197ccfa3f7b30ba4a6a580cea7571f09f21e37101d972986275ed85748"
+      },
+      "output_B_A9": [
+        -69804309706384605394961267,
+        69664396232757386615702441
+      ],
+      "gauss_g1": [
+        -69804309706384605394961267,
+        69664396232757386615702441
+      ],
+      "gauss_g2": [
+        -52167791577971380920371743,
+        52063228164024073471924392
+      ],
+      "ymax": 1,
+      "y_slices_checked": 3,
+      "pure_constant": false
+    },
+    {
+      "weights": "upper",
+      "exclude_pure_constant": true,
+      "min": {
+        "decimal_40_digits_noncertifying": "7.578997024002122873208057187348302920005E-27",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 1240,
+        "denominator_digits": 1266,
+        "fraction_sha256": "bdff95a4c20b07cc748ec817ae7ffd22b0d1657e6eb99f11503fc7a06dd8ef1b"
+      },
+      "gauss_g1_triangle_norm": {
+        "decimal_40_digits_noncertifying": "7.578997024002122873208057187348302920005E-27",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 1240,
+        "denominator_digits": 1266,
+        "fraction_sha256": "bdff95a4c20b07cc748ec817ae7ffd22b0d1657e6eb99f11503fc7a06dd8ef1b"
+      },
+      "gauss_g2_triangle_norm": {
+        "decimal_40_digits_noncertifying": "9.323385230096321034383021217431544754338E-27",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 1217,
+        "denominator_digits": 1243,
+        "fraction_sha256": "3c01bdaf2a1dadba22ebf47dd51e968e0360b98eade7484fe74d735e13d78f84"
+      },
+      "gauss_shape_ratio_N2_over_N1": "1.230160824785898419548776656401141169574",
+      "gram_covolume_squared": {
+        "decimal_40_digits_noncertifying": "9.168959732458771358438448703758256955394E-106",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 4866,
+        "denominator_digits": 4971,
+        "fraction_sha256": "f806d7197ccfa3f7b30ba4a6a580cea7571f09f21e37101d972986275ed85748"
+      },
+      "output_B_A9": [
+        -69804309706384605394961267,
+        69664396232757386615702441
+      ],
+      "gauss_g1": [
+        -69804309706384605394961267,
+        69664396232757386615702441
+      ],
+      "gauss_g2": [
+        -52167791577971380920371743,
+        52063228164024073471924392
+      ],
+      "ymax": 1,
+      "y_slices_checked": 3,
+      "pure_constant": false
+    }
+  ],
+  "interpretation": "min_lower>1 rules out only triangle/positive-upper certification, not a smaller true primitive form from cancellation. min_upper<1 gives an explicit direction whose triangle bound is <1.",
+  "elapsed_seconds": 0.7667088999878615
+}

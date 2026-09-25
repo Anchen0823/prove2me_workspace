@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "scope": "exact polynomial and constants for frozen G only",
+  "source_sha256": "1d423092a422df93d4712342b582a23681434beefafaa8f544206042b519d89c",
+  "Q_coefficients_ascending": [
+    -1,
+    -10336452,
+    -10120051241400,
+    -82488337575256095,
+    -33339376907507494,
+    22235661
+  ],
+  "leading_coefficient": 22235661,
+  "max_other_coefficient": 82488337575256095,
+  "cauchy_root_bound_integer": 3709731751,
+  "forward_mod2_remainders": {
+    "2": 1,
+    "3": 1,
+    "7": 1
+  },
+  "resultant_bound": "if Q does not divide P, |P(rho)| >= a^(-d) ((d+1) H R^d)^(-4)",
+  "zero_exception": "Q divides P implies P(G)=0 by Cayley-Hamilton"
+}

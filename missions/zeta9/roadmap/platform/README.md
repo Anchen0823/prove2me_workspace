@@ -27,18 +27,28 @@ python missions/zeta9/roadmap/platform/sync_private_proposal.py
 ## 2026-09-25：目标定理接上平台依赖图
 
 此前根节点 `ZetaNine.irrational_zeta_nine` 在平台的 dependency graph 里**一个孩子都没有**——
-mission 说明写了箭头，图里没有边。现在根节点有两条已接受的 proof-sketch 分解，另有三个
-已证的一般引理和两个开放义务节点，里程碑数 35 → 40。细节与复现命令见
-[wiring/README.md](wiring/README.md)，平台回执 [wiring/wiring-receipt.json](wiring/wiring-receipt.json)，
-盲审报告 [wiring/readback-2026-09-25.md](wiring/readback-2026-09-25.md)。
+mission 说明写了箭头，图里没有边。现在根节点有两条已接受的 proof-sketch 分解，另有**七**个
+已证的一般引理节点，里程碑数 35 → 44（其中 15 条挂到定理）。细节与复现命令见
+[wiring/README.md](wiring/README.md)，平台回执 [wiring/wiring-receipt.json](wiring/wiring-receipt.json)
+与 [wiring/notes-layer-receipt.json](wiring/notes-layer-receipt.json)，
+盲审报告 [wiring/readback-2026-09-25.md](wiring/readback-2026-09-25.md) 与
+[wiring/readback-notes-layer-2026-09-25.md](wiring/readback-notes-layer-2026-09-25.md)。
 
 | 新节点 | 状态 | 链接里程碑 |
 |---|---|---|
 | `ZetaNine.irrational_of_small_nonzero_integer_forms` | Proved | TP2 |
 | `ZetaNine.taylor_sign_implies_kernel_sum_pos` | Proved | TP1 |
 | `ZetaNine.quadrature_exact_of_moments` | Proved | FQ1 |
+| `ZetaNine.five_sample_sign_forces_nonzero` | Proved | TP3 |
+| `ZetaNine.min_lt_weighted_average_lt_max` | Proved | FI1 |
+| `ZetaNine.mediant_strictly_between_min_and_max` | Proved | FI2 |
+| `ZetaNine.positive_matrix_maps_nonneg_to_pos` | Proved | TA1 |
 | `ZetaNine.exponentially_small_nonzero_forms_of_zeta_nine` | Open | R1 |
 | `ZetaNine.exponentially_small_independent_forms_of_zeta_nine` | Open | R2 |
+
+**已登记的两条内部边**（平台的 decomposition）：`five_sample_sign_forces_nonzero ←
+quadrature_exact_of_moments`、`mediant_strictly_between_min_and_max ←
+min_lt_weighted_average_lt_max`。
 
 两条根约简：单形式路线 `{一对多式准则(Proved), 指数小非零形式义务(Open)}`、双形式路线
 `{双形式准则(Proved), 指数小独立形式义务(Open)}`，均 `SKETCH_ACCEPTED`。两个开放义务都

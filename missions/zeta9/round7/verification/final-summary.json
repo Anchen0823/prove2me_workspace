@@ -1,0 +1,23 @@
+{
+  "status": "round_complete_no_irrationality_proof",
+  "uniform_results": [
+    "rational connection F_(n+2)=C(n)F_n for all even n>=2",
+    "det F_n=(3n/2)!(7n/2)!/[7n((n/2)!)^10]",
+    "N divides d_n^45*d_(7n/2)^8; all prime factors at most 7n/2",
+    "fixed finite primes provide at most subexponential modulus gain",
+    "real phase -10.564155 < f_* < -10.564",
+    "full-space transfer norm has saddle-matched spectral obstruction"
+  ],
+  "finite_evidence": {
+    "modulus_tiers": 74,
+    "prime_window_cases": 30,
+    "strict_CF_prefix": 918,
+    "symbolic_determinant_degree_bound": 110,
+    "symbolic_determinant_exact_points": 111,
+    "low_and_mixed_minors": 100,
+    "previous_frozen_files": 498
+  },
+  "remaining": "Uniform short-vector lower bound for Lambda_gcd(N,d_n^2) on an infinite sequence",
+  "independent_summary_sha256": "256f6571024a024edf258a7aad1608d09b6713d29de1e8f777e5df10e9977cae",
+  "symbolic_review_sha256": "afc431dbf95819f666a97fc61432fe83407da4cff4afeab7c6a7c9a178b4894c"
+}

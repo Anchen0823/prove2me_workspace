@@ -1,0 +1,6308 @@
+{
+  "status": "ok",
+  "cases": 6,
+  "large_prime_mod_checks": 200,
+  "all_denominators_completely_trial_factored": true,
+  "all_primitive_multiplier_negative_valuations_empty": true,
+  "script_sha256": "bf9308ba4cd67d20a03083af3447ffe7e045889a39912a67ec396a2b10782fec",
+  "rows": [
+    {
+      "case_id": "D6-n6-m6",
+      "D": 6,
+      "n": 6,
+      "m": 6,
+      "B_denominator": "102302015759382009119615879485904657119680164378061287979747599602142741865857617626480804142705639690717732073642192065518662782898422665748802854878748267279892664025757082541008421466512618895600389642350208688484294231089262963892605257522557747200000000000000000",
+      "B_denominator_prime_powers": [
+        [
+          2,
+          43
+        ],
+        [
+          3,
+          17
+        ],
+        [
+          5,
+          17
+        ],
+        [
+          7,
+          17
+        ],
+        [
+          11,
+          9
+        ],
+        [
+          13,
+          8
+        ],
+        [
+          17,
+          9
+        ],
+        [
+          19,
+          9
+        ],
+        [
+          23,
+          9
+        ],
+        [
+          29,
+          9
+        ],
+        [
+          31,
+          9
+        ],
+        [
+          37,
+          9
+        ],
+        [
+          41,
+          9
+        ],
+        [
+          43,
+          9
+        ],
+        [
+          47,
+          9
+        ],
+        [
+          53,
+          9
+        ],
+        [
+          59,
+          9
+        ],
+        [
+          61,
+          9
+        ],
+        [
+          67,
+          9
+        ],
+        [
+          71,
+          9
+        ]
+      ],
+      "B_denominator_residual": "1",
+      "B_denominator_sha256": "e2fbe091cae6909ca728ae372290487cc01a2ce6c04fe7eb4fed13ba27bd6ebb",
+      "primitive_multiplier": [
+        "102302015759382009119615879485904657119680164378061287979747599602142741865857617626480804142705639690717732073642192065518662782898422665748802854878748267279892664025757082541008421466512618895600389642350208688484294231089262963892605257522557747200000000000000000",
+        "1"
+      ],
+      "primitive_multiplier_positive_powers": [
+        [
+          2,
+          43
+        ],
+        [
+          3,
+          17
+        ],
+        [
+          5,
+          17
+        ],
+        [
+          7,
+          17
+        ],
+        [
+          11,
+          9
+        ],
+        [
+          13,
+          8
+        ],
+        [
+          17,
+          9
+        ],
+        [
+          19,
+          9
+        ],
+        [
+          23,
+          9
+        ],
+        [
+          29,
+          9
+        ],
+        [
+          31,
+          9
+        ],
+        [
+          37,
+          9
+        ],
+        [
+          41,
+          9
+        ],
+        [
+          43,
+          9
+        ],
+        [
+          47,
+          9
+        ],
+        [
+          53,
+          9
+        ],
+        [
+          59,
+          9
+        ],
+        [
+          61,
+          9
+        ],
+        [
+          67,
+          9
+        ],
+        [
+          71,
+          9
+        ]
+      ],
+      "primitive_multiplier_negative_powers": [],
+      "primitive_multiplier_num_residual": "1",
+      "primitive_multiplier_den_residual": "1",
+      "content": "1",
+      "C_sha256": "e6533607dd0eb1bbea120c630ebc78e576eea793f3302e51f0fc59f9bf00521c",
+      "band_costs": {
+        "p_le_n": {
+          "positive_log_per_n": 12.640363697135868,
+          "negative_log_per_n": 0.0,
+          "signed_log_per_n": 12.640363697135868,
+          "nonzero_valuations": 3,
+          "valuations": [
+            [
+              2,
+              43
+            ],
+            [
+              3,
+              17
+            ],
+            [
+              5,
+              17
+            ]
+          ]
+        },
+        "n_lt_p_le_2n": {
+          "positive_log_per_n": 9.11025499818761,
+          "negative_log_per_n": 0.0,
+          "signed_log_per_n": 9.11025499818761,
+          "nonzero_valuations": 2,
+          "valuations": [
+            [
+              7,
+              17
+            ],
+            [
+              11,
+              9
+            ]
+          ]
+        },
+        "2n_lt_p_le_Dn": {
+          "positive_log_per_n": 26.991576837050523,
+          "negative_log_per_n": 0.0,
+          "signed_log_per_n": 26.991576837050523,
+          "nonzero_valuations": 6,
+          "valuations": [
+            [
+              13,
+              8
+            ],
+            [
+              17,
+              9
+            ],
+            [
+              19,
+              9
+            ],
+            [
+              23,
+              9
+            ],
+            [
+              29,
+              9
+            ],
+            [
+              31,
+              9
+            ]
+          ]
+        },
+        "Dn_lt_p_le_2Dn": {
+          "positive_log_per_n": 53.342870122223374,
+          "negative_log_per_n": 0.0,
+          "signed_log_per_n": 53.342870122223374,
+          "nonzero_valuations": 9,
+          "valuations": [
+            [
+              37,
+              9
+            ],
+            [
+              41,
+              9
+            ],
+            [
+              43,
+              9
+            ],
+            [
+              47,
+              9
+            ],
+            [
+              53,
+              9
+            ],
+            [
+              59,
+              9
+            ],
+            [
+              61,
+              9
+            ],
+            [
+              67,
+              9
+            ],
+            [
+              71,
+              9
+            ]
+          ]
+        }
+      },
+      "log_multiplier_per_n": 102.08506565459739,
+      "large_prime_mod_checks": [
+        {
+          "p": 13,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            1,
+            12,
+            0
+          ],
+          "formula_residue_mod_p": 0,
+          "exact_p9_B_mod_p": 0,
+          "nonzero": false,
+          "exact_vp_B": -8
+        },
+        {
+          "p": 17,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            11,
+            14,
+            13
+          ],
+          "formula_residue_mod_p": 4,
+          "exact_p9_B_mod_p": 4,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 19,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            9,
+            11,
+            6
+          ],
+          "formula_residue_mod_p": 7,
+          "exact_p9_B_mod_p": 7,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 23,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            1,
+            11,
+            9
+          ],
+          "formula_residue_mod_p": 21,
+          "exact_p9_B_mod_p": 21,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 29,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            7,
+            17
+          ],
+          "formula_residue_mod_p": 24,
+          "exact_p9_B_mod_p": 24,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 31,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            6,
+            28
+          ],
+          "formula_residue_mod_p": 3,
+          "exact_p9_B_mod_p": 3,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 37,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            8
+          ],
+          "formula_residue_mod_p": 8,
+          "exact_p9_B_mod_p": 8,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 41,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            13
+          ],
+          "formula_residue_mod_p": 13,
+          "exact_p9_B_mod_p": 13,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 43,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            28
+          ],
+          "formula_residue_mod_p": 28,
+          "exact_p9_B_mod_p": 28,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 47,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            28
+          ],
+          "formula_residue_mod_p": 28,
+          "exact_p9_B_mod_p": 28,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 53,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            13
+          ],
+          "formula_residue_mod_p": 13,
+          "exact_p9_B_mod_p": 13,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 59,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            3
+          ],
+          "formula_residue_mod_p": 3,
+          "exact_p9_B_mod_p": 3,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 61,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            53
+          ],
+          "formula_residue_mod_p": 53,
+          "exact_p9_B_mod_p": 53,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 67,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            15
+          ],
+          "formula_residue_mod_p": 15,
+          "exact_p9_B_mod_p": 15,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 71,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            44
+          ],
+          "formula_residue_mod_p": 44,
+          "exact_p9_B_mod_p": 44,
+          "nonzero": true,
+          "exact_vp_B": -9
+        }
+      ],
+      "large_prime_check_count": 15,
+      "nonzero_large_prime_count": 14,
+      "zero_large_prime_count": 1,
+      "source_tail_sha256": {
+        "tail_shift": "6ea5084daec1caeb3976fb063133dcb15c68a96565fb629af7e2accfac56ac4d",
+        "general_poles": "40080f2e004df1e9347f082dcc048068af88e02e2818d1772554f72077e1eabc",
+        "shift_forms": "823f38c2ca088a3ab2f5053db0ad4f25bd73b5616496e45f0d2e89e09e27ab75"
+      }
+    },
+    {
+      "case_id": "D8-n6-m6",
+      "D": 8,
+      "n": 6,
+      "m": 6,
+      "B_denominator": "17740371060176224709623623556073875586995903941733681668317301887173988913223004292437268696891806012565545253274276802738530211174307227842842718140769265931463154862983740619821902233831998720316923964614473102781465696896047137537751358322110159655384206940061428814431121992811297344393787227277182820095352347453879500000000000000000",
+      "B_denominator_prime_powers": [
+        [
+          2,
+          17
+        ],
+        [
+          3,
+          35
+        ],
+        [
+          5,
+          18
+        ],
+        [
+          7,
+          17
+        ],
+        [
+          11,
+          9
+        ],
+        [
+          13,
+          9
+        ],
+        [
+          17,
+          9
+        ],
+        [
+          19,
+          9
+        ],
+        [
+          23,
+          9
+        ],
+        [
+          29,
+          9
+        ],
+        [
+          31,
+          9
+        ],
+        [
+          37,
+          9
+        ],
+        [
+          41,
+          9
+        ],
+        [
+          43,
+          9
+        ],
+        [
+          47,
+          9
+        ],
+        [
+          53,
+          9
+        ],
+        [
+          59,
+          9
+        ],
+        [
+          61,
+          9
+        ],
+        [
+          67,
+          9
+        ],
+        [
+          71,
+          9
+        ],
+        [
+          73,
+          9
+        ],
+        [
+          79,
+          9
+        ],
+        [
+          83,
+          9
+        ],
+        [
+          89,
+          9
+        ]
+      ],
+      "B_denominator_residual": "1",
+      "B_denominator_sha256": "a4346178befa0ad5db936f9dc976aa0fc615aa615769f2ba834a59190bbbd360",
+      "primitive_multiplier": [
+        "17740371060176224709623623556073875586995903941733681668317301887173988913223004292437268696891806012565545253274276802738530211174307227842842718140769265931463154862983740619821902233831998720316923964614473102781465696896047137537751358322110159655384206940061428814431121992811297344393787227277182820095352347453879500000000000000000",
+        "1"
+      ],
+      "primitive_multiplier_positive_powers": [
+        [
+          2,
+          17
+        ],
+        [
+          3,
+          35
+        ],
+        [
+          5,
+          18
+        ],
+        [
+          7,
+          17
+        ],
+        [
+          11,
+          9
+        ],
+        [
+          13,
+          9
+        ],
+        [
+          17,
+          9
+        ],
+        [
+          19,
+          9
+        ],
+        [
+          23,
+          9
+        ],
+        [
+          29,
+          9
+        ],
+        [
+          31,
+          9
+        ],
+        [
+          37,
+          9
+        ],
+        [
+          41,
+          9
+        ],
+        [
+          43,
+          9
+        ],
+        [
+          47,
+          9
+        ],
+        [
+          53,
+          9
+        ],
+        [
+          59,
+          9
+        ],
+        [
+          61,
+          9
+        ],
+        [
+          67,
+          9
+        ],
+        [
+          71,
+          9
+        ],
+        [
+          73,
+          9
+        ],
+        [
+          79,
+          9
+        ],
+        [
+          83,
+          9
+        ],
+        [
+          89,
+          9
+        ]
+      ],
+      "primitive_multiplier_negative_powers": [],
+      "primitive_multiplier_num_residual": "1",
+      "primitive_multiplier_den_residual": "1",
+      "content": "1",
+      "C_sha256": "e6533607dd0eb1bbea120c630ebc78e576eea793f3302e51f0fc59f9bf00521c",
+      "band_costs": {
+        "p_le_n": {
+          "positive_log_per_n": 13.20080243278612,
+          "negative_log_per_n": 0.0,
+          "signed_log_per_n": 13.20080243278612,
+          "nonzero_valuations": 3,
+          "valuations": [
+            [
+              2,
+              17
+            ],
+            [
+              3,
+              35
+            ],
+            [
+              5,
+              18
+            ]
+          ]
+        },
+        "n_lt_p_le_2n": {
+          "positive_log_per_n": 9.11025499818761,
+          "negative_log_per_n": 0.0,
+          "signed_log_per_n": 9.11025499818761,
+          "nonzero_valuations": 2,
+          "valuations": [
+            [
+              7,
+              17
+            ],
+            [
+              11,
+              9
+            ]
+          ]
+        },
+        "2n_lt_p_le_Dn": {
+          "positive_log_per_n": 49.82282494175568,
+          "negative_log_per_n": 0.0,
+          "signed_log_per_n": 49.82282494175568,
+          "nonzero_valuations": 10,
+          "valuations": [
+            [
+              13,
+              9
+            ],
+            [
+              17,
+              9
+            ],
+            [
+              19,
+              9
+            ],
+            [
+              23,
+              9
+            ],
+            [
+              29,
+              9
+            ],
+            [
+              31,
+              9
+            ],
+            [
+              37,
+              9
+            ],
+            [
+              41,
+              9
+            ],
+            [
+              43,
+              9
+            ],
+            [
+              47,
+              9
+            ]
+          ]
+        },
+        "Dn_lt_p_le_2Dn": {
+          "positive_log_per_n": 57.29018998381137,
+          "negative_log_per_n": 0.0,
+          "signed_log_per_n": 57.29018998381137,
+          "nonzero_valuations": 9,
+          "valuations": [
+            [
+              53,
+              9
+            ],
+            [
+              59,
+              9
+            ],
+            [
+              61,
+              9
+            ],
+            [
+              67,
+              9
+            ],
+            [
+              71,
+              9
+            ],
+            [
+              73,
+              9
+            ],
+            [
+              79,
+              9
+            ],
+            [
+              83,
+              9
+            ],
+            [
+              89,
+              9
+            ]
+          ]
+        }
+      },
+      "log_multiplier_per_n": 129.4240723565408,
+      "large_prime_mod_checks": [
+        {
+          "p": 13,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            3,
+            8,
+            0
+          ],
+          "formula_residue_mod_p": 11,
+          "exact_p9_B_mod_p": 11,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 17,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            10,
+            15,
+            15
+          ],
+          "formula_residue_mod_p": 6,
+          "exact_p9_B_mod_p": 6,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 19,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            1,
+            5,
+            9
+          ],
+          "formula_residue_mod_p": 15,
+          "exact_p9_B_mod_p": 15,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 23,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            6,
+            2,
+            8
+          ],
+          "formula_residue_mod_p": 16,
+          "exact_p9_B_mod_p": 16,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 29,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            4,
+            6
+          ],
+          "formula_residue_mod_p": 10,
+          "exact_p9_B_mod_p": 10,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 31,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            21,
+            28
+          ],
+          "formula_residue_mod_p": 18,
+          "exact_p9_B_mod_p": 18,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 37,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            17,
+            15
+          ],
+          "formula_residue_mod_p": 32,
+          "exact_p9_B_mod_p": 32,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 41,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            35,
+            19
+          ],
+          "formula_residue_mod_p": 13,
+          "exact_p9_B_mod_p": 13,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 43,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            6,
+            31
+          ],
+          "formula_residue_mod_p": 37,
+          "exact_p9_B_mod_p": 37,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 47,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            10,
+            13
+          ],
+          "formula_residue_mod_p": 23,
+          "exact_p9_B_mod_p": 23,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 53,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            29
+          ],
+          "formula_residue_mod_p": 29,
+          "exact_p9_B_mod_p": 29,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 59,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            19
+          ],
+          "formula_residue_mod_p": 19,
+          "exact_p9_B_mod_p": 19,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 61,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            39
+          ],
+          "formula_residue_mod_p": 39,
+          "exact_p9_B_mod_p": 39,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 67,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            35
+          ],
+          "formula_residue_mod_p": 35,
+          "exact_p9_B_mod_p": 35,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 71,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            56
+          ],
+          "formula_residue_mod_p": 56,
+          "exact_p9_B_mod_p": 56,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 73,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            11
+          ],
+          "formula_residue_mod_p": 11,
+          "exact_p9_B_mod_p": 11,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 79,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            65
+          ],
+          "formula_residue_mod_p": 65,
+          "exact_p9_B_mod_p": 65,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 83,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            81
+          ],
+          "formula_residue_mod_p": 81,
+          "exact_p9_B_mod_p": 81,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 89,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            69
+          ],
+          "formula_residue_mod_p": 69,
+          "exact_p9_B_mod_p": 69,
+          "nonzero": true,
+          "exact_vp_B": -9
+        }
+      ],
+      "large_prime_check_count": 19,
+      "nonzero_large_prime_count": 19,
+      "zero_large_prime_count": 0,
+      "source_tail_sha256": {
+        "tail_shift": "6ea5084daec1caeb3976fb063133dcb15c68a96565fb629af7e2accfac56ac4d",
+        "general_poles": "40080f2e004df1e9347f082dcc048068af88e02e2818d1772554f72077e1eabc",
+        "shift_forms": "823f38c2ca088a3ab2f5053db0ad4f25bd73b5616496e45f0d2e89e09e27ab75"
+      }
+    },
+    {
+      "case_id": "D6-n12-m12",
+      "D": 6,
+      "n": 12,
+      "m": 12,
+      "B_denominator": "73652362063104861109458730177566684601353842342119194600494523260059776224815120903420940310567038745341500322984293031684304575023116308715200905150050881089030182539663842279637143378276547440029252895549742721418996761719419734506893047502985929275259089598861112240950168359230609250895460737729944828940272922921332328439120743914501227706435506570668976070547313546578427494336413135153464150091371205189503259575732943668304468429320538481885636935058624583515586563591697756216987498957373789988089696878592000000000000000000000000000",
+      "B_denominator_prime_powers": [
+        [
+          2,
+          52
+        ],
+        [
+          3,
+          27
+        ],
+        [
+          5,
+          27
+        ],
+        [
+          7,
+          17
+        ],
+        [
+          11,
+          17
+        ],
+        [
+          13,
+          8
+        ],
+        [
+          17,
+          8
+        ],
+        [
+          19,
+          9
+        ],
+        [
+          23,
+          9
+        ],
+        [
+          29,
+          9
+        ],
+        [
+          31,
+          9
+        ],
+        [
+          37,
+          9
+        ],
+        [
+          41,
+          9
+        ],
+        [
+          43,
+          9
+        ],
+        [
+          47,
+          9
+        ],
+        [
+          53,
+          9
+        ],
+        [
+          59,
+          9
+        ],
+        [
+          61,
+          9
+        ],
+        [
+          67,
+          9
+        ],
+        [
+          71,
+          9
+        ],
+        [
+          73,
+          9
+        ],
+        [
+          79,
+          9
+        ],
+        [
+          83,
+          9
+        ],
+        [
+          89,
+          9
+        ],
+        [
+          97,
+          9
+        ],
+        [
+          101,
+          9
+        ],
+        [
+          103,
+          9
+        ],
+        [
+          107,
+          9
+        ],
+        [
+          109,
+          9
+        ],
+        [
+          113,
+          9
+        ],
+        [
+          127,
+          9
+        ],
+        [
+          131,
+          9
+        ],
+        [
+          137,
+          9
+        ],
+        [
+          139,
+          9
+        ]
+      ],
+      "B_denominator_residual": "1",
+      "B_denominator_sha256": "721c3ae2e01094d27059c67ff89b2c43c3f582cb57c062c78adb432a2527a251",
+      "primitive_multiplier": [
+        "73652362063104861109458730177566684601353842342119194600494523260059776224815120903420940310567038745341500322984293031684304575023116308715200905150050881089030182539663842279637143378276547440029252895549742721418996761719419734506893047502985929275259089598861112240950168359230609250895460737729944828940272922921332328439120743914501227706435506570668976070547313546578427494336413135153464150091371205189503259575732943668304468429320538481885636935058624583515586563591697756216987498957373789988089696878592000000000000000000000000000",
+        "1"
+      ],
+      "primitive_multiplier_positive_powers": [
+        [
+          2,
+          52
+        ],
+        [
+          3,
+          27
+        ],
+        [
+          5,
+          27
+        ],
+        [
+          7,
+          17
+        ],
+        [
+          11,
+          17
+        ],
+        [
+          13,
+          8
+        ],
+        [
+          17,
+          8
+        ],
+        [
+          19,
+          9
+        ],
+        [
+          23,
+          9
+        ],
+        [
+          29,
+          9
+        ],
+        [
+          31,
+          9
+        ],
+        [
+          37,
+          9
+        ],
+        [
+          41,
+          9
+        ],
+        [
+          43,
+          9
+        ],
+        [
+          47,
+          9
+        ],
+        [
+          53,
+          9
+        ],
+        [
+          59,
+          9
+        ],
+        [
+          61,
+          9
+        ],
+        [
+          67,
+          9
+        ],
+        [
+          71,
+          9
+        ],
+        [
+          73,
+          9
+        ],
+        [
+          79,
+          9
+        ],
+        [
+          83,
+          9
+        ],
+        [
+          89,
+          9
+        ],
+        [
+          97,
+          9
+        ],
+        [
+          101,
+          9
+        ],
+        [
+          103,
+          9
+        ],
+        [
+          107,
+          9
+        ],
+        [
+          109,
+          9
+        ],
+        [
+          113,
+          9
+        ],
+        [
+          127,
+          9
+        ],
+        [
+          131,
+          9
+        ],
+        [
+          137,
+          9
+        ],
+        [
+          139,
+          9
+        ]
+      ],
+      "primitive_multiplier_negative_powers": [],
+      "primitive_multiplier_num_residual": "1",
+      "primitive_multiplier_den_residual": "1",
+      "content": "1",
+      "C_sha256": "5311b5e18ea1bc95e49543f2228ab502a481ad02457f4a30b86740cd7ff8b39c",
+      "band_costs": {
+        "p_le_n": {
+          "positive_log_per_n": 15.250475082532455,
+          "negative_log_per_n": 0.0,
+          "signed_log_per_n": 15.250475082532455,
+          "nonzero_valuations": 5,
+          "valuations": [
+            [
+              2,
+              52
+            ],
+            [
+              3,
+              27
+            ],
+            [
+              5,
+              27
+            ],
+            [
+              7,
+              17
+            ],
+            [
+              11,
+              17
+            ]
+          ]
+        },
+        "n_lt_p_le_2n": {
+          "positive_log_per_n": 8.158725030666861,
+          "negative_log_per_n": 0.0,
+          "signed_log_per_n": 8.158725030666861,
+          "nonzero_valuations": 4,
+          "valuations": [
+            [
+              13,
+              8
+            ],
+            [
+              17,
+              8
+            ],
+            [
+              19,
+              9
+            ],
+            [
+              23,
+              9
+            ]
+          ]
+        },
+        "2n_lt_p_le_Dn": {
+          "positive_log_per_n": 31.772397336965405,
+          "negative_log_per_n": 0.0,
+          "signed_log_per_n": 31.772397336965405,
+          "nonzero_valuations": 11,
+          "valuations": [
+            [
+              29,
+              9
+            ],
+            [
+              31,
+              9
+            ],
+            [
+              37,
+              9
+            ],
+            [
+              41,
+              9
+            ],
+            [
+              43,
+              9
+            ],
+            [
+              47,
+              9
+            ],
+            [
+              53,
+              9
+            ],
+            [
+              59,
+              9
+            ],
+            [
+              61,
+              9
+            ],
+            [
+              67,
+              9
+            ],
+            [
+              71,
+              9
+            ]
+          ]
+        },
+        "Dn_lt_p_le_2Dn": {
+          "positive_log_per_n": 48.79301141905528,
+          "negative_log_per_n": 0.0,
+          "signed_log_per_n": 48.79301141905528,
+          "nonzero_valuations": 14,
+          "valuations": [
+            [
+              73,
+              9
+            ],
+            [
+              79,
+              9
+            ],
+            [
+              83,
+              9
+            ],
+            [
+              89,
+              9
+            ],
+            [
+              97,
+              9
+            ],
+            [
+              101,
+              9
+            ],
+            [
+              103,
+              9
+            ],
+            [
+              107,
+              9
+            ],
+            [
+              109,
+              9
+            ],
+            [
+              113,
+              9
+            ],
+            [
+              127,
+              9
+            ],
+            [
+              131,
+              9
+            ],
+            [
+              137,
+              9
+            ],
+            [
+              139,
+              9
+            ]
+          ]
+        }
+      },
+      "log_multiplier_per_n": 103.97460886921999,
+      "large_prime_mod_checks": [
+        {
+          "p": 29,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            17,
+            6,
+            18
+          ],
+          "formula_residue_mod_p": 12,
+          "exact_p9_B_mod_p": 12,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 31,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            28,
+            10,
+            11
+          ],
+          "formula_residue_mod_p": 18,
+          "exact_p9_B_mod_p": 18,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 37,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            36,
+            24,
+            32
+          ],
+          "formula_residue_mod_p": 18,
+          "exact_p9_B_mod_p": 18,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 41,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            19,
+            20,
+            3
+          ],
+          "formula_residue_mod_p": 1,
+          "exact_p9_B_mod_p": 1,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 43,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            24,
+            25,
+            27
+          ],
+          "formula_residue_mod_p": 33,
+          "exact_p9_B_mod_p": 33,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 47,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            25,
+            37,
+            22
+          ],
+          "formula_residue_mod_p": 37,
+          "exact_p9_B_mod_p": 37,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 53,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            17,
+            34
+          ],
+          "formula_residue_mod_p": 51,
+          "exact_p9_B_mod_p": 51,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 59,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            46,
+            34
+          ],
+          "formula_residue_mod_p": 21,
+          "exact_p9_B_mod_p": 21,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 61,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            7,
+            9
+          ],
+          "formula_residue_mod_p": 16,
+          "exact_p9_B_mod_p": 16,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 67,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            27,
+            47
+          ],
+          "formula_residue_mod_p": 7,
+          "exact_p9_B_mod_p": 7,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 71,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            67,
+            69
+          ],
+          "formula_residue_mod_p": 65,
+          "exact_p9_B_mod_p": 65,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 73,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            20
+          ],
+          "formula_residue_mod_p": 20,
+          "exact_p9_B_mod_p": 20,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 79,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            44
+          ],
+          "formula_residue_mod_p": 44,
+          "exact_p9_B_mod_p": 44,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 83,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            77
+          ],
+          "formula_residue_mod_p": 77,
+          "exact_p9_B_mod_p": 77,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 89,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            87
+          ],
+          "formula_residue_mod_p": 87,
+          "exact_p9_B_mod_p": 87,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 97,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            41
+          ],
+          "formula_residue_mod_p": 41,
+          "exact_p9_B_mod_p": 41,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 101,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            85
+          ],
+          "formula_residue_mod_p": 85,
+          "exact_p9_B_mod_p": 85,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 103,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            100
+          ],
+          "formula_residue_mod_p": 100,
+          "exact_p9_B_mod_p": 100,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 107,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            40
+          ],
+          "formula_residue_mod_p": 40,
+          "exact_p9_B_mod_p": 40,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 109,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            21
+          ],
+          "formula_residue_mod_p": 21,
+          "exact_p9_B_mod_p": 21,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 113,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            94
+          ],
+          "formula_residue_mod_p": 94,
+          "exact_p9_B_mod_p": 94,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 127,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            71
+          ],
+          "formula_residue_mod_p": 71,
+          "exact_p9_B_mod_p": 71,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 131,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            20
+          ],
+          "formula_residue_mod_p": 20,
+          "exact_p9_B_mod_p": 20,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 137,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            71
+          ],
+          "formula_residue_mod_p": 71,
+          "exact_p9_B_mod_p": 71,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 139,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            69
+          ],
+          "formula_residue_mod_p": 69,
+          "exact_p9_B_mod_p": 69,
+          "nonzero": true,
+          "exact_vp_B": -9
+        }
+      ],
+      "large_prime_check_count": 25,
+      "nonzero_large_prime_count": 25,
+      "zero_large_prime_count": 0,
+      "source_tail_sha256": {
+        "tail_shift": "6ea5084daec1caeb3976fb063133dcb15c68a96565fb629af7e2accfac56ac4d",
+        "general_poles": "40080f2e004df1e9347f082dcc048068af88e02e2818d1772554f72077e1eabc",
+        "shift_forms": "823f38c2ca088a3ab2f5053db0ad4f25bd73b5616496e45f0d2e89e09e27ab75"
+      }
+    },
+    {
+      "case_id": "D8-n12-m12",
+      "D": 8,
+      "n": 12,
+      "m": 12,
+      "B_denominator": "99098978920072953752364320918510003870439011118041574630556863534514010068566356930185822504161894401410452389474015039088954250068670767651845924899795066780062915134000289492363865389707185669456042681600677334972919996116157075071979760886904076320464594052326917333807138011955190671652748286087285157612219379398801050344422511939232505373570364963693107123123148318023762446821679245794149769368937791923211025848552161104533085609695333813204811733612998878304025774530651481038881318710945246195798714703003820121095256598751097114508076238696641628365440780467226454789646397222855732505239299053110851984817047599348727629478752195638825858179524629751424061228976514714735016350247977498841500000000000000000000000000",
+      "B_denominator_prime_powers": [
+        [
+          2,
+          26
+        ],
+        [
+          3,
+          35
+        ],
+        [
+          5,
+          27
+        ],
+        [
+          7,
+          17
+        ],
+        [
+          11,
+          17
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          17,
+          8
+        ],
+        [
+          19,
+          9
+        ],
+        [
+          23,
+          9
+        ],
+        [
+          29,
+          9
+        ],
+        [
+          31,
+          9
+        ],
+        [
+          37,
+          9
+        ],
+        [
+          41,
+          9
+        ],
+        [
+          43,
+          9
+        ],
+        [
+          47,
+          9
+        ],
+        [
+          53,
+          9
+        ],
+        [
+          59,
+          9
+        ],
+        [
+          61,
+          9
+        ],
+        [
+          67,
+          9
+        ],
+        [
+          71,
+          9
+        ],
+        [
+          73,
+          9
+        ],
+        [
+          79,
+          9
+        ],
+        [
+          83,
+          9
+        ],
+        [
+          89,
+          9
+        ],
+        [
+          97,
+          9
+        ],
+        [
+          101,
+          9
+        ],
+        [
+          103,
+          9
+        ],
+        [
+          107,
+          9
+        ],
+        [
+          109,
+          9
+        ],
+        [
+          113,
+          9
+        ],
+        [
+          127,
+          9
+        ],
+        [
+          131,
+          9
+        ],
+        [
+          137,
+          9
+        ],
+        [
+          139,
+          9
+        ],
+        [
+          149,
+          9
+        ],
+        [
+          151,
+          9
+        ],
+        [
+          157,
+          9
+        ],
+        [
+          163,
+          9
+        ],
+        [
+          167,
+          9
+        ],
+        [
+          173,
+          9
+        ],
+        [
+          179,
+          9
+        ],
+        [
+          181,
+          9
+        ],
+        [
+          191,
+          9
+        ]
+      ],
+      "B_denominator_residual": "1",
+      "B_denominator_sha256": "8ea6b1dd5a6525784298d45420bf33a1701d5e8de6739e6e42724f8cccda0a83",
+      "primitive_multiplier": [
+        "99098978920072953752364320918510003870439011118041574630556863534514010068566356930185822504161894401410452389474015039088954250068670767651845924899795066780062915134000289492363865389707185669456042681600677334972919996116157075071979760886904076320464594052326917333807138011955190671652748286087285157612219379398801050344422511939232505373570364963693107123123148318023762446821679245794149769368937791923211025848552161104533085609695333813204811733612998878304025774530651481038881318710945246195798714703003820121095256598751097114508076238696641628365440780467226454789646397222855732505239299053110851984817047599348727629478752195638825858179524629751424061228976514714735016350247977498841500000000000000000000000000",
+        "1"
+      ],
+      "primitive_multiplier_positive_powers": [
+        [
+          2,
+          26
+        ],
+        [
+          3,
+          35
+        ],
+        [
+          5,
+          27
+        ],
+        [
+          7,
+          17
+        ],
+        [
+          11,
+          17
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          17,
+          8
+        ],
+        [
+          19,
+          9
+        ],
+        [
+          23,
+          9
+        ],
+        [
+          29,
+          9
+        ],
+        [
+          31,
+          9
+        ],
+        [
+          37,
+          9
+        ],
+        [
+          41,
+          9
+        ],
+        [
+          43,
+          9
+        ],
+        [
+          47,
+          9
+        ],
+        [
+          53,
+          9
+        ],
+        [
+          59,
+          9
+        ],
+        [
+          61,
+          9
+        ],
+        [
+          67,
+          9
+        ],
+        [
+          71,
+          9
+        ],
+        [
+          73,
+          9
+        ],
+        [
+          79,
+          9
+        ],
+        [
+          83,
+          9
+        ],
+        [
+          89,
+          9
+        ],
+        [
+          97,
+          9
+        ],
+        [
+          101,
+          9
+        ],
+        [
+          103,
+          9
+        ],
+        [
+          107,
+          9
+        ],
+        [
+          109,
+          9
+        ],
+        [
+          113,
+          9
+        ],
+        [
+          127,
+          9
+        ],
+        [
+          131,
+          9
+        ],
+        [
+          137,
+          9
+        ],
+        [
+          139,
+          9
+        ],
+        [
+          149,
+          9
+        ],
+        [
+          151,
+          9
+        ],
+        [
+          157,
+          9
+        ],
+        [
+          163,
+          9
+        ],
+        [
+          167,
+          9
+        ],
+        [
+          173,
+          9
+        ],
+        [
+          179,
+          9
+        ],
+        [
+          181,
+          9
+        ],
+        [
+          191,
+          9
+        ]
+      ],
+      "primitive_multiplier_negative_powers": [],
+      "primitive_multiplier_num_residual": "1",
+      "primitive_multiplier_den_residual": "1",
+      "content": "1",
+      "C_sha256": "5311b5e18ea1bc95e49543f2228ab502a481ad02457f4a30b86740cd7ff8b39c",
+      "band_costs": {
+        "p_le_n": {
+          "positive_log_per_n": 14.481064383764647,
+          "negative_log_per_n": 0.0,
+          "signed_log_per_n": 14.481064383764647,
+          "nonzero_valuations": 5,
+          "valuations": [
+            [
+              2,
+              26
+            ],
+            [
+              3,
+              35
+            ],
+            [
+              5,
+              27
+            ],
+            [
+              7,
+              17
+            ],
+            [
+              11,
+              17
+            ]
+          ]
+        },
+        "n_lt_p_le_2n": {
+          "positive_log_per_n": 10.082437048763014,
+          "negative_log_per_n": 0.0,
+          "signed_log_per_n": 10.082437048763014,
+          "nonzero_valuations": 4,
+          "valuations": [
+            [
+              13,
+              17
+            ],
+            [
+              17,
+              8
+            ],
+            [
+              19,
+              9
+            ],
+            [
+              23,
+              9
+            ]
+          ]
+        },
+        "2n_lt_p_le_Dn": {
+          "positive_log_per_n": 44.94793554032352,
+          "negative_log_per_n": 0.0,
+          "signed_log_per_n": 44.94793554032352,
+          "nonzero_valuations": 15,
+          "valuations": [
+            [
+              29,
+              9
+            ],
+            [
+              31,
+              9
+            ],
+            [
+              37,
+              9
+            ],
+            [
+              41,
+              9
+            ],
+            [
+              43,
+              9
+            ],
+            [
+              47,
+              9
+            ],
+            [
+              53,
+              9
+            ],
+            [
+              59,
+              9
+            ],
+            [
+              61,
+              9
+            ],
+            [
+              67,
+              9
+            ],
+            [
+              71,
+              9
+            ],
+            [
+              73,
+              9
+            ],
+            [
+              79,
+              9
+            ],
+            [
+              83,
+              9
+            ],
+            [
+              89,
+              9
+            ]
+          ]
+        },
+        "Dn_lt_p_le_2Dn": {
+          "positive_log_per_n": 70.17797108143458,
+          "negative_log_per_n": 0.0,
+          "signed_log_per_n": 70.17797108143458,
+          "nonzero_valuations": 19,
+          "valuations": [
+            [
+              97,
+              9
+            ],
+            [
+              101,
+              9
+            ],
+            [
+              103,
+              9
+            ],
+            [
+              107,
+              9
+            ],
+            [
+              109,
+              9
+            ],
+            [
+              113,
+              9
+            ],
+            [
+              127,
+              9
+            ],
+            [
+              131,
+              9
+            ],
+            [
+              137,
+              9
+            ],
+            [
+              139,
+              9
+            ],
+            [
+              149,
+              9
+            ],
+            [
+              151,
+              9
+            ],
+            [
+              157,
+              9
+            ],
+            [
+              163,
+              9
+            ],
+            [
+              167,
+              9
+            ],
+            [
+              173,
+              9
+            ],
+            [
+              179,
+              9
+            ],
+            [
+              181,
+              9
+            ],
+            [
+              191,
+              9
+            ]
+          ]
+        }
+      },
+      "log_multiplier_per_n": 139.68940805428574,
+      "large_prime_mod_checks": [
+        {
+          "p": 29,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            19,
+            11,
+            19
+          ],
+          "formula_residue_mod_p": 20,
+          "exact_p9_B_mod_p": 20,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 31,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            2,
+            20,
+            13
+          ],
+          "formula_residue_mod_p": 4,
+          "exact_p9_B_mod_p": 4,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 37,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            11,
+            0,
+            19
+          ],
+          "formula_residue_mod_p": 30,
+          "exact_p9_B_mod_p": 30,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 41,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            15,
+            11,
+            35
+          ],
+          "formula_residue_mod_p": 20,
+          "exact_p9_B_mod_p": 20,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 43,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            1,
+            35,
+            38
+          ],
+          "formula_residue_mod_p": 31,
+          "exact_p9_B_mod_p": 31,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 47,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            3,
+            10,
+            12
+          ],
+          "formula_residue_mod_p": 25,
+          "exact_p9_B_mod_p": 25,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 53,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            3,
+            12
+          ],
+          "formula_residue_mod_p": 15,
+          "exact_p9_B_mod_p": 15,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 59,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            22,
+            55
+          ],
+          "formula_residue_mod_p": 18,
+          "exact_p9_B_mod_p": 18,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 61,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            26,
+            4
+          ],
+          "formula_residue_mod_p": 30,
+          "exact_p9_B_mod_p": 30,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 67,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            13,
+            31
+          ],
+          "formula_residue_mod_p": 44,
+          "exact_p9_B_mod_p": 44,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 71,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            9,
+            52
+          ],
+          "formula_residue_mod_p": 61,
+          "exact_p9_B_mod_p": 61,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 73,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            25,
+            54
+          ],
+          "formula_residue_mod_p": 6,
+          "exact_p9_B_mod_p": 6,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 79,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            48,
+            78
+          ],
+          "formula_residue_mod_p": 47,
+          "exact_p9_B_mod_p": 47,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 83,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            24,
+            11
+          ],
+          "formula_residue_mod_p": 35,
+          "exact_p9_B_mod_p": 35,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 89,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            61,
+            81
+          ],
+          "formula_residue_mod_p": 53,
+          "exact_p9_B_mod_p": 53,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 97,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            12
+          ],
+          "formula_residue_mod_p": 12,
+          "exact_p9_B_mod_p": 12,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 101,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            40
+          ],
+          "formula_residue_mod_p": 40,
+          "exact_p9_B_mod_p": 40,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 103,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            23
+          ],
+          "formula_residue_mod_p": 23,
+          "exact_p9_B_mod_p": 23,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 107,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            55
+          ],
+          "formula_residue_mod_p": 55,
+          "exact_p9_B_mod_p": 55,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 109,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            2
+          ],
+          "formula_residue_mod_p": 2,
+          "exact_p9_B_mod_p": 2,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 113,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            16
+          ],
+          "formula_residue_mod_p": 16,
+          "exact_p9_B_mod_p": 16,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 127,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            66
+          ],
+          "formula_residue_mod_p": 66,
+          "exact_p9_B_mod_p": 66,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 131,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "formula_residue_mod_p": 1,
+          "exact_p9_B_mod_p": 1,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 137,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            96
+          ],
+          "formula_residue_mod_p": 96,
+          "exact_p9_B_mod_p": 96,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 139,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            99
+          ],
+          "formula_residue_mod_p": 99,
+          "exact_p9_B_mod_p": 99,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 149,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            16
+          ],
+          "formula_residue_mod_p": 16,
+          "exact_p9_B_mod_p": 16,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 151,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            3
+          ],
+          "formula_residue_mod_p": 3,
+          "exact_p9_B_mod_p": 3,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 157,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            139
+          ],
+          "formula_residue_mod_p": 139,
+          "exact_p9_B_mod_p": 139,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 163,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            84
+          ],
+          "formula_residue_mod_p": 84,
+          "exact_p9_B_mod_p": 84,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 167,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            69
+          ],
+          "formula_residue_mod_p": 69,
+          "exact_p9_B_mod_p": 69,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 173,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            37
+          ],
+          "formula_residue_mod_p": 37,
+          "exact_p9_B_mod_p": 37,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 179,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            70
+          ],
+          "formula_residue_mod_p": 70,
+          "exact_p9_B_mod_p": 70,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 181,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            117
+          ],
+          "formula_residue_mod_p": 117,
+          "exact_p9_B_mod_p": 117,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 191,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            113
+          ],
+          "formula_residue_mod_p": 113,
+          "exact_p9_B_mod_p": 113,
+          "nonzero": true,
+          "exact_vp_B": -9
+        }
+      ],
+      "large_prime_check_count": 34,
+      "nonzero_large_prime_count": 34,
+      "zero_large_prime_count": 0,
+      "source_tail_sha256": {
+        "tail_shift": "6ea5084daec1caeb3976fb063133dcb15c68a96565fb629af7e2accfac56ac4d",
+        "general_poles": "40080f2e004df1e9347f082dcc048068af88e02e2818d1772554f72077e1eabc",
+        "shift_forms": "823f38c2ca088a3ab2f5053db0ad4f25bd73b5616496e45f0d2e89e09e27ab75"
+      }
+    },
+    {
+      "case_id": "D6-n24-m24",
+      "D": 6,
+      "n": 24,
+      "m": 24,
+      "B_denominator": "12206390159849206269673464651658543349788981038179723956944483302406094639623875621220256088430807068063621696206957819114444601501885284664313154164496244797192575636040312387031257351350551350287286774003927751892450930654679919303041948232976580730558124465424125853347916356757523935380866273328975271014982487550599941936975168266888637908187166103211782513234759284442713981725414190146028033276076306905159437876689860641265523734031795145592545488587148070352805621640687479040246483648026401019540490751581167484568649629208067599118646265624795495595448205566591558167078173272854672571312804544139000591157077201908686851361969690631059339715863199471258482625420393898871797051855346775767342129776888055610718618858932510958811599555553609403904259271833365872380783621407911384135390507088348511595121904975010724325836975197984835746591754459891598691868222686629370006934980589550676418884554501387019073431088808569573595173852610617353625170069977990413575897540247624373833217229111218681501937335636227461114537127561204076926733983592275772133645110545263929041946579702906880000000000000000000000000",
+      "B_denominator_prime_powers": [
+        [
+          2,
+          61
+        ],
+        [
+          3,
+          34
+        ],
+        [
+          5,
+          25
+        ],
+        [
+          7,
+          17
+        ],
+        [
+          11,
+          18
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          17,
+          9
+        ],
+        [
+          19,
+          9
+        ],
+        [
+          23,
+          8
+        ],
+        [
+          29,
+          8
+        ],
+        [
+          31,
+          8
+        ],
+        [
+          37,
+          9
+        ],
+        [
+          41,
+          9
+        ],
+        [
+          43,
+          9
+        ],
+        [
+          47,
+          9
+        ],
+        [
+          53,
+          9
+        ],
+        [
+          59,
+          9
+        ],
+        [
+          61,
+          9
+        ],
+        [
+          67,
+          9
+        ],
+        [
+          71,
+          9
+        ],
+        [
+          73,
+          9
+        ],
+        [
+          79,
+          9
+        ],
+        [
+          83,
+          9
+        ],
+        [
+          89,
+          9
+        ],
+        [
+          97,
+          9
+        ],
+        [
+          101,
+          9
+        ],
+        [
+          103,
+          9
+        ],
+        [
+          107,
+          9
+        ],
+        [
+          109,
+          9
+        ],
+        [
+          113,
+          9
+        ],
+        [
+          127,
+          9
+        ],
+        [
+          131,
+          9
+        ],
+        [
+          137,
+          9
+        ],
+        [
+          139,
+          9
+        ],
+        [
+          149,
+          9
+        ],
+        [
+          151,
+          9
+        ],
+        [
+          157,
+          9
+        ],
+        [
+          163,
+          9
+        ],
+        [
+          167,
+          9
+        ],
+        [
+          173,
+          9
+        ],
+        [
+          179,
+          9
+        ],
+        [
+          181,
+          9
+        ],
+        [
+          191,
+          9
+        ],
+        [
+          193,
+          9
+        ],
+        [
+          197,
+          9
+        ],
+        [
+          199,
+          9
+        ],
+        [
+          211,
+          9
+        ],
+        [
+          223,
+          9
+        ],
+        [
+          227,
+          9
+        ],
+        [
+          229,
+          9
+        ],
+        [
+          233,
+          9
+        ],
+        [
+          239,
+          9
+        ],
+        [
+          241,
+          9
+        ],
+        [
+          251,
+          9
+        ],
+        [
+          257,
+          9
+        ],
+        [
+          263,
+          9
+        ],
+        [
+          269,
+          9
+        ],
+        [
+          271,
+          9
+        ],
+        [
+          277,
+          9
+        ],
+        [
+          281,
+          9
+        ],
+        [
+          283,
+          9
+        ]
+      ],
+      "B_denominator_residual": "1",
+      "B_denominator_sha256": "161426b86b5a8b11d9bba3f0d79958ef1dcf988e10b73e70738de518f0f24453",
+      "primitive_multiplier": [
+        "12206390159849206269673464651658543349788981038179723956944483302406094639623875621220256088430807068063621696206957819114444601501885284664313154164496244797192575636040312387031257351350551350287286774003927751892450930654679919303041948232976580730558124465424125853347916356757523935380866273328975271014982487550599941936975168266888637908187166103211782513234759284442713981725414190146028033276076306905159437876689860641265523734031795145592545488587148070352805621640687479040246483648026401019540490751581167484568649629208067599118646265624795495595448205566591558167078173272854672571312804544139000591157077201908686851361969690631059339715863199471258482625420393898871797051855346775767342129776888055610718618858932510958811599555553609403904259271833365872380783621407911384135390507088348511595121904975010724325836975197984835746591754459891598691868222686629370006934980589550676418884554501387019073431088808569573595173852610617353625170069977990413575897540247624373833217229111218681501937335636227461114537127561204076926733983592275772133645110545263929041946579702906880000000000000000000000000",
+        "1"
+      ],
+      "primitive_multiplier_positive_powers": [
+        [
+          2,
+          61
+        ],
+        [
+          3,
+          34
+        ],
+        [
+          5,
+          25
+        ],
+        [
+          7,
+          17
+        ],
+        [
+          11,
+          18
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          17,
+          9
+        ],
+        [
+          19,
+          9
+        ],
+        [
+          23,
+          8
+        ],
+        [
+          29,
+          8
+        ],
+        [
+          31,
+          8
+        ],
+        [
+          37,
+          9
+        ],
+        [
+          41,
+          9
+        ],
+        [
+          43,
+          9
+        ],
+        [
+          47,
+          9
+        ],
+        [
+          53,
+          9
+        ],
+        [
+          59,
+          9
+        ],
+        [
+          61,
+          9
+        ],
+        [
+          67,
+          9
+        ],
+        [
+          71,
+          9
+        ],
+        [
+          73,
+          9
+        ],
+        [
+          79,
+          9
+        ],
+        [
+          83,
+          9
+        ],
+        [
+          89,
+          9
+        ],
+        [
+          97,
+          9
+        ],
+        [
+          101,
+          9
+        ],
+        [
+          103,
+          9
+        ],
+        [
+          107,
+          9
+        ],
+        [
+          109,
+          9
+        ],
+        [
+          113,
+          9
+        ],
+        [
+          127,
+          9
+        ],
+        [
+          131,
+          9
+        ],
+        [
+          137,
+          9
+        ],
+        [
+          139,
+          9
+        ],
+        [
+          149,
+          9
+        ],
+        [
+          151,
+          9
+        ],
+        [
+          157,
+          9
+        ],
+        [
+          163,
+          9
+        ],
+        [
+          167,
+          9
+        ],
+        [
+          173,
+          9
+        ],
+        [
+          179,
+          9
+        ],
+        [
+          181,
+          9
+        ],
+        [
+          191,
+          9
+        ],
+        [
+          193,
+          9
+        ],
+        [
+          197,
+          9
+        ],
+        [
+          199,
+          9
+        ],
+        [
+          211,
+          9
+        ],
+        [
+          223,
+          9
+        ],
+        [
+          227,
+          9
+        ],
+        [
+          229,
+          9
+        ],
+        [
+          233,
+          9
+        ],
+        [
+          239,
+          9
+        ],
+        [
+          241,
+          9
+        ],
+        [
+          251,
+          9
+        ],
+        [
+          257,
+          9
+        ],
+        [
+          263,
+          9
+        ],
+        [
+          269,
+          9
+        ],
+        [
+          271,
+          9
+        ],
+        [
+          277,
+          9
+        ],
+        [
+          281,
+          9
+        ],
+        [
+          283,
+          9
+        ]
+      ],
+      "primitive_multiplier_negative_powers": [],
+      "primitive_multiplier_num_residual": "1",
+      "primitive_multiplier_den_residual": "1",
+      "content": "1",
+      "C_sha256": "58b5cb031b1305dcc2e49f5d018fedf6b6f5c54f9eacda79dca78fa8c963b213",
+      "band_costs": {
+        "p_le_n": {
+          "positive_log_per_n": 13.20001228322163,
+          "negative_log_per_n": 0.0,
+          "signed_log_per_n": 13.20001228322163,
+          "nonzero_valuations": 9,
+          "valuations": [
+            [
+              2,
+              61
+            ],
+            [
+              3,
+              34
+            ],
+            [
+              5,
+              25
+            ],
+            [
+              7,
+              17
+            ],
+            [
+              11,
+              18
+            ],
+            [
+              13,
+              17
+            ],
+            [
+              17,
+              9
+            ],
+            [
+              19,
+              9
+            ],
+            [
+              23,
+              8
+            ]
+          ]
+        },
+        "n_lt_p_le_2n": {
+          "positive_log_per_n": 7.868033481105931,
+          "negative_log_per_n": 0.0,
+          "signed_log_per_n": 7.868033481105931,
+          "nonzero_valuations": 6,
+          "valuations": [
+            [
+              29,
+              8
+            ],
+            [
+              31,
+              8
+            ],
+            [
+              37,
+              9
+            ],
+            [
+              41,
+              9
+            ],
+            [
+              43,
+              9
+            ],
+            [
+              47,
+              9
+            ]
+          ]
+        },
+        "2n_lt_p_le_Dn": {
+          "positive_log_per_n": 32.131284103801434,
+          "negative_log_per_n": 0.0,
+          "signed_log_per_n": 32.131284103801434,
+          "nonzero_valuations": 19,
+          "valuations": [
+            [
+              53,
+              9
+            ],
+            [
+              59,
+              9
+            ],
+            [
+              61,
+              9
+            ],
+            [
+              67,
+              9
+            ],
+            [
+              71,
+              9
+            ],
+            [
+              73,
+              9
+            ],
+            [
+              79,
+              9
+            ],
+            [
+              83,
+              9
+            ],
+            [
+              89,
+              9
+            ],
+            [
+              97,
+              9
+            ],
+            [
+              101,
+              9
+            ],
+            [
+              103,
+              9
+            ],
+            [
+              107,
+              9
+            ],
+            [
+              109,
+              9
+            ],
+            [
+              113,
+              9
+            ],
+            [
+              127,
+              9
+            ],
+            [
+              131,
+              9
+            ],
+            [
+              137,
+              9
+            ],
+            [
+              139,
+              9
+            ]
+          ]
+        },
+        "Dn_lt_p_le_2Dn": {
+          "positive_log_per_n": 54.26294840931034,
+          "negative_log_per_n": 0.0,
+          "signed_log_per_n": 54.26294840931034,
+          "nonzero_valuations": 27,
+          "valuations": [
+            [
+              149,
+              9
+            ],
+            [
+              151,
+              9
+            ],
+            [
+              157,
+              9
+            ],
+            [
+              163,
+              9
+            ],
+            [
+              167,
+              9
+            ],
+            [
+              173,
+              9
+            ],
+            [
+              179,
+              9
+            ],
+            [
+              181,
+              9
+            ],
+            [
+              191,
+              9
+            ],
+            [
+              193,
+              9
+            ],
+            [
+              197,
+              9
+            ],
+            [
+              199,
+              9
+            ],
+            [
+              211,
+              9
+            ],
+            [
+              223,
+              9
+            ],
+            [
+              227,
+              9
+            ],
+            [
+              229,
+              9
+            ],
+            [
+              233,
+              9
+            ],
+            [
+              239,
+              9
+            ],
+            [
+              241,
+              9
+            ],
+            [
+              251,
+              9
+            ],
+            [
+              257,
+              9
+            ],
+            [
+              263,
+              9
+            ],
+            [
+              269,
+              9
+            ],
+            [
+              271,
+              9
+            ],
+            [
+              277,
+              9
+            ],
+            [
+              281,
+              9
+            ],
+            [
+              283,
+              9
+            ]
+          ]
+        }
+      },
+      "log_multiplier_per_n": 107.46227827743932,
+      "large_prime_mod_checks": [
+        {
+          "p": 53,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            44,
+            31,
+            10
+          ],
+          "formula_residue_mod_p": 32,
+          "exact_p9_B_mod_p": 32,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 59,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            24,
+            33,
+            15
+          ],
+          "formula_residue_mod_p": 13,
+          "exact_p9_B_mod_p": 13,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 61,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            32,
+            40,
+            54
+          ],
+          "formula_residue_mod_p": 4,
+          "exact_p9_B_mod_p": 4,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 67,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            10,
+            0,
+            51
+          ],
+          "formula_residue_mod_p": 61,
+          "exact_p9_B_mod_p": 61,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 71,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            43,
+            42,
+            13
+          ],
+          "formula_residue_mod_p": 27,
+          "exact_p9_B_mod_p": 27,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 73,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            52,
+            48,
+            49
+          ],
+          "formula_residue_mod_p": 3,
+          "exact_p9_B_mod_p": 3,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 79,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            31,
+            0,
+            37
+          ],
+          "formula_residue_mod_p": 68,
+          "exact_p9_B_mod_p": 68,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 83,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            72,
+            66,
+            32
+          ],
+          "formula_residue_mod_p": 4,
+          "exact_p9_B_mod_p": 4,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 89,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            17,
+            35,
+            85
+          ],
+          "formula_residue_mod_p": 48,
+          "exact_p9_B_mod_p": 48,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 97,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            49,
+            60
+          ],
+          "formula_residue_mod_p": 12,
+          "exact_p9_B_mod_p": 12,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 101,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            42,
+            90
+          ],
+          "formula_residue_mod_p": 31,
+          "exact_p9_B_mod_p": 31,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 103,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            22,
+            39
+          ],
+          "formula_residue_mod_p": 61,
+          "exact_p9_B_mod_p": 61,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 107,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            22,
+            57
+          ],
+          "formula_residue_mod_p": 79,
+          "exact_p9_B_mod_p": 79,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 109,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            49,
+            94
+          ],
+          "formula_residue_mod_p": 34,
+          "exact_p9_B_mod_p": 34,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 113,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            51,
+            63
+          ],
+          "formula_residue_mod_p": 1,
+          "exact_p9_B_mod_p": 1,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 127,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            86,
+            101
+          ],
+          "formula_residue_mod_p": 60,
+          "exact_p9_B_mod_p": 60,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 131,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            81,
+            127
+          ],
+          "formula_residue_mod_p": 77,
+          "exact_p9_B_mod_p": 77,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 137,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            125,
+            119
+          ],
+          "formula_residue_mod_p": 107,
+          "exact_p9_B_mod_p": 107,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 139,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            62,
+            100
+          ],
+          "formula_residue_mod_p": 23,
+          "exact_p9_B_mod_p": 23,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 149,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            74
+          ],
+          "formula_residue_mod_p": 74,
+          "exact_p9_B_mod_p": 74,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 151,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            128
+          ],
+          "formula_residue_mod_p": 128,
+          "exact_p9_B_mod_p": 128,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 157,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            23
+          ],
+          "formula_residue_mod_p": 23,
+          "exact_p9_B_mod_p": 23,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 163,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            121
+          ],
+          "formula_residue_mod_p": 121,
+          "exact_p9_B_mod_p": 121,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 167,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            118
+          ],
+          "formula_residue_mod_p": 118,
+          "exact_p9_B_mod_p": 118,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 173,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            135
+          ],
+          "formula_residue_mod_p": 135,
+          "exact_p9_B_mod_p": 135,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 179,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            142
+          ],
+          "formula_residue_mod_p": 142,
+          "exact_p9_B_mod_p": 142,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 181,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            103
+          ],
+          "formula_residue_mod_p": 103,
+          "exact_p9_B_mod_p": 103,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 191,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            3
+          ],
+          "formula_residue_mod_p": 3,
+          "exact_p9_B_mod_p": 3,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 193,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            21
+          ],
+          "formula_residue_mod_p": 21,
+          "exact_p9_B_mod_p": 21,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 197,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            33
+          ],
+          "formula_residue_mod_p": 33,
+          "exact_p9_B_mod_p": 33,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 199,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            103
+          ],
+          "formula_residue_mod_p": 103,
+          "exact_p9_B_mod_p": 103,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 211,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            22
+          ],
+          "formula_residue_mod_p": 22,
+          "exact_p9_B_mod_p": 22,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 223,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            18
+          ],
+          "formula_residue_mod_p": 18,
+          "exact_p9_B_mod_p": 18,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 227,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            165
+          ],
+          "formula_residue_mod_p": 165,
+          "exact_p9_B_mod_p": 165,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 229,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            62
+          ],
+          "formula_residue_mod_p": 62,
+          "exact_p9_B_mod_p": 62,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 233,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            95
+          ],
+          "formula_residue_mod_p": 95,
+          "exact_p9_B_mod_p": 95,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 239,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            208
+          ],
+          "formula_residue_mod_p": 208,
+          "exact_p9_B_mod_p": 208,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 241,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            208
+          ],
+          "formula_residue_mod_p": 208,
+          "exact_p9_B_mod_p": 208,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 251,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            43
+          ],
+          "formula_residue_mod_p": 43,
+          "exact_p9_B_mod_p": 43,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 257,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            127
+          ],
+          "formula_residue_mod_p": 127,
+          "exact_p9_B_mod_p": 127,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 263,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            189
+          ],
+          "formula_residue_mod_p": 189,
+          "exact_p9_B_mod_p": 189,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 269,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            131
+          ],
+          "formula_residue_mod_p": 131,
+          "exact_p9_B_mod_p": 131,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 271,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            189
+          ],
+          "formula_residue_mod_p": 189,
+          "exact_p9_B_mod_p": 189,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 277,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            194
+          ],
+          "formula_residue_mod_p": 194,
+          "exact_p9_B_mod_p": 194,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 281,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            2
+          ],
+          "formula_residue_mod_p": 2,
+          "exact_p9_B_mod_p": 2,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 283,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            210
+          ],
+          "formula_residue_mod_p": 210,
+          "exact_p9_B_mod_p": 210,
+          "nonzero": true,
+          "exact_vp_B": -9
+        }
+      ],
+      "large_prime_check_count": 46,
+      "nonzero_large_prime_count": 46,
+      "zero_large_prime_count": 0,
+      "source_tail_sha256": {
+        "tail_shift": "6ea5084daec1caeb3976fb063133dcb15c68a96565fb629af7e2accfac56ac4d",
+        "general_poles": "40080f2e004df1e9347f082dcc048068af88e02e2818d1772554f72077e1eabc",
+        "shift_forms": "823f38c2ca088a3ab2f5053db0ad4f25bd73b5616496e45f0d2e89e09e27ab75"
+      }
+    },
+    {
+      "case_id": "D8-n24-m24",
+      "D": 8,
+      "n": 24,
+      "m": 24,
+      "B_denominator": "193971590661339609821738751707425453726371975803695178657772055559111605260340222382440632365363618665969552572269461478960294377823525958947236580774903447895299698179818591459189830166321372527767514604145933193810867896712821552608802459400559517925149429130625840514696037926888644069376051727967298458164894692808834766457553888013051142462301244909015246311620032966580689545516403334842369568467220526732416866354444702562399623955691662094216835664280223370371840787087022645358997122938002194177091329865062412122791043138000790003220060441075188179139606406255596666887417038470988058517689545761908247302569964330624543334132376329137666181320351577965102318033956760510532962339943335655207869811443174050711015910277073354016633233657245485123464215246155820040748819329667112254388678929554203094104912709925123974066154352116320718518509892210087203464825148502110576820383212416882435428514543334819369167742426267596322919835932595735990550645968784594370181860784512743211148045195328250074371829751081246629996711047549076670811922776078810928923503500334953843439024339933148452183882589647355995540906158415748217447766713045733951467775593456074700148181195027052368765545749179775451941633768967741663521433800769725883867715986913685759171200087963025748314623710261464514201751024537449224230638099991153548784580736489799278176324383192113123927974389112575287590817718398626759135811139515322770066481970909639038855070515556736699832320000000000000000000000000",
+      "B_denominator_prime_powers": [
+        [
+          2,
+          35
+        ],
+        [
+          3,
+          43
+        ],
+        [
+          5,
+          25
+        ],
+        [
+          7,
+          26
+        ],
+        [
+          11,
+          18
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          17,
+          17
+        ],
+        [
+          19,
+          18
+        ],
+        [
+          23,
+          8
+        ],
+        [
+          29,
+          8
+        ],
+        [
+          31,
+          8
+        ],
+        [
+          37,
+          9
+        ],
+        [
+          41,
+          9
+        ],
+        [
+          43,
+          9
+        ],
+        [
+          47,
+          9
+        ],
+        [
+          53,
+          9
+        ],
+        [
+          59,
+          9
+        ],
+        [
+          61,
+          9
+        ],
+        [
+          67,
+          9
+        ],
+        [
+          71,
+          9
+        ],
+        [
+          73,
+          9
+        ],
+        [
+          79,
+          9
+        ],
+        [
+          83,
+          9
+        ],
+        [
+          89,
+          9
+        ],
+        [
+          97,
+          9
+        ],
+        [
+          101,
+          9
+        ],
+        [
+          103,
+          9
+        ],
+        [
+          107,
+          9
+        ],
+        [
+          109,
+          9
+        ],
+        [
+          113,
+          9
+        ],
+        [
+          127,
+          9
+        ],
+        [
+          131,
+          9
+        ],
+        [
+          137,
+          9
+        ],
+        [
+          139,
+          9
+        ],
+        [
+          149,
+          9
+        ],
+        [
+          151,
+          9
+        ],
+        [
+          157,
+          9
+        ],
+        [
+          163,
+          9
+        ],
+        [
+          167,
+          9
+        ],
+        [
+          173,
+          9
+        ],
+        [
+          179,
+          9
+        ],
+        [
+          181,
+          9
+        ],
+        [
+          191,
+          9
+        ],
+        [
+          193,
+          9
+        ],
+        [
+          197,
+          9
+        ],
+        [
+          199,
+          9
+        ],
+        [
+          211,
+          9
+        ],
+        [
+          223,
+          9
+        ],
+        [
+          227,
+          9
+        ],
+        [
+          229,
+          9
+        ],
+        [
+          233,
+          9
+        ],
+        [
+          239,
+          9
+        ],
+        [
+          241,
+          9
+        ],
+        [
+          251,
+          9
+        ],
+        [
+          257,
+          9
+        ],
+        [
+          263,
+          9
+        ],
+        [
+          269,
+          9
+        ],
+        [
+          271,
+          9
+        ],
+        [
+          277,
+          9
+        ],
+        [
+          281,
+          9
+        ],
+        [
+          283,
+          9
+        ],
+        [
+          293,
+          9
+        ],
+        [
+          307,
+          9
+        ],
+        [
+          311,
+          9
+        ],
+        [
+          313,
+          9
+        ],
+        [
+          317,
+          9
+        ],
+        [
+          331,
+          9
+        ],
+        [
+          337,
+          9
+        ],
+        [
+          347,
+          9
+        ],
+        [
+          349,
+          9
+        ],
+        [
+          353,
+          9
+        ],
+        [
+          359,
+          9
+        ],
+        [
+          367,
+          9
+        ],
+        [
+          373,
+          9
+        ],
+        [
+          379,
+          9
+        ],
+        [
+          383,
+          9
+        ]
+      ],
+      "B_denominator_residual": "1",
+      "B_denominator_sha256": "10b3e67a57069b77b2f1b899d47b4222952a6be2f9900b860b8d2a6e1e1ff088",
+      "primitive_multiplier": [
+        "193971590661339609821738751707425453726371975803695178657772055559111605260340222382440632365363618665969552572269461478960294377823525958947236580774903447895299698179818591459189830166321372527767514604145933193810867896712821552608802459400559517925149429130625840514696037926888644069376051727967298458164894692808834766457553888013051142462301244909015246311620032966580689545516403334842369568467220526732416866354444702562399623955691662094216835664280223370371840787087022645358997122938002194177091329865062412122791043138000790003220060441075188179139606406255596666887417038470988058517689545761908247302569964330624543334132376329137666181320351577965102318033956760510532962339943335655207869811443174050711015910277073354016633233657245485123464215246155820040748819329667112254388678929554203094104912709925123974066154352116320718518509892210087203464825148502110576820383212416882435428514543334819369167742426267596322919835932595735990550645968784594370181860784512743211148045195328250074371829751081246629996711047549076670811922776078810928923503500334953843439024339933148452183882589647355995540906158415748217447766713045733951467775593456074700148181195027052368765545749179775451941633768967741663521433800769725883867715986913685759171200087963025748314623710261464514201751024537449224230638099991153548784580736489799278176324383192113123927974389112575287590817718398626759135811139515322770066481970909639038855070515556736699832320000000000000000000000000",
+        "1"
+      ],
+      "primitive_multiplier_positive_powers": [
+        [
+          2,
+          35
+        ],
+        [
+          3,
+          43
+        ],
+        [
+          5,
+          25
+        ],
+        [
+          7,
+          26
+        ],
+        [
+          11,
+          18
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          17,
+          17
+        ],
+        [
+          19,
+          18
+        ],
+        [
+          23,
+          8
+        ],
+        [
+          29,
+          8
+        ],
+        [
+          31,
+          8
+        ],
+        [
+          37,
+          9
+        ],
+        [
+          41,
+          9
+        ],
+        [
+          43,
+          9
+        ],
+        [
+          47,
+          9
+        ],
+        [
+          53,
+          9
+        ],
+        [
+          59,
+          9
+        ],
+        [
+          61,
+          9
+        ],
+        [
+          67,
+          9
+        ],
+        [
+          71,
+          9
+        ],
+        [
+          73,
+          9
+        ],
+        [
+          79,
+          9
+        ],
+        [
+          83,
+          9
+        ],
+        [
+          89,
+          9
+        ],
+        [
+          97,
+          9
+        ],
+        [
+          101,
+          9
+        ],
+        [
+          103,
+          9
+        ],
+        [
+          107,
+          9
+        ],
+        [
+          109,
+          9
+        ],
+        [
+          113,
+          9
+        ],
+        [
+          127,
+          9
+        ],
+        [
+          131,
+          9
+        ],
+        [
+          137,
+          9
+        ],
+        [
+          139,
+          9
+        ],
+        [
+          149,
+          9
+        ],
+        [
+          151,
+          9
+        ],
+        [
+          157,
+          9
+        ],
+        [
+          163,
+          9
+        ],
+        [
+          167,
+          9
+        ],
+        [
+          173,
+          9
+        ],
+        [
+          179,
+          9
+        ],
+        [
+          181,
+          9
+        ],
+        [
+          191,
+          9
+        ],
+        [
+          193,
+          9
+        ],
+        [
+          197,
+          9
+        ],
+        [
+          199,
+          9
+        ],
+        [
+          211,
+          9
+        ],
+        [
+          223,
+          9
+        ],
+        [
+          227,
+          9
+        ],
+        [
+          229,
+          9
+        ],
+        [
+          233,
+          9
+        ],
+        [
+          239,
+          9
+        ],
+        [
+          241,
+          9
+        ],
+        [
+          251,
+          9
+        ],
+        [
+          257,
+          9
+        ],
+        [
+          263,
+          9
+        ],
+        [
+          269,
+          9
+        ],
+        [
+          271,
+          9
+        ],
+        [
+          277,
+          9
+        ],
+        [
+          281,
+          9
+        ],
+        [
+          283,
+          9
+        ],
+        [
+          293,
+          9
+        ],
+        [
+          307,
+          9
+        ],
+        [
+          311,
+          9
+        ],
+        [
+          313,
+          9
+        ],
+        [
+          317,
+          9
+        ],
+        [
+          331,
+          9
+        ],
+        [
+          337,
+          9
+        ],
+        [
+          347,
+          9
+        ],
+        [
+          349,
+          9
+        ],
+        [
+          353,
+          9
+        ],
+        [
+          359,
+          9
+        ],
+        [
+          367,
+          9
+        ],
+        [
+          373,
+          9
+        ],
+        [
+          379,
+          9
+        ],
+        [
+          383,
+          9
+        ]
+      ],
+      "primitive_multiplier_negative_powers": [],
+      "primitive_multiplier_num_residual": "1",
+      "primitive_multiplier_den_residual": "1",
+      "content": "1",
+      "C_sha256": "58b5cb031b1305dcc2e49f5d018fedf6b6f5c54f9eacda79dca78fa8c963b213",
+      "band_costs": {
+        "p_le_n": {
+          "positive_log_per_n": 15.63936781696746,
+          "negative_log_per_n": 0.0,
+          "signed_log_per_n": 15.63936781696746,
+          "nonzero_valuations": 9,
+          "valuations": [
+            [
+              2,
+              35
+            ],
+            [
+              3,
+              43
+            ],
+            [
+              5,
+              25
+            ],
+            [
+              7,
+              26
+            ],
+            [
+              11,
+              18
+            ],
+            [
+              13,
+              17
+            ],
+            [
+              17,
+              17
+            ],
+            [
+              19,
+              18
+            ],
+            [
+              23,
+              8
+            ]
+          ]
+        },
+        "n_lt_p_le_2n": {
+          "positive_log_per_n": 7.868033481105931,
+          "negative_log_per_n": 0.0,
+          "signed_log_per_n": 7.868033481105931,
+          "nonzero_valuations": 6,
+          "valuations": [
+            [
+              29,
+              8
+            ],
+            [
+              31,
+              8
+            ],
+            [
+              37,
+              9
+            ],
+            [
+              41,
+              9
+            ],
+            [
+              43,
+              9
+            ],
+            [
+              47,
+              9
+            ]
+          ]
+        },
+        "2n_lt_p_le_Dn": {
+          "positive_log_per_n": 49.41153303667013,
+          "negative_log_per_n": 0.0,
+          "signed_log_per_n": 49.41153303667013,
+          "nonzero_valuations": 28,
+          "valuations": [
+            [
+              53,
+              9
+            ],
+            [
+              59,
+              9
+            ],
+            [
+              61,
+              9
+            ],
+            [
+              67,
+              9
+            ],
+            [
+              71,
+              9
+            ],
+            [
+              73,
+              9
+            ],
+            [
+              79,
+              9
+            ],
+            [
+              83,
+              9
+            ],
+            [
+              89,
+              9
+            ],
+            [
+              97,
+              9
+            ],
+            [
+              101,
+              9
+            ],
+            [
+              103,
+              9
+            ],
+            [
+              107,
+              9
+            ],
+            [
+              109,
+              9
+            ],
+            [
+              113,
+              9
+            ],
+            [
+              127,
+              9
+            ],
+            [
+              131,
+              9
+            ],
+            [
+              137,
+              9
+            ],
+            [
+              139,
+              9
+            ],
+            [
+              149,
+              9
+            ],
+            [
+              151,
+              9
+            ],
+            [
+              157,
+              9
+            ],
+            [
+              163,
+              9
+            ],
+            [
+              167,
+              9
+            ],
+            [
+              173,
+              9
+            ],
+            [
+              179,
+              9
+            ],
+            [
+              181,
+              9
+            ],
+            [
+              191,
+              9
+            ]
+          ]
+        },
+        "Dn_lt_p_le_2Dn": {
+          "positive_log_per_n": 69.77300628211515,
+          "negative_log_per_n": 0.0,
+          "signed_log_per_n": 69.77300628211515,
+          "nonzero_valuations": 33,
+          "valuations": [
+            [
+              193,
+              9
+            ],
+            [
+              197,
+              9
+            ],
+            [
+              199,
+              9
+            ],
+            [
+              211,
+              9
+            ],
+            [
+              223,
+              9
+            ],
+            [
+              227,
+              9
+            ],
+            [
+              229,
+              9
+            ],
+            [
+              233,
+              9
+            ],
+            [
+              239,
+              9
+            ],
+            [
+              241,
+              9
+            ],
+            [
+              251,
+              9
+            ],
+            [
+              257,
+              9
+            ],
+            [
+              263,
+              9
+            ],
+            [
+              269,
+              9
+            ],
+            [
+              271,
+              9
+            ],
+            [
+              277,
+              9
+            ],
+            [
+              281,
+              9
+            ],
+            [
+              283,
+              9
+            ],
+            [
+              293,
+              9
+            ],
+            [
+              307,
+              9
+            ],
+            [
+              311,
+              9
+            ],
+            [
+              313,
+              9
+            ],
+            [
+              317,
+              9
+            ],
+            [
+              331,
+              9
+            ],
+            [
+              337,
+              9
+            ],
+            [
+              347,
+              9
+            ],
+            [
+              349,
+              9
+            ],
+            [
+              353,
+              9
+            ],
+            [
+              359,
+              9
+            ],
+            [
+              367,
+              9
+            ],
+            [
+              373,
+              9
+            ],
+            [
+              379,
+              9
+            ],
+            [
+              383,
+              9
+            ]
+          ]
+        }
+      },
+      "log_multiplier_per_n": 142.69194061685866,
+      "large_prime_mod_checks": [
+        {
+          "p": 53,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            1,
+            43,
+            43
+          ],
+          "formula_residue_mod_p": 34,
+          "exact_p9_B_mod_p": 34,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 59,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            54,
+            29,
+            38
+          ],
+          "formula_residue_mod_p": 3,
+          "exact_p9_B_mod_p": 3,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 61,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            7,
+            18,
+            41
+          ],
+          "formula_residue_mod_p": 5,
+          "exact_p9_B_mod_p": 5,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 67,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            1,
+            66,
+            12
+          ],
+          "formula_residue_mod_p": 12,
+          "exact_p9_B_mod_p": 12,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 71,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            50,
+            6,
+            32
+          ],
+          "formula_residue_mod_p": 17,
+          "exact_p9_B_mod_p": 17,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 73,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            58,
+            36,
+            19
+          ],
+          "formula_residue_mod_p": 40,
+          "exact_p9_B_mod_p": 40,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 79,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            18,
+            45,
+            41
+          ],
+          "formula_residue_mod_p": 25,
+          "exact_p9_B_mod_p": 25,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 83,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            80,
+            34,
+            59
+          ],
+          "formula_residue_mod_p": 7,
+          "exact_p9_B_mod_p": 7,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 89,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            79,
+            62,
+            87
+          ],
+          "formula_residue_mod_p": 50,
+          "exact_p9_B_mod_p": 50,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 97,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            20,
+            41
+          ],
+          "formula_residue_mod_p": 61,
+          "exact_p9_B_mod_p": 61,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 101,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            10,
+            41
+          ],
+          "formula_residue_mod_p": 51,
+          "exact_p9_B_mod_p": 51,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 103,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            73,
+            50
+          ],
+          "formula_residue_mod_p": 20,
+          "exact_p9_B_mod_p": 20,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 107,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            47,
+            79
+          ],
+          "formula_residue_mod_p": 19,
+          "exact_p9_B_mod_p": 19,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 109,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            17,
+            37
+          ],
+          "formula_residue_mod_p": 54,
+          "exact_p9_B_mod_p": 54,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 113,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            94,
+            52
+          ],
+          "formula_residue_mod_p": 33,
+          "exact_p9_B_mod_p": 33,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 127,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            94,
+            126
+          ],
+          "formula_residue_mod_p": 93,
+          "exact_p9_B_mod_p": 93,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 131,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            81,
+            77
+          ],
+          "formula_residue_mod_p": 27,
+          "exact_p9_B_mod_p": 27,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 137,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            46,
+            124
+          ],
+          "formula_residue_mod_p": 33,
+          "exact_p9_B_mod_p": 33,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 139,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            34,
+            138
+          ],
+          "formula_residue_mod_p": 33,
+          "exact_p9_B_mod_p": 33,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 149,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            73,
+            72
+          ],
+          "formula_residue_mod_p": 145,
+          "exact_p9_B_mod_p": 145,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 151,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            65,
+            145
+          ],
+          "formula_residue_mod_p": 59,
+          "exact_p9_B_mod_p": 59,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 157,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            70,
+            146
+          ],
+          "formula_residue_mod_p": 59,
+          "exact_p9_B_mod_p": 59,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 163,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            92,
+            19
+          ],
+          "formula_residue_mod_p": 111,
+          "exact_p9_B_mod_p": 111,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 167,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            26,
+            119
+          ],
+          "formula_residue_mod_p": 145,
+          "exact_p9_B_mod_p": 145,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 173,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            64,
+            57
+          ],
+          "formula_residue_mod_p": 121,
+          "exact_p9_B_mod_p": 121,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 179,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            60,
+            166
+          ],
+          "formula_residue_mod_p": 47,
+          "exact_p9_B_mod_p": 47,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 181,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            63,
+            39
+          ],
+          "formula_residue_mod_p": 102,
+          "exact_p9_B_mod_p": 102,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 191,
+          "band": "2n_lt_p_le_Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            133,
+            168
+          ],
+          "formula_residue_mod_p": 110,
+          "exact_p9_B_mod_p": 110,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 193,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            131
+          ],
+          "formula_residue_mod_p": 131,
+          "exact_p9_B_mod_p": 131,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 197,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            192
+          ],
+          "formula_residue_mod_p": 192,
+          "exact_p9_B_mod_p": 192,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 199,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            53
+          ],
+          "formula_residue_mod_p": 53,
+          "exact_p9_B_mod_p": 53,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 211,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            143
+          ],
+          "formula_residue_mod_p": 143,
+          "exact_p9_B_mod_p": 143,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 223,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            132
+          ],
+          "formula_residue_mod_p": 132,
+          "exact_p9_B_mod_p": 132,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 227,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            34
+          ],
+          "formula_residue_mod_p": 34,
+          "exact_p9_B_mod_p": 34,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 229,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            83
+          ],
+          "formula_residue_mod_p": 83,
+          "exact_p9_B_mod_p": 83,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 233,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            212
+          ],
+          "formula_residue_mod_p": 212,
+          "exact_p9_B_mod_p": 212,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 239,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            75
+          ],
+          "formula_residue_mod_p": 75,
+          "exact_p9_B_mod_p": 75,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 241,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            199
+          ],
+          "formula_residue_mod_p": 199,
+          "exact_p9_B_mod_p": 199,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 251,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            131
+          ],
+          "formula_residue_mod_p": 131,
+          "exact_p9_B_mod_p": 131,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 257,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            79
+          ],
+          "formula_residue_mod_p": 79,
+          "exact_p9_B_mod_p": 79,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 263,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            238
+          ],
+          "formula_residue_mod_p": 238,
+          "exact_p9_B_mod_p": 238,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 269,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            214
+          ],
+          "formula_residue_mod_p": 214,
+          "exact_p9_B_mod_p": 214,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 271,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            256
+          ],
+          "formula_residue_mod_p": 256,
+          "exact_p9_B_mod_p": 256,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 277,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            54
+          ],
+          "formula_residue_mod_p": 54,
+          "exact_p9_B_mod_p": 54,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 281,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            266
+          ],
+          "formula_residue_mod_p": 266,
+          "exact_p9_B_mod_p": 266,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 283,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            44
+          ],
+          "formula_residue_mod_p": 44,
+          "exact_p9_B_mod_p": 44,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 293,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            103
+          ],
+          "formula_residue_mod_p": 103,
+          "exact_p9_B_mod_p": 103,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 307,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            113
+          ],
+          "formula_residue_mod_p": 113,
+          "exact_p9_B_mod_p": 113,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 311,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            179
+          ],
+          "formula_residue_mod_p": 179,
+          "exact_p9_B_mod_p": 179,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 313,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            163
+          ],
+          "formula_residue_mod_p": 163,
+          "exact_p9_B_mod_p": 163,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 317,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            309
+          ],
+          "formula_residue_mod_p": 309,
+          "exact_p9_B_mod_p": 309,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 331,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            58
+          ],
+          "formula_residue_mod_p": 58,
+          "exact_p9_B_mod_p": 58,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 337,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            33
+          ],
+          "formula_residue_mod_p": 33,
+          "exact_p9_B_mod_p": 33,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 347,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            25
+          ],
+          "formula_residue_mod_p": 25,
+          "exact_p9_B_mod_p": 25,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 349,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            209
+          ],
+          "formula_residue_mod_p": 209,
+          "exact_p9_B_mod_p": 209,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 353,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            13
+          ],
+          "formula_residue_mod_p": 13,
+          "exact_p9_B_mod_p": 13,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 359,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            205
+          ],
+          "formula_residue_mod_p": 205,
+          "exact_p9_B_mod_p": 205,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 367,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            49
+          ],
+          "formula_residue_mod_p": 49,
+          "exact_p9_B_mod_p": 49,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 373,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            330
+          ],
+          "formula_residue_mod_p": 330,
+          "exact_p9_B_mod_p": 330,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 379,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            349
+          ],
+          "formula_residue_mod_p": 349,
+          "exact_p9_B_mod_p": 349,
+          "nonzero": true,
+          "exact_vp_B": -9
+        },
+        {
+          "p": 383,
+          "band": "Dn_lt_p_le_2Dn",
+          "contributions_by_divisor_mod_p": [
+            0,
+            0,
+            0,
+            70
+          ],
+          "formula_residue_mod_p": 70,
+          "exact_p9_B_mod_p": 70,
+          "nonzero": true,
+          "exact_vp_B": -9
+        }
+      ],
+      "large_prime_check_count": 61,
+      "nonzero_large_prime_count": 61,
+      "zero_large_prime_count": 0,
+      "source_tail_sha256": {
+        "tail_shift": "6ea5084daec1caeb3976fb063133dcb15c68a96565fb629af7e2accfac56ac4d",
+        "general_poles": "40080f2e004df1e9347f082dcc048068af88e02e2818d1772554f72077e1eabc",
+        "shift_forms": "823f38c2ca088a3ab2f5053db0ad4f25bd73b5616496e45f0d2e89e09e27ab75"
+      }
+    }
+  ]
+}

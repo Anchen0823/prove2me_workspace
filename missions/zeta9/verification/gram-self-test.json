@@ -1,0 +1,9 @@
+{
+  "default_explicit_basis_equal": true,
+  "direct_determinants": 4,
+  "moment_threshold_primes": [
+    11,
+    13,
+    17
+  ]
+}

@@ -1,0 +1,157 @@
+[
+  {
+    "path": "report.md",
+    "bytes": 6487,
+    "sha256": "2938d7ac9af457bcc806de0e17c9e8e9108b39e72dc59b5110bad6c5b098e2c3"
+  },
+  {
+    "path": "research/analytic.md",
+    "bytes": 7059,
+    "sha256": "11fe5587b1b9e9d3e168cf219bb5b33dee719849b31355593e1ea1756420516d"
+  },
+  {
+    "path": "research/arithmetic.md",
+    "bytes": 8715,
+    "sha256": "02aa3d312ebeba3bb104af9f96ed784a291a9632c36b3c32e7b29a181076ea59"
+  },
+  {
+    "path": "research/connection.md",
+    "bytes": 10423,
+    "sha256": "f1f9d3a1049cf7b31d085b26114598c0f958504a6f6fd301539fe989154d73a9"
+  },
+  {
+    "path": "research/continued-fraction-diagnostic.md",
+    "bytes": 2071,
+    "sha256": "7149f7ae60dd8ada8e86471226a59b6add1e4a4882222356ddd048fb6ed951dd"
+  },
+  {
+    "path": "research/experiments.md",
+    "bytes": 6446,
+    "sha256": "f240e83bb199c70150bbfb67b37d850ad3cc831e74b936e3b61240f84d6d1f01"
+  },
+  {
+    "path": "research/independent-review.md",
+    "bytes": 3911,
+    "sha256": "9eb369d9f57968f0ac36d656e84247befc9721c8391a9aa424f3650ce15ed3f4"
+  },
+  {
+    "path": "research/literature-check.md",
+    "bytes": 1144,
+    "sha256": "128a6569e7b7619c66be8e1cd1345c0c95e75e8da7dcd935337d3e5bb6df67af"
+  },
+  {
+    "path": "research/protocol.md",
+    "bytes": 1261,
+    "sha256": "3e57cd657ed7c8132c618b568be7fc3fb5ceb2e8ad0e4af1214a82794d8c4e8a"
+  },
+  {
+    "path": "scripts/analytic_exponent.py",
+    "bytes": 2795,
+    "sha256": "03dcdd4a64033caea90a2edfe49f252a1ee767113fe0f77239a0a534319e6aff"
+  },
+  {
+    "path": "scripts/analytic_rank1.py",
+    "bytes": 2519,
+    "sha256": "82ba4a8dd256f4b3720f5f76b3de6187dc4fe87b122e453f9bfd86bcba55ecf8"
+  },
+  {
+    "path": "scripts/arithmetic_connection_symbolic.py",
+    "bytes": 5487,
+    "sha256": "1f002dbb573335984d798bd4a9db01449730652f20c14d8574ab82f6471855e7"
+  },
+  {
+    "path": "scripts/connection_audit.py",
+    "bytes": 3670,
+    "sha256": "68412a426f0561be4b0c4799f0d5032108c29480478415f1c1aa468bc824320e"
+  },
+  {
+    "path": "scripts/continued_fraction_audit.py",
+    "bytes": 4106,
+    "sha256": "f731e46453abae8deff5b816e8594234ccb537903e3206f1fd3ed55e71f16f3b"
+  },
+  {
+    "path": "scripts/independent_review.py",
+    "bytes": 8713,
+    "sha256": "44dbe59c3ba0ce76f4853415e8ed14edd00f934e8eeb603cb01a71042d302840"
+  },
+  {
+    "path": "scripts/minor_smoothness_audit.py",
+    "bytes": 3103,
+    "sha256": "1c298b673751629e2d52d5d048e3289f0d3c4f74ba32d3a7768b87312ad10ffc"
+  },
+  {
+    "path": "scripts/modulus_scan.py",
+    "bytes": 11602,
+    "sha256": "1d6dc3009eb9d4d549a3e82135cf2efe09f5c4282faf67000b93aa07167e53fe"
+  },
+  {
+    "path": "scripts/prime_window_scan.py",
+    "bytes": 5374,
+    "sha256": "4b7261ae664813d6a2a1e90559d69d69e8910355cc8d3e9678ee737ed7a5bf1d"
+  },
+  {
+    "path": "scripts/symbolic_determinant_review.py",
+    "bytes": 3698,
+    "sha256": "7293ba2b7c8bff9705ff21d520ebcbe435a570a77c350557736fc180c92967ca"
+  },
+  {
+    "path": "verification/analytic-exponent.json",
+    "bytes": 535,
+    "sha256": "f7c37e98b8fd2768c51ada8307d7c8d65bd35b182ef07acedc1f99df769db34b"
+  },
+  {
+    "path": "verification/analytic-rank1.json",
+    "bytes": 1514,
+    "sha256": "4f789070ea49b4ce15111647d5d4580b02217308c62659d14f4081926374021e"
+  },
+  {
+    "path": "verification/arithmetic-connection-symbolic.json",
+    "bytes": 52557,
+    "sha256": "21af3c1a6f8e71f1c84871d4e5f827bb18bfc3977537487692e932afe7ee516f"
+  },
+  {
+    "path": "verification/connection-audit.json",
+    "bytes": 66551,
+    "sha256": "6d0a0ecf32946354d3bd27c417ea2ec99a71c35f961c0278e57a3dbc5eab1a5b"
+  },
+  {
+    "path": "verification/continued-fraction-audit.json",
+    "bytes": 182469,
+    "sha256": "45a95692a6b9b107fd6d8753620f3a6866a0817c7dd5e0439674bd2b5c7526e3"
+  },
+  {
+    "path": "verification/final-summary.json",
+    "bytes": 1033,
+    "sha256": "7bf797aa106c4c692eb470fd321b8ee04d879274cffbd11f620d21120dcf3955"
+  },
+  {
+    "path": "verification/independent-review.json",
+    "bytes": 7880,
+    "sha256": "256f6571024a024edf258a7aad1608d09b6713d29de1e8f777e5df10e9977cae"
+  },
+  {
+    "path": "verification/minor-smoothness-audit.json",
+    "bytes": 193920,
+    "sha256": "2ac93a1163ca34f8d7f0110b0f3b24c068985db776ef0d4e316d52be94cab688"
+  },
+  {
+    "path": "verification/modulus-scan.json",
+    "bytes": 2179041,
+    "sha256": "e74aa39d4a8e1ed4651fd493f80afef067e0040c12bbae3b1597872c94739ac8"
+  },
+  {
+    "path": "verification/prime-window-scan.json",
+    "bytes": 837728,
+    "sha256": "2b9bee2a0a87311f0b848f98bbad40869e1d3c86359e0f9d8854958a22010f96"
+  },
+  {
+    "path": "verification/rank1-independent-exact.json.gz",
+    "bytes": 58085,
+    "sha256": "cd76122c183c28d73bb0a67643996a8314ccb27d729cdc19a0d0ebb0dc0f081a"
+  },
+  {
+    "path": "verification/symbolic-determinant-independent.json",
+    "bytes": 66763,
+    "sha256": "afc431dbf95819f666a97fc61432fe83407da4cff4afeab7c6a7c9a178b4894c"
+  }
+]

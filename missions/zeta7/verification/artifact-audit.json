@@ -1,0 +1,102 @@
+[
+  {
+    "source": "exact_baseline.json.gz",
+    "s": 5,
+    "K": 40,
+    "N": 3,
+    "q": 3,
+    "h": 37,
+    "degree": 37,
+    "coefficients_sha256": "432dd248d84b970c4a4fe8b2fdcb1587ea38daaffdf889b3e265e197693745f4",
+    "primitive": true,
+    "positive": true,
+    "below_one": true,
+    "log_value": "-265.12906697687373",
+    "log_interval": {
+      "mid": "-26512906697687371795263801731697547",
+      "rad": "2",
+      "exp": -32
+    },
+    "independent_evaluation_accuracy_bits": 8011
+  },
+  {
+    "source": "exact_baseline.json.gz",
+    "s": 7,
+    "K": 40,
+    "N": 3,
+    "q": 3,
+    "h": 37,
+    "degree": 37,
+    "coefficients_sha256": "c7339800771f0956fec37858b43ec7f76fbb89e6c91ddfd91b084880d7b8b1d4",
+    "primitive": true,
+    "positive": true,
+    "below_one": false,
+    "log_value": "1227.1197531487803",
+    "log_interval": {
+      "mid": "12271197531487803546228816791508797",
+      "rad": "2",
+      "exp": -31
+    },
+    "independent_evaluation_accuracy_bits": 7957
+  },
+  {
+    "source": "exact_baseline.json.gz",
+    "s": 7,
+    "K": 40,
+    "N": 3,
+    "q": 4,
+    "h": 37,
+    "degree": 37,
+    "coefficients_sha256": "6b80b124737a5d2bb8f7a0b586ff12143883bcd820f8e3213232d6dd551c8372",
+    "primitive": true,
+    "positive": true,
+    "below_one": false,
+    "log_value": "1274.3725919894173",
+    "log_interval": {
+      "mid": "12743725919894172113227720009582960",
+      "rad": "2",
+      "exp": -31
+    },
+    "independent_evaluation_accuracy_bits": 7633
+  },
+  {
+    "source": "exact_K80.json.gz",
+    "s": 7,
+    "K": 80,
+    "N": 6,
+    "q": 3,
+    "h": 74,
+    "degree": 74,
+    "coefficients_sha256": "853b1755a61939032fb450ff2328331dccbc6b1855d4e3328d0d12635a81b455",
+    "primitive": true,
+    "positive": true,
+    "below_one": false,
+    "log_value": "5414.209044297367",
+    "log_interval": {
+      "mid": "54142090442973669406500442267189109",
+      "rad": "2",
+      "exp": -31
+    },
+    "independent_evaluation_accuracy_bits": 8875
+  },
+  {
+    "source": "exact_K80_s5.json.gz",
+    "s": 5,
+    "K": 80,
+    "N": 6,
+    "q": 3,
+    "h": 74,
+    "degree": 74,
+    "coefficients_sha256": "863e576db67cd924c5a96b9d71e669ac8325d0154389121502a61723bed46014",
+    "primitive": true,
+    "positive": true,
+    "below_one": true,
+    "log_value": "-833.331534801572",
+    "log_interval": {
+      "mid": "-8333315348015719931333197737886006",
+      "rad": "2",
+      "exp": -31
+    },
+    "independent_evaluation_accuracy_bits": 31337
+  }
+]

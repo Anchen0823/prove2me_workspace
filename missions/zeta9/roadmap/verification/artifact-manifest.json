@@ -1,0 +1,347 @@
+[
+  {
+    "path": "dag.json",
+    "bytes": 36487,
+    "sha256": "b1af92e7fe83fb3d49a29d1793fdf858ebf7bb875d22f732218e81b3fce42d80"
+  },
+  {
+    "path": "DAG.md",
+    "bytes": 29488,
+    "sha256": "7eeae1e0faf82ca7c9a9aaafc9bc9bc798bd16c6adfa8c88a7175a50663a0ba7"
+  },
+  {
+    "path": "platform/ExponentMarginBridge.lean",
+    "bytes": 464,
+    "sha256": "21285364df98f1e2b2c3aec141c25924c9eb34360847621b97b7ff33df0f6a1f"
+  },
+  {
+    "path": "platform/mission-description.md",
+    "bytes": 21792,
+    "sha256": "85e6a06d1fd3eac3df97edf631aaa9c00dfce2d7e97cc400c15c5af88125d599"
+  },
+  {
+    "path": "platform/new-dag-mapping.md",
+    "bytes": 5646,
+    "sha256": "521dfb526f5570271fb4284617d9e9c2956beaf9557a3c2292a9e62a2f1e0fab"
+  },
+  {
+    "path": "platform/new-results-receipt.json",
+    "bytes": 4456,
+    "sha256": "5d2b080985c1ff1980d163a9342a98e5a9cad47b9efb7adcf61b5e2966576bea"
+  },
+  {
+    "path": "platform/PrimeBudget-statement.md",
+    "bytes": 436,
+    "sha256": "ee9c2720aee328fe1d7f702b967ce48eed43fa053057d360c429dc8decc2e768"
+  },
+  {
+    "path": "platform/PrimeBudgetInequality.lean",
+    "bytes": 519,
+    "sha256": "e228a7e0f6c5c477c6f2712d4f1fd48cdcdfd54c0cea9c8b46ab4ac143e1186e"
+  },
+  {
+    "path": "platform/PrimeDiscount-statement.md",
+    "bytes": 500,
+    "sha256": "41ea6dd1c5d11c612c35463ad8bcdcad80a0cc8bc69428d3cd1449254500a268"
+  },
+  {
+    "path": "platform/PrimeDiscountIdentity.lean",
+    "bytes": 563,
+    "sha256": "9f3943210e3b5afcd36f9695bbf08bcad6fff28c19eb3bfe72c374a4318b1843"
+  },
+  {
+    "path": "platform/proposal-receipt.json",
+    "bytes": 1542,
+    "sha256": "0d448f5a5413faaadf29dc74f1ea06c66de68ffa8403758fb1904ac3b2d8f82d"
+  },
+  {
+    "path": "platform/proposal.json",
+    "bytes": 4460,
+    "sha256": "a73878053998eaab7cb604af576a12a43940fb1c8e31b7283723fba063094017"
+  },
+  {
+    "path": "platform/publish_new_dag_results.py",
+    "bytes": 30010,
+    "sha256": "2368ab55d82189a61468dab76ba8bd29f417a5615ee744c0ce4728469975a5a4"
+  },
+  {
+    "path": "platform/readbacks/ExponentMarginBridge.md",
+    "bytes": 497,
+    "sha256": "5282372e09e8dac45ed98fcc1e7868fe61dc52460f2b330040a74b207096c76a"
+  },
+  {
+    "path": "platform/readbacks/TwoFormsCriterion.md",
+    "bytes": 284,
+    "sha256": "880c760e3d5c5344e939daa6325588351e5bf798702a341daa41b846d0e36dca"
+  },
+  {
+    "path": "platform/readbacks/ZetaNineRoot.md",
+    "bytes": 127,
+    "sha256": "942d1c1489f5dc644c08bc05e7ead0ca1168d75df137e729e424a46141e7e003"
+  },
+  {
+    "path": "platform/README.md",
+    "bytes": 3234,
+    "sha256": "1fba397d54ca5fab671188c7bdca3abb6b1d48d01e7df355366347f318a2cc9f"
+  },
+  {
+    "path": "platform/solutions/ExponentMarginBridge-explanation.md",
+    "bytes": 764,
+    "sha256": "2eb24e482b4e6be5355128d3bda0ebf67f16ecccfc9655f4d219348215526e60"
+  },
+  {
+    "path": "platform/solutions/PrimeBudget-explanation.md",
+    "bytes": 801,
+    "sha256": "b35383b0b0ac475685ed6905233b137f4ed71cba1fb77bc7f7865d03c369093f"
+  },
+  {
+    "path": "platform/solutions/PrimeDiscount-explanation.md",
+    "bytes": 488,
+    "sha256": "0c1fd8f1814caf0384b5a02b03451fc503aadc99bb4296cf128809600eff8c0f"
+  },
+  {
+    "path": "platform/solutions/proof-submissions.json",
+    "bytes": 1031,
+    "sha256": "2490ceef31cf7cdcf19427df9cec440238337d2936281b714e65263c24a31ef3"
+  },
+  {
+    "path": "platform/solutions/Sol_ZetaNine_exponential_margin_of_volume_and_shape.lean",
+    "bytes": 879,
+    "sha256": "c7ec157cd3068011c9498252c21dfe235c7d1ff9556bd73eec0a12467690757b"
+  },
+  {
+    "path": "platform/solutions/Sol_ZetaNine_finite_prime_budget.lean",
+    "bytes": 1163,
+    "sha256": "a50acc595935b3b7141b6c62e8d084ce3a4e572152da304f2c80d8a04724460e"
+  },
+  {
+    "path": "platform/solutions/Sol_ZetaNine_finite_prime_discount.lean",
+    "bytes": 1547,
+    "sha256": "9900d2707154afaf8723544065cc1f1775bfb15472ff392afc5738bf654c003c"
+  },
+  {
+    "path": "platform/solutions/Sol_ZetaNine_irrational_of_two_small_integer_forms.lean",
+    "bytes": 1681,
+    "sha256": "be9461e0acff5bc48d66d3308d488ed006bede94610758c2e94767bf9a375d1f"
+  },
+  {
+    "path": "platform/solutions/Sol_ZetaNine_volume_baseline_cancellation.lean",
+    "bytes": 1121,
+    "sha256": "6e5ece0036565e563e1ab1a9a8fc1f6e5570de113787c2b588399dfb0abad733"
+  },
+  {
+    "path": "platform/solutions/TwoFormsCriterion-explanation.md",
+    "bytes": 852,
+    "sha256": "d396ffc8422cde7e20beb8d0b66f512e3cb92fca3fa1725c3e8c5e7c6fd0826b"
+  },
+  {
+    "path": "platform/solutions/VolumeCancellation-explanation.md",
+    "bytes": 783,
+    "sha256": "5d627b95bfc38ca4bb978b9a2ba7da541a361dbf5c29367874a774347ade6d65"
+  },
+  {
+    "path": "platform/submit_solved_milestones.py",
+    "bytes": 6713,
+    "sha256": "5b46dc68b41bb61b0047b1afd218e67d3d7a752176930d869540ad91a43e7846"
+  },
+  {
+    "path": "platform/sync_private_proposal.py",
+    "bytes": 12641,
+    "sha256": "533f4abb2a1257c83e84c9f7e1f6b7e46e85b1d98df483774879474ff40fd2d4"
+  },
+  {
+    "path": "platform/TwoFormsCriterion.lean",
+    "bytes": 347,
+    "sha256": "dee5bd5b95b4eafe40d9b36862e6b4b60c67a47902f35716435a64cb4f6b24eb"
+  },
+  {
+    "path": "platform/VolumeCancellation-statement.md",
+    "bytes": 465,
+    "sha256": "0e03286a6e411b8e0147cd661436763495d23795c7dab61e2c7f413b93d0eb4c"
+  },
+  {
+    "path": "platform/VolumeCancellation.lean",
+    "bytes": 415,
+    "sha256": "4bb8f6ad3cd62c1593f7be0326a7a0a6ac6420414b4c12e00ddbcb55a717507c"
+  },
+  {
+    "path": "platform/ZetaNineRoot.lean",
+    "bytes": 137,
+    "sha256": "dae4f950bcf5134576d2c574439d7fbeab3da9f7b1ca1f6d5ff378bc3a0f8d0c"
+  },
+  {
+    "path": "research/arithmetic-prime-budget.md",
+    "bytes": 3286,
+    "sha256": "29717659a44cd04c4e02e4248a39e7e6633e2f92e10fd24bb0dc0ca4273b615c"
+  },
+  {
+    "path": "research/critical-polynomial-margin.md",
+    "bytes": 6987,
+    "sha256": "5fde94e4b68aa9cd58fdb302b63677b056fee60fefc6ce8b7c89bec4b8ef6c11"
+  },
+  {
+    "path": "research/discount-analytic-next.md",
+    "bytes": 4043,
+    "sha256": "174f6dd725807a49ad2f7c306c48a38761f5d9de9a6ff496b7f09438b12d40df"
+  },
+  {
+    "path": "research/five-point-geometry-obstruction.md",
+    "bytes": 4356,
+    "sha256": "c54726c0f99dcb8b9502081bd839fb9d271641371ae9f26739d59b74f0888738"
+  },
+  {
+    "path": "research/five-point-ratio-window.md",
+    "bytes": 5246,
+    "sha256": "6211b35e3801feef36904be39c55062802f4f318b069ade52b1a0f919940ac3c"
+  },
+  {
+    "path": "research/full-lattice-sign-next.md",
+    "bytes": 11032,
+    "sha256": "19272b7a141364d39df240a5e05c0520d6afe2efd18a725f96e7e563afb8402c"
+  },
+  {
+    "path": "research/intermediate-prime-attack.md",
+    "bytes": 10518,
+    "sha256": "afe7baa5fd34adead24b0f31c926864a0aa1a87752fc59f185e5f2f81c5b3522"
+  },
+  {
+    "path": "research/inverse-area-audit.md",
+    "bytes": 5048,
+    "sha256": "9dfb8404c06b1b412b04f9f4617d8b6baffbcd79216903d2c1e5954870d24ed8"
+  },
+  {
+    "path": "research/inverse-area-lower-next.md",
+    "bytes": 7096,
+    "sha256": "e92d5dca11e47e296b509ce031a7a72aa37360bd9258e4ffb5468722d5e5710e"
+  },
+  {
+    "path": "research/inverse-area-rate.md",
+    "bytes": 3537,
+    "sha256": "9a6e45b616ed7e932a4f826877018fd224420b7b3450c6234ad3fc1c1f6202eb"
+  },
+  {
+    "path": "research/moving-short-sign-next.md",
+    "bytes": 11898,
+    "sha256": "e303abe90602a72777f25c4ac2f6de3babbd66f18282f25007d00543856005bb"
+  },
+  {
+    "path": "research/prime-discount-identity.md",
+    "bytes": 2740,
+    "sha256": "9092cb5f0d0564e37a83e71b81bf3068a307fc6159df385987ba56bc82f0235d"
+  },
+  {
+    "path": "research/prime-valuation-attack.md",
+    "bytes": 8442,
+    "sha256": "6827cddbe84540eaaf0b15a2bd3f739aebd2dea1c3f0e7da174dd01aede93e44"
+  },
+  {
+    "path": "research/shape-advance.md",
+    "bytes": 4635,
+    "sha256": "df6572da839da73113fcece79959bd060569b617400187ff70c59387bc61a25e"
+  },
+  {
+    "path": "research/shape-obligation.md",
+    "bytes": 2447,
+    "sha256": "e54183399174483c49553fd6d0137432d6f62917da8a5cb6533c03fc889dbda2"
+  },
+  {
+    "path": "research/shape-or-j-next.md",
+    "bytes": 13036,
+    "sha256": "98fabebbb2293c4618f7ce21184a590e32d4292a767ac315a0fbe0e52afb93b6"
+  },
+  {
+    "path": "research/t5-arithmetic-next.md",
+    "bytes": 6188,
+    "sha256": "717fa98f24cedc87d13fc0122ca60e580bb0e42c7422d308d9632239605c2151"
+  },
+  {
+    "path": "research/t5-transfer-next.md",
+    "bytes": 8709,
+    "sha256": "269ddc361c44cb816c2e22567c75fa0035c9473d73b11d43bfdc3aa639f4ce05"
+  },
+  {
+    "path": "research/taylor-connection-next.md",
+    "bytes": 10099,
+    "sha256": "06b991abb6a16304cbe4b019d8643556e682aa86ee0cf321639479204f028b6e"
+  },
+  {
+    "path": "research/taylor-window-rate.md",
+    "bytes": 4476,
+    "sha256": "033c92f123a0b13d6ac74d69ad907e261bf216685bc536e0cb462c76aedd201b"
+  },
+  {
+    "path": "research/vc-budget-sum-next.md",
+    "bytes": 3733,
+    "sha256": "bf0b8697e22831ebb3c2f57ebad626fb6ea3c750ba2d92f81860e2d79c6290e4"
+  },
+  {
+    "path": "research/vc-finite-probe.md",
+    "bytes": 3131,
+    "sha256": "b318bd37c2d7612b3c261432e5d618d9ee25c749952eb1fd3445a6f0fc917bcd"
+  },
+  {
+    "path": "research/vc-local-smith-next.md",
+    "bytes": 8539,
+    "sha256": "c35f1036dd04361c797d4863a62a38385b17cdc3bc0dcea41d62a703fd350f72"
+  },
+  {
+    "path": "research/volume-cancellation.md",
+    "bytes": 3539,
+    "sha256": "f72379651a3b13f737eaa34fcfe542f1d5ad8785cb43c6fd8ea0701a5b1a139e"
+  },
+  {
+    "path": "research/weighted-kernel-area.md",
+    "bytes": 3167,
+    "sha256": "56d52cbea1667ad660fe65b4c102c47855690522424df5ac7fc55b0162dc7a44"
+  },
+  {
+    "path": "verification/check_gaussian_five_point.py",
+    "bytes": 1150,
+    "sha256": "280220758ef37290be1adf328c2ec5838d7fac0b71e035ad3edb0b4e0cbb212a"
+  },
+  {
+    "path": "verification/check_inverse_area_roots.py",
+    "bytes": 1596,
+    "sha256": "c0594244a3610275405cecbbc16663127d71d93f4a9692a17da069c8022da32c"
+  },
+  {
+    "path": "verification/check_prime_valuation_attack.py",
+    "bytes": 7617,
+    "sha256": "360eeae2199f8cb6d233ce4b15dfcf970eb4c386096c1f3b1cc212f03e74a791"
+  },
+  {
+    "path": "verification/check_signed_saddle_samples.py",
+    "bytes": 2019,
+    "sha256": "2671edfee7cfc4220c03dc74e60b68c8972c955bb3139cede442b4b4903506ab"
+  },
+  {
+    "path": "verification/check_taylor_transfer.py",
+    "bytes": 2855,
+    "sha256": "0b374d24e6e8aa3ee7e48216aca7eb794ead7043617dad7d37a8dfb3cf35439e"
+  },
+  {
+    "path": "verification/check_taylor_window_rate.py",
+    "bytes": 750,
+    "sha256": "24698646023f9d0cc6a90a4c90edae94b8a24bcbd0c39d5afc3bc9f878949da1"
+  },
+  {
+    "path": "verification/finite-audit.json",
+    "bytes": 23423,
+    "sha256": "72fa37eba7518840817df4bcef3844a62c119dda2fbe56e5a6c373e9483e0ecf"
+  },
+  {
+    "path": "verification/prime-valuation-attack-audit.json",
+    "bytes": 43985,
+    "sha256": "31714f2fedfe5aa082c82eba2e735bafe046c0cc053b79199b6a78d76e3fc34e"
+  },
+  {
+    "path": "verify_artifacts.py",
+    "bytes": 2281,
+    "sha256": "060071e19481b76dc5bb1ebb4a04233a74d18bebf7e0cd01a919fb6e32626bce"
+  },
+  {
+    "path": "verify_dag.py",
+    "bytes": 18404,
+    "sha256": "bed561b33e4caed8916609ca9e75d2a00caf0cdddce5aefdb763a08d4b5b4411"
+  }
+]

@@ -1,0 +1,40 @@
+{
+  "status": "round2_complete_no_single_zeta9_proof",
+  "date": "2026-09-24",
+  "atom_count": 160,
+  "atom_below_one": 49,
+  "combination_count": 63,
+  "combination_below_one": 0,
+  "timeouts": 0,
+  "degenerate_combinations": 0,
+  "initial_grid": 58,
+  "canonical_windows": 3,
+  "promoted_n96": 2,
+  "canonical": [
+    {
+      "n": 12,
+      "atom_score": -4.992881208678822,
+      "combination_score": 7.527193823626006
+    },
+    {
+      "n": 24,
+      "atom_score": -3.974462277834682,
+      "combination_score": 8.83117560614241
+    },
+    {
+      "n": 48,
+      "atom_score": -2.941560561309379,
+      "combination_score": 9.646820045027921
+    }
+  ],
+  "proved_multi_zeta_decay": "0<d_n^9 L_n<=exp((-1.43+o(1))*n)",
+  "support": [
+    1,
+    3,
+    5,
+    7,
+    9
+  ],
+  "unproved": "nonzero decay after isolating zeta9",
+  "future_seed": "fixed weights (-7776,1701,-224,1); conditional algebra only"
+}

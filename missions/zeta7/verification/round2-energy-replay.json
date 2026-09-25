@@ -1,0 +1,27 @@
+{
+  "verified": true,
+  "precision_bits": 256,
+  "intervals_checked": 312,
+  "exact_partition_coverage": true,
+  "exact_positive_mass_and_nesting": true,
+  "both_infinite_tails_checked": true,
+  "global_target_M": "-153/25",
+  "energy_I": {
+    "mid": "-62651900624202865647692907723758554846700422777271",
+    "rad": "2",
+    "exp": -50
+  },
+  "Cstar": {
+    "mid": "29403078178738252831229804046015446157646504040408",
+    "rad": "2",
+    "exp": -49
+  },
+  "U_bound": {
+    "mid": "50682682411585393959990948183913016423165463181352",
+    "rad": "2",
+    "exp": -50
+  },
+  "certificate_sha256": "9104ebd92321a23b7f314623e9aa12323b2511c0ffe2f720e8da3887e496a00a",
+  "checker_sha256": "062fcb018bb2325800519e47641f9654a4be139cf2dc8132b5c656d39161ecc2",
+  "boundary": "Global comparison-potential bound; no arithmetic asymptotic and no irrationality claim."
+}

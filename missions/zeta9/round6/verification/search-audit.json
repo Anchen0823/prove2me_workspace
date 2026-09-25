@@ -1,0 +1,63 @@
+{
+  "status": "pass",
+  "cases": [
+    {
+      "n": 12,
+      "input_sha256": "f048d3a183b315b6a1cd8d4cfdf6e3e92e310b306663580f099fdaa5bc8ca1be",
+      "search_sha256": "2613927296a6a813ebab35ebfe173a3978ce3bc856c51d91ade240377aa7f3b4",
+      "SNF_s1": "1",
+      "SNF_s2_digits": 51,
+      "selected_count": 8,
+      "constant_count": 0,
+      "best_log_abs_per_n": -5.1014685268598745,
+      "all_selected_below_one": true
+    },
+    {
+      "n": 24,
+      "input_sha256": "797ca2eb833550760c06f55f92fb8d59a9f0bfef5318c07cc9ad7c3d8c30a816",
+      "search_sha256": "664aae75c44d26cd86b049494be6651e69d36402dcaca63945d86b263afa389f",
+      "SNF_s1": "1",
+      "SNF_s2_digits": 109,
+      "selected_count": 8,
+      "constant_count": 0,
+      "best_log_abs_per_n": -5.116920005100538,
+      "all_selected_below_one": true
+    },
+    {
+      "n": 48,
+      "input_sha256": "4cffb3281b811f2023418e5ee208d9bdebcdea316d42c6bb30ee7296e3b7849a",
+      "search_sha256": "8878654783555d7ed01f35d0d0ac392a23ce1cf37b0c9f09ee206b68c3ccbe09",
+      "SNF_s1": "1",
+      "SNF_s2_digits": 232,
+      "selected_count": 8,
+      "constant_count": 0,
+      "best_log_abs_per_n": -5.0904104435900335,
+      "all_selected_below_one": true
+    },
+    {
+      "n": 96,
+      "input_sha256": "e8392d795739466f624feb7eee2a08749dc42ad1ecac09e3b553c5e851025a65",
+      "search_sha256": "3cdffe5448ec3485b27b185a39df47e23de94770c136ece7d8e5ddc8f8eeb838",
+      "SNF_s1": "1",
+      "SNF_s2_digits": 445,
+      "selected_count": 8,
+      "constant_count": 0,
+      "best_log_abs_per_n": -5.0727816499698255,
+      "all_selected_below_one": true
+    },
+    {
+      "n": 192,
+      "input_sha256": "f7820a74c1f49d1eff390bc68bc2acc278e63017d25c8cbe2aaf2fb8c5df7f1c",
+      "search_sha256": "8bfdbd3ccb2f9ed1d0d53bf43d4d9d1b81df17dcf8723b1b740d07023206c762",
+      "SNF_s1": "1",
+      "SNF_s2_digits": 937,
+      "selected_count": 8,
+      "constant_count": 0,
+      "best_log_abs_per_n": -5.064944317976936,
+      "all_selected_below_one": true
+    }
+  ],
+  "selected_total": 40,
+  "cross_n_repeated_primitive_pairs": {},
+  "audit_source_sha256": "cea0f7029fe734078a6418b0403fff332248020c9d9c46223e774e28ab588d7c"
+}

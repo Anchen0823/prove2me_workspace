@@ -1,0 +1,32 @@
+[
+  {
+    "case_id": "K40-F-s7-n1q1_n3q1_n6q1-g1-m1",
+    "K": 40,
+    "numerator_digits": 570,
+    "denominator_digits": 570,
+    "rational_upper_bound": true,
+    "log10_absolute_error": -55.43410788767125,
+    "log10_absolute_error_interval": {
+      "mid": "-5543410788767125265713108688179581713539",
+      "rad": "8686024",
+      "exp": -38
+    },
+    "coefficient_artifact": "missions/zeta7/verification/round2-fixed-degree-coeff/K40-F-s7-n1q1_n3q1_n6q1-g1-m1.json.gz",
+    "certified_from_arb": true
+  },
+  {
+    "case_id": "K80-F-s7-n1q1_n3q1_n6q1-g1-m1",
+    "K": 80,
+    "numerator_digits": 2331,
+    "denominator_digits": 2331,
+    "rational_upper_bound": true,
+    "log10_absolute_error": -113.64701075870128,
+    "log10_absolute_error_interval": {
+      "mid": "-1136470107587012815239421111681775301887",
+      "rad": "868604",
+      "exp": -37
+    },
+    "coefficient_artifact": "missions/zeta7/verification/round2-fixed-degree-coeff/K80-F-s7-n1q1_n3q1_n6q1-g1-m1.json.gz",
+    "certified_from_arb": true
+  }
+]

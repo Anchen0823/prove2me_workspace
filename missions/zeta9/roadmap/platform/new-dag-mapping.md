@@ -38,3 +38,12 @@
 矩泛函），不含具体构造，也不声称具体权重的正性或任何无穷定号。另外两个新的**开放**义务节点
 `R1`/`R2` 把两条主线的解析义务钉成不依赖定义层的封闭命题，并作为根定理两条已接受分解
 （`SKETCH_ACCEPTED`）的孩子。详见 `wiring/README.md`。
+
+**2026-09-25 第二批**：又上四个**已证**的笔记节点，其中两个是真正的约简（平台登记了边）——
+`ZetaNine.five_sample_sign_forces_nonzero`（TP3，孩子 = `quadrature_exact_of_moments`）＝ FQ 的
+求积恒等式 ∘ TP 的非零性（五个不同点上非零四次多项式不能全为零）；`ZetaNine.min_lt_weighted_average_lt_max`
+（FI1，正权重和为一 ⇒ 加权平均严格夹在取样值中间，非退化性 = 逆像行秩二的抽象对应）；
+`ZetaNine.mediant_strictly_between_min_and_max`（FI2，孩子 = FI1，不变形式的加权调和中项）；
+`ZetaNine.positive_matrix_maps_nonneg_to_pos`（TA1，正矩阵把非负锥送进正锥——TA 里「一步不行、
+两步行」的那一步）。四者都**不**声称具体权重为正、具体转移矩阵最终为正、或任何无穷定号/短度
+条件。里程碑 40 → 44（15 条挂定理）。

@@ -1,0 +1,62 @@
+=== (1)(2) Gamma(alpha) ===
+alpha=  1/28  Gamma= 0.14171563514  archive=[0.14171563,0.14171565]  inside=True  14alpha=0.500000  G<=14a=True  b=28
+alpha=  1/14  Gamma=0.282540685418  archive=[0.28254068,0.2825407]  inside=True  14alpha=1.000000  G<=14a=True  b=14
+alpha=  3/28  Gamma=0.426628005331  archive=[0.426628,0.42662801]  inside=True  14alpha=1.500000  G<=14a=True  b=28
+alpha=   1/7  Gamma=0.578206479875  archive=[0.57820646,0.57820651]  inside=True  14alpha=2.000000  G<=14a=True  b=7
+alpha=  5/28  Gamma=0.709055872563  archive=[0.70905586,0.70905588]  inside=True  14alpha=2.500000  G<=14a=True  b=28
+alpha=  3/14  Gamma=0.852108207327  archive=[0.8521082,0.85210822]  inside=True  14alpha=3.000000  G<=14a=True  b=14
+
+=== (3) sup H ===
+alpha=  1/28  supH=0.671769718687 at y=0.018457286  archive_upper=0.671769718688  H<=arch=True  H(0)=nan
+alpha=  1/14  supH= 1.16767697255 at y=0.037482836  archive_upper=1.167676972547  H<=arch=True  H(0)=nan
+alpha=  3/28  supH= 1.60943893775 at y=0.057133035  archive_upper=1.609438937754  H<=arch=True  H(0)=nan
+alpha=   1/7  supH= 2.02187339967 at y=0.077448325  archive_upper=2.021873399673  H<=arch=True  H(0)=nan
+alpha=  5/28  supH= 2.41619525174 at y=0.098458067  archive_upper=2.416195251742  H<=arch=True  H(0)=nan
+alpha=  3/14  supH= 2.79863788012 at y=0.12018372  archive_upper=2.798637880122  H<=arch=True  H(0)=nan
+
+=== (4) H' formula vs numerical derivative of the closed form ===
+alpha=  1/28 y=   0.001 H'formula=   4.43558395729 numeric=   4.43558395729 diff=0.0
+alpha=  1/28 y=     0.1 H'formula=  -7.25424733219 numeric=  -7.25424733219 diff=1.837e-40
+alpha=  1/28 y=     1.0 H'formula=  -8.21652556416 numeric=  -8.21652556416 diff=1.837e-40
+alpha=  1/28 y=     5.0 H'formula=  -6.77664624659 numeric=  -6.77664624659 diff=2.755e-40
+alpha=  1/28 y=    40.0 H'formula=  -6.34567229032 numeric=  -6.34567229032 diff=4.592e-40
+
+=== (5) H'' polynomial vs archived hsecond_numerator ===
+alpha=  1/28 y=     0.3 lhs=   -0.13970337229279 poly=   -0.13970337229279 relerr=2.05e-41
+alpha=  1/28 y=     1.0 lhs=     5.1199573419929 poly=     5.1199573419929 relerr=1.79e-41
+alpha=  1/28 y=     3.0 lhs=      229.5587328522 poly=      229.5587328522 relerr=1.28e-41
+alpha=  1/28 y=    20.0 lhs=     401221.50388591 poly=     401221.50388591 relerr=0.0
+        leading coeff archived=5/2  3-14alpha=5/2  match=True
+alpha=  1/14 y=     0.3 lhs=    -0.7538104123282 poly=    -0.7538104123282 relerr=0.0
+alpha=  1/14 y=     1.0 lhs=     4.0249895876718 poly=     4.0249895876718 relerr=0.0
+alpha=  1/14 y=     3.0 lhs=      188.5964181591 poly=      188.5964181591 relerr=0.0
+alpha=  1/14 y=    20.0 lhs=     321227.52498959 poly=     321227.52498959 relerr=3.75e-41
+        leading coeff archived=2  3-14alpha=2  match=True
+alpha=  3/28 y=     0.3 lhs=    -1.5827435664827 poly=    -1.5827435664827 relerr=2.9e-41
+alpha=  3/28 y=     1.0 lhs=     2.6734100049459 poly=     2.6734100049459 relerr=1.72e-41
+alpha=  3/28 y=     3.0 lhs=     147.01014469882 poly=     147.01014469882 relerr=2.0e-41
+alpha=  3/28 y=    20.0 lhs=     241214.96805286 poly=     241214.96805286 relerr=1.25e-41
+        leading coeff archived=3/2  3-14alpha=3/2  match=True
+alpha=   1/7 y=     0.3 lhs=    -2.6643489795918 poly=    -2.6643489795918 relerr=1.72e-41
+alpha=   1/7 y=     1.0 lhs=     1.0204081632653 poly=     1.0204081632653 relerr=4.5e-41
+alpha=   1/7 y=     3.0 lhs=     104.69387755102 poly=     104.69387755102 relerr=0.0
+alpha=   1/7 y=    20.0 lhs=     161180.73469388 poly=     161180.73469388 relerr=0.0
+        leading coeff archived=1  3-14alpha=1  match=True
+alpha=  5/28 y=     0.3 lhs=    -4.0396941105269 poly=    -4.0396941105269 relerr=0.0
+alpha=  5/28 y=     1.0 lhs=   -0.98204768195544 poly=   -0.98204768195544 relerr=3.51e-41
+alpha=  5/28 y=     3.0 lhs=      61.53836048131 poly=      61.53836048131 relerr=1.19e-41
+alpha=  5/28 y=    20.0 lhs=     81121.723309461 poly=     81121.723309461 relerr=0.0
+        leading coeff archived=1/2  3-14alpha=1/2  match=True
+alpha=  3/14 y=     0.3 lhs=    -5.7531653477718 poly=    -5.7531653477718 relerr=4.79e-41
+alpha=  3/14 y=     1.0 lhs=    -3.3853082049146 poly=    -3.3853082049146 relerr=1.36e-41
+alpha=  3/14 y=     3.0 lhs=     17.431018325698 poly=     17.431018325698 relerr=0.0
+alpha=  3/14 y=    20.0 lhs=     1034.8289775094 poly=     1034.8289775094 relerr=0.0
+        leading coeff archived=0  3-14alpha=0  match=True
+
+=== (6) combined bounds ===
+alpha=  1/28 9-Gamma= 8.858284365 supH=0.6717697187 sum=  9.53005408355 ceil6=  9.530055 archived=  9.53005408603 archived_is_larger=True
+alpha=  1/14 9-Gamma= 8.717459315 supH= 1.167676973 sum=  9.88513628713 ceil6=  9.885137 archived=  9.88513629208 archived_is_larger=True
+alpha=  3/28 9-Gamma= 8.573371995 supH= 1.609438938 sum=  10.1828109324 ceil6= 10.182811 archived=  10.1828109357 archived_is_larger=True
+alpha=   1/7 9-Gamma=  8.42179352 supH=   2.0218734 sum=  10.4436669198 ceil6= 10.443667 archived=  10.4436669299 archived_is_larger=True
+alpha=  5/28 9-Gamma= 8.290944127 supH= 2.416195252 sum=  10.7071393792 ceil6=  10.70714 archived=  10.7071393826 archived_is_larger=True
+alpha=  3/14 9-Gamma= 8.147891793 supH=  2.79863788 sum=  10.9465296728 ceil6=  10.94653 archived=  10.9465296794 archived_is_larger=True

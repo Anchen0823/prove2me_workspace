@@ -1,0 +1,293 @@
+{
+  "kind": "finite_coefficientwise_multiplier_for_Delta",
+  "s": 7,
+  "K": 40,
+  "h": 37,
+  "g": 0,
+  "layers": [
+    {
+      "N": 3,
+      "q": 4
+    }
+  ],
+  "max_polynomial_moment": 56,
+  "polynomial_rank_bound": 37,
+  "prime_limit": 115,
+  "multiplier_numerator": "455957428313714617013105425022429757738814419824109430319369431540887569764800292092667572142637609268978170896691040290072681273773880338074187223239214758039240004322458650985167008402872065429807261933906774352979431513477686814755270290125696880634891374066551153109808708061155882847257416973294187287102013517858190133888305738283664708609707343175057156704173290664768685731044355882169018636560546408608210750922243384885646201879693565932866359492905765574629835548656303916009657487326310012645589509975412877583867567041609010884103256321585732618142353017639550911558120232103370532079947384801352163630028686776485537279570032568805058654345491883166254867391718420922790997646621151043870105843381662346566833771878548156107397837634047117069926652555822067028694532633709588273222829053602207972408058504142633074597335834656635348833009522615500694757916879096759460690802389339545751589743935282952950420625575758845191623260778978369528620086195797893065575450761067902378678810735993694008095195799110796694241929938264569054459051264941134096206082212259985545074032655515270471662544372580124384287596060010253162289316157191414422535771017484104889649383116555391956096096879601208679911546568787224722807796021558084500233099325369816839005002101747167223251672249688630698541111878955509885484677099596786079614053886899663593647862995141562573357626105928235647678681640966553600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "multiplier_denominator": "1",
+  "log_multiplier_per_K2": 2.356780641557162,
+  "prime_bounds": [
+    {
+      "p": 2,
+      "moment_lower": -2,
+      "moment_rank": null,
+      "mixed_minor_bound": -512,
+      "mixed_residue_count": 14,
+      "crt_bound": null,
+      "gamma": -512
+    },
+    {
+      "p": 3,
+      "moment_lower": -2,
+      "moment_rank": null,
+      "mixed_minor_bound": -334,
+      "mixed_residue_count": 13,
+      "crt_bound": null,
+      "gamma": -334
+    },
+    {
+      "p": 5,
+      "moment_lower": -1,
+      "moment_rank": null,
+      "mixed_minor_bound": -236,
+      "mixed_residue_count": 15,
+      "crt_bound": null,
+      "gamma": -236
+    },
+    {
+      "p": 7,
+      "moment_lower": -1,
+      "moment_rank": null,
+      "mixed_minor_bound": -135,
+      "mixed_residue_count": 16,
+      "crt_bound": null,
+      "gamma": -135
+    },
+    {
+      "p": 11,
+      "moment_lower": -1,
+      "moment_rank": 28,
+      "mixed_minor_bound": -155,
+      "mixed_residue_count": 19,
+      "crt_bound": -155,
+      "gamma": -155
+    },
+    {
+      "p": 13,
+      "moment_lower": -1,
+      "moment_rank": 22,
+      "mixed_minor_bound": -151,
+      "mixed_residue_count": 19,
+      "crt_bound": -151,
+      "gamma": -151
+    },
+    {
+      "p": 17,
+      "moment_lower": -1,
+      "moment_rank": 10,
+      "mixed_minor_bound": -142,
+      "mixed_residue_count": 20,
+      "crt_bound": -142,
+      "gamma": -142
+    },
+    {
+      "p": 19,
+      "moment_lower": -1,
+      "moment_rank": 4,
+      "mixed_minor_bound": -125,
+      "mixed_residue_count": 18,
+      "crt_bound": -125,
+      "gamma": -125
+    },
+    {
+      "p": 23,
+      "moment_lower": 0,
+      "moment_rank": 0,
+      "mixed_minor_bound": -130,
+      "mixed_residue_count": 18,
+      "crt_bound": -130,
+      "gamma": -130
+    },
+    {
+      "p": 29,
+      "moment_lower": 0,
+      "moment_rank": 0,
+      "mixed_minor_bound": -79,
+      "mixed_residue_count": 15,
+      "crt_bound": -76,
+      "gamma": -76
+    },
+    {
+      "p": 31,
+      "moment_lower": 0,
+      "moment_rank": 0,
+      "mixed_minor_bound": -64,
+      "mixed_residue_count": 16,
+      "crt_bound": -58,
+      "gamma": -58
+    },
+    {
+      "p": 37,
+      "moment_lower": 0,
+      "moment_rank": 0,
+      "mixed_minor_bound": -19,
+      "mixed_residue_count": 19,
+      "crt_bound": -4,
+      "gamma": -4
+    },
+    {
+      "p": 41,
+      "moment_lower": 0,
+      "moment_rank": 0,
+      "mixed_minor_bound": -17,
+      "mixed_residue_count": 17,
+      "crt_bound": 0,
+      "gamma": 0
+    },
+    {
+      "p": 43,
+      "moment_lower": 0,
+      "moment_rank": 0,
+      "mixed_minor_bound": -18,
+      "mixed_residue_count": 18,
+      "crt_bound": 0,
+      "gamma": 0
+    },
+    {
+      "p": 47,
+      "moment_lower": 0,
+      "moment_rank": 0,
+      "mixed_minor_bound": -17,
+      "mixed_residue_count": 17,
+      "crt_bound": 0,
+      "gamma": 0
+    },
+    {
+      "p": 53,
+      "moment_lower": 0,
+      "moment_rank": 0,
+      "mixed_minor_bound": -14,
+      "mixed_residue_count": 14,
+      "crt_bound": 0,
+      "gamma": 0
+    },
+    {
+      "p": 59,
+      "moment_lower": 0,
+      "moment_rank": 0,
+      "mixed_minor_bound": -11,
+      "mixed_residue_count": 11,
+      "crt_bound": 0,
+      "gamma": 0
+    },
+    {
+      "p": 61,
+      "moment_lower": 0,
+      "moment_rank": 0,
+      "mixed_minor_bound": -10,
+      "mixed_residue_count": 10,
+      "crt_bound": 0,
+      "gamma": 0
+    },
+    {
+      "p": 67,
+      "moment_lower": 0,
+      "moment_rank": 0,
+      "mixed_minor_bound": -7,
+      "mixed_residue_count": 7,
+      "crt_bound": 0,
+      "gamma": 0
+    },
+    {
+      "p": 71,
+      "moment_lower": 0,
+      "moment_rank": 0,
+      "mixed_minor_bound": -5,
+      "mixed_residue_count": 5,
+      "crt_bound": 0,
+      "gamma": 0
+    },
+    {
+      "p": 73,
+      "moment_lower": 0,
+      "moment_rank": 0,
+      "mixed_minor_bound": -4,
+      "mixed_residue_count": 4,
+      "crt_bound": 0,
+      "gamma": 0
+    },
+    {
+      "p": 79,
+      "moment_lower": 0,
+      "moment_rank": 0,
+      "mixed_minor_bound": -1,
+      "mixed_residue_count": 1,
+      "crt_bound": 0,
+      "gamma": 0
+    },
+    {
+      "p": 83,
+      "moment_lower": 0,
+      "moment_rank": 0,
+      "mixed_minor_bound": 0,
+      "mixed_residue_count": 0,
+      "crt_bound": 0,
+      "gamma": 0
+    },
+    {
+      "p": 89,
+      "moment_lower": 0,
+      "moment_rank": 0,
+      "mixed_minor_bound": 0,
+      "mixed_residue_count": 0,
+      "crt_bound": 0,
+      "gamma": 0
+    },
+    {
+      "p": 97,
+      "moment_lower": 0,
+      "moment_rank": 0,
+      "mixed_minor_bound": 0,
+      "mixed_residue_count": 0,
+      "crt_bound": 0,
+      "gamma": 0
+    },
+    {
+      "p": 101,
+      "moment_lower": 0,
+      "moment_rank": 0,
+      "mixed_minor_bound": 0,
+      "mixed_residue_count": 0,
+      "crt_bound": 0,
+      "gamma": 0
+    },
+    {
+      "p": 103,
+      "moment_lower": 0,
+      "moment_rank": 0,
+      "mixed_minor_bound": 0,
+      "mixed_residue_count": 0,
+      "crt_bound": 0,
+      "gamma": 0
+    },
+    {
+      "p": 107,
+      "moment_lower": 0,
+      "moment_rank": 0,
+      "mixed_minor_bound": 0,
+      "mixed_residue_count": 0,
+      "crt_bound": 0,
+      "gamma": 0
+    },
+    {
+      "p": 109,
+      "moment_lower": 0,
+      "moment_rank": 0,
+      "mixed_minor_bound": 0,
+      "mixed_residue_count": 0,
+      "crt_bound": 0,
+      "gamma": 0
+    },
+    {
+      "p": 113,
+      "moment_lower": 0,
+      "moment_rank": 0,
+      "mixed_minor_bound": 0,
+      "mixed_residue_count": 0,
+      "crt_bound": 0,
+      "gamma": 0
+    }
+  ],
+  "theorem": "This exact rational multiplier times Delta belongs to Z[X].",
+  "reporting_logs_are_floating": true
+}

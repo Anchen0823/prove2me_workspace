@@ -1,0 +1,198 @@
+{
+  "status": "stopped_by_rigorous_bound_limitation",
+  "profiles": [
+    {
+      "e": 1,
+      "rho": "1/3",
+      "theta": "1/2",
+      "alpha2": "9/88",
+      "alpha1": "3/88",
+      "degree_condition": true,
+      "short_integerization_applicable": true,
+      "promoted": false
+    },
+    {
+      "e": 1,
+      "rho": "1/3",
+      "theta": "3/4",
+      "alpha2": "27/176",
+      "alpha1": "9/176",
+      "degree_condition": true,
+      "short_integerization_applicable": true,
+      "promoted": false
+    },
+    {
+      "e": 1,
+      "rho": "1/3",
+      "theta": "1",
+      "alpha2": "9/44",
+      "alpha1": "3/44",
+      "degree_condition": true,
+      "short_integerization_applicable": true,
+      "promoted": false
+    },
+    {
+      "e": 1,
+      "rho": "2/3",
+      "theta": "1/2",
+      "alpha2": "9/92",
+      "alpha1": "3/46",
+      "degree_condition": true,
+      "short_integerization_applicable": true,
+      "promoted": false
+    },
+    {
+      "e": 1,
+      "rho": "2/3",
+      "theta": "3/4",
+      "alpha2": "27/184",
+      "alpha1": "9/92",
+      "degree_condition": true,
+      "short_integerization_applicable": true,
+      "promoted": false
+    },
+    {
+      "e": 1,
+      "rho": "2/3",
+      "theta": "1",
+      "alpha2": "9/46",
+      "alpha1": "3/23",
+      "degree_condition": true,
+      "short_integerization_applicable": true,
+      "promoted": false
+    },
+    {
+      "e": 2,
+      "rho": "1/3",
+      "theta": "1/2",
+      "alpha2": "9/92",
+      "alpha1": "3/92",
+      "degree_condition": true,
+      "short_integerization_applicable": true,
+      "promoted": false
+    },
+    {
+      "e": 2,
+      "rho": "1/3",
+      "theta": "3/4",
+      "alpha2": "27/184",
+      "alpha1": "9/184",
+      "degree_condition": true,
+      "short_integerization_applicable": true,
+      "promoted": false
+    },
+    {
+      "e": 2,
+      "rho": "1/3",
+      "theta": "1",
+      "alpha2": "9/46",
+      "alpha1": "3/46",
+      "degree_condition": true,
+      "short_integerization_applicable": true,
+      "promoted": false
+    },
+    {
+      "e": 2,
+      "rho": "2/3",
+      "theta": "1/2",
+      "alpha2": "9/100",
+      "alpha1": "3/50",
+      "degree_condition": true,
+      "short_integerization_applicable": true,
+      "promoted": false
+    },
+    {
+      "e": 2,
+      "rho": "2/3",
+      "theta": "3/4",
+      "alpha2": "27/200",
+      "alpha1": "9/100",
+      "degree_condition": true,
+      "short_integerization_applicable": true,
+      "promoted": false
+    },
+    {
+      "e": 2,
+      "rho": "2/3",
+      "theta": "1",
+      "alpha2": "9/50",
+      "alpha1": "3/25",
+      "degree_condition": true,
+      "short_integerization_applicable": true,
+      "promoted": false
+    },
+    {
+      "e": 4,
+      "rho": "1/3",
+      "theta": "1/2",
+      "alpha2": "9/100",
+      "alpha1": "3/100",
+      "degree_condition": true,
+      "short_integerization_applicable": true,
+      "promoted": false
+    },
+    {
+      "e": 4,
+      "rho": "1/3",
+      "theta": "3/4",
+      "alpha2": "27/200",
+      "alpha1": "9/200",
+      "degree_condition": true,
+      "short_integerization_applicable": true,
+      "promoted": false
+    },
+    {
+      "e": 4,
+      "rho": "1/3",
+      "theta": "1",
+      "alpha2": "9/50",
+      "alpha1": "3/50",
+      "degree_condition": true,
+      "short_integerization_applicable": true,
+      "promoted": false
+    },
+    {
+      "e": 4,
+      "rho": "2/3",
+      "theta": "1/2",
+      "alpha2": "9/116",
+      "alpha1": "3/58",
+      "degree_condition": true,
+      "short_integerization_applicable": true,
+      "promoted": false
+    },
+    {
+      "e": 4,
+      "rho": "2/3",
+      "theta": "3/4",
+      "alpha2": "27/232",
+      "alpha1": "9/116",
+      "degree_condition": true,
+      "short_integerization_applicable": true,
+      "promoted": false
+    },
+    {
+      "e": 4,
+      "rho": "2/3",
+      "theta": "1",
+      "alpha2": "9/58",
+      "alpha1": "3/29",
+      "degree_condition": true,
+      "short_integerization_applicable": true,
+      "promoted": false
+    }
+  ],
+  "rigorous_facts": [
+    "U > 0 from its y=0 value",
+    "limsup log(G_n)/n < 8.25",
+    "liminf log(d_n^9/G_n)/n > 0.75"
+  ],
+  "coarse_upper_expression_lower_bound": "0.75",
+  "stronger_G_exponent_bound_interval": {
+    "mid": "458656239090887043965518278161453788429952114870442214748243088153459354815105447",
+    "rad": "55289",
+    "exp": -80
+  },
+  "stronger_certificate_cost_lower_bound": "4.41",
+  "warning": "Bounds concern this contour-majorant/integerization certificate; no lower bound on actual |L_n| or primitive size."
+}

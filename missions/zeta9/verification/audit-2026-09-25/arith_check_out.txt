@@ -1,0 +1,9 @@
+=== (A) integrality / multiplier audit ===
+s9-n56-m0: G=1 (rec 1) | d=True | t#A int=True | t#B int=True | t#/m_prim=True | matches recorded=True
+s9-n56-m2: G=2187 (rec 2187) | d=True | t#A int=True | t#B int=True | t#/m_prim=True | matches recorded=True
+s9-n112-m4: G=78125 (rec 78125) | d=True | t#A int=True | t#B int=True | t#/m_prim=True | matches recorded=True
+s9-n224-m8: G=373669453125 (rec 373669453125) | d=True | t#A int=True | t#B int=True | t#/m_prim=True | matches recorded=True
+s9-n224-m48: G=1958195050662323803178880120220442002518095772941577597806438582717968750000000 (rec 1958195050662323803178880120220442002518095772941577597806438582717968750000000) | d=True | t#A int=True | t#B int=True | t#/m_prim=True | matches recorded=True
+
+=== (B)(C) large-prime formula and small-prime bounds ===
+parameters=216  prime terms checked=1951  failures=0

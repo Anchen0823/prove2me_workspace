@@ -1,0 +1,4996 @@
+{
+  "finite": [
+    {
+      "n": 56,
+      "m": 2,
+      "alpha": "1/28",
+      "common_C_gcd": "2187",
+      "lcm": "164249358725037825439200",
+      "multiplier_numerator": "79563587349502707908216170551001259924894207152539591132599545485850428276081536063673144769392851861791501403318944529270385340357571739960710205175529523977330623041318714143550851776512000000000000000000",
+      "multiplier_denominator": "1",
+      "log_multiplier_per_n": 8.466141348457457,
+      "log_common_gcd_per_n": 0.13732653608351372,
+      "A": "734168646049725164161789448422849905008470905932088584293907714640518865442560",
+      "prime_bounds": [
+        {
+          "p": 2,
+          "lcm_exponent": 5,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 46
+        },
+        {
+          "p": 3,
+          "lcm_exponent": 3,
+          "common_exponent": 7,
+          "large_prime_formula": null,
+          "multiplier_exponent": 20
+        },
+        {
+          "p": 5,
+          "lcm_exponent": 2,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 18
+        },
+        {
+          "p": 7,
+          "lcm_exponent": 2,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 18
+        },
+        {
+          "p": 11,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 13,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 17,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 19,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 23,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 29,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 31,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 37,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 41,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 43,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 47,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 53,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        }
+      ],
+      "theorem": "multiplier*(A*zeta(9)+B) has integer coefficients",
+      "logs_are_floating": true
+    },
+    {
+      "n": 56,
+      "m": 4,
+      "alpha": "1/14",
+      "common_C_gcd": "78125",
+      "lcm": "9690712164777231700912800",
+      "multiplier_numerator": "19294841428969044915722477337192976920754382108168236200283196184114613990831378291341161118836589868312235464287121754339030801711777829753526787139737451054580258210116354685756117531121513146258437570350284800000000000",
+      "multiplier_denominator": "1",
+      "log_multiplier_per_n": 9.057606663257271,
+      "log_common_gcd_per_n": 0.20117973905426254,
+      "A": "4828114306346665010155983153142874012418093874949145436271656794033788992870165845919112155427435460000000",
+      "prime_bounds": [
+        {
+          "p": 2,
+          "lcm_exponent": 5,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 46
+        },
+        {
+          "p": 3,
+          "lcm_exponent": 3,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 27
+        },
+        {
+          "p": 5,
+          "lcm_exponent": 2,
+          "common_exponent": 7,
+          "large_prime_formula": null,
+          "multiplier_exponent": 11
+        },
+        {
+          "p": 7,
+          "lcm_exponent": 2,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 18
+        },
+        {
+          "p": 11,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 13,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 17,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 19,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 23,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 29,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 31,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 37,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 41,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 43,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 47,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 53,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 59,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        }
+      ],
+      "theorem": "multiplier*(A*zeta(9)+B) has integer coefficients",
+      "logs_are_floating": true
+    },
+    {
+      "n": 56,
+      "m": 6,
+      "alpha": "3/28",
+      "common_C_gcd": "1",
+      "lcm": "591133442051411133755680800",
+      "multiplier_numerator": "17627866758471302383950792640964021896578870170606662631731580364224504002279908945748980738742411130621702726548506783738116025014963055480868021229368215539647558000648571498231676258249111325779059549427415424873168633856000000000000000000",
+      "multiplier_denominator": "1",
+      "log_multiplier_per_n": 9.919462559053672,
+      "log_common_gcd_per_n": 0.0,
+      "A": "256872683788239788504949833637687880938509412889923831227476807868689937970177174640248564094772885141446039333125725284383540480",
+      "prime_bounds": [
+        {
+          "p": 2,
+          "lcm_exponent": 5,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 46
+        },
+        {
+          "p": 3,
+          "lcm_exponent": 3,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 27
+        },
+        {
+          "p": 5,
+          "lcm_exponent": 2,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 18
+        },
+        {
+          "p": 7,
+          "lcm_exponent": 2,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 18
+        },
+        {
+          "p": 11,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 13,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 17,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 19,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 23,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 29,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 31,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 37,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 41,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 43,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 47,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 53,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 59,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 61,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        }
+      ],
+      "theorem": "multiplier*(A*zeta(9)+B) has integer coefficients",
+      "logs_are_floating": true
+    },
+    {
+      "n": 56,
+      "m": 8,
+      "alpha": "1/7",
+      "common_C_gcd": "38263752",
+      "lcm": "1182266884102822267511361600",
+      "multiplier_numerator": "235875137920016490295640789020731140298222232031783272781157716746725361620766133447223840940535954207478445814535790250624544211128618134630509492886022425513827020840299942543392457807680360221832884796734954207707136000000000000000000",
+      "multiplier_denominator": "1",
+      "log_multiplier_per_n": 9.719075256232355,
+      "log_common_gcd_per_n": 0.31178595683988164,
+      "A": "7443375701525203580853418328092014017546639042747214267405612258074770540810967665045481751825728019501168062544845645612976396788992380537759889920",
+      "prime_bounds": [
+        {
+          "p": 2,
+          "lcm_exponent": 6,
+          "common_exponent": 3,
+          "large_prime_formula": null,
+          "multiplier_exponent": 52
+        },
+        {
+          "p": 3,
+          "lcm_exponent": 3,
+          "common_exponent": 14,
+          "large_prime_formula": null,
+          "multiplier_exponent": 13
+        },
+        {
+          "p": 5,
+          "lcm_exponent": 2,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 18
+        },
+        {
+          "p": 7,
+          "lcm_exponent": 2,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 18
+        },
+        {
+          "p": 11,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 13,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 17,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 19,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 23,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 29,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 31,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 37,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 41,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 43,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 47,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 53,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 59,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 61,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        }
+      ],
+      "theorem": "multiplier*(A*zeta(9)+B) has integer coefficients",
+      "logs_are_floating": true
+    },
+    {
+      "n": 56,
+      "m": 10,
+      "alpha": "5/28",
+      "common_C_gcd": "139352251439682952",
+      "lcm": "1182266884102822267511361600",
+      "multiplier_numerator": "64767290711796490803567597429194924463992663854459725358681279828545447084413421782392246111135945029144447851573481991934446740118201256930229776426378933906487447882810128205496379239201771843607530397761536000000000000000000",
+      "multiplier_denominator": "1",
+      "log_multiplier_per_n": 9.32593654690378,
+      "log_common_gcd_per_n": 0.7049246661684556,
+      "A": "994948412234043378993541558272252070826064613844173365498215584458721397139469689029909067541760341131927916421260313635062888722310177287553204735303060771824110080",
+      "prime_bounds": [
+        {
+          "p": 2,
+          "lcm_exponent": 6,
+          "common_exponent": 3,
+          "large_prime_formula": null,
+          "multiplier_exponent": 52
+        },
+        {
+          "p": 3,
+          "lcm_exponent": 3,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 27
+        },
+        {
+          "p": 5,
+          "lcm_exponent": 2,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 18
+        },
+        {
+          "p": 7,
+          "lcm_exponent": 2,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 18
+        },
+        {
+          "p": 11,
+          "lcm_exponent": 1,
+          "common_exponent": 7,
+          "large_prime_formula": 7,
+          "multiplier_exponent": 2
+        },
+        {
+          "p": 13,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 17,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 19,
+          "lcm_exponent": 1,
+          "common_exponent": 7,
+          "large_prime_formula": 7,
+          "multiplier_exponent": 2
+        },
+        {
+          "p": 23,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 29,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 31,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 37,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 41,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 43,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 47,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 53,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 59,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 61,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        }
+      ],
+      "theorem": "multiplier*(A*zeta(9)+B) has integer coefficients",
+      "logs_are_floating": true
+    },
+    {
+      "n": 56,
+      "m": 12,
+      "alpha": "3/14",
+      "common_C_gcd": "7179408129339016064",
+      "lcm": "79211881234889091923261227200",
+      "multiplier_numerator": "34202220459502678174232792097330731883097973170304680445223289641479975276210406365291434863408643198651653742528867025997347521639497276291908657940839686212615108171820917211668749311388249039157655842357348906760516141056000000000000000000",
+      "multiplier_denominator": "1",
+      "log_multiplier_per_n": 9.931298444397294,
+      "log_common_gcd_per_n": 0.7753169396484904,
+      "A": "2208663269970121938732998746616982028137165871882430784299505374883785719743450186371614506212023250184782721207615793545041446110260233511719975178616625113821157909751917668689920",
+      "prime_bounds": [
+        {
+          "p": 2,
+          "lcm_exponent": 6,
+          "common_exponent": 7,
+          "large_prime_formula": null,
+          "multiplier_exponent": 48
+        },
+        {
+          "p": 3,
+          "lcm_exponent": 3,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 27
+        },
+        {
+          "p": 5,
+          "lcm_exponent": 2,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 18
+        },
+        {
+          "p": 7,
+          "lcm_exponent": 2,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 18
+        },
+        {
+          "p": 11,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 13,
+          "lcm_exponent": 1,
+          "common_exponent": 7,
+          "large_prime_formula": 7,
+          "multiplier_exponent": 2
+        },
+        {
+          "p": 17,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 19,
+          "lcm_exponent": 1,
+          "common_exponent": 7,
+          "large_prime_formula": 7,
+          "multiplier_exponent": 2
+        },
+        {
+          "p": 23,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 29,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 31,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 37,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 41,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 43,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 47,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 53,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 59,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 61,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 67,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        }
+      ],
+      "theorem": "multiplier*(A*zeta(9)+B) has integer coefficients",
+      "logs_are_floating": true
+    },
+    {
+      "n": 112,
+      "m": 4,
+      "alpha": "1/28",
+      "common_C_gcd": "78125",
+      "lcm": "955888052326228459513511038256280353796626534577600",
+      "multiplier_numerator": "17057024204666256593599366390929519421669784728743091800412279601670387830762253297419636903343101146777772745595722787514487010723586364385767117923489578205926509130028232684460730334809290667011657232786295104424707991897898383861664587117365631865851235859579297570863195783638906421956464413274257036736886015330478763868742197579998561140560112140893005033244722864804592089547750648001441490997817551510620124177106518514273658932402585600000000000",
+      "multiplier_denominator": "1",
+      "log_multiplier_per_n": 9.338460796625057,
+      "log_common_gcd_per_n": 0.10058986952713127,
+      "A": "603797989094016271145092626097849311205340905991688015999256694722745799203696012207856683620100708915262371501400272686220778060574165208676732603490827900000000",
+      "prime_bounds": [
+        {
+          "p": 2,
+          "lcm_exponent": 6,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 55
+        },
+        {
+          "p": 3,
+          "lcm_exponent": 4,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 36
+        },
+        {
+          "p": 5,
+          "lcm_exponent": 2,
+          "common_exponent": 7,
+          "large_prime_formula": null,
+          "multiplier_exponent": 11
+        },
+        {
+          "p": 7,
+          "lcm_exponent": 2,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 18
+        },
+        {
+          "p": 11,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 13,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 17,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 19,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 23,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 29,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 31,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 37,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 41,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 43,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 47,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 53,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 59,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 61,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 67,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 71,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 73,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 79,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 83,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 89,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 97,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 101,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 103,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 107,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 109,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 113,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        }
+      ],
+      "theorem": "multiplier*(A*zeta(9)+B) has integer coefficients",
+      "logs_are_floating": true
+    },
+    {
+      "n": 112,
+      "m": 8,
+      "alpha": "1/14",
+      "common_C_gcd": "4782969",
+      "lcm": "955888052326228459513511038256280353796626534577600",
+      "multiplier_numerator": "278609377562252922060534053072760602215475770788615616556830985917010762411025670218834605257462420745778092174476949939372238815008038880795183093967914761174075877511114054570183197383670233564191137620049242433555457262429112804032923037666392985093490633439111276431791042466883971904344097209714579165173184260172636165370397379940657693810321321548867663207151033973429214572772271652840028125669327192329115493187692991304695808000000000000000000",
+      "multiplier_denominator": "1",
+      "log_multiplier_per_n": 9.301724130068674,
+      "log_common_gcd_per_n": 0.13732653608351372,
+      "A": "1458831068556842863968313502285214828174340770307262501611699825368186262313328340597015106823794021283095649222764725321795976264272170541711735875010350034247149726789194765516496575611165410416511605821733958248986880",
+      "prime_bounds": [
+        {
+          "p": 2,
+          "lcm_exponent": 6,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 55
+        },
+        {
+          "p": 3,
+          "lcm_exponent": 4,
+          "common_exponent": 14,
+          "large_prime_formula": null,
+          "multiplier_exponent": 22
+        },
+        {
+          "p": 5,
+          "lcm_exponent": 2,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 18
+        },
+        {
+          "p": 7,
+          "lcm_exponent": 2,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 18
+        },
+        {
+          "p": 11,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 13,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 17,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 19,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 23,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 29,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 31,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 37,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 41,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 43,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 47,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 53,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 59,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 61,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 67,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 71,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 73,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 79,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 83,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 89,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 97,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 101,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 103,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 107,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 109,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 113,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        }
+      ],
+      "theorem": "multiplier*(A*zeta(9)+B) has integer coefficients",
+      "logs_are_floating": true
+    },
+    {
+      "n": 112,
+      "m": 12,
+      "alpha": "3/28",
+      "common_C_gcd": "23015537536862376709589399",
+      "lcm": "10514768575588513054648621420819083891762891880353600",
+      "multiplier_numerator": "136523162526303689965279578794831975623135458253352306328381149896100819351760045422759909783469536062508641799725146602235385177572901182859190919396449927747763754260102144050332167325649825098590021092177191960055118065456499918076432743303182221292663234632886506338163953824902788462221331052295823476480937495486992871523805134153282142924332411340003385581540175776350872571338314130743469153774082426537592885103034368000000000000000000",
+      "multiplier_denominator": "1",
+      "log_multiplier_per_n": 9.11032607410215,
+      "log_common_gcd_per_n": 0.5214126050427621,
+      "A": "41533538424881086481895123097524274812109484153112376019515491970412600790337716357098936275651989262735382945302133306282772768749175032121050371729027496192183958577151147993710926751502550281049133638194841124859165485766206826433736966097117825568373147395360000",
+      "prime_bounds": [
+        {
+          "p": 2,
+          "lcm_exponent": 6,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 55
+        },
+        {
+          "p": 3,
+          "lcm_exponent": 4,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 36
+        },
+        {
+          "p": 5,
+          "lcm_exponent": 2,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 18
+        },
+        {
+          "p": 7,
+          "lcm_exponent": 2,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 18
+        },
+        {
+          "p": 11,
+          "lcm_exponent": 2,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 18
+        },
+        {
+          "p": 13,
+          "lcm_exponent": 1,
+          "common_exponent": 7,
+          "large_prime_formula": 7,
+          "multiplier_exponent": 2
+        },
+        {
+          "p": 17,
+          "lcm_exponent": 1,
+          "common_exponent": 7,
+          "large_prime_formula": 7,
+          "multiplier_exponent": 2
+        },
+        {
+          "p": 19,
+          "lcm_exponent": 1,
+          "common_exponent": 7,
+          "large_prime_formula": 7,
+          "multiplier_exponent": 2
+        },
+        {
+          "p": 23,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 29,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 31,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 37,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 41,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 43,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 47,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 53,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 59,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 61,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 67,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 71,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 73,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 79,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 83,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 89,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 97,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 101,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 103,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 107,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 109,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 113,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        }
+      ],
+      "theorem": "multiplier*(A*zeta(9)+B) has integer coefficients",
+      "logs_are_floating": true
+    },
+    {
+      "n": 112,
+      "m": 16,
+      "alpha": "1/7",
+      "common_C_gcd": "376909656031714105994394612025030674562776",
+      "lcm": "13353756090997411579403749204440236542538872688049072000",
+      "multiplier_numerator": "71651236145314707828035819790746979401136460012732143435442876569010564398312273625407883391448165271272537284823178140903095283792103590839627069951944044702157496674754907451252536792541732788275422990543355784726233444231652643632133969491836358913082917765010932824010382008398343244186714931865422309798760439075576062243009159321160864072230839360528865709297915534731029103166317112973385900969645638825663189443237904384000000000000000000000000000",
+      "multiplier_denominator": "1",
+      "log_multiplier_per_n": 9.351275513687316,
+      "log_common_gcd_per_n": 0.8547573584493264,
+      "A": "167899027163170258895849317361025105577091400327798554328588273128604531569918382680526332690623048523835530627366168655099378368285449885453708884202829798701183862078442026409538116689089605295810400197029191722189481616851280641228304269058805972291680911443763482812160528228361283125490974001883937280",
+      "prime_bounds": [
+        {
+          "p": 2,
+          "lcm_exponent": 7,
+          "common_exponent": 3,
+          "large_prime_formula": null,
+          "multiplier_exponent": 61
+        },
+        {
+          "p": 3,
+          "lcm_exponent": 4,
+          "common_exponent": 7,
+          "large_prime_formula": null,
+          "multiplier_exponent": 29
+        },
+        {
+          "p": 5,
+          "lcm_exponent": 3,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 27
+        },
+        {
+          "p": 7,
+          "lcm_exponent": 2,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 18
+        },
+        {
+          "p": 11,
+          "lcm_exponent": 2,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 18
+        },
+        {
+          "p": 13,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 17,
+          "lcm_exponent": 1,
+          "common_exponent": 7,
+          "large_prime_formula": 7,
+          "multiplier_exponent": 2
+        },
+        {
+          "p": 19,
+          "lcm_exponent": 1,
+          "common_exponent": 7,
+          "large_prime_formula": 7,
+          "multiplier_exponent": 2
+        },
+        {
+          "p": 23,
+          "lcm_exponent": 1,
+          "common_exponent": 7,
+          "large_prime_formula": 7,
+          "multiplier_exponent": 2
+        },
+        {
+          "p": 29,
+          "lcm_exponent": 1,
+          "common_exponent": 7,
+          "large_prime_formula": 7,
+          "multiplier_exponent": 2
+        },
+        {
+          "p": 31,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 37,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 41,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 43,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 47,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 53,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 59,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 61,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 67,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 71,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 73,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 79,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 83,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 89,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 97,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 101,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 103,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 107,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 109,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 113,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 127,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        }
+      ],
+      "theorem": "multiplier*(A*zeta(9)+B) has integer coefficients",
+      "logs_are_floating": true
+    },
+    {
+      "n": 112,
+      "m": 20,
+      "alpha": "5/28",
+      "common_C_gcd": "80280420350175052508750625000",
+      "lcm": "1749342047920660916901891145781670987072592322134428432000",
+      "multiplier_numerator": "3822020166398666975632343785023070431357304314650689721782688909369102623997133429085172144821247798081501692826377584592443318110308636386442563393360380754714565687594188101565666891023416574167471147296589583542373859881064899323153545623106912320669777047561705350023684219503800393227387371832773109724101960388649240172769285314107440418556888595411399234819864878951562796975249236378514853542550251502969204309356692084056693196659587694988254144478317012582400000000000000000000",
+      "multiplier_denominator": "1",
+      "log_multiplier_per_n": 10.003545842118838,
+      "log_common_gcd_per_n": 0.5942439577750418,
+      "A": "9611862831204239427988195948001266783543120365430023285386933825458804590037433155105410693100976572842185810567059671767534452727452236152333041323717238022372148389420812595977582628599140380658136219912832804265253608277708795824835532369351134315181742471403218360914802590503692914154586464841118363776943642865834150641023751400000000",
+      "prime_bounds": [
+        {
+          "p": 2,
+          "lcm_exponent": 7,
+          "common_exponent": 3,
+          "large_prime_formula": null,
+          "multiplier_exponent": 61
+        },
+        {
+          "p": 3,
+          "lcm_exponent": 4,
+          "common_exponent": 7,
+          "large_prime_formula": null,
+          "multiplier_exponent": 29
+        },
+        {
+          "p": 5,
+          "lcm_exponent": 3,
+          "common_exponent": 7,
+          "large_prime_formula": null,
+          "multiplier_exponent": 20
+        },
+        {
+          "p": 7,
+          "lcm_exponent": 2,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 18
+        },
+        {
+          "p": 11,
+          "lcm_exponent": 2,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 18
+        },
+        {
+          "p": 13,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 17,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 19,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 23,
+          "lcm_exponent": 1,
+          "common_exponent": 7,
+          "large_prime_formula": 7,
+          "multiplier_exponent": 2
+        },
+        {
+          "p": 29,
+          "lcm_exponent": 1,
+          "common_exponent": 7,
+          "large_prime_formula": 7,
+          "multiplier_exponent": 2
+        },
+        {
+          "p": 31,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 37,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 41,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 43,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 47,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 53,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 59,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 61,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 67,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 71,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 73,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 79,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 83,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 89,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 97,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 101,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 103,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 107,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 109,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 113,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 127,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 131,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        }
+      ],
+      "theorem": "multiplier*(A*zeta(9)+B) has integer coefficients",
+      "logs_are_floating": true
+    },
+    {
+      "n": 112,
+      "m": 24,
+      "alpha": "3/14",
+      "common_C_gcd": "628166978693829469435789798235156250000000",
+      "lcm": "1749342047920660916901891145781670987072592322134428432000",
+      "multiplier_numerator": "488458317537386069669501503108330779466807338054187115611629860082115113272544323933508287859405048191099900231261399855600941313826690206496347179688333301853512630280515249028402158522772907821185464279022921147454503000641135979466683438134150218702320993291524593694480058441020210385993902206138019647694894921070194167911777351523102097508139509615051517316157376402208682829263911725956715200127912082857860486101443009490401333649960066020584931322757120000000000000",
+      "multiplier_denominator": "1",
+      "log_multiplier_per_n": 9.738471722683757,
+      "log_common_gcd_per_n": 0.8593180772101201,
+      "A": "117466059664080488083231881371654688986412971158714580150843236478798070774435411280219221589145078339665254013486296364789507033591911845049432234685408591109741556390870806944104126761338607303886959118111099016739303512441781633569448722230501929908453609913447039163080585127904157529804384388172266359177400258700615899970928397225211565694810934455382062500000000000",
+      "prime_bounds": [
+        {
+          "p": 2,
+          "lcm_exponent": 7,
+          "common_exponent": 7,
+          "large_prime_formula": null,
+          "multiplier_exponent": 57
+        },
+        {
+          "p": 3,
+          "lcm_exponent": 4,
+          "common_exponent": 3,
+          "large_prime_formula": null,
+          "multiplier_exponent": 33
+        },
+        {
+          "p": 5,
+          "lcm_exponent": 3,
+          "common_exponent": 14,
+          "large_prime_formula": null,
+          "multiplier_exponent": 13
+        },
+        {
+          "p": 7,
+          "lcm_exponent": 2,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 18
+        },
+        {
+          "p": 11,
+          "lcm_exponent": 2,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 18
+        },
+        {
+          "p": 13,
+          "lcm_exponent": 1,
+          "common_exponent": 7,
+          "large_prime_formula": 7,
+          "multiplier_exponent": 2
+        },
+        {
+          "p": 17,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 19,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 23,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 29,
+          "lcm_exponent": 1,
+          "common_exponent": 7,
+          "large_prime_formula": 7,
+          "multiplier_exponent": 2
+        },
+        {
+          "p": 31,
+          "lcm_exponent": 1,
+          "common_exponent": 7,
+          "large_prime_formula": 7,
+          "multiplier_exponent": 2
+        },
+        {
+          "p": 37,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 41,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 43,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 47,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 53,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 59,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 61,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 67,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 71,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 73,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 79,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 83,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 89,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 97,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 101,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 103,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 107,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 109,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 113,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 127,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 131,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        }
+      ],
+      "theorem": "multiplier*(A*zeta(9)+B) has integer coefficients",
+      "logs_are_floating": true
+    },
+    {
+      "n": 224,
+      "m": 8,
+      "alpha": "1/28",
+      "common_C_gcd": "373669453125",
+      "lcm": "825005310759494289012189328393554022247008970746695943736019934996445219685790014305761100984208000",
+      "multiplier_numerator": "947661194514014191581818362064233280937044103234559879010991223405649968503999856221210702062118218600317673086795226546587144209679929702106078555887210580074123712903450469502667127488244475350876272210848560505448882415075418415196809563385931432211527008767921637065146039154255291456711291564206660585726477915500974564564836939843997692937836699845699672651169142982334100720001959789703857022842317098200006809674644451038412288924992401410234249855008009951780386464760604644579349362820237285262669189384538991781818027741530330922742936578276000019308498941681487835741818867919061007496482316984573552758429870286706409924654809336236493643576790078642332734346186095489667638765892466466488166825809200022191601008532288693067684591800991295808911523806289754797105593152723241557857739359436124990345456738348610615914546277301009293364562178867200000000000000000000",
+      "multiplier_denominator": "1",
+      "log_multiplier_per_n": 9.035350618354496,
+      "log_common_gcd_per_n": 0.1189582028053225,
+      "A": "67499415077338088199019117596253611023035971551528139513205828184851422516845986674564699955880319010563843605663882938732295465824534934889937405122252277444440902172003854964547304889402964813025300264952650472712768425613342044764088815689220660888219464647183903200197476980865567174086836002273855355252863244848873637500000000",
+      "prime_bounds": [
+        {
+          "p": 2,
+          "lcm_exponent": 7,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 64
+        },
+        {
+          "p": 3,
+          "lcm_exponent": 4,
+          "common_exponent": 14,
+          "large_prime_formula": null,
+          "multiplier_exponent": 22
+        },
+        {
+          "p": 5,
+          "lcm_exponent": 3,
+          "common_exponent": 7,
+          "large_prime_formula": null,
+          "multiplier_exponent": 20
+        },
+        {
+          "p": 7,
+          "lcm_exponent": 2,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 18
+        },
+        {
+          "p": 11,
+          "lcm_exponent": 2,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 18
+        },
+        {
+          "p": 13,
+          "lcm_exponent": 2,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 18
+        },
+        {
+          "p": 17,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 19,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 23,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 29,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 31,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 37,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 41,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 43,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 47,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 53,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 59,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 61,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 67,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 71,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 73,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 79,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 83,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 89,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 97,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 101,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 103,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 107,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 109,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 113,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 127,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 131,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 137,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 139,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 149,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 151,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 157,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 163,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 167,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 173,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 179,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 181,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 191,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 193,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 197,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 199,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 211,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 223,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 227,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 229,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        }
+      ],
+      "theorem": "multiplier*(A*zeta(9)+B) has integer coefficients",
+      "logs_are_floating": true
+    },
+    {
+      "n": 224,
+      "m": 16,
+      "alpha": "1/14",
+      "common_C_gcd": "213378826244933630634041544248671875",
+      "lcm": "45942070740263958472221787130251842836869188553971257018827742120147044948642588526644918430507590896000",
+      "multiplier_numerator": "8546214119423544932939810962079581558998352495985048774622909269466379165858560375167895259077555343171647656612545863660883836826047477514485709614081237414765599138316149960431019603369567891050665644083998944785477959859183284932377036101005011546864936405665206428259085035380653368127644255087355880835089372979582891084586855488382593029455463556267912129763260669759321437792743772535666727710273685424853502225846131172101144788007276367164049330789032908918655330889202482509474433635759712999908055257687182509372462027298415240962461623570048828821495258286337523275282004068966044369141600173961650269252625485607254999905758800744218729474438735024819626112541744543059731611636370607429868118230688767287844422053697256371597792189079072139069061106688149258357271651755968812996011536657983041142216047659431529571352318380693228328648516151646105354820721521459200000000000000000000",
+      "multiplier_denominator": "1",
+      "log_multiplier_per_n": 9.230197842890606,
+      "log_common_gcd_per_n": 0.36316239813293805,
+      "A": "27181677032670124505722762920712917418921694735494491914976122612663765239579289845310741508719835294872797434224379740393372988259547793950577395025903870285572322098345591578199692415267407667492920314162515016403910147944736190645354004204538473349372205973555212057686808794760024841637313576408688103177626966799902375119110034166671926055487640120091234865408981780796574693656054395274526059483914825922805295056870653749749725812930500000000",
+      "prime_bounds": [
+        {
+          "p": 2,
+          "lcm_exponent": 7,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 64
+        },
+        {
+          "p": 3,
+          "lcm_exponent": 4,
+          "common_exponent": 7,
+          "large_prime_formula": null,
+          "multiplier_exponent": 29
+        },
+        {
+          "p": 5,
+          "lcm_exponent": 3,
+          "common_exponent": 7,
+          "large_prime_formula": null,
+          "multiplier_exponent": 20
+        },
+        {
+          "p": 7,
+          "lcm_exponent": 2,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 18
+        },
+        {
+          "p": 11,
+          "lcm_exponent": 2,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 18
+        },
+        {
+          "p": 13,
+          "lcm_exponent": 2,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 18
+        },
+        {
+          "p": 17,
+          "lcm_exponent": 1,
+          "common_exponent": 7,
+          "large_prime_formula": 7,
+          "multiplier_exponent": 2
+        },
+        {
+          "p": 19,
+          "lcm_exponent": 1,
+          "common_exponent": 7,
+          "large_prime_formula": 7,
+          "multiplier_exponent": 2
+        },
+        {
+          "p": 23,
+          "lcm_exponent": 1,
+          "common_exponent": 7,
+          "large_prime_formula": 7,
+          "multiplier_exponent": 2
+        },
+        {
+          "p": 29,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 31,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 37,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 41,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 43,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 47,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 53,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 59,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 61,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 67,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 71,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 73,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 79,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 83,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 89,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 97,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 101,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 103,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 107,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 109,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 113,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 127,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 131,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 137,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 139,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 149,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 151,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 157,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 163,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 167,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 173,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 179,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 181,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 191,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 193,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 197,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 199,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 211,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 223,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 227,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 229,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 233,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 239,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        }
+      ],
+      "theorem": "multiplier*(A*zeta(9)+B) has integer coefficients",
+      "logs_are_floating": true
+    },
+    {
+      "n": 224,
+      "m": 24,
+      "alpha": "3/28",
+      "common_C_gcd": "31598544479714516430069927978515625",
+      "lcm": "33216117145210841975416352095172082371056423324521218824612457552866313497868591504764276025256988217808000",
+      "multiplier_numerator": "3115320183625137020211983064515929751706117987861461172910400286336901335818919967895564822065216509383363955179979250413765504915951460273043165449440456811026839634443665144606660368525483953708175702936044330792538310338392204285773116954669213484208406689381561595724133254275916354159601662517829443635177368094496313940327201045019696827099876754470394478076377543378783694010334875874170585441263532543603422770604896031230113338880104596925547447412240827534250897742459034391809035243733991996754382729614359416934720255924848491534434116066206245044460311175990762081495976462987057327308446256016942140140226783880927854107207620173313603573844345746851058041380736997817009329805387474656524835662154297657346198979914891362393834242037465386600555760176086824214180554043540281497934480595930692089776553453271880370008006695626548994017103110224424618513207225629413380844571416055524848994845982720000000000000",
+      "multiplier_denominator": "1",
+      "log_multiplier_per_n": 9.503236419022928,
+      "log_common_gcd_per_n": 0.35463579967663844,
+      "A": "237895170814098355476611641420073943103854062461922810203159532488026590657846566703684303644725318362407146623782831052571573563840647541195281850605713367712192225460784609787859139405293235208603504489352347150495829633606598910338046782925907545611332182277358355513213946351898393501952266563714218462192831379628002102748015003059923425835699175802622288333898905968711076684302383968508825793354556276516229119045237041380128539829381176011643918156103811325447394028581571459701627947922602292089484011739618982243816182695312500000000",
+      "prime_bounds": [
+        {
+          "p": 2,
+          "lcm_exponent": 7,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 64
+        },
+        {
+          "p": 3,
+          "lcm_exponent": 5,
+          "common_exponent": 14,
+          "large_prime_formula": null,
+          "multiplier_exponent": 31
+        },
+        {
+          "p": 5,
+          "lcm_exponent": 3,
+          "common_exponent": 14,
+          "large_prime_formula": null,
+          "multiplier_exponent": 13
+        },
+        {
+          "p": 7,
+          "lcm_exponent": 2,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 18
+        },
+        {
+          "p": 11,
+          "lcm_exponent": 2,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 18
+        },
+        {
+          "p": 13,
+          "lcm_exponent": 2,
+          "common_exponent": 7,
+          "large_prime_formula": null,
+          "multiplier_exponent": 11
+        },
+        {
+          "p": 17,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 19,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 23,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 29,
+          "lcm_exponent": 1,
+          "common_exponent": 7,
+          "large_prime_formula": 7,
+          "multiplier_exponent": 2
+        },
+        {
+          "p": 31,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 37,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 41,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 43,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 47,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 53,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 59,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 61,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 67,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 71,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 73,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 79,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 83,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 89,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 97,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 101,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 103,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 107,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 109,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 113,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 127,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 131,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 137,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 139,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 149,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 151,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 157,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 163,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 167,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 173,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 179,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 181,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 191,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 193,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 197,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 199,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 211,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 223,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 227,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 229,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 233,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 239,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 241,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        }
+      ],
+      "theorem": "multiplier*(A*zeta(9)+B) has integer coefficients",
+      "logs_are_floating": true
+    },
+    {
+      "n": 224,
+      "m": 32,
+      "alpha": "1/7",
+      "common_C_gcd": "26985222798040192960224248607396365883976434015506458872",
+      "lcm": "16674490806895842671659008751776385350270324508909651849955453691538889375930032935391666564679008085339616000",
+      "multiplier_numerator": "7385454268154729859769015165106355861949338830627044580289002641774107784070869651570415926037827065780039105340438204089105604244966646626395881645642745891790837714148096611489567786975557049904213838675756787199976604684087812490107254849296048331460674164384830110216654202514557250704467747245140008724402550851771584212803106083383639499599233336778212908296796945165369024561600178598272067829821312604117278570866037313453001180348717731581233815017433187615872241768243651826700665963093140186522850012106809815657957800407846903012876669832728641142319244250680547080729094631493024372756587639742565245193277877439598659872055409160612091767238443711834273273769222794432585986534155120154808586095627840512830617368438588610081025816323944719379769856706295986595838736628320445194386726896217672135246485966902587831542950035261813343789085558461081371443992078806236531912660093371416576000000000000000000000000000",
+      "multiplier_denominator": "1",
+      "log_multiplier_per_n": 9.537928096570747,
+      "log_common_gcd_per_n": 0.5697985912235765,
+      "A": "19385267242042381876544163986884526373081071298901259051297991716950513868098430041120187065736710019225156512121875404607324330698553553472213957028886542064775778964390569631078540043553291720521374645912895173768369382229831345375847825734478832941703697525600305538413912056333903028206003916983252406342759056209465357662948970045373048660172221007338942564428490642015557315136851063630202285494162067352385693429389035989269780459426329711214685375061940387760742033381104153345457558799886960034485699747255546883478519889547257802537944593581915207764191906297346212340765599164989490999011916696539122624842856960",
+      "prime_bounds": [
+        {
+          "p": 2,
+          "lcm_exponent": 8,
+          "common_exponent": 3,
+          "large_prime_formula": null,
+          "multiplier_exponent": 70
+        },
+        {
+          "p": 3,
+          "lcm_exponent": 5,
+          "common_exponent": 14,
+          "large_prime_formula": null,
+          "multiplier_exponent": 31
+        },
+        {
+          "p": 5,
+          "lcm_exponent": 3,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 27
+        },
+        {
+          "p": 7,
+          "lcm_exponent": 2,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 18
+        },
+        {
+          "p": 11,
+          "lcm_exponent": 2,
+          "common_exponent": 7,
+          "large_prime_formula": null,
+          "multiplier_exponent": 11
+        },
+        {
+          "p": 13,
+          "lcm_exponent": 2,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 18
+        },
+        {
+          "p": 17,
+          "lcm_exponent": 1,
+          "common_exponent": 7,
+          "large_prime_formula": 7,
+          "multiplier_exponent": 2
+        },
+        {
+          "p": 19,
+          "lcm_exponent": 1,
+          "common_exponent": 7,
+          "large_prime_formula": 7,
+          "multiplier_exponent": 2
+        },
+        {
+          "p": 23,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 29,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 31,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 37,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 41,
+          "lcm_exponent": 1,
+          "common_exponent": 7,
+          "large_prime_formula": 7,
+          "multiplier_exponent": 2
+        },
+        {
+          "p": 43,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 47,
+          "lcm_exponent": 1,
+          "common_exponent": 7,
+          "large_prime_formula": 7,
+          "multiplier_exponent": 2
+        },
+        {
+          "p": 53,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 59,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 61,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 67,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 71,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 73,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 79,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 83,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 89,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 97,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 101,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 103,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 107,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 109,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 113,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 127,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 131,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 137,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 139,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 149,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 151,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 157,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 163,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 167,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 173,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 179,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 181,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 191,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 193,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 197,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 199,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 211,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 223,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 227,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 229,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 233,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 239,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 241,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 251,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        }
+      ],
+      "theorem": "multiplier*(A*zeta(9)+B) has integer coefficients",
+      "logs_are_floating": true
+    },
+    {
+      "n": 224,
+      "m": 40,
+      "alpha": "5/28",
+      "common_C_gcd": "367608265542679534118652517975254672443415672807686517605294194565053735286875000",
+      "lcm": "1127045508128896902020104060541317662210121503881712278190339070464805071808486856136058134773218835496189985056000",
+      "multiplier_numerator": "15963120792659795889157759574225849106857156834133999325031187464978093383144010817814366846117641663717853203622070592948377037046699245325611799552447274275793445524985949468735054041870231056730834835081670547038752681473302649998426051929824288731874535450495193993398256431500193926849177296153190033871595424337672737622706552529619105003265023115132980113129742277060182090037056081437322332758867655155094246859895704933244784069713341919683442468125963983264916609758584907003480357750340259101372457568920132223083924964866498542632135119733379002779703486290447325881368325075311149310880881601089967093895427447710062461101685818445206036881762039554977848865727965043976101739634300104639764084234297653296281529241478761216885408561221545957149608539230571351453310477599917458706520587517983572534732574891252754768346177410514997638964091789540688851079781973771387133286387446270308326930648581484063113399500800000000000000000000",
+      "multiplier_denominator": "1",
+      "log_multiplier_per_n": 9.726398187458333,
+      "log_common_gcd_per_n": 0.8281636389683861,
+      "A": "207819015698467979801921879571529041997892136932350095609561917076997322987967610797721457448707562495474631965873260177769920804160765995674935031705208131866234504600214307113192782192176718217990240571553159957453866107428583165066153206176796843364693656593853072593145251949621935640358577615675835766836575572662472054937670480480771690735413113928123271271297062532763862128485672298459362724425859470805886667829249097780311344627108040245850490501971686550801889489984194144274419052395278777685011850343749599655005778187306207057028377984387212565080489235246436120885679870048210070890267167179471247122566148263653230891487105105093210889142964042694491858530602580670113000000000",
+      "prime_bounds": [
+        {
+          "p": 2,
+          "lcm_exponent": 8,
+          "common_exponent": 3,
+          "large_prime_formula": null,
+          "multiplier_exponent": 70
+        },
+        {
+          "p": 3,
+          "lcm_exponent": 5,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 45
+        },
+        {
+          "p": 5,
+          "lcm_exponent": 3,
+          "common_exponent": 7,
+          "large_prime_formula": null,
+          "multiplier_exponent": 20
+        },
+        {
+          "p": 7,
+          "lcm_exponent": 2,
+          "common_exponent": 7,
+          "large_prime_formula": null,
+          "multiplier_exponent": 11
+        },
+        {
+          "p": 11,
+          "lcm_exponent": 2,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 18
+        },
+        {
+          "p": 13,
+          "lcm_exponent": 2,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 18
+        },
+        {
+          "p": 17,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 19,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 23,
+          "lcm_exponent": 1,
+          "common_exponent": 7,
+          "large_prime_formula": 7,
+          "multiplier_exponent": 2
+        },
+        {
+          "p": 29,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 31,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 37,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 41,
+          "lcm_exponent": 1,
+          "common_exponent": 7,
+          "large_prime_formula": 7,
+          "multiplier_exponent": 2
+        },
+        {
+          "p": 43,
+          "lcm_exponent": 1,
+          "common_exponent": 7,
+          "large_prime_formula": 7,
+          "multiplier_exponent": 2
+        },
+        {
+          "p": 47,
+          "lcm_exponent": 1,
+          "common_exponent": 7,
+          "large_prime_formula": 7,
+          "multiplier_exponent": 2
+        },
+        {
+          "p": 53,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 59,
+          "lcm_exponent": 1,
+          "common_exponent": 7,
+          "large_prime_formula": 7,
+          "multiplier_exponent": 2
+        },
+        {
+          "p": 61,
+          "lcm_exponent": 1,
+          "common_exponent": 7,
+          "large_prime_formula": 7,
+          "multiplier_exponent": 2
+        },
+        {
+          "p": 67,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 71,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 73,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 79,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 83,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 89,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 97,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 101,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 103,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 107,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 109,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 113,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 127,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 131,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 137,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 139,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 149,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 151,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 157,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 163,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 167,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 173,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 179,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 181,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 191,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 193,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 197,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 199,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 211,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 223,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 227,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 229,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 233,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 239,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 241,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 251,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 257,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 263,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        }
+      ],
+      "theorem": "multiplier*(A*zeta(9)+B) has integer coefficients",
+      "logs_are_floating": true
+    },
+    {
+      "n": 224,
+      "m": 48,
+      "alpha": "3/14",
+      "common_C_gcd": "1958195050662323803178880120220442002518095772941577597806438582717968750000000",
+      "lcm": "82160490497088455260363565909401516257455647511472943367797527897813824929766883325462501966832879888836753720597344000",
+      "multiplier_numerator": "174237349943466671123006106254049559225404572000627110802769924583787043624033914248937000912942196374481490948710151440177556536976256498191610869955854036683340052296068737652569510450111357624001433790183558196014548891490498185044130760422405725472661313936257534421407587007447356488895956947908665811220231873457514747287857842147748372200149346697062824646619669961914336733947367786679151439500109037905617398632144736915238730994164657037229787910961489794083920580131174659940967249848041509967373410824829633966319100114857022408584560424176202736407272444453106265596043681491307668013413982714374264836229586087991119010132546532954518524289484614294910681174919384389085642614489597673990344924858827948641646704405532079698199374710223307573651160246998549265130694913708872780315206417548390631151984419694427101062676240159867993432762750860932073597199675517897575306623275259922862809919609748222545107815640392866922237509353518535738963098863475113054500290560000000000000",
+      "multiplier_denominator": "1",
+      "log_multiplier_per_n": 10.1996413415801,
+      "log_common_gcd_per_n": 0.8047931268302533,
+      "A": "78023159640987393127704250830184330355676560311080967628922836482085713980181561063841896878260843040118401707394290043153645114166468618728008626718648195077136551134855941537104169541103011147240999697083524613350315703608856575122928554854887283296577490608187696826429704618608342722169545267766006058190153401681460916712293588368551081026723542692860706575035952251631605429725450416088290385103155253195621647674100886852168211313476548291312496358014829068510446060378050103436042425184354288652033070281936459475107679560843857991132614673481086687686296881853486865140841357593675799581545210879512858793351290634862325647850891305528066843071611203509165714672526281022604528840067665716151220459062636242371169572257969245415638062500000000000",
+      "prime_bounds": [
+        {
+          "p": 2,
+          "lcm_exponent": 8,
+          "common_exponent": 7,
+          "large_prime_formula": null,
+          "multiplier_exponent": 66
+        },
+        {
+          "p": 3,
+          "lcm_exponent": 5,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 45
+        },
+        {
+          "p": 5,
+          "lcm_exponent": 3,
+          "common_exponent": 14,
+          "large_prime_formula": null,
+          "multiplier_exponent": 13
+        },
+        {
+          "p": 7,
+          "lcm_exponent": 2,
+          "common_exponent": 7,
+          "large_prime_formula": null,
+          "multiplier_exponent": 11
+        },
+        {
+          "p": 11,
+          "lcm_exponent": 2,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 18
+        },
+        {
+          "p": 13,
+          "lcm_exponent": 2,
+          "common_exponent": 0,
+          "large_prime_formula": null,
+          "multiplier_exponent": 18
+        },
+        {
+          "p": 17,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 19,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 23,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 29,
+          "lcm_exponent": 1,
+          "common_exponent": 7,
+          "large_prime_formula": 7,
+          "multiplier_exponent": 2
+        },
+        {
+          "p": 31,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 37,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 41,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 43,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 47,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 53,
+          "lcm_exponent": 1,
+          "common_exponent": 7,
+          "large_prime_formula": 7,
+          "multiplier_exponent": 2
+        },
+        {
+          "p": 59,
+          "lcm_exponent": 1,
+          "common_exponent": 7,
+          "large_prime_formula": 7,
+          "multiplier_exponent": 2
+        },
+        {
+          "p": 61,
+          "lcm_exponent": 1,
+          "common_exponent": 7,
+          "large_prime_formula": 7,
+          "multiplier_exponent": 2
+        },
+        {
+          "p": 67,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 71,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 73,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 79,
+          "lcm_exponent": 1,
+          "common_exponent": 7,
+          "large_prime_formula": 7,
+          "multiplier_exponent": 2
+        },
+        {
+          "p": 83,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 89,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 97,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 101,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 103,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 107,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 109,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 113,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 127,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 131,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 137,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 139,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 149,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 151,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 157,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 163,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 167,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 173,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 179,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 181,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 191,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 193,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 197,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 199,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 211,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 223,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 227,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 229,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 233,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 239,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 241,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 251,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 257,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 263,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 269,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        },
+        {
+          "p": 271,
+          "lcm_exponent": 1,
+          "common_exponent": 0,
+          "large_prime_formula": 0,
+          "multiplier_exponent": 9
+        }
+      ],
+      "theorem": "multiplier*(A*zeta(9)+B) has integer coefficients",
+      "logs_are_floating": true
+    }
+  ],
+  "limits": [
+    {
+      "alpha": "1/28",
+      "period": 28,
+      "periods_summed": 4096,
+      "intervals": [
+        [
+          "224/15",
+          "15"
+        ],
+        [
+          "238/15",
+          "16"
+        ],
+        [
+          "84/5",
+          "17"
+        ],
+        [
+          "266/15",
+          "18"
+        ],
+        [
+          "56/3",
+          "19"
+        ],
+        [
+          "98/5",
+          "20"
+        ],
+        [
+          "308/15",
+          "21"
+        ],
+        [
+          "322/15",
+          "22"
+        ],
+        [
+          "112/5",
+          "23"
+        ],
+        [
+          "70/3",
+          "24"
+        ],
+        [
+          "364/15",
+          "25"
+        ],
+        [
+          "126/5",
+          "26"
+        ],
+        [
+          "392/15",
+          "27"
+        ],
+        [
+          "406/15",
+          "28"
+        ]
+      ],
+      "measure_per_period": "7",
+      "gamma_lower": "58060894700161085866629194768514019/409700000000000000000000000000000000",
+      "gamma_upper": "3542891002702674359072210731203/25000000000000000000000000000000",
+      "cost_lower": "1606449762981081279486494524881579/175000000000000000000000000000000",
+      "cost_upper": "26326498737098872398933595636620401867/2867900000000000000000000000000000000",
+      "gamma_decimal_interval": [
+        0.14171563265843565,
+        0.14171564010810697
+      ],
+      "cost_decimal_interval": [
+        9.179712931320465,
+        9.179712938770136
+      ],
+      "theorem": "log(G)/n tends to Gamma; log(multiplier)/n tends to 9*(1+alpha)-Gamma",
+      "exact_enclosure": true
+    },
+    {
+      "alpha": "1/14",
+      "period": 14,
+      "periods_summed": 4096,
+      "intervals": [
+        [
+          "63/8",
+          "8"
+        ],
+        [
+          "35/4",
+          "9"
+        ],
+        [
+          "77/8",
+          "10"
+        ],
+        [
+          "21/2",
+          "11"
+        ],
+        [
+          "91/8",
+          "12"
+        ],
+        [
+          "49/4",
+          "13"
+        ],
+        [
+          "105/8",
+          "14"
+        ]
+      ],
+      "measure_per_period": "7/2",
+      "gamma_lower": "57878458392963655741029152180551761/204850000000000000000000000000000000",
+      "gamma_upper": "28254069536291919585489550602217/100000000000000000000000000000000",
+      "cost_lower": "6552221513245956562901573145784481/700000000000000000000000000000000",
+      "cost_upper": "13422225791249254409812795934736137673/1433950000000000000000000000000000000",
+      "gamma_decimal_interval": [
+        0.28254068046357655,
+        0.2825406953629192
+      ],
+      "cost_decimal_interval": [
+        9.360316447494224,
+        9.360316462393566
+      ],
+      "theorem": "log(G)/n tends to Gamma; log(multiplier)/n tends to 9*(1+alpha)-Gamma",
+      "exact_enclosure": true
+    },
+    {
+      "alpha": "3/28",
+      "period": 28,
+      "periods_summed": 4096,
+      "intervals": [
+        [
+          "84/17",
+          "5"
+        ],
+        [
+          "98/17",
+          "6"
+        ],
+        [
+          "112/17",
+          "7"
+        ],
+        [
+          "126/17",
+          "8"
+        ],
+        [
+          "140/17",
+          "9"
+        ],
+        [
+          "154/17",
+          "28/3"
+        ],
+        [
+          "252/17",
+          "15"
+        ],
+        [
+          "266/17",
+          "16"
+        ],
+        [
+          "280/17",
+          "17"
+        ],
+        [
+          "294/17",
+          "18"
+        ],
+        [
+          "308/17",
+          "56/3"
+        ],
+        [
+          "406/17",
+          "24"
+        ],
+        [
+          "420/17",
+          "25"
+        ],
+        [
+          "434/17",
+          "26"
+        ],
+        [
+          "448/17",
+          "27"
+        ],
+        [
+          "462/17",
+          "28"
+        ]
+      ],
+      "measure_per_period": "7",
+      "gamma_lower": "87394746214696394700140046242171807/204850000000000000000000000000000000",
+      "gamma_upper": "42662800947406182799640294764107/100000000000000000000000000000000",
+      "cost_lower": "6676360393368156720402517936651251/700000000000000000000000000000000",
+      "cost_upper": "13676524276497125237099019676304797351/1433950000000000000000000000000000000",
+      "gamma_decimal_interval": [
+        0.4266280020243905,
+        0.4266280094740618
+      ],
+      "cost_decimal_interval": [
+        9.537657704811652,
+        9.537657712261323
+      ],
+      "theorem": "log(G)/n tends to Gamma; log(multiplier)/n tends to 9*(1+alpha)-Gamma",
+      "exact_enclosure": true
+    },
+    {
+      "alpha": "1/7",
+      "period": 7,
+      "periods_summed": 4096,
+      "intervals": [
+        [
+          "35/9",
+          "4"
+        ],
+        [
+          "14/3",
+          "5"
+        ],
+        [
+          "49/9",
+          "6"
+        ],
+        [
+          "56/9",
+          "7"
+        ]
+      ],
+      "measure_per_period": "16/9",
+      "gamma_lower": "93275906326903966850098181622836911/161319375000000000000000000000000000",
+      "gamma_upper": "182135047518306103583797096885621/315000000000000000000000000000000",
+      "cost_lower": "436837850354527699488028986159197/45000000000000000000000000000000",
+      "cost_upper": "1566009093673096033149901818377163089/161319375000000000000000000000000000",
+      "gamma_decimal_interval": [
+        0.5782064697864343,
+        0.5782065000581146
+      ],
+      "cost_decimal_interval": [
+        9.707507785656171,
+        9.707507815927851
+      ],
+      "theorem": "log(G)/n tends to Gamma; log(multiplier)/n tends to 9*(1+alpha)-Gamma",
+      "exact_enclosure": true
+    },
+    {
+      "alpha": "5/28",
+      "period": 28,
+      "periods_summed": 4096,
+      "intervals": [
+        [
+          "56/19",
+          "3"
+        ],
+        [
+          "70/19",
+          "4"
+        ],
+        [
+          "84/19",
+          "5"
+        ],
+        [
+          "98/19",
+          "28/5"
+        ],
+        [
+          "168/19",
+          "9"
+        ],
+        [
+          "182/19",
+          "10"
+        ],
+        [
+          "196/19",
+          "11"
+        ],
+        [
+          "210/19",
+          "56/5"
+        ],
+        [
+          "280/19",
+          "15"
+        ],
+        [
+          "294/19",
+          "16"
+        ],
+        [
+          "308/19",
+          "84/5"
+        ],
+        [
+          "378/19",
+          "20"
+        ],
+        [
+          "392/19",
+          "21"
+        ],
+        [
+          "406/19",
+          "22"
+        ],
+        [
+          "420/19",
+          "112/5"
+        ],
+        [
+          "490/19",
+          "26"
+        ],
+        [
+          "504/19",
+          "27"
+        ],
+        [
+          "518/19",
+          "28"
+        ]
+      ],
+      "measure_per_period": "7",
+      "gamma_lower": "90781309239753174964930539863739/128031250000000000000000000000000",
+      "gamma_upper": "35452793827110141740007801220163/50000000000000000000000000000000",
+      "cost_lower": "3464330443210229007819945391458859/350000000000000000000000000000000",
+      "cost_upper": "8870851147821727775245486220953827/896218750000000000000000000000000",
+      "gamma_decimal_interval": [
+        0.7090558690925315,
+        0.7090558765422028
+      ],
+      "cost_decimal_interval": [
+        9.898086980600654,
+        9.898086988050325
+      ],
+      "theorem": "log(G)/n tends to Gamma; log(multiplier)/n tends to 9*(1+alpha)-Gamma",
+      "exact_enclosure": true
+    },
+    {
+      "alpha": "3/14",
+      "period": 14,
+      "periods_summed": 4096,
+      "intervals": [
+        [
+          "14/5",
+          "3"
+        ],
+        [
+          "7/2",
+          "4"
+        ],
+        [
+          "21/5",
+          "14/3"
+        ],
+        [
+          "77/10",
+          "8"
+        ],
+        [
+          "42/5",
+          "9"
+        ],
+        [
+          "91/10",
+          "28/3"
+        ],
+        [
+          "119/10",
+          "12"
+        ],
+        [
+          "63/5",
+          "13"
+        ],
+        [
+          "133/10",
+          "14"
+        ]
+      ],
+      "measure_per_period": "7/2",
+      "gamma_lower": "174554364919993710757236680765454477/204850000000000000000000000000000000",
+      "gamma_upper": "42605410781577752571902092562477/50000000000000000000000000000000",
+      "cost_lower": "3526762124528955731996685352062661/350000000000000000000000000000000",
+      "cost_upper": "14449144445560044024699343234641818661/1433950000000000000000000000000000000",
+      "gamma_decimal_interval": [
+        0.8521082007322124,
+        0.852108215631555
+      ],
+      "cost_decimal_interval": [
+        10.076463212939874,
+        10.076463227839216
+      ],
+      "theorem": "log(G)/n tends to Gamma; log(multiplier)/n tends to 9*(1+alpha)-Gamma",
+      "exact_enclosure": true
+    }
+  ]
+}

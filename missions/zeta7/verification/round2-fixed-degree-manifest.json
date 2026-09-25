@@ -1,0 +1,2201 @@
+[
+  {
+    "case_id": "K40-F-s7-n1q1_n3q1-g0-m1",
+    "stage": "K40",
+    "route": "F",
+    "s": 7,
+    "K": 40,
+    "h": 15,
+    "r": 37,
+    "h40": null,
+    "lam_ratio": "15/40",
+    "layers40": [
+      {
+        "N40": 1,
+        "q": 1
+      },
+      {
+        "N40": 3,
+        "q": 1
+      }
+    ],
+    "shift40": 0,
+    "g": 0,
+    "qsum": 2,
+    "basis_mode": "whole_shift",
+    "zeros": {
+      "1": 2,
+      "2": 1,
+      "3": 1
+    },
+    "exponents": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "source_case_id": null,
+    "target_degree": 1,
+    "infinity_threshold_L": 28,
+    "limiting_lambda_numerator": 16,
+    "limiting_lambda_denominator": 40
+  },
+  {
+    "case_id": "K40-F-s7-n1q1_n3q1-g0-m3",
+    "stage": "K40",
+    "route": "F",
+    "s": 7,
+    "K": 40,
+    "h": 16,
+    "r": 37,
+    "h40": null,
+    "lam_ratio": "16/40",
+    "layers40": [
+      {
+        "N40": 1,
+        "q": 1
+      },
+      {
+        "N40": 3,
+        "q": 1
+      }
+    ],
+    "shift40": 0,
+    "g": 0,
+    "qsum": 2,
+    "basis_mode": "whole_shift",
+    "zeros": {
+      "1": 2,
+      "2": 1,
+      "3": 1
+    },
+    "exponents": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "source_case_id": null,
+    "target_degree": 3,
+    "infinity_threshold_L": 28,
+    "limiting_lambda_numerator": 16,
+    "limiting_lambda_denominator": 40
+  },
+  {
+    "case_id": "K40-F-s7-n1q1_n3q1-g0-m5",
+    "stage": "K40",
+    "route": "F",
+    "s": 7,
+    "K": 40,
+    "h": 17,
+    "r": 37,
+    "h40": null,
+    "lam_ratio": "17/40",
+    "layers40": [
+      {
+        "N40": 1,
+        "q": 1
+      },
+      {
+        "N40": 3,
+        "q": 1
+      }
+    ],
+    "shift40": 0,
+    "g": 0,
+    "qsum": 2,
+    "basis_mode": "whole_shift",
+    "zeros": {
+      "1": 2,
+      "2": 1,
+      "3": 1
+    },
+    "exponents": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "source_case_id": null,
+    "target_degree": 5,
+    "infinity_threshold_L": 28,
+    "limiting_lambda_numerator": 16,
+    "limiting_lambda_denominator": 40
+  },
+  {
+    "case_id": "K40-F-s7-n1q1_n3q1-g1-m1",
+    "stage": "K40",
+    "route": "F",
+    "s": 7,
+    "K": 40,
+    "h": 14,
+    "r": 37,
+    "h40": null,
+    "lam_ratio": "14/40",
+    "layers40": [
+      {
+        "N40": 1,
+        "q": 1
+      },
+      {
+        "N40": 3,
+        "q": 1
+      }
+    ],
+    "shift40": 1,
+    "g": 1,
+    "qsum": 2,
+    "basis_mode": "whole_shift",
+    "zeros": {
+      "1": 2,
+      "2": 1,
+      "3": 1
+    },
+    "exponents": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "source_case_id": null,
+    "target_degree": 1,
+    "infinity_threshold_L": 26,
+    "limiting_lambda_numerator": 15,
+    "limiting_lambda_denominator": 40
+  },
+  {
+    "case_id": "K40-F-s7-n1q1_n3q1-g1-m3",
+    "stage": "K40",
+    "route": "F",
+    "s": 7,
+    "K": 40,
+    "h": 15,
+    "r": 37,
+    "h40": null,
+    "lam_ratio": "15/40",
+    "layers40": [
+      {
+        "N40": 1,
+        "q": 1
+      },
+      {
+        "N40": 3,
+        "q": 1
+      }
+    ],
+    "shift40": 1,
+    "g": 1,
+    "qsum": 2,
+    "basis_mode": "whole_shift",
+    "zeros": {
+      "1": 2,
+      "2": 1,
+      "3": 1
+    },
+    "exponents": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "source_case_id": null,
+    "target_degree": 3,
+    "infinity_threshold_L": 26,
+    "limiting_lambda_numerator": 15,
+    "limiting_lambda_denominator": 40
+  },
+  {
+    "case_id": "K40-F-s7-n1q1_n3q1-g1-m5",
+    "stage": "K40",
+    "route": "F",
+    "s": 7,
+    "K": 40,
+    "h": 16,
+    "r": 37,
+    "h40": null,
+    "lam_ratio": "16/40",
+    "layers40": [
+      {
+        "N40": 1,
+        "q": 1
+      },
+      {
+        "N40": 3,
+        "q": 1
+      }
+    ],
+    "shift40": 1,
+    "g": 1,
+    "qsum": 2,
+    "basis_mode": "whole_shift",
+    "zeros": {
+      "1": 2,
+      "2": 1,
+      "3": 1
+    },
+    "exponents": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "source_case_id": null,
+    "target_degree": 5,
+    "infinity_threshold_L": 26,
+    "limiting_lambda_numerator": 15,
+    "limiting_lambda_denominator": 40
+  },
+  {
+    "case_id": "K40-F-s7-n2q1_n4q1-g0-m1",
+    "stage": "K40",
+    "route": "F",
+    "s": 7,
+    "K": 40,
+    "h": 13,
+    "r": 36,
+    "h40": null,
+    "lam_ratio": "13/40",
+    "layers40": [
+      {
+        "N40": 2,
+        "q": 1
+      },
+      {
+        "N40": 4,
+        "q": 1
+      }
+    ],
+    "shift40": 0,
+    "g": 0,
+    "qsum": 2,
+    "basis_mode": "whole_shift",
+    "zeros": {
+      "1": 2,
+      "2": 2,
+      "3": 1,
+      "4": 1
+    },
+    "exponents": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "source_case_id": null,
+    "target_degree": 1,
+    "infinity_threshold_L": 24,
+    "limiting_lambda_numerator": 14,
+    "limiting_lambda_denominator": 40
+  },
+  {
+    "case_id": "K40-F-s7-n2q1_n4q1-g0-m3",
+    "stage": "K40",
+    "route": "F",
+    "s": 7,
+    "K": 40,
+    "h": 14,
+    "r": 36,
+    "h40": null,
+    "lam_ratio": "14/40",
+    "layers40": [
+      {
+        "N40": 2,
+        "q": 1
+      },
+      {
+        "N40": 4,
+        "q": 1
+      }
+    ],
+    "shift40": 0,
+    "g": 0,
+    "qsum": 2,
+    "basis_mode": "whole_shift",
+    "zeros": {
+      "1": 2,
+      "2": 2,
+      "3": 1,
+      "4": 1
+    },
+    "exponents": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "source_case_id": null,
+    "target_degree": 3,
+    "infinity_threshold_L": 24,
+    "limiting_lambda_numerator": 14,
+    "limiting_lambda_denominator": 40
+  },
+  {
+    "case_id": "K40-F-s7-n2q1_n4q1-g0-m5",
+    "stage": "K40",
+    "route": "F",
+    "s": 7,
+    "K": 40,
+    "h": 15,
+    "r": 36,
+    "h40": null,
+    "lam_ratio": "15/40",
+    "layers40": [
+      {
+        "N40": 2,
+        "q": 1
+      },
+      {
+        "N40": 4,
+        "q": 1
+      }
+    ],
+    "shift40": 0,
+    "g": 0,
+    "qsum": 2,
+    "basis_mode": "whole_shift",
+    "zeros": {
+      "1": 2,
+      "2": 2,
+      "3": 1,
+      "4": 1
+    },
+    "exponents": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "source_case_id": null,
+    "target_degree": 5,
+    "infinity_threshold_L": 24,
+    "limiting_lambda_numerator": 14,
+    "limiting_lambda_denominator": 40
+  },
+  {
+    "case_id": "K40-F-s7-n2q1_n4q1-g1-m1",
+    "stage": "K40",
+    "route": "F",
+    "s": 7,
+    "K": 40,
+    "h": 12,
+    "r": 36,
+    "h40": null,
+    "lam_ratio": "12/40",
+    "layers40": [
+      {
+        "N40": 2,
+        "q": 1
+      },
+      {
+        "N40": 4,
+        "q": 1
+      }
+    ],
+    "shift40": 1,
+    "g": 1,
+    "qsum": 2,
+    "basis_mode": "whole_shift",
+    "zeros": {
+      "1": 2,
+      "2": 2,
+      "3": 1,
+      "4": 1
+    },
+    "exponents": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "source_case_id": null,
+    "target_degree": 1,
+    "infinity_threshold_L": 22,
+    "limiting_lambda_numerator": 13,
+    "limiting_lambda_denominator": 40
+  },
+  {
+    "case_id": "K40-F-s7-n2q1_n4q1-g1-m3",
+    "stage": "K40",
+    "route": "F",
+    "s": 7,
+    "K": 40,
+    "h": 13,
+    "r": 36,
+    "h40": null,
+    "lam_ratio": "13/40",
+    "layers40": [
+      {
+        "N40": 2,
+        "q": 1
+      },
+      {
+        "N40": 4,
+        "q": 1
+      }
+    ],
+    "shift40": 1,
+    "g": 1,
+    "qsum": 2,
+    "basis_mode": "whole_shift",
+    "zeros": {
+      "1": 2,
+      "2": 2,
+      "3": 1,
+      "4": 1
+    },
+    "exponents": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "source_case_id": null,
+    "target_degree": 3,
+    "infinity_threshold_L": 22,
+    "limiting_lambda_numerator": 13,
+    "limiting_lambda_denominator": 40
+  },
+  {
+    "case_id": "K40-F-s7-n2q1_n4q1-g1-m5",
+    "stage": "K40",
+    "route": "F",
+    "s": 7,
+    "K": 40,
+    "h": 14,
+    "r": 36,
+    "h40": null,
+    "lam_ratio": "14/40",
+    "layers40": [
+      {
+        "N40": 2,
+        "q": 1
+      },
+      {
+        "N40": 4,
+        "q": 1
+      }
+    ],
+    "shift40": 1,
+    "g": 1,
+    "qsum": 2,
+    "basis_mode": "whole_shift",
+    "zeros": {
+      "1": 2,
+      "2": 2,
+      "3": 1,
+      "4": 1
+    },
+    "exponents": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "source_case_id": null,
+    "target_degree": 5,
+    "infinity_threshold_L": 22,
+    "limiting_lambda_numerator": 13,
+    "limiting_lambda_denominator": 40
+  },
+  {
+    "case_id": "K40-F-s7-n1q1_n3q1_n6q1-g0-m1",
+    "stage": "K40",
+    "route": "F",
+    "s": 7,
+    "K": 40,
+    "h": 9,
+    "r": 34,
+    "h40": null,
+    "lam_ratio": "9/40",
+    "layers40": [
+      {
+        "N40": 1,
+        "q": 1
+      },
+      {
+        "N40": 3,
+        "q": 1
+      },
+      {
+        "N40": 6,
+        "q": 1
+      }
+    ],
+    "shift40": 0,
+    "g": 0,
+    "qsum": 3,
+    "basis_mode": "whole_shift",
+    "zeros": {
+      "1": 3,
+      "2": 2,
+      "3": 2,
+      "4": 1,
+      "5": 1,
+      "6": 1
+    },
+    "exponents": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "source_case_id": null,
+    "target_degree": 1,
+    "infinity_threshold_L": 16,
+    "limiting_lambda_numerator": 10,
+    "limiting_lambda_denominator": 40
+  },
+  {
+    "case_id": "K40-F-s7-n1q1_n3q1_n6q1-g0-m3",
+    "stage": "K40",
+    "route": "F",
+    "s": 7,
+    "K": 40,
+    "h": 10,
+    "r": 34,
+    "h40": null,
+    "lam_ratio": "10/40",
+    "layers40": [
+      {
+        "N40": 1,
+        "q": 1
+      },
+      {
+        "N40": 3,
+        "q": 1
+      },
+      {
+        "N40": 6,
+        "q": 1
+      }
+    ],
+    "shift40": 0,
+    "g": 0,
+    "qsum": 3,
+    "basis_mode": "whole_shift",
+    "zeros": {
+      "1": 3,
+      "2": 2,
+      "3": 2,
+      "4": 1,
+      "5": 1,
+      "6": 1
+    },
+    "exponents": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "source_case_id": null,
+    "target_degree": 3,
+    "infinity_threshold_L": 16,
+    "limiting_lambda_numerator": 10,
+    "limiting_lambda_denominator": 40
+  },
+  {
+    "case_id": "K40-F-s7-n1q1_n3q1_n6q1-g0-m5",
+    "stage": "K40",
+    "route": "F",
+    "s": 7,
+    "K": 40,
+    "h": 11,
+    "r": 34,
+    "h40": null,
+    "lam_ratio": "11/40",
+    "layers40": [
+      {
+        "N40": 1,
+        "q": 1
+      },
+      {
+        "N40": 3,
+        "q": 1
+      },
+      {
+        "N40": 6,
+        "q": 1
+      }
+    ],
+    "shift40": 0,
+    "g": 0,
+    "qsum": 3,
+    "basis_mode": "whole_shift",
+    "zeros": {
+      "1": 3,
+      "2": 2,
+      "3": 2,
+      "4": 1,
+      "5": 1,
+      "6": 1
+    },
+    "exponents": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "source_case_id": null,
+    "target_degree": 5,
+    "infinity_threshold_L": 16,
+    "limiting_lambda_numerator": 10,
+    "limiting_lambda_denominator": 40
+  },
+  {
+    "case_id": "K40-F-s7-n1q1_n3q1_n6q1-g1-m1",
+    "stage": "K40",
+    "route": "F",
+    "s": 7,
+    "K": 40,
+    "h": 8,
+    "r": 34,
+    "h40": null,
+    "lam_ratio": "8/40",
+    "layers40": [
+      {
+        "N40": 1,
+        "q": 1
+      },
+      {
+        "N40": 3,
+        "q": 1
+      },
+      {
+        "N40": 6,
+        "q": 1
+      }
+    ],
+    "shift40": 1,
+    "g": 1,
+    "qsum": 3,
+    "basis_mode": "whole_shift",
+    "zeros": {
+      "1": 3,
+      "2": 2,
+      "3": 2,
+      "4": 1,
+      "5": 1,
+      "6": 1
+    },
+    "exponents": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "source_case_id": null,
+    "target_degree": 1,
+    "infinity_threshold_L": 14,
+    "limiting_lambda_numerator": 9,
+    "limiting_lambda_denominator": 40
+  },
+  {
+    "case_id": "K40-F-s7-n1q1_n3q1_n6q1-g1-m3",
+    "stage": "K40",
+    "route": "F",
+    "s": 7,
+    "K": 40,
+    "h": 9,
+    "r": 34,
+    "h40": null,
+    "lam_ratio": "9/40",
+    "layers40": [
+      {
+        "N40": 1,
+        "q": 1
+      },
+      {
+        "N40": 3,
+        "q": 1
+      },
+      {
+        "N40": 6,
+        "q": 1
+      }
+    ],
+    "shift40": 1,
+    "g": 1,
+    "qsum": 3,
+    "basis_mode": "whole_shift",
+    "zeros": {
+      "1": 3,
+      "2": 2,
+      "3": 2,
+      "4": 1,
+      "5": 1,
+      "6": 1
+    },
+    "exponents": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "source_case_id": null,
+    "target_degree": 3,
+    "infinity_threshold_L": 14,
+    "limiting_lambda_numerator": 9,
+    "limiting_lambda_denominator": 40
+  },
+  {
+    "case_id": "K40-F-s7-n1q1_n3q1_n6q1-g1-m5",
+    "stage": "K40",
+    "route": "F",
+    "s": 7,
+    "K": 40,
+    "h": 10,
+    "r": 34,
+    "h40": null,
+    "lam_ratio": "10/40",
+    "layers40": [
+      {
+        "N40": 1,
+        "q": 1
+      },
+      {
+        "N40": 3,
+        "q": 1
+      },
+      {
+        "N40": 6,
+        "q": 1
+      }
+    ],
+    "shift40": 1,
+    "g": 1,
+    "qsum": 3,
+    "basis_mode": "whole_shift",
+    "zeros": {
+      "1": 3,
+      "2": 2,
+      "3": 2,
+      "4": 1,
+      "5": 1,
+      "6": 1
+    },
+    "exponents": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "source_case_id": null,
+    "target_degree": 5,
+    "infinity_threshold_L": 14,
+    "limiting_lambda_numerator": 9,
+    "limiting_lambda_denominator": 40
+  },
+  {
+    "case_id": "K80-F-s7-n1q1_n3q1-g0-m1",
+    "stage": "K80",
+    "route": "F",
+    "s": 7,
+    "K": 80,
+    "h": 31,
+    "r": 74,
+    "h40": null,
+    "lam_ratio": "31/80",
+    "layers40": [
+      {
+        "N40": 1,
+        "q": 1
+      },
+      {
+        "N40": 3,
+        "q": 1
+      }
+    ],
+    "shift40": 0,
+    "g": 0,
+    "qsum": 2,
+    "basis_mode": "whole_shift",
+    "zeros": {
+      "1": 2,
+      "2": 2,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1
+    },
+    "exponents": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "source_case_id": null,
+    "target_degree": 1,
+    "infinity_threshold_L": 60,
+    "limiting_lambda_numerator": 16,
+    "limiting_lambda_denominator": 40
+  },
+  {
+    "case_id": "K80-F-s7-n1q1_n3q1-g0-m3",
+    "stage": "K80",
+    "route": "F",
+    "s": 7,
+    "K": 80,
+    "h": 32,
+    "r": 74,
+    "h40": null,
+    "lam_ratio": "32/80",
+    "layers40": [
+      {
+        "N40": 1,
+        "q": 1
+      },
+      {
+        "N40": 3,
+        "q": 1
+      }
+    ],
+    "shift40": 0,
+    "g": 0,
+    "qsum": 2,
+    "basis_mode": "whole_shift",
+    "zeros": {
+      "1": 2,
+      "2": 2,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1
+    },
+    "exponents": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "source_case_id": null,
+    "target_degree": 3,
+    "infinity_threshold_L": 60,
+    "limiting_lambda_numerator": 16,
+    "limiting_lambda_denominator": 40
+  },
+  {
+    "case_id": "K80-F-s7-n1q1_n3q1-g0-m5",
+    "stage": "K80",
+    "route": "F",
+    "s": 7,
+    "K": 80,
+    "h": 33,
+    "r": 74,
+    "h40": null,
+    "lam_ratio": "33/80",
+    "layers40": [
+      {
+        "N40": 1,
+        "q": 1
+      },
+      {
+        "N40": 3,
+        "q": 1
+      }
+    ],
+    "shift40": 0,
+    "g": 0,
+    "qsum": 2,
+    "basis_mode": "whole_shift",
+    "zeros": {
+      "1": 2,
+      "2": 2,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1
+    },
+    "exponents": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "source_case_id": null,
+    "target_degree": 5,
+    "infinity_threshold_L": 60,
+    "limiting_lambda_numerator": 16,
+    "limiting_lambda_denominator": 40
+  },
+  {
+    "case_id": "K80-F-s7-n1q1_n3q1-g1-m1",
+    "stage": "K80",
+    "route": "F",
+    "s": 7,
+    "K": 80,
+    "h": 29,
+    "r": 74,
+    "h40": null,
+    "lam_ratio": "29/80",
+    "layers40": [
+      {
+        "N40": 1,
+        "q": 1
+      },
+      {
+        "N40": 3,
+        "q": 1
+      }
+    ],
+    "shift40": 1,
+    "g": 2,
+    "qsum": 2,
+    "basis_mode": "whole_shift",
+    "zeros": {
+      "1": 2,
+      "2": 2,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1
+    },
+    "exponents": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "source_case_id": null,
+    "target_degree": 1,
+    "infinity_threshold_L": 56,
+    "limiting_lambda_numerator": 15,
+    "limiting_lambda_denominator": 40
+  },
+  {
+    "case_id": "K80-F-s7-n1q1_n3q1-g1-m3",
+    "stage": "K80",
+    "route": "F",
+    "s": 7,
+    "K": 80,
+    "h": 30,
+    "r": 74,
+    "h40": null,
+    "lam_ratio": "30/80",
+    "layers40": [
+      {
+        "N40": 1,
+        "q": 1
+      },
+      {
+        "N40": 3,
+        "q": 1
+      }
+    ],
+    "shift40": 1,
+    "g": 2,
+    "qsum": 2,
+    "basis_mode": "whole_shift",
+    "zeros": {
+      "1": 2,
+      "2": 2,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1
+    },
+    "exponents": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "source_case_id": null,
+    "target_degree": 3,
+    "infinity_threshold_L": 56,
+    "limiting_lambda_numerator": 15,
+    "limiting_lambda_denominator": 40
+  },
+  {
+    "case_id": "K80-F-s7-n1q1_n3q1-g1-m5",
+    "stage": "K80",
+    "route": "F",
+    "s": 7,
+    "K": 80,
+    "h": 31,
+    "r": 74,
+    "h40": null,
+    "lam_ratio": "31/80",
+    "layers40": [
+      {
+        "N40": 1,
+        "q": 1
+      },
+      {
+        "N40": 3,
+        "q": 1
+      }
+    ],
+    "shift40": 1,
+    "g": 2,
+    "qsum": 2,
+    "basis_mode": "whole_shift",
+    "zeros": {
+      "1": 2,
+      "2": 2,
+      "3": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1
+    },
+    "exponents": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "source_case_id": null,
+    "target_degree": 5,
+    "infinity_threshold_L": 56,
+    "limiting_lambda_numerator": 15,
+    "limiting_lambda_denominator": 40
+  },
+  {
+    "case_id": "K80-F-s7-n2q1_n4q1-g0-m1",
+    "stage": "K80",
+    "route": "F",
+    "s": 7,
+    "K": 80,
+    "h": 27,
+    "r": 72,
+    "h40": null,
+    "lam_ratio": "27/80",
+    "layers40": [
+      {
+        "N40": 2,
+        "q": 1
+      },
+      {
+        "N40": 4,
+        "q": 1
+      }
+    ],
+    "shift40": 0,
+    "g": 0,
+    "qsum": 2,
+    "basis_mode": "whole_shift",
+    "zeros": {
+      "1": 2,
+      "2": 2,
+      "3": 2,
+      "4": 2,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
+    },
+    "exponents": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "source_case_id": null,
+    "target_degree": 1,
+    "infinity_threshold_L": 52,
+    "limiting_lambda_numerator": 14,
+    "limiting_lambda_denominator": 40
+  },
+  {
+    "case_id": "K80-F-s7-n2q1_n4q1-g0-m3",
+    "stage": "K80",
+    "route": "F",
+    "s": 7,
+    "K": 80,
+    "h": 28,
+    "r": 72,
+    "h40": null,
+    "lam_ratio": "28/80",
+    "layers40": [
+      {
+        "N40": 2,
+        "q": 1
+      },
+      {
+        "N40": 4,
+        "q": 1
+      }
+    ],
+    "shift40": 0,
+    "g": 0,
+    "qsum": 2,
+    "basis_mode": "whole_shift",
+    "zeros": {
+      "1": 2,
+      "2": 2,
+      "3": 2,
+      "4": 2,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
+    },
+    "exponents": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27
+    ],
+    "source_case_id": null,
+    "target_degree": 3,
+    "infinity_threshold_L": 52,
+    "limiting_lambda_numerator": 14,
+    "limiting_lambda_denominator": 40
+  },
+  {
+    "case_id": "K80-F-s7-n2q1_n4q1-g0-m5",
+    "stage": "K80",
+    "route": "F",
+    "s": 7,
+    "K": 80,
+    "h": 29,
+    "r": 72,
+    "h40": null,
+    "lam_ratio": "29/80",
+    "layers40": [
+      {
+        "N40": 2,
+        "q": 1
+      },
+      {
+        "N40": 4,
+        "q": 1
+      }
+    ],
+    "shift40": 0,
+    "g": 0,
+    "qsum": 2,
+    "basis_mode": "whole_shift",
+    "zeros": {
+      "1": 2,
+      "2": 2,
+      "3": 2,
+      "4": 2,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
+    },
+    "exponents": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28
+    ],
+    "source_case_id": null,
+    "target_degree": 5,
+    "infinity_threshold_L": 52,
+    "limiting_lambda_numerator": 14,
+    "limiting_lambda_denominator": 40
+  },
+  {
+    "case_id": "K80-F-s7-n2q1_n4q1-g1-m1",
+    "stage": "K80",
+    "route": "F",
+    "s": 7,
+    "K": 80,
+    "h": 25,
+    "r": 72,
+    "h40": null,
+    "lam_ratio": "25/80",
+    "layers40": [
+      {
+        "N40": 2,
+        "q": 1
+      },
+      {
+        "N40": 4,
+        "q": 1
+      }
+    ],
+    "shift40": 1,
+    "g": 2,
+    "qsum": 2,
+    "basis_mode": "whole_shift",
+    "zeros": {
+      "1": 2,
+      "2": 2,
+      "3": 2,
+      "4": 2,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
+    },
+    "exponents": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "source_case_id": null,
+    "target_degree": 1,
+    "infinity_threshold_L": 48,
+    "limiting_lambda_numerator": 13,
+    "limiting_lambda_denominator": 40
+  },
+  {
+    "case_id": "K80-F-s7-n2q1_n4q1-g1-m3",
+    "stage": "K80",
+    "route": "F",
+    "s": 7,
+    "K": 80,
+    "h": 26,
+    "r": 72,
+    "h40": null,
+    "lam_ratio": "26/80",
+    "layers40": [
+      {
+        "N40": 2,
+        "q": 1
+      },
+      {
+        "N40": 4,
+        "q": 1
+      }
+    ],
+    "shift40": 1,
+    "g": 2,
+    "qsum": 2,
+    "basis_mode": "whole_shift",
+    "zeros": {
+      "1": 2,
+      "2": 2,
+      "3": 2,
+      "4": 2,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
+    },
+    "exponents": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27
+    ],
+    "source_case_id": null,
+    "target_degree": 3,
+    "infinity_threshold_L": 48,
+    "limiting_lambda_numerator": 13,
+    "limiting_lambda_denominator": 40
+  },
+  {
+    "case_id": "K80-F-s7-n2q1_n4q1-g1-m5",
+    "stage": "K80",
+    "route": "F",
+    "s": 7,
+    "K": 80,
+    "h": 27,
+    "r": 72,
+    "h40": null,
+    "lam_ratio": "27/80",
+    "layers40": [
+      {
+        "N40": 2,
+        "q": 1
+      },
+      {
+        "N40": 4,
+        "q": 1
+      }
+    ],
+    "shift40": 1,
+    "g": 2,
+    "qsum": 2,
+    "basis_mode": "whole_shift",
+    "zeros": {
+      "1": 2,
+      "2": 2,
+      "3": 2,
+      "4": 2,
+      "5": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
+    },
+    "exponents": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28
+    ],
+    "source_case_id": null,
+    "target_degree": 5,
+    "infinity_threshold_L": 48,
+    "limiting_lambda_numerator": 13,
+    "limiting_lambda_denominator": 40
+  },
+  {
+    "case_id": "K80-F-s7-n1q1_n3q1_n6q1-g0-m1",
+    "stage": "K80",
+    "route": "F",
+    "s": 7,
+    "K": 80,
+    "h": 19,
+    "r": 68,
+    "h40": null,
+    "lam_ratio": "19/80",
+    "layers40": [
+      {
+        "N40": 1,
+        "q": 1
+      },
+      {
+        "N40": 3,
+        "q": 1
+      },
+      {
+        "N40": 6,
+        "q": 1
+      }
+    ],
+    "shift40": 0,
+    "g": 0,
+    "qsum": 3,
+    "basis_mode": "whole_shift",
+    "zeros": {
+      "1": 3,
+      "2": 3,
+      "3": 2,
+      "4": 2,
+      "5": 2,
+      "6": 2,
+      "7": 1,
+      "8": 1,
+      "9": 1,
+      "10": 1,
+      "11": 1,
+      "12": 1
+    },
+    "exponents": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "source_case_id": null,
+    "target_degree": 1,
+    "infinity_threshold_L": 36,
+    "limiting_lambda_numerator": 10,
+    "limiting_lambda_denominator": 40
+  },
+  {
+    "case_id": "K80-F-s7-n1q1_n3q1_n6q1-g0-m3",
+    "stage": "K80",
+    "route": "F",
+    "s": 7,
+    "K": 80,
+    "h": 20,
+    "r": 68,
+    "h40": null,
+    "lam_ratio": "20/80",
+    "layers40": [
+      {
+        "N40": 1,
+        "q": 1
+      },
+      {
+        "N40": 3,
+        "q": 1
+      },
+      {
+        "N40": 6,
+        "q": 1
+      }
+    ],
+    "shift40": 0,
+    "g": 0,
+    "qsum": 3,
+    "basis_mode": "whole_shift",
+    "zeros": {
+      "1": 3,
+      "2": 3,
+      "3": 2,
+      "4": 2,
+      "5": 2,
+      "6": 2,
+      "7": 1,
+      "8": 1,
+      "9": 1,
+      "10": 1,
+      "11": 1,
+      "12": 1
+    },
+    "exponents": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "source_case_id": null,
+    "target_degree": 3,
+    "infinity_threshold_L": 36,
+    "limiting_lambda_numerator": 10,
+    "limiting_lambda_denominator": 40
+  },
+  {
+    "case_id": "K80-F-s7-n1q1_n3q1_n6q1-g0-m5",
+    "stage": "K80",
+    "route": "F",
+    "s": 7,
+    "K": 80,
+    "h": 21,
+    "r": 68,
+    "h40": null,
+    "lam_ratio": "21/80",
+    "layers40": [
+      {
+        "N40": 1,
+        "q": 1
+      },
+      {
+        "N40": 3,
+        "q": 1
+      },
+      {
+        "N40": 6,
+        "q": 1
+      }
+    ],
+    "shift40": 0,
+    "g": 0,
+    "qsum": 3,
+    "basis_mode": "whole_shift",
+    "zeros": {
+      "1": 3,
+      "2": 3,
+      "3": 2,
+      "4": 2,
+      "5": 2,
+      "6": 2,
+      "7": 1,
+      "8": 1,
+      "9": 1,
+      "10": 1,
+      "11": 1,
+      "12": 1
+    },
+    "exponents": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "source_case_id": null,
+    "target_degree": 5,
+    "infinity_threshold_L": 36,
+    "limiting_lambda_numerator": 10,
+    "limiting_lambda_denominator": 40
+  },
+  {
+    "case_id": "K80-F-s7-n1q1_n3q1_n6q1-g1-m1",
+    "stage": "K80",
+    "route": "F",
+    "s": 7,
+    "K": 80,
+    "h": 17,
+    "r": 68,
+    "h40": null,
+    "lam_ratio": "17/80",
+    "layers40": [
+      {
+        "N40": 1,
+        "q": 1
+      },
+      {
+        "N40": 3,
+        "q": 1
+      },
+      {
+        "N40": 6,
+        "q": 1
+      }
+    ],
+    "shift40": 1,
+    "g": 2,
+    "qsum": 3,
+    "basis_mode": "whole_shift",
+    "zeros": {
+      "1": 3,
+      "2": 3,
+      "3": 2,
+      "4": 2,
+      "5": 2,
+      "6": 2,
+      "7": 1,
+      "8": 1,
+      "9": 1,
+      "10": 1,
+      "11": 1,
+      "12": 1
+    },
+    "exponents": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "source_case_id": null,
+    "target_degree": 1,
+    "infinity_threshold_L": 32,
+    "limiting_lambda_numerator": 9,
+    "limiting_lambda_denominator": 40
+  },
+  {
+    "case_id": "K80-F-s7-n1q1_n3q1_n6q1-g1-m3",
+    "stage": "K80",
+    "route": "F",
+    "s": 7,
+    "K": 80,
+    "h": 18,
+    "r": 68,
+    "h40": null,
+    "lam_ratio": "18/80",
+    "layers40": [
+      {
+        "N40": 1,
+        "q": 1
+      },
+      {
+        "N40": 3,
+        "q": 1
+      },
+      {
+        "N40": 6,
+        "q": 1
+      }
+    ],
+    "shift40": 1,
+    "g": 2,
+    "qsum": 3,
+    "basis_mode": "whole_shift",
+    "zeros": {
+      "1": 3,
+      "2": 3,
+      "3": 2,
+      "4": 2,
+      "5": 2,
+      "6": 2,
+      "7": 1,
+      "8": 1,
+      "9": 1,
+      "10": 1,
+      "11": 1,
+      "12": 1
+    },
+    "exponents": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "source_case_id": null,
+    "target_degree": 3,
+    "infinity_threshold_L": 32,
+    "limiting_lambda_numerator": 9,
+    "limiting_lambda_denominator": 40
+  },
+  {
+    "case_id": "K80-F-s7-n1q1_n3q1_n6q1-g1-m5",
+    "stage": "K80",
+    "route": "F",
+    "s": 7,
+    "K": 80,
+    "h": 19,
+    "r": 68,
+    "h40": null,
+    "lam_ratio": "19/80",
+    "layers40": [
+      {
+        "N40": 1,
+        "q": 1
+      },
+      {
+        "N40": 3,
+        "q": 1
+      },
+      {
+        "N40": 6,
+        "q": 1
+      }
+    ],
+    "shift40": 1,
+    "g": 2,
+    "qsum": 3,
+    "basis_mode": "whole_shift",
+    "zeros": {
+      "1": 3,
+      "2": 3,
+      "3": 2,
+      "4": 2,
+      "5": 2,
+      "6": 2,
+      "7": 1,
+      "8": 1,
+      "9": 1,
+      "10": 1,
+      "11": 1,
+      "12": 1
+    },
+    "exponents": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "source_case_id": null,
+    "target_degree": 5,
+    "infinity_threshold_L": 32,
+    "limiting_lambda_numerator": 9,
+    "limiting_lambda_denominator": 40
+  }
+]

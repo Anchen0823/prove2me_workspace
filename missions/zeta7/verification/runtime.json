@@ -1,0 +1,9 @@
+{
+  "python": "3.12.14",
+  "executable": "C:\\Users\\anche\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "python-flint": "0.9.0",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "mpmath": "1.4.1",
+  "note": "Research dependencies stored in tmp/zeta7/exact_packages; no global install required."
+}

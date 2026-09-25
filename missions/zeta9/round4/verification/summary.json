@@ -1,0 +1,183 @@
+{
+  "status": "round_complete_no_irrationality_proof",
+  "date": "2026-09-24",
+  "universal_result": "For all positive even n, sign(A_n,D)=(-1)^(n/2), so A_n,D is nonzero.",
+  "proof_inputs": [
+    "Borcea-Branden arXiv math/0607416v6 Theorem 2(b)",
+    "Legendre simple zeros on (-1,1); exact Rodrigues identity"
+  ],
+  "exact_coefficient_sanity_checks": 20,
+  "scan_parameters": 10,
+  "prime_parameter_pairs": 2428,
+  "denominator_order_9": 2424,
+  "denominator_order_8": 4,
+  "unresolved_scanned_pairs": 0,
+  "exceptions": [
+    {
+      "D": 6,
+      "n": 384,
+      "p": 3767,
+      "outer": true,
+      "p9B_mod_p2": 1284547,
+      "p8B_mod_p": 341,
+      "certified_vp_B": -8,
+      "if_unresolved": null,
+      "cutoff": 244,
+      "top_sum_mod_p2": 5722073,
+      "c8_sum_mod_p": 2600
+    },
+    {
+      "D": 8,
+      "n": 384,
+      "p": 5527,
+      "outer": true,
+      "p9B_mod_p2": 28038471,
+      "p8B_mod_p": 5073,
+      "certified_vp_B": -8,
+      "if_unresolved": null,
+      "cutoff": 307,
+      "top_sum_mod_p2": 13176368,
+      "c8_sum_mod_p": 3465
+    },
+    {
+      "D": 8,
+      "n": 48,
+      "p": 173,
+      "outer": false,
+      "p9B_mod_p2": 15224,
+      "p8B_mod_p": 88,
+      "certified_vp_B": -8,
+      "if_unresolved": null
+    },
+    {
+      "D": 8,
+      "n": 192,
+      "p": 947,
+      "outer": false,
+      "p9B_mod_p2": 643013,
+      "p8B_mod_p": 679,
+      "certified_vp_B": -8,
+      "if_unresolved": null
+    }
+  ],
+  "archived_prime_comparisons": 200,
+  "comparison_moduli": [
+    "p",
+    "p^2"
+  ],
+  "primitive_obstruction_certificates": [
+    {
+      "D": 6,
+      "n": 24,
+      "forced_outer_primes": 27,
+      "available_outer_primes": 27,
+      "guaranteed_log_abs_primitive_per_n": "35.43",
+      "artifact": "missions\\zeta9\\round4\\verification\\obstruction-D6-n24.json",
+      "sha256": "5acf34d67156cde0faab49bd9d4ce896917ac31c828dcd6c0e4ff7d847b89505"
+    },
+    {
+      "D": 8,
+      "n": 24,
+      "forced_outer_primes": 33,
+      "available_outer_primes": 33,
+      "guaranteed_log_abs_primitive_per_n": "50.89",
+      "artifact": "missions\\zeta9\\round4\\verification\\obstruction-D8-n24.json",
+      "sha256": "937c570c62f2c052f5c6cca458b079cc220c9510eae1c0eebba67c8258300c0b"
+    },
+    {
+      "D": 6,
+      "n": 48,
+      "forced_outer_primes": 44,
+      "available_outer_primes": 44,
+      "guaranteed_log_abs_primitive_per_n": "31.19",
+      "artifact": "missions\\zeta9\\round4\\verification\\obstruction-D6-n48.json",
+      "sha256": "bd58966e028220a373aca25f6f6060c9d9c399603c5f9a85fafa43ae9f82fe10"
+    },
+    {
+      "D": 8,
+      "n": 48,
+      "forced_outer_primes": 59,
+      "available_outer_primes": 59,
+      "guaranteed_log_abs_primitive_per_n": "51.33",
+      "artifact": "missions\\zeta9\\round4\\verification\\obstruction-D8-n48.json",
+      "sha256": "25fc66c0fa13c95542c6cff42564563a4000dd3397f9ed4754e1d9356b2a392a"
+    },
+    {
+      "D": 6,
+      "n": 96,
+      "forced_outer_primes": 85,
+      "available_outer_primes": 85,
+      "guaranteed_log_abs_primitive_per_n": "35.00",
+      "artifact": "missions\\zeta9\\round4\\verification\\obstruction-D6-n96.json",
+      "sha256": "8d8c86e713d5aa0af05f02b98f78d2b8636a2a0c9f68f5a9d065ea2e8ab1bd4e"
+    },
+    {
+      "D": 8,
+      "n": 96,
+      "forced_outer_primes": 107,
+      "available_outer_primes": 107,
+      "guaranteed_log_abs_primitive_per_n": "51.81",
+      "artifact": "missions\\zeta9\\round4\\verification\\obstruction-D8-n96.json",
+      "sha256": "099d9861beabb89c5550143c5f9066e380db197519f32f4e173696680ec25282"
+    },
+    {
+      "D": 6,
+      "n": 192,
+      "forced_outer_primes": 152,
+      "available_outer_primes": 152,
+      "guaranteed_log_abs_primitive_per_n": "34.32",
+      "artifact": "missions\\zeta9\\round4\\verification\\obstruction-D6-n192.json",
+      "sha256": "8ebb6e68a2f17f61d8f3e554aa3d4561b536a1e2ebaba45b314fcc12ea65f7d7"
+    },
+    {
+      "D": 8,
+      "n": 192,
+      "forced_outer_primes": 197,
+      "available_outer_primes": 197,
+      "guaranteed_log_abs_primitive_per_n": "52.65",
+      "artifact": "missions\\zeta9\\round4\\verification\\obstruction-D8-n192.json",
+      "sha256": "3fb4df58f436acfc3232712b0fac7d4a587202fc3bcf772b1d8e2b203dbd5bfe"
+    },
+    {
+      "D": 6,
+      "n": 384,
+      "forced_outer_primes": 280,
+      "available_outer_primes": 281,
+      "guaranteed_log_abs_primitive_per_n": "34.70",
+      "artifact": "missions\\zeta9\\round4\\verification\\obstruction-D6-n384.json",
+      "sha256": "665e88fc6de8c7a17604ce3d0a8263799132ff020e37383176143609d68c2706"
+    },
+    {
+      "D": 8,
+      "n": 384,
+      "forced_outer_primes": 361,
+      "available_outer_primes": 362,
+      "guaranteed_log_abs_primitive_per_n": "52.57",
+      "artifact": "missions\\zeta9\\round4\\verification\\obstruction-D8-n384.json",
+      "sha256": "b87a484489991d6736090c10d2463acffd37da74e9b876bec82e2d9e00f07605"
+    }
+  ],
+  "conditional_obstruction": "liminf (sum_good_outer_primes log(p))/n > 3 log(2) implies primitive exponential growth.",
+  "unproved_condition": "Uniform weighted density of primes with nonzero truncated residue sums.",
+  "scope": "Finite obstruction certificates plus a universal highest-coefficient lemma; neither an irrationality proof nor an unconditional impossibility theorem for the family.",
+  "prior_artifacts": [
+    {
+      "directory": "missions/zeta9",
+      "files_verified": 70,
+      "manifest_sha256": "5e200973d4f68bcca794a354e7a9c0e951c3b9f5af0bd53742b5c854ce978225",
+      "unchanged": true
+    },
+    {
+      "directory": "missions/zeta9/round2",
+      "files_verified": 243,
+      "manifest_sha256": "c66c427f76abf637ba76a899219aaba666d2ca5a912682d2ea1414d390dde91c",
+      "unchanged": true
+    },
+    {
+      "directory": "missions/zeta9/round3",
+      "files_verified": 54,
+      "manifest_sha256": "8f4c4cc0d94ee72a7b768110432ec6165b315f8c14633a37b4de15e9f2c3ff2a",
+      "unchanged": true
+    }
+  ]
+}

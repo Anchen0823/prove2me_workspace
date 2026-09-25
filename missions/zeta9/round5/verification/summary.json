@@ -1,0 +1,260 @@
+{
+  "status": "round_complete_no_irrationality_proof",
+  "date": "2026-09-24",
+  "new_pilot_blocks": 14,
+  "regression_blocks": 2,
+  "promotion_blocks": 1,
+  "completed_blocks": 17,
+  "timeouts": 0,
+  "unresolved_blocks": 0,
+  "selected_candidates": 94,
+  "certified_nonzero": 94,
+  "primitive_below_one": 9,
+  "pure_constant_enumeration_records": 2,
+  "zero_enumeration_records": 0,
+  "stored_full_zero_rank_sum": 12,
+  "polynomial_identities": 79,
+  "local_pole_checks": 13567,
+  "direct_original_product_nonzero_checks": 17,
+  "half_line_sign_certificates": 55,
+  "profiles": [
+    {
+      "p": 9,
+      "m_ratio": "1/1",
+      "R": 4,
+      "scales": [
+        {
+          "n": 12,
+          "case_id": "p9-n12-m12-R4",
+          "selected_index": 5,
+          "rn_display": -0.6143490978597158,
+          "rn_lower": "-73721891743165901034033224487974638852477/120000000000000000000000000000000000000000",
+          "rn_upper": "-24573963914388633678011074829324879617491/40000000000000000000000000000000000000000",
+          "below_one": true
+        },
+        {
+          "n": 24,
+          "case_id": "p9-n24-m24-R4",
+          "selected_index": 3,
+          "rn_display": -0.012784106401565416,
+          "rn_lower": "-10227285121252333493503114450027874613261/800000000000000000000000000000000000000000",
+          "rn_upper": "-30681855363757000480509343350083623839779/2400000000000000000000000000000000000000000",
+          "below_one": true
+        }
+      ],
+      "rn_increase_strict": true,
+      "eligible_for_n48": true,
+      "reason": "n24 strict primitive value below one"
+    },
+    {
+      "p": 9,
+      "m_ratio": "1/1",
+      "R": 6,
+      "scales": [
+        {
+          "n": 12,
+          "case_id": "p9-n12-m12-R6",
+          "selected_index": 0,
+          "rn_display": 0.5466789616051476,
+          "rn_lower": "65601475392617712475168929383850252313163/120000000000000000000000000000000000000000",
+          "rn_upper": "21867158464205904158389643127950084104389/40000000000000000000000000000000000000000",
+          "below_one": false
+        },
+        {
+          "n": 24,
+          "case_id": "p9-n24-m24-R6",
+          "selected_index": 7,
+          "rn_display": 1.1049991597846105,
+          "rn_lower": "5303995966966130049125911814081743560199/4800000000000000000000000000000000000000",
+          "rn_upper": "8839993278276883415209853023469572600333/8000000000000000000000000000000000000000",
+          "below_one": false
+        }
+      ],
+      "rn_increase_strict": true,
+      "eligible_for_n48": false,
+      "reason": "no n24 small value, no rate improvement, and no p9 height <=1.30"
+    },
+    {
+      "p": 9,
+      "m_ratio": "1/1",
+      "R": 8,
+      "scales": [
+        {
+          "n": 12,
+          "case_id": "p9-n12-m12-R8",
+          "selected_index": 0,
+          "rn_display": 1.222846446845052,
+          "rn_lower": "917134835133788923362842277026299239781/750000000000000000000000000000000000000",
+          "rn_upper": "29348314724281245547610952864841575673/24000000000000000000000000000000000000",
+          "below_one": false
+        },
+        {
+          "n": 24,
+          "case_id": "p9-n24-m24-R8",
+          "selected_index": 1,
+          "rn_display": 1.431261514355227,
+          "rn_lower": "858756908613136270932020863642564640537/600000000000000000000000000000000000000",
+          "rn_upper": "2862523028710454236440069545475215468457/2000000000000000000000000000000000000000",
+          "below_one": false
+        }
+      ],
+      "rn_increase_strict": true,
+      "eligible_for_n48": false,
+      "reason": "no n24 small value, no rate improvement, and no p9 height <=1.30"
+    },
+    {
+      "p": 7,
+      "m_ratio": "1/2",
+      "R": 2,
+      "scales": [
+        {
+          "n": 12,
+          "case_id": "p7-n12-m6-R2",
+          "selected_index": 0,
+          "rn_display": 13.744028248974239,
+          "rn_lower": "8246416949384543882666521390832195907149/600000000000000000000000000000000000000",
+          "rn_upper": "8246416949384543882666521390832195907151/600000000000000000000000000000000000000",
+          "below_one": false
+        },
+        {
+          "n": 24,
+          "case_id": "p7-n24-m12-R2",
+          "selected_index": 0,
+          "rn_display": 16.056730433900807,
+          "rn_lower": "12845384347120647235072639220112515953039/800000000000000000000000000000000000000",
+          "rn_upper": "38536153041361941705217917660337547859121/2400000000000000000000000000000000000000",
+          "below_one": false
+        }
+      ],
+      "rn_increase_strict": true,
+      "eligible_for_n48": false,
+      "reason": "no n24 small value, no rate improvement, and no p9 height <=1.30"
+    },
+    {
+      "p": 7,
+      "m_ratio": "1/2",
+      "R": 3,
+      "scales": [
+        {
+          "n": 12,
+          "case_id": "p7-n12-m6-R3",
+          "selected_index": 5,
+          "rn_display": 6.798962669259141,
+          "rn_lower": "2039688800777742308872681868513060885041/300000000000000000000000000000000000000",
+          "rn_upper": "1019844400388871154436340934256530442521/150000000000000000000000000000000000000",
+          "below_one": false
+        },
+        {
+          "n": 24,
+          "case_id": "p7-n24-m12-R3",
+          "selected_index": 0,
+          "rn_display": 8.15610885828654,
+          "rn_lower": "1957466125988769613798708117529924585587/240000000000000000000000000000000000000",
+          "rn_upper": "9787330629943848068993540587649622927937/1200000000000000000000000000000000000000",
+          "below_one": false
+        }
+      ],
+      "rn_increase_strict": true,
+      "eligible_for_n48": false,
+      "reason": "no n24 small value, no rate improvement, and no p9 height <=1.30"
+    },
+    {
+      "p": 5,
+      "m_ratio": "1/4",
+      "R": 1,
+      "scales": [
+        {
+          "n": 12,
+          "case_id": "p5-n12-m3-R1",
+          "selected_index": 0,
+          "rn_display": 11.763818027421769,
+          "rn_lower": "4705527210968706951744037236740060240023/400000000000000000000000000000000000000",
+          "rn_upper": "14116581632906120855232111710220180720073/1200000000000000000000000000000000000000",
+          "below_one": false
+        },
+        {
+          "n": 24,
+          "case_id": "p5-n24-m6-R1",
+          "selected_index": 0,
+          "rn_display": 12.44772359166826,
+          "rn_lower": "5974907324000764377684539872462629300671/480000000000000000000000000000000000000",
+          "rn_upper": "29874536620003821888422699362313146503359/2400000000000000000000000000000000000000",
+          "below_one": false
+        }
+      ],
+      "rn_increase_strict": true,
+      "eligible_for_n48": false,
+      "reason": "no n24 small value, no rate improvement, and no p9 height <=1.30"
+    },
+    {
+      "p": 5,
+      "m_ratio": "1/4",
+      "R": 2,
+      "scales": [
+        {
+          "n": 12,
+          "case_id": "p5-n12-m3-R2",
+          "selected_index": 0,
+          "rn_display": 8.108636236976691,
+          "rn_lower": "9730363484372028565073287543015224206891/1200000000000000000000000000000000000000",
+          "rn_upper": "648690898958135237671552502867681613793/80000000000000000000000000000000000000",
+          "below_one": false
+        },
+        {
+          "n": 24,
+          "case_id": "p5-n24-m6-R2",
+          "selected_index": 3,
+          "rn_display": 8.857460328284917,
+          "rn_lower": "3542984131313966419805312407174710533063/400000000000000000000000000000000000000",
+          "rn_upper": "10628952393941899259415937221524131599191/1200000000000000000000000000000000000000",
+          "below_one": false
+        }
+      ],
+      "rn_increase_strict": true,
+      "eligible_for_n48": false,
+      "reason": "no n24 small value, no rate improvement, and no p9 height <=1.30"
+    }
+  ],
+  "n48_best_rn": 0.3727707904696993,
+  "n96_run": false,
+  "n96_stop_reason": "n48 all eight >1, worsening rate, no applicable uniform negative exponent proof",
+  "backup_profiles": 18,
+  "backup_promotions": 0,
+  "proved_uniform_results": [
+    "All-prime integerization including the constant coordinate.",
+    "p9 m=n full formal kernel classified by explicit telescopers.",
+    "For each fixed R>=4, integer reduction to degree 4 has polynomial overhead."
+  ],
+  "unproved_steps": [
+    "Uniform infinite family with controlled combined coefficient-height and primitive integerization cost.",
+    "Nonzero evaluated forms on an infinite subsequence.",
+    "Strictly negative combined exponent on that subsequence."
+  ],
+  "prior_artifacts": [
+    {
+      "directory": "missions/zeta9",
+      "files_verified": 70,
+      "manifest_sha256": "5e200973d4f68bcca794a354e7a9c0e951c3b9f5af0bd53742b5c854ce978225",
+      "unchanged": true
+    },
+    {
+      "directory": "missions/zeta9/round2",
+      "files_verified": 243,
+      "manifest_sha256": "c66c427f76abf637ba76a899219aaba666d2ca5a912682d2ea1414d390dde91c",
+      "unchanged": true
+    },
+    {
+      "directory": "missions/zeta9/round3",
+      "files_verified": 54,
+      "manifest_sha256": "8f4c4cc0d94ee72a7b768110432ec6165b315f8c14633a37b4de15e9f2c3ff2a",
+      "unchanged": true
+    },
+    {
+      "directory": "missions/zeta9/round4",
+      "files_verified": 37,
+      "manifest_sha256": "ef406aea1103e4a3bcffe76fc44c219dc7cc543ee05423601586b02ae854e2b1",
+      "unchanged": true
+    }
+  ],
+  "formalization_started": false
+}

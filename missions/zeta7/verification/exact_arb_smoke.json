@@ -1,0 +1,39 @@
+[
+  {
+    "s": 7,
+    "K": 8,
+    "N": 1,
+    "q": 3,
+    "h": 7,
+    "degree": 7,
+    "denominator": 232549148522250000000000000000000000,
+    "numerator_content": 1,
+    "zero_multiplicities": {
+      "1": 3
+    },
+    "log10_value": "13.972140775791253",
+    "log_value": "32.1720430675512",
+    "arb_bits": 510,
+    "relative_accuracy_bits": 190,
+    "positive": true,
+    "P_interval": {
+      "mid": "9378659652599293498667430712812120",
+      "rad": "2",
+      "exp": -20
+    },
+    "log_interval": {
+      "mid": "32172043067551201501492226549726150",
+      "rad": "2",
+      "exp": -33
+    },
+    "log10_interval": {
+      "mid": "13972140775791253697053442049128809",
+      "rad": "2",
+      "exp": -33
+    },
+    "log_value_per_K2": 0.5026881729304875,
+    "height_digits": 110,
+    "coefficients_sha256": "42b854a4ced7f7d07f4b88bfb62912da4938e40ddbb4930eb9635d4deaa4a792",
+    "seconds": 0.0
+  }
+]

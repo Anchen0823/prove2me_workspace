@@ -1,0 +1,168 @@
+{
+  "status": "ok",
+  "cases": 20,
+  "rows": [
+    {
+      "n": 2,
+      "rho": "-4596",
+      "sign": -1,
+      "Rodrigues_identity": true,
+      "operator_identity": true,
+      "palindromic": true
+    },
+    {
+      "n": 4,
+      "rho": "2175731340",
+      "sign": 1,
+      "Rodrigues_identity": true,
+      "operator_identity": true,
+      "palindromic": true
+    },
+    {
+      "n": 6,
+      "rho": "-3160643276285880",
+      "sign": -1,
+      "Rodrigues_identity": true,
+      "operator_identity": true,
+      "palindromic": true
+    },
+    {
+      "n": 8,
+      "rho": "7590200252597469391500",
+      "sign": 1,
+      "Rodrigues_identity": true,
+      "operator_identity": true,
+      "palindromic": true
+    },
+    {
+      "n": 10,
+      "rho": "-24282085611858166876347660096",
+      "sign": -1,
+      "Rodrigues_identity": true,
+      "operator_identity": true,
+      "palindromic": true
+    },
+    {
+      "n": 12,
+      "rho": "93554135329526952261963596846847816",
+      "sign": 1,
+      "Rodrigues_identity": true,
+      "operator_identity": true,
+      "palindromic": true
+    },
+    {
+      "n": 14,
+      "rho": "-410656839349694760781247826115193469357360",
+      "sign": -1,
+      "Rodrigues_identity": true,
+      "operator_identity": true,
+      "palindromic": true
+    },
+    {
+      "n": 16,
+      "rho": "1985325512378108296633650863521625141002885941900",
+      "sign": 1,
+      "Rodrigues_identity": true,
+      "operator_identity": true,
+      "palindromic": true
+    },
+    {
+      "n": 18,
+      "rho": "-10339235129371860993836976195174168138619593478999722000",
+      "sign": -1,
+      "Rodrigues_identity": true,
+      "operator_identity": true,
+      "palindromic": true
+    },
+    {
+      "n": 20,
+      "rho": "57120836319929237004195575199249847614450506490504955062363840",
+      "sign": 1,
+      "Rodrigues_identity": true,
+      "operator_identity": true,
+      "palindromic": true
+    },
+    {
+      "n": 22,
+      "rho": "-331100883015589193417254421794610467735651627744339982438729132960640",
+      "sign": -1,
+      "Rodrigues_identity": true,
+      "operator_identity": true,
+      "palindromic": true
+    },
+    {
+      "n": 24,
+      "rho": "1997208143361345827588905635077502645155088415592257785411756329144762896200",
+      "sign": 1,
+      "Rodrigues_identity": true,
+      "operator_identity": true,
+      "palindromic": true
+    },
+    {
+      "n": 26,
+      "rho": "-12458393840749013798006292921868500085840698762229604862487214258615779060629614400",
+      "sign": -1,
+      "Rodrigues_identity": true,
+      "operator_identity": true,
+      "palindromic": true
+    },
+    {
+      "n": 28,
+      "rho": "79974325748934816073098700246080186051610707538750164167588931389989745235888259761954000",
+      "sign": 1,
+      "Rodrigues_identity": true,
+      "operator_identity": true,
+      "palindromic": true
+    },
+    {
+      "n": 30,
+      "rho": "-526255383689674117538619576965522027155423147672215034679496976176004803374417523149354201750880",
+      "sign": -1,
+      "Rodrigues_identity": true,
+      "operator_identity": true,
+      "palindromic": true
+    },
+    {
+      "n": 32,
+      "rho": "3538594011322881371469881796501368937876360887404775534834391260569889999779408315062743822055555811980",
+      "sign": 1,
+      "Rodrigues_identity": true,
+      "operator_identity": true,
+      "palindromic": true
+    },
+    {
+      "n": 34,
+      "rho": "-24251004544968103683389582694877093773270087154711219591661960476433234661429925835254018520619301425793422000",
+      "sign": -1,
+      "Rodrigues_identity": true,
+      "operator_identity": true,
+      "palindromic": true
+    },
+    {
+      "n": 36,
+      "rho": "169028681300415584860423996266636310962999372324305575983497743263416495668215509975303250285477359156559676282287600",
+      "sign": 1,
+      "Rodrigues_identity": true,
+      "operator_identity": true,
+      "palindromic": true
+    },
+    {
+      "n": 38,
+      "rho": "-1196022134480267158474949377172370496931799037798223788836220958644755218873743380760650045346605735480582284402831131164000",
+      "sign": -1,
+      "Rodrigues_identity": true,
+      "operator_identity": true,
+      "palindromic": true
+    },
+    {
+      "n": 40,
+      "rho": "8578312923887327532738961823805061541179644069362633628728437049282954693508986572545227743696277519821905423194043435582537144000",
+      "sign": 1,
+      "Rodrigues_identity": true,
+      "operator_identity": true,
+      "palindromic": true
+    }
+  ],
+  "scope": "finite exact sanity checks; universal nonvanishing is established in the proof note",
+  "source_sha256": "a1ec60036c249aefab1fe9929ca305727b0c0aa8a14fecc5b42b1f44a14d86d2"
+}

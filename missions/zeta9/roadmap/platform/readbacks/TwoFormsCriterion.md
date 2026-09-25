@@ -1,0 +1,1 @@
+For every real number \(x\), if for every real \(\varepsilon>0\) there are integers \(b_1,a_1,b_2,a_2\) such that \(b_1a_2\ne b_2a_1\), \(\lvert b_1+a_1x\rvert<\varepsilon\), and \(\lvert b_2+a_2x\rvert<\varepsilon\), then \(x\) is irrational: it is not equal to any rational number.

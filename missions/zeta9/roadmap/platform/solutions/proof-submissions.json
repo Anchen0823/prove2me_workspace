@@ -1,0 +1,23 @@
+{
+  "schema": "zeta9-private-proof-submissions-v1",
+  "submissions": {
+    "Z9.P.FORMAL": {
+      "theorem_id": "207cc87c-ecbb-4be0-ab87-a1c3c0c0293f",
+      "submission_id": "512036d0-8a8e-4b36-b3d8-6af486efbc28",
+      "status": "ACCEPTED",
+      "solution_path": "solutions/Sol_ZetaNine_irrational_of_two_small_integer_forms.lean",
+      "solution_sha256": "be9461e0acff5bc48d66d3308d488ed006bede94610758c2e94767bf9a375d1f",
+      "explanation_path": "solutions/TwoFormsCriterion-explanation.md",
+      "error_message": ""
+    },
+    "Z9.RED.J.FORMAL": {
+      "theorem_id": "cbb9cc51-c34d-4c25-9c61-dd4bc0e969e1",
+      "submission_id": "15b59916-005e-4604-b27c-adfa1eca0bb6",
+      "status": "ACCEPTED",
+      "solution_path": "solutions/Sol_ZetaNine_exponential_margin_of_volume_and_shape.lean",
+      "solution_sha256": "c7ec157cd3068011c9498252c21dfe235c7d1ff9556bd73eec0a12467690757b",
+      "explanation_path": "solutions/ExponentMarginBridge-explanation.md",
+      "error_message": ""
+    }
+  }
+}

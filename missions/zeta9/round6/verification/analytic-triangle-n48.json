@@ -1,0 +1,358 @@
+{
+  "status": "exact_rational_all_direction_triangle_certificate",
+  "archive": "missions\\zeta9\\round6\\verification\\search-input-n48.json.gz",
+  "archive_sha256": "4cffb3281b811f2023418e5ee208d9bdebcdea316d42c6bb30ee7296e3b7849a",
+  "n": 48,
+  "cutoff": 384,
+  "moment_bound_proof": "S_r=sum_{k>n} R_n(k)u(k)^r. Partial sum k<=T is exact rational. For k>T, R_n(k)<=n!^7(1+2n/T)^(2n)k^(-7n-9), u(k)^r<=2^r k^(2r), and integral comparison gives the saved tail.",
+  "moment_lower_upper": [
+    {
+      "r": 0,
+      "lower": {
+        "decimal_40_digits_noncertifying": "5.409264622717540279555922227518754225187E-230",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 1419,
+        "denominator_digits": 1649,
+        "fraction_sha256": "4614949ed2b31bd63f4c63320661d8c6af7a47cdddd6efbacab85541b874b2fc"
+      },
+      "upper": {
+        "decimal_40_digits_noncertifying": "5.409264622717540279555922227518754225187E-230",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 2155,
+        "denominator_digits": 2385,
+        "fraction_sha256": "802261be45f4c8ee46dbfd418887157492002abb1e222c0e9fa796a21ca8ddc1"
+      },
+      "tail": {
+        "decimal_40_digits_noncertifying": "2.595512594066595180887661417075426901939E-455",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 323,
+        "denominator_digits": 778,
+        "fraction_sha256": "25d046a31b94c54ed3dc1fe5c12404b313a01d4d3857f274e9ff95ee6011d2f1"
+      }
+    },
+    {
+      "r": 1,
+      "lower": {
+        "decimal_40_digits_noncertifying": "2.582560793274986153898910266965462997807E-226",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 1416,
+        "denominator_digits": 1641,
+        "fraction_sha256": "d905c24e209b31b89a9140964382a7bf010d96d3620a75e755bd6374fd36ca49"
+      },
+      "upper": {
+        "decimal_40_digits_noncertifying": "2.582560793274986153898910266965462997807E-226",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 2151,
+        "denominator_digits": 2376,
+        "fraction_sha256": "f9b6f65078cd33721fce8b08fa2d046ff124de03ea7c4daddefb02f75df61a78"
+      },
+      "tail": {
+        "decimal_40_digits_noncertifying": "7.699241131246505701379065769543760663321E-450",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 324,
+        "denominator_digits": 773,
+        "fraction_sha256": "316383cb01ad1e7b82959f69f39675da043f31cab6b9e036a6552f1981bb343f"
+      }
+    },
+    {
+      "r": 2,
+      "lower": {
+        "decimal_40_digits_noncertifying": "1.233172432113239850226232625564372491175E-222",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 1414,
+        "denominator_digits": 1636,
+        "fraction_sha256": "561581d05fc98478cb2fc4271210a648095eebab95f139022e398af7b57a0d8a"
+      },
+      "upper": {
+        "decimal_40_digits_noncertifying": "1.233172432113239850226232625564372491175E-222",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 2147,
+        "denominator_digits": 2369,
+        "fraction_sha256": "21de3f9836724c469170ecac41cbbb9921232a50f701536fb7a8a6b25c7cfb9d"
+      },
+      "tail": {
+        "decimal_40_digits_noncertifying": "2.283955062854041074636897768017264189122E-444",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 323,
+        "denominator_digits": 767,
+        "fraction_sha256": "f5f206ee1903d952c82546d445413614efceb7b26f1020b74fd7a163a91afb41"
+      }
+    },
+    {
+      "r": 3,
+      "lower": {
+        "decimal_40_digits_noncertifying": "5.889249025340235846510780174779006720708E-219",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 1408,
+        "denominator_digits": 1627,
+        "fraction_sha256": "08fccbbbc489c2b19df37309bbad322e2b1ada70cb82ad6c2cd31d03f80bb43a"
+      },
+      "upper": {
+        "decimal_40_digits_noncertifying": "5.889249025340235846510780174779006720708E-219",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 2139,
+        "denominator_digits": 2357,
+        "fraction_sha256": "e0349badc646e0a6d6ad441a466ac9a3c2f0404637934e13ebbea06ca0bf5baa"
+      },
+      "tail": {
+        "decimal_40_digits_noncertifying": "6.775513516827802570329222193813979929717E-439",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 323,
+        "denominator_digits": 761,
+        "fraction_sha256": "3abd18b86219a261b54eac25658a43b55fe13cbdc89210ef5ff2e41cb5177618"
+      }
+    },
+    {
+      "r": 4,
+      "lower": {
+        "decimal_40_digits_noncertifying": "2.812942659117059574173327991596544432168E-215",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 1413,
+        "denominator_digits": 1627,
+        "fraction_sha256": "5e2ba6dae9a6136fcdf996898efcd453b8a2131c39eadea9316db8e949ace44a"
+      },
+      "upper": {
+        "decimal_40_digits_noncertifying": "2.812942659117059574173327991596544432168E-215",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 2142,
+        "denominator_digits": 2357,
+        "fraction_sha256": "234b68198f517b09599526b9e18af16f61e17cc81259bc889aeef7263b1f8bdb"
+      },
+      "tail": {
+        "decimal_40_digits_noncertifying": "2.010074172288260917047246644524580761229E-433",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 324,
+        "denominator_digits": 757,
+        "fraction_sha256": "7c8418011c590a6ec51e35f7d460d6cccbe8369c9d53a8f31ad713d4758ce641"
+      }
+    }
+  ],
+  "T_inverse_output_coefficients_sha256": "8f8e294bf5ff0122f6f8fa8f345751be80c12bed8306857b95c6f5078b0c0786",
+  "minima": [
+    {
+      "weights": "lower",
+      "exclude_pure_constant": false,
+      "min": {
+        "decimal_40_digits_noncertifying": "5.660418610770283720887969867327988763490E-106",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 1591,
+        "denominator_digits": 1696,
+        "fraction_sha256": "5a41e10f03681027ed0904e19eea5235df9fd87c19adf4d916e918ef157be6f1"
+      },
+      "gauss_g1_triangle_norm": {
+        "decimal_40_digits_noncertifying": "5.660418610770283720887969867327988763490E-106",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 1591,
+        "denominator_digits": 1696,
+        "fraction_sha256": "5a41e10f03681027ed0904e19eea5235df9fd87c19adf4d916e918ef157be6f1"
+      },
+      "gauss_g2_triangle_norm": {
+        "decimal_40_digits_noncertifying": "7.872016961029434809950543026333069461822E-106",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 1722,
+        "denominator_digits": 1827,
+        "fraction_sha256": "2d21b36fb8724ff31663f7ec706d2e7a460671ed21f9965ce3f97c06b56eecec"
+      },
+      "gauss_shape_ratio_N2_over_N1": "1.390712861068448669495131932624154572951",
+      "gram_covolume_squared": {
+        "decimal_40_digits_noncertifying": "5.281225574980850743676117018767886353617E-422",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 6445,
+        "denominator_digits": 6866,
+        "fraction_sha256": "18f82470dbf2a4d7f82d19e68f56ceb62024d216d6faee277a102b7c07e61ac0"
+      },
+      "output_B_A9": [
+        532553233626044304979684351769666870232692154373030486312778621455812092339979134604042863228318844372286,
+        -531485801355437487458026736055186346671266515962194917224383375984167919601713890697888473822488693034257
+      ],
+      "gauss_g1": [
+        532553233626044304979684351769666870232692154373030486312778621455812092339979134604042863228318844372286,
+        -531485801355437487458026736055186346671266515962194917224383375984167919601713890697888473822488693034257
+      ],
+      "gauss_g2": [
+        1165516273980898559093253171244172677228493207851330183938202653933492337110202458638006287424243458456809,
+        -1163180151309567199645322783123462793868528784376235302151798808932788227752708375901843918017192195873699
+      ],
+      "ymax": 0,
+      "y_slices_checked": 1,
+      "pure_constant": false
+    },
+    {
+      "weights": "lower",
+      "exclude_pure_constant": true,
+      "min": {
+        "decimal_40_digits_noncertifying": "5.660418610770283720887969867327988763490E-106",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 1591,
+        "denominator_digits": 1696,
+        "fraction_sha256": "5a41e10f03681027ed0904e19eea5235df9fd87c19adf4d916e918ef157be6f1"
+      },
+      "gauss_g1_triangle_norm": {
+        "decimal_40_digits_noncertifying": "5.660418610770283720887969867327988763490E-106",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 1591,
+        "denominator_digits": 1696,
+        "fraction_sha256": "5a41e10f03681027ed0904e19eea5235df9fd87c19adf4d916e918ef157be6f1"
+      },
+      "gauss_g2_triangle_norm": {
+        "decimal_40_digits_noncertifying": "7.872016961029434809950543026333069461822E-106",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 1722,
+        "denominator_digits": 1827,
+        "fraction_sha256": "2d21b36fb8724ff31663f7ec706d2e7a460671ed21f9965ce3f97c06b56eecec"
+      },
+      "gauss_shape_ratio_N2_over_N1": "1.390712861068448669495131932624154572951",
+      "gram_covolume_squared": {
+        "decimal_40_digits_noncertifying": "5.281225574980850743676117018767886353617E-422",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 6445,
+        "denominator_digits": 6866,
+        "fraction_sha256": "18f82470dbf2a4d7f82d19e68f56ceb62024d216d6faee277a102b7c07e61ac0"
+      },
+      "output_B_A9": [
+        532553233626044304979684351769666870232692154373030486312778621455812092339979134604042863228318844372286,
+        -531485801355437487458026736055186346671266515962194917224383375984167919601713890697888473822488693034257
+      ],
+      "gauss_g1": [
+        532553233626044304979684351769666870232692154373030486312778621455812092339979134604042863228318844372286,
+        -531485801355437487458026736055186346671266515962194917224383375984167919601713890697888473822488693034257
+      ],
+      "gauss_g2": [
+        1165516273980898559093253171244172677228493207851330183938202653933492337110202458638006287424243458456809,
+        -1163180151309567199645322783123462793868528784376235302151798808932788227752708375901843918017192195873699
+      ],
+      "ymax": 0,
+      "y_slices_checked": 1,
+      "pure_constant": false
+    },
+    {
+      "weights": "upper",
+      "exclude_pure_constant": false,
+      "min": {
+        "decimal_40_digits_noncertifying": "5.660418610770283720887969867327988763490E-106",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 2334,
+        "denominator_digits": 2439,
+        "fraction_sha256": "d04bc384e3e8f1b3e8806607ccdef4600a66df6ca5fb0d3b31c6abb9b171e444"
+      },
+      "gauss_g1_triangle_norm": {
+        "decimal_40_digits_noncertifying": "5.660418610770283720887969867327988763490E-106",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 2334,
+        "denominator_digits": 2439,
+        "fraction_sha256": "d04bc384e3e8f1b3e8806607ccdef4600a66df6ca5fb0d3b31c6abb9b171e444"
+      },
+      "gauss_g2_triangle_norm": {
+        "decimal_40_digits_noncertifying": "7.872016961029434809950543026333069461822E-106",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 2460,
+        "denominator_digits": 2565,
+        "fraction_sha256": "8e6bb4714a4df9bd97ca851a7827a13c009070dd066703b2161d3563f5fd3c8a"
+      },
+      "gauss_shape_ratio_N2_over_N1": "1.390712861068448669495131932624154572951",
+      "gram_covolume_squared": {
+        "decimal_40_digits_noncertifying": "5.281225574980850743676117018767886353617E-422",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 9389,
+        "denominator_digits": 9810,
+        "fraction_sha256": "37adfb13902a8e1334257f66070e7bb26a625b8e4334ef34cef20f449e564797"
+      },
+      "output_B_A9": [
+        532553233626044304979684351769666870232692154373030486312778621455812092339979134604042863228318844372286,
+        -531485801355437487458026736055186346671266515962194917224383375984167919601713890697888473822488693034257
+      ],
+      "gauss_g1": [
+        532553233626044304979684351769666870232692154373030486312778621455812092339979134604042863228318844372286,
+        -531485801355437487458026736055186346671266515962194917224383375984167919601713890697888473822488693034257
+      ],
+      "gauss_g2": [
+        1165516273980898559093253171244172677228493207851330183938202653933492337110202458638006287424243458456809,
+        -1163180151309567199645322783123462793868528784376235302151798808932788227752708375901843918017192195873699
+      ],
+      "ymax": 0,
+      "y_slices_checked": 1,
+      "pure_constant": false
+    },
+    {
+      "weights": "upper",
+      "exclude_pure_constant": true,
+      "min": {
+        "decimal_40_digits_noncertifying": "5.660418610770283720887969867327988763490E-106",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 2334,
+        "denominator_digits": 2439,
+        "fraction_sha256": "d04bc384e3e8f1b3e8806607ccdef4600a66df6ca5fb0d3b31c6abb9b171e444"
+      },
+      "gauss_g1_triangle_norm": {
+        "decimal_40_digits_noncertifying": "5.660418610770283720887969867327988763490E-106",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 2334,
+        "denominator_digits": 2439,
+        "fraction_sha256": "d04bc384e3e8f1b3e8806607ccdef4600a66df6ca5fb0d3b31c6abb9b171e444"
+      },
+      "gauss_g2_triangle_norm": {
+        "decimal_40_digits_noncertifying": "7.872016961029434809950543026333069461822E-106",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 2460,
+        "denominator_digits": 2565,
+        "fraction_sha256": "8e6bb4714a4df9bd97ca851a7827a13c009070dd066703b2161d3563f5fd3c8a"
+      },
+      "gauss_shape_ratio_N2_over_N1": "1.390712861068448669495131932624154572951",
+      "gram_covolume_squared": {
+        "decimal_40_digits_noncertifying": "5.281225574980850743676117018767886353617E-422",
+        "above_one_exact": false,
+        "below_one_exact": true,
+        "numerator_digits": 9389,
+        "denominator_digits": 9810,
+        "fraction_sha256": "37adfb13902a8e1334257f66070e7bb26a625b8e4334ef34cef20f449e564797"
+      },
+      "output_B_A9": [
+        532553233626044304979684351769666870232692154373030486312778621455812092339979134604042863228318844372286,
+        -531485801355437487458026736055186346671266515962194917224383375984167919601713890697888473822488693034257
+      ],
+      "gauss_g1": [
+        532553233626044304979684351769666870232692154373030486312778621455812092339979134604042863228318844372286,
+        -531485801355437487458026736055186346671266515962194917224383375984167919601713890697888473822488693034257
+      ],
+      "gauss_g2": [
+        1165516273980898559093253171244172677228493207851330183938202653933492337110202458638006287424243458456809,
+        -1163180151309567199645322783123462793868528784376235302151798808932788227752708375901843918017192195873699
+      ],
+      "ymax": 0,
+      "y_slices_checked": 1,
+      "pure_constant": false
+    }
+  ],
+  "interpretation": "min_lower>1 rules out only triangle/positive-upper certification, not a smaller true primitive form from cancellation. min_upper<1 gives an explicit direction whose triangle bound is <1.",
+  "elapsed_seconds": 6.963825799990445
+}

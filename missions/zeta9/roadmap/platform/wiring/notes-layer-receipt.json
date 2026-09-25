@@ -1,0 +1,63 @@
+{
+  "schema": "zeta9-notes-layer-v1",
+  "results": {
+    "Z9.NV.FIVESAMPLE": {
+      "job_id": "137bf420-65c6-4b71-8f19-617b16a048f5",
+      "name": "ZetaNine.five_sample_sign_forces_nonzero",
+      "job_status": "PUBLISHED",
+      "publish_error": "",
+      "theorem_id": "ca69bae0-6b9f-4b30-8a23-ceb6c61e402c",
+      "submission_id": "ba0750b0-bacb-4ab0-b862-940210a393da",
+      "proof_status": "ACCEPTED",
+      "solution_sha256": "9142b775770a727bf89551e1f5307140d70ecab38cccfbd4507582c2d774121d",
+      "proof_error": ""
+    },
+    "Z9.FI.SANDWICH": {
+      "job_id": "33f57851-cc73-4ad3-8cba-0e9b01a88005",
+      "name": "ZetaNine.min_lt_weighted_average_lt_max",
+      "job_status": "PUBLISHED",
+      "publish_error": "",
+      "theorem_id": "ce7cd721-4855-4529-9818-750413cf71e6",
+      "submission_id": "b490e4dd-be6f-4304-9117-13ec273f725b",
+      "proof_status": "ACCEPTED",
+      "solution_sha256": "0ecaf6f315015640445b7b77d1784c40a36950ddb222b24d6822d14ecc353fcb",
+      "proof_error": ""
+    },
+    "Z9.FI.MEDIANT": {
+      "job_id": "5caa64a1-d8ec-4e2a-a27b-c77e809a1e46",
+      "name": "ZetaNine.mediant_strictly_between_min_and_max",
+      "job_status": "PUBLISHED",
+      "publish_error": "",
+      "theorem_id": "6f2a3a79-137d-4946-af79-3771e9b88f6c",
+      "history": [
+        {
+          "submission_id": "c607f036-89cc-4780-b6af-ee0b443ef4d5",
+          "status": "CE",
+          "error_message": "Compile error in your proof:\nline 24: Tactic `rewrite` failed: Did not find an occurrence of the pattern\n  ∑ i ∈ ?s, ?f i * ?a\nin the target expression\n  ∑ j, w j * b j / B = (∑ j, w j * b j) * B⁻¹\n\nw a b : Fin 5 → ℝ\nhw : ∀ (j : Fin 5), 0 < w j\nhb : ∀ (j : Fin 5), 0 < b j\nhnd : ∃ j j', a j / b j ≠ a j' / b j'\nB : ℝ := ∑ i, w i * b i\nhB : B = ∑ i, w i * b i\nhBpos : 0 < B\nv : Fin 5 → ℝ := fun j => w j * b j / B\nhv : v = fun j => w j * b j / B\nhvpos : ∀ (j : Fin 5), 0 < v j\n⊢ ∑ j, w j * b j / B = (∑ j, w j * b j) * B⁻¹\nline 32: Tactic `rewrite` failed: Did not find an occurrence of the pattern\n  ∑ i ∈ ?s, ?f i * ?a\nin the target expression\n  (∑ i, w i * a i) * B⁻¹ = ∑ j, w j * a j / B\n\nw a b : Fin 5 → ℝ\nhw : ∀ (j : Fin 5), 0 < w j\nhb : ∀ (j : Fin 5), 0 < b j\nhnd : ∃ j j', a j / b j ≠ a j' / b j'\nB : ℝ := ∑ i, w i * b i\nhB : B = ∑ i, w i * b i\nhBpos : 0 < B\nv : Fin 5 → ℝ := fun j => w j * b j / B\nhv : v = fun j => w j * b j / B\nhvpos : ∀ (j : Fin 5), 0 < v j\nhvsum : ∑ j, v j = 1\nhstep : ∑ j, v j * (a j / b j) = ∑ j, w j * a j / B\n⊢ (∑ i, w i * a i) * B⁻¹ = ∑ j, w j * a j / B\nline 37: Tactic `rewrite` failed: Did not find an occurrence of the pattern\n  ∑ i, w i * b i\nin the target expression\n  a j / b j < (∑ i, w i * a i) / B\n\nw a b : Fin 5 → ℝ\nhw : ∀ (j : Fin 5), 0 < w j\nhb : ∀ (j : Fin 5), 0 < b j\nhnd : ∃ j j', a j / b j ≠ a j' / b j'\nB : ℝ := ∑ i, w i * b i\nhB : B = ∑ i, w i * b i\nhBpos : 0 < B\nv : Fin 5 → ℝ := fun j => w j * b j / B\nhv : v = fun j => w j * b j / B\nhvpos : ∀ (j : Fin 5), 0 < v j\nhvsum : ∑ j, v j = 1\nhmediant : (∑ i, w i * a i) / B = ∑ j, v j * (a j / b j)\nhs2 : ∃ j, ∑ i, v i * (a i / b i) < a j / b j\nj : Fin 5\nhj : a j / b j < ∑ i, v i * (a i / b i)\n⊢ a j / b j < (∑ i, w i * a i) / B\nline 39: Tactic `rewrite` failed: Did not find an occurrence of the pattern\n  ∑ i, w i * b i\nin the target expression\n  (∑ i, w i * a i) / B < a j / b j\n\nw a b : Fin 5 → ℝ\nhw : ∀ (j : Fin 5), 0 < w j\nhb : ∀ (j : Fin 5), 0 < b j\nhnd : ∃ j j', a j / b j ≠ a j' / b j'\nB : ℝ := ∑ i, w i * b i\nhB : B = ∑ i, w i * b i\nhBpos : 0 < B\nv : Fin 5 → ℝ := fun j => w j * b j / B\nhv : v = fun j => w j * b j / B\nhvpos : ∀ (j : Fin 5), 0 < v j\nhvsum : ∑ j, v j = 1\nhmediant : (∑ i, w i * a i) / B = ∑ j, v j * (a j / b j)\nhs1 : ∃ j, a j / b j < ∑ i, v i * (a i / b i)\nj : Fin 5\nhj : ∑ i, v i * (a i / b i) < a j / b j\n⊢ (∑ i, w i * a i) / B < a j / b j",
+          "solution_sha256": "7bf700c6551e2010c376508651565a33c070f5d761d232312dac9c42a3de2a5a"
+        }
+      ],
+      "submission_id": "529a6a27-c06f-47d0-89b3-6a319e29c642",
+      "proof_status": "ACCEPTED",
+      "solution_sha256": "faece46e4ee4e26e1962f587528f90a63851db3b778c8fade7a85e4551cd6fc1",
+      "proof_error": ""
+    },
+    "Z9.TA.CONE": {
+      "job_id": "3f6d9bcb-edfd-4b26-b588-c36cd9863f0f",
+      "name": "ZetaNine.positive_matrix_maps_nonneg_to_pos",
+      "job_status": "PUBLISHED",
+      "publish_error": "",
+      "theorem_id": "59100b91-97e3-427e-9154-301ad5bd6c43",
+      "submission_id": "8c4f1393-c53f-4805-b40f-0cadde48fe29",
+      "proof_status": "ACCEPTED",
+      "solution_sha256": "54a28b87a189cd0392846c8829eecf2a088a002435da82bfa444450867b695bf",
+      "proof_error": ""
+    }
+  },
+  "milestones": {
+    "Z9.NV.FIVESAMPLE": "445505b6-aad1-4223-8d3d-d105f3908ccb",
+    "Z9.FI.SANDWICH": "e741a784-8db8-48de-a144-6109da2ff5f3",
+    "Z9.FI.MEDIANT": "193809a6-8a32-4d86-a210-f4df235b5adc",
+    "Z9.TA.CONE": "aa671b0f-27b7-4aee-8bbc-016e320abe58"
+  }
+}

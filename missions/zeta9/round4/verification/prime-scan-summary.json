@@ -1,0 +1,240 @@
+{
+  "status": "ok",
+  "planned": 10,
+  "cases_done": 10,
+  "large_primes": 2428,
+  "nonzero": 2424,
+  "zero_unresolved": 4,
+  "seconds": 0.0,
+  "source_sha256": "bf9308ba4cd67d20a03083af3447ffe7e045889a39912a67ec396a2b10782fec",
+  "rows": [
+    {
+      "case_id": "D6-n24",
+      "D": 6,
+      "n": 24,
+      "artifact": "missions\\zeta9\\round4\\verification\\prime-scan-D6-n24.json.gz",
+      "C_sha256": "58b5cb031b1305dcc2e49f5d018fedf6b6f5c54f9eacda79dca78fa8c963b213",
+      "summary": {
+        "2n_lt_p_le_Dn": {
+          "primes": 19,
+          "nonzero": 19,
+          "zero_unresolved_primes": []
+        },
+        "Dn_lt_p_le_2Dn": {
+          "primes": 27,
+          "nonzero": 27,
+          "zero_unresolved_primes": []
+        }
+      },
+      "large_primes": 46,
+      "nonzero": 46,
+      "zero_unresolved": 0
+    },
+    {
+      "case_id": "D8-n24",
+      "D": 8,
+      "n": 24,
+      "artifact": "missions\\zeta9\\round4\\verification\\prime-scan-D8-n24.json.gz",
+      "C_sha256": "58b5cb031b1305dcc2e49f5d018fedf6b6f5c54f9eacda79dca78fa8c963b213",
+      "summary": {
+        "2n_lt_p_le_Dn": {
+          "primes": 28,
+          "nonzero": 28,
+          "zero_unresolved_primes": []
+        },
+        "Dn_lt_p_le_2Dn": {
+          "primes": 33,
+          "nonzero": 33,
+          "zero_unresolved_primes": []
+        }
+      },
+      "large_primes": 61,
+      "nonzero": 61,
+      "zero_unresolved": 0
+    },
+    {
+      "case_id": "D6-n48",
+      "D": 6,
+      "n": 48,
+      "artifact": "missions\\zeta9\\round4\\verification\\prime-scan-D6-n48.json.gz",
+      "C_sha256": "3fc4cc1faa6ea381cf68d810124518f3404c3f3836abba57487d73cfb986140c",
+      "summary": {
+        "2n_lt_p_le_Dn": {
+          "primes": 37,
+          "nonzero": 37,
+          "zero_unresolved_primes": []
+        },
+        "Dn_lt_p_le_2Dn": {
+          "primes": 44,
+          "nonzero": 44,
+          "zero_unresolved_primes": []
+        }
+      },
+      "large_primes": 81,
+      "nonzero": 81,
+      "zero_unresolved": 0
+    },
+    {
+      "case_id": "D8-n48",
+      "D": 8,
+      "n": 48,
+      "artifact": "missions\\zeta9\\round4\\verification\\prime-scan-D8-n48.json.gz",
+      "C_sha256": "3fc4cc1faa6ea381cf68d810124518f3404c3f3836abba57487d73cfb986140c",
+      "summary": {
+        "2n_lt_p_le_Dn": {
+          "primes": 52,
+          "nonzero": 51,
+          "zero_unresolved_primes": [
+            173
+          ]
+        },
+        "Dn_lt_p_le_2Dn": {
+          "primes": 59,
+          "nonzero": 59,
+          "zero_unresolved_primes": []
+        }
+      },
+      "large_primes": 111,
+      "nonzero": 110,
+      "zero_unresolved": 1
+    },
+    {
+      "case_id": "D6-n96",
+      "D": 6,
+      "n": 96,
+      "artifact": "missions\\zeta9\\round4\\verification\\prime-scan-D6-n96.json.gz",
+      "C_sha256": "061e875faea53a4c8d45e1a6b83b1d5d96faf04a01da65c9b597cf6dc7b3e24c",
+      "summary": {
+        "2n_lt_p_le_Dn": {
+          "primes": 62,
+          "nonzero": 62,
+          "zero_unresolved_primes": []
+        },
+        "Dn_lt_p_le_2Dn": {
+          "primes": 85,
+          "nonzero": 85,
+          "zero_unresolved_primes": []
+        }
+      },
+      "large_primes": 147,
+      "nonzero": 147,
+      "zero_unresolved": 0
+    },
+    {
+      "case_id": "D8-n96",
+      "D": 8,
+      "n": 96,
+      "artifact": "missions\\zeta9\\round4\\verification\\prime-scan-D8-n96.json.gz",
+      "C_sha256": "061e875faea53a4c8d45e1a6b83b1d5d96faf04a01da65c9b597cf6dc7b3e24c",
+      "summary": {
+        "2n_lt_p_le_Dn": {
+          "primes": 92,
+          "nonzero": 92,
+          "zero_unresolved_primes": []
+        },
+        "Dn_lt_p_le_2Dn": {
+          "primes": 107,
+          "nonzero": 107,
+          "zero_unresolved_primes": []
+        }
+      },
+      "large_primes": 199,
+      "nonzero": 199,
+      "zero_unresolved": 0
+    },
+    {
+      "case_id": "D6-n192",
+      "D": 6,
+      "n": 192,
+      "artifact": "missions\\zeta9\\round4\\verification\\prime-scan-D6-n192.json.gz",
+      "C_sha256": "1271a660624f887369d10a6b07f3f806e2d2d39975a3e125d9dbc17518d3374a",
+      "summary": {
+        "2n_lt_p_le_Dn": {
+          "primes": 114,
+          "nonzero": 114,
+          "zero_unresolved_primes": []
+        },
+        "Dn_lt_p_le_2Dn": {
+          "primes": 152,
+          "nonzero": 152,
+          "zero_unresolved_primes": []
+        }
+      },
+      "large_primes": 266,
+      "nonzero": 266,
+      "zero_unresolved": 0
+    },
+    {
+      "case_id": "D8-n192",
+      "D": 8,
+      "n": 192,
+      "artifact": "missions\\zeta9\\round4\\verification\\prime-scan-D8-n192.json.gz",
+      "C_sha256": "1271a660624f887369d10a6b07f3f806e2d2d39975a3e125d9dbc17518d3374a",
+      "summary": {
+        "2n_lt_p_le_Dn": {
+          "primes": 166,
+          "nonzero": 165,
+          "zero_unresolved_primes": [
+            947
+          ]
+        },
+        "Dn_lt_p_le_2Dn": {
+          "primes": 197,
+          "nonzero": 197,
+          "zero_unresolved_primes": []
+        }
+      },
+      "large_primes": 363,
+      "nonzero": 362,
+      "zero_unresolved": 1
+    },
+    {
+      "case_id": "D6-n384",
+      "D": 6,
+      "n": 384,
+      "artifact": "missions\\zeta9\\round4\\verification\\prime-scan-D6-n384.json.gz",
+      "C_sha256": "e564a81a76102a874ec78874393b1294e77618cd49fead253db7098592be5355",
+      "summary": {
+        "2n_lt_p_le_Dn": {
+          "primes": 207,
+          "nonzero": 207,
+          "zero_unresolved_primes": []
+        },
+        "Dn_lt_p_le_2Dn": {
+          "primes": 281,
+          "nonzero": 280,
+          "zero_unresolved_primes": [
+            3767
+          ]
+        }
+      },
+      "large_primes": 488,
+      "nonzero": 487,
+      "zero_unresolved": 1
+    },
+    {
+      "case_id": "D8-n384",
+      "D": 8,
+      "n": 384,
+      "artifact": "missions\\zeta9\\round4\\verification\\prime-scan-D8-n384.json.gz",
+      "C_sha256": "e564a81a76102a874ec78874393b1294e77618cd49fead253db7098592be5355",
+      "summary": {
+        "2n_lt_p_le_Dn": {
+          "primes": 304,
+          "nonzero": 304,
+          "zero_unresolved_primes": []
+        },
+        "Dn_lt_p_le_2Dn": {
+          "primes": 362,
+          "nonzero": 361,
+          "zero_unresolved_primes": [
+            5527
+          ]
+        }
+      },
+      "large_primes": 666,
+      "nonzero": 665,
+      "zero_unresolved": 1
+    }
+  ]
+}

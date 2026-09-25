@@ -1,0 +1,135 @@
+{
+  "status": "ok",
+  "cases": 10,
+  "n24_crosschecks": 2,
+  "all_exact_rational_lower_bounds_gt_one": true,
+  "tail_bound_argument": "For t>=T+a/D>n, R(t)<=n!^7(1+2n/t)^n/t^(7n+9)<=n!^7(1+2n/(T+a/D))^(2n)/t^(7n+9). Monotone integral comparison bounds the omitted k>=T+1 sum by n!^7(1+2n/x)^(2n)/((7n+8)x^(7n+8)), x=T+a/D.",
+  "primitive_bound_argument": "A is a nonzero integer; if B=b/q in lowest terms and Q|q, primitive multiplier=q/gcd(A,b)>=Q/abs(A).",
+  "source_sha256": "97385e8714657542dabf8c61bc92f2406a7b0679a4c3d515022f54f0979fc736",
+  "rows": [
+    {
+      "case_id": "D6-n24",
+      "D": 6,
+      "n": 24,
+      "forced_primes": 27,
+      "available_outer_primes": 27,
+      "raw_sign": -1,
+      "exact_lower_bound_greater_than_one": true,
+      "n24_exact_form_crosscheck": {
+        "exact_form_interval_overlap": true,
+        "first_term_and_ratio_checked_at_shifts": [
+          1,
+          6
+        ],
+        "exact_form_sha256": "6006603b47396bc9bd614abfe29fe06332754b05cd99feec1c2f35f60bb6e282"
+      },
+      "artifact_sha256": "5acf34d67156cde0faab49bd9d4ce896917ac31c828dcd6c0e4ff7d847b89505"
+    },
+    {
+      "case_id": "D8-n24",
+      "D": 8,
+      "n": 24,
+      "forced_primes": 33,
+      "available_outer_primes": 33,
+      "raw_sign": -1,
+      "exact_lower_bound_greater_than_one": true,
+      "n24_exact_form_crosscheck": {
+        "exact_form_interval_overlap": true,
+        "first_term_and_ratio_checked_at_shifts": [
+          1,
+          8
+        ],
+        "exact_form_sha256": "9c1bdc45c78d2bb2f7ab4210d42d69b48ce3b9ec2c240c8fba92b700403dd271"
+      },
+      "artifact_sha256": "937c570c62f2c052f5c6cca458b079cc220c9510eae1c0eebba67c8258300c0b"
+    },
+    {
+      "case_id": "D6-n48",
+      "D": 6,
+      "n": 48,
+      "forced_primes": 44,
+      "available_outer_primes": 44,
+      "raw_sign": -1,
+      "exact_lower_bound_greater_than_one": true,
+      "n24_exact_form_crosscheck": null,
+      "artifact_sha256": "bd58966e028220a373aca25f6f6060c9d9c399603c5f9a85fafa43ae9f82fe10"
+    },
+    {
+      "case_id": "D8-n48",
+      "D": 8,
+      "n": 48,
+      "forced_primes": 59,
+      "available_outer_primes": 59,
+      "raw_sign": -1,
+      "exact_lower_bound_greater_than_one": true,
+      "n24_exact_form_crosscheck": null,
+      "artifact_sha256": "25fc66c0fa13c95542c6cff42564563a4000dd3397f9ed4754e1d9356b2a392a"
+    },
+    {
+      "case_id": "D6-n96",
+      "D": 6,
+      "n": 96,
+      "forced_primes": 85,
+      "available_outer_primes": 85,
+      "raw_sign": -1,
+      "exact_lower_bound_greater_than_one": true,
+      "n24_exact_form_crosscheck": null,
+      "artifact_sha256": "8d8c86e713d5aa0af05f02b98f78d2b8636a2a0c9f68f5a9d065ea2e8ab1bd4e"
+    },
+    {
+      "case_id": "D8-n96",
+      "D": 8,
+      "n": 96,
+      "forced_primes": 107,
+      "available_outer_primes": 107,
+      "raw_sign": -1,
+      "exact_lower_bound_greater_than_one": true,
+      "n24_exact_form_crosscheck": null,
+      "artifact_sha256": "099d9861beabb89c5550143c5f9066e380db197519f32f4e173696680ec25282"
+    },
+    {
+      "case_id": "D6-n192",
+      "D": 6,
+      "n": 192,
+      "forced_primes": 152,
+      "available_outer_primes": 152,
+      "raw_sign": -1,
+      "exact_lower_bound_greater_than_one": true,
+      "n24_exact_form_crosscheck": null,
+      "artifact_sha256": "8ebb6e68a2f17f61d8f3e554aa3d4561b536a1e2ebaba45b314fcc12ea65f7d7"
+    },
+    {
+      "case_id": "D8-n192",
+      "D": 8,
+      "n": 192,
+      "forced_primes": 197,
+      "available_outer_primes": 197,
+      "raw_sign": -1,
+      "exact_lower_bound_greater_than_one": true,
+      "n24_exact_form_crosscheck": null,
+      "artifact_sha256": "3fb4df58f436acfc3232712b0fac7d4a587202fc3bcf772b1d8e2b203dbd5bfe"
+    },
+    {
+      "case_id": "D6-n384",
+      "D": 6,
+      "n": 384,
+      "forced_primes": 280,
+      "available_outer_primes": 281,
+      "raw_sign": -1,
+      "exact_lower_bound_greater_than_one": true,
+      "n24_exact_form_crosscheck": null,
+      "artifact_sha256": "665e88fc6de8c7a17604ce3d0a8263799132ff020e37383176143609d68c2706"
+    },
+    {
+      "case_id": "D8-n384",
+      "D": 8,
+      "n": 384,
+      "forced_primes": 361,
+      "available_outer_primes": 362,
+      "raw_sign": -1,
+      "exact_lower_bound_greater_than_one": true,
+      "n24_exact_form_crosscheck": null,
+      "artifact_sha256": "b87a484489991d6736090c10d2463acffd37da74e9b876bec82e2d9e00f07605"
+    }
+  ]
+}
