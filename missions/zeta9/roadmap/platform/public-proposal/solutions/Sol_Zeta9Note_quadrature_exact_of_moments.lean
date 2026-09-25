@@ -1,5 +1,5 @@
 -- Public-mission submission for Zeta9Note.quadrature_exact_of_moments.
--- Statement and proof verified in formalization/Zeta9Note.lean (exit 0, no sorry).
+-- Statement and proof verified in formalization/Zeta9Note.lean (exit 0, no placeholder).
 
 import Mathlib
 

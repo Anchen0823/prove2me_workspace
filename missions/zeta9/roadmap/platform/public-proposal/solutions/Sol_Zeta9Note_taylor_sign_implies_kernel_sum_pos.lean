@@ -1,5 +1,5 @@
 -- Public-mission submission for Zeta9Note.taylor_sign_implies_kernel_sum_pos.
--- Statement and proof verified in formalization/Zeta9Note.lean (exit 0, no sorry).
+-- Statement and proof verified in formalization/Zeta9Note.lean (exit 0, no placeholder).
 
 import Mathlib
 

@@ -1,5 +1,5 @@
 -- Public-mission submission for Zeta9Note.irrational_of_small_nonzero_integer_forms.
--- Statement and proof verified in formalization/Zeta9Note.lean (exit 0, no sorry).
+-- Statement and proof verified in formalization/Zeta9Note.lean (exit 0, no placeholder).
 
 import Mathlib
 

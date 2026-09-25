@@ -1,5 +1,5 @@
 -- Public-mission submission for Zeta9Note.five_sample_sign_forces_nonzero.
--- Statement and proof verified in formalization/Zeta9Note.lean (exit 0, no sorry).
+-- Statement and proof verified in formalization/Zeta9Note.lean (exit 0, no placeholder).
 
 import Mathlib
 import Theorems.Thm_Zeta9Note_quadrature_exact_of_moments

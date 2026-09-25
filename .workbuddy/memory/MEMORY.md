@@ -8,7 +8,8 @@ Lean 4 / Mathlib 打 prove2.me 众包形式化平台。**本文件只做索引**
 | 平台 API、成员资格、draft 校验、盲审、提交模式 | `memory/PLATFORM-NOTES.md` |
 | 幻方领域数据、BCCG 文献、可选路线 | `memory/MAGIC-SQUARES-REF.md` |
 | 单个 mission 的设计与进度 | `missions/<slug>/status.md` |
-| ζ(7)/ζ(9) 无理性尝试（本地研究，无平台节点） | `missions/{zeta7,zeta9}/research/*.md`, `report.md` |
+| ζ(7)/ζ(9) 无理性尝试（ζ(9) 有 private mission，见下表） | `missions/{zeta7,zeta9}/research/*.md`, `report.md` |
+| **ζ(9) 九轮 + roadmap + 平台层的完整证明态审计** | `missions/zeta9/research/zeta9-proof-state-audit.tex`（+ `-zh.md` 中文摘要） |
 | 幻方 V Spencer 路线 | `missions/magic-squares-v/SPENCER-ROUTE.md`, `S5-NOTES.md` |
 | 五素数 A/A\* 路线审计 | `missions/five-primes/status.md`, `A-star-route-audit.md` |
 
@@ -46,6 +47,7 @@ Lean 4 / Mathlib 打 prove2.me 众包形式化平台。**本文件只做索引**
 | Irrationality of Euler's γ | `euler-gamma` | 部分 Proved，见 `sondow/INTEGRAL-IDENTITY-COMPLETE.md` |
 | ζ(7) 泛奇 ζ 支撑研究 | `zeta7` | **本地研究，无平台 mission**。为 zeta9 提供 odd-zeta 泛函件，见 `missions/zeta7/status.md` |
 | **Irrationality of ζ(9): weighted lattice route** | `zeta9` | mission `8195d8fe-059f-4515-92b4-57b585e2bac6`（**Private**，不是「无平台节点」）。本地数学 DAG = `missions/zeta9/roadmap/DAG.md`；平台接线 = `roadmap/platform/wiring/README.md`。**2026-09-25：根节点从「零分解」→ 两条 `SKETCH_ACCEPTED` 分解**（单形式 / 双形式各一条），+3 条 Proved 一般引理（TP/FQ 的可形式化核）+2 条 Open 义务节点，里程碑 35→40。根仍 **Open** |
+| ζ(9) 公开侧 | `zeta9`（公开） | 公共仓库 `github.com/Anchen0823/zeta9-research-notes`（本地 `D:\users\self_projects\zeta9-research-notes`，Zenodo concept DOI `10.5281/zenodo.22951154`，已开 Zenodo–GitHub 联动）。**公开 ResearchPaper mission** proposal `00d787d8-…`（Draft→**In review**），8 个 `Zeta9Note.*` items + 7 milestones，见 `missions/zeta9/roadmap/platform/public-proposal/`。流程已存为 skill `prove2me-public-mission` |
 
 ## 跨 mission 硬约束
 

@@ -237,8 +237,16 @@ def status() -> None:
     proposal = detail(token, receipt["proposal_id"])
     milestones = request("GET", f"/mission-proposals/{receipt['proposal_id']}/milestones", token)
     save_receipt(proposal, receipt["local_item_ids"], milestones.get("milestones", []))
+    # Refresh the theorem ids: draft items get a theorem_id only once the proposal is
+    # approved and its items are compiled.
+    fresh = json.loads(RECEIPT.read_text(encoding="utf-8"))
     print(f"status={proposal.get('status')} mission_id={proposal.get('mission_id')} "
           f"visibility={proposal.get('visibility')}")
+    missing = [k for k, v in fresh.get("local_theorem_ids", {}).items() if not v]
+    print(f"theorem_ids resolved: {len(fresh.get('local_theorem_ids', {})) - len(missing)}"
+          f"/{len(fresh.get('local_theorem_ids', {}))}")
+    if missing:
+        print("still without theorem_id:", ", ".join(sorted(missing)))
 
 
 def fields() -> None:

@@ -251,3 +251,93 @@ transparency level / function expected T i" 这类误导性附注）。一元的
 `hbox : ∀ i j, T i j ≤ s` 在上下文里，`omega` **不会**替你实例化。
 要先 `have hTij : T i j ≤ s := hbox i j` 再喂给 `omega`，否则它报"可能存在反例"，
 且反例里那个量显示成一个**不透明的原子**（如 `c := ↑(T i j - permMatrix σ i j)`）——这就是信号。
+
+## `(0 : ℚ)` 与 `((0 : ℕ) : ℚ)` 对 `rw` **不等价**（2026-09-20）
+
+写 `Polynomial.eval 0` 类引理时最容易踩：`rw [myLemma]` 报
+"Did not find an occurrence of the pattern `eval (↑0) p`"，而目标里明明是 `eval 0 p`。
+Lean 的 `rw` 按**语法**匹配，`OfNat.ofNat 0` 与 `Nat.cast 0` 不是同一个项（defeq 但不 rw）。
+三种解法，按推荐顺序：
+
+1. **把引理语句写成与调用点相同的 cast 形状**（本次 `qAll_eval_zero` 就改成了
+   `(qAll n).eval ((0 : ℕ) : ℚ)`，因为在 `subst ht0` 之后目标里出现的正是 `↑0`）；
+2. 先 `have hc : (0 : ℚ) = ((0 : ℕ) : ℚ) := by norm_num`，再 `rw [hc, myLemma]`；
+3. 或 `show ... ((0 : ℕ) : ℚ) = ...`（`show` 按 defeq 检查，能强行改写法）。
+
+同类陷阱：`(1 : ℚ)` 与 `((1 : ℕ) : ℚ)`（用 `Nat.cast_one` 消）、
+`(t : ℚ) - 1` 与 `((t - 1 : ℕ) : ℚ)`（`Nat.cast_sub ht` + `Nat.cast_one`）。
+
+## 「在 ℕ 上处处为 0 的多项式恒为 0」——把序列递推升级成多项式恒等式（2026-09-20）
+
+有了「两个多项式在所有 `r : ℕ` 处取同值」想推出**多项式相等**（进而在任意点如 `-1` 处取值），
+不要自己写插值/牛顿差商，直接用无穷根：
+
+```lean
+theorem poly_eq_zero_of_nat_eval_eq_zero {p : Polynomial ℚ} (h : ∀ r : ℕ, p.eval (r : ℚ) = 0) :
+    p = 0 := by
+  refine Polynomial.eq_zero_of_infinite_isRoot p ?_
+  refine Set.Infinite.mono ?_ (Set.infinite_range_of_injective (f := fun r : ℕ => (r : ℚ))
+    Nat.cast_injective)
+  rintro x ⟨r, rfl⟩
+  exact h r
+```
+
+- `Polynomial.IsRoot p a` 的**定义就是** `p.eval a = 0`（`Algebra/Polynomial/Eval/Defs.lean:355`），
+  所以 `exact h r` 直接可用，不用 `isRoot_iff` 之类。
+- `Set.Infinite.mono {s t} (h : s ⊆ t) : s.Infinite → t.Infinite`（注意**方向**：`h` 是子集那一侧）。
+- 只在**正整数**上为 0（`t ≥ 1` 的递推）时，乘一个 `X` 再套上面的引理：
+  `X * p = 0` ⟹ `mul_eq_zero.mp` + `Polynomial.X_ne_zero` ⟹ `p = 0`。
+
+## 展开 `by classical exact ...` 定义的 Finset（2026-09-20）
+
+`noncomputable def S := by classical exact f.filter p` 这类定义，在**别的证明里**用
+`rw [S, Finset.mem_filter]` 展开时，**那个证明体内也必须有 `classical`**，否则报
+`failed to synthesize instance DecidablePred p`。别以为定义处写了 `classical` 就够了。
+
+## 单文件 `lake env lean` ≠ 门禁（2026-09-20）
+
+`lake env lean <file>` 只检查这一个文件（**不产出 olean**，也不把新文件纳入库）。
+新文件要真正进门禁，必须加进 `lakefile.lean` 对应 lean_lib 的 `roots`，再跑
+`lake build <LibName>`。`roots` 是显式列表，加了文件不加 roots 就静默漏检。
+
+## 🔴 `rw` **不往 `∑`/`∏`/绑定子里面重写**——要改用 `simp only`（2026-09-25 实测）
+
+平台编译时踩到（本地同样复现）。目标形如
+
+```
+∑ j, f j / B = (∑ j, f j) / B
+```
+
+写 `rw [div_eq_mul_inv, ← Finset.sum_mul]`：**`rw` 只改了绑子外面的那半边**，
+报了 `Did not find an occurrence of the pattern ∑ i ∈ ?s, ?f i * ?a`，
+而打印出来的目标里那个 `∑` 明明还是 `/B` 的样子。反向的例子一样（`/B` 在右边时
+只改了左边）。两个方向都只改一侧 ⇒ 结论：本环境下 **`rw` 的重写遍历不进 `Finset.sum`
+的 lambda**。
+
+**正确写法**：一律用 `simp only [..., ← 引理]`，`simp` 是会进绑子的，而且**支持
+`←` 方向**：
+
+```lean
+have h1 : ∑ j : Fin 5, v j = B / B := by
+  simp only [hv, div_eq_mul_inv, ← Finset.sum_mul, ← hB]
+```
+
+顺带记住这批引理的**方向**（都是 `@[to_additive]` 生成的，grep 字符串找不到定义）：
+
+| 引理 | 实际朝向 |
+|---|---|
+| `Finset.sum_mul` | `(∑ f) * a = ∑ f * a` |
+| `Finset.mul_sum` | `a * ∑ f = ∑ a * f` |
+| `Finset.sum_sub_distrib` | `∑ (f - g) = ∑ f - ∑ g` |
+| `Finset.sum_eq_zero_iff_of_nonneg` | `(∀ i ∈ s, 0 ≤ f i) → (∑ f = 0 ↔ ∀ i ∈ s, f i = 0)` |
+| `Finset.sum_pos'` | `(∀ i ∈ s, 0 ≤ f i) → (∃ i ∈ s, 0 < f i) → 0 < ∑ f` |
+| `Matrix.mulVec_apply` | `M.mulVec v i = ∑ j, M i j * v j` |
+
+所以「把因子提出去」要用 `sum_mul` 的**反向**（`←`），「把因子拿进和里」用正向。
+
+另一个连带坑：`set x := <复杂项> with hx` 会**顺手把目标里同样的项折成 `x`**，
+于是之后 `rw [← hx]` 会报「找不到模式」——目标里已经没有了。这时**别写那一步**。
+（2026-09-25：`rw [← hB, hmediant]` 里的 `← hB` 就是这么挂的。）
+
+`push_neg` 在本环境已 deprecated（提示改用 `push Not`）。想避开就手写
+`not_lt.mp fun h' => h ⟨i, h'⟩` 拿 `c ≤ r i`，比 `push_neg at h` 更稳。

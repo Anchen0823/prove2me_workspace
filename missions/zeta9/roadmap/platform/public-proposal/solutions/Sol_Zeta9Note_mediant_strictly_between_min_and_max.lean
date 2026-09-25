@@ -1,5 +1,5 @@
 -- Public-mission submission for Zeta9Note.mediant_strictly_between_min_and_max.
--- Statement and proof verified in formalization/Zeta9Note.lean (exit 0, no sorry).
+-- Statement and proof verified in formalization/Zeta9Note.lean (exit 0, no placeholder).
 
 import Mathlib
 import Theorems.Thm_Zeta9Note_min_lt_weighted_average_lt_max
