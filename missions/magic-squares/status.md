@@ -4,6 +4,10 @@
 
 最后更新：2026-09-17 02:20（goal 已 Proved）（Asia/Shanghai）
 
+> **后续**：Mission IV（三阶特殊类：泛魔方 / 对称幻方计数）已于 2026-09-18 全部 Proved，
+> 见 `missions/magic-squares-iv/status.md`。本 mission 的 `semi_magic_count_three`
+> 仍 Open（Mission II 的遗留），其余节点全绿。
+
 ## 0. 本次会话的主线
 
 宇轩在手机上给出了一张 8 条的建设顺序建议（行和汇总 → 转置/翻转 → 仿射 →
