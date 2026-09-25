@@ -203,7 +203,7 @@ See verification/mass-sketch-local-result.json for its hash. It imports
 only one open source placeholder, schoenfeld_psi_error_large; the solution
 body itself contains no sorry. The English explanation is
 mass-sketch-explanation.md. The assembly script is
-scripts/prepare_mass_sketch.ps1.
+missions/five-primes/scripts/prepare_mass_sketch.ps1.
 
 A fresh platform read confirmed the target Open and the matching
 Mathlib revision. The Schoenfeld search found no equivalent source.
@@ -235,7 +235,7 @@ submission 22e9d559-4993-4086-b1e9-bc4fecf541fe, latest verdict PENDING.
 Follow this same ID through GET /verify; do not submit again.
 Response and verdict are verification/mass-sketch-submit-response.json
 and verification/mass-sketch-verdict.json. The guarded submission helper
-is scripts/submit_mass_after_source.ps1. It records an attempt before POST
+is missions/five-primes/scripts/submit_mass_after_source.ps1. It records an attempt before POST
 and refuses an uncertain retry without inspecting server history.
 
 Next: poll the existing proof submission to a terminal verdict. On
@@ -267,7 +267,7 @@ It proves that endpoint certificates psi(b)<C*a cover every y in [a,b],
 using monotonicity of psi and C>=0. Verification is recorded in
 verification/rosser-interval-cover-result.json.
 
-scripts/scout_rosser_intervals.py examined the range 1..99,999,999 in about
+missions/five-primes/scripts/scout_rosser_intervals.py examined the range 1..99,999,999 in about
 5.1 seconds. It found 2,152 covering intervals and no failed floating-point
 endpoint comparisons. The smallest approximate gap was 0.0010647301683
 at a=b=113. Full scouting data: research/rosser-interval-scout.json.
@@ -305,7 +305,7 @@ psi(n)<=k*0.693147181 from lcmUpto(n)<=2^k, and the sharper
 It also proves an interval version and the endpoint n=1000.
 See verification/rosser-lcm-certificate-result.json.
 
-scripts/generate_rosser_prefix.py uses only exact Python integer arithmetic
+missions/five-primes/scripts/generate_rosser_prefix.py uses only exact Python integer arithmetic
 to choose interval endpoints and powers. The generated Lean proof checks
 all arithmetic with decide, all rational comparisons with norm_num, and
 interval coverage with omega. Python itself is not trusted by the proof.
@@ -382,7 +382,7 @@ The new child publication is queued as job
 Do not publish it again. See verification/rosser-middle-publish-response.json
 and verification/rosser-middle-publish-job.json.
 
-Next: run the guarded scripts/submit_rosser_after_middle.ps1 to inspect
+Next: run the guarded missions/five-primes/scripts/submit_rosser_after_middle.ps1 to inspect
 that same job, check the published statement, and submit the verified
 sketch once publication completes. Then follow the returned submission ID
 to a terminal verdict, inspect the resulting decomposition, and STOP

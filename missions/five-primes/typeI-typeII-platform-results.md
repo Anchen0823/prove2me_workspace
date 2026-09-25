@@ -17,7 +17,7 @@ and establishes the target constants 0.1, 0.39, 0.55 and 0.78.
 
 - Lean: leanprover/lean4:v4.33.1.
 - Mathlib: 0df444a360eaa60ab8c11dca51a86af692955474.
-- `scripts/check_theorem51_progress.ps1`: 53 source modules, 39.18 seconds,
+- `missions/five-primes/scripts/check_theorem51_progress.ps1`: 53 source modules, 39.18 seconds,
   exit 0, no sorryAx. The script regenerates its combined check source.
 - Exact submitted integration solution: 37.70 seconds, exit 0, no sorryAx.
   SHA256: 7AE4E08CF2F53778ABCD68E94A864BB025A86DA07E2D3EC6DDE00B681B8BC1B6.

@@ -39,7 +39,7 @@ the Type I term norms, conditional on an explicit amplitude-variation bound.
 formulas and finite support of its odd-lattice logarithmic amplitude.
 The amplitude-variation bound itself is still unproved.
 
-Run `./scripts/check_theorem51_progress.ps1` from the workspace root. It
+Run `./missions/five-primes/scripts/check_theorem51_progress.ps1` from the workspace root. It
 combines all twenty files, checks them with `autoImplicit=false`, and prints
 the axioms of the principal results. It records source hashes, elapsed time,
 exit code, and a `sorryAx` check in
@@ -267,7 +267,7 @@ and self-contained proof compile (18.706 seconds; no sorryAx), as does the
 exact-parent three-child reduction. The latter is only a reduction and has
 explicit Open Vaughan and Type II dependencies.
 
-Run scripts/submit_theorem51_reduction.ps1 -Part typeI or -Part parent only
+Run missions/five-primes/scripts/submit_theorem51_reduction.ps1 -Part typeI or -Part parent only
 after the existing jobs publish. The script checks current target status,
 exact signatures, and local proof hashes, and guards against duplicate or
 uncertain submissions. Do not create replacement jobs just because the

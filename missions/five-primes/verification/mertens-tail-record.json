@@ -1,0 +1,51 @@
+{
+  "theorem": "TaoFivePrimes.mertens_tail_le_partial_sum",
+  "theorem_id": "c10a0cd0-581d-439b-b4fb-6c5ff9c5824a",
+  "node_status_after": "Proved",
+  "published_by_us": {
+    "publish_job": "4ae628a7-1d5f-4f23-a837-8397ec6951d9",
+    "publish_response": "missions/five-primes/verification/mertens-pair-publish-response.json",
+    "role": "elementary half of the decomposition of TaoFivePrimes.rosser_schoenfeld_product_log_bound_large (d5c69ba9)"
+  },
+  "submissions": [
+    {
+      "submission_id": "848ad749-150e-4737-8a84-a078c6e10070",
+      "proof_type": "prove",
+      "created_at": "2026-09-24T14:21:02Z",
+      "updated_at": "2026-09-24T14:22:27Z",
+      "verdict": "WA",
+      "error_message": "Your proof does not match the target type: Unknown identifier `solution`. Note: It is not possible to treat `solution` as an implicitly bound variable here because the `autoImplicit` option is set to `false`.",
+      "cause": "the file wrapped every declaration in `namespace TaoFivePrimes ... end`, copying the layout of the node's own formal_statement, so the submitted declaration was `TaoFivePrimes.solution`. The checker looks for a ROOT-level `solution`.",
+      "evidence": "missions/five-primes/verification/mertens-tail-sub-848ad749.json"
+    },
+    {
+      "submission_id": "e31cc9a4-f468-41b4-af86-ff5053d99fed",
+      "proof_type": "prove",
+      "created_at": "2026-09-24T14:29:48Z",
+      "updated_at": "2026-09-24T14:32:14Z",
+      "verdict": "ACCEPTED",
+      "error_message": "",
+      "note": "full ACCEPTED, not SKETCH_ACCEPTED: the file is a complete proof with no obligation left open.",
+      "evidence": "missions/five-primes/verification/mertens-tail-sub-e31cc9a4.json"
+    }
+  ],
+  "file": {
+    "path": "Solutions/Sol_TaoFivePrimes_mertens_tail_le_partial_sum.lean",
+    "sha256": "bad13442413d8a277dad7b74468b4e78ceafa9454cc4f81cf0e3c9b0cfd18c7e",
+    "lines": 127,
+    "imports": ["Mathlib"],
+    "sorries_axioms_unsafe": 0,
+    "local_compile": "lake env lean Solutions/Sol_TaoFivePrimes_mertens_tail_le_partial_sum.lean -> exit 0, 2 m 27 s, no diagnostics",
+    "axioms": "#print axioms solution -> [propext, Classical.choice, Quot.sound]"
+  },
+  "explanation_file": "missions/five-primes/expl-mertens-tail.md",
+  "statement": "For every real x, the convergent series Sum'_p (log (1 - 1/p) + 1/p) (value B_1 - gamma) is dominated by every finite partial sum over Nat.primesLE floor(x).",
+  "proof_summary": [
+    "log (1 - 1/p) + 1/p <= 0 for every prime p, from Real.log_le_sub_one_of_pos applied to 1 - 1/p.",
+    "|log (1 - 1/p) + 1/p| <= 2/p^2, from Real.abs_log_sub_add_sum_range_le with x = 1/p and n = 1 (bound 1/(p(p-1)) <= 2/p^2).",
+    "Summability over Nat.primes by comparison with Sum 2/n^2 (Real.summable_one_div_nat_pow at p = 2), then the general lemma `a summable non-positive series is dominated by each of its finite partial sums` (Summable.sum_le_tsum on the negative, then negation).",
+    "tsum_subtype unfolds the tsum over the subtype Nat.Primes into an indicator tsum over Nat, which agrees with the target summand on Nat.primesLE floor(x) because every element there is prime (Nat.mem_primesLE)."
+  ],
+  "consequence": "The product-log node d5c69ba9 now needs only ONE open input: TaoFivePrimes.reciprocal_prime_sum_upper_bound_strict (d64844bc, Rosser-Schoenfeld (8.9), analytic). The prepared reduction Solutions/Sol_TaoFivePrimes_rosser_schoenfeld_product_log_bound_large.lean imports this node plus the strict reciprocal bound and nothing else that is open.",
+  "method_note": "The reduction is deliberately stated with Mertens' constant written as `gamma + Sum'_p (log (1 - 1/p) + 1/p)` on BOTH sides, so the constant cancels symbolically; no decimal approximation of B_1 is needed anywhere."
+}

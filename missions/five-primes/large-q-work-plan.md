@@ -26,7 +26,7 @@ three logarithm identities from U=x/V^2. It then uses the triangle inequality.
 It does not claim to prove either analytic input.
 
 Publication job 9bfbdc53-11a5-4feb-a954-dbe91cfe41c5 is queued for the new source.
-Do not republish it. The guarded script scripts/submit_large_q_after_source.ps1
+Do not republish it. The guarded script missions/five-primes/scripts/submit_large_q_after_source.ps1
 checks that job and the exact source/target/hash before making the one proof
 submission. Follow the returned proof ID to a terminal verdict. No proof
 submission has been sent at the time this note was created.

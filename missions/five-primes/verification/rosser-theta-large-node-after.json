@@ -1,0 +1,23 @@
+{
+  "theorem_id": "8688dde7-7382-45ec-b373-35085cf5471e",
+  "theorem_name": "TaoFivePrimes.rosser_schoenfeld_theta_lower_analytic_large",
+  "theorem_title": "Rosser-Schoenfeld theta lower bound beyond 10^10",
+  "status": "Open",
+  "formal_statement": "namespace TaoFivePrimes\n\ntheorem rosser_schoenfeld_theta_lower_analytic_large (t : ℝ) (h1 : 10 ^ 10 ≤ t) :\n    t * (1 - 1 / (2 * Real.log t)) < Chebyshev.theta t := by sorry\n\nend TaoFivePrimes\n",
+  "natural_language_statement": "The Rosser–Schoenfeld lower bound for the Chebyshev $\\theta$ function, in the range beyond\nnumerical verification:\n$$t\\Bigl(1 - \\frac{1}{2\\log t}\\Bigr) \\;<\\; \\theta(t) \\qquad (t \\ge 10^{10}).$$\n\n**Why this range is separate.** The mission already has the companion statements\n`TaoFivePrimes.rosser_schoenfeld_theta_lower_analytic_mid` for $1420 \\le t \\le 10^{10}$ and\n`TaoFivePrimes.rosser_schoenfeld_theta_lower_finite` for $255 \\le t \\le 1420$ (in the form\n$t - 2\\sqrt{t} < \\theta(t)$). Together with this statement they cover $t \\ge 1340$ with no gap,\nwhich is what `TaoFivePrimes.rosser_schoenfeld_theta_lower_analytic` asserts; without it that\nnode cannot be closed, since the $\\le 10^{10}$ ceiling on the middle range is exactly where\ntabulated data stops.\n\n**What the proof needs.** This is the range where the estimate stops being a computation and\nbecomes analysis: the bound follows from the explicit formula together with a zero-free region\nfor $\\zeta$, in the form Rosser and Schoenfeld give (*Approximate formulas for some functions of\nprime numbers*, Illinois J. Math. 6 (1962), Theorem 10 and its refinements). The error term\n$t/(2\\log t)$ is far larger than the truth — $\\theta(t) = t + O(t\\exp(-c\\sqrt{\\log t}))$ — so the\nstatement has enormous room, and a crude zero-free region suffices. What it cannot be is a finite\ncheck.\n\n**The threshold $10^{10}$ is a seam, not a feature.** Any constant between $1420$ and the point\nwhere the analytic argument starts working would do; $10^{10}$ is chosen to match the ceiling of\nthe middle-range node so that the three ranges abut exactly. In particular there is no claim that\n$10^{10}$ is where the analytic method first applies.\n\nNote also that the $\\sqrt{t}$ form of the finite range and the $1/(2\\log t)$ form here are\ncomparable only for $\\sqrt{t} \\ge 4\\log t$, which holds from $t \\ge 1296$ onward — that is why\nthe assembled statement starts at $1340$ rather than at $255$.\n",
+  "created_at": "2026-09-22T05:09:01.640865+00:00",
+  "vote_count": 0,
+  "tags": [
+    "analytic-number-theory",
+    "number-theory",
+    "prime-numbers"
+  ],
+  "preamble": "import Mathlib\nimport Definitions.Def_TaoFivePrimes_ArcSplit\n\nopen MeasureTheory",
+  "source": "Rosser and Schoenfeld, Approximate formulas for some functions of prime numbers, Illinois J. Math. 6 (1962), Theorem 10; used in Terence Tao, arXiv:1201.6656.",
+  "deprecated_at": null,
+  "deprecated_by": null,
+  "visibility": "public",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "audits": [],
+  "readback": null
+}

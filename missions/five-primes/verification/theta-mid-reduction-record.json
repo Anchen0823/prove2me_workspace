@@ -1,0 +1,70 @@
+{
+  "contribution": "reduction of TaoFivePrimes.rosser_schoenfeld_theta_lower_analytic",
+  "date": "2026-09-18",
+  "target": {
+    "theorem_name": "TaoFivePrimes.rosser_schoenfeld_theta_lower_analytic",
+    "theorem_id": "d4cf496a-eed1-4284-8d5d-f9cfbfb07786",
+    "status_before": "Open",
+    "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+    "frontier_leaf": true
+  },
+  "child_published": {
+    "theorem_name": "TaoFivePrimes.rosser_schoenfeld_theta_lower_analytic_mid",
+    "theorem_id": "56cff342-4599-468f-86e6-d25d03d60925",
+    "publish_job_id": "76f42e72-b87f-4a8e-a41b-d8ce8132dbd9",
+    "job_status": "PUBLISHED",
+    "statement": "theorem rosser_schoenfeld_theta_lower_analytic_mid (t : ℝ) (h1 : 1420 ≤ t) (h2 : t ≤ 10 ^ 10) :\n    t * (1 - 1 / (2 * Real.log t)) < Chebyshev.theta t"
+  },
+  "submission": {
+    "submission_id": "ee89c952-2fee-4da1-af76-f935fe76ac11",
+    "proof_type": "prove",
+    "verdict": "SKETCH_ACCEPTED",
+    "error_message": "",
+    "file": "Solutions/Sol_TaoFivePrimes_rosser_schoenfeld_theta_lower_analytic.lean",
+    "file_sha256": "4B2DE9F746565F0BADD8A32E34B2FDD6882958FEA3CBA0338591F6D37719E340",
+    "audit": "no proof placeholder and no axiom declaration; the words appear only inside the explanatory doc comment, so a naive word-boundary grep matches the comment text",
+    "explanation": "missions/five-primes/theta-mid-reduction-explanation.md",
+    "local_build": "lake build Solutions.Sol_TaoFivePrimes_rosser_schoenfeld_theta_lower_analytic -> ok, 19 s, exit 0",
+    "local_imports": [
+      "Theorems.Thm_TaoFivePrimes_rosser_schoenfeld_theta_lower_finite",
+      "Theorems.Thm_TaoFivePrimes_rosser_schoenfeld_theta_lower_analytic_mid",
+      "Theorems.Thm_TaoFivePrimes_schoenfeld_psi_error_large"
+    ]
+  },
+  "decomposition_registered": [
+    {
+      "theorem_name": "TaoFivePrimes.rosser_schoenfeld_theta_lower_finite",
+      "theorem_id": "37e2424b-e677-44ff-972d-1490e9e5062f",
+      "status": "Proved",
+      "ordinal": 0
+    },
+    {
+      "theorem_name": "TaoFivePrimes.rosser_schoenfeld_theta_lower_analytic_mid",
+      "theorem_id": "56cff342-4599-468f-86e6-d25d03d60925",
+      "status": "Open",
+      "ordinal": 1
+    },
+    {
+      "theorem_name": "TaoFivePrimes.schoenfeld_psi_error_large",
+      "theorem_id": "3fa7d8d1-e2ce-4057-894d-f39a2f0a4a8d",
+      "status": "Open",
+      "ordinal": 2
+    }
+  ],
+  "mission_frontier_after": {
+    "root": "59fb46ad-4ec0-4c68-9838-319eb070efdd",
+    "count": 18,
+    "note": "rosser_schoenfeld_theta_lower_analytic was replaced by the new child rosser_schoenfeld_theta_lower_analytic_mid"
+  },
+  "finding_reported_separately": {
+    "kind": "mission comment",
+    "comment_id": "1c0c941b-80be-49d8-8acb-fe97692fec22",
+    "title": "theorem51_vaughan_split looks false: a reproducible numerical counterexample",
+    "evidence_file": "missions/five-primes/comment-vaughan-split-counterexample.md",
+    "scripts": [
+      "tmp/test_vaughan_split.py (direct evaluation and minimisation over c)",
+      "tmp/validate_vaughan.py (checks Tao's displayed identity to 7e-13 and his bound chain)",
+      "tmp/debug_vaughan.py (per-d table)"
+    ]
+  }
+}

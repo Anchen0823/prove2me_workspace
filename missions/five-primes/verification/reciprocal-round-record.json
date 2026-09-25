@@ -1,0 +1,59 @@
+{
+  "round": "2026-09-24 late (23:30-24:00)",
+  "summary": "Published the Mawia explicit-Mertens-sum node and reduced both reciprocal-prime nodes to it, collapsing two hand-written bounds into one citation.",
+  "new_node": {
+    "theorem": "TaoFivePrimes.mawia_reciprocal_sum_bound",
+    "theorem_id": "a182289a-f875-49fa-b946-9402fe0a3503",
+    "status": "Open",
+    "publish_job": "692d9b2c-f579-435b-bc1d-fde1b6cf5e3b",
+    "statement": "|sum_{p<=x} 1/p - log log x - B| <= 4/log^3 x  for x >= 2, where B = gamma + sum'_p (log(1-1/p) + 1/p)",
+    "source": "R. Mawia (R. Vanlalngaia, Ramdinmawia), Explicit Mertens sums, 2017, zbMATH Zbl 1412.11125; statement as tabulated in the TME-EMT explicit-bounds wiki (Explicit bounds on primes, Art01, section 2): x >= 2 with constant 4, x >= 1000 with 2.3, x >= 24284 with 1. This node states the widest-range (constant 4) case.",
+    "numerical_sanity": "A_1 = S - loglog x - B measured by sieve: 0.605 at x=2, 0.0807 at x=10, 3.897e-5 / 9.574e-6 / 4.030e-6 at x=10^6/10^7/10^8, all far inside 4/log^3 x (8.32, 0.328, 2.6e-3, 8.7e-4, 6.4e-4 respectively).",
+    "evidence": "verification/mawia-publish-job.json, verification/mawia-publish-response.json"
+  },
+  "reductions": [
+    {
+      "target": "TaoFivePrimes.reciprocal_prime_sum_upper_bound_strict",
+      "target_id": "d64844bc-df04-4df8-ac71-73bf0f4e49cb",
+      "submission_id": "512a35d6-7076-4305-94d9-787188caae7f",
+      "verdict": "SKETCH_ACCEPTED",
+      "verdict_at": "2026-09-24T15:57:51Z",
+      "error_message": "",
+      "file": "Solutions/Sol_TaoFivePrimes_reciprocal_prime_sum_upper_bound_strict.lean",
+      "sha256": "247d61ff42c67d4151c9d29ec6be33b9c93e9c6cb29dc07b617377c5fa7186d2",
+      "lines": 103,
+      "imports": ["Theorems.Thm_TaoFivePrimes_mawia_reciprocal_sum_bound", "Mathlib"],
+      "local_compile": "lake env lean ... -> exit 0, 1 m 49 s, no diagnostics; no sorry/axiom/admit/unsafe in the file",
+      "signature": "EXACT MATCH against the live node",
+      "explanation": "missions/five-primes/expl-reciprocal-strict.md"
+    },
+    {
+      "target": "TaoFivePrimes.reciprocal_prime_sum_upper_bound",
+      "target_id": "0c99c729-0600-44b2-9e4c-10e5012a2be3",
+      "submission_id": "ebbdeec3-7b73-4184-962e-9b64cff4c51d",
+      "verdict": "SKETCH_ACCEPTED",
+      "verdict_at": "2026-09-24T15:58:03Z",
+      "error_message": "",
+      "file": "Solutions/Sol_TaoFivePrimes_reciprocal_prime_sum_upper_bound.lean",
+      "sha256": "fc6d449c2c1df92122cca37107bffffcd06399dd1cb46676494b21b35c055753",
+      "lines": 103,
+      "imports": ["Theorems.Thm_TaoFivePrimes_mawia_reciprocal_sum_bound", "Mathlib"],
+      "local_compile": "lake env lean ... -> exit 0, 1 m 39 s, no diagnostics; no sorry/axiom/admit/unsafe in the file",
+      "signature": "EXACT MATCH against the live node",
+      "explanation": "missions/five-primes/expl-reciprocal-nonstrict.md",
+      "note": "byte-identical to the strict file except the conclusion is <=; the same linarith closes both"
+    }
+  ],
+  "why_this_route": {
+    "rejected": "Deriving the reciprocal bound from TaoFivePrimes.schoenfeld_psi_error_large by Abel summation. The identity A_1(x) = (theta(x)-x)/(x log x) - integral_x^inf (theta(y)-y)(1+log y)/(y^2 log^2 y) dy turns a 1/log Chebyshev error into a 1/log error in A_1, crossing the allowance 1/(2 log^2 x) at x = 1.0668e8.",
+    "needed": "A Chebyshev estimate with at least two powers of log in the denominator (|theta(y)-y| <= c y/log^2 y works for c <= 0.49), or directly an explicit Mertens sum bound with three logs - which is what Mawia's theorem provides.",
+    "consequence": "No Abel-summation formalisation is needed at all: the numeric step 4/log^3 x < log(1 + 1/(2 log^2 x)) for x >= 10^8 is elementary and proved in both files.",
+    "audit": "missions/five-primes/A-star-route-audit.md"
+  },
+  "platform_issue_recorded": {
+    "node": "TaoFivePrimes.rosser_schoenfeld_product_log_bound_large",
+    "theorem_id": "d5c69ba9-5a40-495a-a728-e7d11107a438",
+    "symptom": "GET /theorems/d5c69ba9-... and POST /verify with that theorem_id both answer 404 'Theorem not found' (continuously since 21:55, incl. a blind POST at 23:06), while (a) three whole-tree snapshots (20:55, 22:35, 23:35) list the node as Open with deprecated_at = null, and (b) the parent TaoFivePrimes.rosser_schoenfeld_product_bound (fce5d444) still lists it as a child in BOTH of its accepted decompositions (2026-09-21 and 2026-09-22).",
+    "consequence": "The prepared reduction of that node (A* + B, signature-matched, waiting in tmp/submit_product_log_large.py) cannot be submitted. A 2-hour watcher then ran the case to the end: 720 attempts at 10 s intervals from 21:34 to 01:49 on 2026-09-25, every one 404, no submission made - this is a persistent outage of that row, not a flap. Evidence files: verification/product-log-large-watch.log."
+  }
+}

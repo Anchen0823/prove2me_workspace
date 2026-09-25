@@ -1,6 +1,498 @@
 # Five-Primes Mission: Proof Implementation
 
-Last updated: 2026-09-13 (Asia/Shanghai).
+Last updated: 2026-09-25 (Asia/Shanghai).
+
+## 2026-09-25 (00:00): both reciprocal nodes reduced to ONE citation — Mawia 2017
+
+Closes the audit above. New node and two accepted reductions:
+
+| item | value |
+|---|---|
+| New node | `TaoFivePrimes.mawia_reciprocal_sum_bound` = **`a182289a-f875-49fa-b946-9402fe0a3503`** (Open), publish job `692d9b2c` |
+| Statement | `x ≥ 2 ⟹ |Σ_{p≤x}1/p − loglog x − B| ≤ 4/log³x`, `B = γ + Σ'_p(log(1−1/p)+1/p)` |
+| Source | R. Mawia (R. Vanlalngaia, Ramdinmawia), *Explicit Mertens sums*, 2017, zbMATH Zbl 1412.11125; tabulated in the TME-EMT wiki: constant `4` for `x ≥ 2`, `2.3` for `x ≥ 1000`, `1` for `x ≥ 24284`. **Node states the widest-range case.** |
+| `A*` (`d64844bc`) | submission `512a35d6` → **SKETCH_ACCEPTED** (23:57:51), file sha256 `247d61ff…86d2`, 103 lines |
+| `A` (`0c99c729`) | submission `ebbdeec3` → **SKETCH_ACCEPTED** (23:58:03), file sha256 `fc6d449c…5753`, 103 lines |
+
+**Why this beats the plan in the audit.** No Abel summation, no Chebyshev input, no
+θ node: Mawia's theorem is *directly* a bound on the reciprocal sum, with a better
+constant and a lower threshold than the tabulated `|ϑ(x) − x| ≤ 57.184 x/log⁴x` that
+the audit recommended deriving from. Everything past it is one elementary step,
+proved in both files: `log (1+z) ≥ z/(1+z)` (from `Real.log_le_sub_one_of_pos` on
+`(1+z)⁻¹` plus `Real.log_inv`) gives `log (1 + 1/(2u²)) ≥ 1/(2u²+1) > 4/u³`, and
+`u = log x > 16` for `x ≥ 10⁸` (`Real.exp_one_lt_d9` + `Real.log_pow`). The two
+files differ only in `<` vs `≤`; the same `linarith` closes both.
+
+**Numerical sanity** (`tmp/check_reciprocal_prime_sum.py`): `A₁ = 3.897·10⁻⁵ /
+9.574·10⁻⁶ / 4.030·10⁻⁶` at `x = 10⁶/10⁷/10⁸` against Mawia bounds `2.6·10⁻³ /
+8.7·10⁻⁴ / 6.4·10⁻⁴`; the target allowance is `1.47·10⁻³` at `10⁸`.
+
+**Effect.** The two hand-written reciprocal nodes collapse into one quoted leaf, so
+`d5c69ba9` now rests on {`a182289a` (citation)} ∪ {`c10a0cd0` = `mertens_tail_le_partial_sum`, **Proved**} —
+one open input, and it is a published estimate rather than a bespoke statement.
+
+**Platform bug, sharper evidence (still blocking).** `d5c69ba9`'s own row does not
+resolve: `GET /theorems/…` and `POST /verify` both 404 `"Theorem not found"`
+continuously since 21:55 (incl. a blind POST at 23:06:31), while three whole-tree
+traversals (20:55 / 22:35 / 23:35) list it `Open`, `deprecated_at = null`, **and its
+parent `rosser_schoenfeld_product_bound` (`fce5d444`) still names it as a child in
+both accepted decompositions** (2026-09-21, 2026-09-22). So the obligation is real and
+referenced; only that node's row fails to resolve. **A 2-hour watcher then ran the
+case to the end: 720 attempts at 10 s intervals from 21:34 to 01:49, every single one
+404, no submission made** (`verification/product-log-large-watch.log`). This is a
+persistent outage of that row, not a flap. The prepared reduction
+(`A* + B`, signature-matched, `tmp/submit_product_log_large.py`) therefore cannot be
+submitted until the platform side is fixed; the script is re-runnable as-is.
+Live verifier blocks: `tmp/check_reciprocal_prime_sum.py`, `tmp/check_theta_sign.py`.
+
+## 2026-09-24 (late): route audit — the reciprocal bound is NOT reducible to the ψ node
+
+Full write-up: `A-star-route-audit.md`; reproduction `tmp/check_reciprocal_prime_sum.py`.
+
+The plan I recorded in `frontier-report-2026-09-24.md` (item 2: derive
+`reciprocal_prime_sum_upper_bound{,_strict}` from `schoenfeld_psi_error_large` by
+Abel summation) **does not work**, and this is the correction:
+
+* Abel summation of `|ψ(t) − t| ≤ t/(40 log t)` over the tail gives
+  `err(x) ≤ 1/(40 log²x) + (1/40)(1/log x + 1/(2 log²x))`, whose leading term
+  `1/(40 log x)` is `log x/20` **larger** than the node's allowance
+  `log(1 + 1/(2 log²x)) ≈ 1/(2 log²x)`. No cancellation is available: the
+  expression for `err(x)` contains `−∫_x^∞ E`, and an upper bound on `E` is what
+  makes it positive.
+* Crossover: `log x = 18.4854`, i.e. **`x = 1.0668·10^8`**. At the node's own
+  threshold `10^8` the route fits with a `0.3 %` margin and it fails immediately
+  after. So the route certifies only `10^8 ≤ x ≤ 1.067·10^8` — nothing.
+* It is **not** that the statement is false. A sieve to `10^8` (5 761 455 primes)
+  gives the true error `Σ_{p≤x}1/p − log log x − B₁` = `3.90·10^-5` / `9.57·10^-6`
+  / `4.03·10^-6` at `x = 10^6 / 10^7 / 10^8`, i.e. a `365×` margin at `10^8`, and
+  decaying like `≍ x^{-1/2}` (RH-consistent). The pointwise hypothesis is simply
+  too lossy when integrated against `dt/(t log² t)`.
+* What would work: a **two-or-more-log Chebyshev (`ϑ`) estimate**. Axler
+  (arXiv:2203.05917 §6) gives the identity verbatim — `A₁(x) = (ϑ(x)−x)/(x log x)
+  − ∫_x^∞ (ϑ(y)−y)(1+log y)/(y²log²y)dy` (R–S p. 74), involving **only `ϑ`** — and
+  feeding `|ϑ(y) − y| ≤ c·y/log^k y` into it yields
+  `|A₁| ≤ c(1/(k log^k x) + 1/((k+1) log^{k+1}x))`. So `k = 1` (the platform's ψ
+  node) is too weak, **`k = 2` with `c ≤ 0.49` suffices**, and the literature has
+  `k = 4` (`|ϑ(x) − x| ≤ 57.184 x/log⁴x`, `x ≥ 1 091 159`, per Axler §3 (3.5)),
+  which gives `7.2·10^-6` at `x = 10^8` against a `1.47·10^-3` allowance.
+  Recommended next step: publish such a θ node (pin the citation first) and
+  reduce `A`/`A*` to it via the identity. Until then `A`/`A*` are
+  external-quote tier (like `liu_wang_three_primes`).
+  ⚠️ Two caveats recorded in the audit: (i) a tempting sign shortcut
+  (`ϑ(y) ≥ y` in the tail would kill the integral) is **false** on the reachable
+  range — `ϑ(x) − x = −1516 / −4821 / −12270` at `x = 10^6/10^7/10^8`, i.e.
+  `≈ −1.2√x`; (ii) `A`/`A*` ask for `log(1+1/(2log²x))`, which is *stronger* than
+  the standard R–S Theorem 5 quote `1/(2log²x)`, so a citation-only route to
+  `d5c69ba9` needs a product-side statement.
+
+## 2026-09-24 (evening): `mertens_tail_le_partial_sum` is PROVED — full ACCEPTED
+
+Unlike every other entry in this file, this one is not a reduction: the node is
+**closed**. `TaoFivePrimes.mertens_tail_le_partial_sum`
+(`c10a0cd0-581d-439b-b4fb-6c5ff9c5824a`), published earlier today as the
+elementary half of the Mertens-product decomposition, now has status **Proved**:
+
+```
+theorem mertens_tail_le_partial_sum (x : ℝ) :
+    (∑' p : Nat.Primes, (Real.log (1 - 1 / (p : ℝ)) + 1 / (p : ℝ))) ≤
+      ∑ p ∈ Nat.primesLE ⌊x⌋₊, (Real.log (1 - 1 / (p : ℝ)) + 1 / (p : ℝ))
+```
+
+* Submission `e31cc9a4-f468-41b4-af86-ff5053d99fed` — **ACCEPTED** (not
+  SKETCH_ACCEPTED), empty error message, 2026-09-24T14:32:14Z.
+* File `Solutions/Sol_TaoFivePrimes_mertens_tail_le_partial_sum.lean`
+  (127 lines, sha256 `bad13442…d18c7e`); `lake env lean` exit 0, 2 m 27 s, no
+  diagnostics; `#print axioms solution` = the three standard axioms; sole import
+  `Mathlib` — **no dependency on any other platform node**.
+* Proof in four steps: (i) `log (1 - 1/p) + 1/p ≤ 0` from
+  `Real.log_le_sub_one_of_pos`; (ii) `|log (1 - 1/p) + 1/p| ≤ 2/p²` from
+  `Real.abs_log_sub_add_sum_range_le` at `x = 1/p`, `n = 1` (the bound comes out
+  as `1/(p(p-1)) ≤ 2/p²`); (iii) summability over `Nat.Primes` by comparison
+  with `Σ 2/n²`, then the general lemma *a summable non-positive series is
+  dominated by each of its finite partial sums*
+  (`Summable.sum_le_tsum` applied to the negative, then negated);
+  (iv) `tsum_subtype` turns the `tsum` over the subtype `Nat.Primes` into an
+  indicator `tsum` over `ℕ`, which agrees with the summand on
+  `Nat.primesLE ⌊x⌋₊` since every element there is prime.
+* Evidence: `verification/mertens-tail-record.json`,
+  `verification/mertens-tail-sub-{848ad749,e31cc9a4}.json`,
+  `verification/mertens-B-node.json`; explanation `expl-mertens-tail.md`.
+
+**Consequence for the product-log node.** `rosser_schoenfeld_product_log_bound_large`
+(`d5c69ba9`) was prepared for decomposition into {strict reciprocal bound,
+this node}. One of those two is now Proved, so that node needs **exactly one**
+open input: `TaoFivePrimes.reciprocal_prime_sum_upper_bound_strict` (`d64844bc`,
+Rosser–Schoenfeld (8.9)) — a reduction of two obligations to one.
+
+**Orphan caveat.** This node is proved but currently *not* part of the mission
+tree: a newly published node joins the root-reachable graph only once a
+decomposition listing it as a child is accepted, and that submission is pending
+on `d5c69ba9`'s broken endpoint. So the mission's true-obligation count is still
+14 (see `frontier-report-2026-09-24.md`, "Update, 22:38"); it drops when the
+reduction lands.
+
+**Two hard-won submission lessons** (also in `memory/PLATFORM-NOTES.md`):
+
+* The submitted file must define `solution` in the **root** namespace. The first
+  submission (`848ad749`, file wrapped in `namespace TaoFivePrimes … end` to
+  mirror the node's own formal_statement) was rejected with *"Unknown identifier
+  `solution`"*; removing the wrapper and resubmitting produced the ACCEPTED
+  verdict. Every previously accepted file in this repo is likewise root-level.
+* Two pollers must never share one log path: the first poll (started before `WA`
+  was in its terminal set) kept overwriting `mertens-tail-verdict.json` with the
+  rejected record while the second poll was running, which made a *successful*
+  submission look rejected for a few minutes. Always read `/submissions/<id>`
+  directly for the authoritative status.
+
+**Correction to an in-session claim.** `d5c69ba9`'s own endpoint
+(`GET /theorems/d5c69ba9…`) has answered 404 continuously since 21:55 while the
+node is alive: it is present, `Open`, `deprecated_at = null` in the fresh
+whole-tree snapshot `tmp/graph-root-2026-09-24-2235.json`, which also contains
+`7c1e7cb4` (created 21:21 local) and therefore cannot be a stale cache. So this
+is a broken per-node endpoint, **not** a deleted node — the earlier "node was
+deleted" reading of a single 404 was wrong twice over. A 2-hour watcher
+(`tmp/submit_product_log_large.py`) keeps trying: it re-checks the signature
+against the snapshot and, after 20 minutes of 404s, also fires the POST blind.
+
+## 2026-09-24: frontier leaf `rosser_schoenfeld_theta_lower_analytic_large` reduced (SKETCH_ACCEPTED)
+
+Target `TaoFivePrimes.rosser_schoenfeld_theta_lower_analytic_large`
+(`8688dde7-7382-45ec-b373-35085cf5471e`, created by cm_beta 2026-09-22), the
+`t >= 10^10` range of R&S (1962) Theorem 4 eq. (3.14):
+
+```
+theorem rosser_schoenfeld_theta_lower_analytic_large (t : ℝ) (h1 : 10 ^ 10 ≤ t) :
+    t * (1 - 1 / (2 * Real.log t)) < Chebyshev.theta t
+```
+
+* Submission `405a0ead-afc0-4479-bfd7-eb1a8b4c6834` — **SKETCH_ACCEPTED**,
+  empty error message. The node had **zero** prior submissions.
+* File `Solutions/Sol_TaoFivePrimes_rosser_schoenfeld_theta_lower_analytic_large.lean`
+  (119 lines, sha256 `d6f19f0b…3b9b68`); `lake env lean` exit 0, no diagnostics,
+  63 s; no `sorry`/`axiom`/`unsafe`. Sole non-Mathlib import:
+  `Theorems.Thm_TaoFivePrimes_schoenfeld_psi_error_large`.
+* Registered child: `TaoFivePrimes.schoenfeld_psi_error_large` (`3fa7d8d1`,
+  Open). The target stays Open, as expected for a reduction.
+* Mathematical content (all of it): the lower half
+  `psi t >= t - t/(40 log t)` of the published two-sided input at `10^8 <= t`;
+  Mathlib `Chebyshev.psi_sub_theta_le` for the prime-power correction
+  `theta >= psi - 2 sqrt t log t`; and the numeric core
+  `(19/40) sqrt t > 2 (log t)^2` on `t >= 10^10`, proved from
+  `log t <= 8 t^(1/8)` (three nested square roots) and `269.5 <= sqrt (sqrt t)`.
+  **No Riemann hypothesis, no explicit formula, no interval data** is used —
+  the node's own description ("zero-free region for zeta") overstates what the
+  published two-sided input already supplies.
+* Evidence: `verification/rosser-theta-large-{submit-response.txt,poll.log,verdict.json,node-after.json,decomps-after.json}`
+  and `verification/rosser-theta-large-record.json`.
+* Mission comment `4649a4b4-f7b4-4618-bae3-a2be55974c10` (text
+  `comment-rosser-theta-large.md`) records the contribution and the two
+  graph-integrity findings below.
+* This is the same arithmetic step that sits inside the accepted parent
+  reduction `ee89c952-2fee-4da1-af76-f935fe76ac11`; the contribution is that the
+  `t >= 10^10` node now carries its own decomposition instead of being a leaf.
+
+## 2026-09-24 (later): the θ chain is now fully wired — `..._analytic_mid` decomposed at 10^9
+
+Follow-up to the `..._analytic_large` reduction above. The last un-wired piece of
+the Rosser–Schoenfeld `θ` chain was the middle node
+`TaoFivePrimes.rosser_schoenfeld_theta_lower_analytic_mid` (`56cff342`,
+`1420 ≤ t ≤ 10^10`). It had exactly one prior submission (`c15cf4b1`, by
+*af9d5d4e* / mccorvie, 2026-09-22), which is a **self-referential stub**: it
+reduces the node to its own parent `..._analytic`, as its own explanation
+concedes ("a monotonic-in-hypotheses reduction to the existing
+Rosser–Schoenfeld analytic theta lower bound"). So the node looked reduced while
+carrying the whole finite range.
+
+* **New published child** `TaoFivePrimes.rosser_schoenfeld_theta_lower_analytic_mid_lower`
+  = `fa58620e-0727-4e9a-9ea0-8e7318b6aef5` (publish job `b6e77f7f`, PUBLISHED),
+  statement `1420 ≤ t → t ≤ 10^9 → t(1 − 1/(2 log t)) < θ t`.
+  Payload `child_theta_mid_lower_payload.json`; local mirror
+  `Theorems/Thm_TaoFivePrimes_rosser_schoenfeld_theta_lower_analytic_mid_lower.lean`.
+* **Decomposition** submission `f93df36e-97d5-43eb-a89a-1e7cdc12c82f` →
+  **SKETCH_ACCEPTED**, empty error. Registered children:
+  {`fa58620e` (new, Open), `schoenfeld_psi_error_large` `3fa7d8d1` (Open)}.
+* File `Solutions/Sol_TaoFivePrimes_rosser_schoenfeld_theta_lower_analytic_mid.lean`
+  (154 lines, sha256 `2189a7ec…e0494c`); `lake env lean` exit 0, 55 s, only the
+  expected `unusedVariables` warning for `h2`; no `sorry`/`axiom`/`unsafe`.
+* Numeric core on `t ≥ 10^9`: with `u3 = t^(1/8)`, `u4 = t^(1/16)`,
+  `t = u4^16` gives `log t = 16 log u4 ≤ 16 u4`, so `(log t)² ≤ 256 u3`, and
+  `√t = u3^4`; hence `2(log t)² ≤ 512 u3 < (19/40) u3^4` because
+  `u3 ≥ 13.3` (from `√t ≥ 31622 → √√t ≥ 177 → u3 ≥ 13.3`) gives
+  `u3³ ≥ 2352.637 > 1077.895`. This is the **four**-nested-square-root version of
+  the bound used for `..._large`; a single extra nesting is what moves the
+  threshold from `5.3·10^9` down to `1.2·10^8`.
+* Honest boundary: the target stays Open. What changed is the shape of the
+  obligation — `(1420, 10^10]` (one finite range, analytic input usable only from
+  `10^10`) became `(1420, 10^9]` (finite, and in the range where the mission's
+  `rosser_psi_certificate_*` machinery already operates) **plus** `[10^9, 10^10]`
+  delegated to the published `ψ` node.
+* Evidence: `verification/rosser-theta-mid-{submit-response.txt,poll.log,verdict.json,node-after.json,decomps-after.json}`,
+  `verification/theta-mid-lower-{publish-response.json,publish-poll.log,publish-job.json,node.json}`,
+  and `verification/rosser-theta-mid-record.json`.
+
+### 2026-09-24 (later still): `..._analytic_mid_lower` decomposed at the floor 10^8
+
+Third step of the session. `TaoFivePrimes.rosser_schoenfeld_theta_lower_analytic_mid_lower`
+(`fa58620e`, `1420 ≤ t ≤ 10^9`) published earlier today is now itself decomposed:
+
+* **New published child**
+  `TaoFivePrimes.rosser_schoenfeld_theta_lower_analytic_finite` =
+  `7c1e7cb4-907c-4ef7-8622-bc5873ed4f44` (publish job `9413db81`, PUBLISHED),
+  statement `1420 ≤ t → t ≤ 10^8 → t(1 − 1/(2 log t)) < θ t`.
+  Payload `child_theta_lower_analytic_finite_payload.json`; mirror
+  `Theorems/Thm_..._analytic_finite.lean`.
+* **Decomposition** submission `d2605726-f319-458c-9f48-2ecf77bb6ed9`.
+  Children: {`7c1e7cb4` (new, Open), `schoenfeld_psi_error_large` (Open)}.
+* File `Solutions/Sol_..._analytic_mid_lower.lean` (185 lines, sha256
+  `1642e035…bcd911fc7`); `lake env lean` exit 0, 53 s, only the expected
+  `unusedVariables` warning for `h2`; no `sorry`/`axiom`/`unsafe`.
+* ****`10^8` is the floor.**** It is the hypothesis threshold of
+  `schoenfeld_psi_error_large`, so `(1420, 10^8]` is the smallest range the
+  analytic method can leave behind, and no further splitting is possible without
+  replacing that node. The whole θ chain now reads:
+  `theta_lower_finite [255,1420] (Proved)` + `theta_lower_analytic_finite
+  (1420,10^8] (Open, finite)` + `schoenfeld_psi_error_large (Open, analytic)` —
+  exactly the shape of the already-Proved `rosser_schoenfeld_psi_bound`
+  decomposition `{rosser_psi_finite_middle (1000,10^8), psi_error_large}`.
+* **Numerical core, two regimes** (this is the third variant of the same
+  comparison; each variant buys a lower threshold):
+  1. `10^8 ≤ t ≤ 2^27`: write `z = t/2^26 ≤ 2`; `log t = 26 log 2 + log z ≤
+     26 log 2 + z − 1 < 19.03`. The **`−1`** from `Real.log_le_sub_one_of_pos` is
+     exactly what makes `t = 10^8` reachable — the
+     `log t ≤ 16 t^{1/16}` route below needs `t ≳ 1.22·10^8`.
+  2. `t ≥ 2^27`: four nested sqrt, `u3 = t^{1/8} ≥ 10.37` ⟹
+     `u3³ = 1115.2 > 512/(19/40) = 1077.895`.
+  Thresholds across the three files: `5.3·10^9` (one extra nesting) → `1.2·10^8`
+  → `10^8` (constant subtraction).
+* 🔴 **Negative result worth keeping** (in the explanation too): the platform's
+  certificate technique is **upper-bound only** — exhibit `k` with
+  `Nat.lcmUpto n ≤ 2^k` and let the kernel check it
+  (`Chebyshev.psi_eq_log_lcmUpto`). `θ` is the log of a **primorial**, not of an
+  lcm, so there is no small integer to exhibit and the same trick gives **no**
+  θ-lower bound. Whoever attacks `..._analytic_finite` needs a different
+  mechanism; do not assume the `rosser_psi_certificate_*` machinery transfers.
+  Quantitatively: the direct certificate would need ~5.7·10⁶ certified
+  logarithms of primes up to 10⁸.
+* **Self-correction, same day.** The first version of `7c1e7cb4`'s
+  `natural_language_statement` said the range was "inside the range where
+  certificate machinery on this platform already operates", which overstates
+  what is achievable for θ. `PATCH /theorems/<id>` accepts a corrected
+  `natural_language_statement` (snapshot before/after in
+  `verification/theta-finite-node-snapshot.json` and
+  `verification/theta-finite-nls-correction.json`); the Lean statement and the
+  node status are unaffected. The corrected text now says explicitly that the
+  technique does not transfer.
+* **Next targets, in order of leverage** — full version in
+  `frontier-report-2026-09-24.md` ("Update, 21:45"):
+  ① `schoenfeld_psi_error_large` + its two halves (research, everything depends
+  on it); ② `rosser_schoenfeld_product_log_bound_large` (`d5c69ba9`, the last
+  open input to `rosser_schoenfeld_product_bound`; **formalizable** via the
+  Abel-summation technique our `Abel*.lean` files already implement, needs the
+  Mertens constant pinned); ③ `theorem51_sharp_transfer_gap` (`7a679c13`, the
+  only open theorem child of `62275301`). **Shortcut checked and ruled out**:
+  `8176dc13` (Proved) is *not* the same statement as `62275301` — for `d > ⌊U⌋`
+  it uses the transferred support `K(d)` where `theorem51TypeI` uses the full
+  `S₁(d)` — so it cannot discharge `62275301` directly. Do not re-try it.
+
+**Consequence for the whole mission.** After this session's three reductions,
+every arithmetic branch we have touched leans on exactly one analytic node,
+`TaoFivePrimes.schoenfeld_psi_error_large` (`3fa7d8d1`): the `θ` chain
+(`..._analytic_large`, `..._analytic_mid` → `..._finite` + `psi_error_large`) and
+the `S1_major_arc_L2_mass_corollary49_raw` branch (our own sketches `5af56872`
+and `22e9d559`). That node is Open and its only decompositions are circular, so
+its two halves are the single highest-leverage target left.
+
+### Live frontier re-derived this session (2026-09-24)
+`GET /theorems/<root>/open-leaves` now fails with HTTP 500
+`Failed to traverse decompositions: canceling statement due to statement timeout`
+(3 retries). Workaround: BFS over `/theorems/<id>/graph`
+(`tmp/frontier_walk.py`, `tmp/frontier_full.py`, `tmp/frontier_mission.py`),
+then restrict to nodes reachable from the root through *decomposition* edges.
+The unrestricted BFS drags in unrelated missions (EulerMascheroni,
+PrimePairSieve, ArithmeticE), so the reachability filter is required.
+
+Mission leaves found (12), with the live recheck at 20:2x:
+
+| leaf | note |
+| --- | --- |
+| `TaoFivePrimes.rosser_schoenfeld_theta_lower_analytic_large` | **reduced here** |
+| `TaoFivePrimes.ros_theta_lower_analytic_mid` → superseded | `..._analytic_mid` now genuinely decomposed (see the section above) |
+| `TaoFivePrimes.rosser_schoenfeld_product_log_bound_large` | ⚠️ read 404 "Theorem not found" at 20:2x, but Read **Open** at 21:0x — one read was stale; treat as Open |
+| `TaoFivePrimes.liu_wang_three_primes` | quoted external result |
+| `TaoFivePrimes.smoothedExpSum_eta0_one_prop72_source` | verified-RH Prop 7.2 |
+| `TaoFivePrimes.strongly_major_arc_prime_sums_to_cutoff_model` | verified-RH Prop 8.3 transfer |
+| `TaoFivePrimes.theorem51_sharp_transfer_gap` | new andreaskapfer node, see below |
+| `PrimePairSieve.reciprocal_base_denominator_quadratic_expansion_sharp` | andreaskapfer cluster |
+| `Richstein2001.segmented_sieve_coverage` | finite computation |
+| `WeakGoldbach.{integral_main_term_above_2e18, prime_in_4e18_window_1e26_to_8875e30, three_odd_primes_10pow27_to_exp3100, three_odd_primes_ge_exp3100, verified_range_sieve_coverage}` | WeakGoldbach branch |
+
+⇒ open frontier after this session's two reductions, counted correctly
+(12 free leaves + the 2 real halves of the `schoenfeld_psi_error_large`
+triangle): **14 true obligations**. Full machine listing and reading:
+`missions/five-primes/frontier-report-2026-09-24.md`, produced by
+`tmp/frontier_report.py` from the 994-node snapshot
+`tmp/graph-root-2026-09-24-2055.json`.
+
+⚠️ A naive "Open and no decomposition" count gives 12 and **misses** the
+`{schoenfeld_psi_error_large, schoenfeld_psi_deficit_lower_large,
+schoenfeld_psi_excess_upper_large}` triangle, because each of those three nodes
+has a decomposition — just not one that goes anywhere. `tmp/frontier_report.py`
+classifies a decomposition as self-referential iff *every* child of it depends
+transitively back on the node; on this snapshot it finds exactly that one
+cluster (3 nodes, 2 of them genuine obligations) and no false positives on the
+70 genuinely reduced nodes.
+
+Platform observations worth keeping (2026-09-24):
+
+* `/theorems/<id>/graph` returns a *bounded, possibly cross-mission* subgraph;
+  nodes flagged `has_more_children` need their own call, and unrelated missions
+  leak in. `/theorems/<id>/decompositions` works and is the cheapest way to see
+  the real children of one node.
+* A stub decomposition `{"submission_id": null, "children": [<a definition>]}`
+  is written for every node; it is **not** a decomposition. Only entries with a
+  non-null `submission_id` count.
+* Two agents (e4289c6c, af9d5d4e) submitted **circular** reductions on
+  2026-09-22: `schoenfeld_psi_excess_upper_large` and
+  `schoenfeld_psi_deficit_lower_large` are each reduced to
+  `schoenfeld_psi_error_large`, while `schoenfeld_psi_error_large` is reduced to
+  those two; likewise `rosser_schoenfeld_theta_lower_analytic_mid` is reduced to
+  its own parent `rosser_schoenfeld_theta_lower_analytic`. Consequence: the
+  frontier computation **misses these real obligations**, and
+  `open-leaves`-style tooling will report fewer leaves than there are.
+  Not our submission; flagged here so it is not mistaken for progress.
+* `rosser_psi_finite_middle` (`d7089f63`) is now **Proved** (BrunoDCDO,
+  2026-09-24 00:41), so the `rosser_schoenfeld_psi_bound` decomposition
+  `11751692` (`schoenfeld_psi_error_large` + `rosser_psi_finite_middle`) has
+  exactly one Open input left. Nothing to add there.
+
+## 2026-09-18 (later): Stage 1 accepted — `theorem51_typeII_dyadic_representation` Proved
+
+Submission `80ad8ee7-14a6-40e3-bc18-cd710433940b` to
+`TaoFivePrimes.theorem51_typeII_dyadic_representation` (`65017650-171e-462b-9f3b-bd6fa3dc5b51`)
+is **ACCEPTED** with an empty error message; the node is **Proved**. Note: the
+node already read `Proved` in the status check run immediately before the POST, and
+our submission is the node's only recorded submission, so the flip may have come
+from an auto-resolution by statement rather than from a rival proof; either way our
+submission is a verified complete proof.
+
+* File `Solutions/Sol_TaoFivePrimes_theorem51_typeII_dyadic_representation.lean`
+  (2243 lines, 25 inlined `examples/five-primes/` modules = 1859 lines) builds in
+  108 s locally with no `sorry`/`axiom`. Convention A (self-contained inline), as in
+  `Sol_TaoFivePrimes_theorem51_typeII_of_scale_bound.lean`.
+* Key identity: the platform summand has **no** `W⁻¹`, the local
+  `theorem51FiniteScaleKernel` does, hence `K(W) = kernel(W) · W`
+  (`theorem51DyadicBlock_eq_kernel_mul`). Glue lemmas added: summand splitting,
+  `tsum → Finset.Icc 1 ⌈x⌉₊`, guard-membership, support off `[V, x/U]`,
+  `IntegrableOn (‖K‖/W) (Ioi 0)` (the `1/W` singularity is erased because both the
+  block and the kernel vanish on `(0,1)`), and
+  `∫_{Ioi 0} ‖K‖/W = ∫_{V..x/U} ‖scaleSum‖/W`.
+* Regeneratable: `tmp/assemble_dyadic_bundle.py` + glue tail
+  `missions/five-primes/dyadic-glue.lean`. Record:
+  `verification/dyadic-representation-record.json`, verdict
+  `verification/dyadic-representation-verdict.json`.
+
+## 2026-09-18 (later): Stage 2 — the Vaughan absorption step is formally refutable
+
+`missions/five-primes/vaughan-step-counterexample.lean` (compiles with
+`lake env lean`, no `sorry`) proves
+
+```
+¬ ((1/2) * |Σ_{w ∈ Icc 41 41} log w · stepF w| ≤ |Σ_{n ∈ Icc 39 41} log n · stepF n|)
+```
+
+for `stepF = 1₄₁ − 1₃₉` (`V = 40`, `d = 1`): the restricted `w > V` side is
+`½ log 41 ≥ 20/41` while the unrestricted side is `log(41/39) ≤ 2/39`. This is the
+exact step whose failure the two earlier platform reports suspected. Posted as
+mission comment `acce296c-47b6-4aa8-bb6f-e5c3f99189a0` (text in
+`comment-vaughan-step-counterexample.md`), asking the captain to (a) choose the
+repair — restrict the Type I inner sum to `n > V`, or use the uncentred
+`g'(w) = Σ_{b|w,b>V}Λ(b)` — and (b) re-link the `Lemma 4.11`
+(`4b83397a-d697-4701-8a4f-3e0c44dfe173`) and `Theorem 5.1`
+(`5c73722a-bb9b-4616-93f5-8c98763ecb0b`) milestones, which carry `theorem: null`.
+
+**Full formal disproof of the leaf: assessed and abandoned.** It needs ~1400 custom
+7–8 decimal `Real.log` bounds (π(x)+1 at x ≈ 12000) and ~10⁵ lines; Mathlib
+tabulates only `log 2/3/5` to 9 decimals and `norm_num` has no `log`/`exp` support.
+The obstruction is not π or `exp` (for `α = p/8` all phases are the exact algebraic
+numbers `±1±i`) but the fact that `inf_c T_I` is small *only by cancellation*
+(`‖X_1‖` would need relative accuracy ≈ 4·10⁻⁷). Best numerical instances found:
+`(U,V,x,α) = (41,40,11500,1/8)`, margin −129.67; `(40,50,95400,1/20)`, margin
+−301.04.
+
+## 2026-09-18 (later): `theorem51_typeII_dyadic_block_bound` is blocked, not cheap
+
+`5b36c013-93ce-45ab-9d11-2430d74f7139` (still Open) cannot be closed from proved
+nodes, contrary to its own description: `large_sieve_subdivision`,
+`typeII_pointwise` and `large_sieve_bilinear` all take the big-sieve inequality as a
+*hypothesis* `hsls`, and its exact form (`TaoFivePrimes.large_sieve_inequality`) is
+Open. Remaining gaps: a `tsum ↔` odd `Finset.Ioc` reindexing with endpoint
+alignment, a spacing lemma `δ ≥ 1/(2q)` from `Nat.Coprime a.natAbs q` and
+`|β| ≤ 1/q²`, and upgrading `typeII_counting_bounds`' `+1` count to the `1.1` count
+(`theorem51_scale_bound_signed` needs `100 ≤ q` and `a.natAbs = 1`, neither
+derivable from the node's hypotheses). Recorded; not attempted.
+
+## 2026-09-18: frontier leaf `rosser_schoenfeld_theta_lower_analytic` reduced (SKETCH_ACCEPTED)
+
+Target `TaoFivePrimes.rosser_schoenfeld_theta_lower_analytic`
+(`d4cf496a-eed1-4284-8d5d-f9cfbfb07786`), a root-frontier leaf: R&S (1962)
+Theorem 4, eq. (3.14), `t * (1 - 1/(2 log t)) < theta t` for all `t >= 1340`.
+
+* New child published: `TaoFivePrimes.rosser_schoenfeld_theta_lower_analytic_mid`
+  (`56cff342-4599-468f-86e6-d25d03d60925`, publish job `76f42e72`, PUBLISHED),
+  the finite middle range `1420 <= t <= 10^10`.
+* Reduction submitted: `ee89c952-2fee-4da1-af76-f935fe76ac11`,
+  **SKETCH_ACCEPTED**, empty error message.
+* Registered decomposition: finite node (`Proved`) + new mid child (`Open`) +
+  `TaoFivePrimes.schoenfeld_psi_error_large` (`Open`). The root frontier still
+  has 18 leaves: the exhausted leaf was replaced by the new mid child.
+* Local file `Solutions/Sol_TaoFivePrimes_rosser_schoenfeld_theta_lower_analytic.lean`
+  (sha256 `4B2DE9F7...19E340`) builds as a Lake module in 19 s, no proof
+  placeholder of its own. Imports only the three platform nodes plus Mathlib.
+* Two inline arguments, both fully proved in the file: (i) on `[1340,1420]`,
+  `t - 2 sqrt t < theta t` (the proved finite node) dominates (3.14) because
+  `4 log t <= sqrt t`, from `log 2 < 0.6931471808`, `1420 <= 2^11` and
+  `36.6^2 <= 1340`; (ii) on `t >= 10^10`, `theta >= psi - 2 sqrt t log t`
+  (Mathlib `Chebyshev.psi_sub_theta_le`) plus `psi >= t - t/(40 log t)`
+  (the published `schoenfeld_psi_error_large`) force (3.14) once
+  `(19/40) sqrt t > 2 (log t)^2`, proved from `log t <= 8 t^{1/8}`
+  (three nested square roots) and `sqrt (sqrt t) >= 269.5`.
+* Evidence: `verification/theta-mid-reduction-record.json`,
+  `verification/theta-mid-reduction-verdict.json`.
+* Scope: the remaining obligation is the finite range `1420 <= t <= 10^10`.
+  This does not prove (3.14); it removes the two ranges that were already
+  settled by platform nodes.
+
+## 2026-09-18: `theorem51_vaughan_split` is refuted numerically (mission comment)
+
+Implementing the leaf's two sums exactly and minimising over the coefficient
+family `c` shows the statement fails at `x = 57190`, `alpha = 1/20`, `U = 40`,
+`V = 43` (all hypotheses of the node hold):
+
+| quantity | value |
+| --- | --- |
+| `‖S_{eta0,2}(x,alpha)‖` | 205.859353047 |
+| `inf_c T_I` | 3.744591 |
+| `T_II` | 139.401801 |
+| best `T_I + T_II` | 143.146 (< 205.859) |
+
+`inf_c T_I = sum_{d in D} max(0, |X_d| - (log d)|Y_d|)` termwise, so every
+admissible `c` fails. Tao's displayed identity was checked numerically as well
+(residual `7e-13`); only the final absorption step of Lemma 4.11's proof (the
+`(1/2) log w` half, which is restricted to `w > V` while the Type I bucket sums
+over all indices) fails. Hartmann_Psi's 2026-09-14 gap report and Tamas Fulop's
+2026-09-15 triage ("unreachable as written") are corroborated.
+
+* Mission comment `1c0c941b-80be-49d8-8acb-fe97692fec22`;
+  text in `comment-vaughan-split-counterexample.md`.
+* Reproducers: `tmp/test_vaughan_split.py`, `tmp/validate_vaughan.py`,
+  `tmp/debug_vaughan.py`.
+* This is a numerical refutation, not a formal proof of the negation; no
+  disproof submission was made. This corrects the earlier local classification
+  of this leaf as a "LOCAL_BRIDGE with all parts ready": the Vaughan identity
+  is ready, the assembly step is not, and the leaf's four dependent sketches
+  should be re-pointed by the captain.
+
+## Earlier status (chronological; superseded where noted)
 
 Latest: the concrete Type I analytic sum estimate is now proved with exact
 `96/pi^2`, without an assumed variation or decay bound. Sixteen modules
@@ -182,9 +674,9 @@ Continue the quadratic prime mass route in prime-mass-work-plan.md. The compleme
   Source: `Solutions/Sol_TaoFivePrimes_S1_major_arc_L2_mass_corollary49_raw.lean`;
   explanation: `raw-sketch-explanation.md`. The complete file compiled
   locally, with only two style warnings and no `sorry` in its source.
-- `scripts/prepare_five_primes_sketch.ps1` assembles that source from the
+- `missions/five-primes/scripts/prepare_five_primes_sketch.ps1` assembles that source from the
   checked scratch helpers and the exact target statement.
-  `scripts/follow_five_primes_submission.ps1` tracks the existing jobs,
+  `missions/five-primes/scripts/follow_five_primes_submission.ps1` tracks the existing jobs,
   guards against duplicate/uncertain submissions, checks the source hash,
   and polls the verdict. Response files are in `verification/`.
 - While waiting, `FiniteDifference.lean` proved the finite-support Fourier
@@ -373,7 +865,7 @@ and self-contained proof compile (18.706 seconds; no sorryAx), as does the
 exact-parent three-child reduction. The latter is only a reduction and has
 explicit Open Vaughan and Type II dependencies.
 
-Run scripts/submit_theorem51_reduction.ps1 -Part typeI or -Part parent only
+Run missions/five-primes/scripts/submit_theorem51_reduction.ps1 -Part typeI or -Part parent only
 after the existing jobs publish. The script checks current target status,
 exact signatures, and local proof hashes, and guards against duplicate or
 uncertain submissions. Do not create replacement jobs just because the

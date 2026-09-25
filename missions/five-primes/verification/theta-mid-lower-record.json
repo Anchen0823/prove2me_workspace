@@ -1,0 +1,59 @@
+{
+  "recorded_at": "2026-09-24T21:30:00+08:00",
+  "mission_id": "cdf62c01-8ad9-4eb0-bbcc-ef94ce25d4f8",
+  "mission_name": "Every Odd Number Greater Than 1 is the Sum of at Most Five Primes",
+  "target": {
+    "theorem_id": "fa58620e-0727-4e9a-9ea0-8e7318b6aef5",
+    "theorem_name": "TaoFivePrimes.rosser_schoenfeld_theta_lower_analytic_mid_lower",
+    "statement": "theorem rosser_schoenfeld_theta_lower_analytic_mid_lower (t : ℝ) (h1 : 1420 ≤ t) (h2 : t ≤ 10 ^ 9) : t * (1 - 1 / (2 * Real.log t)) < Chebyshev.theta t",
+    "status_after": "Open",
+    "prior_submissions": 0,
+    "published_by_us_earlier_same_session": true
+  },
+  "new_published_child": {
+    "theorem_id": "7c1e7cb4-907c-4ef7-8622-bc5873ed4f44",
+    "theorem_name": "TaoFivePrimes.rosser_schoenfeld_theta_lower_analytic_finite",
+    "statement": "theorem rosser_schoenfeld_theta_lower_analytic_finite (t : ℝ) (h1 : 1420 ≤ t) (h2 : t ≤ 10 ^ 8) : t * (1 - 1 / (2 * Real.log t)) < Chebyshev.theta t",
+    "publish_job_id": "9413db81-2540-46bc-8551-bf0cc354e3de",
+    "publish_status": "PUBLISHED",
+    "status_after": "Open",
+    "local_mirror": "Theorems/Thm_TaoFivePrimes_rosser_schoenfeld_theta_lower_analytic_finite.lean",
+    "payload": "missions/five-primes/child_theta_lower_analytic_finite_payload.json",
+    "why_this_is_the_floor": "10^8 is the hypothesis threshold of the published node TaoFivePrimes.schoenfeld_psi_error_large, so (1420, 10^8] is the smallest range the analytic method cannot reach; no further splitting is possible without replacing that node."
+  },
+  "submission": {
+    "submission_id": "d2605726-f319-458c-9f48-2ecf77bb6ed9",
+    "proof_type": "prove",
+    "verdict": "SKETCH_ACCEPTED",
+    "error_message": "",
+    "created_at": "2026-09-24T13:29:26.909048+00:00",
+    "updated_at": "2026-09-24T13:31:07.505853+00:00",
+    "registered_children": [
+      "7c1e7cb4-907c-4ef7-8622-bc5873ed4f44 (TaoFivePrimes.rosser_schoenfeld_theta_lower_analytic_finite, Open)",
+      "3fa7d8d1-e2ce-4057-894d-f39a2f0a4a8d (TaoFivePrimes.schoenfeld_psi_error_large, Open)"
+    ],
+    "file": "Solutions/Sol_TaoFivePrimes_rosser_schoenfeld_theta_lower_analytic_mid_lower.lean",
+    "lines": 185,
+    "sha256": "1642e035a8beda4ba5a34840dd745dbe7f0b7a8d5b892799e0ca656bcd911fc7",
+    "local_check": "lake env lean -> exit 0, 53 s; only the expected unusedVariables warning for h2",
+    "sorry_axiom_unsafe": "none in the body",
+    "signature_vs_target": "exact match after whitespace normalisation",
+    "explanation_file": "missions/five-primes/expl-rosser-theta-mid-lower.md"
+  },
+  "mathematical_content": [
+    "range split at 10^8: [1420,10^8] is the new finite child, [10^8,10^9] is analytic",
+    "numeric core 2 (log t)^2 < (19/40) sqrt t in two regimes",
+    "regime 1 (10^8 <= t <= 2^27): t = 2^26 * z with z <= 2, log t = 26 log 2 + log z <= 26 log 2 + z - 1 < 19.03, and sqrt t >= 10^4, so 2*19.03^2 = 724.3 < 4750 = (19/40)*10^4; the '-1' from log_le_sub_one_of_pos is what makes 10^8 reachable",
+    "regime 2 (t >= 2^27): log t <= 16 t^(1/16) via four nested sqrt, and (t^(1/8))^3 >= 10.37^3 = 1115.2 > 512/(19/40) = 1077.895",
+    "chain sqrt t >= 11585 -> sqrt(sqrt t) >= 107.6 -> t^(1/8) >= 10.37"
+  ],
+  "evidence": [
+    "missions/five-primes/verification/theta-finite-publish-response.json",
+    "missions/five-primes/verification/theta-finite-publish-poll.log",
+    "missions/five-primes/verification/theta-finite-publish-job.json",
+    "missions/five-primes/verification/theta-mid-lower-submit-response.txt",
+    "missions/five-primes/verification/theta-mid-lower-poll.log",
+    "missions/five-primes/verification/theta-mid-lower-verdict.json"
+  ],
+  "negative_result_recorded": "The platform's certificate technique is NAT-cast based and gives UPPER bounds: exhibit k with Nat.lcmUpto n <= 2^k and let the kernel check it (Chebyshev.psi_eq_log_lcmUpto). theta is the log of a PRIMORIAL, not of an lcm, so there is no small integer to exhibit and the same trick does not give a theta LOWER bound. Certified theta lower bounds therefore need a different mechanism (or a much larger certificate). Recorded in the explanation so the finite node's difficulty is not understated."
+}

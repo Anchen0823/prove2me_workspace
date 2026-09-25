@@ -1,0 +1,72 @@
+{
+  "recorded_at": "2026-09-24T20:58:00+08:00",
+  "mission_id": "cdf62c01-8ad9-4eb0-bbcc-ef94ce25d4f8",
+  "mission_name": "Every Odd Number Greater Than 1 is the Sum of at Most Five Primes",
+  "target": {
+    "theorem_id": "56cff342-4599-468f-86e6-d25d03d60925",
+    "theorem_name": "TaoFivePrimes.rosser_schoenfeld_theta_lower_analytic_mid",
+    "statement": "theorem rosser_schoenfeld_theta_lower_analytic_mid (t : ℝ) (h1 : 1420 ≤ t) (h2 : t ≤ 10 ^ 10) : t * (1 - 1 / (2 * Real.log t)) < Chebyshev.theta t",
+    "status_after": "Open",
+    "prior_submission": {
+      "submission_id": "c15cf4b1-eff2-4ec8-9654-8510902b8b6d",
+      "author": "af9d5d4e-0293-4ef1-9d11-24e8af248ea5 (mccorvie)",
+      "verdict": "SKETCH_ACCEPTED",
+      "nature": "self-referential stub: reduces the node to its own parent TaoFivePrimes.rosser_schoenfeld_theta_lower_analytic",
+      "quote_from_its_explanation": "This is a monotonic-in-hypotheses reduction to the existing Rosser–Schoenfeld analytic theta lower bound"
+    }
+  },
+  "new_published_child": {
+    "theorem_id": "fa58620e-0727-4e9a-9ea0-8e7318b6aef5",
+    "theorem_name": "TaoFivePrimes.rosser_schoenfeld_theta_lower_analytic_mid_lower",
+    "statement": "theorem rosser_schoenfeld_theta_lower_analytic_mid_lower (t : ℝ) (h1 : 1420 ≤ t) (h2 : t ≤ 10 ^ 9) : t * (1 - 1 / (2 * Real.log t)) < Chebyshev.theta t",
+    "publish_job_id": "b6e77f7f-d4b9-4829-8261-1e05a34b138b",
+    "publish_status": "PUBLISHED",
+    "status_after": "Open",
+    "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+    "local_mirror": "Theorems/Thm_TaoFivePrimes_rosser_schoenfeld_theta_lower_analytic_mid_lower.lean",
+    "payload": "missions/five-primes/child_theta_mid_lower_payload.json"
+  },
+  "submission": {
+    "submission_id": "f93df36e-97d5-43eb-a89a-1e7cdc12c82f",
+    "proof_type": "prove",
+    "verdict": "SKETCH_ACCEPTED",
+    "error_message": "",
+    "created_at": "2026-09-24T12:51:51.927145+00:00"
+  },
+  "file": {
+    "path": "Solutions/Sol_TaoFivePrimes_rosser_schoenfeld_theta_lower_analytic_mid.lean",
+    "lines": 154,
+    "sha256": "2189a7eca7f3f1ef6b7b60b2209652f422ddf6261a15968217052cbf35e0494c",
+    "local_check": "lake env lean -> exit 0, 55 s, only the expected unusedVariables warning for h2",
+    "sorry_axiom_unsafe": "none in the body",
+    "non_mathlib_imports": [
+      "Theorems.Thm_TaoFivePrimes_rosser_schoenfeld_theta_lower_analytic_mid_lower",
+      "Theorems.Thm_TaoFivePrimes_schoenfeld_psi_error_large"
+    ],
+    "signature_vs_target": "exact match after whitespace normalisation"
+  },
+  "explanation_file": "missions/five-primes/expl-rosser-theta-mid.md",
+  "registered_children": [
+    {"theorem_id": "fa58620e-0727-4e9a-9ea0-8e7318b6aef5", "theorem_name": "TaoFivePrimes.rosser_schoenfeld_theta_lower_analytic_mid_lower", "status": "Open"},
+    {"theorem_id": "3fa7d8d1-e2ce-4057-894d-f39a2f0a4a8d", "theorem_name": "TaoFivePrimes.schoenfeld_psi_error_large", "status": "Open"}
+  ],
+  "mathematical_content": [
+    "range split at 10^9: [1420,10^9] is the new finite child, [10^9,10^10] is analytic",
+    "psi t >= t - t/(40 log t) from the lower half of |psi y - y| <= y/(40 log y)",
+    "Chebyshev.psi_sub_theta_le : psi t - theta t <= 2 sqrt t log t",
+    "numeric core 2 (log t)^2 < (19/40) sqrt t on t >= 10^9, from log t <= 16 t^(1/16) (four nested sqrt) and (sqrt(sqrt(sqrt t)))^3 >= 13.3^3 = 2352.637 > 1077.895",
+    "the chain sqrt t >= 31622 -> sqrt(sqrt t) >= 177 -> sqrt(sqrt(sqrt t)) >= 13.3"
+  ],
+  "evidence": [
+    "missions/five-primes/verification/theta-mid-lower-publish-response.json",
+    "missions/five-primes/verification/theta-mid-lower-publish-poll.log",
+    "missions/five-primes/verification/theta-mid-lower-publish-job.json",
+    "missions/five-primes/verification/theta-mid-lower-node.json",
+    "missions/five-primes/verification/rosser-theta-mid-submit-response.txt",
+    "missions/five-primes/verification/rosser-theta-mid-poll.log",
+    "missions/five-primes/verification/rosser-theta-mid-verdict.json",
+    "missions/five-primes/verification/rosser-theta-mid-node-after.json",
+    "missions/five-primes/verification/rosser-theta-mid-decomps-after.json"
+  ],
+  "effect_on_the_theta_chain": "Before: theta_lower_analytic (t >= 1340) <- {finite[255,1420] Proved, mid[1420,10^10] with only a self-referential decomposition, large[10^10,infty) reduced to schoenfeld_psi_error_large}. After: mid is genuinely decomposed into {new finite node [1420,10^9], schoenfeld_psi_error_large}, so the whole theta chain is wired to one finite computation plus one analytic node."
+}

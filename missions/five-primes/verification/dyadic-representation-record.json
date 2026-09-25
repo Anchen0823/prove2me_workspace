@@ -1,0 +1,54 @@
+{
+  "date": "2026-09-18",
+  "stage1": {
+    "target": {
+      "theorem_name": "TaoFivePrimes.theorem51_typeII_dyadic_representation",
+      "theorem_id": "65017650-171e-462b-9f3b-bd6fa3dc5b51",
+      "status_before_submission": "Proved (already flipped when checked immediately before submitting; the node's only recorded submission is ours)",
+      "status_after": "Proved"
+    },
+    "submission": {
+      "submission_id": "80ad8ee7-14a6-40e3-bc18-cd710433940b",
+      "proof_type": "prove",
+      "verdict": "ACCEPTED",
+      "error_message": "",
+      "created_at": "2026-09-18T12:52:04Z",
+      "updated_at": "2026-09-18T12:55:05Z",
+      "file": "Solutions/Sol_TaoFivePrimes_theorem51_typeII_dyadic_representation.lean",
+      "file_lines": 2243,
+      "explanation": "missions/five-primes/verification/dyadic-representation-explanation.md"
+    },
+    "build": {
+      "command": "lake build Solutions.Sol_TaoFivePrimes_theorem51_typeII_dyadic_representation",
+      "result": "ok",
+      "duration_seconds_local": 108,
+      "sorry_or_axiom_in_file": false,
+      "inlined_modules": 25,
+      "inline_lines": 1859
+    },
+    "new_glue_lemmas": [
+      "theorem51DyadicSummand_eq (platform summand = coefficient x indicator)",
+      "theorem51DyadicBlock_eq_tsum / theorem51DyadicBlock_eq_finset",
+      "theorem51DyadicGuard_mem / theorem51DyadicTerm_zero_outside",
+      "theorem51DyadicRect_mul_inv_eq_kernel / theorem51DyadicBlock_eq_kernel_mul (K(W) = kernel * W)",
+      "theorem51FiniteScaleKernel_zero_small / theorem51FiniteScaleKernel_zero_gt_x",
+      "theorem51DyadicBlock_zero_small / theorem51DyadicBlock_zero_outside",
+      "theorem51DyadicBlock_integrableOn",
+      "theorem51_setIntegral_eq_interval"
+    ],
+    "generator": "tmp/assemble_dyadic_bundle.py (re-runnable; glue tail kept in missions/five-primes/dyadic-glue.lean)"
+  },
+  "stage2": {
+    "artifact": "missions/five-primes/vaughan-step-counterexample.lean",
+    "statement": "not ((1/2) * |sum_{w in Icc 41 41} log w * stepF w| <= |sum_{n in Icc 39 41} log n * stepF n|) with stepF = 1_41 - 1_39",
+    "local_check": "lake env lean missions/five-primes/vaughan-step-counterexample.lean -> no diagnostics",
+    "mission_comment_id": "acce296c-47b6-4aa8-bb6f-e5c3f99189a0",
+    "comment_text": "missions/five-primes/comment-vaughan-step-counterexample.md",
+    "platform_node_published": false,
+    "predecessor_comment": "1c0c941b-80be-49d8-8acb-fe97692fec22 (numerical counterexample to the leaf's statement)"
+  },
+  "negative_results_recorded": {
+    "full_formal_disproof_of_vaughan_split": "out of reach: ~1400 custom 7-8 digit Real.log bounds, ~1e5 lines; Mathlib tabulates only log 2/3/5 decimals and norm_num has no log support; inst_c T_I is small only by cancellation (||X_1|| needs relative accuracy ~4e-7). Best numerical instances found: (U,V,x,alpha) = (41,40,11500,1/8) margin -129.67; (40,50,95400,1/20) margin -301.04.",
+    "theorem51_typeII_dyadic_block_bound": "blocked: needs (a) tsum <-> odd Finset.Ioc reindexing, (b) spacing delta >= 1/(2q) from Nat.Coprime + |beta| <= 1/q^2, (c) upgrading typeII_counting_bounds' +1 to the 1.1 count; and the three 'proved ingredients' large_sieve_subdivision / typeII_pointwise / large_sieve_bilinear all take the big-sieve inequality hsls as a hypothesis, whose exact form TaoFivePrimes.large_sieve_inequality is still Open."
+  }
+}

@@ -32,7 +32,7 @@ unproved. No external Lean source has been imported into the submission.
 
 The local placeholder `TaoFivePrimes.schoenfeld_psi_error_large` is NOT
 published and NOT proved. The exact-target mass solution imports it as
-the sole open dependency. `scripts/prepare_mass_sketch.ps1` assembles
+the sole open dependency. `missions/five-primes/scripts/prepare_mass_sketch.ps1` assembles
 the proof from checked helpers. Consult verification/mass-sketch-local*
 for the full-file validation result. Do not submit the solution until
 the source node is published and the import resolves on the server.

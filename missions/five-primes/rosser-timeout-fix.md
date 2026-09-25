@@ -29,9 +29,9 @@ are removed. All 87 interval certificates, including the delicate endpoint
 113, are retained. No new imported assumptions, axioms, or native evaluation
 are introduced.
 
-`scripts/prepare_rosser_sketch.ps1` invokes
-`scripts/optimize_rosser_timeout.py`, so regenerating the submission preserves
-the performance repair. `scripts/submit_rosser_timeout_fix.ps1` checks the
+`missions/five-primes/scripts/prepare_rosser_sketch.ps1` invokes
+`missions/five-primes/scripts/optimize_rosser_timeout.py`, so regenerating the submission preserves
+the performance repair. `missions/five-primes/scripts/submit_rosser_timeout_fix.ps1` checks the
 original timeout, current target, exact verified file hash, and duplicate
 submission markers before sending the repair.
 

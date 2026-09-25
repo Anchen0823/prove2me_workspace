@@ -1,0 +1,18 @@
+{
+  "problems": [
+    {
+      "theorem_name": "TaoFivePrimes.rosser_schoenfeld_theta_lower_analytic_finite",
+      "theorem_title": "Rosser--Schoenfeld (1962), Theorem 4, eq. (3.14): the finite range $1420 \\le t \\le 10^{8}$",
+      "formal_statement": "namespace TaoFivePrimes\n\ntheorem rosser_schoenfeld_theta_lower_analytic_finite (t : \u211d) (h1 : 1420 \u2264 t)\n    (h2 : t \u2264 10 ^ 8) :\n    t * (1 - 1 / (2 * Real.log t)) < Chebyshev.theta t := by sorry\n\nend TaoFivePrimes",
+      "natural_language_statement": "**Rosser--Schoenfeld (1962), Theorem 4, eq. (3.14), finite range.** Let $\\theta(t)=\\sum_{p\\le t}\\log p$ over primes $p$. For every real $t$ with\n\n$$1420 \\;\\le\\; t \\;\\le\\; 10^{8},$$\n\none has\n\n$$t\\left(1-\\frac{1}{2\\log t}\\right)\\;<\\;\\theta(t).$$\n\nThis is inequality (3.14) of Rosser and Schoenfeld, *Approximate formulas for some functions of prime numbers*, Illinois J. Math. 6 (1962), 64--94, Theorem 4 (printed p. 70), restricted to the range $1420 \\le t \\le 10^{8}$.\n\n**Why this range is the floor.** Above $10^{8}$ the bound follows analytically from the published two-sided estimate `TaoFivePrimes.schoenfeld_psi_error_large`, $|\\psi(t)-t|\\le t/(40\\log t)$, together with Mathlib's `Chebyshev.psi_sub_theta_le`; the threshold $10^{8}$ is the hypothesis of that input and cannot be lowered without replacing it. Below $1420$ the sharper elementary bound $t-2\\sqrt t<\\theta(t)$ is available as the proved platform theorem `TaoFivePrimes.rosser_schoenfeld_theta_lower_finite`. So $(1420,10^{8}]$ is exactly the finite computation that the analytic method cannot reach, and this node isolates it.\n\n**What a proof needs.** This is a finite computation, not analysis: $\\theta$ is non-decreasing, so it suffices to exhibit a finite set of intervals covering $(1420,10^{8}]$ and, for each, a certified lower bound on $\\theta$ at the left endpoint exceeding $t(1-1/(2\\log t))$ at the right endpoint. The mission already has this kind of certificate at the smaller range $255\\le t\\le 1420$ (the proved node `TaoFivePrimes.rosser_schoenfeld_theta_lower_finite`), and the sibling family `TaoFivePrimes.rosser_psi_certificate_*` reaches $10^{8}$ for the neighbouring $\\psi$ bound, so the target is inside the range where certificate machinery on this platform already operates.\n\n**Formalization Note** `Chebyshev.theta` is Mathlib's $\\theta$ function on $\\mathbb{R}$. This statement is a range restriction of `TaoFivePrimes.rosser_schoenfeld_theta_lower_analytic_mid`; it is a formalization choice of the reduction of that node, not a separately numbered statement in the source.",
+      "preamble": "import Mathlib.NumberTheory.Chebyshev",
+      "source": "J. B. Rosser, L. Schoenfeld, Approximate formulas for some functions of prime numbers, Illinois Journal of Mathematics 6 (1962), 64--94, Theorem 4, printed p. 70, eq. (3.14). Used in T. Tao, Every odd number greater than 1 is the sum of at most five primes, arXiv:1201.6656v4, Section 9, p. 89, to build the parameter y of Lemma 15. The range split at 10^8 is a formalization choice of this reduction: 10^8 is the hypothesis threshold of the published analytic input TaoFivePrimes.schoenfeld_psi_error_large, so it is the natural floor of the finite obligation.",
+      "tags": [
+        "analytic-number-theory",
+        "number-theory",
+        "primes",
+        "chebyshev-functions"
+      ]
+    }
+  ]
+}

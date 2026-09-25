@@ -1,0 +1,36 @@
+# `theorem51_vaughan_split` looks false: a reproducible numerical counterexample
+
+Following up on [Hartmann_Psi's gap report](p2m:comment/15426e63-fe90-431d-aa64-38a530b7d256) (2026-09-14) and the triage note of Tamas Fulop (2026-09-15, "unreachable as written"), I implemented the two sums of the leaf exactly as they are stated and evaluated the *best possible* choice of the coefficient family `c`.
+
+**Result.** For `x = 57190`, `α = 1/20`, `U = 40`, `V = 43` (all hypotheses of the node hold: `40 ≤ U`, `40 ≤ V`, `U,V < x`, `U·V = 1720 ≤ x/4 = 14297.5`, `x ≤ U·V² = 73960`):
+
+| quantity | value |
+| --- | --- |
+| `‖S_{η₀,2}(x,α)‖` | 205.859353047 |
+| `inf_c T_I(x,α,U,V;c)` | 3.744591 |
+| `T_II(x,α,U,V)` | 139.401801 |
+| best possible `T_I + T_II` | **143.146** < 205.859 |
+
+Because the `d`-th summand of `T_I` depends on `c` only through `c_d`, and `‖c_d‖ ≤ 1`, the infimum is attained termwise:
+
+```
+inf_c T_I = Σ_{d ∈ theorem51Divisors U V} max(0, ‖X_d‖ − (log d)·‖Y_d‖),
+X_d = Σ_{m odd} log m · η₀(dm/x) · e(αdm),   Y_d = Σ_{m odd} η₀(dm/x) · e(αdm).
+```
+
+So `¬ ∃ c, ∀ d ∈ D, ‖c d‖ ≤ 1 ∧ ‖S‖ ≤ T_I(c) + T_II`: every admissible `c` fails, with margin ≈ 62.7.
+
+**Why the failure happens** (it is exactly the step Hartmann_Psi flagged). Tao's proof of Lemma 4.11 writes the third term of (4.18) as `g(w) + ½ log w` and absorbs the `½ log w` half into `Σ_{d≤UV}|Σ_n (log n) F(dn)|`. But the `½ log w` half is restricted to `w > V`, while the Type I bucket sums over *all* inner indices; and the pieces that land at index `d` carry the coefficients `μ(d)` (for `d ≤ U`) and `μ(d)/2` (for `U < d ≤ UV`), not `1`. The Type I shape `(log n + c_d log d)` can absorb a coefficient `f(d)` with `|f(d)| ≤ log d` on the `Σ_n F(dn)` piece, which is why `Σ_d |f(d)||Σ_n F(dn)|` is fine; but the `log`-weighted pieces need the *restricted* sum to be bounded by the *unrestricted* one at the same index, and that is not true in general — it fails here.
+
+**The identity itself is fine.** I checked Tao's displayed identity numerically as well (with `f(d) = Σ_{b|d, d/U ≤ b ≤ V} μ(d/b)Λ(b)`):
+`S = Σ_{d≤U} μ(d)Σ_n log n F(dn) − Σ_{d≤UV} f(d)Σ_n F(dn) + Σ_{d>U}Σ_{w>V} μ(d)(g(w) + ½ log w) F(dw)`
+matches the direct value of `S` with residual `7·10⁻¹³`. It is only the final absorption step (the line after (4.18) in the paper, p. 24) that does not go through.
+
+**Reproduce** (pure Python, ~20 lines; sieve `μ`, `Λ`, evaluate `η₀(t) = 4 max(0, log 2 − |log 2t|)` and `e(θ) = exp(2πiθ)`, sum over odd indices, then minimise each `d`-term as above). I can paste the script in a reply if useful.
+
+**Suggested repairs** (both are decisions for the captain, not for me to make unilaterally):
+
+1. Keep the centring but restrict the Type I inner sum to `n > V` for the indices `U < d ≤ UV` — the Type I estimates of Section 5 bound `‖F‖_{L¹}`, `‖F'‖_{L¹}`, `‖F''‖_{L¹}` over the whole support, so this costs nothing downstream.
+2. Drop the centring: use the uncentred coefficient `g'(w) = Σ_{b|w, b>V} Λ(b)`, for which `|g'(w)| ≤ log w`. Then the split is a direct consequence of the Vaughan identity (this is option 2 in Hartmann_Psi's report), at the cost of a factor two in Type II.
+
+**Scope of this note.** This is a *numerical* refutation of the formal statement, not a formal proof of its negation; I have not formalised it in Lean (the summands involve `log` and `exp`). I am posting it because four reduction sketches ([5bd1af4a](p2m:submission/5bd1af4a-f623-40c7-9293-b97b334da035), 22e5ccc9, 14cbfbd0, c2a77a5b) currently depend on this leaf, so the statement is worth settling before more work goes into it. I am happy to formalise whichever repaired version the captain prefers, in the shape of a published child.

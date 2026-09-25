@@ -1,0 +1,62 @@
+{
+  "recorded_at": "2026-09-24T20:32:00+08:00",
+  "mission_id": "cdf62c01-8ad9-4eb0-bbcc-ef94ce25d4f8",
+  "mission_name": "Every Odd Number Greater Than 1 is the Sum of at Most Five Primes",
+  "target": {
+    "theorem_id": "8688dde7-7382-45ec-b373-35085cf5471e",
+    "theorem_name": "TaoFivePrimes.rosser_schoenfeld_theta_lower_analytic_large",
+    "statement": "theorem rosser_schoenfeld_theta_lower_analytic_large (t : ℝ) (h1 : 10 ^ 10 ≤ t) : t * (1 - 1 / (2 * Real.log t)) < Chebyshev.theta t",
+    "status_after": "Open",
+    "status_before": "Open",
+    "prior_submissions": 0
+  },
+  "submission": {
+    "submission_id": "405a0ead-afc0-4479-bfd7-eb1a8b4c6834",
+    "proof_type": "prove",
+    "verdict": "SKETCH_ACCEPTED",
+    "error_message": "",
+    "created_at": "2026-09-24T12:24:37.075059+00:00",
+    "updated_at": "2026-09-24T12:29:58.848934+00:00"
+  },
+  "file": {
+    "path": "Solutions/Sol_TaoFivePrimes_rosser_schoenfeld_theta_lower_analytic_large.lean",
+    "lines": 119,
+    "sha256": "d6f19f0b3495d6502f56c3da7531b3b9759dd376265a777a3495171bd63b9b68",
+    "local_check": "lake env lean -> exit 0, no diagnostics, 63 s",
+    "sorry_axiom_unsafe": "none in the body",
+    "non_mathlib_imports": ["Theorems.Thm_TaoFivePrimes_schoenfeld_psi_error_large"],
+    "signature_vs_target": "exact match after whitespace normalisation"
+  },
+  "explanation_file": "missions/five-primes/expl-rosser-theta-large.md",
+  "mission_comment": {
+    "id": "4649a4b4-f7b4-4618-bae3-a2be55974c10",
+    "text_file": "missions/five-primes/comment-rosser-theta-large.md",
+    "tags": ["strategy", "reference"],
+    "posted_at": "2026-09-24T20:3x+08:00"
+  },
+  "registered_children": [
+    {
+      "theorem_id": "3fa7d8d1-e2ce-4057-894d-f39a2f0a4a8d",
+      "theorem_name": "TaoFivePrimes.schoenfeld_psi_error_large",
+      "status": "Open"
+    }
+  ],
+  "mathematical_content": [
+    "psi t >= t - t/(40 log t) from the lower half of |psi y - y| <= y/(40 log y) at y = t >= 10^10 >= 10^8",
+    "Chebyshev.psi_sub_theta_le : psi t - theta t <= 2 sqrt t log t",
+    "numeric core (19/40) sqrt t > 2 (log t)^2 on t >= 10^10, from log t <= 8 t^(1/8) and 269.5 <= sqrt (sqrt t)"
+  ],
+  "evidence": [
+    "missions/five-primes/verification/rosser-theta-large-submit-response.txt",
+    "missions/five-primes/verification/rosser-theta-large-poll.log",
+    "missions/five-primes/verification/rosser-theta-large-verdict.json",
+    "missions/five-primes/verification/rosser-theta-large-node-after.json",
+    "missions/five-primes/verification/rosser-theta-large-decomps-after.json",
+    "tmp/graph-root-2026-09-24.json",
+    "tmp/frontier-full-2026-09-24.json",
+    "tmp/frontier-mission.txt"
+  ],
+  "frontier_note": "Live recheck on 2026-09-24 of the 12 mission leaves found in this session's BFS. CORRECTION: TaoFivePrimes.rosser_schoenfeld_product_log_bound_large (d5c69ba9-5a40-495a-a728-e7d11107a438) returned 404 'Theorem not found' at 20:2x but reads Open with its full statement at 21:0x, so one of the two reads was stale and the node is NOT deleted. The other 11 were Open with no real decomposition, and this submission removes one of them from the leaf set.",
+  "corrected_at": "2026-09-24T21:10:00+08:00",
+  "correction": "The 404 on d5c69ba9 was not a deletion. Corrected in the follow-up mission comment 0f4c5037-0981-4def-a9b6-93e7deaccf5c and in missions/five-primes/frontier-report-2026-09-24.md. Lesson: do not conclude a node was deleted from a single 404 on this platform."
+}
