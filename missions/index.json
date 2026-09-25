@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "missions": [
+    {
+      "slug": "magic-squares",
+      "title": "Magic Squares I: order-three enumeration",
+      "family": "magic-squares",
+      "handoff": "missions/magic-squares/status.md",
+      "scratch": "examples/magic-squares"
+    },
+    {
+      "slug": "semi-magic",
+      "title": "Magic Squares II: semi-magic count",
+      "family": "magic-squares",
+      "handoff": "missions/semi-magic/status.md",
+      "scratch": "examples/magic-squares"
+    },
+    {
+      "slug": "normal3",
+      "title": "Magic Squares III: normal order-three squares",
+      "family": "magic-squares",
+      "handoff": "missions/normal3/status.md",
+      "scratch": "examples/magic-squares"
+    },
+    {
+      "slug": "magic-squares-iv",
+      "title": "Magic Squares IV: special order-three classes",
+      "family": "magic-squares",
+      "handoff": "missions/magic-squares-iv/status.md",
+      "scratch": "examples/magic-squares"
+    },
+    {
+      "slug": "magic-squares-v",
+      "title": "Magic Squares V: general counting theory",
+      "family": "magic-squares",
+      "handoff": "missions/magic-squares-v/status.md",
+      "scratch": "examples/magic-squares"
+    },
+    {
+      "slug": "magic-squares-reattach",
+      "title": "Magic-square node reattachment (maintenance)",
+      "family": "magic-squares",
+      "handoff": "missions/magic-squares-reattach/status.md",
+      "scratch": "examples/magic-squares"
+    },
+    {
+      "slug": "five-primes",
+      "title": "Every odd number: at most five primes",
+      "family": "number-theory",
+      "handoff": "missions/five-primes/status.md",
+      "scratch": "examples/five-primes"
+    },
+    {
+      "slug": "weak-goldbach",
+      "title": "Weak Goldbach",
+      "family": "number-theory",
+      "handoff": "missions/weak-goldbach/status.md",
+      "scratch": "examples/weak-goldbach"
+    },
+    {
+      "slug": "nt-textbook-proposal",
+      "title": "Elementary number theory textbook (proposal)",
+      "family": "number-theory",
+      "handoff": "missions/nt-textbook-proposal/DRAFT.md",
+      "scratch": null
+    },
+    {
+      "slug": "euler-gamma",
+      "title": "Irrationality of Euler gamma",
+      "family": "analysis",
+      "handoff": "missions/euler-gamma/SESSION-CHECKPOINT.md",
+      "scratch": null
+    },
+    {
+      "slug": "bunkbed",
+      "title": "The Bunkbed conjecture is false",
+      "family": "probability",
+      "handoff": "missions/bunkbed/status.md",
+      "scratch": "examples/bunkbed"
+    },
+    {
+      "slug": "prime-polynomials",
+      "title": "Distinct prime polynomial record search",
+      "family": "number-theory",
+      "handoff": "missions/prime-polynomials/status.md",
+      "scratch": null
+    },
+    {
+      "slug": "zeta7",
+      "title": "Zeta(7) irrationality research attempt",
+      "family": "number-theory",
+      "handoff": "missions/zeta7/status.md",
+      "scratch": null
+    }
+  ]
+}

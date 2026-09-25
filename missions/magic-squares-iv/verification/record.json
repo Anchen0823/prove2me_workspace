@@ -1,0 +1,102 @@
+{
+ "mission": "Magic Squares IV: The Special Classes of Order-Three Magic Squares",
+ "proposal_id": "7af96e14-bc8e-4e17-96b0-3aefec5f3a45",
+ "proposal_status": "Draft (needs the user's Submit)",
+ "date": "2026-09-18",
+ "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+ "lean": "v4.33.1",
+ "definition": {
+  "name": "MagicSquaresSpecial3",
+  "id": "dc7c7ce9-2547-4cd2-9592-2974f777ff2a",
+  "publish_job": "f03ed42d-dddd-43e3-9a24-b1d3ea758509",
+  "status": "PUBLISHED",
+  "file": "Definitions/Def_MagicSquaresSpecial3.lean",
+  "local_build": "lake build Definitions.Def_MagicSquaresSpecial3 -> ok, 66 s, no sorry/axiom"
+ },
+ "theorems": [
+  {
+   "name": "MagicSquares.pan_three_card",
+   "id": "418897d2-7993-4acd-8625-687a351efb11",
+   "statement": "panMagicCount 3 (3 * e) = 1",
+   "status": "Proved",
+   "verdict": "ACCEPTED",
+   "submission_id": "a0a172a9-0e4e-4d9a-8227-bfe04a15de6e",
+   "file": "Solutions/Sol_MagicSquares_pan_three_card.lean",
+   "explanation": "missions/magic-squares-iv/expl-pan_three_card.md",
+   "local_build": "ok, 35 s, no sorry/axiom"
+  },
+  {
+   "name": "MagicSquares.symmetric_magic_three_classify",
+   "id": "8ce82e6f-d4df-4db4-9a22-19e17c230371",
+   "statement": "IsMagic M (3 * e) -> IsSymmetric M -> M = symmMagic3 e (M 0 0)",
+   "status": "Proved",
+   "verdict": "ACCEPTED",
+   "submission_id": "0c4a3f50-302e-4de2-af47-fe7f6a02249b",
+   "file": "Solutions/Sol_MagicSquares_symmetric_magic_three_classify.lean",
+   "explanation": "missions/magic-squares-iv/expl-symmetric_magic_three_classify.md",
+   "local_build": "ok, 35 s, no sorry/axiom"
+  },
+  {
+   "name": "MagicSquares.symm_three_bij",
+   "id": "0b52ef65-8a48-445f-a9bd-9a2c271ad6bb",
+   "statement": "symmetricMagicCount 3 (3 * e) = symmParamCount e",
+   "status": "Proved",
+   "verdict": "ACCEPTED",
+   "submission_id": "0e540dab-b622-4f4c-a129-c7bd677d9816",
+   "file": "Solutions/Sol_MagicSquares_symm_three_bij.lean",
+   "explanation": "missions/magic-squares-iv/expl-symm_three_bij.md",
+   "local_build": "ok, 23 s, no sorry/axiom"
+  },
+  {
+   "name": "MagicSquares.pan_three_otherwise",
+   "id": "025bcf4a-7b1e-4813-acfa-27f69cf2dcd5",
+   "statement": "not 3 | t -> panMagicCount 3 t = 0",
+   "status": "Proved",
+   "verdict": "ACCEPTED",
+   "submission_id": "53ccbacb-9a89-4c97-95fd-e89ca88b825b",
+   "file": "Solutions/Sol_MagicSquares_pan_three_otherwise.lean",
+   "explanation": "missions/magic-squares-iv/expl-pan_three_otherwise.md",
+   "local_build": "ok, no sorry/axiom"
+  },
+  {
+   "name": "MagicSquares.symm_three_otherwise",
+   "id": "632cc340-833d-4a83-9537-d53be8c54378",
+   "statement": "not 3 | t -> symmetricMagicCount 3 t = 0",
+   "status": "Proved",
+   "verdict": "ACCEPTED",
+   "submission_id": "91d14644-115f-4c11-8bed-6a3dee836636",
+   "file": "Solutions/Sol_MagicSquares_symm_three_otherwise.lean",
+   "explanation": "missions/magic-squares-iv/expl-symm_three_otherwise.md",
+   "local_build": "ok, no sorry/axiom"
+  },
+  {
+   "name": "MagicSquares.special_three_count",
+   "id": "0e66e443-931d-419d-8ec0-b925b0678288",
+   "statement": "panMagicCount 3 t = (if 3 | t then 1 else 0) and symmetricMagicCount 3 t = (if 3 | t then 2 * (t / 3) + 1 else 0)",
+   "status": "Proved",
+   "verdict": "SKETCH_ACCEPTED, auto-promoted to Proved once both 'otherwise' children landed",
+   "submission_id": "3b22d8c0-3c83-4745-992c-619d682376fd",
+   "file": "Solutions/Sol_MagicSquares_special_three_count.lean",
+   "explanation": "missions/magic-squares-iv/expl-special_three_count.md",
+   "decomposition_children": [
+    "Definitions.MagicSquares",
+    "Definitions.MagicSquaresSpecial3",
+    "MagicSquares.pan_three_card",
+    "MagicSquares.symm_three_bij",
+    "MagicSquares.pan_three_otherwise",
+    "MagicSquares.symm_three_otherwise"
+   ]
+  }
+ ],
+ "numeric_check": {
+  "script": "tmp/check_pan_symm3.py",
+  "t_range": "0..15",
+  "result": "pan = 1 iff 3 | t; symm = 2*(t/3)+1 iff 3 | t; matches the formulas for every t in range",
+  "magic_count_cross_check": "M_3(3e) = 2e^2+2e+1 reproduced (t=3,6,9,12,15 -> 5,13,25,41,61)"
+ },
+ "notes": [
+  "All six theorem nodes are Proved; every submission except the goal was ACCEPTED on the first attempt.",
+  "The goal was classified SKETCH_ACCEPTED because two of its children were still PENDING at evaluation time; the node was promoted to Proved automatically afterwards. Do not read SKETCH_ACCEPTED on a reduction as a failure without re-querying /theorems/<id>.",
+  "The proposal is a Draft; only the user can Submit it."
+ ]
+}

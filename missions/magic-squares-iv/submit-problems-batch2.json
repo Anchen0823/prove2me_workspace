@@ -1,0 +1,43 @@
+{
+ "problems": [
+  {
+   "theorem_name": "MagicSquares.pan_three_otherwise",
+   "theorem_title": "No panmagic squares of order three when the line sum is not divisible by three",
+   "formal_statement": "namespace MagicSquares\n\ntheorem pan_three_otherwise (t : ℕ) (ht : ¬ 3 ∣ t) : panMagicCount 3 t = 0 := by sorry\n\nend MagicSquares",
+   "natural_language_statement": "**The zero case for panmagic squares.**\n\nWriting $P_{n}(t)$ for the number of panmagic squares of order $n$ and line sum\n$t$, the theorem is\n\n$$3\\nmid t\\implies P_{3}(t)=0 .$$\n\nIt complements the evaluation $P_{3}(3e)=1$: together they give the complete\ncount $P_{3}(t)=1$ for $3\\mid t$ and $P_{3}(t)=0$ otherwise.\n\n**Proof.** A panmagic square is in particular a magic square, because the broken\ndiagonals of offset $0$ are exactly the two main diagonals. For a magic square of\norder three and line sum $t$, the classical centre identity\n`center_of_order_three` gives $3c=t$ where $c$ is the centre entry. Hence\n$3\\mid t$, and the square cannot exist when $t$ is not divisible by three.\n\n**Context.** This is the standard divisibility obstruction for order-three magic\nsquares: the centre is forced to be one third of the line sum, so line sums\nindivisible by three are impossible for any class that contains the magic\nsquares. The same argument already gave the vanishing of the plain magic count\n`magic_count_three_otherwise` and of the semi-magic count; what the present\nstatement adds is only the observation that panmagicity is stronger than\nmagicity, so the obstruction is inherited.",
+   "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nopen MagicSquares",
+   "source": "P. A. MacMahon, Combinatory Analysis, Vol. II, Cambridge University Press, 1916; M. Beck, T. Cohen, J. Cuomo and P. Gribelyuk, The number of \"magic\" squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707--717 (arXiv:math/0201013); W. S. Andrews, Magic Squares and Cubes, 2nd ed., Dover, 1960.",
+   "tags": [
+    "combinatorics",
+    "magic-squares",
+    "enumerative-combinatorics"
+   ]
+  },
+  {
+   "theorem_name": "MagicSquares.symm_three_otherwise",
+   "theorem_title": "No symmetric magic squares of order three when the line sum is not divisible by three",
+   "formal_statement": "namespace MagicSquares\n\ntheorem symm_three_otherwise (t : ℕ) (ht : ¬ 3 ∣ t) : symmetricMagicCount 3 t = 0 := by sorry\n\nend MagicSquares",
+   "natural_language_statement": "**The zero case for symmetric magic squares.**\n\nWriting $S_{n}(t)$ for the number of symmetric magic squares of order $n$ and\nline sum $t$, the theorem is\n\n$$3\\nmid t\\implies S_{3}(t)=0 ,$$\n\nthe companion of the evaluation $S_{3}(3e)=2e+1$.\n\n**Proof.** A symmetric magic square is in particular magic, and for a magic\nsquare of order three and line sum $t$ the centre entry $c$ satisfies $3c=t$ by\n`center_of_order_three`. Hence $3\\mid t$ is necessary for existence, and the\nfiltered finset `symmetricMagicSquares 3 t` is empty otherwise.\n\n**Context.** Symmetry does not produce new line sums beyond those already\nadmitted by the magic squares — it only cuts each magic fibre down. So the same\ndivisibility obstruction applies, and the symmetric count, like the panmagic and\nthe plain magic counts, vanishes off the multiples of three.",
+   "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nopen MagicSquares",
+   "source": "P. A. MacMahon, Combinatory Analysis, Vol. II, Cambridge University Press, 1916; M. Beck, T. Cohen, J. Cuomo and P. Gribelyuk, The number of \"magic\" squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707--717 (arXiv:math/0201013); W. S. Andrews, Magic Squares and Cubes, 2nd ed., Dover, 1960.",
+   "tags": [
+    "combinatorics",
+    "magic-squares",
+    "enumerative-combinatorics"
+   ]
+  },
+  {
+   "theorem_name": "MagicSquares.special_three_count",
+   "theorem_title": "The complete count of the special order-three magic squares",
+   "formal_statement": "namespace MagicSquares\n\ntheorem special_three_count (t : ℕ) :\n    panMagicCount 3 t = (if 3 ∣ t then 1 else 0) ∧\n      symmetricMagicCount 3 t = (if 3 ∣ t then 2 * (t / 3) + 1 else 0) := by sorry\n\nend MagicSquares",
+   "natural_language_statement": "**The special classes of order-three magic squares, counted completely.**\n\nLet $P_{3}(t)$ be the number of *panmagic* (pandiagonal) squares of order three\nand line sum $t$ — those $3\\times3$ arrays of nonnegative integers whose rows,\ncolumns and all six broken diagonals sum to $t$ — and let $S_{3}(t)$ be the\nnumber of *symmetric* magic squares of order three and line sum $t$. The theorem\ndetermines both, for every $t$:\n\n$$P_{3}(t)=\\begin{cases}1,&3\\mid t\\\\ 0,&3\\nmid t\\end{cases},\n\\qquad\nS_{3}(t)=\\begin{cases}\\dfrac{2t}{3}+1,&3\\mid t\\\\[2mm] 0,&3\\nmid t\\end{cases}.$$\n\n**What the answers say.** Where MacMahon's count for the plain magic squares of\norder three is quadratic ($M_{3}(3e)=2e^{2}+2e+1$), the two special classes are\ndegenerate in opposite ways. The six broken diagonals are so restrictive that\nthey collapse the whole two-parameter family to the single constant square: for\nline sum $3e$ that is the array all of whose entries equal $e$. Symmetry, by\ncontrast, removes only three of the eight line conditions, and what survives is a\ngenuine one-parameter family\n\n$$\\begin{pmatrix} a & 2e-a & e\\\\ 2e-a & e & a\\\\ e & a & 2e-a\\end{pmatrix},\n\\qquad a=0,1,\\dots,2e ,$$\n\ngiving the linear count $2e+1$. In both cases the divisibility obstruction for\norder-three magic squares — the centre equals one third of the line sum, by\n`center_of_order_three` — forces the vanishing off multiples of three.\n\n**Proof.** The two evaluations at $t=3e$ are supplied by `pan_three_card` and by\n`symm_three_bij` composed with the cardinality of the parameter interval\n$\\{0,\\dots,2e\\}$; the two vanishing cases are supplied by\n`pan_three_otherwise` and `symm_three_otherwise`, both of which reduce to the\ncentre identity. Splitting on whether $3\\mid t$ and substituting $t=3e$ finishes\nthe count.\n\n**Context.** This is the fourth and last instalment of the order-three programme:\nafter counting all squares (Mission I), all semi-magic ones (Mission II) and\nclassifying the normal ones (Mission III), the special classes complete the\npicture. The comparison between the three counts — quadratic, linear and\nconstant — is the point of the order-three study, and it is what is lost at\norder four, where no closed form is known.",
+   "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nimport Definitions.Def_MagicSquaresSpecial3\nopen MagicSquares",
+   "source": "P. A. MacMahon, Combinatory Analysis, Vol. II, Cambridge University Press, 1916; M. Beck, T. Cohen, J. Cuomo and P. Gribelyuk, The number of \"magic\" squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707--717 (arXiv:math/0201013); W. S. Andrews, Magic Squares and Cubes, 2nd ed., Dover, 1960.",
+   "tags": [
+    "combinatorics",
+    "magic-squares",
+    "enumerative-combinatorics"
+   ]
+  }
+ ]
+}

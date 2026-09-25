@@ -1,0 +1,37 @@
+[
+ {
+  "label": "def MagicSquaresSpecial3",
+  "theorem_id": "dc7c7ce9-2547-4cd2-9592-2974f777ff2a",
+  "item_id": "845c8ca2-70cd-46b0-bfdb-71d60d91e5ab"
+ },
+ {
+  "label": "symmetric_magic_three_classify",
+  "theorem_id": "8ce82e6f-d4df-4db4-9a22-19e17c230371",
+  "item_id": "381ec94f-1448-4327-b8b9-81fde83fc88e"
+ },
+ {
+  "label": "symm_three_bij",
+  "theorem_id": "0b52ef65-8a48-445f-a9bd-9a2c271ad6bb",
+  "item_id": "77f87da5-feb3-41ef-8319-0396d8d1d45c"
+ },
+ {
+  "label": "pan_three_card",
+  "theorem_id": "418897d2-7993-4acd-8625-687a351efb11",
+  "item_id": "b3a7cea6-4d2c-4c04-8bca-8d67ce1a2b7b"
+ },
+ {
+  "label": "pan_three_otherwise",
+  "theorem_id": "025bcf4a-7b1e-4813-acfa-27f69cf2dcd5",
+  "item_id": "18e8e344-0ea0-44bb-8eb2-61a55de12596"
+ },
+ {
+  "label": "symm_three_otherwise",
+  "theorem_id": "632cc340-833d-4a83-9537-d53be8c54378",
+  "item_id": "c1df500c-b963-4a20-8b6f-ebb56e8a255a"
+ },
+ {
+  "label": "special_three_count (GOAL)",
+  "theorem_id": "0e66e443-931d-419d-8ec0-b925b0678288",
+  "item_id": "8da379ce-f17d-461d-9612-ead9da57b528"
+ }
+]

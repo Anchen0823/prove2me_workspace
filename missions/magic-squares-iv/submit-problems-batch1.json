@@ -1,0 +1,43 @@
+{
+ "problems": [
+  {
+   "theorem_name": "MagicSquares.pan_three_card",
+   "theorem_title": "There is exactly one panmagic square of order three",
+   "formal_statement": "namespace MagicSquares\n\ntheorem pan_three_card (e : ℕ) : panMagicCount 3 (3 * e) = 1 := by sorry\n\nend MagicSquares",
+   "natural_language_statement": "**The panmagic squares of order three.**\n\nA $3\\times3$ array of nonnegative integers is *panmagic* (or *pandiagonal*) of\nline sum $s$ when all three rows, all three columns, and all six broken diagonals\n— the three descending and the three ascending ones, read modulo three — sum to\n$s$. Writing $P_{n}(t)$ for the number of panmagic squares of order $n$ and line\nsum $t$, the theorem states\n\n$$P_{3}(3e)=1\\qquad\\text{for every }e\\ge 0,$$\n\nand the single square in question is the constant array, all of whose nine\nentries equal $e$. In particular $P_{3}(t)=0$ whenever $3\\nmid t$, since the\ntwelve line sums of a panmagic square are all equal.\n\n**Context.** Order three is the degenerate case of the panmagic problem. For\n$n\\ge5$ odd (and $n=4$) panmagic squares are abundant and their enumeration is a\ngenuine problem, so it is the *shape* of the order-three answer that is\ninformative: the two-dimensional family of magic squares of order three\n(MacMahon's $2e^{2}+2e+1$ squares) collapses to a single point once the six\nbroken diagonals are imposed. This is the counterpart, for symmetric\nrequirements, of the Lo Shu classification: there, normality pins the square to\neight $D_{4}$-images; here, panmagicity pins it to the constant square.\n\n**Proof.** Let $M$ be panmagic of line sum $3e$ with entries\n$a,b,c;d,m,f;g,h,i$. The twelve line equations are linear in the entries, and\nthe four broken diagonals\n$$b+f+g=3e,\\qquad c+d+h=3e,\\qquad a+f+h=3e,\\qquad b+d+i=3e$$\ncombine with the rows and columns to force $a=b=\\cdots=i=e$: from the two\nbroken diagonals through the centre one gets $d=m=f$, then $m=e$ from the middle\nrow, and the remaining equations give $a=b=c$ and $g=h=i$, whence $3a=3e$. Since\nthe nonnegative integers are an integral domain, $a=e$. The constant square\n$\\texttt{constSquare3}\\ e$ is panmagic for every $e$, so\n$P_{3}(3e)=1$.",
+   "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nimport Definitions.Def_MagicSquaresSpecial3\nopen MagicSquares",
+   "source": "P. A. MacMahon, Combinatory Analysis, Vol. II, Cambridge University Press, 1916; M. Beck, T. Cohen, J. Cuomo and P. Gribelyuk, The number of \"magic\" squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707--717 (arXiv:math/0201013); W. S. Andrews, Magic Squares and Cubes, 2nd ed., Dover, 1960.",
+   "tags": [
+    "combinatorics",
+    "magic-squares",
+    "enumerative-combinatorics"
+   ]
+  },
+  {
+   "theorem_name": "MagicSquares.symmetric_magic_three_classify",
+   "theorem_title": "Classification of symmetric order-three magic squares",
+   "formal_statement": "namespace MagicSquares\n\ntheorem symmetric_magic_three_classify (e : ℕ) (M : Square 3 ℕ)\n    (hM : IsMagic M (3 * e)) (hsym : IsSymmetric M) :\n    M = symmMagic3 e (M 0 0) := by sorry\n\nend MagicSquares",
+   "natural_language_statement": "**Symmetry pins down the square.**\n\nLet $M=(M_{ij})$ be a $3\\times3$ array of nonnegative integers which is\n*symmetric* ($M_{ij}=M_{ji}$) and *magic* of line sum $3e$. Then $M$ is\ncompletely determined by its top-left corner:\n\n$$M=\\begin{pmatrix}\na & 2e-a & e \\\\\n2e-a & e & a \\\\\ne & a & 2e-a\n\\end{pmatrix},\n\\qquad a=M_{00}.$$\n\n**Proof.** Symmetry identifies $M_{01}=M_{10}$, $M_{02}=M_{20}$ and\n$M_{12}=M_{21}$, so the eight line identities collapse to five: the three rows,\nthe main diagonal $M_{00}+M_{11}+M_{22}=3e$, and the anti-diagonal\n$M_{02}+M_{11}+M_{20}=2M_{02}+M_{11}=3e$. The anti-diagonal forces\n$M_{02}=M_{11}=e$ (subtracting it from the main diagonal gives\n$M_{00}+M_{22}=M_{02}+M_{20}$, and the middle row then pins $M_{11}$). The rows\nand the remaining diagonal identities then express every other cell in terms of\n$a=M_{00}$ and $e$:\n$$M_{01}=M_{10}=2e-a,\\quad M_{12}=M_{21}=a,\\quad M_{22}=2e-a.$$\nThis is exactly the shape packaged as `symmMagic3 e a` in the companion\ndefinition `MagicSquaresSpecial3`.\n\n**Context.** The statement is the order-three instance of the classical\nobservation that symmetric magic squares are highly constrained: the symmetry\nremoves three of the eight line conditions, and the remaining ones leave a\none-parameter family rather than a two-parameter one. Iterating it gives the\ncount $S_{3}(3e)=2e+1$. Unlike the panmagic case, the surviving family is\ngenuinely non-trivial — the parameter $a$ ranges over $0,\\dots,2e$ — which is why\nthe symmetric and panmagic counts of order three differ.",
+   "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nimport Definitions.Def_MagicSquaresSpecial3\nopen MagicSquares",
+   "source": "P. A. MacMahon, Combinatory Analysis, Vol. II, Cambridge University Press, 1916; M. Beck, T. Cohen, J. Cuomo and P. Gribelyuk, The number of \"magic\" squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707--717 (arXiv:math/0201013); W. S. Andrews, Magic Squares and Cubes, 2nd ed., Dover, 1960.",
+   "tags": [
+    "combinatorics",
+    "magic-squares",
+    "enumerative-combinatorics"
+   ]
+  },
+  {
+   "theorem_name": "MagicSquares.symm_three_bij",
+   "theorem_title": "The corner parameter enumerates the symmetric order-three magic squares",
+   "formal_statement": "namespace MagicSquares\n\ntheorem symm_three_bij (e : ℕ) : symmetricMagicCount 3 (3 * e) = symmParamCount e := by sorry\n\nend MagicSquares",
+   "natural_language_statement": "**A bijection onto an interval.**\n\nLet $S_{n}(t)$ denote the number of symmetric magic squares of order $n$ and\nline sum $t$, and let $\\mathrm{symmParamSet}(e)=\\{0,1,\\dots,2e\\}$ be the\nadmissible corner parameters of the symmetric family, with\n$\\mathrm{symmParamCount}(e)=2e+1$. The theorem states\n\n$$S_{3}(3e)=\\mathrm{symmParamCount}(e).$$\n\nThat is, sending a symmetric magic square of order three and line sum $3e$ to\nits top-left corner $M_{00}$ is a bijection onto $\\{0,\\dots,2e\\}$.\n\n**Proof.** The classification\n`MagicSquares.symmetric_magic_three_classify` shows that such a square is\n$\\mathrm{symmMagic3}(e,a)$ with $a=M_{00}$, whose $(0,1)$ entry is $2e-a$; the\nrow-$0$ identity $a+(2e-a)+e=3e$ is then satisfiable in $\\mathbb{N}$ only for\n$a\\le 2e$, so the map lands in $\\mathrm{symmParamSet}(e)$. It is injective\nbecause $a$ determines the whole square, and surjective because for every\n$a\\le 2e$ the array $\\mathrm{symmMagic3}(e,a)$ is symmetric, is magic of line sum\n$3e$, and has all entries at most $2e$, hence may be read over the ambient type\n$\\mathrm{Fin}(3e+1)$ of the counting function.\n\n**Context.** This is the order-three counterpart of the bijection\n`magic_three_param_bij` used in Mission I: there, MacMahon's two parameters\n$(a,c)$ enumerate the magic squares of line sum $3e$; here the extra symmetry\ncondition cuts the parameter set down from the $\\ell_{1}$ ball\n$\\{(a,c):|a-e|+|c-e|\\le e\\}$ to its diagonal slice $c=e$, an interval of $2e+1$\npoints. Composing the bijection with the cardinality of an interval gives the\nclosed form $S_{3}(3e)=2e+1$, and it also isolates *why* the count is linear\nrather than quadratic in $e$.",
+   "preamble": "import Mathlib\nimport Definitions.Def_MagicSquares\nimport Definitions.Def_MagicSquaresSpecial3\nopen MagicSquares",
+   "source": "P. A. MacMahon, Combinatory Analysis, Vol. II, Cambridge University Press, 1916; M. Beck, T. Cohen, J. Cuomo and P. Gribelyuk, The number of \"magic\" squares, cubes and hypercubes, Amer. Math. Monthly 110 (2003), 707--717 (arXiv:math/0201013); W. S. Andrews, Magic Squares and Cubes, 2nd ed., Dover, 1960.",
+   "tags": [
+    "combinatorics",
+    "magic-squares",
+    "enumerative-combinatorics"
+   ]
+  }
+ ]
+}

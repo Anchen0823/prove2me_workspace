@@ -1,0 +1,177 @@
+{
+ "posted_at": "2026-09-19",
+ "ok": 17,
+ "total": 17,
+ "results": [
+  {
+   "mission": "MagicSquaresI",
+   "theorem_name": "MagicSquares.magic_count_three_otherwise",
+   "theorem_id": "fb4507f0-4ebd-432b-a1e7-e59697218d61",
+   "title": "MacMahon (1915) - the 3 does not divide t case of the order-three count",
+   "http": 201,
+   "ok": true,
+   "milestone_id": "c68c4c02-400d-4565-bdec-3442c6014360",
+   "response": ""
+  },
+  {
+   "mission": "MagicSquaresI",
+   "theorem_name": "MagicSquares.magic_count_two",
+   "theorem_id": "821e65d7-81bb-4802-9e30-cec0cb544afd",
+   "title": "BCCG (2003) section 2 - the order-two magic count",
+   "http": 201,
+   "ok": true,
+   "milestone_id": "aca11e0e-f9d1-4242-b08b-76098f765306",
+   "response": ""
+  },
+  {
+   "mission": "MagicSquaresI",
+   "theorem_name": "MagicSquares.pandiagonal_count_two",
+   "theorem_id": "f7c75790-c7d1-4eac-86f8-ea359a0db34f",
+   "title": "BCCG (2003) section 2 - the order-two pandiagonal count",
+   "http": 201,
+   "ok": true,
+   "milestone_id": "4aa787c4-f750-4300-81c5-3d88a4e42c77",
+   "response": ""
+  },
+  {
+   "mission": "MagicSquaresI",
+   "theorem_name": "MagicSquares.pandiagonal_count_three",
+   "theorem_id": "e6cecde0-6d15-4a2a-b374-805332b8ad80",
+   "title": "BCCG (2003) - the order-three pandiagonal count P_3",
+   "http": 201,
+   "ok": true,
+   "milestone_id": "3be02daf-24f0-4600-8e61-bb9098a3e34f",
+   "response": ""
+  },
+  {
+   "mission": "MagicSquaresI",
+   "theorem_name": "MagicSquares.panmagic_count_three",
+   "theorem_id": "adc01be4-ceea-44d9-a371-80b76abda23a",
+   "title": "Order three - the two-direction panmagic count",
+   "http": 201,
+   "ok": true,
+   "milestone_id": "241bc640-c5e9-44ca-b722-d66fb14b74cc",
+   "response": ""
+  },
+  {
+   "mission": "MagicSquaresI",
+   "theorem_name": "MagicSquares.panmagic_is_magic",
+   "theorem_id": "1ece0a73-2e26-4db4-9f45-5d2d39f1d53d",
+   "title": "General n - every panmagic square is magic",
+   "http": 201,
+   "ok": true,
+   "milestone_id": "9c4e2271-6917-4052-b3c0-dd6cf39f6eee",
+   "response": ""
+  },
+  {
+   "mission": "MagicSquaresI",
+   "theorem_name": "MagicSquares.magic_constant_of_normal",
+   "theorem_id": "2b184629-25ee-4be3-9075-89d9e624208d",
+   "title": "Normal squares, general n - the magic constant",
+   "http": 201,
+   "ok": true,
+   "milestone_id": "1b12893d-81c3-4e06-9410-e16354374222",
+   "response": ""
+  },
+  {
+   "mission": "MagicSquaresI",
+   "theorem_name": "MagicSquares.total_sum_eq_n_line_sum",
+   "theorem_id": "426e247c-26f9-4b16-9c70-e541e809f3b1",
+   "title": "Semi-magic squares, general n - total sum is n times the line sum",
+   "http": 201,
+   "ok": true,
+   "milestone_id": "5049874c-2030-4b8e-be12-80938a48b004",
+   "response": ""
+  },
+  {
+   "mission": "MagicSquaresI",
+   "theorem_name": "MagicSquares.transpose_preserves_magic",
+   "theorem_id": "3b7c0d09-0acb-4754-97c7-068a27b91c00",
+   "title": "Symmetries, general n - transposition",
+   "http": 201,
+   "ok": true,
+   "milestone_id": "1c8c1a34-73cd-4dec-8d97-35ba4bfc7e20",
+   "response": ""
+  },
+  {
+   "mission": "MagicSquaresI",
+   "theorem_name": "MagicSquares.flipHorizontal_preserves_magic",
+   "theorem_id": "0bd2ee84-7eea-45d9-84fa-7c6f28595d84",
+   "title": "Symmetries, general n - horizontal reflection",
+   "http": 201,
+   "ok": true,
+   "milestone_id": "1f2cd3d4-506b-4dbe-9702-ef398f1d5e82",
+   "response": ""
+  },
+  {
+   "mission": "MagicSquaresI",
+   "theorem_name": "MagicSquares.flipVertical_preserves_magic",
+   "theorem_id": "9b89d44c-f278-4eb8-a8c2-b2513ecd1f12",
+   "title": "Symmetries, general n - vertical reflection",
+   "http": 201,
+   "ok": true,
+   "milestone_id": "c919d901-2f7d-4a1f-b7ec-b1b468270a57",
+   "response": ""
+  },
+  {
+   "mission": "MagicSquaresI",
+   "theorem_name": "MagicSquares.affine_preserves_magic",
+   "theorem_id": "2e82f714-7b8e-4902-81bf-35bb9bf56c81",
+   "title": "Symmetries, general n - affine substitution",
+   "http": 201,
+   "ok": true,
+   "milestone_id": "70fb4985-1db3-44aa-b5ff-21780e2a973d",
+   "response": ""
+  },
+  {
+   "mission": "MagicSquaresII",
+   "theorem_name": "MagicSquares.semi_magic_count_two",
+   "theorem_id": "86515ed9-6bd4-4484-a3d2-a1be23ce7ac9",
+   "title": "BCCG (2003) section 2 - the order-two semi-magic count",
+   "http": 201,
+   "ok": true,
+   "milestone_id": "bd8d415c-63a2-4284-bcd1-e5919689d107",
+   "response": ""
+  },
+  {
+   "mission": "MagicSquaresIII",
+   "theorem_name": "MagicSquares.normal_order_two_none",
+   "theorem_id": "f342d9be-b483-44d5-af8a-257a17bdda11",
+   "title": "Order two - there is no normal magic square",
+   "http": 201,
+   "ok": true,
+   "milestone_id": "9c639b83-1a78-49ae-a44e-a306ede9fe2a",
+   "response": ""
+  },
+  {
+   "mission": "MagicSquaresIII",
+   "theorem_name": "MagicSquares.normal_order_three_constant",
+   "theorem_id": "08463353-63d3-4260-89cf-9f61e97f7a04",
+   "title": "Order three - the magic constant of a normal square is 15",
+   "http": 201,
+   "ok": true,
+   "milestone_id": "72d83c6c-c75e-4fc3-88a3-cccb9149c4cd",
+   "response": ""
+  },
+  {
+   "mission": "MagicSquaresIII",
+   "theorem_name": "MagicSquares.normal_order_three_center_five",
+   "theorem_id": "337eccfa-ed88-441d-b7ff-df1c3133fc30",
+   "title": "Order three - the centre of a normal square is 5",
+   "http": 201,
+   "ok": true,
+   "milestone_id": "ebfbbcc5-34f3-4a98-8482-1e313bc7d986",
+   "response": ""
+  },
+  {
+   "mission": "MagicSquaresIII",
+   "theorem_name": "MagicSquares.normal_order_three_associative",
+   "theorem_id": "3a365b32-43e3-476f-b22c-4151d8274eb8",
+   "title": "Order three - normal squares are associative with complement 10",
+   "http": 201,
+   "ok": true,
+   "milestone_id": "ed35b46c-ab70-408c-a92c-12e3f7f21687",
+   "response": ""
+  }
+ ]
+}

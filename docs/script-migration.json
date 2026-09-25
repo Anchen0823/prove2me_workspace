@@ -1,0 +1,205 @@
+{
+  "date": "2026-09-20",
+  "moves": [
+    {
+      "from": "scripts/assemble_spencer_bundle.py",
+      "to": "missions/magic-squares-v/scripts/assemble_spencer_bundle.py",
+      "original_sha256": "6695b0cb1ae32ea09fadd501e2ba10d89a3112f0df2751b63243290ba5399b12"
+    },
+    {
+      "from": "scripts/check_grouping.ps1",
+      "to": "missions/bunkbed/scripts/check_grouping.ps1",
+      "original_sha256": "31537566394f36ff2b917c1398e29488ec68a3e552bfa1978fbd947e5773f880"
+    },
+    {
+      "from": "scripts/check_theorem51_progress.ps1",
+      "to": "missions/five-primes/scripts/check_theorem51_progress.ps1",
+      "original_sha256": "ce792bb0c1ce36cb9ae7fb6312e3293ab8316537422164f578fac8203fc6a509"
+    },
+    {
+      "from": "scripts/create_magic_mission.py",
+      "to": "missions/magic-squares/scripts/create_magic_mission.py",
+      "original_sha256": "fd41565b3d693084ee1d08ea5024e34d8ced78a857b8226ac78c2e010f246073"
+    },
+    {
+      "from": "scripts/create_magic_squares_iv_mission.py",
+      "to": "missions/magic-squares-iv/scripts/create_magic_squares_iv_mission.py",
+      "original_sha256": "8fa7e33e1610d7751b0258a9daf3cb2d7114940d851b40245ec12e604714d252"
+    },
+    {
+      "from": "scripts/create_normal3_mission.py",
+      "to": "missions/normal3/scripts/create_normal3_mission.py",
+      "original_sha256": "1f959676822c7c939923a6d9f7c44b403d1faa8d163c9a55cc990fdf28d0ccb6"
+    },
+    {
+      "from": "scripts/create_semi_magic_mission.py",
+      "to": "missions/semi-magic/scripts/create_semi_magic_mission.py",
+      "original_sha256": "deaa1d4bd571eb76a01431d1b77b00c76cfd9b91c91a6007d46f40668c575fc1"
+    },
+    {
+      "from": "scripts/follow_five_primes_submission.ps1",
+      "to": "missions/five-primes/scripts/follow_five_primes_submission.ps1",
+      "original_sha256": "7372a79c4c49d086ce7718d1a45cbd3cd2482fffe710454bd9f3dd6e850482de"
+    },
+    {
+      "from": "scripts/gen_magic_batch2.py",
+      "to": "missions/magic-squares/scripts/gen_magic_batch2.py",
+      "original_sha256": "2b945c31874b875567f4e94a82a3a721c741b11c6b98a33ac91e2cd1ed759840"
+    },
+    {
+      "from": "scripts/gen_magic_batch3.py",
+      "to": "missions/magic-squares/scripts/gen_magic_batch3.py",
+      "original_sha256": "2ac4d8b3990525440ad30c5006348f9655d5422e0e8cc09f17b0211e7246bdb2"
+    },
+    {
+      "from": "scripts/gen_magic_batch4.py",
+      "to": "missions/magic-squares/scripts/gen_magic_batch4.py",
+      "original_sha256": "168e038e1ad082d9ace7df232a9e20e5a741df134f81ce862907ceda7acb166d"
+    },
+    {
+      "from": "scripts/gen_magic_batch5.py",
+      "to": "missions/magic-squares/scripts/gen_magic_batch5.py",
+      "original_sha256": "072f94f27bf7d7339e2aa414857804f026dd11fa2fc1dd73a66e165cc28a0aad"
+    },
+    {
+      "from": "scripts/gen_magic_payloads.py",
+      "to": "missions/magic-squares/scripts/gen_magic_payloads.py",
+      "original_sha256": "a30d54aea89a55ba180a3f23ff574ecc370cadd70ff31980528030f4c4b68e9d"
+    },
+    {
+      "from": "scripts/generate_rosser_prefix.py",
+      "to": "missions/five-primes/scripts/generate_rosser_prefix.py",
+      "original_sha256": "c4c2044765027ef062d71e60862f1ddbb10f4de6c0ac60c2ba94c86986254191"
+    },
+    {
+      "from": "scripts/optimize_rosser_timeout.py",
+      "to": "missions/five-primes/scripts/optimize_rosser_timeout.py",
+      "original_sha256": "beed2a54dc4bf75f7b2c6cf14fabf37f6ec397ff9dde3ff0f703a901446f07af"
+    },
+    {
+      "from": "scripts/prepare_correlation_sketch.ps1",
+      "to": "missions/five-primes/scripts/prepare_correlation_sketch.ps1",
+      "original_sha256": "dc015c4632e5ba38e353d57f26a463103d3b49f9769390950f56be8cb39d7618"
+    },
+    {
+      "from": "scripts/prepare_five_primes_sketch.ps1",
+      "to": "missions/five-primes/scripts/prepare_five_primes_sketch.ps1",
+      "original_sha256": "61118653b4c35435c302b7fac43ba321dfb50db95851b7acf98bbddb7394feba"
+    },
+    {
+      "from": "scripts/prepare_mass_sketch.ps1",
+      "to": "missions/five-primes/scripts/prepare_mass_sketch.ps1",
+      "original_sha256": "a2e267fe791589722540c09437afc1f4b0f175ee8ef2ff76b0393c20e2c22264"
+    },
+    {
+      "from": "scripts/prepare_rosser_sketch.ps1",
+      "to": "missions/five-primes/scripts/prepare_rosser_sketch.ps1",
+      "original_sha256": "1dc6444638e0554bc5d743bee6b04c7ce6f9f863b178793f5492d7bd7a2a112b"
+    },
+    {
+      "from": "scripts/publish_rosser_middle.ps1",
+      "to": "missions/five-primes/scripts/publish_rosser_middle.ps1",
+      "original_sha256": "4438c276048eadeaeb2a13da628518f6bf301decf6f488a34e892b9c40bfcf00"
+    },
+    {
+      "from": "scripts/scout_rosser_intervals.py",
+      "to": "missions/five-primes/scripts/scout_rosser_intervals.py",
+      "original_sha256": "c388820510dce6a840fc9a16ebd464fcb5df82a3cfbaab5529fc2859b9035550"
+    },
+    {
+      "from": "scripts/seed_magic_mission.py",
+      "to": "missions/magic-squares/scripts/seed_magic_mission.py",
+      "original_sha256": "a4c5f2a4b87c64f7fc13f1b997c39e94859927a111c79454acd6ff98b7bd7349"
+    },
+    {
+      "from": "scripts/seed_magic_squares_iv_mission.py",
+      "to": "missions/magic-squares-iv/scripts/seed_magic_squares_iv_mission.py",
+      "original_sha256": "7de55c1049ad9061d548156f8c6ca7284e3d1e52edda2fbf3f13d997974e354a"
+    },
+    {
+      "from": "scripts/seed_normal3_mission.py",
+      "to": "missions/normal3/scripts/seed_normal3_mission.py",
+      "original_sha256": "3e0952cb40fdc695eb8696a3d366b2c595d807fddb475aeab073dd6ff5d79cb5"
+    },
+    {
+      "from": "scripts/seed_semi_magic_mission.py",
+      "to": "missions/semi-magic/scripts/seed_semi_magic_mission.py",
+      "original_sha256": "d198abf546802536c707b6f6d4bc72f03c17e7319df1d555ffd6e39323297f15"
+    },
+    {
+      "from": "scripts/set_magic_mission_meta.py",
+      "to": "missions/magic-squares/scripts/set_magic_mission_meta.py",
+      "original_sha256": "44490cf9ccc549085af24cbc68623a2163885d1d0c0ccd12f173544a50f33532"
+    },
+    {
+      "from": "scripts/submit_integer_hilbert.ps1",
+      "to": "missions/five-primes/scripts/submit_integer_hilbert.ps1",
+      "original_sha256": "5e31d8861b9473f1153af6d2cde0118b8f7bd0e56a17c5e7009c7e5992e8333e"
+    },
+    {
+      "from": "scripts/submit_large_q_after_source.ps1",
+      "to": "missions/five-primes/scripts/submit_large_q_after_source.ps1",
+      "original_sha256": "f9396acab767f6b8f1df5c48fe5e9bc2dc69fba75cf0dd06d2970ef016b4aa76"
+    },
+    {
+      "from": "scripts/submit_magic_batch2.py",
+      "to": "missions/magic-squares/scripts/submit_magic_batch2.py",
+      "original_sha256": "29c1d443166b0ccc1b628d920114d3e88dec293801f42ec9f68ce114b894bf5d"
+    },
+    {
+      "from": "scripts/submit_mass_after_source.ps1",
+      "to": "missions/five-primes/scripts/submit_mass_after_source.ps1",
+      "original_sha256": "753464b389b645f56e462f184e38743369d162729c531076e0bce4249e53f09e"
+    },
+    {
+      "from": "scripts/submit_modulus_transfer.ps1",
+      "to": "missions/five-primes/scripts/submit_modulus_transfer.ps1",
+      "original_sha256": "093ddaa32917f79200e2779dae7f25ba37fca6e129f81617607b1356540d2dc5"
+    },
+    {
+      "from": "scripts/submit_normal3_problems.py",
+      "to": "missions/normal3/scripts/submit_normal3_problems.py",
+      "original_sha256": "bd5140b72bf9478f334f9adf45a591c37061223621d338916ee830f30aa9adba"
+    },
+    {
+      "from": "scripts/submit_rosser_after_middle.ps1",
+      "to": "missions/five-primes/scripts/submit_rosser_after_middle.ps1",
+      "original_sha256": "3b99a72f4d4ef95b42872bc992fab88561e35cac5857995641f3ee421215c912"
+    },
+    {
+      "from": "scripts/submit_rosser_timeout_fix.ps1",
+      "to": "missions/five-primes/scripts/submit_rosser_timeout_fix.ps1",
+      "original_sha256": "fce6b2bb3a3662dac2871665dac6ae27912a5a7e589c3058914505b502f2c201"
+    },
+    {
+      "from": "scripts/submit_semi_magic_problems.py",
+      "to": "missions/semi-magic/scripts/submit_semi_magic_problems.py",
+      "original_sha256": "ce16fbf4cf0b8379683a34f7b6a46f48bab89e422752811c2d3b86c1b6e1399b"
+    },
+    {
+      "from": "scripts/submit_theorem51_reduction.ps1",
+      "to": "missions/five-primes/scripts/submit_theorem51_reduction.ps1",
+      "original_sha256": "7568266cfd9fd2f6e2519dd1405df4b8dd029b20b050b46dff2c41dc4a74b8b9"
+    },
+    {
+      "from": "scripts/submit_typeII_integration.ps1",
+      "to": "missions/five-primes/scripts/submit_typeII_integration.ps1",
+      "original_sha256": "652b56ba95533a0bab53a042660bb0c556418711fef1a542937c71b3ec5d257f"
+    },
+    {
+      "from": "scripts/submit_typeII_scale_reduction.ps1",
+      "to": "missions/five-primes/scripts/submit_typeII_scale_reduction.ps1",
+      "original_sha256": "fa961289eb0c0fa917f57770534017a7be6a70271ca951a8fa324c9161c5afc1"
+    },
+    {
+      "from": "scripts/submit_weak_goldbach_child.py",
+      "to": "missions/weak-goldbach/scripts/submit_weak_goldbach_child.py",
+      "original_sha256": "db8960df976c978f70dbdf3bae5c4cdb1d3441be41c290031f61932d5852e8b3"
+    },
+    {
+      "from": "scripts/write_magic_batch4_solutions.py",
+      "to": "missions/magic-squares/scripts/write_magic_batch4_solutions.py",
+      "original_sha256": "56834b41e8b258aea3dc03e5b176b564eb83680029394f7645e1b6604ff15ca6"
+    }
+  ]
+}

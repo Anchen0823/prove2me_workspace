@@ -1,0 +1,146 @@
+{
+ "note": "Re-attach orphan magic-square nodes to live missions by creating a milestone that links the theorem_id (captain doc: linking grants mission membership, permanently). Titles follow the source-index convention where the source has one.",
+ "missions": {
+  "MagicSquaresI": "6d8463b5-9aa5-4a6e-9c7b-bbd6c174e358",
+  "MagicSquaresII": "a030a222-eed8-4235-9751-34a9fd4aee9e",
+  "MagicSquaresIII": "c9b6fe9e-8e79-457c-b1c9-aafc17af9c89"
+ },
+ "entries": [
+  {
+   "mission": "MagicSquaresI",
+   "theorem_id": "fb4507f0-4ebd-432b-a1e7-e59697218d61",
+   "theorem_name": "MagicSquares.magic_count_three_otherwise",
+   "sort_order": 20,
+   "title": "MacMahon (1915) - the 3 does not divide t case of the order-three count",
+   "milestone_description": "For $t$ not divisible by $3$ there is no $3\\times3$ magic square of line sum $t$: $M_3(t) = 0$ whenever $3 \\nmid t$. Equivalently, $M_3(t)$ is supported on the multiples of three, where MacMahon's formula $M_3(3e) = 2e^2+2e+1$ applies. This is the vanishing half of the goal `magic_count_three_divisible`."
+  },
+  {
+   "mission": "MagicSquaresI",
+   "theorem_id": "821e65d7-81bb-4802-9e30-cec0cb544afd",
+   "theorem_name": "MagicSquares.magic_count_two",
+   "sort_order": 21,
+   "title": "BCCG (2003) section 2 - the order-two magic count",
+   "milestone_description": "Order-two magic squares of line sum $t$: $M_2(t) = 1$ when $2 \\mid t$ and $0$ otherwise, the single square being the constant array with every entry $t/2$. A $2\\times2$ semi-magic square of line sum $t$ reads $\\begin{pmatrix} a & t-a \\\\ t-a & a\\end{pmatrix}$, whose two diagonals are $2a$ and $2(t-a)$; both equal $t$ only when $2a = t$."
+  },
+  {
+   "mission": "MagicSquaresI",
+   "theorem_id": "f7c75790-c7d1-4eac-86f8-ea359a0db34f",
+   "theorem_name": "MagicSquares.pandiagonal_count_two",
+   "sort_order": 22,
+   "title": "BCCG (2003) section 2 - the order-two pandiagonal count",
+   "milestone_description": "With $P_n(t)$ the number of pandiagonal squares in the one-direction reading (semi-magic plus the wrapped diagonals parallel to the main diagonal), $P_2(t) = 1$ when $2 \\mid t$ and $0$ otherwise. At order two the two wrapped diagonals are exactly the two main diagonals, so the pandiagonal condition coincides with the magic one."
+  },
+  {
+   "mission": "MagicSquaresI",
+   "theorem_id": "e6cecde0-6d15-4a2a-b374-805332b8ad80",
+   "theorem_name": "MagicSquares.pandiagonal_count_three",
+   "sort_order": 23,
+   "title": "BCCG (2003) - the order-three pandiagonal count P_3",
+   "milestone_description": "In Beck-Cohen-Cuomo-Gribelyuk's one-direction reading of *pandiagonal* (the wrapped diagonals parallel to the main diagonal; the ascending family is not required), $P_3(t) = \\binom{t+2}{2}$, a degree-two polynomial that never vanishes. Every pandiagonal $3\\times3$ square of line sum $t$ has the form $M_{ij} = g(i+j)$ for a single $g$ on $\\mathbb{Z}/3$, each wrapped diagonal being a cyclic rotation of $(g(0),g(1),g(2))$; the line sum is $g(0)+g(1)+g(2)$."
+  },
+  {
+   "mission": "MagicSquaresI",
+   "theorem_id": "adc01be4-ceea-44d9-a371-80b76abda23a",
+   "theorem_name": "MagicSquares.panmagic_count_three",
+   "sort_order": 24,
+   "title": "Order three - the two-direction panmagic count",
+   "milestone_description": "For the stronger predicate requiring *both* broken-diagonal families (descending and ascending) to sum to the line sum, the only square of line sum $t$ is the constant array, so the count is $1$ when $3 \\mid t$ and $0$ otherwise. This is the contrast case to the one-direction $P_3$ above: the two readings of *pandiagonal* differ at order three and must never be substituted for one another."
+  },
+  {
+   "mission": "MagicSquaresI",
+   "theorem_id": "1ece0a73-2e26-4db4-9f45-5d2d39f1d53d",
+   "theorem_name": "MagicSquares.panmagic_is_magic",
+   "sort_order": 25,
+   "title": "General n - every panmagic square is magic",
+   "milestone_description": "For every order $n > 0$, the panmagic predicate implies the magic one: semi-magicity together with all broken diagonals in both directions entails the two main diagonals, which are the offset-$0$ members of the two families."
+  },
+  {
+   "mission": "MagicSquaresI",
+   "theorem_id": "2b184629-25ee-4be3-9075-89d9e624208d",
+   "theorem_name": "MagicSquares.magic_constant_of_normal",
+   "sort_order": 26,
+   "title": "Normal squares, general n - the magic constant",
+   "milestone_description": "If an $n\\times n$ array has entries exactly $1,2,\\dots,n^2$, each used once, and is magic with line sum $s$, then $2s = n\\,(n^2+1)$; that is, $s = n(n^2+1)/2$. This is the general-$n$ statement whose $n=3$ instance gives the constant $15$."
+  },
+  {
+   "mission": "MagicSquaresI",
+   "theorem_id": "426e247c-26f9-4b16-9c70-e541e809f3b1",
+   "theorem_name": "MagicSquares.total_sum_eq_n_line_sum",
+   "sort_order": 27,
+   "title": "Semi-magic squares, general n - total sum is n times the line sum",
+   "milestone_description": "For an $n\\times n$ array over an additive commutative monoid in which every row (and hence every column) sums to $S$, the sum of all $n^2$ entries is $n \\bullet S$. This aggregation step is what turns a line sum into a total sum in every magic-constant argument."
+  },
+  {
+   "mission": "MagicSquaresI",
+   "theorem_id": "3b7c0d09-0acb-4754-97c7-068a27b91c00",
+   "theorem_name": "MagicSquares.transpose_preserves_magic",
+   "sort_order": 28,
+   "title": "Symmetries, general n - transposition",
+   "milestone_description": "Transposition preserves the magic condition and the line sum: it permutes the lines, sending rows of $A$ to columns of $A^{\\mathsf T}$ and back, and swaps the two main diagonals."
+  },
+  {
+   "mission": "MagicSquaresI",
+   "theorem_id": "0bd2ee84-7eea-45d9-84fa-7c6f28595d84",
+   "theorem_name": "MagicSquares.flipHorizontal_preserves_magic",
+   "sort_order": 29,
+   "title": "Symmetries, general n - horizontal reflection",
+   "milestone_description": "Reversing the order of the columns, $(i,j) \\mapsto (i, n-1-j)$, preserves the magic condition with the same line sum; it permutes the lines and interchanges the two main diagonals."
+  },
+  {
+   "mission": "MagicSquaresI",
+   "theorem_id": "9b89d44c-f278-4eb8-a8c2-b2513ecd1f12",
+   "theorem_name": "MagicSquares.flipVertical_preserves_magic",
+   "sort_order": 30,
+   "title": "Symmetries, general n - vertical reflection",
+   "milestone_description": "Reversing the order of the rows, $(i,j) \\mapsto (n-1-i, j)$, preserves the magic condition with the same line sum."
+  },
+  {
+   "mission": "MagicSquaresI",
+   "theorem_id": "2e82f714-7b8e-4902-81bf-35bb9bf56c81",
+   "theorem_name": "MagicSquares.affine_preserves_magic",
+   "sort_order": 31,
+   "title": "Symmetries, general n - affine substitution",
+   "milestone_description": "If $A$ is magic of line sum $S$ and $a,b$ are scalars, the array $A'_{ij} = a\\,A_{ij} + b$ is again magic, with line sum $aS + nb$: each line has exactly $n$ entries, so its sum is scaled by $a$ and shifted by $nb$."
+  },
+  {
+   "mission": "MagicSquaresII",
+   "theorem_id": "86515ed9-6bd4-4484-a3d2-a1be23ce7ac9",
+   "theorem_name": "MagicSquares.semi_magic_count_two",
+   "sort_order": 20,
+   "title": "BCCG (2003) section 2 - the order-two semi-magic count",
+   "milestone_description": "$H_2(t) = t+1$: a $2\\times2$ semi-magic square of line sum $t$ is $\\begin{pmatrix} a & t-a \\\\ t-a & a\\end{pmatrix}$ with $0 \\le a \\le t$, so it is determined by its top-left corner, which ranges over $t+1$ values. This is the $n=2$ instance of the structural statement that $H_n(t)$ is a polynomial of degree $(n-1)^2$."
+  },
+  {
+   "mission": "MagicSquaresIII",
+   "theorem_id": "f342d9be-b483-44d5-af8a-257a17bdda11",
+   "theorem_name": "MagicSquares.normal_order_two_none",
+   "sort_order": 20,
+   "title": "Order two - there is no normal magic square",
+   "milestone_description": "No $2\\times2$ array can have the four distinct entries $1,2,3,4$ and be magic: comparing the first row $a+b=s$ with the main diagonal $a+d=s$ forces $b=d$. The first order at which normal magic squares exist is three."
+  },
+  {
+   "mission": "MagicSquaresIII",
+   "theorem_id": "08463353-63d3-4260-89cf-9f61e97f7a04",
+   "theorem_name": "MagicSquares.normal_order_three_constant",
+   "sort_order": 21,
+   "title": "Order three - the magic constant of a normal square is 15",
+   "milestone_description": "Every normal $3\\times3$ magic square has line sum $15$: the entries are exactly $1,\\dots,9$, so $s = (1+\\cdots+9)/3 = 45/3 = 15$. This is the $n=3$ instance of `magic_constant_of_normal`."
+  },
+  {
+   "mission": "MagicSquaresIII",
+   "theorem_id": "337eccfa-ed88-441d-b7ff-df1c3133fc30",
+   "theorem_name": "MagicSquares.normal_order_three_center_five",
+   "sort_order": 22,
+   "title": "Order three - the centre of a normal square is 5",
+   "milestone_description": "The centre cell of every normal $3\\times3$ magic square is $5$. In any order-three magic square of line sum $s$ the centre is $s/3$: adding the middle row, the middle column and the two diagonals counts the centre four times and every other cell once, so $\\text{total} + 3\\,M_{1,1} = 4s$; with $s = 15$ this gives $M_{1,1} = 5$."
+  },
+  {
+   "mission": "MagicSquaresIII",
+   "theorem_id": "3a365b32-43e3-476f-b22c-4151d8274eb8",
+   "theorem_name": "MagicSquares.normal_order_three_associative",
+   "sort_order": 23,
+   "title": "Order three - normal squares are associative with complement 10",
+   "milestone_description": "Every normal $3\\times3$ magic square is associative (regular, symmetric through the centre) with complement constant $10$: any two centrally opposite cells satisfy $M_{ij} + M_{2-i,\\,2-j} = 10$ for all $0 \\le i,j \\le 2$. The centre is $5$, and the eight remaining entries split into four opposite pairs summing to $10$."
+  }
+ ]
+}
