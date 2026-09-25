@@ -1,0 +1,70 @@
+{
+  "proposal_id": "00d787d8-91c8-45bf-87f0-6a5e9e8bc472",
+  "mission_id": null,
+  "name": "Formalize the abstract layer of \"Research Notes on ζ(9)\" (v0.1)",
+  "status": "Draft",
+  "visibility": "public",
+  "main_item_id": "105ed7ae-7387-4804-be50-904081b90d05",
+  "item_order": [
+    "2cf8900c-40ef-4f5b-a3a8-aa9e3f93ae28",
+    "cff71f66-2f66-486d-8b95-9f3b6a7bc4fe",
+    "49660db3-1a92-42f5-a167-f17d0ff7494d",
+    "00d47117-6315-45c1-8aae-715d92d378cd",
+    "75be616d-a4e6-43fa-b7c4-7b4aa4863ee5",
+    "64b1fd38-b6d1-4fde-8eb4-69c1002077d5",
+    "b2139f89-7339-45dc-a0f1-fa588c7dff87",
+    "105ed7ae-7387-4804-be50-904081b90d05"
+  ],
+  "local_item_ids": {
+    "Z9N.QUAD": "2cf8900c-40ef-4f5b-a3a8-aa9e3f93ae28",
+    "Z9N.AVG": "cff71f66-2f66-486d-8b95-9f3b6a7bc4fe",
+    "Z9N.MED": "49660db3-1a92-42f5-a167-f17d0ff7494d",
+    "Z9N.CONE": "00d47117-6315-45c1-8aae-715d92d378cd",
+    "Z9N.TSUM": "75be616d-a4e6-43fa-b7c4-7b4aa4863ee5",
+    "Z9N.SIGN": "64b1fd38-b6d1-4fde-8eb4-69c1002077d5",
+    "Z9N.TWO": "b2139f89-7339-45dc-a0f1-fa588c7dff87",
+    "Z9N.ONE": "105ed7ae-7387-4804-be50-904081b90d05"
+  },
+  "local_theorem_ids": {
+    "Z9N.QUAD": null,
+    "Z9N.AVG": null,
+    "Z9N.MED": null,
+    "Z9N.CONE": null,
+    "Z9N.TSUM": null,
+    "Z9N.SIGN": null,
+    "Z9N.TWO": null,
+    "Z9N.ONE": null
+  },
+  "milestones": [
+    {
+      "item_id": "2cf8900c-40ef-4f5b-a3a8-aa9e3f93ae28",
+      "milestone_title": "Moment-matching quadrature"
+    },
+    {
+      "item_id": "cff71f66-2f66-486d-8b95-9f3b6a7bc4fe",
+      "milestone_title": "Weighted average is interior"
+    },
+    {
+      "item_id": "49660db3-1a92-42f5-a167-f17d0ff7494d",
+      "milestone_title": "Mediant is interior"
+    },
+    {
+      "item_id": "00d47117-6315-45c1-8aae-715d92d378cd",
+      "milestone_title": "Positive matrices send nonzero nonnegative vectors to positive vectors"
+    },
+    {
+      "item_id": "75be616d-a4e6-43fa-b7c4-7b4aa4863ee5",
+      "milestone_title": "Taylor-sign implies a positive kernel sum"
+    },
+    {
+      "item_id": "64b1fd38-b6d1-4fde-8eb4-69c1002077d5",
+      "milestone_title": "Five-sample nonvanishing"
+    },
+    {
+      "item_id": "b2139f89-7339-45dc-a0f1-fa588c7dff87",
+      "milestone_title": "Two independent small forms imply irrationality"
+    }
+  ],
+  "reviewed_docs_version": "0.11.1",
+  "submitted_by_human": false
+}

@@ -1,0 +1,150 @@
+{
+  "name": "Formalize the abstract layer of \"Research Notes on ζ(9)\" (v0.1)",
+  "mission_type": "ResearchPaper",
+  "visibility": "public",
+  "env": null,
+  "field_ids": [
+    "e76e77ab-38dd-426d-a533-0b37fb6dbabc",
+    "b53e2e97-ea19-490f-8b43-d2c94c78eb2d"
+  ],
+  "description_path": "description.md",
+  "draft_items": [
+    {
+      "local_id": "Z9N.QUAD",
+      "kind": "theorem",
+      "theorem_name": "Zeta9Note.quadrature_exact_of_moments",
+      "theorem_title": "Moment matching gives exact five-point quadrature up to degree 4",
+      "code_path": "statements/Statement_Zeta9Note_quadrature_exact_of_moments.lean",
+      "readback_path": "readbacks/quadrature_exact_of_moments.md",
+      "natural_language_statement": "Let L be a linear functional on real polynomials, y a five-point node vector and w a weight vector. If L agrees with the weighted five-point sum on the monomials X^m for every m ≤ 4, then L agrees with the weighted five-point sum on every polynomial of degree at most 4. No positivity of the weights is assumed.",
+      "source": "Abstract layer distilled from the v0.1 research note (Zenodo 10.5281/zenodo.22951155); statement and proof in formalization/Zeta9Note.lean.",
+      "tags": ["numerical-analysis", "quadrature", "polynomials"]
+    },
+    {
+      "local_id": "Z9N.AVG",
+      "kind": "theorem",
+      "theorem_name": "Zeta9Note.min_lt_weighted_average_lt_max",
+      "theorem_title": "A non-degenerate weighted average lies strictly between min and max",
+      "code_path": "statements/Statement_Zeta9Note_min_lt_weighted_average_lt_max.lean",
+      "readback_path": "readbacks/min_lt_weighted_average_lt_max.md",
+      "natural_language_statement": "Let w be a strictly positive weight vector on five indices with total weight 1, and let r be a five-tuple that is not constant. Then some entry of r is strictly below the weighted average of r, and some entry is strictly above it.",
+      "source": "Abstract layer distilled from the v0.1 research note (Zenodo 10.5281/zenodo.22951155); statement and proof in formalization/Zeta9Note.lean.",
+      "tags": ["inequalities", "convexity"]
+    },
+    {
+      "local_id": "Z9N.MED",
+      "kind": "theorem",
+      "theorem_name": "Zeta9Note.mediant_strictly_between_min_and_max",
+      "theorem_title": "The weighted mediant lies strictly between the extreme ratios",
+      "code_path": "statements/Statement_Zeta9Note_mediant_strictly_between_min_and_max.lean",
+      "readback_path": "readbacks/mediant_strictly_between_min_and_max.md",
+      "natural_language_statement": "Let w and b be strictly positive five-tuples and a an arbitrary five-tuple. If the ratios a_j / b_j are not all equal, then the ratio of the weighted sums (Σ w_i a_i) / (Σ w_i b_i) is strictly larger than the least of the ratios a_j / b_j and strictly smaller than the largest.",
+      "source": "Abstract layer distilled from the v0.1 research note (Zenodo 10.5281/zenodo.22951155); statement and proof in formalization/Zeta9Note.lean.",
+      "tags": ["inequalities", "mediant"]
+    },
+    {
+      "local_id": "Z9N.CONE",
+      "kind": "theorem",
+      "theorem_name": "Zeta9Note.positive_matrix_maps_nonneg_to_pos",
+      "theorem_title": "Entrywise positive matrices send nonzero nonnegative vectors to positive vectors",
+      "code_path": "statements/Statement_Zeta9Note_positive_matrix_maps_nonneg_to_pos.lean",
+      "readback_path": "readbacks/positive_matrix_maps_nonneg_to_pos.md",
+      "natural_language_statement": "Let M be a 5×5 real matrix all of whose entries are strictly positive, and let v be a nonzero vector with nonnegative entries. Then every entry of M v is strictly positive.",
+      "source": "Abstract layer distilled from the v0.1 research note (Zenodo 10.5281/zenodo.22951155); statement and proof in formalization/Zeta9Note.lean.",
+      "tags": ["linear-algebra", "positivity"]
+    },
+    {
+      "local_id": "Z9N.TSUM",
+      "kind": "theorem",
+      "theorem_name": "Zeta9Note.taylor_sign_implies_kernel_sum_pos",
+      "theorem_title": "Nonnegative Taylor coefficients force a positive weighted kernel sum",
+      "code_path": "statements/Statement_Zeta9Note_taylor_sign_implies_kernel_sum_pos.lean",
+      "readback_path": "readbacks/taylor_sign_implies_kernel_sum_pos.md",
+      "natural_language_statement": "Let R be a strictly positive sequence, u a sequence bounded below by u₀, and p a polynomial whose Taylor expansion at u₀ has nonnegative coefficients. If the weighted sample sum Σ' R_k p(u_k) is summable and at least one sample value p(u_k) is positive, then that sum is strictly positive.",
+      "source": "Abstract layer distilled from the v0.1 research note (Zenodo 10.5281/zenodo.22951155); statement and proof in formalization/Zeta9Note.lean.",
+      "tags": ["analysis", "positivity", "polynomials"]
+    },
+    {
+      "local_id": "Z9N.SIGN",
+      "kind": "theorem",
+      "theorem_name": "Zeta9Note.five_sample_sign_forces_nonzero",
+      "theorem_title": "A shared sign at five nodes forces a nonzero functional value",
+      "code_path": "statements/Statement_Zeta9Note_five_sample_sign_forces_nonzero.lean",
+      "readback_path": "readbacks/five_sample_sign_forces_nonzero.md",
+      "natural_language_statement": "Let L be a linear functional on real polynomials that matches the five moments of a weighted five-point sum with positive weights and injective nodes, and let p be a nonzero polynomial of degree at most 4. If all five sampled values p(y_j) are ≥ 0, or all are ≤ 0, then L p is nonzero.",
+      "source": "Abstract layer distilled from the v0.1 research note (Zenodo 10.5281/zenodo.22951155); statement and proof in formalization/Zeta9Note.lean.",
+      "tags": ["numerical-analysis", "quadrature", "nonvanishing"]
+    },
+    {
+      "local_id": "Z9N.TWO",
+      "kind": "theorem",
+      "theorem_name": "Zeta9Note.irrational_of_two_small_integer_forms",
+      "theorem_title": "Two independent small integer forms imply irrationality",
+      "code_path": "statements/Statement_Zeta9Note_irrational_of_two_small_integer_forms.lean",
+      "readback_path": "readbacks/irrational_of_two_small_integer_forms.md",
+      "natural_language_statement": "Let x be real. If, for every positive tolerance, there are two integer coefficient pairs (b₁,a₁) and (b₂,a₂) with b₁a₂ ≠ b₂a₁ such that both |b₁ + a₁ x| and |b₂ + a₂ x| lie below that tolerance, then x is irrational. This is a criterion; it does not assert that such pairs exist for any particular number.",
+      "source": "Classical two-form irrationality criterion; abstract layer of the v0.1 research note (Zenodo 10.5281/zenodo.22951155), statement and proof in formalization/Zeta9Note.lean.",
+      "tags": ["number-theory", "irrationality", "linear-forms"]
+    },
+    {
+      "local_id": "Z9N.ONE",
+      "kind": "theorem",
+      "theorem_name": "Zeta9Note.irrational_of_small_nonzero_integer_forms",
+      "theorem_title": "Arbitrarily small nonzero integer forms imply irrationality",
+      "code_path": "statements/Statement_Zeta9Note_irrational_of_small_nonzero_integer_forms.lean",
+      "readback_path": "readbacks/irrational_of_small_nonzero_integer_forms.md",
+      "natural_language_statement": "Let x be real. If, for every positive tolerance, there are integers b and a with b + a x nonzero and |b + a x| below that tolerance, then x is irrational. This is a criterion; it does not assert that such pairs exist for any particular number, and in particular it says nothing about ζ(9).",
+      "source": "Classical one-form irrationality criterion; abstract layer of the v0.1 research note (Zenodo 10.5281/zenodo.22951155), statement and proof in formalization/Zeta9Note.lean.",
+      "tags": ["number-theory", "irrationality", "linear-forms"]
+    }
+  ],
+  "reference_items": [],
+  "item_order": [
+    "Z9N.QUAD",
+    "Z9N.AVG",
+    "Z9N.MED",
+    "Z9N.CONE",
+    "Z9N.TSUM",
+    "Z9N.SIGN",
+    "Z9N.TWO",
+    "Z9N.ONE"
+  ],
+  "main_local_id": "Z9N.ONE",
+  "milestones": [
+    {
+      "local_id": "Z9N.QUAD",
+      "milestone_title": "Moment-matching quadrature",
+      "milestone_description": "Prove that a linear functional matching the five moments X^m (m ≤ 4) of a weighted five-point sum is exact on every polynomial of degree at most 4. The proof expands an arbitrary polynomial in the monomial basis and commutes two finite sums; no positivity of the weights is needed."
+    },
+    {
+      "local_id": "Z9N.AVG",
+      "milestone_title": "Weighted average is interior",
+      "milestone_description": "Prove that with positive weights summing to 1, a non-constant five-tuple has its weighted average strictly between its minimum and maximum. Both directions are proved by contradiction from a vanishing weighted sum of nonnegative terms."
+    },
+    {
+      "local_id": "Z9N.MED",
+      "milestone_title": "Mediant is interior",
+      "milestone_description": "Prove the mediant inequality for five ratios by normalizing the denominator sum to 1 and reducing to the weighted-average milestone; positive numerators-weights and positive denominators are required."
+    },
+    {
+      "local_id": "Z9N.CONE",
+      "milestone_title": "Positive matrices send nonzero nonnegative vectors to positive vectors",
+      "milestone_description": "Prove that an entrywise positive 5×5 real matrix maps every nonzero nonnegative vector to a strictly positive vector, by exhibiting one strictly positive coordinate and summing nonnegative terms."
+    },
+    {
+      "local_id": "Z9N.TSUM",
+      "milestone_title": "Taylor-sign implies a positive kernel sum",
+      "milestone_description": "Prove that nonnegative Taylor coefficients at a lower bound of the sample sequence, positive summable weights, and one positive sample force the weighted sum to be strictly positive, comparing against the zero series term by term."
+    },
+    {
+      "local_id": "Z9N.SIGN",
+      "milestone_title": "Five-sample nonvanishing",
+      "milestone_description": "Prove that under moment matching with positive weights and injective nodes, a nonzero polynomial of degree at most 4 whose five sampled values share a sign has nonzero functional value, by combining the quadrature milestone with root counting at five distinct nodes."
+    },
+    {
+      "local_id": "Z9N.TWO",
+      "milestone_title": "Two independent small forms imply irrationality",
+      "milestone_description": "Prove the two-form criterion: two integer forms with independent coefficient vectors, both arbitrarily small, force irrationality. The independence hypothesis is stronger than the goal's single-form hypothesis; it is listed separately because it is the criterion used by two-form constructions."
+    }
+  ]
+}
