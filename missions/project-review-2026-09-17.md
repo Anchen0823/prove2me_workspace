@@ -148,6 +148,31 @@ Five Primes 剩 28 个 Open，**其中 2 个节点状态是 `Disproved`**
 每步都遵守现有约定：先在 `examples/magic-squares/` 里草稿，
 定型后挪到 `Solutions/Sol_MagicSquares_*.lean` 重新编译，再提交平台，最后 Git。
 
+### ✅ 进度（2026-09-18 晚，S1+S2 一轮做完）
+
+计划外的加速：**不需要 `panParamSet`**。泛魔三阶的唯一成员是常数阵，直接命名
+`constSquare3 e` 比造一个单点参数集更诚实；对称族的参数集就是 `range (2*e+1)`。
+
+| 交付 | 实际 |
+|---|---|
+| 定义 | `MagicSquaresSpecial3` PUBLISHED（`dc7c7ce9`） |
+| 定理 | **6 个节点全部 Proved**：`pan_three_card`、`symmetric_magic_three_classify`、`symm_three_bij`、`pan_three_otherwise`、`symm_three_otherwise`、goal `special_three_count` |
+| 裁决 | 5 份 `ACCEPTED`；goal 先判 `SKETCH_ACCEPTED`，孩子全 Proved 后**自动升 Proved** |
+| proposal | `7af96e14`（7 items / 3 milestones / main=goal），Draft —— **待宇轩 Submit** |
+| 文档 | `missions/magic-squares-iv/status.md` |
+
+修正两处选题判断：
+
+1. 目标不是「归约到 `paramSet` 的一行 `rw`」。`pan_three_card` 的实质是「十二个线和
+   等式只有常数解」（一条 `omega`，但要先把 `Fin 3` 的 `i+k` / `rev i + k` 化简），
+   `symm_three_bij` 的实质是「可容许性 $a\le 2e$ 是截断减法的事实」——两者都不是
+   现成引理的直接推论，各自是完整的分类定理。
+2. 目标陈述用**全 `t` 的形式**（`if 3 ∣ t then …`）而不是只写 $t=3e$，这样 mission
+   的 goal 是完整清点而不是半张表；代价是多两个 `otherwise` 节点（每个 3 行，
+   复用 `center_of_order_three`）。
+
+下一步：S3（文档已写，`git commit` 待宇轩确认）；之后 Magic Squares V = 四阶计数。
+
 ---
 
 ## 4. 备选线（诚实评估）
@@ -156,7 +181,7 @@ Five Primes 剩 28 个 Open，**其中 2 个节点状态是 `Disproved`**
 |---|---|---|
 | **A** | Five Primes 收官（Vaughan + 28 个解析节点） | **不推荐。** 收益确实大（Tao 定理 5.1 完整形式化），但要先翻掉 2 个 `Disproved` 的错误陈述并重建其上游。预计是几十小时量级，且失败概率不低。作为"长期爱好"（你说过 AI4Math 不是 KPI）可以留着慢慢啃，但不要让它占住"当前主线"。 |
 | **B** | Weak Goldbach 筛覆盖 73e8ddac | **不推荐。** 本质是 $4\cdot10^{12}$ 个筛块的有限校验，平台自己标成 verified-computation core。既缺算力也缺可信生成管线，当前环境不适合。 |
-| **C** | 四阶 $H_4$ / $M_4$ 计数（Beck–van Herick，9 维、周期 6 拟多项式） | **暂缓。** 需要先补 Ehrhart / Birkhoff 多胞体格点计数的机制，是个真正的工程量。等 IV 跑通、信心回来了再评估。合适的位置是 Magic Squares V。 |
+| **C** | 四阶 $H_4$ / $M_4$ 计数（弱读法：非负、可重复） | **暂缓。** 需要先补 Ehrhart / Birkhoff 多胞体格点计数的机制，是个真正的工程量。等 IV 跑通、信心回来了再评估。合适的位置是 Magic Squares V。⚠️ **2026-09-18 更正**：这里原先注的「Beck–van Herick」是错的——那篇算的是**互异正整数**（inside-out polytope），不是弱读法；弱读法的结构定理出自 BCCG(2003) 定理 1/2。详见 `project-review-2026-09-18.md` §3.3。 |
 | **D** | 平方数幻方（`referpaper/` 里那三篇开放问题） | **不合适。** 是公开未解决问题，只能做部分结果，容易做成"看起来动了一半"。 |
 
 ---

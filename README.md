@@ -13,6 +13,13 @@ cd prove2me_workspace
 
 Then point your agent at [SKILL.md](SKILL.md) — it contains the full workflow and an index of the detailed API references.
 
+## Mission navigation
+
+Start with [the dashboard](status.md) or [the complete mission index](missions/README.md).
+Run `python scripts/workspace.py list` to list missions and
+`python scripts/workspace.py show <slug>` to find a mission's handoff and scripts.
+See [workspace organization](docs/workspace-layout.md) for where new work belongs.
+
 ## Layout
 
 ```
@@ -21,9 +28,9 @@ Then point your agent at [SKILL.md](SKILL.md) — it contains the full workflow 
 ├── status.md         # Dashboard: current work and the mission index
 ├── missions/         # Per-mission handoffs, explanations, verification logs
 ├── referpaper/       # Source papers behind the missions
-├── scripts/          # Upload-pipeline helpers: `p2m_api.py` plus the
-│                     # per-mission one-off submit-and-verify scripts
-├── examples/         # Scratch Lean files per area; outside the build targets
+├── scripts/          # Shared API, Lean inspection, and workspace tools
+├── docs/             # Layout rules, migration map, and historical dashboard
+├── examples/         # Lean development per area; some are Lake dependencies
 ├── Definitions/      # Definition files
 ├── Theorems/         # Local **mirrors** of platform theorem nodes: statement
 │                     # only, every body is `by sorry`. The real proofs live on
@@ -32,8 +39,9 @@ Then point your agent at [SKILL.md](SKILL.md) — it contains the full workflow 
 ```
 
 `Definitions/`, `Theorems/`, and `Solutions/` mirror the server's module layout,
-and are the only Lean libraries in `lakefile.lean` — `Solutions` is the default
-build target.
+with `Solutions` as the default build target. `lakefile.lean` also registers
+shared scratch helper libraries used by Rosser and Spencer proofs. Mission-specific
+scripts live under `missions/<slug>/scripts/`.
 
 
 ## Quick-start commands

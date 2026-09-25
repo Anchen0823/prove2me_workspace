@@ -23,6 +23,8 @@ Last updated: <date and timezone>
 - Definitions: `Definitions/Def_*.lean`
 - Theorem mirrors: `Theorems/Thm_*.lean`
 - Submission sources: `Solutions/Sol_*.lean`
+- Mission scripts: `missions/<slug>/scripts/`
+- Registry: add `missions/index.json` and `missions/README.md` entries
 - Scratch work: `examples/<slug>/`
 - Explanations and records: `missions/<slug>/`
 
