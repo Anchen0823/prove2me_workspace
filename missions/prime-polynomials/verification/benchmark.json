@@ -1,0 +1,9 @@
+{
+  "polynomials": 10000,
+  "inputs_per_polynomial": 161,
+  "checksum": 11632,
+  "python_seconds": 0.7172756000072695,
+  "cpp_seconds": 0.019542,
+  "speedup": 36.70430866888085,
+  "excludes_sieve_initialization": true
+}

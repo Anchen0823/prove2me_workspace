@@ -67,7 +67,7 @@ Last updated: 2026-09-15 (Asia/Shanghai)
   (sorry-free; inlines `GoldbachSieve.survivor_prime` and `GoldbachSieve.pairSums_sound`).
 - Scratch / checks: `examples/weak-goldbach/` (`scratch1..3.lean`, `checktype.lean`).
 - Payloads, explanations, evidence: this directory (`missions/weak-goldbach/`).
-- API helper: `scripts/p2m_api.py`; child payload builder: `scripts/submit_weak_goldbach_child.py`.
+- API helper: `scripts/p2m_api.py`; child payload builder: `missions/weak-goldbach/scripts/submit_weak_goldbach_child.py`.
 
 ## Validation and submissions
 

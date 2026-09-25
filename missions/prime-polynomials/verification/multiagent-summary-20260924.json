@@ -1,0 +1,171 @@
+{
+  "date": "2026-09-24",
+  "outcome": "not-found",
+  "target_rule": "Consecutive integer inputs, pairwise distinct absolute prime outputs; exclude 1",
+  "runs": [
+    {
+      "run": "sextic-completion-audit-20260924",
+      "result": {
+        "budget_seconds": 70,
+        "completed_shapes": 16401,
+        "termination_reason": "finite-family-exhausted",
+        "mutation_radius": 20,
+        "target_length": 45,
+        "strategy": "exception",
+        "passed23": 7421575,
+        "rescued_candidates": 44,
+        "shape_limit": 0,
+        "degree": 6,
+        "mode": 9,
+        "deduplicated_shapes": true,
+        "seed": 2026092420,
+        "seconds": 13.9975,
+        "shapes": 16401,
+        "wheel_candidates": 163962378,
+        "scanned_polynomials": 16671,
+        "root_free_primes_through": 19,
+        "radius": 40,
+        "best": {
+          "length": 44,
+          "lo": -18,
+          "hi": 25,
+          "coefficients": [
+            1,
+            2,
+            -100,
+            79,
+            367,
+            -3919,
+            -4723
+          ]
+        }
+      },
+      "source": "sextic_search.cpp",
+      "source_sha256": "75515099a45a955096789b2a94c96183f715ad2d8149d80e446144c36140a571"
+    },
+    {
+      "run": "family_rational_quintic_run",
+      "result": {
+        "budget_seconds": 70,
+        "completed_shapes": 60801,
+        "termination_reason": "finite_family_exhausted",
+        "mutation_radius": 50,
+        "target_length": 58,
+        "strategy": "exception",
+        "passed23": 3329771,
+        "rescued_candidates": 7,
+        "shape_limit": 0,
+        "degree": 5,
+        "mode": 8,
+        "deduplicated_shapes": true,
+        "seed": 2026092407,
+        "seconds": 8.18423,
+        "shapes": 60801,
+        "wheel_candidates": 201613376,
+        "scanned_polynomials": 2856,
+        "root_free_primes_through": 23,
+        "radius": 80,
+        "best": {
+          "length": 57,
+          "lo": -27,
+          "hi": 29,
+          "denominator": 4,
+          "coefficients": [
+            1,
+            2,
+            -345,
+            1758,
+            70000,
+            280492
+          ]
+        }
+      },
+      "source": "family_rational_quintic.cpp",
+      "source_sha256": "f601ce511d19a48d8f5537badf15d295308e083cdea7142d420197b55fbc7221"
+    },
+    {
+      "run": "family_binomial_quintic_run",
+      "result": {
+        "budget_seconds": 65,
+        "completed_shapes": 36601,
+        "termination_reason": "finite_family_exhausted",
+        "mutation_radius": 30,
+        "target_length": 58,
+        "strategy": "exception",
+        "passed23": 1954954,
+        "rescued_candidates": 7,
+        "shape_limit": 0,
+        "degree": 5,
+        "mode": 8,
+        "deduplicated_shapes": true,
+        "seed": 2026092408,
+        "seconds": 3.50584,
+        "shapes": 36601,
+        "wheel_candidates": 119780536,
+        "scanned_polynomials": 1671,
+        "root_free_primes_through": 23,
+        "radius": 80,
+        "best": {
+          "length": 57,
+          "lo": -27,
+          "hi": 29,
+          "denominator": 4,
+          "coefficients": [
+            1,
+            2,
+            -345,
+            1758,
+            70000,
+            280492
+          ]
+        }
+      },
+      "source": "family_binomial_quintic.cpp",
+      "source_sha256": "c583a330cabe44ec06bd1e53e9e6c33f573a1f95d7a2ab135ee9e08a81ae1d76"
+    },
+    {
+      "run": "cubic-wheel17-new-20260924",
+      "result": {
+        "budget_seconds": 90,
+        "completed_shapes": 7598372,
+        "termination_reason": "time-limit",
+        "mutation_radius": 50,
+        "target_length": 47,
+        "strategy": "exception",
+        "passed23": 271339842,
+        "rescued_candidates": 3380,
+        "shape_limit": 0,
+        "degree": 3,
+        "mode": 3,
+        "deduplicated_shapes": true,
+        "seed": 2026092424,
+        "seconds": 90.0008,
+        "shapes": 7598372,
+        "wheel_candidates": 2268662548,
+        "scanned_polynomials": 400934,
+        "root_free_primes_through": 23,
+        "radius": 80,
+        "best": {
+          "length": 36,
+          "lo": -23,
+          "hi": 12,
+          "coefficients": [
+            47,
+            70,
+            4831,
+            158749
+          ]
+        }
+      },
+      "source": "opt_wheel17_search.cpp",
+      "source_sha256": "5809886d654bc38769af20615dfde411f03a0909c20977c9fd6510a27e23c4a2"
+    }
+  ],
+  "performance_evidence": "opt-wheel-summary.json",
+  "integer_witness_verification": "campaign-verification.json",
+  "rational_witness_verification": [
+    "family_rational_quintic_verified.json",
+    "family_binomial_quintic_verified.json"
+  ],
+  "limitation": "Finite-family exclusions and a bounded sampled cubic campaign only; no global optimality or current world record claim"
+}

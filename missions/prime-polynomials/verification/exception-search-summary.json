@@ -1,0 +1,128 @@
+{
+  "status": "not-found",
+  "target_length": 50,
+  "benchmark_speedup": 25.131376543466512,
+  "baseline": {
+    "strategy": "baseline",
+    "passed23": 25475,
+    "rescued_candidates": 0,
+    "shape_limit": 500,
+    "degree": 4,
+    "mode": 7,
+    "deduplicated_shapes": true,
+    "seed": 2026092410,
+    "seconds": 3.62691,
+    "shapes": 500,
+    "wheel_candidates": 1485190,
+    "scanned_polynomials": 25475,
+    "root_free_primes_through": 23,
+    "radius": 80,
+    "best": {
+      "length": 18,
+      "lo": -8,
+      "hi": 9,
+      "coefficients": [
+        13,
+        27,
+        -1338,
+        -23082,
+        96079
+      ]
+    }
+  },
+  "accelerated": {
+    "strategy": "exception",
+    "passed23": 25475,
+    "rescued_candidates": 1,
+    "shape_limit": 500,
+    "degree": 4,
+    "mode": 7,
+    "deduplicated_shapes": true,
+    "seed": 2026092410,
+    "seconds": 0.144318,
+    "shapes": 500,
+    "wheel_candidates": 1485190,
+    "scanned_polynomials": 54,
+    "root_free_primes_through": 23,
+    "radius": 80,
+    "best": {
+      "length": 12,
+      "lo": -12,
+      "hi": -1,
+      "coefficients": [
+        17,
+        29,
+        -2102,
+        -23966,
+        -82741
+      ]
+    }
+  },
+  "quintic_family": {
+    "mutation_radius": 50,
+    "target_length": 50,
+    "strategy": "exception",
+    "passed23": 3177197,
+    "rescued_candidates": 2,
+    "shape_limit": 0,
+    "degree": 5,
+    "mode": 8,
+    "deduplicated_shapes": true,
+    "seed": 2026092413,
+    "seconds": 20.6347,
+    "shapes": 60801,
+    "wheel_candidates": 198185832,
+    "scanned_polynomials": 7215,
+    "root_free_primes_through": 23,
+    "radius": 80,
+    "best": {
+      "length": 49,
+      "lo": -24,
+      "hi": 24,
+      "coefficients": [
+        3,
+        7,
+        -340,
+        -122,
+        3876,
+        997
+      ]
+    }
+  },
+  "cubic_search": {
+    "strategy": "exception",
+    "passed23": 63019252,
+    "rescued_candidates": 793,
+    "shape_limit": 0,
+    "degree": 3,
+    "mode": 3,
+    "deduplicated_shapes": true,
+    "seed": 2026092411,
+    "seconds": 100.004,
+    "shapes": 1767716,
+    "wheel_candidates": 4302507574,
+    "scanned_polynomials": 93234,
+    "root_free_primes_through": 23,
+    "radius": 80,
+    "best": {
+      "length": 25,
+      "lo": -17,
+      "hi": 7,
+      "coefficients": [
+        117,
+        99,
+        -6768,
+        2111
+      ]
+    }
+  },
+  "tests": {
+    "cases": 150000,
+    "positive_cases": 20786,
+    "false_negatives": 0,
+    "small_prime_exception": true,
+    "49_term_fixture": true
+  },
+  "source_sha256": "cb57c3e2abeb30b43b658db6a913d5e0eab5f7c21a3fbb468f12171ac0cc387b",
+  "exclusion_scope": "60801 perturbation shapes; integer constants [-498960,501269]; input windows contained in [-80,80]; distinct absolute primes; no run of length >=50 found; not a global upper bound"
+}

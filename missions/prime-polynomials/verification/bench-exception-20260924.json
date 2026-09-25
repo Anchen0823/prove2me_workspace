@@ -1,0 +1,1 @@
+{"strategy":"exception","passed23":25475,"rescued_candidates":1,"shape_limit":500,"degree":4,"mode":7,"deduplicated_shapes":true,"seed":2026092410,"seconds":0.140347,"shapes":500,"wheel_candidates":1485190,"scanned_polynomials":54,"root_free_primes_through":23,"radius":80,"best":{"length":12,"lo":-12,"hi":-1,"coefficients":[17,29,-2102,-23966,-82741]}}

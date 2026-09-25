@@ -1,0 +1,84 @@
+{
+  "status": "not-found",
+  "targets": {
+    "quadratic": 46,
+    "cubic": 47,
+    "integer_quartic": 47
+  },
+  "scanned_polynomials": 453114,
+  "runs": [
+    {
+      "degree": 3,
+      "mode": 3,
+      "deduplicated_shapes": true,
+      "seed": 2026092401,
+      "seconds": 90.0005,
+      "shapes": 1389799,
+      "wheel_candidates": 3113577012,
+      "scanned_polynomials": 72283,
+      "root_free_primes_through": 47,
+      "radius": 80,
+      "best": {
+        "length": 32,
+        "lo": -13,
+        "hi": 18,
+        "coefficients": [
+          78,
+          50,
+          -3698,
+          7591
+        ]
+      }
+    },
+    {
+      "degree": 4,
+      "mode": 6,
+      "deduplicated_shapes": true,
+      "seed": 2026092402,
+      "seconds": 90.0019,
+      "shapes": 821181,
+      "wheel_candidates": 2396166594,
+      "scanned_polynomials": 104383,
+      "root_free_primes_through": 47,
+      "radius": 80,
+      "best": {
+        "length": 29,
+        "lo": -23,
+        "hi": 5,
+        "coefficients": [
+          1,
+          1,
+          -553,
+          -11455,
+          2357
+        ]
+      }
+    },
+    {
+      "degree": 4,
+      "mode": 7,
+      "deduplicated_shapes": true,
+      "seed": 2026092403,
+      "seconds": 70.0013,
+      "shapes": 5743,
+      "wheel_candidates": 16438765,
+      "scanned_polynomials": 276448,
+      "root_free_primes_through": 23,
+      "radius": 80,
+      "best": {
+        "length": 21,
+        "lo": -3,
+        "hi": 17,
+        "coefficients": [
+          20,
+          35,
+          -1262,
+          -24551,
+          119129
+        ]
+      }
+    }
+  ],
+  "independent_verification": "campaign-verification.json",
+  "scope": "finite windows and coefficient sampling, not global optimum proof"
+}

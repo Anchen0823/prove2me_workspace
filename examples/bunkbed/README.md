@@ -13,6 +13,6 @@ The mission is complete. Use [the mission status](../../missions/bunkbed/status.
 | `GroupingFinish.lean`, `GroupingFinishExplicit.lean` | Failed intermediate connection attempts; preserved for diagnosis |
 | `bbfactor.lean`, `image.lean`, `partition.lean` | Downloaded reference solution sources |
 
-Cross-imports now use `examples.bunkbed.*`. Run `scripts/check_grouping.ps1 -CheckScratch` from the workspace root to compile the successful module chain and the accepted submission. Failed drafts are intentionally excluded.
+Cross-imports now use `examples.bunkbed.*`. Run `missions/bunkbed/scripts/check_grouping.ps1 -CheckScratch` from the workspace root to compile the successful module chain and the accepted submission. Failed drafts are intentionally excluded.
 
 Historical logs and server JSON responses are in `missions/bunkbed/verification/`. The full old handoff is preserved at `missions/bunkbed/handoff-history.md`; paths in that historical document describe the pre-archive layout.

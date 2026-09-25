@@ -42,13 +42,13 @@ These sources remain in `Solutions/`, and platform definition and theorem mirror
 Run from the workspace root:
 
 ```powershell
-.\scripts\check_grouping.ps1
+.\missions\bunkbed\scripts\check_grouping.ps1
 ```
 
 To also rebuild and validate the relocated successful scratch modules:
 
 ```powershell
-.\scripts\check_grouping.ps1 -CheckScratch
+.\missions\bunkbed\scripts\check_grouping.ps1 -CheckScratch
 ```
 
 The standalone submission previously compiled locally in 31.52 seconds. Its exact target-type comparison also passed. Local theorem mirrors contain `sorry` placeholders, so `#print axioms solution` reports `sorryAx` locally; the platform accepted the submitted proof and its proved dependencies. The submitted source contains no `sorry`, custom axiom, or `native_decide`.
@@ -63,7 +63,7 @@ The successful proof separates abstract finite-sum algebra from concrete graph i
 
 Lean `leanprover/lean4:v4.33.1`; Mathlib `0df444a360eaa60ab8c11dca51a86af692955474`.
 
-Archive validation on 2026-09-12 passed with `scripts/check_grouping.ps1 -CheckScratch`: both relocated helper modules, the final connection, the standalone submission, and the exact target-type check all compiled. The complete five-invocation run took 186.09 seconds; this is not the timing of a single submission compile. Only the pre-existing unused-simp-argument warnings were emitted. See [the archive validation log](verification/ArchiveValidation.log).
+Archive validation on 2026-09-12 passed with `missions/bunkbed/scripts/check_grouping.ps1 -CheckScratch`: both relocated helper modules, the final connection, the standalone submission, and the exact target-type check all compiled. The complete five-invocation run took 186.09 seconds; this is not the timing of a single submission compile. Only the pre-existing unused-simp-argument warnings were emitted. See [the archive validation log](verification/ArchiveValidation.log).
 
 All 25 formal Lean source files retained their original hashes. All 26 moved files passed hash checks immediately after relocation; four scratch imports were then updated and recorded in the archive manifest. The new index and archive documentation passed local-link checks. Credentials and cache artifacts remain gitignored.
 

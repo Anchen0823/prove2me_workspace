@@ -1,0 +1,181 @@
+[
+  {
+    "name": "Ruby quadratic",
+    "coefficients_descending": [
+      "36",
+      "18",
+      "-1801"
+    ],
+    "interval": [
+      -33,
+      11
+    ],
+    "length": 45,
+    "distinct": 45,
+    "all_positive": false,
+    "max_abs_value": 36809,
+    "boundary_values": [
+      39203,
+      3599
+    ]
+  },
+  {
+    "name": "2006 cubic",
+    "coefficients_descending": [
+      "-66",
+      "3845",
+      "-60897",
+      "251831"
+    ],
+    "interval": [
+      0,
+      45
+    ],
+    "length": 46,
+    "distinct": 46,
+    "all_positive": false,
+    "max_abs_value": 716659,
+    "boundary_values": [
+      316639,
+      -837587
+    ]
+  },
+  {
+    "name": "DL integer quintic",
+    "coefficients_descending": [
+      "3",
+      "7",
+      "-340",
+      "-122",
+      "3876",
+      "997"
+    ],
+    "interval": [
+      -24,
+      24
+    ],
+    "length": 49,
+    "distinct": 49,
+    "all_positive": false,
+    "max_abs_value": 21533893,
+    "boundary_values": [
+      -21422153,
+      26740397
+    ]
+  },
+  {
+    "name": "DL integer sextic",
+    "coefficients_descending": [
+      "1",
+      "2",
+      "-100",
+      "79",
+      "367",
+      "-3919",
+      "-4723"
+    ],
+    "interval": [
+      -18,
+      25
+    ],
+    "length": 44,
+    "distinct": 44,
+    "all_positive": false,
+    "max_abs_value": 225970427,
+    "boundary_values": [
+      28721947,
+      288510907
+    ]
+  },
+  {
+    "name": "DL rational quartic",
+    "coefficients_descending": [
+      "3/4",
+      "1/2",
+      "-4323/4",
+      "34415/2",
+      "-62099"
+    ],
+    "interval": [
+      -16,
+      32
+    ],
+    "length": 49,
+    "distinct": 49,
+    "all_positive": false,
+    "max_abs_value": 566987,
+    "boundary_values": [
+      -606779,
+      236221
+    ]
+  },
+  {
+    "name": "DL rational quintic",
+    "coefficients_descending": [
+      "1/4",
+      "1/2",
+      "-345/4",
+      "879/2",
+      "17500",
+      "70123"
+    ],
+    "interval": [
+      -27,
+      29
+    ],
+    "length": 57,
+    "distinct": 57,
+    "all_positive": false,
+    "max_abs_value": 4325119,
+    "boundary_values": [
+      -2177213,
+      5141923
+    ]
+  },
+  {
+    "name": "DL rational sextic",
+    "coefficients_descending": [
+      "1/72",
+      "1/24",
+      "-1583/72",
+      "-3161/24",
+      "200807/36",
+      "97973/3",
+      "-11351"
+    ],
+    "interval": [
+      -45,
+      12
+    ],
+    "length": 58,
+    "distinct": 58,
+    "all_positive": false,
+    "max_abs_value": 39300979,
+    "boundary_values": [
+      47673169,
+      521077
+    ]
+  },
+  {
+    "name": "Borghi 2026 quartic",
+    "coefficients_descending": [
+      "1",
+      "-106",
+      "3959",
+      "-60950",
+      "341227"
+    ],
+    "interval": [
+      0,
+      53
+    ],
+    "length": 54,
+    "distinct": 26,
+    "all_positive": true,
+    "max_abs_value": 341227,
+    "boundary_values": [
+      406243,
+      406243
+    ]
+  }
+]

@@ -1,0 +1,64 @@
+{
+  "runs": [
+    {
+      "mode": 3,
+      "baseline_seconds": 1.7205,
+      "wheel17_seconds": 0.662212,
+      "passed23": 1800735,
+      "scanned_polynomials": 2587,
+      "same_improvement_log": true
+    },
+    {
+      "mode": 3,
+      "baseline_seconds": 1.6376,
+      "wheel17_seconds": 0.677015,
+      "passed23": 1800735,
+      "scanned_polynomials": 2587,
+      "same_improvement_log": true
+    },
+    {
+      "mode": 3,
+      "baseline_seconds": 1.67953,
+      "wheel17_seconds": 0.702406,
+      "passed23": 1800735,
+      "scanned_polynomials": 2587,
+      "same_improvement_log": true
+    },
+    {
+      "mode": 8,
+      "baseline_seconds": 1.79597,
+      "wheel17_seconds": 1.50576,
+      "passed23": 514930,
+      "scanned_polynomials": 1155,
+      "same_improvement_log": true
+    },
+    {
+      "mode": 8,
+      "baseline_seconds": 1.74335,
+      "wheel17_seconds": 1.44235,
+      "passed23": 514930,
+      "scanned_polynomials": 1155,
+      "same_improvement_log": true
+    },
+    {
+      "mode": 8,
+      "baseline_seconds": 1.76099,
+      "wheel17_seconds": 1.56577,
+      "passed23": 514930,
+      "scanned_polynomials": 1155,
+      "same_improvement_log": true
+    }
+  ],
+  "median_speedup": {
+    "3": 2.4807869840402352,
+    "8": 1.1695024439485708
+  },
+  "correctness": {
+    "exception_cases": 150000,
+    "positive_cases": 20786,
+    "false_negatives": 0,
+    "wheel_equivalence_cases": 51051000,
+    "wheel_mismatches": 0,
+    "49_term_fixture": true
+  }
+}
