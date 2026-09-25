@@ -1,0 +1,73 @@
+{
+  "schema": "zeta9-private-new-results-v1",
+  "results": {
+    "Z9.Q.ABSTRACT": {
+      "job_id": "029e4d8a-fe18-4e6b-abab-6b731662954c",
+      "name": "ZetaNine.volume_baseline_cancellation",
+      "job_status": "PUBLISHED",
+      "publish_error": "",
+      "theorem_id": "d6b0eb73-e1ad-4005-8f8a-ecd61ad35127",
+      "submission_id": "7f240a46-92e3-471a-9f55-bc4361652ef3",
+      "proof_status": "ACCEPTED",
+      "solution_sha256": "6e5ece0036565e563e1ab1a9a8fc1f6e5570de113787c2b588399dfb0abad733",
+      "proof_error": ""
+    },
+    "Z9.Y.ABSTRACT": {
+      "job_id": "a54b8ff6-6ab7-4c22-8740-4da4c38c9b67",
+      "name": "ZetaNine.finite_prime_budget",
+      "job_status": "PUBLISHED",
+      "publish_error": "",
+      "theorem_id": "8496d3a0-3b92-4a68-a56d-d972e0df20a2",
+      "submission_id": "6c839e7d-c876-4ecf-a130-c945acf975e8",
+      "proof_status": "ACCEPTED",
+      "solution_sha256": "a50acc595935b3b7141b6c62e8d084ce3a4e572152da304f2c80d8a04724460e",
+      "proof_error": ""
+    },
+    "Z9.YD.ABSTRACT": {
+      "job_id": "b6f5ff13-9092-457e-844c-a3543aaaf485",
+      "name": "ZetaNine.finite_prime_discount",
+      "job_status": "PUBLISHED",
+      "publish_error": "",
+      "theorem_id": "0f7bb5e3-be14-422d-a555-d89ed96e171f",
+      "submission_id": "919208e0-499a-44ce-a9cd-d0beb6897e30",
+      "proof_status": "ACCEPTED",
+      "solution_sha256": "9900d2707154afaf8723544065cc1f1775bfb15472ff392afc5738bf654c003c",
+      "proof_error": ""
+    }
+  },
+  "mission_milestones": {
+    "Q1. Concrete Smith area identity": "667f25cb-4df4-4fdd-8830-d833dc2d498b",
+    "Q2. Logarithmic volume cancellation": "834075fe-8dff-4a8a-b727-bb5507bb4404",
+    "X. Inverse-image area exponent": "51fac039-9251-4a60-b722-1d6c589adaf6",
+    "Y1. Finite weighted prime budget": "7758d857-6210-4308-b907-c7e7eb32fb53",
+    "VB. Uniform excess-prime budget": "fb6a5dae-85d3-42be-bfcc-488df4cdc63f",
+    "S. Uniform congruence shape": "9789d788-7084-496c-b0d4-4db9f3e03f71",
+    "J. Infinite exponential margin": "09d2a848-4ca5-4a0b-965d-4e1c385a8d41",
+    "H. Translation-trace large-prime window": "96e640f0-ff5e-498a-8378-95a1164a15ae",
+    "Z. Sublinear small-prime excess": "2b543ddd-e9de-4dfa-9cee-35bba99e23ae",
+    "VC. Intermediate-prime excess budget": "61e3ffce-b7bc-4e64-8684-9ec4cd4b3031",
+    "I. Merged-pole intermediate-prime bound": "b4a25c53-4baa-4a24-91e0-4667f992fd40",
+    "LC. Intrinsic local congruence slope": "d2b3577e-b820-4330-9662-372e432d802f",
+    "YD. Exact finite prime discount": "243ff6c5-4e9b-4381-8883-da79963e8d04",
+    "VD. Discounted intermediate-prime budget": "f61f9aeb-b279-4960-a1e1-e5533743cf97",
+    "TP. Positive one-form bridge": "8fd3c5ad-175a-4e56-81b3-08697fd7de85",
+    "T. Full-lattice first-direction positivity": "abd7ec7d-d3b9-4f8a-830c-7a6a3aeaa349",
+    "TG. Partial-lattice first-direction positivity": "5ac0328f-9674-4284-8f7b-4b773423a38c",
+    "TA. Eventual two-step Taylor positivity": "752973af-d376-461f-aa3e-9cd7b5fe6713",
+    "SP. Signed-saddle nonvanishing lemma": "ff0841c5-d9cd-40d0-8b38-82f5e511d745",
+    "TS. Infinite saddle-signed short direction": "0b6b77a9-6851-43bd-8833-54f39ff63016",
+    "GC. Gaussian saddle moments and sharp constant window": "b57f0e9a-33e6-427e-83a4-1d31186abf72",
+    "FQ. Exact positive five-sample cubature": "7f282316-931d-4980-9bf6-6df5b3f29b4b",
+    "T5. Infinite five-sample-signed short direction": "1cc17674-7947-416a-9fea-bf380cfc2801",
+    "GO. Geometry-only five-sample obstruction": "949cf84d-ab97-40a0-8959-e375e0abaefb",
+    "FI. Strict five-sample ratio interval": "4f74d013-bdde-408e-8af7-36b868b84e02",
+    "FO. Uniform approximation by every first output": "c9e40910-6af9-4ab0-be61-2bd32d7175e8",
+    "FC. Exact five-endpoint denominator and gap": "da76b0b9-0115-42a3-ba3c-6e5e36cfc292",
+    "FD. Infinite endpoint-denominator height criterion": "cde466e5-1539-45fb-84dd-4c1ddc8ffdba",
+    "FM. Same-limit rational connection obstruction": "4f06c9ac-4983-463d-8a2e-0d6290e85292",
+    "XL. Actual inverse-area lower and height upper rates": "7cc7a9e3-14e5-4163-a891-d5d52a92d754",
+    "CM. Critical second-minimum equivalence": "5558a4ae-4326-46bd-a148-283d0b4aa38f",
+    "CP. Critical second-minimum polynomial margin": "4487408b-277a-40b8-bcf1-c9c0416f02a8"
+  },
+  "mission_description_sha256": "1db0867aa1ec9e519d3c6cdd4839c43d7ff84ee60295002e1d6290769735eb9c"
+}

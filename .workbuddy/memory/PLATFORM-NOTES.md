@@ -127,12 +127,100 @@ draft 校验、盲审、两种提交模式的细节。MEMORY.md 只留索引。
 
 ## frontier / 图
 
-- **真 frontier 用 `/theorems/<root_id>/open-leaves`**（五素数 root `59fb46ad`，2026-09-18 为 18 条）。
-  `/theorems?mission_id=X&page=N` **无视 page**（每页固定同 50 条，累加会重复）；
+- 🔴 **2026-09-24：`/theorems/<root_id>/open-leaves` 已 500**
+  （`Failed to traverse decompositions: canceling statement due to statement timeout`，重试 3 次全败）。
+  替代：BFS over `/theorems/<id>/graph`（返回**有界**子图，**会混入别的 mission**），
+  对 `has_more_children : true` 的节点再各拉一次，最后**只留从 root 沿 decomposition 边可达的节点**。
+  工具：`tmp/frontier_walk.py`（单节点 + 可达性）、`tmp/frontier_full.py`（递归 BFS，117 次调用 ~4 min）、
+  `tmp/frontier_mission.py`（可达性过滤 + 带陈述的清单）。
+  ⚠️ 不过滤会混进 EulerMascheroni / PrimePairSieve / ArithmeticE 的叶（12 真叶 → 20 假叶）。
+- ✅ **`/theorems/<id>/decompositions` 可用**且是看单个节点孩子最便宜的路子。
+  **陷阱**：每个节点都有一条 `{"submission_id": null, "children": [<一个 definition>]}` 的**占位**，
+  **不是分解**；只有 `submission_id` 非 null 的才算。
+- ✅ **`/theorems/<id>/submissions` 可用**（判断有没有人提交过）；`/submissions?theorem_id=X` **忽略过滤参数**、
+  返回的是**自己**的提交列表，别拿来判重。
+- 🔴 **单次 404 不可信**（2026-09-24 实测）：`/theorems/d5c69ba9` 20:2x 回
+  `404 {"error":"Theorem not found: …"}`，21:0x 同一个 id 回 200 + Open。
+  ⇒ **要宣布「节点被删了」必须二次读**，否则会像我们一样发出错的 mission 评论再更正。
+- ✅ **已发布节点的 `natural_language_statement` 可以改**（2026-09-24 实测）：
+  `OPTIONS /theorems/<id>` → `Allow: GET, HEAD, OPTIONS, PATCH`；
+  `PATCH /theorems/<id>` body `{"natural_language_statement": "…"}` → 200，
+  回体里 `formal_statement` / `status` / `theorem_name` 全部不变（改的只是描述）。
+  用途：修正自己发布的陈述里**说错了**的说明性文字（不能改 Lean 陈述）。
+  **规矩**：改之前先 `GET` 整条 dump 成 JSON；body **只**带要改的那一个字段。
+- 🔴 **「Open 且没有分解」≠ frontier**：有贡献者提交了**自指分解** —— 把节点约简到它自己的祖先，
+  于是 frontier 工具会把真义务算成「已约简」。2026-09-24 实测的簇：
+  `schoenfeld_psi_error_large` ← {`…_deficit_lower_large`, `…_excess_upper_large`}，
+  而这两个各自 ← `schoenfeld_psi_error_large`。
+  **正确判据**：分解 D（孩子 C₁…C_k）是自指的 ⟺ **每个** Cᵢ 都（沿分解边）传递依赖回该节点。
+  节点是「隐藏叶」⟺ 它有分解且**所有**分解都自指。
+  工具 `tmp/frontier_report.py`（读 `frontier_full.py` 的快照，输出 free / hidden / reduced 三类）。
+  该快照上它报了 12 free + 3 hidden（其中 2 个是真义务）+ 70 reduced，**无假阳性**。
+- `/theorems?mission_id=X&page=N` **无视 page**（每页固定同 50 条，累加会重复）；
   `/theorems/<id>/graph` 会截断（看 `has_more_children`）。
-  工具：`tmp/frontier.py`、`tmp/decomps.py`、`tmp/show_nodes.py`、`tmp/graph_node.py`。
+- 其它工具：`tmp/show_nodes.py <ids…>`（状态+陈述）、`tmp/show_decomps.py <ids…>`（孩子）、
+  `tmp/check_sig.py <target_id> <sol_file>`（签名逐字比对）、`tmp/poll_submission.py <sid> <out.json> <分钟>`。
 - 🔴 **约简类提交判 `SKETCH_ACCEPTED` 不等于失败**：平台按「孩子的 status」重估节点；
   import 的孩子还在 PENDING 时会给 SKETCH_ACCEPTED，等孩子全 Proved 后目标节点
   **自动升为 `Proved`**（2026-09-18 `special_three_count` 实测）。看到 SKETCH_ACCEPTED
   先等一会儿再查 `/theorems/<id>`，别急着重提。
 - **不要相信 `session-*.md`/`report-*.md` 记的节点 id**（会漂移/被编造），重新拉实时列表。
+- 🔴 **提交文件里的定理必须叫 `solution` 且必须在根命名空间**（2026-09-24 实测，代价一条 WA）：
+  把整份文件包进 `namespace X … end`（照抄节点自己 `formal_statement` 的布局）会判
+  `WA: Your proof does not match the target type: Unknown identifier 'solution'`
+  —— 声明变成了 `X.solution`。去掉 namespace 后同一份正文立刻 ACCEPTED。
+  ⚠️ `tmp/check_sig.py` 只比对签名文本，**查不出这个错**（它会照常报 EXACT MATCH）。
+- ⚠️ **`WA` 也是终态**：`tmp/poll_submission.py` 的 `TERMINAL` 必须含
+  `WA`/`SKETCH_WA`/`TIMEOUT`/`INTERNAL_ERROR`，否则会一直轮询到超时（还会污染日志）。
+- 🔴 **绝不要让两个轮询器写同一个 log/JSON**：先启动的那个会持续覆盖结果，
+  造成「成功被看成失败」（2026-09-24 实际发生过，冤枉了好几分钟）。
+  判定以 `GET /submissions/<id>` 为唯一权威。
+- ✅ **判定「节点被删」必须靠全树快照，不能靠单点 404**：2026-09-24 `d5c69ba9`
+  的直接端点 + 自己的 `/graph` 持续 404 约 45 分钟，但此时重跑的
+  `frontier_full.py` 快照里它仍在（`Open`、`deprecated_at=null`），且该快照含
+  20:55 之后新建的节点 ⇒ 数据新鲜 ⇒ **节点没删，是它自己的端点坏了**。
+  **「不在某棵子树里」同样不是删除证据。**（工具：`tmp/graph-root-*.json` 两份 diff 节点集。）
+- ⚠️ **新发布的节点只有在分解被接受后才进入 root 可达图**（实测：已发布但未接线的
+  A/A*/B 三个节点不在图里；`fa58620e`/`7c1e7cb4` 在）。所以「图里没有」不能用来判断
+  一个**刚发布的**节点是否成功。判发布成功看 `/publish-jobs/<id>`。
+- 📌 `Summable.subtype` **存在**，但源码里写作 `protected theorem subtype`
+  （由 `to_additive` 生成），grep 字符串 `Summable.subtype` 找不到它。
+  类型：`Summable f → (p : β → Prop) → Summable (f ∘ Subtype.val)`。
+  子类型上求和的另一条无条件路子：`tsum_subtype (s) (f) :
+  ∑' x : s, f x = ∑' x, s.indicator f x`（不需要可和性假设）。
+- 📌 两个易踩的 Mathlib 细节（2026-09-24 实测）：
+  ① 本版 `Nat.Prime n` 与 `Irreducible n` **定义等价** ⇒ 用
+  `Set.indicator_of_mem`/`of_notMem` 去 rw 形如 `{m | Nat.Prime m}.indicator f n` 的目标时，
+  必须显式给 `(s := {m : ℕ | Nat.Prime m})`，否则 elaborator 从假设里取出
+  `{m | Irreducible m}`，rw 因语法不匹配而失败。
+  ② `linarith` 在本环境里**不把字面量 `-1 / n` 归一成 `-(1 / n)`**：一律写成
+  `-(1 / n)` 这种「负号在除法外面」的形式，`linarith` 才认得。
+
+## 🔴 约简（reduction）语义：两条会白干一整轮的坑
+
+- **等价的孩子不是分解**。平台只检查「type 对得上 + import 的孩子成为孩子」，**不检查孩子是否
+  比父节点弱**。于是很容易交一条「孩子 ⟺ 父节点」的约简，形式上 `SKETCH_ACCEPTED`、图上有边，
+  但数学上什么都没分解。判据：**先问「这个孩子是不是父节点的改写」**。2026-09-25 ζ(9) 实例：
+  「存在任意小的非零整数形式」+ 已有准则 ⟺ 无理性（Dirichlet 给正向、准则给反向）⇒ 不能当根的
+  孩子；改成钉死**固定指数速率**（一般无理数不保证指数级逼近）才严格更强、且不等价。
+- **带自由参数的父节点无法 import 封闭的孩子定理**。孩子是封闭命题（无自由变量）；若父节点的
+  类型是 `(B σ : ℕ → ℝ) (hB : …) (hS : …) : …` 这种 schema，`apply child` 时孩子的自由变量没处
+  去 ⇒ 只能把两个「孩子」都写成父节点内部的 `have`，那就不是孩子了。**结论**：想建多级 DAG 必须
+  让每一层都是关于**共同具体对象**的封闭命题 ⇒ 先有定义层。别指望「参数化 schema + 封闭孩子」
+  混搭出树。
+- 约简文件里 `theorem solution` 的签名与父节点签名比对时，**别做逐字比较**（父节点
+  `formal_statement` 带换行缩进）→ 先归一空白（`" ".join(s.split())`）再比。
+
+## 平台版本 0.11.1（2026-09-25 复审）
+
+`/agent/refresh` 回 `version: 0.11.1`（此前记录的 `0.10.9`）。`sync_private_proposal.py` 的
+`EXPECTED_VERSION` 守卫会直接挡下取 token ⇒ **先复审文档再改版本号，不要先改**。
+0.11.1 的实际 delta（`gh api repos/prove2me/prove2me_workspace/contents/references` 拉上游、与本地
+`references/` 逐文件 `tr -d '\r' | md5sum` 对比）：
+- `mission_captain.md`：faithfulness 展开成 9 条细则（含「**Proof Difficulty 不是你的事**——难证/
+  Mathlib 缺料不是削弱陈述或删里程碑的理由」）；proposal 新增 `Changes requested` 状态（带
+  `reviews` 报告 + 逐条 `flags`，可改可重提）。
+- **新增 mission 级 `POST /missions/:id/make-public`**（把 goal + 已链里程碑 + 依赖一起转公开；
+  返回 `made_public` 列表）。⚠️ **发布即永久不可逆**，captain 自己就能调，但**调之前必须问用户**。
+  另注意它和单定理级 `/theorems/:id/make-public` 不是一个东西：后者只公开定理、不请审。
+- `contribute.md` / `prove.md` / `missions.md` / `mission_auditor.md` **未变**（与本地 md5 相同）。

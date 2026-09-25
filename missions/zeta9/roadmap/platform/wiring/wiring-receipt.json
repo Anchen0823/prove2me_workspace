@@ -1,0 +1,77 @@
+{
+  "schema": "zeta9-dag-wiring-v1",
+  "results": {
+    "Z9.ONEFORM.CRITERION": {
+      "job_id": "28861d1a-3167-4fe9-9800-5e4524de6560",
+      "name": "ZetaNine.irrational_of_small_nonzero_integer_forms",
+      "job_status": "PUBLISHED",
+      "publish_error": "",
+      "theorem_id": "c1147ec6-b702-4ce3-86a6-04aaf358e544",
+      "submission_id": "5826165a-f16a-4710-a505-5b8253f58ed0",
+      "proof_status": "ACCEPTED",
+      "solution_sha256": "7a1695c315e348e166959fd9eec34ade55d0ca1ca0ac5a914927f99466783bd5",
+      "proof_error": ""
+    },
+    "Z9.TP.SIGN": {
+      "job_id": "359019db-fe8c-489f-91ef-15f79bb2f070",
+      "name": "ZetaNine.taylor_sign_implies_kernel_sum_pos",
+      "job_status": "PUBLISHED",
+      "publish_error": "",
+      "theorem_id": "a8a15e54-0fca-4932-b4ea-171e7d02fc03",
+      "submission_id": "4c47c54d-e33d-453e-9b2c-b397aec43441",
+      "proof_status": "ACCEPTED",
+      "solution_sha256": "57ae417b36bb21161892dfcb0b11de2f23a30430dee7ffd5489e87c6929d1206",
+      "proof_error": ""
+    },
+    "Z9.FQ.QUADRATURE": {
+      "job_id": "47cc090d-c5b8-40b3-82e5-96e4e5b4c042",
+      "name": "ZetaNine.quadrature_exact_of_moments",
+      "job_status": "PUBLISHED",
+      "publish_error": "",
+      "theorem_id": "443fb397-e2df-48a0-941c-0617ca84f5f1",
+      "submission_id": "f80cd483-3190-4a58-996a-729ac88e0ab7",
+      "proof_status": "ACCEPTED",
+      "solution_sha256": "7443c1b93dd0691de75c83b2b807cde0ce37ad66ef4abb6c3f7e1b5c24cd52e3",
+      "proof_error": ""
+    },
+    "Z9.OBLIG.ONE": {
+      "job_id": "7bd572ce-c8a8-4621-8866-dc964e4162c8",
+      "name": "ZetaNine.exponentially_small_nonzero_forms_of_zeta_nine",
+      "job_status": "PUBLISHED",
+      "publish_error": "",
+      "theorem_id": "60c1cf49-6b01-448c-b38a-88dc2fcb8ba0"
+    },
+    "Z9.OBLIG.TWO": {
+      "job_id": "3e294c58-1eb3-4536-97d2-fc66683b5eb4",
+      "name": "ZetaNine.exponentially_small_independent_forms_of_zeta_nine",
+      "job_status": "PUBLISHED",
+      "publish_error": "",
+      "theorem_id": "691b1665-f122-47f7-a3e4-2c28a06055f2"
+    }
+  },
+  "milestones": {
+    "Z9.ONEFORM.CRITERION": "39413516-250c-4036-b004-ce901187ad99",
+    "Z9.TP.SIGN": "862e3882-a402-4c02-92a0-9294440464bb",
+    "Z9.FQ.QUADRATURE": "8b259b41-be6d-4655-8381-6f49dc4baa94",
+    "Z9.OBLIG.ONE": "392712a2-ecc7-49d6-8dc1-902209ba84e2",
+    "Z9.OBLIG.TWO": "d367b07f-c4ad-4083-a280-79745c9d8227"
+  },
+  "reductions": {
+    "Z9.RED.ONEFORM": {
+      "theorem_id": "523f37b8-ae98-406c-a3f7-43aa8e002dd7",
+      "submission_id": "42bd3e13-9b9b-45e5-bfc6-e6dcc275b634",
+      "status": "SKETCH_ACCEPTED",
+      "children": "ZetaNine.irrational_of_small_nonzero_integer_forms, ZetaNine.exponentially_small_nonzero_forms_of_zeta_nine",
+      "solution_sha256": "9b58698a6f3a15e04c5bf22afd742f7c76908c0d3b07fef6e0b6fc676a99d55f",
+      "error_message": ""
+    },
+    "Z9.RED.TWOFORM": {
+      "theorem_id": "523f37b8-ae98-406c-a3f7-43aa8e002dd7",
+      "submission_id": "0da22fdd-858a-4f10-bc22-d779b7aefbf3",
+      "status": "SKETCH_ACCEPTED",
+      "children": "ZetaNine.irrational_of_two_small_integer_forms, ZetaNine.exponentially_small_independent_forms_of_zeta_nine",
+      "solution_sha256": "6ac5115b925374ba0656e18317acf43cbc5358ddd1263a690c06270c31fc19f6",
+      "error_message": ""
+    }
+  }
+}
