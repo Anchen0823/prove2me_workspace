@@ -87,6 +87,12 @@ lean_lib «SpencerRoute» where
              `examples.«magic-squares».spencer.SupportedStochasticPolytope,
              `examples.«magic-squares».spencer.SupportedStochasticExistence,
              `examples.«magic-squares».spencer.SupportConstants]
+-- Elementary theory of a^2 + b^2 = c^2 + d^2: the four-parameter identity and an
+-- explicit infinite family. Two independent files (algebra / inequalities), each
+-- with a narrow import list. Not a default target.
+lean_lib «TwoSquares» where
+  roots := #[`examples.«two-squares».Identity,
+             `examples.«two-squares».Family]
 -- Every library declares an empty `roots` plus explicit globs. Without this,
 -- Lake treats the library name as a *module* and looks for a root file
 -- (`Definitions.lean` / `Theorems.lean` / `Solutions.lean`); those files do not
@@ -99,7 +105,14 @@ lean_lib «Definitions» where
 lean_lib «Theorems» where
   roots := #[]
   globs := #[.submodules `Theorems]
-@[default_target]
 lean_lib «Solutions» where
   roots := #[]
   globs := #[.submodules `Solutions]
+
+-- The root is a multi-mission workspace, not a single proof project.
+-- Select a mission with: python scripts/workspace.py build <slug>
+-- Keep the aggregate Solutions target available only for explicit full audits.
+@[default_target]
+lean_lib «Workspace» where
+  roots := #[]
+  globs := #[]

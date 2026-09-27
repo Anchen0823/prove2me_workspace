@@ -1,0 +1,79 @@
+{
+  "moves": [
+    {
+      "from": "referpaper/Ahmed-DeLoera-Hemmecke - Polyhedral cones of magic cubes and squares (2003).pdf",
+      "to": "missions/magic-squares-v/papers/Ahmed-DeLoera-Hemmecke - Polyhedral cones of magic cubes and squares (2003).pdf",
+      "sha256": "bd63783c4cbcadb2dbe7e30a61ab0cfde264d352498ad8240bc4d0d35928bde0"
+    },
+    {
+      "from": "referpaper/Beck-Cohen-Cuomo-Gribelyuk - The number of magic squares, cubes and hypercubes (2003).pdf",
+      "to": "missions/magic-squares/papers/Beck-Cohen-Cuomo-Gribelyuk - The number of magic squares, cubes and hypercubes (2003).pdf",
+      "sha256": "7c85bc00b2653abf2ce27a01f4262fe573d7e625cdea0a56ee6fc15561b0c352"
+    },
+    {
+      "from": "referpaper/Beck-vanHerick - Enumeration of 4x4 magic squares (2011).pdf",
+      "to": "missions/magic-squares-v/papers/Beck-vanHerick - Enumeration of 4x4 magic squares (2011).pdf",
+      "sha256": "77b2d12b597f71d386d6545c23fb43e39d4b40b3a7cd9a450d4d02046f12681e"
+    },
+    {
+      "from": "referpaper/Beck-Zaslavsky - An enumerative geometry for magic and magilatin labellings (2006).pdf",
+      "to": "missions/magic-squares-v/papers/Beck-Zaslavsky - An enumerative geometry for magic and magilatin labellings (2006).pdf",
+      "sha256": "688627ff69771da579f485eeb1056dc93445a4e6e2a89196f298276be604955f"
+    },
+    {
+      "from": "referpaper/Beck-Zaslavsky - Six little squares and how their numbers grow (2010).pdf",
+      "to": "missions/magic-squares/papers/Beck-Zaslavsky - Six little squares and how their numbers grow (2010).pdf",
+      "sha256": "2a63a68b92fab97f49c2239d4a60a19ea9a22d6c42aca6245cb9c0e75814d6e7"
+    },
+    {
+      "from": "referpaper/DeLoera-Liu-Yoshida - A generating function for all semi-magic squares and the volume of the Birkhoff polytope (2009).pdf",
+      "to": "missions/magic-squares-v/papers/DeLoera-Liu-Yoshida - A generating function for all semi-magic squares and the volume of the Birkhoff polytope (2009).pdf",
+      "sha256": "432106c62d7d0eb58bf39742ffcb7aa0a4048a4d6e6353b0e8e78dd154ddf94a"
+    },
+    {
+      "from": "referpaper/EVERY ODD NUMBER GREATER THAN 1 IS THE SUM OF AT.pdf",
+      "to": "missions/five-primes/papers/tao-five-primes.pdf",
+      "sha256": "6708dbec1064168ee1fd6ab88c6033ceff7cf606f6bcb9a60a82659131153ad0"
+    },
+    {
+      "from": "referpaper/Flores - Magic squares of powers (2024).pdf",
+      "to": "missions/magic-squares/papers/Flores - Magic squares of powers (2024).pdf",
+      "sha256": "088ea9c0f5f8a2fe20acc9eb5bba37296b2895822920db6b945f036f6dacbccc"
+    },
+    {
+      "from": "referpaper/Mueller - On Euler's magic matrices of sizes 3 and 8 (2025).pdf",
+      "to": "missions/magic-squares/papers/Mueller - On Euler's magic matrices of sizes 3 and 8 (2025).pdf",
+      "sha256": "8e2759328626694f369e236c2125e02d6710c91677f3a9b4e066acbf699a37a3"
+    },
+    {
+      "from": "referpaper/Pierrat-Thiriet-Zimmermann - Magic squares of squares.pdf",
+      "to": "missions/magic-squares/papers/Pierrat-Thiriet-Zimmermann - Magic squares of squares.pdf",
+      "sha256": "fc388f96db79e0b9aff085d4ca2ab958deb6997c690875407b8f7a33755005a9"
+    },
+    {
+      "from": "referpaper/Rome-Yamagishi - On the existence of magic squares of powers (2024).pdf",
+      "to": "missions/magic-squares/papers/Rome-Yamagishi - On the existence of magic squares of powers (2024).pdf",
+      "sha256": "263953def674a781d64f213a05fe240f91f48216851d9886508f4eb1c742e51f"
+    },
+    {
+      "from": "referpaper/Xin - Constructing all magic squares of order three (2008).pdf",
+      "to": "missions/magic-squares/papers/Xin - Constructing all magic squares of order three (2008).pdf",
+      "sha256": "26e413453497317541a4b21be7d33766a4d92c96a50d33beff6bf298c65df12b"
+    },
+    {
+      "from": "referpaper/ZETA5_IS_IRRATIONAL.pdf",
+      "to": "missions/zeta7/papers/ZETA5_IS_IRRATIONAL.pdf",
+      "sha256": "a42c05ccc46b9a7c36428913453c4617202c59109713ba20f464ab9ec640d0da"
+    },
+    {
+      "from": "referpaper/Zeta7 (3).pdf",
+      "to": "missions/zeta7/papers/Zeta7 (3).pdf",
+      "sha256": "18b44b7ee0783ad43557d240b9c28f3167eef0350df163b3dc1c12e70f88e753"
+    },
+    {
+      "from": "missions/five-primes/referpaper/tao-five-primes.pdf",
+      "to": "missions/five-primes/papers/tao-five-primes.pdf",
+      "sha256": "6708dbec1064168ee1fd6ab88c6033ceff7cf606f6bcb9a60a82659131153ad0"
+    }
+  ]
+}

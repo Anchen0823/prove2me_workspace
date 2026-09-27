@@ -1,9 +1,13 @@
 # Prove2Me workspace dashboard
 
-Navigation refreshed: 2026-09-20 (Asia/Shanghai). Platform state was not refreshed
+Navigation refreshed: 2026-09-27 (Asia/Shanghai). Platform state was not refreshed
 as part of this local reorganization. Each mission handoff owns its dated status.
 
 ## Start here
+
+Open `missions/<slug>/` for a focused agent session. Build only that task with
+`python scripts/workspace.py build <slug>`; bare `lake build` now selects an empty
+workspace target and does not validate any mission.
 
 - [All missions and workstreams](missions/README.md) — includes Magic Squares I–V,
   node maintenance, and the number-theory textbook proposal.

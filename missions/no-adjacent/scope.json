@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "build": [
+    "Solutions/Sol_NoAdjString_card_gapMono.lean",
+    "Solutions/Sol_NoAdjString_card_noAdjacentFinsetCard.lean",
+    "Solutions/Sol_NoAdjString_card_noAdjacentStrings.lean",
+    "Solutions/Sol_NoAdjString_card_noAdjacentStrings_eq_sum.lean",
+    "Solutions/Sol_NoAdjString_card_noAdjacentStringsCard.lean",
+    "Solutions/Sol_NoAdjString_card_noAdjacentStringsCard_eq_zero.lean",
+    "Solutions/Sol_NoAdjString_mem_noAdjacentFinsetCard.lean",
+    "Solutions/Sol_NoAdjString_mem_noAdjacentStringsCard.lean",
+    "Solutions/Sol_NoAdjString_noAdjacentOnes_iff_noAdjacent.lean",
+    "Solutions/Sol_NoAdjString_noAdjacentStrings_image_equiv.lean",
+    "Solutions/Sol_NoAdjString_noAdjacentStringsCard_image.lean",
+    "Solutions/Sol_NoAdjString_sum_choose_pascal_diagonal.lean"
+  ],
+  "sources": [
+    "Solutions/Sol_NoAdjString_card_gapMono.lean",
+    "Solutions/Sol_NoAdjString_card_noAdjacentFinsetCard.lean",
+    "Solutions/Sol_NoAdjString_card_noAdjacentStrings.lean",
+    "Solutions/Sol_NoAdjString_card_noAdjacentStrings_eq_sum.lean",
+    "Solutions/Sol_NoAdjString_card_noAdjacentStringsCard.lean",
+    "Solutions/Sol_NoAdjString_card_noAdjacentStringsCard_eq_zero.lean",
+    "Solutions/Sol_NoAdjString_mem_noAdjacentFinsetCard.lean",
+    "Solutions/Sol_NoAdjString_mem_noAdjacentStringsCard.lean",
+    "Solutions/Sol_NoAdjString_noAdjacentOnes_iff_noAdjacent.lean",
+    "Solutions/Sol_NoAdjString_noAdjacentStrings_image_equiv.lean",
+    "Solutions/Sol_NoAdjString_noAdjacentStringsCard_image.lean",
+    "Solutions/Sol_NoAdjString_sum_choose_pascal_diagonal.lean",
+    "Definitions/Def_NoAdjacent*.lean",
+    "Theorems/Thm_NoAdjString*.lean"
+  ],
+  "note": "Build lists selected root modules only; Lake follows actual imports. Sources are navigation scope, not an access sandbox. Research, scratch and platform payloads are not automatically built.",
+  "papers": []
+}

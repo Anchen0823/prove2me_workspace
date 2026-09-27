@@ -1,0 +1,105 @@
+<html style="margin:0;padding:0;">
+<title>Zudilin 2001: at least one of ζ(5), ζ(7), ζ(9), ζ(11) is irrational — proof architecture</title>
+<div style="width:100%;box-sizing:border-box;background:#f8fafc;font-family:system-ui,'Segoe UI',Roboto,sans-serif;padding:16px;">
+<svg viewBox="0 0 980 800" width="100%" style="display:block;max-width:980px;margin:0 auto;" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .box { fill:#ffffff; stroke:#334155; stroke-width:1.5; rx:10; }
+    .goal { fill:#e0f2fe; stroke:#0369a1; stroke-width:2; rx:10; }
+    .proved { fill:#dcfce7; stroke:#15803d; stroke-width:1.5; rx:10; }
+    .open { fill:#fef9c3; stroke:#a16207; stroke-width:1.5; rx:10; }
+    .t { font-size:15px; fill:#0f172a; }
+    .t2 { font-size:13px; fill:#334155; }
+    .t3 { font-size:12px; fill:#475569; }
+    .ts { font-size:14px; fill:#1e3a8a; font-weight:bold; }
+    .arrow { stroke:#475569; stroke-width:1.8; fill:none; marker-end:url(#ah); }
+    .lbl { font-size:12px; fill:#64748b; }
+  </style>
+  <defs><marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#475569"/></marker></defs>
+
+  <text x="490" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">Zudilin (2001): at least one of ζ(5), ζ(7), ζ(9), ζ(11) is irrational — proof architecture</text>
+  <text x="490" y="46" text-anchor="middle" class="t3">status snapshot 2026-09-25 · Prove2Me mission FCP.Zeta.zudilin_five_seven_nine_eleven</text>
+
+  <!-- goal -->
+  <rect class="goal" x="250" y="60" width="480" height="70"/>
+  <text x="490" y="86" text-anchor="middle" class="ts">Mission goal · FCP.Zeta.zudilin_five_seven_nine_eleven · Open</text>
+  <text x="490" y="106" text-anchor="middle" class="t">first decomposition accepted (SKETCH_ACCEPTED)</text>
+  <text x="490" y="123" text-anchor="middle" class="t2">∃ a ∈ {5, 7, 9, 11} : ζ(a) is irrational</text>
+
+  <!-- construction -->
+  <rect class="open" x="40" y="180" width="440" height="130"/>
+  <text x="260" y="204" text-anchor="middle" class="t" font-weight="bold">1 · Construction — Lemma 1 · Open</text>
+  <text x="260" y="226" text-anchor="middle" class="t2">params: r=3, q=13 · η₀=91, η₁=η₂=η₃=27, η₄=29…η₁₃=38</text>
+  <text x="260" y="246" text-anchor="middle" class="t2">Rₙ(t) rational function ⇒ Fₙ = (1/2!) Σ Rₙ″(t)</text>
+  <text x="260" y="266" text-anchor="middle" class="t2">Λₙ = D³·D…D·Φₙ⁻¹·Fₙ ∈ ℤ + ℤζ(5)+ℤζ(7)+ℤζ(9)+ℤζ(11)</text>
+  <text x="260" y="286" text-anchor="middle" class="t2">integrality &amp; coefficient control (Lemma 1 (3))</text>
+
+  <!-- bridge -->
+  <rect class="proved" x="510" y="180" width="430" height="100"/>
+  <text x="725" y="204" text-anchor="middle" class="t" font-weight="bold">Bridge · zetaR k = riemannZeta k · Proved</text>
+  <text x="725" y="226" text-anchor="middle" class="t2">for all k ≥ 2 (Dirichlet series identity)</text>
+  <text x="725" y="246" text-anchor="middle" class="t2">transfers “Irrational (zetaR a)” into the goal’s</text>
+  <text x="725" y="264" text-anchor="middle" class="t2">“∃ x : ℝ, Irrational x ∧ riemannZeta a = x”</text>
+
+  <!-- saddle -->
+  <rect class="open" x="40" y="360" width="300" height="130"/>
+  <text x="190" y="384" text-anchor="middle" class="t" font-weight="bold">2a · Saddle point τ₀ · Open</text>
+  <text x="190" y="406" text-anchor="middle" class="t2">exists_saddle_root_params13</text>
+  <text x="190" y="426" text-anchor="middle" class="t2">charPoly τ₀ = 0 · Im τ₀ &gt; 0</text>
+  <text x="190" y="444" text-anchor="middle" class="t2">maximal Re among upper roots</text>
+  <text x="190" y="462" text-anchor="middle" class="t2">Re τ₀ &lt; 91 · Im f₀(τ₀) ∉ πℤ</text>
+  <text x="190" y="480" text-anchor="middle" class="t3">⇒ Fₙ ≠ 0 (non-vanishing)</text>
+
+  <!-- asymptotics -->
+  <rect class="open" x="360" y="360" width="280" height="130"/>
+  <text x="500" y="384" text-anchor="middle" class="t" font-weight="bold">2b · Asymptotics — Lemma 2 · Open</text>
+  <text x="500" y="406" text-anchor="middle" class="t2">complex integral + Stirling + saddle point</text>
+  <text x="500" y="428" text-anchor="middle" class="t2">limsup log|Fₙ|/n = Re f₀(τ₀) = −C₀</text>
+  <text x="500" y="452" text-anchor="middle" class="t2" font-weight="bold">C₀ = 227.58019641…</text>
+
+  <!-- arithmetic -->
+  <rect class="open" x="660" y="360" width="280" height="130"/>
+  <text x="800" y="384" text-anchor="middle" class="t" font-weight="bold">2c · Arithmetic — Lemma 1 (3) · Open</text>
+  <text x="800" y="406" text-anchor="middle" class="t2">PNT: log D_{mⱼn}/n → mⱼ</text>
+  <text x="800" y="424" text-anchor="middle" class="t2">Chudnovsky–Rukhadze–Hata: log Φₙ/n → ϖ</text>
+  <text x="800" y="446" text-anchor="middle" class="t2">denominators of Λₙ ≈ e^{C₁n}</text>
+  <text x="800" y="466" text-anchor="middle" class="t2" font-weight="bold">C₁ = 226.24944266…</text>
+
+  <!-- criterion -->
+  <rect class="open" x="250" y="540" width="480" height="110"/>
+  <text x="490" y="566" text-anchor="middle" class="t" font-weight="bold">3 · Diophantine criterion — Lemma 3 · Open</text>
+  <text x="490" y="588" text-anchor="middle" class="t2">numeric_C0_gt_C1: C₁ &lt; C₀ (margin ≈ 1.3308)</text>
+  <text x="490" y="608" text-anchor="middle" class="t2">⇒ |Λₙ| ≤ e^{(C₁−C₀+o(1))n} → 0, with Λₙ ≠ 0</text>
+  <text x="490" y="628" text-anchor="middle" class="t2">if all four were rational: Λₙ ∈ (1/Q)ℤ∖{0} ⇒ |Λₙ| ≥ 1/Q — contradiction</text>
+  <text x="490" y="646" text-anchor="middle" class="t2">⇒ ∃ k ∈ {1,2,3,4} : Irrational (zetaR (3+2k))</text>
+
+  <!-- conclusion -->
+  <rect class="proved" x="250" y="690" width="480" height="80"/>
+  <text x="490" y="716" text-anchor="middle" class="t" font-weight="bold">Conclusion · sketch accepted on platform</text>
+  <text x="490" y="738" text-anchor="middle" class="t2">a = 3+2k ∈ {5, 7, 9, 11}, Irrational (zetaR a)</text>
+  <text x="490" y="758" text-anchor="middle" class="t2">bridge ⇒ ∃ a ∈ {5,7,9,11} : ζ(a) irrational ∎</text>
+
+  <!-- arrows -->
+  <path class="arrow" d="M490,130 L490,178"/>
+  <path class="arrow" d="M260,310 L190,358"/>
+  <path class="arrow" d="M260,310 L500,358"/>
+  <path class="arrow" d="M260,310 L800,358"/>
+  <path class="arrow" d="M190,490 L190,528 L380,538"/>
+  <path class="arrow" d="M500,490 L500,538"/>
+  <path class="arrow" d="M800,490 L800,528 L600,538"/>
+  <path class="arrow" d="M490,650 L490,688"/>
+  <path class="arrow" d="M725,280 L725,300 L600,320 L510,330"/>
+  <path class="arrow" d="M510,330 L300,340 L260,350"/>
+  <path class="arrow" d="M725,280 L725,320 L780,358"/>
+
+  <!-- legend -->
+  <rect x="40" y="790" width="900" height="2" fill="#cbd5e1"/>
+  <rect x="40" y="802" width="16" height="16" fill="#fef9c3" stroke="#a16207"/>
+  <text x="64" y="816" class="t3">Open child lemma (to be proved)</text>
+  <rect x="260" y="802" width="16" height="16" fill="#dcfce7" stroke="#15803d"/>
+  <text x="284" y="816" class="t3">Proved / sketch accepted</text>
+  <rect x="470" y="802" width="16" height="16" fill="#e0f2fe" stroke="#0369a1"/>
+  <text x="494" y="816" class="t3">Mission goal</text>
+  <text x="640" y="816" class="t3">Sources: Zudilin, Uspekhi Mat. Nauk 56:4 (2001) 149–150; Zudilin, Izv. Math. 66:3 (2002) 489–542</text>
+</svg>
+</div>
+</html>

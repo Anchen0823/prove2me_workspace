@@ -86,10 +86,48 @@
       "scratch": null
     },
     {
+      "slug": "two-squares",
+      "title": "Equal sums of two squares: parametrization and infinite families",
+      "family": "number-theory",
+      "handoff": "missions/two-squares/status.md",
+      "scratch": "examples/two-squares",
+      "proposal_id": "1c96fbbb-cfea-4ad7-b9bb-44abccb2ad78",
+      "proposal_status": "Draft",
+      "visibility": "public"
+    },
+    {
       "slug": "zeta7",
       "title": "Zeta(7) irrationality research attempt",
       "family": "number-theory",
       "handoff": "missions/zeta7/status.md",
+      "scratch": null
+    },
+    {
+      "slug": "zeta9",
+      "title": "Zeta(9) irrationality research",
+      "family": "number-theory",
+      "handoff": "missions/zeta9/status.md",
+      "scratch": null
+    },
+    {
+      "slug": "zudilin",
+      "title": "Zudilin: one of zeta(5,7,9,11) is irrational",
+      "family": "number-theory",
+      "handoff": "missions/zudilin/explanation_reduction.md",
+      "scratch": null
+    },
+    {
+      "slug": "fgh-scout",
+      "title": "Fast-growing hierarchies above epsilon-zero: feasibility",
+      "family": "logic",
+      "handoff": "missions/fgh-scout/FEASIBILITY-REPORT.md",
+      "scratch": null
+    },
+    {
+      "slug": "no-adjacent",
+      "title": "Binary strings with no adjacent ones",
+      "family": "combinatorics",
+      "handoff": "missions/no-adjacent/status.md",
       "scratch": null
     }
   ]

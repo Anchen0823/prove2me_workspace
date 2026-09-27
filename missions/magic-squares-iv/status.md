@@ -78,7 +78,7 @@ $a=b=\cdots=i=e$。于是 $P_3(3e)=1$，唯一的元素是 `constSquare3 e`。
 > 是 $t$ 的 2 次多项式（实测 $t=0..9$ 为 $1,3,6,10,15,21,28,36,45,55$，与公式吻合）。
 > **两者不可互相对照**，本 mission 的「$P_3=1$ 当且仅当 $3\mid t$」**不是** BCCG 的 $P_3$。
 > 另注：BCCG 的单向泛魔不要求副对角，故与该文的「magic」**互不包含**。
-> 详见 `missions/project-review-2026-09-18.md` §3.1 与 `referpaper/README.md` §五。
+> 详见 `missions/project-review-2026-09-18.md` §3.1 与 `missions/magic-squares/papers/README.md` §五。
 
 ### 3.2 对称幻方：一参数族
 

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "build": [
+    "Solutions/Sol_MagicSquares_pan_three_card.lean",
+    "Solutions/Sol_MagicSquares_pan_three_otherwise.lean",
+    "Solutions/Sol_MagicSquares_pandiagonal_count_three.lean",
+    "Solutions/Sol_MagicSquares_pandiagonal_count_two.lean",
+    "Solutions/Sol_MagicSquares_panmagic_count_three.lean",
+    "Solutions/Sol_MagicSquares_panmagic_is_magic.lean",
+    "Solutions/Sol_MagicSquares_special_three_count.lean",
+    "Solutions/Sol_MagicSquares_symm_three_bij.lean",
+    "Solutions/Sol_MagicSquares_symm_three_otherwise.lean",
+    "Solutions/Sol_MagicSquares_symmetric_magic_count_two.lean",
+    "Solutions/Sol_MagicSquares_symmetric_magic_three_classify.lean"
+  ],
+  "sources": [
+    "Solutions/Sol_MagicSquares_pan_three_card.lean",
+    "Solutions/Sol_MagicSquares_pan_three_otherwise.lean",
+    "Solutions/Sol_MagicSquares_pandiagonal_count_three.lean",
+    "Solutions/Sol_MagicSquares_pandiagonal_count_two.lean",
+    "Solutions/Sol_MagicSquares_panmagic_count_three.lean",
+    "Solutions/Sol_MagicSquares_panmagic_is_magic.lean",
+    "Solutions/Sol_MagicSquares_special_three_count.lean",
+    "Solutions/Sol_MagicSquares_symm_three_bij.lean",
+    "Solutions/Sol_MagicSquares_symm_three_otherwise.lean",
+    "Solutions/Sol_MagicSquares_symmetric_magic_count_two.lean",
+    "Solutions/Sol_MagicSquares_symmetric_magic_three_classify.lean",
+    "Definitions/Def_MagicSquares*.lean",
+    "Theorems/Thm_MagicSquares*.lean"
+  ],
+  "note": "Build lists selected root modules only; Lake follows actual imports. Sources are navigation scope, not an access sandbox. Research, scratch and platform payloads are not automatically built.",
+  "papers": [
+    "missions/magic-squares/papers/README.md"
+  ]
+}

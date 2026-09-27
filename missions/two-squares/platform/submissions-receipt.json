@@ -1,0 +1,95 @@
+{
+  "items": {
+    "ESQ.BF": {
+      "submission_id": "d94543e8-e4c4-46ed-a621-665b45e06900",
+      "status": "ACCEPTED",
+      "theorem_id": "77049194-ce92-473d-81d3-9c2a18dfccf1",
+      "solution_sha256": "26c4ea560018d8b7f89a247c69a7a03d111caadf4e3454fc3b0aabe9df400160",
+      "verdict_source": "GET /submissions"
+    },
+    "ESQ.PARAM": {
+      "submission_id": "30d9df8a-b744-468e-83a1-b1773ab49a99",
+      "status": "ACCEPTED",
+      "theorem_id": "0e9a824d-a634-4784-9051-872a09dd1f64",
+      "solution_sha256": "4193821d4df26ff1cf4c9bd1f6a8758df40d8f2cdc335604d556318426283847",
+      "verdict_source": "GET /submissions"
+    },
+    "ESQ.FAM": {
+      "submission_id": "804147f3-be38-49ea-adfb-53daede8bc64",
+      "status": "ACCEPTED",
+      "theorem_id": "7f0b8024-6f1b-4878-8b3a-3a2fc4e5ec99",
+      "solution_sha256": "00f12ae19ad16f0a43dba53138b1227f73517fb4afc9a39abf2644c50e04a4a5",
+      "verdict_source": "GET /submissions"
+    },
+    "ESQ.CHAIN": {
+      "submission_id": "3f83e867-89fb-4efd-a6ce-576fe8ee1ec6",
+      "status": "ACCEPTED",
+      "theorem_id": "d96095a4-4bc9-41fb-ae6b-7e39c0661299",
+      "solution_sha256": "19df3ed0f2144fd81fc34eda6e6020d79d6e74d7c626f67c3864390099c711d5",
+      "verdict_source": "GET /submissions"
+    },
+    "ESQ.SOL": {
+      "submission_id": "a43b2513-f973-4be7-a4c9-c14eba4df13b",
+      "status": "ACCEPTED",
+      "theorem_id": "c3353b61-b413-4f77-ac0f-318a0117c88e",
+      "solution_sha256": "9fab56c431697821822294a7b81ff712b7ffc32ee7064d222b90d4901bec1601",
+      "verdict_source": "GET /submissions"
+    },
+    "ESQ.INJ": {
+      "submission_id": "dc755400-499f-4c5a-bd34-5b16e9c5e505",
+      "status": "ACCEPTED",
+      "theorem_id": "3760d32c-b023-4061-bd40-08f6ca2583cf",
+      "solution_sha256": "7799a60b6591f2c070554e8693a3c9e5529ddf3b3e0c1c2bbf7fcd3cb0b50f0c",
+      "verdict_source": "GET /submissions"
+    },
+    "ESQ.INF": {
+      "submission_id": "d15ca80e-f645-467e-a2f3-d812bc02d408",
+      "status": "ACCEPTED",
+      "theorem_id": "37d6fb5c-5f30-489d-beba-55bd2882fa15",
+      "solution_sha256": "69d40b66093ff359ecbc35366cd43881589d241c7c028f35e1f777c35d269cfc",
+      "verdict_source": "GET /submissions"
+    },
+    "ESQ.SCALE": {
+      "submission_id": "d6a375bf-956e-44a8-9269-62294527ddad",
+      "status": "ACCEPTED",
+      "theorem_id": "cbdbc1e5-9183-4ef1-a136-de3e4be40792",
+      "solution_sha256": "51e3382d84903286bc68c424bc2e6c7f3bc60480946d5914ad593395cc7313ca",
+      "verdict_source": "GET /submissions"
+    },
+    "ESQ.PROD": {
+      "submission_id": "5119315e-6eb9-4313-adf2-3c1fa2e42506",
+      "status": "ACCEPTED",
+      "theorem_id": "6ea6b5a3-fbed-4ca9-a429-adc11290be66",
+      "solution_sha256": "374e3c2711007895582dcd2e560421f06ec41b0e69d75e2da377998602472782",
+      "verdict_source": "GET /submissions"
+    },
+    "ESQ.HALF": {
+      "submission_id": "a8eeef01-ccff-4237-9be1-7b501ba994a3",
+      "status": "ACCEPTED",
+      "theorem_id": "ee3071e6-eb29-4c3c-b9b4-9241d48556d1",
+      "solution_sha256": "268e0ac605c6e9ea9ec47e90aa4cff9a2e15774bdc496ffa83543342ece7fba6",
+      "verdict_source": "GET /submissions"
+    },
+    "ESQ.PAR": {
+      "submission_id": "0c0e7983-c6fd-4cb6-91fb-38fc153eb60d",
+      "status": "ACCEPTED",
+      "theorem_id": "09931270-bd7e-4a0b-8d32-e41d6c52633f",
+      "solution_sha256": "08aded36d22dc25484c75dbeb3a655dcf2aa7b71815c82f8d0248cda3fdea175",
+      "verdict_source": "GET /submissions"
+    },
+    "ESQ.GOAL": {
+      "submission_id": "187354ab-f012-40e9-9645-6886fb472a92",
+      "status": "ACCEPTED",
+      "theorem_id": "5e2fbf33-6086-49c4-a894-d49d3616bc96",
+      "solution_sha256": "7acd7cca8efb66e3c1d696f2d37dc79eaba3193267c1f9a8cfcea223397aedb1",
+      "verdict_source": "GET /submissions"
+    },
+    "ESQ.FACT": {
+      "submission_id": "e830e247-7314-4acc-b621-5d59eb233b01",
+      "status": "ACCEPTED",
+      "theorem_id": "dfb3e2b5-ae15-49f2-ad42-ebeb4d062921",
+      "solution_sha256": "0f2ef730c630efd79d6486ec97d1d466ff452fbd81bbca449fad10844b561da1",
+      "verdict_source": "GET /submissions"
+    }
+  }
+}

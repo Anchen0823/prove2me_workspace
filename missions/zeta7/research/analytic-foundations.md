@@ -1,6 +1,6 @@
 # Analytic foundations for a ζ(7) Hankel attempt
 
-Status (2026-09-24): the lemmas below are proved for the stated construction, but **they do not prove that ζ(7) is irrational**. In particular, positivity and degree do not supply the required integral normalization or a negative final exponent. I independently checked the analytic steps against §§2 and 6 of `referpaper/ZETA5_IS_IRRATIONAL.pdf` (text extraction in `tmp/pdfs/zeta5-reading/paper.txt`). The paper's specific potential certificate is for `q=3, α=3/40` and is not independently certified here.
+Status (2026-09-24): the lemmas below are proved for the stated construction, but **they do not prove that ζ(7) is irrational**. In particular, positivity and degree do not supply the required integral normalization or a negative final exponent. I independently checked the analytic steps against §§2 and 6 of `missions/zeta7/papers/ZETA5_IS_IRRATIONAL.pdf` (text extraction in `tmp/pdfs/zeta5-reading/paper.txt`). The paper's specific potential certificate is for `q=3, α=3/40` and is not independently certified here.
 
 ## 1. A positive functional for every odd `s >= 3`
 

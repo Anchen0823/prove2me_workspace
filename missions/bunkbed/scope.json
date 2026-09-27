@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "build": [
+    "Solutions/Sol_BunkbedFalse_explicit_counterexample.lean",
+    "Solutions/Sol_BunkbedFalse_sub_gadget_copies_disjoint.lean",
+    "Solutions/Sol_BunkbedFalse_sub_probability_grouping.lean",
+    "Solutions/Sol_BunkbedFalse_sub_probability_transfer.lean"
+  ],
+  "sources": [
+    "Solutions/Sol_BunkbedFalse_explicit_counterexample.lean",
+    "Solutions/Sol_BunkbedFalse_sub_gadget_copies_disjoint.lean",
+    "Solutions/Sol_BunkbedFalse_sub_probability_grouping.lean",
+    "Solutions/Sol_BunkbedFalse_sub_probability_transfer.lean",
+    "Definitions/Def_Bunkbed*.lean",
+    "Theorems/Thm_Bunkbed*.lean"
+  ],
+  "note": "Build lists selected root modules only; Lake follows actual imports. Sources are navigation scope, not an access sandbox. Research, scratch and platform payloads are not automatically built.",
+  "papers": []
+}

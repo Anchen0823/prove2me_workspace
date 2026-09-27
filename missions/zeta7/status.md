@@ -38,7 +38,7 @@ and prime-range boundaries. The sampled potential and arithmetic integrals
 are explicitly not certified bounds. Full coefficient artifacts, hashes,
 strict evaluation intervals, and reproducible scripts are saved locally.
 
-Source: `referpaper/ZETA5_IS_IRRATIONAL.pdf`, Aabir Fauzan, 17 September 2026.
+Source: `missions/zeta7/papers/ZETA5_IS_IRRATIONAL.pdf`, Aabir Fauzan, 17 September 2026.
 The user's request is to attempt a mathematical proof by adapting this construction.
 This workstream has no Prove2me mission or submission and makes no publication claim.
 

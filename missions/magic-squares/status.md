@@ -21,7 +21,7 @@
 
 ## 2. 文献
 
-`referpaper/` 下 11 篇，清单与形式化切入点见 `referpaper/README.md`。
+幻方任务共 11 篇（分存于 `missions/magic-squares/papers/` 与 `missions/magic-squares-v/papers/`），清单与形式化切入点见 `missions/magic-squares/papers/README.md`。
 
 - **计数主线**：Beck–Cohen–Cuomo–Gribelyuk (2003, AMM 110) — $H_n,M_n,P_n,S_n$ 的定义基准；
   Beck–Zaslavsky (2006, 2010)；Beck–van Herick (2011) $4\times4$；De Loera–Liu–Yoshida (2009)；

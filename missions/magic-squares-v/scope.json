@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "build": [
+    "Solutions/Sol_ConvexGeometry_compact_convex_indicator_relation.lean",
+    "Solutions/Sol_FiniteLattice_weighted_weisner_cancellation.lean",
+    "Solutions/Sol_Finset_interval_inclusion_exclusion.lean",
+    "Solutions/Sol_MagicSquares_matching_boundary_euler.lean",
+    "Solutions/Sol_MagicSquares_matching_coefficient_eq_neg_mobius.lean",
+    "Solutions/Sol_MagicSquares_real_cone_face_support_order_iso.lean",
+    "Solutions/Sol_MagicSquares_semi_magic_polynomial.lean",
+    "Solutions/Sol_MagicSquares_semi_magic_polynomial_exists.lean",
+    "Solutions/Sol_MagicSquares_semi_magic_polynomial_exists_degree_eq.lean",
+    "Solutions/Sol_MagicSquares_semi_magic_reciprocity_boundary.lean",
+    "Solutions/Sol_MagicSquares_semi_magic_vanishing.lean",
+    "Solutions/Sol_Orthant_coordinate_face.lean"
+  ],
+  "sources": [
+    "Solutions/Sol_ConvexGeometry_compact_convex_indicator_relation.lean",
+    "Solutions/Sol_FiniteLattice_weighted_weisner_cancellation.lean",
+    "Solutions/Sol_Finset_interval_inclusion_exclusion.lean",
+    "Solutions/Sol_MagicSquares_matching_boundary_euler.lean",
+    "Solutions/Sol_MagicSquares_matching_coefficient_eq_neg_mobius.lean",
+    "Solutions/Sol_MagicSquares_real_cone_face_support_order_iso.lean",
+    "Solutions/Sol_MagicSquares_semi_magic_polynomial.lean",
+    "Solutions/Sol_MagicSquares_semi_magic_polynomial_exists.lean",
+    "Solutions/Sol_MagicSquares_semi_magic_polynomial_exists_degree_eq.lean",
+    "Solutions/Sol_MagicSquares_semi_magic_reciprocity_boundary.lean",
+    "Solutions/Sol_MagicSquares_semi_magic_vanishing.lean",
+    "Solutions/Sol_Orthant_coordinate_face.lean",
+    "Definitions/Def_MagicSquares*.lean",
+    "Theorems/Thm_MagicSquares*.lean"
+  ],
+  "note": "Build lists selected root modules only; Lake follows actual imports. Sources are navigation scope, not an access sandbox. Research, scratch and platform payloads are not automatically built.",
+  "papers": [
+    "missions/magic-squares-v/papers/README.md",
+    "missions/magic-squares/papers/README.md"
+  ]
+}

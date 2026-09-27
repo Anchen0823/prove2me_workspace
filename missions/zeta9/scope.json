@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "build": [
+    "Theorems/Thm_ZetaNine_*.lean",
+    "Theorems/Thm_Zeta9Note_*.lean"
+  ],
+  "sources": [
+    "Theorems/Thm_ZetaNine_*.lean",
+    "Theorems/Thm_Zeta9Note_*.lean"
+  ],
+  "note": "Build lists selected root modules only; Lake follows actual imports. Sources are navigation scope, not an access sandbox. Research, scratch and platform payloads are not automatically built.",
+  "papers": []
+}

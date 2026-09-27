@@ -1,0 +1,105 @@
+{
+  "proposal_id": "1c96fbbb-cfea-4ad7-b9bb-44abccb2ad78",
+  "mission_id": null,
+  "name": "Equal Sums of Two Squares: Parametrization and Infinite Primitive Families",
+  "status": "In review",
+  "visibility": "public",
+  "main_item_id": "fe4153b3-06a8-498a-801d-caefff917571",
+  "item_order": [
+    "fe4153b3-06a8-498a-801d-caefff917571",
+    "c4d4e1ba-5548-4a9a-83c5-ce99118969db",
+    "47db7b0b-7971-4886-8893-47135cc82585",
+    "7e974ccf-31be-4dfc-9708-020330406a4f",
+    "2dbd8bc8-36b5-4ba8-8005-97e16fd2f19f",
+    "32422b68-6e7a-4df6-8c20-1de7f85bd015",
+    "b4c0452e-061c-4cbd-967d-4ccf2a4be31c",
+    "e5e0598f-7073-435b-822f-28bb8a56245e",
+    "9574a009-b1cf-406f-8cbc-2068f8e12f8b",
+    "e379c09e-e6e1-4de9-8936-b7efd02858c5",
+    "ade2eb1f-75f6-4003-b85b-393f14072b85",
+    "4a460554-bc63-41e5-bca7-f5b970e7736e",
+    "da0181ba-637c-4888-8e07-5797ae028304"
+  ],
+  "local_item_ids": {
+    "ESQ.GOAL": "fe4153b3-06a8-498a-801d-caefff917571",
+    "ESQ.BF": "c4d4e1ba-5548-4a9a-83c5-ce99118969db",
+    "ESQ.PARAM": "47db7b0b-7971-4886-8893-47135cc82585",
+    "ESQ.FAM": "7e974ccf-31be-4dfc-9708-020330406a4f",
+    "ESQ.CHAIN": "2dbd8bc8-36b5-4ba8-8005-97e16fd2f19f",
+    "ESQ.SOL": "32422b68-6e7a-4df6-8c20-1de7f85bd015",
+    "ESQ.INJ": "b4c0452e-061c-4cbd-967d-4ccf2a4be31c",
+    "ESQ.INF": "e5e0598f-7073-435b-822f-28bb8a56245e",
+    "ESQ.SCALE": "9574a009-b1cf-406f-8cbc-2068f8e12f8b",
+    "ESQ.PROD": "e379c09e-e6e1-4de9-8936-b7efd02858c5",
+    "ESQ.PAR": "ade2eb1f-75f6-4003-b85b-393f14072b85",
+    "ESQ.HALF": "4a460554-bc63-41e5-bca7-f5b970e7736e",
+    "ESQ.FACT": "da0181ba-637c-4888-8e07-5797ae028304"
+  },
+  "local_theorem_ids": {
+    "ESQ.GOAL": "5e2fbf33-6086-49c4-a894-d49d3616bc96",
+    "ESQ.BF": "77049194-ce92-473d-81d3-9c2a18dfccf1",
+    "ESQ.PARAM": "0e9a824d-a634-4784-9051-872a09dd1f64",
+    "ESQ.FAM": "7f0b8024-6f1b-4878-8b3a-3a2fc4e5ec99",
+    "ESQ.CHAIN": "d96095a4-4bc9-41fb-ae6b-7e39c0661299",
+    "ESQ.SOL": "c3353b61-b413-4f77-ac0f-318a0117c88e",
+    "ESQ.INJ": "3760d32c-b023-4061-bd40-08f6ca2583cf",
+    "ESQ.INF": "37d6fb5c-5f30-489d-beba-55bd2882fa15",
+    "ESQ.SCALE": "cbdbc1e5-9183-4ef1-a136-de3e4be40792",
+    "ESQ.PROD": "6ea6b5a3-fbed-4ca9-a429-adc11290be66",
+    "ESQ.PAR": "09931270-bd7e-4a0b-8d32-e41d6c52633f",
+    "ESQ.HALF": "ee3071e6-eb29-4c3c-b9b4-9241d48556d1",
+    "ESQ.FACT": "dfb3e2b5-ae15-49f2-ad42-ebeb4d062921"
+  },
+  "milestones": [
+    {
+      "item_id": "c4d4e1ba-5548-4a9a-83c5-ce99118969db",
+      "milestone_title": "Brahmagupta-Fibonacci identity, both forms"
+    },
+    {
+      "item_id": "47db7b0b-7971-4886-8893-47135cc82585",
+      "milestone_title": "The four-parameter identity"
+    },
+    {
+      "item_id": "7e974ccf-31be-4dfc-9708-020330406a4f",
+      "milestone_title": "The explicit one-parameter family"
+    },
+    {
+      "item_id": "2dbd8bc8-36b5-4ba8-8005-97e16fd2f19f",
+      "milestone_title": "Positivity and distinctness as a strict chain"
+    },
+    {
+      "item_id": "32422b68-6e7a-4df6-8c20-1de7f85bd015",
+      "milestone_title": "The family produces nontrivial solutions"
+    },
+    {
+      "item_id": "b4c0452e-061c-4cbd-967d-4ccf2a4be31c",
+      "milestone_title": "Injectivity of the family parametrisation"
+    },
+    {
+      "item_id": "e5e0598f-7073-435b-822f-28bb8a56245e",
+      "milestone_title": "Infinitely many distinct patterns"
+    },
+    {
+      "item_id": "9574a009-b1cf-406f-8cbc-2068f8e12f8b",
+      "milestone_title": "Members are not scalar multiples of one another"
+    },
+    {
+      "item_id": "e379c09e-e6e1-4de9-8936-b7efd02858c5",
+      "milestone_title": "From the sum of squares to a product equation"
+    },
+    {
+      "item_id": "ade2eb1f-75f6-4003-b85b-393f14072b85",
+      "milestone_title": "Parity alignment"
+    },
+    {
+      "item_id": "4a460554-bc63-41e5-bca7-f5b970e7736e",
+      "milestone_title": "Existence of the half-sum variables"
+    },
+    {
+      "item_id": "da0181ba-637c-4888-8e07-5797ae028304",
+      "milestone_title": "Parametrizing XY = UV over the integers"
+    }
+  ],
+  "reviewed_docs_version": "0.11.1",
+  "submitted_by_human": true
+}

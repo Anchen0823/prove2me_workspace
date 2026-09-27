@@ -68,8 +68,8 @@ general-order blocker.
 No locally stored original paper provides a concrete elementary proof of the
 outstanding reciprocity statement. Relevant local paths only:
 
-- `referpaper/README.md`
-- `referpaper/Beck-Cohen-Cuomo-Gribelyuk - The number of magic squares, cubes and hypercubes (2003).pdf`
+- `missions/magic-squares/papers/README.md`
+- `missions/magic-squares/papers/Beck-Cohen-Cuomo-Gribelyuk - The number of magic squares, cubes and hypercubes (2003).pdf`
 - `missions/magic-squares-v/SPENCER-ROUTE.md`
 - `missions/magic-squares-v/S5-NOTES.md`
 - `missions/magic-squares-v/CLOSED-SUPPORT.md`

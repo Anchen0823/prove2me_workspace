@@ -1,0 +1,17 @@
+[
+  {
+    "from": "Zudilin_proof_architecture.html",
+    "to": "missions\\zudilin\\research\\Zudilin_proof_architecture.html",
+    "sha256": "DF02A4CC308EC4DE9BFCDCCC109C3E76729F70F7188F95D8F23DB25E9EE7A39F"
+  },
+  {
+    "from": "Zudilin_zeta5-11_proof-sketch.md",
+    "to": "missions\\zudilin\\research\\Zudilin_zeta5-11_proof-sketch.md",
+    "sha256": "D1236AEE8737690E490EF02921A6876F122A550C0181E26AB51E7F188B2D248A"
+  },
+  {
+    "from": "tmp-ie-check.lean",
+    "to": "tmp\\tmp-ie-check.lean",
+    "sha256": "C0BFC5E230419DF366419BFDB859511BBDACE36947BC25F11DB0B974194C413B"
+  }
+]

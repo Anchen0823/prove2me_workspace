@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "build": [
+    "Solutions/Sol_MagicSquares_affine_preserves_magic.lean",
+    "Solutions/Sol_MagicSquares_center_of_order_three.lean",
+    "Solutions/Sol_MagicSquares_flipHorizontal_preserves_magic.lean",
+    "Solutions/Sol_MagicSquares_flipVertical_preserves_magic.lean",
+    "Solutions/Sol_MagicSquares_magic_count_three_divisible.lean",
+    "Solutions/Sol_MagicSquares_magic_count_three_otherwise.lean",
+    "Solutions/Sol_MagicSquares_magic_count_two.lean",
+    "Solutions/Sol_MagicSquares_magic_three_param_bij.lean",
+    "Solutions/Sol_MagicSquares_magic_three_param_necessary.lean",
+    "Solutions/Sol_MagicSquares_magic_three_param_sufficient.lean",
+    "Solutions/Sol_MagicSquares_param_three_card.lean",
+    "Solutions/Sol_MagicSquares_total_sum_eq_n_line_sum.lean",
+    "Solutions/Sol_MagicSquares_transpose_preserves_magic.lean"
+  ],
+  "sources": [
+    "Solutions/Sol_MagicSquares_affine_preserves_magic.lean",
+    "Solutions/Sol_MagicSquares_center_of_order_three.lean",
+    "Solutions/Sol_MagicSquares_flipHorizontal_preserves_magic.lean",
+    "Solutions/Sol_MagicSquares_flipVertical_preserves_magic.lean",
+    "Solutions/Sol_MagicSquares_magic_count_three_divisible.lean",
+    "Solutions/Sol_MagicSquares_magic_count_three_otherwise.lean",
+    "Solutions/Sol_MagicSquares_magic_count_two.lean",
+    "Solutions/Sol_MagicSquares_magic_three_param_bij.lean",
+    "Solutions/Sol_MagicSquares_magic_three_param_necessary.lean",
+    "Solutions/Sol_MagicSquares_magic_three_param_sufficient.lean",
+    "Solutions/Sol_MagicSquares_param_three_card.lean",
+    "Solutions/Sol_MagicSquares_total_sum_eq_n_line_sum.lean",
+    "Solutions/Sol_MagicSquares_transpose_preserves_magic.lean",
+    "Definitions/Def_MagicSquares*.lean",
+    "Theorems/Thm_MagicSquares*.lean"
+  ],
+  "note": "Build lists selected root modules only; Lake follows actual imports. Sources are navigation scope, not an access sandbox. Research, scratch and platform payloads are not automatically built.",
+  "papers": [
+    "missions/magic-squares/papers/README.md"
+  ]
+}

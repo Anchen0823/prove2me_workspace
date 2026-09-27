@@ -1,0 +1,233 @@
+{
+  "name": "Equal Sums of Two Squares: Parametrization and Infinite Primitive Families",
+  "mission_type": "ResearchPaper",
+  "visibility": "public",
+  "env": null,
+  "field_ids": [
+    "e76e77ab-38dd-426d-a533-0b37fb6dbabc"
+  ],
+  "description_path": "description.md",
+  "draft_items": [
+    {
+      "local_id": "ESQ.GOAL",
+      "kind": "theorem",
+      "theorem_name": "EqualTwoSquares.complete_parametrization",
+      "theorem_title": "Every integer solution of a^2+b^2=c^2+d^2 comes from four parameters",
+      "code_path": "statements/items/complete_parametrization.lean",
+      "readback_path": "readbacks/complete_parametrization.md",
+      "natural_language_statement": "Let a, b, c and d be integers with a^2 + b^2 = c^2 + d^2. Then there are integers p, q, r and s with a = pr + qs, b = ps - qr, c = pr - qs and d = ps + qr; alternatively, there are integers p, q, r and s with a = pr + qs, b = ps - qr, d = pr - qs and c = ps + qr, i.e. the same conclusion holds after the two entries on the right-hand side are interchanged.",
+      "source": "Mission target; no machine-checked proof yet.",
+      "tags": ["number-theory", "diophantine-equations", "parametrization"]
+    },
+    {
+      "local_id": "ESQ.BF",
+      "kind": "theorem",
+      "theorem_name": "EqualTwoSquares.two_squares_mul",
+      "theorem_title": "Brahmagupta-Fibonacci identity, in both forms, over any commutative ring",
+      "code_path": "statements/items/two_squares_mul.lean",
+      "readback_path": "readbacks/two_squares_mul.md",
+      "natural_language_statement": "For elements p, q, r and s of an arbitrary commutative ring, the product (p^2 + q^2)(r^2 + s^2) equals both (pr + qs)^2 + (ps - qr)^2 and (pr - qs)^2 + (ps + qr)^2.",
+      "source": "Classical identity (Brahmagupta; Fibonacci, Liber Quadratorum, 1225); machine-checked locally in examples/two-squares/Identity.lean.",
+      "tags": ["number-theory", "polynomial-identities", "sums-of-squares"]
+    },
+    {
+      "local_id": "ESQ.PARAM",
+      "kind": "theorem",
+      "theorem_name": "EqualTwoSquares.four_param_identity",
+      "theorem_title": "The four-parameter identity produces solutions over the integers",
+      "code_path": "statements/items/four_param_identity.lean",
+      "readback_path": "readbacks/four_param_identity.md",
+      "natural_language_statement": "For all integers p, q, r and s, one has (pr + qs)^2 + (ps - qr)^2 = (pr - qs)^2 + (ps + qr)^2. Thus the quadruple (pr + qs, ps - qr, pr - qs, ps + qr) solves a^2 + b^2 = c^2 + d^2.",
+      "source": "Mission target; machine-checked locally in examples/two-squares/Identity.lean.",
+      "tags": ["number-theory", "diophantine-equations", "parametrization"]
+    },
+    {
+      "local_id": "ESQ.FAM",
+      "kind": "theorem",
+      "theorem_name": "EqualTwoSquares.explicit_family_identity",
+      "theorem_title": "An explicit one-parameter family of solutions",
+      "code_path": "statements/items/explicit_family_identity.lean",
+      "readback_path": "readbacks/explicit_family_identity.md",
+      "natural_language_statement": "For every integer n, 1^2 + (n^2 - n + 1)^2 = (2n - 1)^2 + (n^2 - n - 1)^2. No positivity or size hypothesis is imposed on n: the identity is a polynomial identity in n.",
+      "source": "Mission target; machine-checked locally in examples/two-squares/Family.lean.",
+      "tags": ["number-theory", "polynomial-identities", "sums-of-squares"]
+    },
+    {
+      "local_id": "ESQ.CHAIN",
+      "kind": "theorem",
+      "theorem_name": "EqualTwoSquares.explicit_family_chain",
+      "theorem_title": "The four entries of the family form a strict chain from n = 4 on",
+      "code_path": "statements/items/explicit_family_chain.lean",
+      "readback_path": "readbacks/explicit_family_chain.md",
+      "natural_language_statement": "Let n be an integer with 4 <= n. Then 1 < 2n - 1, 2n - 1 < n^2 - n - 1 and n^2 - n - 1 < n^2 - n + 1. The bound 4 is sharp: at n = 3 the entries 2n - 1 and n^2 - n - 1 are both equal to 5.",
+      "source": "Mission target; machine-checked locally in examples/two-squares/Family.lean.",
+      "tags": ["number-theory", "inequalities", "sums-of-squares"]
+    },
+    {
+      "local_id": "ESQ.SOL",
+      "kind": "theorem",
+      "theorem_name": "EqualTwoSquares.explicit_family_solution",
+      "theorem_title": "The family gives a positive solution with four pairwise distinct entries",
+      "code_path": "statements/items/explicit_family_solution.lean",
+      "readback_path": "readbacks/explicit_family_solution.md",
+      "natural_language_statement": "Let n be an integer with 4 <= n. Then the quadruple with entries 1, n^2 - n + 1, 2n - 1 and n^2 - n - 1 satisfies 1^2 + (n^2 - n + 1)^2 = (2n - 1)^2 + (n^2 - n - 1)^2, all four entries are strictly positive, and the four entries are pairwise distinct.",
+      "source": "Mission target; machine-checked locally in examples/two-squares/Family.lean.",
+      "tags": ["number-theory", "inequalities", "diophantine-equations"]
+    },
+    {
+      "local_id": "ESQ.INJ",
+      "kind": "theorem",
+      "theorem_name": "EqualTwoSquares.familyQuad_injective",
+      "theorem_title": "The family parametrisation is injective",
+      "code_path": "statements/items/familyQuad_injective.lean",
+      "readback_path": "readbacks/familyQuad_injective.md",
+      "natural_language_statement": "The map sending an integer n to the quadruple (1, n^2 - n + 1, 2n - 1, n^2 - n - 1) of integers is injective on all of the integers.",
+      "source": "Mission target; machine-checked locally in examples/two-squares/Family.lean.",
+      "tags": ["number-theory", "injectivity"]
+    },
+    {
+      "local_id": "ESQ.INF",
+      "kind": "theorem",
+      "theorem_name": "EqualTwoSquares.family_patterns_infinite",
+      "theorem_title": "Infinitely many distinct patterns arise from the family",
+      "code_path": "statements/items/family_patterns_infinite.lean",
+      "readback_path": "readbacks/family_patterns_infinite.md",
+      "natural_language_statement": "The set of integer quadruples of the form (1, n^2 - n + 1, 2n - 1, n^2 - n - 1), as n ranges over the integers, is infinite.",
+      "source": "Mission target; machine-checked locally in examples/two-squares/Family.lean.",
+      "tags": ["number-theory", "infinite-families"]
+    },
+    {
+      "local_id": "ESQ.SCALE",
+      "kind": "theorem",
+      "theorem_name": "EqualTwoSquares.family_scaling_trivial",
+      "theorem_title": "No member of the family is a nontrivial integer multiple of another",
+      "code_path": "statements/items/family_scaling_trivial.lean",
+      "readback_path": "readbacks/family_scaling_trivial.md",
+      "natural_language_statement": "Let m, n and k be integers. If the quadruple (1, n^2 - n + 1, 2n - 1, n^2 - n - 1) equals k times the quadruple (1, m^2 - m + 1, 2m - 1, m^2 - m - 1), then n = m. In particular distinct members of the family are not related by scalar multiplication by a nontrivial integer.",
+      "source": "Mission target; machine-checked locally in examples/two-squares/Family.lean.",
+      "tags": ["number-theory", "infinite-families", "primitivity"]
+    },
+    {
+      "local_id": "ESQ.PROD",
+      "kind": "theorem",
+      "theorem_name": "EqualTwoSquares.sum_sq_eq_iff_product",
+      "theorem_title": "The sum-of-squares equation rewritten as a product equation",
+      "code_path": "statements/items/sum_sq_eq_iff_product.lean",
+      "readback_path": "readbacks/sum_sq_eq_iff_product.md",
+      "natural_language_statement": "For integers a, b, c and d, the equality a^2 + b^2 = c^2 + d^2 holds if and only if (a + c)(a - c) = (d + b)(d - b).",
+      "source": "Mission target; no machine-checked proof yet.",
+      "tags": ["number-theory", "diophantine-equations", "polynomial-identities"]
+    },
+    {
+      "local_id": "ESQ.PAR",
+      "kind": "theorem",
+      "theorem_name": "EqualTwoSquares.parity_alignment",
+      "theorem_title": "Parity alignment after at most one interchange of the right-hand entries",
+      "code_path": "statements/items/parity_alignment.lean",
+      "readback_path": "readbacks/parity_alignment.md",
+      "natural_language_statement": "Let a, b, c and d be integers with a^2 + b^2 = c^2 + d^2. Then either a - c and b - d are both even, or a - d and b - c are both even. Equivalently, either a agrees with c modulo 2 and b agrees with d modulo 2, or the same holds after c and d are interchanged.",
+      "source": "Mission target; no machine-checked proof yet.",
+      "tags": ["number-theory", "parity"]
+    },
+    {
+      "local_id": "ESQ.HALF",
+      "kind": "theorem",
+      "theorem_name": "EqualTwoSquares.sum_sq_eq_halves",
+      "theorem_title": "Under parity alignment the equation becomes XY = UV",
+      "code_path": "statements/items/sum_sq_eq_halves.lean",
+      "readback_path": "readbacks/sum_sq_eq_halves.md",
+      "natural_language_statement": "Let a, b, c and d be integers with a^2 + b^2 = c^2 + d^2, and suppose that a - c and b - d are even. Then there are integers X, Y, U and V with X + Y = a, X - Y = c, U - V = b, U + V = d and X * Y = U * V.",
+      "source": "Mission target; no machine-checked proof yet.",
+      "tags": ["number-theory", "diophantine-equations", "parity"]
+    },
+    {
+      "local_id": "ESQ.FACT",
+      "kind": "theorem",
+      "theorem_name": "EqualTwoSquares.four_factor_param",
+      "theorem_title": "Every integer solution of XY = UV admits four parameters",
+      "code_path": "statements/items/four_factor_param.lean",
+      "readback_path": "readbacks/four_factor_param.md",
+      "natural_language_statement": "Let X, Y, U and V be integers with X * Y = U * V. Then there are integers p, q, r and s such that X = pr, Y = qs, U = ps and V = qr.",
+      "source": "Mission target; no machine-checked proof yet.",
+      "tags": ["number-theory", "divisibility", "gcd", "parametrization"]
+    }
+  ],
+  "item_order": [
+    "ESQ.GOAL",
+    "ESQ.BF",
+    "ESQ.PARAM",
+    "ESQ.FAM",
+    "ESQ.CHAIN",
+    "ESQ.SOL",
+    "ESQ.INJ",
+    "ESQ.INF",
+    "ESQ.SCALE",
+    "ESQ.PROD",
+    "ESQ.PAR",
+    "ESQ.HALF",
+    "ESQ.FACT"
+  ],
+  "main_local_id": "ESQ.GOAL",
+  "milestones": [
+    {
+      "local_id": "ESQ.BF",
+      "milestone_title": "Brahmagupta-Fibonacci identity, both forms",
+      "milestone_description": "Establish (p^2+q^2)(r^2+s^2) = (pr+qs)^2 + (ps-qr)^2 = (pr-qs)^2 + (ps+qr)^2 over an arbitrary commutative ring. This is the reusable engine of the whole mission: the first form gives the explicit family its meaning, and the two forms together explain why the four-parameter identity holds. Kept general in the ring so that it is usable outside the integers."
+    },
+    {
+      "local_id": "ESQ.PARAM",
+      "milestone_title": "The four-parameter identity",
+      "milestone_description": "Establish that (pr+qs, ps-qr, pr-qs, ps+qr) solves a^2+b^2=c^2+d^2 for all integers p,q,r,s. Should be derived from the two Brahmagupta-Fibonacci forms rather than by an independent expansion, so that the reason for the identity is recorded."
+    },
+    {
+      "local_id": "ESQ.FAM",
+      "milestone_title": "The explicit one-parameter family",
+      "milestone_description": "Establish 1^2 + (n^2-n+1)^2 = (2n-1)^2 + (n^2-n-1)^2 for every integer n. Deliberately hypothesis-free: this is the equality half of Objective 2, kept separate from the inequalities."
+    },
+    {
+      "local_id": "ESQ.CHAIN",
+      "milestone_title": "Positivity and distinctness as a strict chain",
+      "milestone_description": "For n at least 4, establish 1 < 2n-1 < n^2-n-1 < n^2-n+1. Packaging \"positive and pairwise distinct\" as one strict chain rather than six disequalities keeps the size ordering available for the primitivity and non-scaling arguments, and avoids a Finset.card statement that would discard it. The bound is sharp at n = 3."
+    },
+    {
+      "local_id": "ESQ.SOL",
+      "milestone_title": "The family produces nontrivial solutions",
+      "milestone_description": "Assemble the two preceding milestones: for every integer n at least 4 the family gives a solution all of whose entries are positive and pairwise distinct. This is the concrete guarantee that the equation genuinely has nontrivial integer solutions, and it does so for infinitely many n."
+    },
+    {
+      "local_id": "ESQ.INJ",
+      "milestone_title": "Injectivity of the family parametrisation",
+      "milestone_description": "Establish that n -> (1, n^2-n+1, 2n-1, n^2-n-1) is injective on all integers. The intended route recovers n from the linear coordinate 2n-1, so no monotonicity argument and no hypothesis on n is needed."
+    },
+    {
+      "local_id": "ESQ.INF",
+      "milestone_title": "Infinitely many distinct patterns",
+      "milestone_description": "Deduce that the range of the family parametrisation is infinite. Together with the preceding milestone this upgrades \"a family of solutions\" to \"infinitely many genuinely different patterns\", which is the affirmative half of the mission title."
+    },
+    {
+      "local_id": "ESQ.SCALE",
+      "milestone_title": "Members are not scalar multiples of one another",
+      "milestone_description": "Establish that if the n-th quadruple equals k times the m-th quadruple, then n = m. Because every member has first entry 1, scalar multiples are excluded; together with injectivity this says that distinct parameters give genuinely inequivalent patterns, without introducing a quotient type."
+    },
+    {
+      "local_id": "ESQ.PROD",
+      "milestone_title": "From the sum of squares to a product equation",
+      "milestone_description": "Establish the equivalence of a^2+b^2=c^2+d^2 with (a+c)(a-c)=(d+b)(d-b). Stated as an equivalence so that the node can be used in both directions: forwards towards the parametrisation, and backwards when constructing solutions of a prescribed value."
+    },
+    {
+      "local_id": "ESQ.PAR",
+      "milestone_title": "Parity alignment",
+      "milestone_description": "Establish that, for any solution, either a-c and b-d are both even or a-d and b-c are both even. This is the obstruction to forming the half-sum variables, expressed as a disjunction rather than by case splits inside a later proof, so that both branches remain available to consumers. It is not vacuous: a=1, b=0, c=0, d=1 satisfies the equation and needs the second branch."
+    },
+    {
+      "local_id": "ESQ.HALF",
+      "milestone_title": "Existence of the half-sum variables",
+      "milestone_description": "Under the parity alignment hypothesis, produce integers X, Y, U, V with X+Y=a, X-Y=c, U-V=b, U+V=d and X*Y=U*V. Keeping this as its own node means no later proof has to divide by 2 or reason about integer division."
+    },
+    {
+      "local_id": "ESQ.FACT",
+      "milestone_title": "Parametrizing XY = UV over the integers",
+      "milestone_description": "Establish that every integer solution of X*Y=U*V has the form X=pr, Y=qs, U=ps, V=qr. The substantive step of the mission: dividing by p = gcd(X,U) leaves X=U=0 uncovered, so that case (equivalently, the vanishing gcd) must be handled separately, and every divisibility step must be tracked with signs because the variables are integers rather than naturals. Over a field the statement is trivial, which is why it is stated here over the integers."
+    }
+  ]
+}

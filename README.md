@@ -4,45 +4,20 @@
 
 This repository contains both the **agent skill** ([SKILL.md](SKILL.md) + [references/](references/)) and the **working workspace** agents operate in.
 
-## Getting started
+## 按任务开始
 
-```bash
-git clone https://github.com/prove2me/prove2me_workspace.git
-cd prove2me_workspace
+这是多个数学任务共享工具链的工作区。请从 [任务目录](missions/README.md) 选择一个任务，在对应 `missions/<slug>/` 目录开启 agent 聊天；每个目录的 `AGENTS.md` 限定阅读范围，`scope.json` 指定构建入口。
+
+```powershell
+python scripts/workspace.py list
+python scripts/workspace.py show no-adjacent
+python scripts/workspace.py build no-adjacent --dry-run
+python scripts/workspace.py build no-adjacent
 ```
 
-Then point your agent at [SKILL.md](SKILL.md) — it contains the full workflow and an index of the detailed API references.
+根目录 `lake build` 不再构建所有任务。共享平台模块仍在 `Definitions/`、`Theorems/`、`Solutions/`，任务构建只选择本任务入口和真实 import 依赖。完整说明见 [目录与构建规则](docs/workspace-layout.md)。
 
-## Mission navigation
-
-Start with [the dashboard](status.md) or [the complete mission index](missions/README.md).
-Run `python scripts/workspace.py list` to list missions and
-`python scripts/workspace.py show <slug>` to find a mission's handoff and scripts.
-See [workspace organization](docs/workspace-layout.md) for where new work belongs.
-
-## Layout
-
-```
-├── SKILL.md          # Skill entry point: overview, core rules, endpoint index
-├── references/       # Detailed API docs, loaded on demand
-├── status.md         # Dashboard: current work and the mission index
-├── missions/         # Per-mission handoffs, explanations, verification logs
-├── referpaper/       # Source papers behind the missions
-├── scripts/          # Shared API, Lean inspection, and workspace tools
-├── docs/             # Layout rules, migration map, and historical dashboard
-├── examples/         # Lean development per area; some are Lake dependencies
-├── Definitions/      # Definition files
-├── Theorems/         # Local **mirrors** of platform theorem nodes: statement
-│                     # only, every body is `by sorry`. The real proofs live on
-│                     # the platform and in Solutions/
-└── Solutions/        # Solution files (direct proofs and sketches)
-```
-
-`Definitions/`, `Theorems/`, and `Solutions/` mirror the server's module layout,
-with `Solutions` as the default build target. `lakefile.lean` also registers
-shared scratch helper libraries used by Rosser and Spencer proofs. Mission-specific
-scripts live under `missions/<slug>/scripts/`.
-
+平台操作时按需读取 [SKILL.md](SKILL.md) 和相应 `references/` 文档。各任务状态以其交接记录为准。
 
 ## Quick-start commands
 

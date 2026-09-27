@@ -41,7 +41,7 @@ Barvinok 算法——在优化、统计物理、表示论里都用得上。
 
 **顺带一提**：一个至今没解决的问题是「$3\times3$ 的**平方数**幻方」——
 九个数都是完全平方数且行列对角线和相等。欧拉研究过，目前没人找到，也没人证明不存在。
-这类开放问题在 `referpaper/` 里有 3 篇论文。
+这类开放问题在 本任务 `papers/` 里有 3 篇论文。
 
 ## 三、这个项目在做什么：**形式化**
 
@@ -133,7 +133,7 @@ $$\mathrm{paramCount}(e)=2e^2+2e+1$$
 
 ## 六、文献
 
-`referpaper/` 下 11 篇 PDF，清单见 [README.md](../../referpaper/README.md)。
+幻方任务共 11 篇（分存于 `missions/magic-squares/papers/` 与 `missions/magic-squares-v/papers/`） PDF，清单见 [README.md](papers/README.md)。
 主要三条线：计数理论（Beck–Cohen–Cuomo–Gribelyuk 2003 等 5 篇）、
 构造（Xin 2008 三阶参数化是本项目的直接来源）、开放问题（平方数幻方等 3 篇）。
 

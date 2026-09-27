@@ -36,7 +36,7 @@ name **"Magic Squares V: The counting function of semi-magic squares of every or
 
 | What | Where | Have it? |
 |---|---|---|
-| BCCG 2003, statements of Theorems 1–5, $n=2,3$ formulas | `referpaper/Beck-Cohen-Cuomo-Gribelyuk - ... (2003).pdf`; text dump `tmp/bccg.txt` | **yes** |
+| BCCG 2003, statements of Theorems 1–5, $n=2,3$ formulas | `missions/magic-squares/papers/Beck-Cohen-Cuomo-Gribelyuk - ... (2003).pdf`; text dump `tmp/bccg.txt` | **yes** |
 | Spencer 1980, elementary proof of Theorem 1 | Amer. Math. Monthly 87, 397–399 | no — must fetch |
 | Anand–Dumir–Gupta 1966 (conjecture), Duke Math. J. 33, 757–769 | reference [2] | no |
 | Stanley 1973, *Linear homogeneous Diophantine equations and magic labelings of graphs*, Duke Math. J. 40, 607–632 | reference [15] | no |

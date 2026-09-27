@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "build": [
+    "Solutions/Sol_MagicSquares_magic_constant_of_normal.lean",
+    "Solutions/Sol_MagicSquares_magic_three_normal_classify.lean",
+    "Solutions/Sol_MagicSquares_magic_three_normal_eight.lean",
+    "Solutions/Sol_MagicSquares_normal_order_three_associative.lean",
+    "Solutions/Sol_MagicSquares_normal_order_three_center_five.lean",
+    "Solutions/Sol_MagicSquares_normal_order_three_constant.lean",
+    "Solutions/Sol_MagicSquares_normal_order_two_none.lean",
+    "Solutions/Sol_MagicSquares_order_three_opposite_sum_eq_twice_center.lean"
+  ],
+  "sources": [
+    "Solutions/Sol_MagicSquares_magic_constant_of_normal.lean",
+    "Solutions/Sol_MagicSquares_magic_three_normal_classify.lean",
+    "Solutions/Sol_MagicSquares_magic_three_normal_eight.lean",
+    "Solutions/Sol_MagicSquares_normal_order_three_associative.lean",
+    "Solutions/Sol_MagicSquares_normal_order_three_center_five.lean",
+    "Solutions/Sol_MagicSquares_normal_order_three_constant.lean",
+    "Solutions/Sol_MagicSquares_normal_order_two_none.lean",
+    "Solutions/Sol_MagicSquares_order_three_opposite_sum_eq_twice_center.lean",
+    "Definitions/Def_MagicSquares*.lean",
+    "Theorems/Thm_MagicSquares*.lean"
+  ],
+  "note": "Build lists selected root modules only; Lake follows actual imports. Sources are navigation scope, not an access sandbox. Research, scratch and platform payloads are not automatically built.",
+  "papers": [
+    "missions/magic-squares/papers/README.md"
+  ]
+}

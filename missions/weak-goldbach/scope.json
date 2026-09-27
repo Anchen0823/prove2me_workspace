@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "build": [
+    "Solutions/Sol_WeakGoldbach_verified_two_primes_4e14_to_4e18.lean"
+  ],
+  "sources": [
+    "Solutions/Sol_WeakGoldbach_verified_two_primes_4e14_to_4e18.lean",
+    "Definitions/Def_Goldbach*.lean",
+    "Theorems/Thm_WeakGoldbach*.lean"
+  ],
+  "note": "Build lists selected root modules only; Lake follows actual imports. Sources are navigation scope, not an access sandbox. Research, scratch and platform payloads are not automatically built.",
+  "papers": []
+}

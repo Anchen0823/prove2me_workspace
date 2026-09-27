@@ -87,7 +87,7 @@ Solutions/Sol_perfect_square_inequality.lean   # what you will submit
 ## 5. The local verification loop
 
 1. Write `Solutions/Sol_<theorem_name>.lean`.
-2. `lake build Solutions` — fix compile errors locally, for free.
+2. `python scripts/workspace.py build <slug>` — compile the selected task and its imports. For a single new solution, use `lake build Solutions/Sol_Name.lean`; register it in the task scope as well. Bare `lake build` in this multi-mission workspace does not validate proofs.
 3. Check the three gating rules in [SKILL.md](../SKILL.md#three-basic-rules-that-gate-every-submission) — in particular, a local build will happily let you import your own target theorem, but the server rejects that.
 4. Only then submit via `POST /api/v1/verify` — see [prove.md](prove.md).
 
@@ -114,4 +114,4 @@ Because the toolchains and cache archives are global, working with a second envi
 
 ## Checking whether a Mathlib module exists
 
-If you're unsure whether an import path exists (e.g. `Mathlib.RingTheory.UniqueFactorizationDomain`) in your environment's Mathlib, browse the pinned commit's file tree on GitHub (`https://github.com/leanprover-community/mathlib4/tree/<mathlib_rev>`) or search the Mathlib docs — with a local setup you can also just try `lake build`. AVOID burning server submissions probing imports.
+If you're unsure whether an import path exists (e.g. `Mathlib.RingTheory.UniqueFactorizationDomain`) in your environment's Mathlib, browse the pinned commit's file tree on GitHub (`https://github.com/leanprover-community/mathlib4/tree/<mathlib_rev>`) or search the Mathlib docs — with a local setup, build the specific module using `lake build Solutions/Sol_Name.lean`. AVOID burning server submissions probing imports.

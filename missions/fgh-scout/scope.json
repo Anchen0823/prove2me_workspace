@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "build": [],
+  "sources": [],
+  "note": "Build lists selected root modules only; Lake follows actual imports. Sources are navigation scope, not an access sandbox. Research, scratch and platform payloads are not automatically built.",
+  "papers": []
+}
