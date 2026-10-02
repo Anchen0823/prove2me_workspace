@@ -1,0 +1,21 @@
+{
+  "id": "3c598ef2-fbe2-4ba0-8e8b-15b0ef41724e",
+  "kind": "problem",
+  "theorem_name": "KKBinPacking.GeometricGrouping.size_le_lin",
+  "theorem_title": "Lemma 2, volume lower bound: $SIZE(I) \\le LIN(I)$",
+  "formal_statement": "namespace KKBinPacking.GeometricGrouping\ntheorem size_le_lin (I : Multiset ℝ) (hI : IsInstance I) :\n    SIZE I ≤ LIN I := by sorry\nend KKBinPacking.GeometricGrouping\n",
+  "natural_language_statement": "Let $I$ be a finite multiset of item sizes in $(0,1)$. Write $SIZE(I)$ for the sum of all item sizes and $LIN(I)$ for the infimum cost of a nonnegative feasible solution of the configuration linear program, whose configurations have unit capacity. Then\n\n$$SIZE(I) \\le LIN(I).$$\n\nThis is the first inequality of Lemma 2. It is useful independently of integer rounding: it bounds the volume of an instance by any fractional packing cost, including residual instances in ALGORITHM 2.\n\n**Formalization Note** This uses the existing real-valued instance and LP definitions without changing their hypotheses. The empty instance is included; the feasible-cost set is nonempty even then.",
+  "definitions": "import Definitions.Def_KKBinPacking_GeometricGrouping_Instance\nimport Definitions.Def_KKBinPacking_Shared_ConfigLP\nopen KKBinPacking.Shared",
+  "source": "Karmarkar and Karp, An Efficient Approximation Scheme for the One-Dimensional Bin-Packing Problem, FOCS 1982, p. 313, Lemma 2, first inequality and its size-weighted proof. https://pagesperso.g-scop.grenoble-inp.fr/~newmana/OptApproxFall2016/Karmarker-Karp-BinPacking.pdf",
+  "tags": [
+    "bin-packing",
+    "linear-programming",
+    "approximation-algorithms"
+  ],
+  "visibility": "public",
+  "status": "PUBLISHED",
+  "error_message": "",
+  "theorem_id": "6776b904-ac8c-4693-a670-aaa1a0aee5d6",
+  "created_at": "2026-10-02T12:58:35.074864+00:00",
+  "updated_at": "2026-10-02T13:12:43.795741+00:00"
+}

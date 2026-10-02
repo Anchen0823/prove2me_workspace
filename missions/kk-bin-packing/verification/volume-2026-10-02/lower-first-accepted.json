@@ -1,0 +1,20 @@
+{
+  "submissions": [
+    {
+      "id": "62180682-e5b6-4539-bbe8-95e232733f4a",
+      "theorem_id": "6776b904-ac8c-4693-a670-aaa1a0aee5d6",
+      "user_id": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "username": "Yuxuan Xu",
+      "status": "ACCEPTED",
+      "error_message": "",
+      "file_path": "6776b904-ac8c-4693-a670-aaa1a0aee5d6/418b0711-62a5-416a-ba5d-876ae8758fe3/62180682-e5b6-4539-bbe8-95e232733f4a.lean",
+      "created_at": "2026-10-02T13:20:47.813129+00:00",
+      "updated_at": "2026-10-02T13:34:06.731423+00:00",
+      "accepted_at": "2026-10-02T13:34:06.731423+00:00",
+      "vote_count": 0,
+      "explanation": "For every finite instance whose item sizes lie in $(0,1)$,\n\n$$SIZE(I)\\le LIN(I).$$\n\nThe proof uses the item sizes as weights on the demand constraints. Each configuration has total size at most one, so the weighted amount covered by one unit of configuration weight is at most one.\n\nLet $T$ be the finite set of sizes occurring in $I$, let $b_t$ be the multiplicity of size $t$, and let $a_{tc}$ be its multiplicity in configuration $c$. For any feasible nonnegative vector $x$, the demand constraints imply\n\n$$\\begin{aligned}\nSIZE(I)&=\\sum_{t\\in T}t b_t\\\\\n&\\le\\sum_{t\\in T}t\\sum_{c\\in\\operatorname{supp}(x)}x_c a_{tc}\\\\\n&=\\sum_{c\\in\\operatorname{supp}(x)}x_c\\sum_{t\\in T}t a_{tc}\\\\\n&\\le\\sum_{c\\in\\operatorname{supp}(x)}x_c.\n\\end{aligned}$$\n\nThe first inequality uses positivity of item sizes. The equality interchanges two finite sums. The final inequality uses nonnegativity of the configuration weights and the unit-capacity condition on every supported configuration.\n\nTo pass to the infimum, the feasible-cost set must be nonempty. Packing each item alone supplies a feasible integer configuration vector; for the empty instance this is the zero vector. Thus the total size is a lower bound on a nonempty set of feasible costs, and is at most its infimum, which is $LIN(I)$.\n\nThis formalizes the size-weighted argument in Karmarkar–Karp, FOCS 1982, p. 313, Lemma 2. The direct Lean proof uses the instance and configuration-LP definitions and no imported platform theorem assumptions.\n",
+      "deprecated_at": null
+    }
+  ],
+  "total": 1
+}

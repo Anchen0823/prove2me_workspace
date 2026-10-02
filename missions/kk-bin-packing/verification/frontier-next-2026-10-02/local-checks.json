@@ -1,0 +1,17 @@
+[
+  {
+    "name": "telescoping",
+    "exit_code": 0,
+    "output": "missions\\kk-bin-packing\\verification\\frontier-next-2026-10-02\\TelescopingCheck.lean:151:41: warning: Variable name `hk` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hk\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nmissions\\kk-bin-packing\\verification\\frontier-next-2026-10-02\\TelescopingCheck.lean:151:62: warning: Variable name `hg0` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hg0\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\n'solution' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]\n"
+  },
+  {
+    "name": "dominance",
+    "exit_code": 0,
+    "output": "'solution' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+  },
+  {
+    "name": "lp-monotone",
+    "exit_code": 0,
+    "output": "'solution' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+  }
+]

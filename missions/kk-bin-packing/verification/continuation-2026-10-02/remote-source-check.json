@@ -1,0 +1,20 @@
+[
+  {
+    "submission_id": "956de592-7e80-4f94-ae20-f0b7fe913d4e",
+    "name": "lin_le_opt",
+    "server_source_matches_local": true,
+    "sha256": "da4fdb94df34c9d3c3e77a9cb62ac65ea410a1c6268015022c0bfe2adf536a0e"
+  },
+  {
+    "submission_id": "e96b7f2a-43fc-4061-a627-e7a78cc24166",
+    "name": "alg2_iterations_le",
+    "server_source_matches_local": true,
+    "sha256": "2f44cc57767a1be80b3c5fffbfd9849dc867ae505bc5d1e00af4e732a9f5c0b4"
+  },
+  {
+    "submission_id": "e04dd93a-25f4-405f-890f-3daf94e1c012",
+    "name": "algorithm2_bound",
+    "server_source_matches_local": true,
+    "sha256": "6d151d2a1716a0703905c1704afbd8e36c0bd807e0a94650d91d900cfff18dc8"
+  }
+]

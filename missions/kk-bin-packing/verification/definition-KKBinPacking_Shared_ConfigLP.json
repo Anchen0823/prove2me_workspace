@@ -1,0 +1,26 @@
+{
+  "theorem_id": "11db9da0-e403-4d69-9bd6-67ac060ce89d",
+  "theorem_name": "KKBinPacking_Shared_ConfigLP",
+  "theorem_title": "Configurations, the fractional bin-packing LP (I), $LIN(I)$ and basic feasible solutions",
+  "status": "Definition",
+  "formal_statement": "",
+  "natural_language_statement": "Let $I$ be an instance. A **piece type** is a size occurring in $I$; $b_t$ denotes the number of pieces of type $t$. A **configuration** is a nonempty multiset $c$ of piece types whose total size is at most $1$ (a type may occur in $c$ any number of times); $a_{tc}$ denotes the number of occurrences of type $t$ in $c$.\n\nThe **fractional bin-packing problem** is the linear program\n\n$$\n\\text{(I)}\\qquad \\min\\ \\mathbf 1\\cdot x \\quad\\text{subject to}\\quad x \\ge 0,\\qquad \\sum_{c} a_{tc}\\,x_c \\ \\ge\\ b_t\\ \\text{ for every type } t,\n$$\n\nwith one variable $x_c$ per configuration. $LIN(I)$ denotes its optimal value. A **basic (extreme point) feasible solution** is a feasible $x$ that is not the midpoint of two distinct feasible solutions: if $x+y$ and $x-y$ are both feasible then $y = 0$.\n\nThis linear program is the Gilmore–Gomory relaxation that all algorithms of the paper round.\n\n**Formalization Note** A solution is a finitely supported function `x : Multiset ℝ →₀ ℝ` whose support consists of configurations. $LIN(I)$ is the real infimum of the costs of feasible solutions. For an instance this set is nonempty (put weight $b_t$ on the singleton configuration $\\{t\\}$, which fits because every size is $< 1$) and bounded below by $0$, so the infimum is the LP value and never the junk value of an empty or unbounded set. \"Basic\" is the extreme-point property stated by the paper (\"basic (extreme point) feasible solution\", p. 313). That $x$ then has at most $m(I)$ nonzero components is a consequence, not part of the definition.\n\nIt serves both missions of the series: `01-linear-grouping` (p. 313, §3 and the proof of Lemma 2; LIN(I) and basic solutions are rounded by ALGORITHM 1, p. 316) and `02-geometric-grouping` (p. 313, §3; LIN(I) is rounded in every iteration of ALGORITHM 2, p. 316). It is reviewed once for both.\n",
+  "created_at": "2026-09-28T11:17:18.225279+00:00",
+  "vote_count": 0,
+  "definition": "import Mathlib\n\nnamespace KKBinPacking.Shared\n\n/-- A configuration of `I` (p. 313): a nonempty multiset of piece types (sizes occurring in\n`I`) that fits in one bin. A type may occur in a configuration more often than in `I`. -/\ndef IsConfiguration (I : Multiset ℝ) (c : Multiset ℝ) : Prop :=\n  c ≠ 0 ∧ (∀ t ∈ c, t ∈ I) ∧ c.sum ≤ 1\n\n/-- Feasibility for the fractional bin-packing linear program (I) of p. 313: `x` assigns a\nnonnegative weight to finitely many configurations, and for every piece type `t` of `I` the\nnumber `b_t` of pieces of type `t` is at most `∑_c x_c · a_{t c}`, where `a_{t c}` is the\nnumber of pieces of type `t` in configuration `c` (`Ax ≥ b`, `x ≥ 0`). -/\ndef IsLPFeasible (I : Multiset ℝ) (x : Multiset ℝ →₀ ℝ) : Prop :=\n  (∀ c ∈ x.support, IsConfiguration I c) ∧ (∀ c, 0 ≤ x c) ∧\n    ∀ t ∈ I.toFinset, (I.count t : ℝ) ≤ ∑ c ∈ x.support, x c * (c.count t : ℝ)\n\n/-- The objective `1·x` of the linear program (I). -/\ndef lpCost (x : Multiset ℝ →₀ ℝ) : ℝ := ∑ c ∈ x.support, x c\n\n/-- `LIN(I)`, the optimal value of the fractional bin-packing problem (p. 313). For an instance\nthe set is nonempty (one copy of the singleton configuration `{t}` per piece of type `t` is\nfeasible, since every size is `< 1`) and bounded below by `0`, so this infimum is the LP's\noptimal value and never the junk value `sInf ∅`. -/\nnoncomputable def LIN (I : Multiset ℝ) : ℝ :=\n  sInf {z : ℝ | ∃ x : Multiset ℝ →₀ ℝ, IsLPFeasible I x ∧ lpCost x = z}\n\n/-- A basic (extreme point) feasible solution of (I) (p. 313): a feasible `x` that is not the\nmidpoint of two distinct feasible solutions, i.e. `x + y` and `x - y` feasible force `y = 0`. -/\ndef IsBasicFeasible (I : Multiset ℝ) (x : Multiset ℝ →₀ ℝ) : Prop :=\n  IsLPFeasible I x ∧\n    ∀ y : Multiset ℝ →₀ ℝ, IsLPFeasible I (x + y) → IsLPFeasible I (x - y) → y = 0\n\nend KKBinPacking.Shared\n",
+  "source": "Karmarkar, Karp, An Efficient Approximation Scheme for the One-Dimensional Bin-Packing Problem, Proc. 23rd FOCS, 1982, p. 313, §3 (configuration, linear program (I), LIN(I)); p. 313, proof of Lemma 2 (basic (extreme point) feasible solution)",
+  "tags": [
+    "bin-packing",
+    "linear-programming",
+    "p2o-batch-p200b",
+    "p2o-gran-per-chapter",
+    "p2o-plan-paper",
+    "p2o-v1"
+  ],
+  "created_by": "cefe8406-a334-4b9e-8376-acb8e5172761",
+  "created_by_username": "mikedeng1",
+  "deprecated_at": null,
+  "visibility": "public",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "env_display_name": "Mathlib 0df444a (Lean v4.33.1)"
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "name": "KKBinPacking.GeometricGrouping.exists_sparse_near_optimal_lp",
+    "status": "PUBLISHED",
+    "statement_matches": true,
+    "preamble_matches": true
+  },
+  {
+    "name": "KKBinPacking.GeometricGrouping.lp_floor_rounding_certificate",
+    "status": "PUBLISHED",
+    "statement_matches": true,
+    "preamble_matches": true
+  }
+]

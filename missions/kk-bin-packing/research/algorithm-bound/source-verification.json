@@ -1,0 +1,17 @@
+{
+  "solution": "Solutions/Sol_KKBinPacking_GeometricGrouping_algorithm2_bound.lean",
+  "sha256": "6d151d2a1716a0703905c1704afbd8e36c0bd807e0a94650d91d900cfff18dc8",
+  "binder_and_statement_exact": true,
+  "imports": [
+    "Theorems.Thm_KKBinPacking_GeometricGrouping_alg2_step3_card_le",
+    "Theorems.Thm_KKBinPacking_GeometricGrouping_alg2_iterations_le",
+    "Theorems.Thm_KKBinPacking_GeometricGrouping_alg2_lin_telescoping",
+    "Theorems.Thm_KKBinPacking_GeometricGrouping_geomGroup_bounds",
+    "Theorems.Thm_KKBinPacking_GeometricGrouping_lin_le_opt",
+    "Theorems.Thm_KKBinPacking_GeometricGrouping_anyFit_card_le"
+  ],
+  "source_contains_sorry_admit_or_axiom": false,
+  "source_autoImplicit_false": true,
+  "source_compilation_exit_code": 0,
+  "note": "Conditional reduction: theorem mirrors contain placeholders; unresolved dependencies remain."
+}

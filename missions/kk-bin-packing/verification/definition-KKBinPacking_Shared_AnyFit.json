@@ -1,0 +1,25 @@
+{
+  "theorem_id": "3caf8a82-8ff8-4c12-996f-7ac9a8588a1c",
+  "theorem_name": "KKBinPacking_Shared_AnyFit",
+  "theorem_title": "Inserting pieces using a new bin only when necessary",
+  "status": "Definition",
+  "formal_statement": "",
+  "natural_language_statement": "Let $P$ be a multiset of bins and $S$ a multiset of pieces. **Inserting the pieces of $S$ into $P$, starting a new bin only when necessary**, is the following nondeterministic process. While pieces remain, choose any remaining piece $p$. If $p$ fits into some existing bin $b$ (the load of $b$ plus $p$ is at most $1$), put $p$ into any such bin; otherwise open a new bin containing only $p$. The relation $\\mathrm{AnyFit}(P, S, Q)$ holds when some execution of this process ends with the bins $Q$.\n\nThis is the insertion step of Lemma 3, of Step 7 of ALGORITHM 1 and of Step 4 of ALGORITHM 2.\n\n**Formalization Note** The relation is inductive, with three rules: nothing left to insert; insert a piece of $S$ into an existing bin where it fits; open a new bin for a piece of $S$ only if it fits into no existing bin. The order of insertion and the choice of bin are unrestricted, so every theorem about the process holds for every such execution (in particular for First Fit).\n\nIt serves both missions of the series: `01-linear-grouping` (Lemma 3, p. 314; ALGORITHM 1, Step 7, p. 316) and `02-geometric-grouping` (Lemma 3, p. 314; ALGORITHM 2, Step 4, p. 316). It is reviewed once for both.\n",
+  "created_at": "2026-09-28T11:17:40.601218+00:00",
+  "vote_count": 0,
+  "definition": "import Mathlib\n\nnamespace KKBinPacking.Shared\n\n/-- Insertion of pieces \"using a new bin only when necessary\" (Lemma 3, p. 314; ALGORITHM 1,\nStep 7, and ALGORITHM 2, Step 4, p. 316). `AnyFit P S Q` means: starting from the bins `P` and inserting the pieces of\n`S` one at a time, in any order, each piece into any existing bin where it fits, and into a\nnew bin only when it fits in no existing bin, can end with the bins `Q`. -/\ninductive AnyFit : Multiset (Multiset ℝ) → Multiset ℝ → Multiset (Multiset ℝ) → Prop\n  /-- Nothing left to insert. -/\n  | done (P : Multiset (Multiset ℝ)) : AnyFit P 0 P\n  /-- Insert a piece `p` of `S` into an existing bin `b` where it fits. -/\n  | intoBin (P : Multiset (Multiset ℝ)) (S : Multiset ℝ) (Q : Multiset (Multiset ℝ))\n      (p : ℝ) (b : Multiset ℝ) :\n      p ∈ S → b ∈ P → b.sum + p ≤ 1 →\n      AnyFit ((P.erase b) + {p ::ₘ b}) (S.erase p) Q → AnyFit P S Q\n  /-- Open a new bin for a piece `p` of `S` that fits in no existing bin. -/\n  | newBin (P : Multiset (Multiset ℝ)) (S : Multiset ℝ) (Q : Multiset (Multiset ℝ)) (p : ℝ) :\n      p ∈ S → (∀ b ∈ P, 1 < b.sum + p) →\n      AnyFit (P + {{p}}) (S.erase p) Q → AnyFit P S Q\n\nend KKBinPacking.Shared\n",
+  "source": "Karmarkar, Karp, An Efficient Approximation Scheme for the One-Dimensional Bin-Packing Problem, Proc. 23rd FOCS, 1982, p. 314, Lemma 3 (\"inserts the small pieces, starting a new bin only when necessary\"); p. 316, ALGORITHM 1, Step 7; p. 316, ALGORITHM 2, Step 4",
+  "tags": [
+    "bin-packing",
+    "p2o-batch-p200b",
+    "p2o-gran-per-chapter",
+    "p2o-plan-paper",
+    "p2o-v1"
+  ],
+  "created_by": "cefe8406-a334-4b9e-8376-acb8e5172761",
+  "created_by_username": "mikedeng1",
+  "deprecated_at": null,
+  "visibility": "public",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "env_display_name": "Mathlib 0df444a (Lean v4.33.1)"
+}

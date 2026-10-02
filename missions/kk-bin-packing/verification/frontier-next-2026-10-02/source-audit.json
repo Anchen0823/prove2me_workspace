@@ -1,0 +1,29 @@
+[
+  {
+    "file": "Solutions/Sol_KKBinPacking_GeometricGrouping_alg2_lin_telescoping.lean",
+    "sha256": "e26d4a4af812d827ed11decb166e879325acdf7e2d91441d78af24fde883568e",
+    "imports": [
+      "Theorems.Thm_KKBinPacking_GeometricGrouping_alg2_size_recursion",
+      "Theorems.Thm_KKBinPacking_GeometricGrouping_geomGroup_bounds"
+    ],
+    "forbidden_tokens": []
+  },
+  {
+    "file": "Solutions/Sol_KKBinPacking_GeometricGrouping_geom_dominance_certificate.lean",
+    "sha256": "f4f66bbe35eedb3062dc149e8e291e74a93c94932c0a36588b5944ac48857c5a",
+    "imports": [
+      "Definitions.Def_KKBinPacking_GeometricGrouping_GeomGroup",
+      "Definitions.Def_KKBinPacking_GeometricGrouping_Instance"
+    ],
+    "forbidden_tokens": []
+  },
+  {
+    "file": "Solutions/Sol_KKBinPacking_GeometricGrouping_lin_mono_submultiset.lean",
+    "sha256": "a6170d570eed3fc1bda6f464db116dc1c0b892ae12ad2c2b5c29fe16d58f08b9",
+    "imports": [
+      "Definitions.Def_KKBinPacking_GeometricGrouping_Instance",
+      "Definitions.Def_KKBinPacking_Shared_ConfigLP"
+    ],
+    "forbidden_tokens": []
+  }
+]

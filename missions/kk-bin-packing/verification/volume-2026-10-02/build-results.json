@@ -1,0 +1,26 @@
+[
+  {
+    "module": "Theorems.Thm_KKBinPacking_GeometricGrouping_opt_le_two_size_add_one",
+    "exit_code": 0,
+    "seconds": 137.5
+  },
+  {
+    "module": "Theorems.Thm_KKBinPacking_GeometricGrouping_size_le_lin",
+    "exit_code": 0,
+    "seconds": 76.26
+  },
+  {
+    "module": "Theorems.Thm_KKBinPacking_GeometricGrouping_exists_sparse_near_optimal_lp",
+    "exit_code": 0,
+    "seconds": 23.7
+  },
+  {
+    "module": "Theorems.Thm_KKBinPacking_GeometricGrouping_lp_floor_rounding_certificate",
+    "exit_code": 0,
+    "seconds": 62.98
+  },
+  {
+    "command": "python scripts/workspace.py build kk-bin-packing",
+    "exit_code": 0
+  }
+]

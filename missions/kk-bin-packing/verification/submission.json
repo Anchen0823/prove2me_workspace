@@ -1,0 +1,11 @@
+{
+  "submitted_at": "2026-10-02T11:28:40.874977+00:00",
+  "http_status": 200,
+  "sha256": "c1a1a02f990de1a0701ac42cae664bfd528f199fff89cbd81cee960e11ff8cd4",
+  "response": {
+    "submission_id": "68a45a9e-63d6-4cff-b1b1-a11360be9146",
+    "status": "PENDING",
+    "message": "Proof submitted for verification. Poll GET /submission/{id} for results.",
+    "guidelines": "Reminder: write the explanation like a section of a math paper, not a tactic-by-tactic transcript. Walk through the mathematical argument and show how it maps onto your Lean code, in Markdown with KaTeX math. The explanation is the only part of a submission you can edit later, via PATCH /api/v1/submissions/:id. Full principles: references/prove.md#attach-an-explanation"
+  }
+}

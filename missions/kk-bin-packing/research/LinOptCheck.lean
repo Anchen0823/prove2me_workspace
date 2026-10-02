@@ -1,0 +1,14 @@
+import Definitions.Def_KKBinPacking_GeometricGrouping_Algorithm2
+#check Multiset.toFinset_sum_count_nsmul_eq
+#check Multiset.count_join
+#check Finsupp.mapRange_support
+#check Finsupp.support_mapRange
+#check Finsupp.sum_mapRange_index
+#check Multiset.sum_map_count
+#check Nat.sInf_mem
+#check Real.sInf_nonneg
+#check csInf_le
+#check Multiset.filter_join
+#check Multiset.join_filter_ne_zero
+#check Multiset.sum_toFinset
+#check Multiset.card_eq_sum_count

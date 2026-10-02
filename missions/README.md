@@ -31,5 +31,6 @@ python scripts/workspace.py build <slug>
 | number-theory | [Zudilin: one of zeta(5,7,9,11) is irrational](zudilin/explanation_reduction.md) | [zudilin](zudilin/AGENTS.md) |
 | logic | [Fast-growing hierarchies above epsilon-zero: feasibility](fgh-scout/FEASIBILITY-REPORT.md) | [fgh-scout](fgh-scout/AGENTS.md) |
 | combinatorics | [Binary strings with no adjacent ones](no-adjacent/status.md) | [no-adjacent](no-adjacent/AGENTS.md) |
+| approximation-algorithms | [Karmarkar-Karp II: geometric grouping](kk-bin-packing/status.md) | [kk-bin-packing](kk-bin-packing/AGENTS.md) |
 
 平台状态以各任务的带日期证据为准。新增任务需登记 `index.json`、`scope.json`、`AGENTS.md` 与本目录导航，再运行 `python scripts/workspace.py check`。

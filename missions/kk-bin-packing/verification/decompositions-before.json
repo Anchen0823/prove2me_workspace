@@ -1,0 +1,53 @@
+{
+  "decompositions": [
+    {
+      "submission_id": null,
+      "created_by": null,
+      "created_at": null,
+      "deprecated_at": null,
+      "deprecated_by": null,
+      "children": [
+        {
+          "definition_id": "588b9e32-4c83-45d2-8168-874e22fe5749",
+          "definition_name": "KKBinPacking_GeometricGrouping_Instance",
+          "theorem_title": "Bin-packing instances, packings, $OPT$, $SIZE$, $n$, $m$ and the smallest size $a(I)$",
+          "ordinal": 0,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        },
+        {
+          "definition_id": "11db9da0-e403-4d69-9bd6-67ac060ce89d",
+          "definition_name": "KKBinPacking_Shared_ConfigLP",
+          "theorem_title": "Configurations, the fractional bin-packing LP (I), $LIN(I)$ and basic feasible solutions",
+          "ordinal": 1,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        },
+        {
+          "definition_id": "3caf8a82-8ff8-4c12-996f-7ac9a8588a1c",
+          "definition_name": "KKBinPacking_Shared_AnyFit",
+          "theorem_title": "Inserting pieces using a new bin only when necessary",
+          "ordinal": 2,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        },
+        {
+          "definition_id": "f5b5eb11-482c-4fe5-bb47-b65aa3234cdf",
+          "definition_name": "KKBinPacking_GeometricGrouping_GeomGroup",
+          "theorem_title": "The second variation of geometric grouping, producing $J$ and $J'$",
+          "ordinal": 3,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        },
+        {
+          "definition_id": "4945db3f-2288-4a16-bffa-fbeda86922be",
+          "definition_name": "KKBinPacking_GeometricGrouping_Algorithm2",
+          "theorem_title": "ALGORITHM 2 as a relation between an input instance and the packings it may output",
+          "ordinal": 4,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        }
+      ]
+    }
+  ]
+}

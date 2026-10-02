@@ -1,0 +1,73 @@
+{
+  "toolchain": "leanprover/lean4:v4.33.1",
+  "hash_encoding": "UTF-8 source text normalized to LF, exactly as passed to the multipart uploader",
+  "scope_build": {
+    "command": "python scripts/workspace.py build kk-bin-packing",
+    "exit_code": 0,
+    "evidence": "mission-build.log",
+    "note": "The build completed successfully. The wrapper later failed while printing a Unicode warning symbol to the GBK terminal; the complete UTF-8 build log was saved before that print."
+  },
+  "exact_type_and_axioms": [
+    {
+      "name": "lin_le_opt",
+      "exit_code": 0,
+      "output": "'solution' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+    },
+    {
+      "name": "alg2_iterations_le",
+      "exit_code": 0,
+      "output": "'solution' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]\n"
+    },
+    {
+      "name": "algorithm2_bound",
+      "exit_code": 0,
+      "output": "'solution' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]\n"
+    }
+  ],
+  "source_audit": [
+    {
+      "name": "lin_le_opt",
+      "file": "Solutions/Sol_KKBinPacking_GeometricGrouping_lin_le_opt.lean",
+      "sha256": "da4fdb94df34c9d3c3e77a9cb62ac65ea410a1c6268015022c0bfe2adf536a0e",
+      "imports": [
+        "Definitions.Def_KKBinPacking_GeometricGrouping_Instance",
+        "Definitions.Def_KKBinPacking_Shared_ConfigLP"
+      ],
+      "self_import": false,
+      "forbidden_tokens": [],
+      "top_level_solution": true
+    },
+    {
+      "name": "alg2_iterations_le",
+      "file": "Solutions/Sol_KKBinPacking_GeometricGrouping_alg2_iterations_le.lean",
+      "sha256": "2f44cc57767a1be80b3c5fffbfd9849dc867ae505bc5d1e00af4e732a9f5c0b4",
+      "imports": [
+        "Theorems.Thm_KKBinPacking_GeometricGrouping_alg2_size_recursion"
+      ],
+      "self_import": false,
+      "forbidden_tokens": [],
+      "top_level_solution": true
+    },
+    {
+      "name": "algorithm2_bound",
+      "file": "Solutions/Sol_KKBinPacking_GeometricGrouping_algorithm2_bound.lean",
+      "sha256": "6d151d2a1716a0703905c1704afbd8e36c0bd807e0a94650d91d900cfff18dc8",
+      "imports": [
+        "Theorems.Thm_KKBinPacking_GeometricGrouping_alg2_step3_card_le",
+        "Theorems.Thm_KKBinPacking_GeometricGrouping_alg2_iterations_le",
+        "Theorems.Thm_KKBinPacking_GeometricGrouping_alg2_lin_telescoping",
+        "Theorems.Thm_KKBinPacking_GeometricGrouping_geomGroup_bounds",
+        "Theorems.Thm_KKBinPacking_GeometricGrouping_lin_le_opt",
+        "Theorems.Thm_KKBinPacking_GeometricGrouping_anyFit_card_le"
+      ],
+      "self_import": false,
+      "forbidden_tokens": [],
+      "top_level_solution": true
+    }
+  ],
+  "workspace_check": {
+    "exit_code": 1,
+    "same_as_preexisting_errors": true,
+    "new_issues": []
+  }
+}

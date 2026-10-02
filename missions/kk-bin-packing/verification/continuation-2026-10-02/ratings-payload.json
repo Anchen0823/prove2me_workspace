@@ -1,0 +1,14 @@
+{
+  "ratings": [
+    {
+      "theorem_id": "2b8092a2-0b0d-4cf8-ad4c-2372e926724a",
+      "score": 8,
+      "reasoning": "Useful logarithmic iteration bound with explicit nonzero-loop hypothesis and precise initial-instance convention; reduces cleanly to the size recurrence."
+    },
+    {
+      "theorem_id": "4f2723e6-02fb-41ff-9cf9-af6f1d0fc02b",
+      "score": 9,
+      "reasoning": "Central algorithm estimate connecting counting, LP telescoping, grouping, and small-item insertion; hypotheses explicitly handle zero iterations and the insertion parameter."
+    }
+  ]
+}

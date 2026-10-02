@@ -1,0 +1,46 @@
+{
+  "submissions": [
+    {
+      "name": "alg2_lin_telescoping",
+      "submission_id": "4d681118-a28c-41b7-95f0-d1e68f3fbbb7",
+      "theorem_id": "4079cd64-9798-4e48-b350-081a6098de00",
+      "status": "SKETCH_ACCEPTED",
+      "updated_at": "2026-10-02T13:48:36.194181+00:00",
+      "source": "Solutions/Sol_KKBinPacking_GeometricGrouping_alg2_lin_telescoping.lean",
+      "sha256": "e26d4a4af812d827ed11decb166e879325acdf7e2d91441d78af24fde883568e",
+      "server_source_matches_local": true,
+      "theorem_status": "Open"
+    },
+    {
+      "name": "geom_dominance_certificate",
+      "submission_id": "14fab497-6ca3-4f3e-9257-9ecd7ee5d6d6",
+      "theorem_id": "c82ce472-6aa5-49d5-a543-26ff0bdc4e91",
+      "status": "PENDING",
+      "updated_at": "2026-10-02T13:45:04.193345+00:00",
+      "source": "Solutions/Sol_KKBinPacking_GeometricGrouping_geom_dominance_certificate.lean",
+      "sha256": "f4f66bbe35eedb3062dc149e8e291e74a93c94932c0a36588b5944ac48857c5a"
+    },
+    {
+      "name": "lp-monotone",
+      "status": "awaiting theorem publication"
+    }
+  ],
+  "open_frontier": {
+    "root_id": "4f2723e6-02fb-41ff-9cf9-af6f1d0fc02b",
+    "open_leaves": [
+      {
+        "theorem_id": "dadc4a6e-68e7-4a55-aa93-5c9a824ccc53",
+        "theorem_name": "KKBinPacking.GeometricGrouping.geomGroup_bounds",
+        "status": "Open",
+        "closability": 0
+      },
+      {
+        "theorem_id": "a124aa6e-2251-4a70-9b82-2dd8cdbd4934",
+        "theorem_name": "KKBinPacking.GeometricGrouping.alg2_size_recursion",
+        "status": "Open",
+        "closability": 0
+      }
+    ],
+    "total": 2
+  }
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "source": "Solutions/Sol_KKBinPacking_GeometricGrouping_size_le_lin.lean",
+    "sha256": "8b891f62a40ea8fff9d4faf5a1b2b4880f4587d2fd1b5834e86bb58237f5cfb1",
+    "exit_code": 0,
+    "axiom_output": "'solution' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+    "imports": [
+      "Definitions.Def_KKBinPacking_GeometricGrouping_Instance",
+      "Definitions.Def_KKBinPacking_Shared_ConfigLP"
+    ],
+    "forbidden_tokens": [],
+    "classification": "direct proof"
+  },
+  {
+    "source": "Solutions/Sol_KKBinPacking_GeometricGrouping_size_le_lin_le_opt_le_lin_add.lean",
+    "sha256": "66cd855f2d954f7b453366935c4abcd3163858b03baab6dba06ed0a794947a7a",
+    "exit_code": 0,
+    "axiom_output": "'solution' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]\n'KKRoundingUpper.upper_from_sparse_approx_and_rounding' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+    "imports": [
+      "Theorems.Thm_KKBinPacking_GeometricGrouping_size_le_lin",
+      "Theorems.Thm_KKBinPacking_GeometricGrouping_lin_le_opt",
+      "Theorems.Thm_KKBinPacking_GeometricGrouping_opt_le_two_size_add_one",
+      "Theorems.Thm_KKBinPacking_GeometricGrouping_exists_sparse_near_optimal_lp",
+      "Theorems.Thm_KKBinPacking_GeometricGrouping_lp_floor_rounding_certificate",
+      "Definitions.Def_KKBinPacking_GeometricGrouping_Algorithm2"
+    ],
+    "forbidden_tokens": [],
+    "classification": "reduction with explicit theorem assumptions"
+  }
+]

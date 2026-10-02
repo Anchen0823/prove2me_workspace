@@ -1,0 +1,43 @@
+{
+  "theorem_id": "481bbaf2-8553-4e36-9fed-66bb54f00da2",
+  "theorem_name": "KKBinPacking.GeometricGrouping.algorithm2_log_squared_bound",
+  "theorem_title": "Theorem 4 — ALGORITHM 2 with $k=2$, $g = 1/SIZE(I)$ packs within $OPT(I) + O(\\log^2 OPT(I))$ bins",
+  "status": "Open",
+  "formal_statement": "namespace KKBinPacking.GeometricGrouping\ntheorem algorithm2_log_squared_bound (I : Multiset ℝ) (hI : IsInstance I) (hS : 2 ≤ SIZE I)\n    (P : Multiset (Multiset ℝ)) (hP : Alg2Run 2 (1 / SIZE I) I P) :\n    IsPacking I P ∧\n      (Multiset.card P : ℝ) ≤\n        (OPT I : ℝ) + (1 + Real.logb 2 (OPT I)) * (9 + 4 * Real.log (OPT I)) +\n          2 + 4 * Real.log (OPT I) := by sorry\nend KKBinPacking.GeometricGrouping\n",
+  "natural_language_statement": "Let $I$ be an instance of the one-dimensional bin-packing problem with $SIZE(I) \\ge 2$, and run ALGORITHM 2 with parameters $k = 2$ and $g = 1/SIZE(I)$. Every packing $P$ it can output is a packing of $I$, and its number of bins $A(I) = |P|$ satisfies\n\n$$A(I) \\le OPT(I) + \\bigl(1 + \\log_2 OPT(I)\\bigr)\\bigl(9 + 4\\ln OPT(I)\\bigr) + 2 + 4\\ln OPT(I).$$\n\nIn particular $A(I) \\le OPT(I) + O(\\log^2 OPT(I))$: the additive error of this algorithm grows only polylogarithmically in the optimum.\n\n**Formalization Note** The paper writes $A(I) \\le OPT(I) + O(\\log^2 OPT(I))$; its proof, the general bound for ALGORITHM 2 with $k = 2$ and $g = 1/SIZE(I)$ together with $SIZE(I) \\le OPT(I)$ (Lemma 2) and $OPT(I) \\le 2\\,SIZE(I)+1$ (Lemma 1), yields the explicit constants stated here. The hypothesis $SIZE(I) \\ge 2$ makes the paper's asymptotic threshold explicit: Lemma 3 is applied with parameter $2g = 2/SIZE(I)$, which must be at most $1$, and for $SIZE(I) < e^{-1/2}$ the while loop of ALGORITHM 2 with $g = 1/SIZE(I)$ never terminates. The bound holds for every run of the algorithm (every output of the Fractional Bin-Packing subroutine within its contract, every admissible packing at Steps 2 and 3, every run of the Step 4 insertion). The statements about running time and the number of subroutine calls are not formalized. Logarithms: $\\ln$ is `Real.log`, $\\log_2$ is `Real.logb 2`.\n",
+  "created_at": "2026-09-29T17:49:20.89798+00:00",
+  "vote_count": 0,
+  "tags": [
+    "approximation-algorithms",
+    "bin-packing",
+    "p2o-batch-p200b",
+    "p2o-gran-per-chapter",
+    "p2o-plan-paper",
+    "p2o-v1"
+  ],
+  "preamble": "import Mathlib\nimport Definitions.Def_KKBinPacking_GeometricGrouping_Instance\nimport Definitions.Def_KKBinPacking_Shared_ConfigLP\nimport Definitions.Def_KKBinPacking_Shared_AnyFit\nimport Definitions.Def_KKBinPacking_GeometricGrouping_GeomGroup\nimport Definitions.Def_KKBinPacking_GeometricGrouping_Algorithm2\nopen KKBinPacking.Shared",
+  "source": "Karmarkar, Karp, An Efficient Approximation Scheme for the One-Dimensional Bin-Packing Problem, Proc. 23rd FOCS, 1982, p. 317, Theorem 4 (left column), with the display \"Hence by Lemma 3\" at k = 2, g = 1/SIZE(I)",
+  "deprecated_at": null,
+  "deprecated_by": null,
+  "visibility": "public",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "audits": [
+    {
+      "audit_id": "1311970a-10e9-49ec-bc01-90a88097a56c",
+      "reviewer_id": "136472b2-7660-4cad-97ab-bc0d424d2ccd",
+      "reviewer_username": "Shuze Chen",
+      "decision": "confirm",
+      "comment": "Confirmed by the moderator at approval.",
+      "created_at": "2026-10-01T04:01:01.679993+00:00"
+    },
+    {
+      "audit_id": "12a59453-0240-45ac-b470-906586e29210",
+      "reviewer_id": "cefe8406-a334-4b9e-8376-acb8e5172761",
+      "reviewer_username": "mikedeng1",
+      "decision": "confirm",
+      "comment": "Confirmed by the mission captain (proposal self-audit).",
+      "created_at": "2026-10-01T04:01:01.79701+00:00"
+    }
+  ],
+  "readback": null
+}

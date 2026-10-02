@@ -1,0 +1,17 @@
+[
+  {
+    "name": "lin_le_opt",
+    "exit_code": 0,
+    "output": "'solution' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+  },
+  {
+    "name": "alg2_iterations_le",
+    "exit_code": 0,
+    "output": "'solution' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]\n"
+  },
+  {
+    "name": "algorithm2_bound",
+    "exit_code": 0,
+    "output": "'solution' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]\n"
+  }
+]

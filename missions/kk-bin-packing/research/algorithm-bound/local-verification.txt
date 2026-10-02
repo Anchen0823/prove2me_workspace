@@ -1,0 +1,14 @@
+solution (k : ℕ) (hk : 2 ≤ k) (g : ℝ) (hg0 : 0 < g) (hg1 : g ≤ 1 / 2) (I : Multiset ℝ)
+  (hI : KKBinPacking.GeometricGrouping.IsInstance I) (hS : 1 ≤ KKBinPacking.GeometricGrouping.SIZE I)
+  (P : Multiset (Multiset ℝ)) (hP : KKBinPacking.GeometricGrouping.Alg2Run k g I P) :
+  KKBinPacking.GeometricGrouping.IsPacking I P ∧
+    ↑P.card ≤
+      max ((1 + 2 * g) * ↑(KKBinPacking.GeometricGrouping.OPT I) + 1)
+        (↑(KKBinPacking.GeometricGrouping.OPT I) +
+              (1 + Real.log (KKBinPacking.GeometricGrouping.SIZE I) / Real.log ↑k) *
+                (1 + 4 * ↑k + 2 * ↑k * Real.log (1 / g)) +
+            2 +
+          2 / (1 - 1 / ↑k) * Real.log (1 / g))
+'solution' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+
+exit_code=0

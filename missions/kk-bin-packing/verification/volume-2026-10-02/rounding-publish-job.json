@@ -1,0 +1,21 @@
+{
+  "id": "84a87c98-f6fa-42bd-9b46-6acaa18419f7",
+  "kind": "problem",
+  "theorem_name": "KKBinPacking.GeometricGrouping.lp_floor_rounding_certificate",
+  "theorem_title": "Floor-rounding certificate for a feasible configuration LP",
+  "formal_statement": "namespace KKBinPacking.GeometricGrouping\ntheorem lp_floor_rounding_certificate\n    (I : Multiset ℝ) (hI : IsInstance I)\n    (x : Multiset ℝ →₀ ℝ) (hx : IsLPFeasible I x) :\n    let R := I - (principalConfigs x).join\n    ∃ P : Multiset (Multiset ℝ),\n      IsPacking (I - R) P ∧\n      P.card ≤ principalCount x ∧\n      SIZE R ≤ lpCost x - (principalCount x : ℝ) ∧\n      (OPT R : ℝ) ≤ (x.support.card : ℝ) := by sorry\nend KKBinPacking.GeometricGrouping\n",
+  "natural_language_statement": "Let $I$ be a finite bin-packing instance with real item sizes in $(0,1)$, and let $x$ be any nonnegative feasible vector of the configuration LP. For each configuration $c$, take $\\lfloor x_c\\rfloor$ copies as principal bins. Write\n\n$$N=\\sum_c\\lfloor x_c\\rfloor,\\qquad s=|\\operatorname{supp}(x)|.$$\n\nLet $R$ contain the items left after filling all available principal slots by type, with no original item used more than once. Thus its multiplicity at each size $t$ is\n\n$$b_t(R)=\\max\\!\\left\\{b_t(I)-\\sum_c\\lfloor x_c\\rfloor a_{tc},\\,0\\right\\},$$\n\nwhere $a_{tc}$ is the multiplicity of size $t$ in configuration $c$. There is a packing $P$ of the removed items satisfying\n\n$$|P|\\le N,\\qquad SIZE(R)\\le\\sum_c x_c-N,\\qquad OPT(R)\\le s.$$\n\nThis certificate separates the combinatorial floor-and-delete operation from sparsity and LP optimality. Together with the elementary packing bound on $R$, it supplies the rounding ingredient of Lemma 2.\n\n**Formalization Note** Multiset subtraction truncates negative counts to zero. Principal configurations may over-cover the input; $P$ contains the retained original items, with excess configuration slots removed. Empty bins are allowed. The certificate covers every feasible $x$, not only basic or optimal solutions.",
+  "definitions": "import Definitions.Def_KKBinPacking_GeometricGrouping_Algorithm2\nopen KKBinPacking.Shared",
+  "source": "Karmarkar and Karp, An Efficient Approximation Scheme for the One-Dimensional Bin-Packing Problem, FOCS 1982, p. 313, Lemma 2, proof of the additive upper bound. https://pagesperso.g-scop.grenoble-inp.fr/~newmana/OptApproxFall2016/Karmarker-Karp-BinPacking.pdf",
+  "tags": [
+    "bin-packing",
+    "linear-programming",
+    "approximation-algorithms"
+  ],
+  "visibility": "public",
+  "status": "PUBLISHED",
+  "error_message": "",
+  "theorem_id": "d4f0eca3-b658-4ba1-82b1-267d1e0de27c",
+  "created_at": "2026-10-02T13:33:37.540894+00:00",
+  "updated_at": "2026-10-02T13:48:51.61268+00:00"
+}

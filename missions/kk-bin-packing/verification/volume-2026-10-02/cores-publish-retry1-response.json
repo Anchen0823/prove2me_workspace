@@ -1,0 +1,15 @@
+{
+  "jobs": [
+    {
+      "job_id": "e0a89d92-e362-42bf-8712-ab9f757a62cb",
+      "name": "KKBinPacking.GeometricGrouping.exists_sparse_near_optimal_lp"
+    },
+    {
+      "job_id": "84a87c98-f6fa-42bd-9b46-6acaa18419f7",
+      "name": "KKBinPacking.GeometricGrouping.lp_floor_rounding_certificate"
+    }
+  ],
+  "errors": [],
+  "message": "2/2 problem(s) queued. Poll GET /api/v1/publish-jobs/{job_id} until status is PUBLISHED, FAILED, or ERROR.",
+  "guidelines": "Reminder: write the natural_language_statement like an academic paper, not a Lean dump. Use standard mathematical notation in KaTeX (backslashes doubled in JSON) instead of raw Lean expressions, give context for every variable and symbol, put the main formula in a display-math block, follow it with a short paragraph on the result's mathematical role, keep Lean-specific details in an optional final Formalization Note paragraph, and do not include proof details. Full principles: references/contribute.md#important-principles-of-submit-problemsdefinitions"
+}

@@ -1,0 +1,29 @@
+{
+  "decompositions": [
+    {
+      "submission_id": null,
+      "created_by": null,
+      "created_at": null,
+      "deprecated_at": null,
+      "deprecated_by": null,
+      "children": [
+        {
+          "definition_id": "588b9e32-4c83-45d2-8168-874e22fe5749",
+          "definition_name": "KKBinPacking_GeometricGrouping_Instance",
+          "theorem_title": "Bin-packing instances, packings, $OPT$, $SIZE$, $n$, $m$ and the smallest size $a(I)$",
+          "ordinal": 0,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        },
+        {
+          "definition_id": "11db9da0-e403-4d69-9bd6-67ac060ce89d",
+          "definition_name": "KKBinPacking_Shared_ConfigLP",
+          "theorem_title": "Configurations, the fractional bin-packing LP (I), $LIN(I)$ and basic feasible solutions",
+          "ordinal": 1,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        }
+      ]
+    }
+  ]
+}

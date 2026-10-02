@@ -1,0 +1,164 @@
+{
+  "mission_id": "359adb44-9a24-441c-8a2b-bd71395fcad4",
+  "pagination": {
+    "limit": 30,
+    "offset": 0,
+    "total": 11
+  },
+  "milestones": [
+    {
+      "id": "1273d3a3-69ac-4a29-ba38-ac4de3561ee2",
+      "title": "Lemma 1 — OPT(I) ≤ 2 SIZE(I) + 1",
+      "milestone_description": "Lemma 1  $OPT(I) \\le 2\\,SIZE(I) + 1$ .\n",
+      "sort_order": 0,
+      "completed": true,
+      "theorem": {
+        "id": "ef448251-2129-4ff7-b50e-20e806fa3363",
+        "theorem_name": "KKBinPacking.GeometricGrouping.opt_le_two_size_add_one",
+        "status": "Proved"
+      },
+      "created_by": "cefe8406-a334-4b9e-8376-acb8e5172761",
+      "created_at": "2026-09-29T17:49:26.403986+00:00"
+    },
+    {
+      "id": "8f8526d0-209c-40d6-be79-f5de0d804c3d",
+      "title": "Lemma 2 — SIZE(I) ≤ LIN(I) ≤ OPT(I) ≤ LIN(I) + (m(I)+1)/2",
+      "milestone_description": "Lemma 2\n$$SIZE(I) \\le LIN(I) \\le OPT(I) \\le LIN(I) + \\frac{m(I)+1}{2}$$\n",
+      "sort_order": 1,
+      "completed": false,
+      "theorem": {
+        "id": "5455998b-e4e9-4edb-92fc-4effa3b071a2",
+        "theorem_name": "KKBinPacking.GeometricGrouping.size_le_lin_le_opt_le_lin_add",
+        "status": "Open"
+      },
+      "created_by": "cefe8406-a334-4b9e-8376-acb8e5172761",
+      "created_at": "2026-09-29T17:49:26.403986+00:00"
+    },
+    {
+      "id": "5691444f-b168-4760-a7c6-9819a8cf4bd8",
+      "title": "Lemma 3 — inserting the small pieces costs at most max(A, (1+g) OPT(I) + 1) bins",
+      "milestone_description": "Lemma 3  Let $I$ be an instance of the bin-packing problem, and let $g$ be a real number between 0 and 1. Designate each piece as *large* if its size is $> \\frac{g}{2}$ and *small* otherwise. Consider a process which starts with a given packing of the large pieces into bins, and then inserts the small pieces, starting a new bin only when necessary. If the cost of the given packing of the large pieces is $A$, then the cost of the packing resulting from the process is $\\le max(A, (1+g)\\,OPT(I) + 1)$ .\n",
+      "sort_order": 2,
+      "completed": true,
+      "theorem": {
+        "id": "2ff92ced-97ae-493b-98aa-8a7700b97db2",
+        "theorem_name": "KKBinPacking.GeometricGrouping.anyFit_card_le",
+        "status": "Proved"
+      },
+      "created_by": "cefe8406-a334-4b9e-8376-acb8e5172761",
+      "created_at": "2026-09-29T17:49:26.403986+00:00"
+    },
+    {
+      "id": "ecb0ee77-37aa-46e5-887a-1af2473497cd",
+      "title": "Theorem 2, items 1–3 — SIZE, LIN and OPT of J versus I",
+      "milestone_description": "Theorem 2\n1. $SIZE(J) \\le SIZE(I) \\le SIZE(J) + k[2 + \\ln\\frac{1}{a(I)}]$\n2. $LIN(J) \\le LIN(I) \\le LIN(J) + 2k[2 + \\ln\\frac{1}{a(I)}]$\n3. $OPT(J) \\le OPT(I) \\le OPT(J) + 2k[2 + \\ln\\frac{1}{a(I)}]$\n",
+      "sort_order": 3,
+      "completed": false,
+      "theorem": {
+        "id": "dadc4a6e-68e7-4a55-aa93-5c9a824ccc53",
+        "theorem_name": "KKBinPacking.GeometricGrouping.geomGroup_bounds",
+        "status": "Open"
+      },
+      "created_by": "cefe8406-a334-4b9e-8376-acb8e5172761",
+      "created_at": "2026-09-29T17:49:26.403986+00:00"
+    },
+    {
+      "id": "2aede70a-d4b6-4682-b15d-2b4ea937bdc2",
+      "title": "Theorem 2, proof — LIN(J') ≤ OPT(J') ≤ 2 SIZE(J') + 1 ≤ 2k[2 + ln 1/a(I)]",
+      "milestone_description": "Also,\n$$LIN(J') \\le OPT(J') \\le 2.SIZE(J') + 1 \\le 2k[2 + \\ln\\frac{1}{a(I)}]$$\n",
+      "sort_order": 4,
+      "completed": false,
+      "theorem": {
+        "id": "e076a892-a8de-471a-b045-d0a6de7b381a",
+        "theorem_name": "KKBinPacking.GeometricGrouping.geomJPrime_bound",
+        "status": "Open"
+      },
+      "created_by": "cefe8406-a334-4b9e-8376-acb8e5172761",
+      "created_at": "2026-09-29T17:49:26.403986+00:00"
+    },
+    {
+      "id": "00f851aa-52a2-4e9f-99b4-1c187fd98ccd",
+      "title": "Theorem 2, item 4 — m(J) ≤ SIZE(J)/k + ln 1/a(I) (corrected in Lean by + 1)",
+      "milestone_description": "4. $m(J) \\le \\frac{SIZE(J)}{k} + \\ln\\frac{1}{a(I)}$\n",
+      "sort_order": 5,
+      "completed": false,
+      "theorem": {
+        "id": "b694354d-7e4c-48c0-b574-d4d56476007c",
+        "theorem_name": "KKBinPacking.GeometricGrouping.numSizes_geomJ_le",
+        "status": "Open"
+      },
+      "created_by": "cefe8406-a334-4b9e-8376-acb8e5172761",
+      "created_at": "2026-09-29T17:49:26.403986+00:00"
+    },
+    {
+      "id": "db8f2aa1-58ed-4801-aa58-15bbdea1afc4",
+      "title": "Analysis of ALGORITHM 2 — SIZE(I_{i+1}) ≤ SIZE(I_i)/k + ln 1/g",
+      "milestone_description": "We first derive an upper bound on $t$, the number of iterations.\n$$SIZE(I_{i+1}) \\le LIN(I_{i+1}) \\le \\sum_j x_j - \\lfloor x_j\\rfloor \\le$$\n$$m(J_i) \\le \\frac{SIZE(J_i)}{k} + \\ln\\frac1g \\le \\frac{SIZE(I_i)}{k} + \\ln\\frac1g$$\n",
+      "sort_order": 6,
+      "completed": false,
+      "theorem": {
+        "id": "a124aa6e-2251-4a70-9b82-2dd8cdbd4934",
+        "theorem_name": "KKBinPacking.GeometricGrouping.alg2_size_recursion",
+        "status": "Open"
+      },
+      "created_by": "cefe8406-a334-4b9e-8376-acb8e5172761",
+      "created_at": "2026-09-29T17:49:26.403986+00:00"
+    },
+    {
+      "id": "e9c700a7-7175-44f5-8637-7e0173ae16b5",
+      "title": "Analysis of ALGORITHM 2 — t ≤ ln SIZE(I)/ln k + 1",
+      "milestone_description": "$\\therefore\\ SIZE(I_{i+1}) \\le (\\frac1k)^i\\,SIZE(J) + \\ln\\frac1g[1 + \\frac1k + \\cdot\\cdot(\\frac1k)^{i-1}]$\n$\\le (\\frac1k)^i\\,SIZE(I) + \\frac{1}{1-\\frac1k}\\ln\\frac1g$\nbut $SIZE(I_t) > 1 + \\frac{1}{1-\\frac1k}\\ln\\frac1g$\n$\\therefore\\ t \\le \\frac{\\ln SIZE(I)}{\\ln k} + 1$\n",
+      "sort_order": 7,
+      "completed": false,
+      "theorem": {
+        "id": "2b8092a2-0b0d-4cf8-ad4c-2372e926724a",
+        "theorem_name": "KKBinPacking.GeometricGrouping.alg2_iterations_le",
+        "status": "Open"
+      },
+      "created_by": "cefe8406-a334-4b9e-8376-acb8e5172761",
+      "created_at": "2026-09-29T17:49:26.403986+00:00"
+    },
+    {
+      "id": "1310c83e-b5b5-4752-b620-8fcaaf694700",
+      "title": "Analysis of ALGORITHM 2 — LIN(I_{i+1}) ≤ LIN(J_i) + 1 − X_i ≤ LIN(I_i) + 1 − X_i, so Σ X_i ≤ LIN(J) + t",
+      "milestone_description": "To bound the error in the number of bins produced by the algorithm, we use the following inequalities:\n$$LIN(I_{i+1}) \\le LIN(J_i) + 1 - X_i \\le LIN(I_i) + 1 - X_i$$\n$$\\therefore\\ \\sum_{i=1}^{t} X_i \\le LIN(J) + t$$\n",
+      "sort_order": 8,
+      "completed": false,
+      "theorem": {
+        "id": "4079cd64-9798-4e48-b350-081a6098de00",
+        "theorem_name": "KKBinPacking.GeometricGrouping.alg2_lin_telescoping",
+        "status": "Open"
+      },
+      "created_by": "cefe8406-a334-4b9e-8376-acb8e5172761",
+      "created_at": "2026-09-29T17:49:26.403986+00:00"
+    },
+    {
+      "id": "60512c22-1463-4f7e-a718-99f57b5098bc",
+      "title": "Analysis of ALGORITHM 2 — the number of bins after Step 3",
+      "milestone_description": "The number of bins in the packing produced after Step 3 is\n$$\\le \\sum_{i=1}^{t} X_i + t[2k(2 + \\ln\\frac1g)] + 2 + \\frac{2}{1-\\frac1k}\\ln\\frac1g$$\n",
+      "sort_order": 9,
+      "completed": true,
+      "theorem": {
+        "id": "641936bb-5a63-4aa2-9352-d96c0186cb3f",
+        "theorem_name": "KKBinPacking.GeometricGrouping.alg2_step3_card_le",
+        "status": "Proved"
+      },
+      "created_by": "cefe8406-a334-4b9e-8376-acb8e5172761",
+      "created_at": "2026-09-29T17:49:26.403986+00:00"
+    },
+    {
+      "id": "444d9ce4-60b5-4634-b5cb-625d16f61727",
+      "title": "Analysis of ALGORITHM 2 — the bound A(I) ≤ max{(1+2g) OPT(I) + 1, OPT(I) + [1 + ln SIZE(I)/ln k][1 + 4k + 2k ln 1/g] + 2 + (2/(1 − 1/k)) ln 1/g}",
+      "milestone_description": "Hence by Lemma 3,\n$$A(I) \\le \\max\\Bigl\\{(1+2g)\\,OPT(I) + 1,\\ OPT(I) + [1 + \\frac{\\ln SIZE(I)}{\\ln k}][1 + 4k + 2k\\ln\\frac1g] + 2 + \\frac{2}{1-\\frac1k}\\ln\\frac1g\\Bigr\\}$$\n",
+      "sort_order": 10,
+      "completed": false,
+      "theorem": {
+        "id": "4f2723e6-02fb-41ff-9cf9-af6f1d0fc02b",
+        "theorem_name": "KKBinPacking.GeometricGrouping.algorithm2_bound",
+        "status": "Open"
+      },
+      "created_by": "cefe8406-a334-4b9e-8376-acb8e5172761",
+      "created_at": "2026-09-29T17:49:26.403986+00:00"
+    }
+  ]
+}

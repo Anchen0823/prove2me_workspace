@@ -1,0 +1,6 @@
+{
+  "command": "python scripts/workspace.py build kk-bin-packing",
+  "exit_code": 0,
+  "evidence": "mission-build.log",
+  "note": "The build completed successfully. The wrapper later failed while printing a Unicode warning symbol to the GBK terminal; the complete UTF-8 build log was saved before that print."
+}

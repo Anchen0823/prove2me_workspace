@@ -1,0 +1,8 @@
+import Definitions.Def_KKBinPacking_GeometricGrouping_Instance
+import Definitions.Def_KKBinPacking_Shared_ConfigLP
+
+#check Finset.sum_multiset_map_count
+#check Finset.sum_subset
+#check Multiset.count_eq_zero
+#check le_csInf
+#check Finsupp.support_mapRange_of_injective

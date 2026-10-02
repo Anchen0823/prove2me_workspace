@@ -1,0 +1,47 @@
+[
+  {
+    "module": "Theorems.Thm_KKBinPacking_GeometricGrouping_alg2_step3_card_le",
+    "exit_code": 0,
+    "seconds": 83.62
+  },
+  {
+    "module": "Theorems.Thm_KKBinPacking_GeometricGrouping_alg2_iterations_le",
+    "exit_code": 0,
+    "seconds": 57.83
+  },
+  {
+    "module": "Theorems.Thm_KKBinPacking_GeometricGrouping_alg2_lin_telescoping",
+    "exit_code": 0,
+    "seconds": 62.03
+  },
+  {
+    "module": "Theorems.Thm_KKBinPacking_GeometricGrouping_geomGroup_bounds",
+    "exit_code": 0,
+    "seconds": 79.94
+  },
+  {
+    "module": "Theorems.Thm_KKBinPacking_GeometricGrouping_lin_le_opt",
+    "exit_code": 0,
+    "seconds": 49.1
+  },
+  {
+    "module": "Theorems.Thm_KKBinPacking_GeometricGrouping_anyFit_card_le",
+    "exit_code": 0,
+    "seconds": 79.6
+  },
+  {
+    "module": "Solutions.Sol_KKBinPacking_GeometricGrouping_lin_le_opt",
+    "exit_code": 0,
+    "seconds": 82.69
+  },
+  {
+    "module": "Solutions.Sol_KKBinPacking_GeometricGrouping_alg2_iterations_le",
+    "exit_code": 0,
+    "seconds": 138.88
+  },
+  {
+    "module": "Solutions.Sol_KKBinPacking_GeometricGrouping_algorithm2_bound",
+    "exit_code": 0,
+    "seconds": 100.93
+  }
+]

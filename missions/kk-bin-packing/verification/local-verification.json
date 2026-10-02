@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-10-02T11:27:26.034645+00:00",
+  "solution_file": "Solutions/Sol_KKBinPacking_GeometricGrouping_alg2_step3_card_le.lean",
+  "sha256": "c1a1a02f990de1a0701ac42cae664bfd528f199fff89cbd81cee960e11ff8cd4",
+  "build_command": "python scripts/workspace.py build kk-bin-packing",
+  "build_exit_code": 0,
+  "build_warnings": [
+    "Unused hypotheses hk and hg0; preserved exact target binders."
+  ],
+  "axiom_check_exit_code": 0,
+  "axiom_check_output": "'solution' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "component_models": {
+    "grouping": "gpt-6.1-sol",
+    "packing": "gpt-6-astra",
+    "boundary_and_count_review": "gpt-6-luna"
+  }
+}

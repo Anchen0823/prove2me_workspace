@@ -1,0 +1,14 @@
+{
+  "ratings": [
+    {
+      "theorem_id": "6776b904-ac8c-4693-a670-aaa1a0aee5d6",
+      "score": 6,
+      "reasoning": "A reusable volume lower bound for the configuration LP. The formal proof must handle finite-support weighted counts and nonemptiness before taking the real infimum."
+    },
+    {
+      "theorem_id": "5455998b-e4e9-4edb-92fc-4effa3b071a2",
+      "score": 8,
+      "reasoning": "The source-faithful Lemma 2 connects fractional and integral bin packing. Its substantive remaining ingredients are sparse near-optimal LP solutions and floor rounding with exact residual accounting."
+    }
+  ]
+}

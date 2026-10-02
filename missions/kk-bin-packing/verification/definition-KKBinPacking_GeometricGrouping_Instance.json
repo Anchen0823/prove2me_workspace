@@ -1,0 +1,26 @@
+{
+  "theorem_id": "588b9e32-4c83-45d2-8168-874e22fe5749",
+  "theorem_name": "KKBinPacking_GeometricGrouping_Instance",
+  "theorem_title": "Bin-packing instances, packings, $OPT$, $SIZE$, $n$, $m$ and the smallest size $a(I)$",
+  "status": "Definition",
+  "formal_statement": "",
+  "natural_language_statement": "An **instance** $I$ of the one-dimensional bin-packing problem is a finite multiset of piece sizes, each a real number strictly between $0$ and $1$. For an instance $I$:\n\n1. $n(I)$ is the number of pieces (counted with multiplicity), $m(I)$ the number of distinct sizes, $SIZE(I)$ the sum of all piece sizes, and $a(I)$ the smallest piece size.\n2. A **packing** of $I$ is a finite multiset of bins, each bin a multiset of sizes, such that the bins together contain exactly the pieces of $I$ and every bin has total size at most $1$. Its **cost** is the number of bins.\n3. $OPT(I)$ is the minimum cost of a packing of $I$.\n\nThese are the objects of §2 of the paper, shared by every statement of the mission.\n\n**Formalization Note** An instance is a `Multiset ℝ` together with the predicate `IsInstance I` (every size in the open interval $(0,1)$). The paper's \"rational number between 0 and 1\" is read as the open interval (the grouping argument of Theorem 2 needs every size to be below $1$), and real sizes generalize rational ones. A packing is a `Multiset (Multiset ℝ)` whose `join` is $I$; empty bins are allowed and counted. $OPT(I)$ is the infimum over natural numbers of the costs of packings; for an instance the set is nonempty (one piece per bin), so the infimum is attained. `minSize I` is $a(I)$ for nonempty $I$; on the empty multiset it returns $1$, and every statement using it assumes $I \\neq \\emptyset$.\n",
+  "created_at": "2026-09-29T17:04:14.958857+00:00",
+  "vote_count": 0,
+  "definition": "import Mathlib\n\nnamespace KKBinPacking.GeometricGrouping\n\n/-- An instance of one-dimensional bin packing (p. 312): a finite multiset of piece sizes,\neach strictly between `0` and `1`. -/\ndef IsInstance (I : Multiset ℝ) : Prop := ∀ x ∈ I, 0 < x ∧ x < 1\n\n/-- `n(I)`, the number of pieces of `I` (p. 312). -/\ndef numPieces (I : Multiset ℝ) : ℕ := Multiset.card I\n\n/-- `m(I)`, the number of distinct piece sizes of `I` (p. 312). -/\nnoncomputable def numSizes (I : Multiset ℝ) : ℕ := I.toFinset.card\n\n/-- `SIZE(I)`, the sum of the sizes of all pieces of `I` (p. 312). -/\ndef SIZE (I : Multiset ℝ) : ℝ := I.sum\n\n/-- `a(I)`, the smallest piece size of `I` (p. 312). Only meaningful for nonempty `I`; every\ntheorem using it assumes `I ≠ 0`. On the empty multiset it returns `1` (so `ln(1/a(I)) = 0`). -/\nnoncomputable def minSize (I : Multiset ℝ) : ℝ :=\n  if h : I.toFinset.Nonempty then I.toFinset.min' h else 1\n\n/-- A packing of `I`: a multiset of bins (each a multiset of piece sizes) whose union is\nexactly `I` and in which every bin has total size at most `1`. Its cost is its number of\nbins, `Multiset.card P`; empty bins are allowed and counted. -/\ndef IsPacking (I : Multiset ℝ) (P : Multiset (Multiset ℝ)) : Prop :=\n  P.join = I ∧ ∀ b ∈ P, b.sum ≤ 1\n\n/-- `OPT(I)`, the minimum number of bins in a packing of `I` (p. 312). For an instance the set\nis nonempty (one piece per bin), so the infimum is attained. -/\nnoncomputable def OPT (I : Multiset ℝ) : ℕ :=\n  sInf {B : ℕ | ∃ P : Multiset (Multiset ℝ), IsPacking I P ∧ Multiset.card P = B}\n\nend KKBinPacking.GeometricGrouping\n",
+  "source": "Karmarkar, Karp, An Efficient Approximation Scheme for the One-Dimensional Bin-Packing Problem, Proc. 23rd FOCS, 1982, p. 312, §2 (model, OPT(I), n(I), m(I), SIZE(I), a(I))",
+  "tags": [
+    "bin-packing",
+    "combinatorial-optimization",
+    "p2o-batch-p200b",
+    "p2o-gran-per-chapter",
+    "p2o-plan-paper",
+    "p2o-v1"
+  ],
+  "created_by": "cefe8406-a334-4b9e-8376-acb8e5172761",
+  "created_by_username": "mikedeng1",
+  "deprecated_at": null,
+  "visibility": "public",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "env_display_name": "Mathlib 0df444a (Lean v4.33.1)"
+}

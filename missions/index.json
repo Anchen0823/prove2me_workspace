@@ -129,6 +129,13 @@
       "family": "combinatorics",
       "handoff": "missions/no-adjacent/status.md",
       "scratch": null
+    },
+    {
+      "slug": "kk-bin-packing",
+      "title": "Karmarkar-Karp II: geometric grouping and residual LP rounding",
+      "family": "approximation-algorithms",
+      "handoff": "missions/kk-bin-packing/status.md",
+      "scratch": null
     }
   ]
 }

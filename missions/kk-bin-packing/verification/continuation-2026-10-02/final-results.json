@@ -1,0 +1,60 @@
+{
+  "mission_id": "359adb44-9a24-441c-8a2b-bd71395fcad4",
+  "completed_at_beijing": "2026-10-02T20:55:54.355990+08:00",
+  "contributions": [
+    {
+      "theorem_name": "KKBinPacking.GeometricGrouping.lin_le_opt",
+      "theorem_id": "555b051c-6aa5-4769-866f-a595b8c60e2c",
+      "submission_id": "956de592-7e80-4f94-ae20-f0b7fe913d4e",
+      "status": "ACCEPTED",
+      "accepted_at_utc": "2026-10-02T12:39:35.766173+00:00",
+      "source": "Solutions/Sol_KKBinPacking_GeometricGrouping_lin_le_opt.lean"
+    },
+    {
+      "theorem_name": "KKBinPacking.GeometricGrouping.alg2_iterations_le",
+      "theorem_id": "2b8092a2-0b0d-4cf8-ad4c-2372e926724a",
+      "submission_id": "e96b7f2a-43fc-4061-a627-e7a78cc24166",
+      "status": "SKETCH_ACCEPTED",
+      "accepted_at_utc": "2026-10-02T12:24:23.947978+00:00",
+      "source": "Solutions/Sol_KKBinPacking_GeometricGrouping_alg2_iterations_le.lean"
+    },
+    {
+      "theorem_name": "KKBinPacking.GeometricGrouping.algorithm2_bound",
+      "theorem_id": "4f2723e6-02fb-41ff-9cf9-af6f1d0fc02b",
+      "submission_id": "e04dd93a-25f4-405f-890f-3daf94e1c012",
+      "status": "SKETCH_ACCEPTED",
+      "accepted_at_utc": "2026-10-02T12:40:16.564308+00:00",
+      "source": "Solutions/Sol_KKBinPacking_GeometricGrouping_algorithm2_bound.lean"
+    }
+  ],
+  "root_status": "Open",
+  "open_leaves": [
+    {
+      "theorem_id": "4079cd64-9798-4e48-b350-081a6098de00",
+      "theorem_name": "KKBinPacking.GeometricGrouping.alg2_lin_telescoping",
+      "status": "Open",
+      "closability": 0
+    },
+    {
+      "theorem_id": "dadc4a6e-68e7-4a55-aa93-5c9a824ccc53",
+      "theorem_name": "KKBinPacking.GeometricGrouping.geomGroup_bounds",
+      "status": "Open",
+      "closability": 0
+    },
+    {
+      "theorem_id": "a124aa6e-2251-4a70-9b82-2dd8cdbd4934",
+      "theorem_name": "KKBinPacking.GeometricGrouping.alg2_size_recursion",
+      "status": "Open",
+      "closability": 0
+    }
+  ],
+  "all_remote_sources_match_local": true,
+  "mission_build_exit_code": 0,
+  "new_workspace_ownership_issues": [],
+  "models": {
+    "direct_lp_proof": "primary agent",
+    "iteration_reduction": "gpt-6.1-sol",
+    "algorithm_reduction": "gpt-6-astra",
+    "independent_review": "gpt-6-luna"
+  }
+}
