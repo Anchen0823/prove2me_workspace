@@ -1,0 +1,83 @@
+{
+  "decompositions": [
+    {
+      "submission_id": "ad4a1544-6ebb-4451-9e9b-d7c58d819c46",
+      "created_by": "418b0711-62a5-416a-ba5d-876ae8758fe3",
+      "created_at": "2026-10-02T13:49:40.715952+00:00",
+      "deprecated_at": null,
+      "deprecated_by": null,
+      "children": [
+        {
+          "theorem_id": "6776b904-ac8c-4693-a670-aaa1a0aee5d6",
+          "theorem_name": "KKBinPacking.GeometricGrouping.size_le_lin",
+          "theorem_title": "Lemma 2, volume lower bound: $SIZE(I) \\le LIN(I)$",
+          "status": "Proved",
+          "ordinal": 0,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        },
+        {
+          "theorem_id": "555b051c-6aa5-4769-866f-a595b8c60e2c",
+          "theorem_name": "KKBinPacking.GeometricGrouping.lin_le_opt",
+          "theorem_title": "Lemma 2, LP lower bound: $LIN(I) \\le OPT(I)$",
+          "status": "Proved",
+          "ordinal": 1,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        },
+        {
+          "theorem_id": "ef448251-2129-4ff7-b50e-20e806fa3363",
+          "theorem_name": "KKBinPacking.GeometricGrouping.opt_le_two_size_add_one",
+          "theorem_title": "Lemma 1 — $OPT(I) \\le 2\\,SIZE(I) + 1$",
+          "status": "Proved",
+          "ordinal": 2,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        },
+        {
+          "theorem_id": "a3149f0a-8819-48eb-a74d-26789cfba321",
+          "theorem_name": "KKBinPacking.GeometricGrouping.exists_sparse_near_optimal_lp",
+          "theorem_title": "Sparse near-optimal configuration LP solutions",
+          "status": "Open",
+          "ordinal": 3,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        },
+        {
+          "theorem_id": "d4f0eca3-b658-4ba1-82b1-267d1e0de27c",
+          "theorem_name": "KKBinPacking.GeometricGrouping.lp_floor_rounding_certificate",
+          "theorem_title": "Floor-rounding certificate for a feasible configuration LP",
+          "status": "Open",
+          "ordinal": 4,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        }
+      ]
+    },
+    {
+      "submission_id": null,
+      "created_by": null,
+      "created_at": null,
+      "deprecated_at": null,
+      "deprecated_by": null,
+      "children": [
+        {
+          "definition_id": "588b9e32-4c83-45d2-8168-874e22fe5749",
+          "definition_name": "KKBinPacking_GeometricGrouping_Instance",
+          "theorem_title": "Bin-packing instances, packings, $OPT$, $SIZE$, $n$, $m$ and the smallest size $a(I)$",
+          "ordinal": 0,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        },
+        {
+          "definition_id": "11db9da0-e403-4d69-9bd6-67ac060ce89d",
+          "definition_name": "KKBinPacking_Shared_ConfigLP",
+          "theorem_title": "Configurations, the fractional bin-packing LP (I), $LIN(I)$ and basic feasible solutions",
+          "ordinal": 1,
+          "deprecated_at": null,
+          "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+        }
+      ]
+    }
+  ]
+}

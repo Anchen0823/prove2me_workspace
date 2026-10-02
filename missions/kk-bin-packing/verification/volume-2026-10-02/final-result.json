@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-02",
+  "mission_id": "359adb44-9a24-441c-8a2b-bd71395fcad4",
+  "direct_proof": {
+    "theorem_id": "6776b904-ac8c-4693-a670-aaa1a0aee5d6",
+    "theorem_name": "KKBinPacking.GeometricGrouping.size_le_lin",
+    "theorem_status": "Proved",
+    "submission_id": "62180682-e5b6-4539-bbe8-95e232733f4a",
+    "submission_status": "ACCEPTED",
+    "first_accepted": true,
+    "accepted_at_china": "2026-10-02 21:34:06 +08:00"
+  },
+  "milestone_reduction": {
+    "theorem_id": "5455998b-e4e9-4edb-92fc-4effa3b071a2",
+    "theorem_status": "Open",
+    "submission_id": "ad4a1544-6ebb-4451-9e9b-d7c58d819c46",
+    "submission_status": "SKETCH_ACCEPTED",
+    "accepted_at_china": "2026-10-02 22:07:38 +08:00",
+    "dependency_graph_confirmed": true,
+    "open_children": [
+      "a3149f0a-8819-48eb-a74d-26789cfba321",
+      "d4f0eca3-b658-4ba1-82b1-267d1e0de27c"
+    ]
+  },
+  "validation": {
+    "mission_build_exit_code": 0,
+    "root_count_at_build": 6,
+    "direct_proof_axioms": ["propext", "Classical.choice", "Quot.sound"],
+    "conditional_upper_lemma_has_sorryAx": false,
+    "parent_has_explicit_platform_theorem_assumptions": true,
+    "source_type_and_axiom_audit": "type-axiom-audit.json",
+    "scope_check": "Only the two pre-existing five-primes ownership errors remain."
+  },
+  "agents": {
+    "gpt-6.1-sol": "Direct volume lower bound and final source review",
+    "gpt-6-astra": "Rounding reduction and sparse-support follow-up blueprint",
+    "gpt-6-luna": "Independent source and boundary audit"
+  },
+  "boundary": "One new direct proof and one verified reduction; the full Lemma 2 and complete mission remain unproved."
+}

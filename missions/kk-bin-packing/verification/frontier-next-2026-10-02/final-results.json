@@ -15,14 +15,23 @@
       "name": "geom_dominance_certificate",
       "submission_id": "14fab497-6ca3-4f3e-9257-9ecd7ee5d6d6",
       "theorem_id": "c82ce472-6aa5-49d5-a543-26ff0bdc4e91",
-      "status": "PENDING",
-      "updated_at": "2026-10-02T13:45:04.193345+00:00",
+      "status": "ACCEPTED",
+      "updated_at": "2026-10-02T14:04:48.817799+00:00",
       "source": "Solutions/Sol_KKBinPacking_GeometricGrouping_geom_dominance_certificate.lean",
-      "sha256": "f4f66bbe35eedb3062dc149e8e291e74a93c94932c0a36588b5944ac48857c5a"
+      "sha256": "f4f66bbe35eedb3062dc149e8e291e74a93c94932c0a36588b5944ac48857c5a",
+      "server_source_matches_local": true,
+      "theorem_status": "Proved"
     },
     {
-      "name": "lp-monotone",
-      "status": "awaiting theorem publication"
+      "name": "lin_mono_submultiset",
+      "submission_id": "f6a79723-f605-481e-8251-2c1e668d071e",
+      "theorem_id": "d7889526-c21e-464e-bfa8-9e6ec5122d65",
+      "status": "ACCEPTED",
+      "updated_at": "2026-10-02T14:15:32.583597+00:00",
+      "source": "Solutions/Sol_KKBinPacking_GeometricGrouping_lin_mono_submultiset.lean",
+      "sha256": "a6170d570eed3fc1bda6f464db116dc1c0b892ae12ad2c2b5c29fe16d58f08b9",
+      "server_source_matches_local": true,
+      "theorem_status": "Proved"
     }
   ],
   "open_frontier": {

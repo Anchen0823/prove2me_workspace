@@ -29,6 +29,9 @@ elif action == 'search':
 elif action == 'publish':
     payload = json.loads((HERE / args[0]).read_text(encoding='utf-8'))
     status, body = api._request('POST', '/submit-problem', token=token, data=payload)
+elif action == 'rate':
+    payload = json.loads((HERE / args[0]).read_text(encoding='utf-8'))
+    status, body = api._request('POST', '/rate', token=token, data=payload)
 elif action == 'verify':
     target, source, explanation = args
     raw, ctype = api._multipart(

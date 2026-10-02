@@ -1,0 +1,18 @@
+{
+  "root_id": "5455998b-e4e9-4edb-92fc-4effa3b071a2",
+  "open_leaves": [
+    {
+      "theorem_id": "a3149f0a-8819-48eb-a74d-26789cfba321",
+      "theorem_name": "KKBinPacking.GeometricGrouping.exists_sparse_near_optimal_lp",
+      "status": "Open",
+      "closability": 0
+    },
+    {
+      "theorem_id": "d4f0eca3-b658-4ba1-82b1-267d1e0de27c",
+      "theorem_name": "KKBinPacking.GeometricGrouping.lp_floor_rounding_certificate",
+      "status": "Open",
+      "closability": 0
+    }
+  ],
+  "total": 2
+}

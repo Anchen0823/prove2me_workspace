@@ -55,8 +55,11 @@ GPT-6.1 Sol 完成直接下界，GPT-6 Astra 完成条件归约，GPT-6 Luna 独
 - 两个核心声明均已发布：
   [稀疏近最优 LP 解](https://prove2.me/theorems/a3149f0a-8819-48eb-a74d-26789cfba321)；
   [向下取整证书](https://prove2.me/theorems/d4f0eca3-b658-4ba1-82b1-267d1e0de27c)。
-  两者尚未证明。父定理归约提交 `ad4a1544-6ebb-4451-9e9b-d7c58d819c46` 正等待服务器验证。
-- 本地任务构建成功（6 个选定根模块）。并行 Mathlib 导入曾报缓存读取错误；
+  两者尚未证明。[父定理归约提交](https://prove2.me/submissions/ad4a1544-6ebb-4451-9e9b-d7c58d819c46)
+  于北京时间 22:07:38 返回 **SKETCH_ACCEPTED**。
+  已复查依赖图：新的体积下界以及既有两个已证明引理均为 **Proved**，
+  开放前沿恰为上述两个新核心；Lemma 2 本身仍为 **Open**。
+- 本次验证时的任务构建成功（6 个选定根模块）。并行 Mathlib 导入曾报缓存读取错误；
   串行构建新增依赖后，`python scripts/workspace.py build kk-bin-packing` 成功。
 - 直接下界的公理仅为 `propext`、`Classical.choice`、`Quot.sound`。
   条件归约辅助定理同样没有 `sorryAx`；父定理通过显式平台定理镜像导入待证假设，
@@ -68,6 +71,9 @@ GPT-6.1 Sol 完成直接下界，GPT-6 Astra 完成条件归约，GPT-6 Luna 独
 期间并行工作曾出现两个其他新增文件的临时未归属报告，后续已由其所属工作登记；
 本次未修改那些文件。本次新增文件均已登记，最新归属检查只剩基线中的两个 five-primes 问题。
 完整任务及 Lemma 2 尚未被本次工作直接证明。
+
+下一步稀疏性证明的有限支持消元路线见
+`research/rounding-upper/SPARSE-NEXT.md`；这份后续方案尚未形式化。
 
 ## 2026-10-02 后续贡献：三项提交全部验收
 
@@ -94,3 +100,5 @@ GPT-6.1 Sol 完成直接下界，GPT-6 Astra 完成条件归约，GPT-6 Luna 独
 ## 2026-10-02：望远镜归约与直接辅助定理
 
 最新结果见 [本轮验收与验证记录](verification/frontier-next-2026-10-02/RESULTS.md)。望远镜归约已获 SKETCH_ACCEPTED，根定理的开放节点从三个减少到两个；新证明和既有贡献均纳入本任务限定构建。平台最终判定和源码哈希以该目录的 final-results.json 为准。
+
+本轮两个独立辅助定理 `geom_dominance_certificate`、`lin_mono_submultiset` 均已 **ACCEPTED / Proved**，都是平台首个接受提交。三份提交源码均已回读并匹配本地哈希；9 个任务根模块构建成功，工作区归属检查没有新增问题。完整算法仍待上述两个开放节点解决。
